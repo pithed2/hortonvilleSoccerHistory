@@ -3,7 +3,7 @@ import path from 'node:path';
 import { Game } from './types';
 
 export function loadGames(): Game[] {
-  const csv = fs.readFileSync(path.join(process.cwd(), 'data', 'games.csv'), 'utf8').trim();
+  const csv = fs.readFileSync(path.join(process.cwd(), 'public/data', 'games.csv'), 'utf8').trim();
   const [head, ...rows] = csv.split('\n');
   const cols = head.split(',');
   const idx = (k: string) => cols.indexOf(k);
