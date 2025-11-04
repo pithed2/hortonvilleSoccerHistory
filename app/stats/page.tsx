@@ -1,5 +1,5 @@
 "use client";
-
+// Made a change 
 import { useEffect, useMemo, useState } from "react";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
