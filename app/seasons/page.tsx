@@ -1,6 +1,7 @@
 import { listSeasons, gamesBySeason } from '@/lib/games';
 
-export const revalidate = 60;
+export const runtime = 'nodejs';
+export const revalidate = 60; // optional
 
 export default function SeasonsPage() {
   const seasons = listSeasons();
