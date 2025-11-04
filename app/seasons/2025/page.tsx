@@ -1,6 +1,7 @@
 import { gamesBySeason } from '@/lib/games';
 import { notFound } from 'next/navigation';
 
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 export default function SeasonPage({ params }: { params: { year: string } }) {
