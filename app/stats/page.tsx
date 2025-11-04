@@ -1,121 +1,215 @@
-"use client"
+"use client";
 
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
-const seasonStats = [
-  {
-    season: 2025,
-    wins: 20,
-    losses: 0,
-    ties: 4,
-    gf: 87,
-    ga: 11,
-    winPct: 83.33,
-    coach: "Paul Everett",
-    notes: "Historic undefeated season",
-  },
-  {
-    season: 2024,
-    wins: 14,
-    losses: 3,
-    ties: 4,
-    gf: 65,
-    ga: 14,
-    winPct: 66.67,
-    coach: "Paul Everett",
-    notes: "Strong finish to season",
-  },
-  { season: 2023, wins: 13, losses: 5, ties: 3, gf: 61, ga: 17, winPct: 61.9, coach: "Paul Everett" },
-  { season: 2022, wins: 6, losses: 8, ties: 5, gf: 24, ga: 20, winPct: 31.58, coach: "Paul Everett" },
-  { season: 2021, wins: 11, losses: 6, ties: 3, gf: 70, ga: 28, winPct: 55.0, coach: "Paul Everett" },
-  {
-    season: 2020,
-    wins: 5,
-    losses: 5,
-    ties: 2,
-    gf: 24,
-    ga: 18,
-    winPct: 41.67,
-    coach: "Paul Everett",
-    notes: "COVID-shortened season",
-  },
-  { season: 2019, wins: 10, losses: 8, ties: 4, gf: 60, ga: 44, winPct: 45.45, coach: "Paul Everett" },
-  {
-    season: 2018,
-    wins: 9,
-    losses: 8,
-    ties: 2,
-    gf: 41,
-    ga: 29,
-    winPct: 47.37,
-    coach: "Paul Everett",
-    notes: "First season post-field renovation",
-  },
-  { season: 2017, wins: 6, losses: 13, ties: 2, gf: 43, ga: 68, winPct: 28.57, coach: "Paul Everett" },
-  { season: 2016, wins: 9, losses: 8, ties: 3, gf: 60, ga: 56, winPct: 45.0, coach: "Paul Everett" },
-  { season: 2015, wins: 7, losses: 14, ties: 0, gf: 42, ga: 85, winPct: 33.33, coach: "Paul Everett" },
-  { season: 2014, wins: 12, losses: 7, ties: 4, gf: 52, ga: 36, winPct: 52.17, coach: "Paul Everett" },
-  {
-    season: 2013,
-    wins: 16,
-    losses: 7,
-    ties: 1,
-    gf: 96,
-    ga: 29,
-    winPct: 66.67,
-    coach: "Paul Everett",
-    notes: "Best season of the decade",
-  },
-  { season: 2012, wins: 10, losses: 7, ties: 2, gf: 61, ga: 36, winPct: 52.63, coach: "Paul Everett" },
-  {
-    season: 2011,
-    wins: 13,
-    losses: 7,
-    ties: 1,
-    gf: 68,
-    ga: 35,
-    winPct: 61.9,
-    coach: "Paul Everett",
-    notes: "Strong start to Paul Everett era",
-  },
-  { season: 2010, wins: 6, losses: 14, ties: 2, gf: 29, ga: 44, winPct: 27.27, coach: "Andy Montalbano" },
-  {
-    season: 2009,
-    wins: 11,
-    losses: 7,
-    ties: 3,
-    gf: 47,
-    ga: 31,
-    winPct: 52.38,
-    coach: "Andy Montalbano",
-    notes: "First season under lights at Akin Field",
-  },
-  { season: 2008, wins: 9, losses: 11, ties: 2, gf: 26, ga: 40, winPct: 40.91, coach: "Andy Montalbano" },
-  { season: 2007, wins: 10, losses: 11, ties: 3, gf: 31, ga: 51, winPct: 41.67, coach: "Andy Montalbano" },
-  { season: 2006, wins: 1, losses: 16, ties: 5, gf: 18, ga: 70, winPct: 4.55, coach: "Gary Ruhle" },
-  {
-    season: 2005,
-    wins: 6,
-    losses: 7,
-    ties: 0,
-    gf: 43,
-    ga: 35,
-    winPct: 46.15,
-    coach: "Gary Ruhle",
-    notes: "Program's first recorded season",
-  },
-]
+// ---------- tiny CSV utils (RFC4180-ish for our simple needs) ----------
+function parseCSV(text: string): { cols: string[]; rows: string[][] } {
+  // handle CRLF, keep quoted fields with commas
+  const lines = text.replace(/\r/g, "").split("\n").filter(Boolean);
+  if (!lines.length) return { cols: [], rows: [] };
+  const cols = splitCSVLine(lines[0]);
+  const rows = lines.slice(1).map(splitCSVLine);
+  return { cols, rows };
+}
+function splitCSVLine(line: string): string[] {
+  const out: string[] = [];
+  let cur = "";
+  let inQ = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (inQ) {
+      if (ch === '"' && line[i + 1] === '"') {
+        cur += '"'; i++; // escaped quote
+      } else if (ch === '"') {
+        inQ = false;
+      } else cur += ch;
+    } else {
+      if (ch === '"') inQ = true;
+      else if (ch === ",") { out.push(cur); cur = ""; }
+      else cur += ch;
+    }
+  }
+  out.push(cur);
+  return out.map(s => s.trim());
+}
+function idx(cols: string[], name: string) { return cols.indexOf(name); }
+function toNum(v: string) {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : 0;
+}
+// ----------------------------------------------------------------------
+
+type Game = {
+  season_year: number;
+  date: string;
+  opponent: string;
+  venue?: string;
+  result?: string; // 'W' | 'L' | 'T'
+  score?: string;  // "2-1" (text, not date)
+  notes?: string;
+  home_away?: string;
+  competition?: string;
+};
+
+type SeasonMeta = {
+  season_year: number;
+  head_coach?: string;
+  notes_md?: string;
+  coach?: string;   // allow either head_coach or coach, we’ll normalize
+  notes?: string;   // allow notes_md or notes
+};
+
+type SeasonRow = {
+  season: number;
+  wins: number;
+  losses: number;
+  ties: number;
+  gf: number;
+  ga: number;
+  winPct: number;
+  coach?: string;
+  notes?: string;
+};
 
 export default function StatsPage() {
-  const [sortBy, setSortBy] = useState<"season" | "wins" | "winPct">("season")
+  const [games, setGames] = useState<Game[]>([]);
+  const [seasonMeta, setSeasonMeta] = useState<Record<number, SeasonMeta>>({});
+  const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
+  const [sortBy, setSortBy] = useState<"season" | "wins" | "winPct">("season");
 
-  const sorted = [...seasonStats].sort((a, b) => {
-    if (sortBy === "season") return b.season - a.season
-    if (sortBy === "wins") return b.wins - a.wins
-    return b.winPct - a.winPct
-  })
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        setStatus("loading");
+        // Try games.csv, then games_textscore.csv
+        let gamesCsv = "";
+        for (const name of ["/data/games.csv", "/data/games_textscore.csv"]) {
+          const res = await fetch(name, { cache: "no-store" });
+          if (res.ok) { gamesCsv = await res.text(); break; }
+        }
+        if (!gamesCsv) throw new Error("Unable to load games CSV from /data.");
+
+        const { cols, rows } = parseCSV(gamesCsv);
+        const gx = {
+          season_year: idx(cols, "season_year"),
+          date: idx(cols, "date"),
+          opponent: idx(cols, "opponent"),
+          venue: idx(cols, "venue"),
+          result: idx(cols, "result"),
+          score: idx(cols, "score"),
+          notes: idx(cols, "notes"),
+          home_away: idx(cols, "home_away"),
+          competition: idx(cols, "competition"),
+        };
+        const parsedGames: Game[] = rows.map(parts => ({
+          season_year: toNum(parts[gx.season_year]),
+          date: parts[gx.date] || "",
+          opponent: parts[gx.opponent] || "",
+          venue: gx.venue >= 0 ? parts[gx.venue] : "",
+          result: gx.result >= 0 ? parts[gx.result]?.toUpperCase() : "",
+          score: gx.score >= 0 ? parts[gx.score] : "",
+          notes: gx.notes >= 0 ? parts[gx.notes] : "",
+          home_away: gx.home_away >= 0 ? parts[gx.home_away] : "",
+          competition: gx.competition >= 0 ? parts[gx.competition] : "",
+        })).filter(g => g.season_year);
+
+        if (cancelled) return;
+        setGames(parsedGames);
+
+        // Optional seasons.csv for coach/notes enrichment
+        try {
+          const sres = await fetch("/data/seasons.csv", { cache: "no-store" });
+          if (sres.ok) {
+            const text = await sres.text();
+            const { cols: sc, rows: sr } = parseCSV(text);
+            const sx = {
+              season_year: idx(sc, "season_year"),
+              head_coach: idx(sc, "head_coach"),
+              coach: idx(sc, "coach"),
+              notes_md: idx(sc, "notes_md"),
+              notes: idx(sc, "notes"),
+            };
+            const map: Record<number, SeasonMeta> = {};
+            sr.forEach(parts => {
+              const y = toNum(parts[sx.season_year]);
+              if (!y) return;
+              map[y] = {
+                season_year: y,
+                head_coach: sx.head_coach >= 0 ? parts[sx.head_coach] : undefined,
+                coach: sx.coach >= 0 ? parts[sx.coach] : undefined,
+                notes_md: sx.notes_md >= 0 ? parts[sx.notes_md] : undefined,
+                notes: sx.notes >= 0 ? parts[sx.notes] : undefined,
+              };
+            });
+            if (!cancelled) setSeasonMeta(map);
+          }
+        } catch { /* seasons.csv optional */ }
+
+        if (!cancelled) setStatus("ready");
+      } catch (e) {
+        console.error(e);
+        if (!cancelled) setStatus("error");
+      }
+    }
+    load();
+    return () => { cancelled = true; };
+  }, []);
+
+  // Build per-season rollups
+  const seasonRows: SeasonRow[] = useMemo(() => {
+    if (!games.length) return [];
+    const acc = new Map<number, SeasonRow>();
+    const getRow = (y: number) => {
+      if (!acc.has(y)) acc.set(y, { season: y, wins: 0, losses: 0, ties: 0, gf: 0, ga: 0, winPct: 0 });
+      return acc.get(y)!;
+    };
+    for (const g of games) {
+      const row = getRow(g.season_year);
+      // parse score "X-Y"
+      if (g.score && /^\s*\d+\s*-\s*\d+\s*$/.test(g.score)) {
+        const [a, b] = g.score.split("-").map(s => toNum(s));
+        row.gf += a; row.ga += b;
+      }
+      const r = (g.result || "").toUpperCase();
+      if (r === "W") row.wins += 1;
+      else if (r === "L") row.losses += 1;
+      else if (r === "T" || r === "D") row.ties += 1;
+
+      // attach coach/notes once (prefer seasons.csv if exists)
+      const meta = seasonMeta[g.season_year];
+      if (meta) {
+        row.coach = meta.coach || meta.head_coach || row.coach;
+        row.notes = (meta.notes_md || meta.notes || row.notes)?.toString();
+      }
+    }
+    // finalize win%
+    for (const r of acc.values()) {
+      const gamesPlayed = r.wins + r.losses + r.ties;
+      r.winPct = gamesPlayed ? ((r.wins + 0.5 * r.ties) / gamesPlayed) * 100 : 0;
+    }
+    return Array.from(acc.values());
+  }, [games, seasonMeta]);
+
+  const sorted = useMemo(() => {
+    const copy = [...seasonRows];
+    if (sortBy === "season") copy.sort((a, b) => b.season - a.season);
+    else if (sortBy === "wins") copy.sort((a, b) => b.wins - a.wins || b.season - a.season);
+    else copy.sort((a, b) => b.winPct - a.winPct || b.season - a.season);
+    return copy;
+  }, [seasonRows, sortBy]);
+
+  // Program overview
+  const overview = useMemo(() => {
+    if (!seasonRows.length) return { seasons: 0, wins: 0, losses: 0, ties: 0, gf: 0, ga: 0, winPct: 0 };
+    let wins = 0, losses = 0, ties = 0, gf = 0, ga = 0;
+    for (const r of seasonRows) { wins += r.wins; losses += r.losses; ties += r.ties; gf += r.gf; ga += r.ga; }
+    const gp = wins + losses + ties;
+    const winPct = gp ? ((wins + 0.5 * ties) / gp) * 100 : 0;
+    return { seasons: seasonRows.length, wins, losses, ties, gf, ga, winPct };
+  }, [seasonRows]);
 
   return (
     <main className="min-h-screen bg-background">
@@ -124,7 +218,7 @@ export default function StatsPage() {
       <div className="bg-primary text-primary-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-black mb-4">Season Statistics</h1>
-          <p className="text-lg opacity-90">Complete record of all boys varsity seasons from 2005 to present</p>
+          <p className="text-lg opacity-90">Complete record of all boys varsity seasons (from CSV)</p>
         </div>
       </div>
 
@@ -133,19 +227,21 @@ export default function StatsPage() {
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="bg-card border border-border rounded-lg p-6">
             <p className="text-sm font-semibold text-muted-foreground mb-2">Total Seasons</p>
-            <p className="text-3xl font-black text-primary">21</p>
+            <p className="text-3xl font-black text-primary">{overview.seasons}</p>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
             <p className="text-sm font-semibold text-muted-foreground mb-2">Program Record</p>
-            <p className="text-3xl font-black text-primary">204-172-55</p>
+            <p className="text-3xl font-black text-primary">
+              {overview.wins}-{overview.losses}-{overview.ties}
+            </p>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
             <p className="text-sm font-semibold text-muted-foreground mb-2">Win Percentage</p>
-            <p className="text-3xl font-black text-primary">47.3%</p>
+            <p className="text-3xl font-black text-primary">{overview.winPct.toFixed(1)}%</p>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
             <p className="text-sm font-semibold text-muted-foreground mb-2">Goals For / Against</p>
-            <p className="text-3xl font-black text-primary">1,048 / 797</p>
+            <p className="text-3xl font-black text-primary">{overview.gf} / {overview.ga}</p>
           </div>
         </div>
 
@@ -179,45 +275,57 @@ export default function StatsPage() {
 
         {/* Season Stats Table */}
         <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b border-border">
-                <th className="text-left py-4 px-4 font-black">Season</th>
-                <th className="text-left py-4 px-4 font-semibold">Record</th>
-                <th className="text-center py-4 px-4 font-semibold">Win %</th>
-                <th className="text-center py-4 px-4 font-semibold">GF/GA</th>
-                <th className="text-left py-4 px-4 font-semibold">Coach</th>
-                <th className="text-left py-4 px-4 font-semibold">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sorted.map((stat, idx) => (
-                <tr
-                  key={stat.season}
-                  className={`border-b border-border/50 ${
-                    idx % 2 === 0 ? "bg-muted/30" : ""
-                  } hover:bg-muted/50 transition-colors`}
-                >
-                  <td className="py-4 px-4 font-black text-primary">{stat.season}</td>
-                  <td className="py-4 px-4 font-semibold">
-                    {stat.wins}-{stat.losses}-{stat.ties}
-                  </td>
-                  <td className="py-4 px-4 text-center font-semibold">{stat.winPct.toFixed(1)}%</td>
-                  <td className="py-4 px-4 text-center text-sm">
-                    <span className="font-semibold text-green-600">{stat.gf}</span>
-                    <span className="text-muted-foreground"> / </span>
-                    <span className="font-semibold text-red-600">{stat.ga}</span>
-                  </td>
-                  <td className="py-4 px-4 text-sm">{stat.coach}</td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground italic">{stat.notes || "—"}</td>
+          {status === "loading" && (
+            <div className="p-6 text-sm text-muted-foreground">Loading CSV…</div>
+          )}
+          {status === "error" && (
+            <div className="p-6 text-red-600 text-sm">
+              Couldn’t load CSV. Ensure <code>/data/games.csv</code> or <code>/data/games_textscore.csv</code> exists.
+            </div>
+          )}
+          {status === "ready" && (
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-4 px-4 font-black">Season</th>
+                  <th className="text-left py-4 px-4 font-semibold">Record</th>
+                  <th className="text-center py-4 px-4 font-semibold">Win %</th>
+                  <th className="text-center py-4 px-4 font-semibold">GF/GA</th>
+                  <th className="text-left py-4 px-4 font-semibold">Coach</th>
+                  <th className="text-left py-4 px-4 font-semibold">Notes</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {sorted.map((stat, idx) => (
+                  <tr
+                    key={stat.season}
+                    className={`border-b border-border/50 ${idx % 2 === 0 ? "bg-muted/30" : ""} hover:bg-muted/50 transition-colors`}
+                  >
+                    <td className="py-4 px-4 font-black text-primary">
+                      <a href={`/seasons/${stat.season}`} className="underline decoration-dotted">
+                        {stat.season}
+                      </a>
+                    </td>
+                    <td className="py-4 px-4 font-semibold">
+                      {stat.wins}-{stat.losses}-{stat.ties}
+                    </td>
+                    <td className="py-4 px-4 text-center font-semibold">{stat.winPct.toFixed(1)}%</td>
+                    <td className="py-4 px-4 text-center text-sm">
+                      <span className="font-semibold">{stat.gf}</span>
+                      <span className="text-muted-foreground"> / </span>
+                      <span className="font-semibold">{stat.ga}</span>
+                    </td>
+                    <td className="py-4 px-4 text-sm">{stat.coach || "—"}</td>
+                    <td className="py-4 px-4 text-sm text-muted-foreground italic">{stat.notes || "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
 
       <Footer />
     </main>
-  )
+  );
 }
