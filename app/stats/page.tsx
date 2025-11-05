@@ -1,17 +1,20 @@
 "use client";
-// Made a change 
+
 import { useEffect, useMemo, useState } from "react";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
 // ---------- tiny CSV utils (RFC4180-ish for our simple needs) ----------
 function parseCSV(text: string): { cols: string[]; rows: string[][] } {
-  // handle CRLF, keep quoted fields with commas
   const lines = text.replace(/\r/g, "").split("\n").filter(Boolean);
   if (!lines.length) return { cols: [], rows: [] };
-  const cols = splitCSVLine(lines[0]);
+  const cols0 = splitCSVLine(lines[0]);
+  // Strip BOM if present
+  if (cols0.length && cols0[0].charCodeAt(0) === 0xFEFF) {
+    cols0[0] = cols0[0].replace(/^\uFEFF/, "");
+  }
   const rows = lines.slice(1).map(splitCSVLine);
-  return { cols, rows };
+  return { cols: cols0, rows };
 }
 function splitCSVLine(line: string): string[] {
   const out: string[] = [];
@@ -49,7 +52,7 @@ type Game = {
   result?: string; // 'W' | 'L' | 'T'
   score?: string;  // "2-1" (text, not date)
   notes?: string;
-  home_away?: string;
+  coach?: string;
   competition?: string;
 };
 
@@ -101,7 +104,7 @@ export default function StatsPage() {
           result: idx(cols, "result"),
           score: idx(cols, "score"),
           notes: idx(cols, "notes"),
-          home_away: idx(cols, "home_away"),
+          coach: idx(cols, "coach"),
           competition: idx(cols, "competition"),
         };
         const parsedGames: Game[] = rows.map(parts => ({
