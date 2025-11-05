@@ -4,12 +4,12 @@ export const revalidate = 60;
 import Link from "next/link";
 import { gamesBySeason, listSeasons } from "@/lib/games";
 
-type Props = { params: { year: string } };
+type Props = { params: { year: Number } };
 
 export async function generateStaticParams() {
   // Prebuild all known seasons at build time
   const years = listSeasons();
-  return years.map((y) => ({ year: String(y) }));
+  return years.map((y) => ({ year: Number(y) }));
 }
 
 export default function SeasonYearPage({ params }: Props) {
