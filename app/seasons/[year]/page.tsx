@@ -12,22 +12,26 @@ export async function generateStaticParams() {
   return years.map((y) => ({ year: String(y) }));
 }
 
-export default async function SeasonYearPage({ params }: Props) {
-  const year = parseInt(params.year, 10);
-  const games = await gamesBySeason(year);
+export default async function SeasonYearPage({ params }: { params: { year?: string } }) {
+  const raw = params?.year ?? "";
+  const year = parseInt(raw, 10);
 
-  if (!Number.isFinite(year)) {
+  if (!raw || !Number.isFinite(year)) {
     return (
       <main className="max-w-6xl mx-auto p-6">
         <h1 className="text-2xl font-bold">Invalid season</h1>
         <p className="mt-2 text-sm text-neutral-600">
-          The URL must be like <code>/seasons/{year}</code>.  Full params being returned are <code>{params}</code>.
+          The URL must be like <code>/seasons/2005</code>.
         </p>
-        <p className="mt-4"><Link href="/seasons" className="underline">Back to seasons</Link></p>
+        <p className="mt-2 text-sm text-neutral-600">
+          Received: <code>{String(raw)}</code>
+        </p>
       </main>
     );
   }
 
+  const games = await gamesBySeason(year);
+  
   if (!games.length) {
     return (
       <main className="max-w-6xl mx-auto p-6">
