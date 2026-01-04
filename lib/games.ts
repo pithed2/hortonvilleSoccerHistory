@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { Game } from './types';
+import { headers } from "next/headers";
 
 // RFC4180-ish CSV parse that handles quotes + commas and BOM
 function parseCSV(text: string): { cols: string[]; rows: string[][] } {
@@ -34,37 +35,37 @@ function splitCSVLine(line: string): string[] {
   return out;
 }
 
-//function readPublicData(...names: string[]): string {
-//  for (const n of names) {
-//    const p = path.join(process.cwd(), 'public', 'data', n);
-//    if (fs.existsSync(p)) return fs.readFileSync(p, 'utf8');
-//  }
-//  return '';
-//}
-
 async function readDataFile(...names: string[]): Promise<string> {
-  // 1) Local/dev: try filesystem first (works locally)
+  // 1) Local/dev: filesystem works
   for (const n of names) {
     const p = path.join(process.cwd(), "public", "data", n);
     if (fs.existsSync(p)) return fs.readFileSync(p, "utf8");
   }
 
-  // 2) Vercel/prod: fetch from the static asset URL
-  const base =
-    process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000";
+  // 2) Vercel/prod: fetch from CDN using current request host
+  // This is the key change: don't guess the base URL.
+  const h = headers();
+  const host =
+    h.get("x-forwarded-host") ??
+    h.get("host");
 
-  for (const n of names) {
-    const res = await fetch(`${base}/data/${n}`, { cache: "no-store" });
-    if (res.ok) return await res.text();
+  const proto =
+    h.get("x-forwarded-proto") ??
+    "https";
+
+  if (host) {
+    const base = `${proto}://${host}`;
+    for (const n of names) {
+      const res = await fetch(`${base}/data/${n}`, { cache: "no-store" });
+      if (res.ok) return await res.text();
+    }
   }
 
   return "";
 }
 
 export async function loadGames(): Promise<Game[]> {
-  const csvText = await readDataFile("games.csv", "games_textscore.csv");
+  const csvText = await readDataFile("games.csv");
   if (!csvText) return [];
 
   const { cols, rows } = parseCSV(csvText);
