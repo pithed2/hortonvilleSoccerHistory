@@ -4,7 +4,7 @@ export const revalidate = 60;
 import Link from "next/link";
 import { gamesBySeason, listSeasons } from "@/lib/games";
 
-type Props = { params: { year: string } };
+type Props = { params: Promise<{ year: string }> };
 
 export async function generateStaticParams() {
   // Prebuild all known seasons at build time
@@ -12,13 +12,8 @@ export async function generateStaticParams() {
   return years.map((y) => ({ year: String(y) }));
 }
 
-export default async function SeasonYearPage({ params }: { params: Record<string, string | undefined> }) {
-  return <pre>{JSON.stringify(params, null, 2)}</pre>;
-}
-
-//export default async function SeasonYearPage({ params }: { params: { year?: string } }) {
-export async function SeasonYearPage_old({ params }: { params: { year?: string } }) {
-  const raw = params?.year ?? "";
+export default async function SeasonYearPage({ params }: Props) {
+  const { year: raw } = await params;
   const year = parseInt(raw, 10);
 
   if (!raw || !Number.isFinite(year)) {
@@ -29,7 +24,7 @@ export async function SeasonYearPage_old({ params }: { params: { year?: string }
           The URL must be like <code>/seasons/2005</code>.
         </p>
         <p className="mt-2 text-sm text-neutral-600">
-          Received: <code>{String(raw)}</code>
+          Received: <code>{raw}</code>
         </p>
       </main>
     );
