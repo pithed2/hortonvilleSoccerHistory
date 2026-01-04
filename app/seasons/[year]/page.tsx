@@ -21,7 +21,7 @@ export default async function SeasonYearPage({ params }: Props) {
       <main className="max-w-6xl mx-auto p-6">
         <h1 className="text-2xl font-bold">Invalid season</h1>
         <p className="mt-2 text-sm text-neutral-600">
-          The URL must be like <code>/seasons/{year}</code>.
+          The URL must be like <code>/seasons/{year}</code>.  Full params being returned are <code>{params}</code>.
         </p>
         <p className="mt-4"><Link href="/seasons" className="underline">Back to seasons</Link></p>
       </main>
