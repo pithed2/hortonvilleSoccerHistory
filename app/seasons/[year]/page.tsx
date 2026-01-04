@@ -8,13 +8,13 @@ type Props = { params: { year: string } };
 
 export async function generateStaticParams() {
   // Prebuild all known seasons at build time
-  const years = listSeasons();
+  const years = await listSeasons();
   return years.map((y) => ({ year: String(y) }));
 }
 
-export default function SeasonYearPage({ params }: Props) {
+export default async function SeasonYearPage({ params }: Props) {
   const year = Number(params.year);
-  const games = gamesBySeason(year);
+  const games = await gamesBySeason(year);
 
   if (!Number.isFinite(year)) {
     return (
