@@ -5,6 +5,8 @@ export const revalidate = 60;
 
 export default async function SeasonsPage() {
   const seasons = await listSeasons();
+  // Debugging
+  <p className="text-sm text-red-600">Loaded seasons: {seasons.length}</p>
 
   return (
     <main className="max-w-5xl mx-auto p-6">
