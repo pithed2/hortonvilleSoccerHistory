@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import SiteHeader from "@/components/SiteHeader";
 
 /* Updated to use Poppins per HASD brand guide */
 const poppins = Poppins({
@@ -25,7 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} font-sans antialiased`}>
+      <body className={`${poppins.className} font-sans antialiased`}> 
+        <SiteHeader />
         {children}
         <Analytics />
       </body>
