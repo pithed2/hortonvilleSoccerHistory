@@ -17,7 +17,7 @@ export default async function SeasonYearPage({ params }: { params: Record<string
 }
 
 //export default async function SeasonYearPage({ params }: { params: { year?: string } }) {
-export function SeasonYearPage_old({ params }: { params: { year?: string } }) {
+export async function SeasonYearPage_old({ params }: { params: { year?: string } }) {
   const raw = params?.year ?? "";
   const year = parseInt(raw, 10);
 
