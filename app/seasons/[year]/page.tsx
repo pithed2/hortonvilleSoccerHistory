@@ -32,6 +32,7 @@ export default async function SeasonYearPage({ params }: { params: { year?: stri
 
   const games = await gamesBySeason(year);
   
+  
   if (!games.length) {
     return (
       <main className="max-w-6xl mx-auto p-6">
