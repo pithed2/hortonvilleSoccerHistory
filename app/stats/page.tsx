@@ -104,7 +104,7 @@ export default function StatsPage() {
           result: idx(cols, "result"),
           score: idx(cols, "score"),
           notes: idx(cols, "notes"),
-          coach: idx(cols, "coach"),
+          coach: idx(cols, "coach") >= 0 ? idx(cols, "coach") : idx(cols, "Coach"),
           competition: idx(cols, "competition"),
         };
         const parsedGames: Game[] = rows.map(parts => ({
@@ -131,7 +131,7 @@ export default function StatsPage() {
             const sx = {
               season_year: idx(sc, "season_year"),
               head_coach: idx(sc, "head_coach"),
-              coach: idx(sc, "coach"),
+              coach: idx(sc, "coach") >= 0 ? idx(sc, "coach") : idx(sc, "Coach"),
               notes_md: idx(sc, "notes_md"),
               notes: idx(sc, "notes"),
             };
