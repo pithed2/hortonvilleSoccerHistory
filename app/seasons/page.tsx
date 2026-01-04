@@ -4,19 +4,21 @@ export const runtime = "nodejs";
 export const revalidate = 60;
 
 export default async function SeasonsPage() {
-  const seasons = await listSeasons();
-  // Debugging
-  <p className="text-sm text-red-600">Loaded seasons: {seasons.length}</p>
-
+  const seasonsRaw = await listSeasons();
+  const seasons = seasonsRaw
+  .map((y) => Number(y))
+  .filter(Number.isFinite)
+  .sort((a, b) => b - a);
+  
   return (
     <main className="max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-4">View Seasons</h1>
       <ul className="grid sm:grid-cols-2 gap-4">
-        {await Promise.all(seasons.map(async (y) => {
-          const cnt = (await gamesBySeason(y)).length;
+        {await Promise.all(seasons.map(async (seasons) => {
+          const cnt = (await gamesBySeason(seasons)).length;
           return (
-            <li key={y} className="rounded-xl p-4 border bg-white">
-              <a href={`/seasons/${y}`} className="font-semibold">{y}</a>
+            <li key={seasons} className="rounded-xl p-4 border bg-white">
+              <a href={`/seasons/${seasons}`} className="font-semibold">{seasons}</a>
               <div className="text-sm text-neutral-600">{cnt} games</div>
             </li>
           );
