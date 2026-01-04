@@ -2,6 +2,8 @@ export const runtime = "nodejs";
 export const revalidate = 60;
 
 import Link from "next/link";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 import { gamesBySeason, listSeasons } from "@/lib/games";
 
 type Props = { params: Promise<{ year: string }> };
@@ -19,6 +21,7 @@ export default async function SeasonYearPage({ params }: Props) {
   if (!raw || !Number.isFinite(year)) {
     return (
       <main className="max-w-6xl mx-auto p-6">
+        <Navigation />
         <h1 className="text-2xl font-bold">Invalid season</h1>
         <p className="mt-2 text-sm text-neutral-600">
           The URL must be like <code>/seasons/2005</code>.
@@ -26,6 +29,7 @@ export default async function SeasonYearPage({ params }: Props) {
         <p className="mt-2 text-sm text-neutral-600">
           Received: <code>{raw}</code>
         </p>
+        <Footer />
       </main>
     );
   }
@@ -36,11 +40,13 @@ export default async function SeasonYearPage({ params }: Props) {
   if (!games.length) {
     return (
       <main className="max-w-6xl mx-auto p-6">
+        <Navigation />
         <h1 className="text-2xl font-bold">{year} Season</h1>
         <p className="mt-2 text-sm text-neutral-600">
           No games found for {year}. Make sure <code>public/data/games.csv</code> (or <code>games_textscore.csv</code>) contains rows with <code>season_year = {year}</code>.
         </p>
         <p className="mt-4"><Link href="/seasons" className="underline">Back to seasons</Link></p>
+        <Footer />
       </main>
     );
   }
@@ -49,6 +55,7 @@ export default async function SeasonYearPage({ params }: Props) {
 
   return (
     <main className="max-w-6xl mx-auto p-6 space-y-6">
+      <Navigation />
       <header className="flex items-center justify-between gap-4">
         <h1 className="text-3xl font-bold">{year} Season</h1>
         <Link href="/seasons" className="text-sm underline text-neutral-600">← All seasons</Link>
@@ -84,6 +91,7 @@ export default async function SeasonYearPage({ params }: Props) {
           </tbody>
         </table>
       </div>
+      <Footer />
     </main>
   );
 }
