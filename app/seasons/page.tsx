@@ -14,7 +14,7 @@ export default async function SeasonsPage() {
   
   return (
     <main className="max-w-5xl mx-auto p-6">
-      <navigation />
+      <Navigation />
       <h1 className="text-3xl font-bold mb-4">View Seasons</h1>
       <ul className="grid sm:grid-cols-2 gap-4">
         {await Promise.all(seasons.map(async (y) => {
@@ -28,7 +28,7 @@ export default async function SeasonsPage() {
           );
         }))}
       </ul>
-      <footer />
+      <Footer />
     </main>
   );
 }
