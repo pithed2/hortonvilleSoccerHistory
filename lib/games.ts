@@ -34,13 +34,13 @@ function splitCSVLine(line: string): string[] {
   return out;
 }
 
-function readPublicData(...names: string[]): string {
-  for (const n of names) {
-    const p = path.join(process.cwd(), 'public', 'data', n);
-    if (fs.existsSync(p)) return fs.readFileSync(p, 'utf8');
-  }
-  return '';
-}
+//function readPublicData(...names: string[]): string {
+//  for (const n of names) {
+//    const p = path.join(process.cwd(), 'public', 'data', n);
+//    if (fs.existsSync(p)) return fs.readFileSync(p, 'utf8');
+//  }
+//  return '';
+//}
 
 async function readDataFile(...names: string[]): Promise<string> {
   // 1) Local/dev: try filesystem first (works locally)
