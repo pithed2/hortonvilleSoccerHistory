@@ -12,7 +12,12 @@ export async function generateStaticParams() {
   return years.map((y) => ({ year: String(y) }));
 }
 
-export default async function SeasonYearPage({ params }: { params: { year?: string } }) {
+export default async function SeasonYearPage({ params }: { params: Record<string, string | undefined> }) {
+  return <pre>{JSON.stringify(params, null, 2)}</pre>;
+}
+
+//export default async function SeasonYearPage({ params }: { params: { year?: string } }) {
+export function SeasonYearPage_old({ params }: { params: { year?: string } }) {
   const raw = params?.year ?? "";
   const year = parseInt(raw, 10);
 
