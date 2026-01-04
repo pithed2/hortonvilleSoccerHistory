@@ -89,7 +89,7 @@ export default function StatsPage() {
         setStatus("loading");
         // Try games.csv, then games_textscore.csv
         let gamesCsv = "";
-        for (const name of ["/public/data/games.csv", "/public/data/games_textscore.csv"]) {
+        for (const name of ["/data/games.csv", "/data/games_textscore.csv"]) {
           const res = await fetch(name, { cache: "no-store" });
           if (res.ok) { gamesCsv = await res.text(); break; }
         }
