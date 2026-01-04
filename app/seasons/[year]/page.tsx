@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 }
 
 export default async function SeasonYearPage({ params }: Props) {
-  const year = Number(params.year);
+  const year = parseInt(params.year, 10);
   const games = await gamesBySeason(year);
 
   if (!Number.isFinite(year)) {
