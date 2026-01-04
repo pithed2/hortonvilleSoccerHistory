@@ -42,8 +42,29 @@ function readPublicData(...names: string[]): string {
   return '';
 }
 
-export function loadGames(): Game[] {
-  const csvText = readPublicData('games.csv', 'games_textscore.csv');
+async function readDataFile(...names: string[]): Promise<string> {
+  // 1) Local/dev: try filesystem first (works locally)
+  for (const n of names) {
+    const p = path.join(process.cwd(), "public", "data", n);
+    if (fs.existsSync(p)) return fs.readFileSync(p, "utf8");
+  }
+
+  // 2) Vercel/prod: fetch from the static asset URL
+  const base =
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+
+  for (const n of names) {
+    const res = await fetch(`${base}/data/${n}`, { cache: "no-store" });
+    if (res.ok) return await res.text();
+  }
+
+  return "";
+}
+
+export async function loadGames(): Promise<Game[]> {
+  const csvText = await readDataFile("games.csv", "games_textscore.csv");
   if (!csvText) return [];
 
   const { cols, rows } = parseCSV(csvText);
@@ -71,15 +92,15 @@ export function loadGames(): Game[] {
   }).filter(g => Number.isFinite(g.season_year));
 }
 
-export function gamesBySeason(year: number) {
-  const all = loadGames();
+export async function gamesBySeason(year: number) {
+  const all = await loadGames();
   return all
     .filter(g => g.season_year === year)
     .sort((a, b) => a.date.localeCompare(b.date) || a.opponent.localeCompare(b.opponent));
 }
 
-export function listSeasons(): number[] {
-  const all = loadGames();
+export async function listSeasons(): Promise<number[]> {
+  const all = await loadGames();
   return Array.from(new Set(all.map(g => g.season_year)))
     .filter(Boolean)
     .sort((a, b) => b - a);
