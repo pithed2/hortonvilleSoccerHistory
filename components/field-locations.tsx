@@ -155,7 +155,7 @@ export function FieldLocations() {
 
           <div className="rounded-lg overflow-hidden border-2 border-primary/30 shadow-lg">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j5qhOacSCpLRgdwKfq62ntdCgeUqBV.png"
+              src="/images/middle-school-field-aerial.jpg"
               alt="Aerial view of Hortonville Middle School showing rebuilt soccer field with scoreboard, supply shed, bleachers, and the Polar Bears stadium complex"
               width={600}
               height={500}
@@ -168,7 +168,7 @@ export function FieldLocations() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="rounded-lg overflow-hidden border-2 border-primary/30 shadow-lg">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RLxyHuiryIRBHCcYAvEuRUtw3oJHrd.png"
+              src="/images/akin-field-2009-grass.jpg"
               alt="Aerial view of Akin Field stadium showing Hortonville Polar Bears football field lined for soccer, with visible JV field and lights"
               width={600}
               height={500}
@@ -250,7 +250,7 @@ export function FieldLocations() {
 
           <div className="rounded-lg overflow-hidden border-2 border-primary/30 shadow-lg">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-msNw7tNysun7szyrnKHP8JZOEvd8Pj.png"
+              src="/images/akin-field-2018-aerial.jpg"
               alt="Aerial view of modernized Akin Field showing professional turf, permanent soccer and football lines, rotating uprights, coaching facility building, and large scoreboard"
               width={600}
               height={500}

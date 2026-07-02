@@ -21,7 +21,7 @@ export default async function SeasonsPage() {
           const cnt = (await gamesBySeason(y)).length;
           const yy = Number(y);
           return (
-            <li key={seasons} className="rounded-xl p-4 border bg-white">
+            <li key={yy} className="rounded-xl p-4 border bg-white">
               <a href={`/seasons/${yy}`} className="font-semibold"> -- {yy}</a>
               <div className="text-sm text-neutral-600">{cnt} games</div>
             </li>

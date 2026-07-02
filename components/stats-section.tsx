@@ -1,11 +1,18 @@
-export function StatsSection() {
+import { programOverview } from "@/lib/games"
+
+export async function StatsSection() {
+  const overview = await programOverview()
+
   const stats = [
-    { label: "Total Seasons", value: "21" },
-    { label: "All-Time Record", value: "204-172-55" },
-    { label: "Career Win Rate", value: "47.3%" },
-    { label: "Total Goals Scored", value: "1,048" },
-    { label: "Head Coaches", value: "3" },
-    { label: "Years Active", value: "2005-2025" },
+    { label: "Total Seasons", value: String(overview.seasons) },
+    { label: "All-Time Record", value: `${overview.wins}-${overview.losses}-${overview.ties}` },
+    { label: "Career Win Rate", value: `${overview.winPct.toFixed(1)}%` },
+    { label: "Total Goals Scored", value: overview.gf.toLocaleString() },
+    { label: "Head Coaches", value: String(overview.headCoaches) },
+    {
+      label: "Years Active",
+      value: overview.yearStart && overview.yearEnd ? `${overview.yearStart}-${overview.yearEnd}` : "—",
+    },
   ]
 
   return (
