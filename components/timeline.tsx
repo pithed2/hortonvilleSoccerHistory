@@ -1,42 +1,47 @@
 export function Timeline() {
   const eras = [
     {
-      period: "1980s",
-      title: "The Beginning",
-      description: "The founding of Hortonville Soccer, establishing the first fields and coaching staff",
-      milestone: "Inaugural Season",
+      period: "2001-2002",
+      title: "Pickup Games Become a Program",
+      description:
+        "Hortonville soccer grew from pickup games, student interest, staff support, club connections, and the push toward a school team.",
+      milestone: "Early story from Patrick Koss",
       logo: "/logos/vintage-soccer-logo.png",
       logoAlt: "Vintage Hortonville Soccer Logo",
     },
     {
-      period: "1990s",
-      title: "Growth Years",
-      description: "Expansion to multiple age groups and the establishment of core program values",
-      milestone: "First Championship",
+      period: "2003",
+      title: "Polar Bear Camp Begins",
+      description:
+        "The Polar Bear Camp tradition began with Jean Wagner and Lori Claybaugh at Greenville Middle School Field, later continuing through Fox West YMCA support and newer Hortonville facilities.",
+      milestone: "Youth camp tradition established",
       logo: "/logos/junior-polar-bears-logo.png",
       logoAlt: "Junior Polar Bears Logo",
     },
     {
-      period: "2000s",
-      title: "Golden Era",
-      description: "Peak performance years with multiple championship runs and record participation",
-      milestone: "5 State Titles",
+      period: "2003-2012",
+      title: "Varsity Records and Facilities Growth",
+      description:
+        "The current boys game archive begins in 2003. These years built varsity legitimacy through competition, field changes, Akin Stadium access, and growing equipment needs.",
+      milestone: "Game records begin",
       logo: "/logos/h-bear-logo.png",
       logoAlt: "H-Bear Badge Logo",
     },
     {
-      period: "2010s",
-      title: "Modern Era",
-      description: "Modernization of facilities, coaching methods, and community engagement",
-      milestone: "New Field Complex",
+      period: "2013-2020",
+      title: "Conference and Postseason Breakthroughs",
+      description:
+        "The boys program won the 2013 Bay Conference championship, added regional titles in 2019 and 2020, and came within one game of state in both 2019 and 2020.",
+      milestone: "2013 Bay Conference champions",
       logo: "/logos/modern-bear-logo.png",
       logoAlt: "Modern Bear Logo",
     },
     {
-      period: "2020s",
-      title: "The Future",
-      description: "Building on legacy with next generation of players and coaches",
-      milestone: "Continuing Excellence",
+      period: "2021-2025",
+      title: "FVA Success and a Living Archive",
+      description:
+        "The boys program added regional championships in 2023 and 2025, won the 2025 Fox Valley Association championship, and reached as high as seventh in the WSCA Division 1 rankings.",
+      milestone: "2025 FVA champions",
       logo: "/logos/modern-bear-logo.png",
       logoAlt: "Modern Bear Logo",
     },
@@ -48,7 +53,7 @@ export function Timeline() {
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">Our Journey Through Time</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From the founding vision to today's thriving community
+            A working timeline built from verified records, remembered stories, and the archive still being gathered
           </p>
         </div>
 
@@ -78,6 +83,11 @@ export function Timeline() {
             </div>
           ))}
         </div>
+
+        <p className="mt-10 text-sm text-muted-foreground text-center max-w-3xl mx-auto">
+          This archive currently has the deepest verified records for the boys program. Girls program history and records
+          are still being gathered and will be expanded as more complete information becomes available.
+        </p>
       </div>
     </section>
   )
