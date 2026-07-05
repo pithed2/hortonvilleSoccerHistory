@@ -7,17 +7,15 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "History", href: "#timeline" },
-    { label: "Logo Evolution", href: "#logo-evolution" },
-    { label: "Photos", href: "#gallery" },
-    { label: "Coaches", href: "#coaches" },
-    { label: "Stats", href: "#stats" },
-    { label: "Stories", href: "#stories" },
-    { label: "Contribute", href: "#contribute" },
+    { label: "History", href: "/history" },
+    { label: "Fields", href: "/fields" },
+    { label: "Photos", href: "/photos" },
+    { label: "Coaches", href: "/coaches" },
+    { label: "Stats", href: "/stats" },
+    { label: "Seasons", href: "/seasons" },
   ]
 
   const secondaryNavItems = [
-    { label: "Season Stats", href: "/stats" },
     { label: "Coaching Records", href: "/coaching-records" },
   ]
 

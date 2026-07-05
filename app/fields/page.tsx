@@ -1,17 +1,13 @@
 import { Navigation } from "@/components/navigation"
-import { Hero } from "@/components/hero"
-import { Timeline } from "@/components/timeline"
-import { StatsSection } from "@/components/stats-section"
+import { FieldLocations } from "@/components/field-locations"
 import { ContributeSection } from "@/components/contribute-section"
 import { Footer } from "@/components/footer"
 
-export default function Home() {
+export default function FieldsPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
-      <Timeline />
-      <StatsSection />
+      <FieldLocations />
       <ContributeSection />
       <Footer />
     </main>
