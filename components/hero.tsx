@@ -23,10 +23,10 @@ export function Hero() {
 
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-balance">
-            Decades of Passion & Excellence
+            Passion & Excellence - Hortonville Soccer
           </h1>
           <p className="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto text-balance text-primary-foreground/90">
-            Celebrating the rich history, unforgettable moments, and incredible people of the Hortonville Soccer Program
+            Celebrating the history, moments, and people of the Hortonville Soccer Program
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
