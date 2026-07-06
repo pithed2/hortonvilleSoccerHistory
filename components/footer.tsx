@@ -82,6 +82,7 @@ export function Footer() {
               View kit history
             </a>
           </div>
+        </div>
         <div className="border-t border-background/20 pt-8">
           <p className="text-center text-sm text-background/70">
             © 2026 Hortonville Soccer History. A living archive built by our community.
