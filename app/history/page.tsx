@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Timeline } from "@/components/timeline"
 import { FoundingStory } from "@/components/founding-story"
-import { LogoEvolution } from "@/components/logo-evolution"
+import { KitHistory  } from "@/components/kit-history"
 import { StoriesSection } from "@/components/stories-section"
 import { ContributeSection } from "@/components/contribute-section"
 import { Footer } from "@/components/footer"
@@ -12,7 +12,7 @@ export default function HistoryPage() {
       <Navigation />
       <Timeline />
       <FoundingStory />
-      <LogoEvolution />
+      <KitHistory />
       <StoriesSection />
       <ContributeSection />
       <Footer />

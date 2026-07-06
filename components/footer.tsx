@@ -20,8 +20,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#logo-evolution" className="text-background/80 hover:text-background transition">
-                  Logo Evolution
+                <a href="/history#kits" className="text-background/80 hover:text-background transition">
+                  Kit History
                 </a>
               </li>
               <li>
@@ -74,33 +74,14 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-sm">Our Heritage</h4>
-            <div className="flex gap-3">
-              <img
-                src="/logos/vintage-soccer-logo.png"
-                alt="Vintage logo"
-                className="h-8 w-8 object-contain opacity-80 hover:opacity-100 transition"
-              />
-              <img
-                src="/logos/junior-polar-bears-logo.png"
-                alt="Junior Bears logo"
-                className="h-8 w-8 object-contain opacity-80 hover:opacity-100 transition"
-              />
-              <img
-                src="/logos/h-bear-logo.png"
-                alt="H-Bear logo"
-                className="h-8 w-8 object-contain opacity-80 hover:opacity-100 transition"
-              />
-              <img
-                src="/logos/modern-bear-logo.png"
-                alt="Modern logo"
-                className="h-8 w-8 object-contain opacity-80 hover:opacity-100 transition"
-              />
-            </div>
-            <p className="text-xs text-background/70 mt-3">Twenty years of visual identity</p>
+            <h4 className="font-semibold mb-4 text-sm">Kit Archive</h4>
+            <p className="text-sm text-background/80 leading-relaxed">
+              We are documenting nearly 20 Hortonville soccer kits, from early uniforms to the modern home, away, warmup, and cold-weather sets.
+            </p>
+            <a href="/history#kits" className="inline-block mt-3 text-sm text-background hover:text-background/80 font-semibold">
+              View kit history
+            </a>
           </div>
-        </div>
-
         <div className="border-t border-background/20 pt-8">
           <p className="text-center text-sm text-background/70">
             © 2026 Hortonville Soccer History. A living archive built by our community.
