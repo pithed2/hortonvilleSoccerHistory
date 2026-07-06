@@ -4,14 +4,14 @@ export function FoundingStory() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">How It All Started</h2>
-          <p className="text-lg text-muted-foreground">The founding story of Hortonville Soccer</p>
+          <p className="text-lg text-muted-foreground">From teachers, to students, to administration and parents - the many hands that shaped the program</p>
         </div>
 
         {/* Founding Story Card */}
         <div className="bg-background rounded-lg p-8 md:p-12 border border-primary/20 mb-8">
           <div className="mb-6">
-            <p className="text-primary font-semibold text-sm uppercase tracking-wider">Patrick Koss - Founder</p>
-            <p className="text-muted-foreground text-sm">1998-1999 School Year</p>
+            <p className="text-primary font-semibold text-sm uppercase tracking-wider">An Origin Story From Patrick Koss</p>
+            <p className="text-muted-foreground text-sm">Late 90's</p>
           </div>
 
           <div className="prose prose-invert max-w-none space-y-4 text-muted-foreground leading-relaxed">
@@ -55,39 +55,35 @@ export function FoundingStory() {
         {/* Key Founders Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-background rounded-lg p-6 border border-border">
-            <h3 className="font-black mb-3 text-primary">Early Supporters</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                • <span className="font-semibold">Patrick Koss</span> - Founder, initiated pickup games
-              </li>
-              <li>
-                • <span className="font-semibold">Mike Sommers</span> - Football Coach, provided equipment
-              </li>
-              <li>
-                • <span className="font-semibold">Sharon Becker</span> - Principal, supported transportation
-              </li>
-              <li>
-                • <span className="font-semibold">Mary Lynn Hermus</span> - Counselor, provided support
-              </li>
-            </ul>
+            <h3 className="font-black mb-3 text-primary">The Early Spark</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              The program began with students gathering around pickup soccer, many already connected to club soccer and looking
+              for a way to bring the game into the school setting.
+            </p>
           </div>
 
           <div className="bg-background rounded-lg p-6 border border-border">
-            <h3 className="font-black mb-3 text-primary">Program Builders</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                • <span className="font-semibold">Mrs. Craddock</span> - Established school team
-              </li>
-              <li>
-                • <span className="font-semibold">Gary Ruhle</span> - First club coach
-              </li>
-              <li>
-                • <span className="font-semibold">Dena Craddock & Mandy Price</span> - First female players
-              </li>
-              <li>
-                • <span className="font-semibold">Jason Hurley</span> - Athletic Director, expanded support
-              </li>
-            </ul>
+            <h3 className="font-black mb-3 text-primary">School Support</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Staff and administrators helped with equipment, transportation, encouragement, and space for the idea to become
+              something more organized.
+            </p>
+          </div>
+
+          <div className="bg-background rounded-lg p-6 border border-border">
+            <h3 className="font-black mb-3 text-primary">Family And Community Push</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Parents, families, and community supporters helped move soccer from informal games toward a school team with real
+              structure and momentum.
+            </p>
+          </div>
+
+          <div className="bg-background rounded-lg p-6 border border-border">
+            <h3 className="font-black mb-3 text-primary">Many Hands, One Program</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Hortonville soccer was not built by one person or one moment. It grew through repeated acts of support from
+              players, coaches, families, staff, administrators, sponsors, and volunteers.
+            </p>
           </div>
         </div>
 
