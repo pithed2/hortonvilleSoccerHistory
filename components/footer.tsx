@@ -6,7 +6,7 @@ export function Footer() {
           <img src="/logos/modern-bear-logo.png" alt="Hortonville Soccer Logo" className="h-12 w-12 object-contain" />
           <div>
             <h3 className="font-black text-lg">Hortonville Soccer</h3>
-            <p className="text-sm text-background/80">Celebrating decades of passion, excellence, and community</p>
+            <p className="text-sm text-background/80">The teams, fields, coaches, records, and stories that shaped the Hortonville Soccer Program</p>
           </div>
         </div>
 
@@ -97,13 +97,13 @@ export function Footer() {
                 className="h-8 w-8 object-contain opacity-80 hover:opacity-100 transition"
               />
             </div>
-            <p className="text-xs text-background/70 mt-3">Four decades of visual identity</p>
+            <p className="text-xs text-background/70 mt-3">Twenty years of visual identity</p>
           </div>
         </div>
 
         <div className="border-t border-background/20 pt-8">
           <p className="text-center text-sm text-background/70">
-            © 2025 Hortonville Soccer History. A living archive built by our community.
+            © 2026 Hortonville Soccer History. A living archive built by our community.
           </p>
         </div>
       </div>

@@ -34,7 +34,7 @@ export function PhotoGallery() {
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">Photo Archive</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Browse through decades of memories and moments
+            Browse through the memories and moments
           </p>
 
           {/* Category Filter */}

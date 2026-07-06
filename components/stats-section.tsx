@@ -21,7 +21,7 @@ export async function StatsSection() {
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">By The Numbers</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The Hortonville Boys Soccer program spanning two decades
+            The Hortonville Boys Soccer program spanning over twenty years
           </p>
         </div>
 

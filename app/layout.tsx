@@ -12,9 +12,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Hortonville Soccer History",
+  title: "Hortonville Soccer",
   description:
-    "Celebrating the legacy and stories of Hortonville Soccer Program - decades of passion, achievement, and community",
+    "The teams, fields, coaches, records, and stories that shaped the Hortonville Soccer Program",
   generator: "v0.app",
 }
 
