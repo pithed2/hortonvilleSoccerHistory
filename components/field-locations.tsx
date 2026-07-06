@@ -7,9 +7,9 @@ export function FieldLocations() {
     <section id="fields" className="py-20 md:py-32 bg-background border-y border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">Our Fields Through the Years</h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">Fields & Facilities</h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            The physical homes where Hortonville Soccer has grown, played, and built memories
+            The physical spaces, storage, equipment, and community support that helped Hortonville soccer grow from borrowed space into a full program.
           </p>
         </div>
 
@@ -130,7 +130,8 @@ export function FieldLocations() {
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">•</span>
                   <span>
-                    <strong>Drs. Claybaugh & Dunathan:</strong> Provided the scoreboard to complete the first phase
+                    <strong>Drs. Claybaugh & Dunathan:</strong> Provided the scoreboard to complete the first phase.  The entire Claybaugh family 
+                    gave years to the program through coaching, play (boys & girls teams), and support of the Polar Bear Soccer Camp.  
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -180,32 +181,31 @@ export function FieldLocations() {
             <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
               <h3 className="text-2xl font-bold text-primary mb-3">Akin Field Stadium (2009-2017)</h3>
               <p className="text-foreground mb-4">
-                After years of discussion with school leadership and fighting for the program's legitimacy as a varsity
-                sport, Hortonville Soccer played their first game under the lights on the Akin Field stadium in August
-                2009. This represented a major milestone and validation for the program.
+                After years of discussion with school leadership and continued efforts to establish the program's legitimacy as a varsity sport, Hortonville Soccer 
+                reached a major milestone in August 2009 when the program played its first game under the lights at Akin Field.
               </p>
               <p className="text-foreground mb-4">
-                The stadium field was a grass football field that required soccer-specific lining for each match. While
-                regularly beaten up from football season and narrower than ideal for soccer, playing under the lights
-                with an announcer provided the prestige and visibility the program had fought for.
+                Andy Montalbano worked closely with Activities Director Jason Hurley to help build support and gain traction for the program. The moment represented 
+                more than just a game. It was a validation of the work, persistence, and belief behind Hortonville Soccer's growth.
               </p>
               <p className="text-foreground mb-4">
-                The adjacent JV field offered better field conditions but lacked the same prestige. Many varsity games
-                were strategically scheduled under the lights, making Hortonville Soccer a visible part of the fall
-                athletic calendar.
+                The stadium field was a grass football field that required soccer-specific lining for each match. While regularly beaten up from football season and 
+                narrower than ideal for soccer, playing under the lights with a announcer - Hortonville Soccer's biggest fan, Mark Jones - provided the prestige and visibility the program had fought for.
+              </p>
+              <p className="text-foreground mb-4">
+                The adjacent JV field offered better field conditions but lacked the same prestige. Many varsity games were strategically scheduled under the lights, 
+                making Hortonville Soccer a visible part of the fall athletic calendar.
               </p>
               <p className="text-muted-foreground text-sm italic">
-                This shift symbolized the program's arrival as a legitimate varsity sport within the Hortonville school
-                community.
+                This shift symbolized the program's arrival as a legitimate varsity sport within the Hortonville school community.
               </p>
             </div>
 
             <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-2 text-blue-900 dark:text-blue-100">A Major Achievement</h3>
               <p className="text-sm text-blue-800 dark:text-blue-200">
-                Playing under the lights at a stadium field cemented Hortonville Soccer's place as a valued varsity
-                sport. The years of advocacy and community support finally paid off, and the program gained visibility
-                and legitimacy that elevated its status within the school.
+                Playing under the lights at a stadium field cemented Hortonville Soccer's place as a valued varsity sport. The years of advocacy and community support 
+                finally paid off, and the program gained visibility and legitimacy that elevated its status within the school.
               </p>
             </div>
           </div>
@@ -217,33 +217,28 @@ export function FieldLocations() {
             <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
               <h3 className="text-2xl font-bold text-primary mb-3">Akin Field Stadium Modernization (2018-Present)</h3>
               <p className="text-foreground mb-4">
-                In 2018, the soccer program joined forces with football, track and field, and the school district to
-                completely upgrade and modernize Akin Field. This collaborative effort transformed the stadium into a
-                state-of-the-art facility that met the needs of all three sports while prioritizing soccer.
+                In 2018, the soccer program joined forces with football, track and field, and the school district to completely upgrade and modernize Akin Field. 
+                This collaborative effort transformed the stadium into a state-of-the-art facility that met the needs of all three sports while prioritizing soccer.
               </p>
               <p className="text-foreground mb-4">
-                The field was completely resurfaced with professional-grade artificial turf, widened to proper soccer
-                dimensions, and permanently lined for both soccer and football. The design allows football uprights to
-                rotate away when not in use, ensuring they never interfere with the soccer pitch.
+                The field was completely resurfaced with professional-grade artificial turf, widened to proper soccer dimensions, and permanently lined for both soccer 
+                and football. The design allows football uprights to rotate away when not in use, ensuring they never interfere with the soccer pitch.
               </p>
               <p className="text-foreground mb-4">
-                Additional infrastructure added to the facility includes a large coaching and team building structure
-                for pre-game and halftime strategy sessions away from the field, a massive modern scoreboard, and
-                improved spectator amenities. The facility now serves as a source of pride for the entire athletic
-                program.
+                Additional infrastructure added to the facility includes a large coaching and team building structure for pre-game and halftime strategy sessions away from 
+                the field, a massive modern scoreboard, and improved spectator amenities. The facility now serves as a source of pride for the entire athletic program.
               </p>
               <p className="text-muted-foreground text-sm italic">
-                From grass that required manual lining to professional turf with permanent soccer and football lines,
-                Hortonville Soccer finally has a home that matches its level of competition and community support.
+                From grass that required manual lining to professional turf with permanent soccer and football lines, Hortonville Soccer finally has a home that matches 
+                its level of competition and community support.
               </p>
             </div>
 
             <div className="bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-2 text-green-900 dark:text-green-100">A Shared Vision</h3>
               <p className="text-sm text-green-800 dark:text-green-200">
-                The 2018 upgrade represented unprecedented collaboration between multiple athletic programs and the
-                school district. Each sport benefited from the modernization, but the facility was designed with soccer
-                in mind—a testament to how far the program had come in gaining respect and resources.
+                The 2018 upgrade represented unprecedented collaboration between multiple athletic programs and the school district. Each sport benefited from the 
+                modernization, but the facility was designed with soccer in mind—a testament to how far the program had come in gaining respect and resources.
               </p>
             </div>
           </div>
@@ -260,15 +255,14 @@ export function FieldLocations() {
         </div>
 
         <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg p-8 border border-primary/20">
-          <h3 className="text-2xl font-bold mb-4">A Living Legacy</h3>
+          <h3 className="text-2xl font-bold mb-4">More Than A Field</h3>
           <p className="text-foreground mb-4">
-            From the cottonwood tree on campus to the electric fence adventure at the Commercial Club, to the rebuilt
-            middle school facility, each location has shaped the character of the Hortonville Soccer Program. Today, the
-            program plays on modern facilities built through community support and shared vision.
+            Hortonville soccer’s facility story is also a story of storage sheds, scoreboards, locker space, lights, turf,
+            volunteers, sponsors, and years of small upgrades that made the program feel more permanent.
           </p>
           <p className="text-muted-foreground">
-            If you have photos or memories from these field locations, we'd love to hear your stories and see your
-            images.
+            As more photos are gathered, this section will continue to document not just where the teams played, but how the
+            program slowly built the infrastructure around them.
           </p>
         </div>
       </div>

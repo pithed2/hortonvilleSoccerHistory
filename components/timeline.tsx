@@ -1,7 +1,7 @@
 export function Timeline() {
   const eras = [
     {
-      period: "2001-2002",
+      period: "1998-2002",
       title: "Pickup Games Become a Program",
       description:
         "Hortonville soccer grew from pickup games, student interest, staff support, club connections, and the push toward a school team.",
