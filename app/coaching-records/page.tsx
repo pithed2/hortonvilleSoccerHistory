@@ -10,7 +10,7 @@ import { coachRecords } from "@/lib/games"
 const COACH_INFO: Record<string, { fullName: string; highlights: string[] }> = {
   Everett: {
     fullName: "Paul Everett",
-    highlights: ["Longest-tenured head coach in program history", "Pioneered the identity and standards of Hortonville soccer],
+    highlights: ["Longest-tenured head coach in program history", "Pioneered the identity and standards of Hortonville soccer"],
   },
   Montalbano: {
     fullName: "Andy Montalbano",
