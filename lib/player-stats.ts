@@ -134,3 +134,38 @@ export function playerSeasonStatsBySeason(year: number): PlayerSeasonStats[] {
     .sort((a, b) => b.points - a.points || b.goals - a.goals || a.player_name.localeCompare(b.player_name))
 }
 
+export type GoalkeeperSeasonStats = {
+  season: number
+  player_name: string
+  class: string
+  number: string
+  gp: number
+  minutes: number
+  ga: number
+  saves: number
+  pksv: number
+  save_pct: number
+  gaa: number
+  opp_sog: number
+}
+
+export function goalkeeperSeasonStatsBySeason(year: number): GoalkeeperSeasonStats[] {
+  return readRows("goalkeeper-season-stats.csv")
+    .map((row) => ({
+      season: toNumber(row.season),
+      player_name: row.player_name,
+      class: row.class,
+      number: row.number,
+      gp: toNumber(row.gp),
+      minutes: toNumber(row.minutes),
+      ga: toNumber(row.ga),
+      saves: toNumber(row.saves),
+      pksv: toNumber(row.pksv),
+      save_pct: toNumber(row.save_pct),
+      gaa: toNumber(row.gaa),
+      opp_sog: toNumber(row.opp_sog),
+    }))
+    .filter((row) => row.season === year)
+    .sort((a, b) => b.minutes - a.minutes || a.player_name.localeCompare(b.player_name))
+}
+

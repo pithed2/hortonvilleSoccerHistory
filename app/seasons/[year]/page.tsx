@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { gamesBySeason, listSeasons } from "@/lib/games";
-import { playerSeasonStatsBySeason, rosterBySeason } from "@/lib/player-stats"
+import { goalkeeperSeasonStatsBySeason, playerSeasonStatsBySeason, rosterBySeason } from "@/lib/player-stats"
 
 type Props = { params: Promise<{ year: string }> };
 
@@ -38,6 +38,7 @@ export default async function SeasonYearPage({ params }: Props) {
   const games = await gamesBySeason(year);
   const roster = rosterBySeason(year);
   const playerStats = playerSeasonStatsBySeason(year);
+  const goalkeeperStats = goalkeeperSeasonStatsBySeason(year);
   
   
   if (!games.length) {
@@ -158,6 +159,41 @@ export default async function SeasonYearPage({ params }: Props) {
           </div>
         </section>
         )}
+              {goalkeeperStats.length > 0 && (
+        <section className="rounded-xl border p-6">
+          <h2 className="text-2xl font-bold mb-4">Goalkeeper Stats</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-[800px] w-full text-sm">
+              <thead className="bg-neutral-50">
+                <tr>
+                  <th className={cell}>Player</th>
+                  <th className={cell}>GP</th>
+                  <th className={cell}>Min</th>
+                  <th className={cell}>GA</th>
+                  <th className={cell}>Saves</th>
+                  <th className={cell}>Save %</th>
+                  <th className={cell}>GAA</th>
+                  <th className={cell}>Opp SOG</th>
+                </tr>
+              </thead>
+              <tbody>
+                {goalkeeperStats.map((keeper) => (
+                  <tr key={`${keeper.season}-${keeper.player_name}`} className="odd:bg-white even:bg-neutral-50">
+                    <td className={cell}>{keeper.player_name}</td>
+                    <td className={cell}>{keeper.gp}</td>
+                    <td className={cell}>{keeper.minutes}</td>
+                    <td className={cell}>{keeper.ga}</td>
+                    <td className={cell}>{keeper.saves}</td>
+                    <td className={cell}>{keeper.save_pct ? `${(keeper.save_pct * 100).toFixed(1)}%` : ""}</td>
+                    <td className={cell}>{keeper.gaa ? keeper.gaa.toFixed(2) : ""}</td>
+                    <td className={cell}>{keeper.opp_sog || ""}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+        )}  
       <Footer />
     </main>
   );
