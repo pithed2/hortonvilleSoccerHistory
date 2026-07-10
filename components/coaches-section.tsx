@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export function CoachesSection() {
   const coaches = [
@@ -31,23 +32,31 @@ export function CoachesSection() {
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">Our Coaches</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The visionary leaders who shaped Hortonville soccer
+            The coaches who shaped Hortonville soccer
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {coaches.map((coach) => (
             <div key={coach.name} className="group">
-              <div className="relative overflow-hidden rounded-lg bg-card border border-border mb-4 h-64">
+              <Link
+                href="/coaching-records"
+                className="relative block overflow-hidden rounded-lg bg-card border border-border mb-4 h-64"
+              >
                 <Image
                   src={coach.image || "/placeholder.svg"}
                   alt={coach.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-              </div>
+              </Link>
               <h3 className="text-lg font-black mb-1">{coach.name}</h3>
-              <p className="text-sm font-semibold text-primary mb-2">{coach.years}</p>
+              <Link
+                href="/coaching-records"
+                className="inline-block text-sm font-semibold text-primary mb-2 hover:underline"
+              >
+                {coach.years}
+              </Link>
               <p className="text-sm font-semibold text-muted-foreground mb-2">{coach.role}</p>
               <p className="text-sm text-muted-foreground">{coach.description}</p>
             </div>

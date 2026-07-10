@@ -27,7 +27,10 @@ const COACH_INFO: Record<string, { fullName: string; highlights: string[] }> = {
 }
 
 export default async function CoachingRecordsPage() {
-  const records = await coachRecords()
+  const coachOrder = ["Everett", "Montalbano", "Ruhle"]
+  const records = (await coachRecords()).sort(
+    (a, b) => coachOrder.indexOf(a.name) - coachOrder.indexOf(b.name),
+  )
 
   return (
     <main className="min-h-screen bg-background">
