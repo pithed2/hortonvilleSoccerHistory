@@ -33,6 +33,7 @@ export function KitHistory() {
           <h2 className="text-3xl md:text-4xl font-bold mb-2">Kit History</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             From early uniforms to a deep modern kit collection, Hortonville soccer’s look has changed with the program.
+            <br /><br />Plan here is to give a visual walk through of all the kits over the course of the program.
           </p>
         </div>
 
