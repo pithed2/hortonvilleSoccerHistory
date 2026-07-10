@@ -82,3 +82,55 @@ export function rosterBySeason(year: number): RosterPlayer[] {
     .sort((a, b) => a.player_name.localeCompare(b.player_name))
 }
 
+export type PlayerSeasonStats = {
+  season: number
+  player_name: string
+  class: string
+  number: string
+  gp: number
+  minutes: number
+  goals: number
+  assists: number
+  points: number
+  shots: number
+  sog: number
+  pk: number
+  gwg: number
+  yc: number
+  rc: number
+  saves: number
+  steals: number
+  corner_kicks: number
+}
+
+function toNumber(value: string): number {
+  const n = Number(value)
+  return Number.isFinite(n) ? n : 0
+}
+
+export function playerSeasonStatsBySeason(year: number): PlayerSeasonStats[] {
+  return readRows("player-season-stats.csv")
+    .map((row) => ({
+      season: toNumber(row.season),
+      player_name: row.player_name,
+      class: row.class,
+      number: row.number,
+      gp: toNumber(row.gp),
+      minutes: toNumber(row.minutes),
+      goals: toNumber(row.goals),
+      assists: toNumber(row.assists),
+      points: toNumber(row.points),
+      shots: toNumber(row.shots),
+      sog: toNumber(row.sog),
+      pk: toNumber(row.pk),
+      gwg: toNumber(row.gwg),
+      yc: toNumber(row.yc),
+      rc: toNumber(row.rc),
+      saves: toNumber(row.saves),
+      steals: toNumber(row.steals),
+      corner_kicks: toNumber(row.corner_kicks),
+    }))
+    .filter((row) => row.season === year)
+    .sort((a, b) => b.points - a.points || b.goals - a.goals || a.player_name.localeCompare(b.player_name))
+}
+

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { gamesBySeason, listSeasons } from "@/lib/games";
-import { rosterBySeason } from "@/lib/player-stats"
+import { playerSeasonStatsBySeason, rosterBySeason } from "@/lib/player-stats"
 
 type Props = { params: Promise<{ year: string }> };
 
@@ -37,6 +37,7 @@ export default async function SeasonYearPage({ params }: Props) {
 
   const games = await gamesBySeason(year);
   const roster = rosterBySeason(year);
+  const playerStats = playerSeasonStatsBySeason(year);
   
   
   if (!games.length) {
@@ -117,6 +118,45 @@ export default async function SeasonYearPage({ params }: Props) {
               </table>
             </div>
           </section>
+        )}
+        {playerStats.length > 0 && (
+        <section className="rounded-xl border p-6">
+          <h2 className="text-2xl font-bold mb-4">Player Stats</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-[900px] w-full text-sm">
+              <thead className="bg-neutral-50">
+                <tr>
+                  <th className={cell}>Player</th>
+                  <th className={cell}>GP</th>
+                  <th className={cell}>G</th>
+                  <th className={cell}>A</th>
+                  <th className={cell}>Pts</th>
+                  <th className={cell}>Shots</th>
+                  <th className={cell}>SOG</th>
+                  <th className={cell}>YC</th>
+                  <th className={cell}>RC</th>
+                  <th className={cell}>Saves</th>
+                </tr>
+              </thead>
+              <tbody>
+                {playerStats.map((player) => (
+                  <tr key={`${player.season}-${player.player_name}`} className="odd:bg-white even:bg-neutral-50">
+                    <td className={cell}>{player.player_name}</td>
+                    <td className={cell}>{player.gp}</td>
+                    <td className={cell}>{player.goals}</td>
+                    <td className={cell}>{player.assists}</td>
+                    <td className={cell}>{player.points}</td>
+                    <td className={cell}>{player.shots}</td>
+                    <td className={cell}>{player.sog}</td>
+                    <td className={cell}>{player.yc}</td>
+                    <td className={cell}>{player.rc}</td>
+                    <td className={cell}>{player.saves}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
         )}
       <Footer />
     </main>
