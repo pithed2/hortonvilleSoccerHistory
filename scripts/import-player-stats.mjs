@@ -2,20 +2,57 @@ import fs from "node:fs"
 import path from "node:path"
 import XLSX from "xlsx"
 
+// -----------------------------------------------------------------------------
+// Configuration
+// -----------------------------------------------------------------------------
+
 const workbookPath =
   "C:/Users/amontalbano/Downloads/Hortonville_Player_Stats_2007-2025 (1).xlsx"
 
+const mappingPath = "C:/Users/amontalbano/Downloads/Mapping.xlsx"
+
 const outputDir = path.join(process.cwd(), "public", "data")
+const gamesCsvPath = path.join(outputDir, "games.csv")
+
+// -----------------------------------------------------------------------------
+// File Validation
+// -----------------------------------------------------------------------------
 
 if (!fs.existsSync(workbookPath)) {
   throw new Error(`Workbook not found: ${workbookPath}`)
+}
+
+if (!fs.existsSync(mappingPath)) {
+  throw new Error(`Mapping workbook not found: ${mappingPath}`)
 }
 
 if (!fs.existsSync(outputDir)) {
   throw new Error(`Output directory not found: ${outputDir}`)
 }
 
+if (!fs.existsSync(gamesCsvPath)) {
+  throw new Error(`Games CSV not found: ${gamesCsvPath}`)
+}
+
+// -----------------------------------------------------------------------------
+// Workbook Loading
+// -----------------------------------------------------------------------------
+
 const workbook = XLSX.readFile(workbookPath)
+const mappingWorkbook = XLSX.readFile(mappingPath)
+
+// -----------------------------------------------------------------------------
+// Generic Helpers
+// -----------------------------------------------------------------------------
+
+function cleanName(value) {
+  return value == null ? "" : String(value).trim()
+}
+
+function toNumber(value) {
+  const n = Number(value)
+  return Number.isFinite(n) ? n : 0
+}
 
 function sheetRows(sheetName) {
   const sheet = workbook.Sheets[sheetName]
@@ -26,11 +63,6 @@ function sheetRows(sheetName) {
   return XLSX.utils.sheet_to_json(sheet, {
     defval: "",
   })
-}
-
-console.log("Workbook sheets:")
-for (const sheetName of workbook.SheetNames) {
-  console.log(`- ${sheetName}`)
 }
 
 function csvEscape(value) {
@@ -52,6 +84,125 @@ function writeCsv(fileName, rows, columns) {
   console.log(`Wrote ${fileName}: ${rows.length} rows`)
 }
 
+// -----------------------------------------------------------------------------
+// CSV Reading Helpers
+// -----------------------------------------------------------------------------
+
+function parseCsvLine(line) {
+  const out = []
+  let cur = ""
+  let inQ = false
+
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i]
+
+    if (inQ) {
+      if (ch === '"' && line[i + 1] === '"') {
+        cur += '"'
+        i++
+      } else if (ch === '"') {
+        inQ = false
+      } else {
+        cur += ch
+      }
+    } else {
+      if (ch === '"') inQ = true
+      else if (ch === ",") {
+        out.push(cur)
+        cur = ""
+      } else {
+        cur += ch
+      }
+    }
+  }
+
+  out.push(cur)
+  return out
+}
+
+function readCsvRows(filePath) {
+  const text = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "")
+  const lines = text.replace(/\r/g, "").split("\n").filter(Boolean)
+  const headers = parseCsvLine(lines[0])
+
+  return lines.slice(1).map((line) => {
+    const values = parseCsvLine(line)
+    const row = {}
+
+    headers.forEach((header, index) => {
+      row[header] = values[index] ?? ""
+    })
+
+    return row
+  })
+}
+
+// -----------------------------------------------------------------------------
+// Team Game Data
+// -----------------------------------------------------------------------------
+
+function teamGoalsAgainstBySeason() {
+  const totals = new Map()
+
+  for (const row of readCsvRows(gamesCsvPath)) {
+    const season = Number(row.season_year)
+    const score = String(row.score || "").trim()
+    const match = score.match(/^(\d+)\s*-\s*(\d+)$/)
+
+    if (!season || !match) continue
+
+    const goalsAgainst = Number(match[2])
+    totals.set(season, (totals.get(season) ?? 0) + goalsAgainst)
+  }
+
+  return totals
+}
+
+const goalsAgainstBySeason = teamGoalsAgainstBySeason()
+
+// -----------------------------------------------------------------------------
+// Player Name Mapping
+// -----------------------------------------------------------------------------
+
+function mappingRows() {
+  const sheet = mappingWorkbook.Sheets[mappingWorkbook.SheetNames[0]]
+  return XLSX.utils.sheet_to_json(sheet, { defval: "" })
+}
+
+function mappingKey(season, sourceName) {
+  return `${season}|${cleanName(sourceName)}`
+}
+
+const playerNameMap = new Map()
+
+for (const row of mappingRows()) {
+  if (!row.Season || !row.Old || !row.New) continue
+  playerNameMap.set(mappingKey(row.Season, row.Old), cleanName(row.New))
+}
+
+function mappedPlayerName(season, sourceName) {
+  return playerNameMap.get(mappingKey(season, sourceName)) ?? cleanName(sourceName)
+}
+
+// -----------------------------------------------------------------------------
+// Roster Class Mapping
+// -----------------------------------------------------------------------------
+
+const rosterClassMap = new Map()
+
+for (const row of sheetRows("2007 Roster")) {
+  if (!row.Season || !row.Name) continue
+  rosterClassMap.set(mappingKey(row.Season, row.Name), cleanName(row.Class))
+}
+
+function mappedPlayerClass(season, displayName, fallbackClass) {
+  return rosterClassMap.get(mappingKey(season, displayName)) ?? cleanName(fallbackClass)
+}
+
+// -----------------------------------------------------------------------------
+// Roster Export
+// -----------------------------------------------------------------------------
+
 const rosters = sheetRows("2007 Roster").map((row) => ({
   season: row.Season,
   player_name: row.Name,
@@ -61,6 +212,10 @@ const rosters = sheetRows("2007 Roster").map((row) => ({
 
 writeCsv("rosters.csv", rosters, ["season", "player_name", "class", "number"])
 
+// -----------------------------------------------------------------------------
+// Player Season Stats Export
+// -----------------------------------------------------------------------------
+
 const legacySeasonSheets = [
   "2007 Season Totals",
   "2008 Season Totals",
@@ -69,26 +224,30 @@ const legacySeasonSheets = [
 ]
 
 const legacyPlayerSeasonStats = legacySeasonSheets.flatMap((sheetName) =>
-  sheetRows(sheetName).map((row) => ({
-    season: row.Season,
-    player_name: row.Player,
-    class: row.Class || "",
-    number: "",
-    gp: row.GP,
-    minutes: row.Minutes,
-    goals: row.Goals,
-    assists: row.Assists,
-    points: Number(row.Goals || 0) * 2 + Number(row.Assists || 0),
-    shots: row.Shots,
-    sog: row.SOG,
-    pk: "",
-    gwg: "",
-    yc: row.YC,
-    rc: row.RC,
-    saves: row.Saves,
-    steals: "",
-    corner_kicks: "",
-  })),
+  sheetRows(sheetName).map((row) => {
+    const playerName = mappedPlayerName(row.Season, row.Player)
+
+    return {
+      season: row.Season,
+      player_name: playerName,
+      class: mappedPlayerClass(row.Season, playerName, row.Class),
+      number: "",
+      gp: row.GP,
+      minutes: row.Minutes,
+      goals: row.Goals,
+      assists: row.Assists,
+      points: toNumber(row.Goals) * 2 + toNumber(row.Assists),
+      shots: row.Shots,
+      sog: row.SOG,
+      pk: "",
+      gwg: "",
+      yc: row.YC,
+      rc: row.RC,
+      saves: row.Saves,
+      steals: "",
+      corner_kicks: "",
+    }
+  }),
 )
 
 const modernPlayerSeasonStats = sheetRows("2011-2025 Player Stats").map((row) => ({
@@ -139,6 +298,10 @@ writeCsv(
   ],
 )
 
+// -----------------------------------------------------------------------------
+// Player Game Stats Export
+// -----------------------------------------------------------------------------
+
 const rawDetailSheets = [
   "2007 Raw Detail",
   "2008 Raw Detail",
@@ -149,7 +312,7 @@ const rawDetailSheets = [
 const playerGameStats = rawDetailSheets.flatMap((sheetName) =>
   sheetRows(sheetName).map((row) => ({
     season: row.Season,
-    player_name: row.Player,
+    player_name: mappedPlayerName(row.Season, row.Player),
     opponent: row.Opponent,
     shots: row.Shots,
     sog: row.SOG,
@@ -180,7 +343,60 @@ writeCsv(
   ],
 )
 
-const goalkeeperSeasonStats = sheetRows("2011-2025 Goalkeeper Stats").map((row) => ({
+// -----------------------------------------------------------------------------
+// Goalkeeper Stats Export
+// -----------------------------------------------------------------------------
+
+function legacyKeeperGamesPlayed(season, playerName) {
+  return playerGameStats.filter(
+    (row) =>
+      row.season === season &&
+      row.player_name === playerName &&
+      toNumber(row.minutes) > 0,
+  ).length
+}
+
+const legacyGoalkeeperSeasonStats = legacyPlayerSeasonStats
+  .filter((row) => toNumber(row.minutes) > 0)
+  .map((row) => {
+    const seasonGoalkeepers = legacyPlayerSeasonStats.filter(
+      (candidate) => candidate.season === row.season && toNumber(candidate.minutes) > 0,
+    )
+
+    const totalKeeperMinutes = seasonGoalkeepers.reduce(
+      (sum, keeper) => sum + toNumber(keeper.minutes),
+      0,
+    )
+
+    const teamGa = goalsAgainstBySeason.get(row.season) ?? 0
+    const allocatedGa = totalKeeperMinutes
+      ? teamGa * (toNumber(row.minutes) / totalKeeperMinutes)
+      : 0
+
+    return {
+      season: row.season,
+      player_name: row.player_name,
+      class: row.class,
+      number: row.number,
+      gp: legacyKeeperGamesPlayed(row.season, row.player_name),
+      minutes: row.minutes,
+      ga: allocatedGa.toFixed(2),
+      saves: row.saves,
+      pksv: "",
+      save_pct:
+        toNumber(row.saves) + allocatedGa > 0
+          ? (toNumber(row.saves) / (toNumber(row.saves) + allocatedGa)).toFixed(3)
+          : "",
+      gaa:
+        toNumber(row.minutes) > 0
+          ? ((allocatedGa * 80) / toNumber(row.minutes)).toFixed(2)
+          : "",
+      opp_sog: "",
+      source_note: "2007-2010 GA allocated by keeper minutes from team goals against",
+    }
+  })
+
+const modernGoalkeeperSeasonStats = sheetRows("2011-2025 Goalkeeper Stats").map((row) => ({
   season: row.Season,
   player_name: row.Name,
   class: row.Class || "",
@@ -193,7 +409,10 @@ const goalkeeperSeasonStats = sheetRows("2011-2025 Goalkeeper Stats").map((row) 
   save_pct: row.SavePct,
   gaa: row.GAA,
   opp_sog: row.OppSOG,
+  source_note: "Source workbook goalkeeper stats",
 }))
+
+const goalkeeperSeasonStats = [...legacyGoalkeeperSeasonStats, ...modernGoalkeeperSeasonStats]
 
 writeCsv(
   "goalkeeper-season-stats.csv",
@@ -211,6 +430,16 @@ writeCsv(
     "save_pct",
     "gaa",
     "opp_sog",
+    "source_note",
   ],
 )
 
+// -----------------------------------------------------------------------------
+// Diagnostics
+// -----------------------------------------------------------------------------
+
+console.log("Player name mappings:", playerNameMap.size)
+
+for (const season of [2007, 2008, 2009, 2010]) {
+  console.log(`${season} GA:`, goalsAgainstBySeason.get(season))
+}

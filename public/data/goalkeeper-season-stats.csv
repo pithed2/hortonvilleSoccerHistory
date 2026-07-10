@@ -1,24 +1,40 @@
-season,player_name,class,number,gp,minutes,ga,saves,pksv,save_pct,gaa,opp_sog
-2012,Barry Schomisch,,1,14,978,20,55,,0.733,1.64,
-2013,Bryce LaLuzerne,,0,9,315,6,11,,0.647,1.52,
-2013,Jacob Jennerjohn,,1,16,860,9,56,,0.862,0.84,
-2014,Eli Nichols,,30,4,210,3,10,,0.769,1.29,
-2014,Mason Guyette,,31,13,750,10,52,,0.839,1.2,
-2015,Owen Engel,,40,7,250,9,40,,0.816,2.88,
-2015,Isaac Tews,,24,2,20,0,2,,1,0,
-2015,Sam Marsden,,31,1,0,0,2,,1,0,
-2016,Owen Engel,,40,12,810,30,89,,0.748,3.33,
-2016,Hayden Thompson,,23,2,90,1,7,,0.875,1,
-2017,Owen Engel,,1,8,652,13,44,,0.772,1.79,
-2018,Cade Wagner,,40,1,90,2,3,,0.6,2,
-2018,Owen Engel,,1,8,620,1,30,,0.968,0.15,
-2019,Luke Petrasko,,1,4,305,2,20,,0.909,0.59,
-2020,Logan Gaupp,,1,3,220,7,14,,0.667,2.86,
-2021,Nathan Bolling,,1,15,1105,14,56,,0.8,1.14,
-2022,Nathan Bolling,,1,7,560,7,38,,0.844,1,
-2023,Nathan Bolling,,1,17,1334,11,46,,0.807,0.66,
-2024,Grant Decker,,40,17,1340,11,51,,0.823,0.66,
-2024,David Grasse,,26,1,80,0,4,,1,0,
-2025,David Grasse,,1,1,20,0,0,,0,0,
-2025,Grant Decker,,40,24,1787,11,58,,0,0.492,
-2025,Eli Ryan,,55,2,35,0,0,,0,0,
+season,player_name,class,number,gp,minutes,ga,saves,pksv,save_pct,gaa,opp_sog,source_note
+2007,Mick Harrington,Junior,,4,50,1.46,4,,0.733,2.33,,2007-2010 GA allocated by keeper minutes from team goals against
+2007,Luke Korth,Senior,,1,20,0.58,6,,0.912,2.33,,2007-2010 GA allocated by keeper minutes from team goals against
+2007,Padraic Emerine,Junior,,24,1669,48.61,259,,0.842,2.33,,2007-2010 GA allocated by keeper minutes from team goals against
+2007,A_Schomisch,Freshman,,1,12,0.35,3,,0.896,2.33,,2007-2010 GA allocated by keeper minutes from team goals against
+2008,Ben Kellner,,,1,5,0.13,0,,0.000,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2008,Phil Schumacher,,,1,10,0.25,3,,0.922,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2008,Adam Schomisch,,,3,30,0.76,2,,0.723,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2008,Padraic Emerine,,,22,1524,38.85,137,,0.779,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2009,Adam Schomisch,,,4,31,0.61,3,,0.831,1.57,,2007-2010 GA allocated by keeper minutes from team goals against
+2009,Steven Huss,,,20,1482,29.15,109,,0.789,1.57,,2007-2010 GA allocated by keeper minutes from team goals against
+2009,Barry Schomisch,,,2,63,1.24,4,,0.763,1.57,,2007-2010 GA allocated by keeper minutes from team goals against
+2010,Adam Schomisch,,,6,255,6.49,25,,0.794,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2010,Chase Van Krey,,,1,25,0.64,1,,0.611,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2010,Nathan Ongemach,,,1,80,2.04,6,,0.747,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2010,Barry Schomisch,,,18,1368,34.83,111,,0.761,2.04,,2007-2010 GA allocated by keeper minutes from team goals against
+2011,Barry Schomisch,,1,3,228,4,9,,0.692,1.4,,Source workbook goalkeeper stats
+2012,Barry Schomisch,,1,14,978,20,55,,0.733,1.64,,Source workbook goalkeeper stats
+2013,Bryce LaLuzerne,,0,9,315,6,11,,0.647,1.52,,Source workbook goalkeeper stats
+2013,Jacob Jennerjohn,,1,16,860,9,56,,0.862,0.84,,Source workbook goalkeeper stats
+2014,Eli Nichols,,30,4,210,3,10,,0.769,1.29,,Source workbook goalkeeper stats
+2014,Mason Guyette,,31,13,750,10,52,,0.839,1.2,,Source workbook goalkeeper stats
+2015,Owen Engel,,40,7,250,9,40,,0.816,2.88,,Source workbook goalkeeper stats
+2015,Isaac Tews,,24,2,20,0,2,,1,0,,Source workbook goalkeeper stats
+2015,Sam Marsden,,31,1,0,0,2,,1,0,,Source workbook goalkeeper stats
+2016,Owen Engel,,40,12,810,30,89,,0.748,3.33,,Source workbook goalkeeper stats
+2016,Hayden Thompson,,23,2,90,1,7,,0.875,1,,Source workbook goalkeeper stats
+2017,Owen Engel,,1,8,652,13,44,,0.772,1.79,,Source workbook goalkeeper stats
+2018,Cade Wagner,,40,1,90,2,3,,0.6,2,,Source workbook goalkeeper stats
+2018,Owen Engel,,1,8,620,1,30,,0.968,0.15,,Source workbook goalkeeper stats
+2019,Luke Petrasko,,1,4,305,2,20,,0.909,0.59,,Source workbook goalkeeper stats
+2020,Logan Gaupp,,1,3,220,7,14,,0.667,2.86,,Source workbook goalkeeper stats
+2021,Nathan Bolling,,1,15,1105,14,56,,0.8,1.14,,Source workbook goalkeeper stats
+2022,Nathan Bolling,,1,7,560,7,38,,0.844,1,,Source workbook goalkeeper stats
+2023,Nathan Bolling,,1,17,1334,11,46,,0.807,0.66,,Source workbook goalkeeper stats
+2024,Grant Decker,,40,17,1340,11,51,,0.823,0.66,,Source workbook goalkeeper stats
+2024,David Grasse,,26,1,80,0,4,,1,0,,Source workbook goalkeeper stats
+2025,David Grasse,,1,1,20,0,0,,0,0,,Source workbook goalkeeper stats
+2025,Grant Decker,,40,24,1787,11,58,,0,0.492,,Source workbook goalkeeper stats
+2025,Eli Ryan,,55,2,35,0,0,,0,0,,Source workbook goalkeeper stats
