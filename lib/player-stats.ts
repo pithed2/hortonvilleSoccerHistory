@@ -171,3 +171,75 @@ export function goalkeeperSeasonStatsBySeason(year: number): GoalkeeperSeasonSta
     .sort((a, b) => b.minutes - a.minutes || a.player_name.localeCompare(b.player_name))
 }
 
+export type AllTimeLeader = {
+  player_name: string
+  seasons: number[]
+  gp: number
+  goals: number
+  assists: number
+  points: number
+  shots: number
+  sog: number
+  saves: number
+}
+
+export function allTimePlayerLeaders(): AllTimeLeader[] {
+  const byPlayer = new Map<string, AllTimeLeader>()
+
+  for (const row of playerSeasonStatsBySeasonRange(2007, 2025)) {
+    if (!byPlayer.has(row.player_name)) {
+      byPlayer.set(row.player_name, {
+        player_name: row.player_name,
+        seasons: [],
+        gp: 0,
+        goals: 0,
+        assists: 0,
+        points: 0,
+        shots: 0,
+        sog: 0,
+        saves: 0,
+      })
+    }
+
+    const leader = byPlayer.get(row.player_name)!
+    leader.seasons.push(row.season)
+    leader.gp += row.gp
+    leader.goals += row.goals
+    leader.assists += row.assists
+    leader.points += row.points
+    leader.shots += row.shots
+    leader.sog += row.sog
+    leader.saves += row.saves
+  }
+
+  return Array.from(byPlayer.values()).map((leader) => ({
+    ...leader,
+    seasons: Array.from(new Set(leader.seasons)).sort((a, b) => a - b),
+  }))
+}
+
+function playerSeasonStatsBySeasonRange(startYear: number, endYear: number): PlayerSeasonStats[] {
+  return readRows("player-season-stats.csv")
+    .map((row) => ({
+      season: toNumber(row.season),
+      player_name: row.player_name,
+      class: row.class,
+      number: row.number,
+      gp: toNumber(row.gp),
+      minutes: toNumber(row.minutes),
+      goals: toNumber(row.goals),
+      assists: toNumber(row.assists),
+      points: toNumber(row.points),
+      shots: toNumber(row.shots),
+      sog: toNumber(row.sog),
+      pk: toNumber(row.pk),
+      gwg: toNumber(row.gwg),
+      yc: toNumber(row.yc),
+      rc: toNumber(row.rc),
+      saves: toNumber(row.saves),
+      steals: toNumber(row.steals),
+      corner_kicks: toNumber(row.corner_kicks),
+    }))
+    .filter((row) => row.season >= startYear && row.season <= endYear)
+}
+

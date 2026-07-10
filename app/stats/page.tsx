@@ -46,6 +46,20 @@ export default async function StatsPage() {
         </div>
 
         <SeasonStatsTable rows={rows} />
+        <div className="mb-12 rounded-lg border border-border bg-card p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h2 className="text-2xl font-black mb-2">All-Time Player Leaders</h2>
+            <p className="text-muted-foreground">
+              View leaders for goals, assists, points, shots, and saves from available player stats.
+            </p>
+          </div>
+          <a
+            href="/stats/leaders"
+            className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/90 transition-colors"
+          >
+            View Leaders
+          </a>
+        </div>
       </div>
 
       <Footer />
