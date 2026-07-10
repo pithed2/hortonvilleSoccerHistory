@@ -68,6 +68,7 @@ export type RosterPlayer = {
   player_name: string
   class: string
   number: string
+  position: string
 }
 
 export function rosterBySeason(year: number): RosterPlayer[] {
@@ -77,6 +78,7 @@ export function rosterBySeason(year: number): RosterPlayer[] {
       player_name: row.player_name,
       class: row.class,
       number: row.number,
+      position: row.position,
     }))
     .filter((row) => row.season === year)
     .sort((a, b) => a.player_name.localeCompare(b.player_name))

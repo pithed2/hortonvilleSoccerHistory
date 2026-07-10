@@ -11,6 +11,8 @@ const workbookPath =
 
 const mappingPath = "C:/Users/amontalbano/Downloads/Mapping.xlsx"
 
+const rosterWorkbookPath = "C:/Users/amontalbano/Downloads/2011-2025 Rosters.xlsx"
+
 const outputDir = path.join(process.cwd(), "public", "data")
 const gamesCsvPath = path.join(outputDir, "games.csv")
 
@@ -24,6 +26,10 @@ if (!fs.existsSync(workbookPath)) {
 
 if (!fs.existsSync(mappingPath)) {
   throw new Error(`Mapping workbook not found: ${mappingPath}`)
+}
+
+if (!fs.existsSync(rosterWorkbookPath)) {
+  throw new Error(`Roster workbook not found: ${rosterWorkbookPath}`)
 }
 
 if (!fs.existsSync(outputDir)) {
@@ -40,6 +46,7 @@ if (!fs.existsSync(gamesCsvPath)) {
 
 const workbook = XLSX.readFile(workbookPath)
 const mappingWorkbook = XLSX.readFile(mappingPath)
+const rosterWorkbook = XLSX.readFile(rosterWorkbookPath)
 
 // -----------------------------------------------------------------------------
 // Generic Helpers
@@ -61,6 +68,18 @@ function sheetRows(sheetName) {
   }
 
   return XLSX.utils.sheet_to_json(sheet, {
+    defval: "",
+  })
+}
+
+function rosterSheetRows(sheetName) {
+  const sheet = rosterWorkbook.Sheets[sheetName]
+  if (!sheet) {
+    throw new Error(`Missing roster sheet: ${sheetName}`)
+  }
+
+  return XLSX.utils.sheet_to_json(sheet, {
+    header: 1,
     defval: "",
   })
 }
@@ -203,14 +222,65 @@ function mappedPlayerClass(season, displayName, fallbackClass) {
 // Roster Export
 // -----------------------------------------------------------------------------
 
-const rosters = sheetRows("2007 Roster").map((row) => ({
-  season: row.Season,
-  player_name: row.Name,
-  class: row.Class,
-  number: "",
-}))
+const legacyRosterSheets = ["2007 Roster", "2008 Roster", "2009 Roster", "2010 Roster"]
 
-writeCsv("rosters.csv", rosters, ["season", "player_name", "class", "number"])
+const legacyRosters = legacyRosterSheets.flatMap((sheetName) =>
+  sheetRows(sheetName)
+    .filter((row) => row.Season && row.Name)
+    .map((row) => ({
+      season: row.Season,
+      player_name: cleanName(row.Name),
+      class: cleanName(row.Class),
+      number: "",
+      position: "",
+    })),
+)
+
+function modernRosterName(row, season) {
+  if (season <= 2013) return cleanName(row[2])
+  return cleanName(row[1])
+}
+
+function modernRosterNumber(row) {
+  return row[0]
+}
+
+function modernRosterExtra(row, season) {
+  if (season === 2014) return cleanName(row[4])
+  if (season === 2025) return cleanName(row[2])
+  if (season <= 2013) return cleanName(row[3])
+  return cleanName(row[2])
+}
+
+function modernRosterExtraType(season) {
+  if (season === 2014 || season === 2025) return "class"
+  return "position"
+}
+
+const modernRosters = rosterWorkbook.SheetNames.flatMap((sheetName) => {
+  const season = Number(sheetName)
+  if (!season) return []
+
+  return rosterSheetRows(sheetName)
+    .slice(1)
+    .map((row) => {
+      const extraType = modernRosterExtraType(season)
+      const extra = modernRosterExtra(row, season)
+
+      return {
+        season,
+        player_name: modernRosterName(row, season),
+        class: extraType === "class" ? extra : "",
+        number: modernRosterNumber(row),
+        position: extraType === "position" ? extra : "",
+      }
+    })
+    .filter((row) => row.player_name)
+})
+
+const rosters = [...legacyRosters, ...modernRosters]
+
+writeCsv("rosters.csv", rosters, ["season", "player_name", "class", "number", "position"])
 
 // -----------------------------------------------------------------------------
 // Player Season Stats Export

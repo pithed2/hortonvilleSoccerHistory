@@ -105,6 +105,7 @@ export default async function SeasonYearPage({ params }: Props) {
                     <th className={cell}>Name</th>
                     <th className={cell}>Class</th>
                     <th className={cell}>Number</th>
+                    <th className={cell}>Position</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -113,6 +114,7 @@ export default async function SeasonYearPage({ params }: Props) {
                       <td className={cell}>{player.player_name}</td>
                       <td className={cell}>{player.class}</td>
                       <td className={cell}>{player.number}</td>
+                      <td className={cell}>{player.position}</td>
                     </tr>
                   ))}
                 </tbody>
