@@ -34,11 +34,6 @@ export function Footer() {
                   Coaches
                 </a>
               </li>
-              <li>
-                <a href="#stories" className="text-background/80 hover:text-background transition">
-                  Stories
-                </a>
-              </li>
             </ul>
           </div>
           <div>
