@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { gamesBySeason, listSeasons } from "@/lib/games";
+import { rosterBySeason } from "@/lib/player-stats"
 
 type Props = { params: Promise<{ year: string }> };
 
@@ -35,6 +36,7 @@ export default async function SeasonYearPage({ params }: Props) {
   }
 
   const games = await gamesBySeason(year);
+  const roster = rosterBySeason(year);
   
   
   if (!games.length) {
@@ -91,6 +93,31 @@ export default async function SeasonYearPage({ params }: Props) {
           </tbody>
         </table>
       </div>
+        {roster.length > 0 && (
+          <section className="rounded-xl border p-6">
+            <h2 className="text-2xl font-bold mb-4">Roster</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="bg-neutral-50">
+                  <tr>
+                    <th className={cell}>Name</th>
+                    <th className={cell}>Class</th>
+                    <th className={cell}>Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {roster.map((player) => (
+                    <tr key={`${player.season}-${player.player_name}`} className="odd:bg-white even:bg-neutral-50">
+                      <td className={cell}>{player.player_name}</td>
+                      <td className={cell}>{player.class}</td>
+                      <td className={cell}>{player.number}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
       <Footer />
     </main>
   );
