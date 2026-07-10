@@ -13,7 +13,7 @@ export function Timeline() {
       period: "2003",
       title: "Polar Bear Camp Begins",
       description:
-        "The Polar Bear Camp tradition began with Jean Wagner and Lori Claybaugh at Greenville Middle School Field, later continuing through Fox West YMCA support and newer Hortonville facilities.",
+        "The Polar Bear Camp tradition began with Jean Wagner and Lorie Claybaugh at Greenville Middle School Field, later continuing through Fox West YMCA support and newer Hortonville facilities.",
       milestone: "Youth camp tradition established",
       logo: "/logos/junior-polar-bears-logo.png",
       logoAlt: "Junior Polar Bears Logo",
