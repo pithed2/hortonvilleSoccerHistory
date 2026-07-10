@@ -8,9 +8,9 @@ import { coachRecords } from "@/lib/games"
 // a new coach's games start appearing in games.csv, or this coach falls
 // back to displaying their CSV surname with no extra highlights.
 const COACH_INFO: Record<string, { fullName: string; highlights: string[] }> = {
-  Ruhle: {
-    fullName: "Gary Ruhle",
-    highlights: ["Program's first recorded varsity seasons", "Built the program from scratch"],
+  Everett: {
+    fullName: "Paul Everett",
+    highlights: ["Longest-tenured head coach in program history", "Pioneered the identity and standards of Hortonville soccer],
   },
   Montalbano: {
     fullName: "Andy Montalbano",
@@ -19,10 +19,11 @@ const COACH_INFO: Record<string, { fullName: string; highlights: string[] }> = {
       "Led the program through the transition to varsity legitimacy",
     ],
   },
-  Everett: {
-    fullName: "Paul Everett",
-    highlights: ["Longest-tenured head coach in program history", "Most consistent winning record of the three eras"],
+    Ruhle: {
+    fullName: "Gary Ruhle",
+    highlights: ["Program's first recorded varsity seasons", "Built the program from scratch"],
   },
+
 }
 
 export default async function CoachingRecordsPage() {

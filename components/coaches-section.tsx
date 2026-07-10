@@ -3,10 +3,10 @@ import Image from "next/image"
 export function CoachesSection() {
   const coaches = [
     {
-      name: "Gary Ruhle",
-      years: "2003-2006",
+      name: "Paul Everett",
+      years: "2011-Present",
       role: "Boys Head Coach",
-      description: "Established the foundation for the soccer program in its early years",
+      description: "Continuing to build excellence and advocate for program growth and development",
       image: "/male-coach-portrait.jpg",
     },
     {
@@ -16,11 +16,11 @@ export function CoachesSection() {
       description: "Led the program through the transition to Akin Field and established varsity legitimacy",
       image: "/male-coach-portrait.jpg",
     },
-    {
-      name: "Paul Everett",
-      years: "2011-Present",
+        {
+      name: "Gary Ruhle",
+      years: "2003-2006",
       role: "Boys Head Coach",
-      description: "Continuing to build excellence and advocate for program growth and development",
+      description: "Built the foundation for the soccer program in its early years",
       image: "/male-coach-portrait.jpg",
     },
   ]
