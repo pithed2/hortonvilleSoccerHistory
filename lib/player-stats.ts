@@ -183,6 +183,8 @@ export type BoxscorePlayerStat = {
   venue: string
   player_name: string
   is_goalkeeper: boolean
+  has_saves: boolean
+  has_ga: boolean
   goals: number
   assists: number
   points: number
@@ -268,6 +270,8 @@ function boxscorePlayerStatsBySeason(year: number): BoxscorePlayerStat[] {
       venue: row.venue,
       player_name: row.player_name,
       is_goalkeeper: row.is_goalkeeper === "true",
+      has_saves: row.has_saves === "true",
+      has_ga: row.has_ga === "true",
       goals: toNumber(row.goals),
       assists: toNumber(row.assists),
       points: toNumber(row.points),

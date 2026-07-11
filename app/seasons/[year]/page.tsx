@@ -135,8 +135,8 @@ export default async function SeasonYearPage({ params }: Props) {
                                     <td className={cell}>{statCell(player.goals, !player.is_goalkeeper)}</td>
                                     <td className={cell}>{statCell(player.assists, !player.is_goalkeeper)}</td>
                                     <td className={cell}>{statCell(player.points, !player.is_goalkeeper)}</td>
-                                    <td className={cell}>{statCell(player.saves, player.is_goalkeeper)}</td>
-                                    <td className={cell}>{statCell(player.ga, player.is_goalkeeper)}</td>
+                                    <td className={cell}>{statCell(player.saves, player.has_saves)}</td>
+                                    <td className={cell}>{statCell(player.ga, player.has_ga)}</td>
                                   </tr>
                                 ))}
                               </tbody>
