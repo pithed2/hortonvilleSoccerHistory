@@ -64,6 +64,7 @@ export default async function SeasonYearPage({ params }: Props) {
 
   const cell = "text-left px-3 py-2 border-b";
   const boxscoresByGameNumber = new Map(boxscoreGames.map((game) => [game.game_number, game]));
+  const statCell = (value: number, show: boolean) => (show && Number.isFinite(value) ? value : "");
 
   return (
     <main className="max-w-6xl mx-auto p-6 space-y-6">
@@ -131,11 +132,11 @@ export default async function SeasonYearPage({ params }: Props) {
                                     className="odd:bg-white even:bg-neutral-50"
                                   >
                                     <td className={cell}>{player.player_name}</td>
-                                    <td className={cell}>{player.goals || ""}</td>
-                                    <td className={cell}>{player.assists || ""}</td>
-                                    <td className={cell}>{player.points || ""}</td>
-                                    <td className={cell}>{player.saves || ""}</td>
-                                    <td className={cell}>{player.ga || ""}</td>
+                                    <td className={cell}>{statCell(player.goals, !player.is_goalkeeper)}</td>
+                                    <td className={cell}>{statCell(player.assists, !player.is_goalkeeper)}</td>
+                                    <td className={cell}>{statCell(player.points, !player.is_goalkeeper)}</td>
+                                    <td className={cell}>{statCell(player.saves, player.is_goalkeeper)}</td>
+                                    <td className={cell}>{statCell(player.ga, player.is_goalkeeper)}</td>
                                   </tr>
                                 ))}
                               </tbody>
