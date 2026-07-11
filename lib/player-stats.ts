@@ -171,6 +171,109 @@ export function goalkeeperSeasonStatsBySeason(year: number): GoalkeeperSeasonSta
     .sort((a, b) => b.minutes - a.minutes || a.player_name.localeCompare(b.player_name))
 }
 
+export type BoxscorePlayerStat = {
+  season: number
+  game_number: number
+  date: string
+  time: string
+  result: string
+  score: string
+  opponent: string
+  site: string
+  venue: string
+  player_name: string
+  number: string
+  class: string
+  goals: number
+  assists: number
+  points: number
+  saves: number
+  source_note: string
+}
+
+export type BoxscoreGame = {
+  season: number
+  game_number: number
+  date: string
+  time: string
+  result: string
+  score: string
+  opponent: string
+  site: string
+  venue: string
+  goals: number
+  assists: number
+  saves: number
+  players: BoxscorePlayerStat[]
+}
+
+export function boxscoreGamesBySeason(year: number): BoxscoreGame[] {
+  const byGame = new Map<number, BoxscoreGame>()
+
+  for (const player of boxscorePlayerStatsBySeason(year)) {
+    if (!byGame.has(player.game_number)) {
+      byGame.set(player.game_number, {
+        season: player.season,
+        game_number: player.game_number,
+        date: player.date,
+        time: player.time,
+        result: player.result,
+        score: player.score,
+        opponent: player.opponent,
+        site: player.site,
+        venue: player.venue,
+        goals: 0,
+        assists: 0,
+        saves: 0,
+        players: [],
+      })
+    }
+
+    const game = byGame.get(player.game_number)!
+    game.goals += player.goals
+    game.assists += player.assists
+    game.saves += player.saves
+    game.players.push(player)
+  }
+
+  return Array.from(byGame.values())
+    .map((game) => ({
+      ...game,
+      players: game.players.sort(
+        (a, b) =>
+          b.goals - a.goals ||
+          b.assists - a.assists ||
+          b.saves - a.saves ||
+          a.player_name.localeCompare(b.player_name),
+      ),
+    }))
+    .sort((a, b) => a.game_number - b.game_number)
+}
+
+function boxscorePlayerStatsBySeason(year: number): BoxscorePlayerStat[] {
+  return readRows("boxscore-player-stats.csv")
+    .map((row) => ({
+      season: toNumber(row.season),
+      game_number: toNumber(row.game_number),
+      date: row.date,
+      time: row.time,
+      result: row.result,
+      score: row.score,
+      opponent: row.opponent,
+      site: row.site,
+      venue: row.venue,
+      player_name: row.player_name,
+      number: row.number,
+      class: row.class,
+      goals: toNumber(row.goals),
+      assists: toNumber(row.assists),
+      points: toNumber(row.points),
+      saves: toNumber(row.saves),
+      source_note: row.source_note,
+    }))
+    .filter((row) => row.season === year)
+}
+
 export type AllTimeLeader = {
   player_name: string
   seasons: number[]

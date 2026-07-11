@@ -5,7 +5,12 @@ import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { gamesBySeason, listSeasons } from "@/lib/games";
-import { goalkeeperSeasonStatsBySeason, playerSeasonStatsBySeason, rosterBySeason } from "@/lib/player-stats"
+import {
+  boxscoreGamesBySeason,
+  goalkeeperSeasonStatsBySeason,
+  playerSeasonStatsBySeason,
+  rosterBySeason,
+} from "@/lib/player-stats"
 
 type Props = { params: Promise<{ year: string }> };
 
@@ -39,6 +44,7 @@ export default async function SeasonYearPage({ params }: Props) {
   const roster = rosterBySeason(year);
   const playerStats = playerSeasonStatsBySeason(year);
   const goalkeeperStats = goalkeeperSeasonStatsBySeason(year);
+  const boxscoreGames = boxscoreGamesBySeason(year);
   
   
   if (!games.length) {
@@ -158,6 +164,65 @@ export default async function SeasonYearPage({ params }: Props) {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+        )}
+        {boxscoreGames.length > 0 && (
+        <section className="rounded-xl border p-6">
+          <div className="mb-4">
+            <h2 className="text-2xl font-bold">Game Boxscores</h2>
+            <p className="mt-1 text-sm text-neutral-600">
+              Hortonville-only goals, assists, and goalkeeper saves from available game boxscores.
+            </p>
+          </div>
+          <div className="space-y-3">
+            {boxscoreGames.map((game) => (
+              <details key={`${game.season}-${game.game_number}`} className="rounded-lg border bg-white">
+                <summary className="cursor-pointer px-4 py-3 font-semibold">
+                  <span>{game.date}</span>
+                  {game.time ? <span className="ml-2 text-neutral-500">{game.time}</span> : null}
+                  <span className="mx-2 text-neutral-400">|</span>
+                  <span>{game.result} {game.score}</span>
+                  <span className="mx-2 text-neutral-400">|</span>
+                  <span>{game.site === "Away" ? "@ " : "vs "}{game.opponent}</span>
+                  <span className="ml-3 text-sm font-normal text-neutral-600">
+                    G: {game.goals} A: {game.assists}
+                    {game.saves ? ` Saves: ${game.saves}` : ""}
+                  </span>
+                </summary>
+                <div className="overflow-x-auto border-t">
+                  <table className="min-w-[650px] w-full text-sm">
+                    <thead className="bg-neutral-50">
+                      <tr>
+                        <th className={cell}>Player</th>
+                        <th className={cell}>#</th>
+                        <th className={cell}>Class</th>
+                        <th className={cell}>G</th>
+                        <th className={cell}>A</th>
+                        <th className={cell}>Pts</th>
+                        <th className={cell}>Saves</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {game.players.map((player) => (
+                        <tr
+                          key={`${game.season}-${game.game_number}-${player.player_name}-${player.number}`}
+                          className="odd:bg-white even:bg-neutral-50"
+                        >
+                          <td className={cell}>{player.player_name}</td>
+                          <td className={cell}>{player.number}</td>
+                          <td className={cell}>{player.class}</td>
+                          <td className={cell}>{player.goals || ""}</td>
+                          <td className={cell}>{player.assists || ""}</td>
+                          <td className={cell}>{player.points || ""}</td>
+                          <td className={cell}>{player.saves || ""}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            ))}
           </div>
         </section>
         )}
