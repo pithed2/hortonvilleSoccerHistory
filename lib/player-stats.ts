@@ -182,12 +182,11 @@ export type BoxscorePlayerStat = {
   site: string
   venue: string
   player_name: string
-  number: string
-  class: string
   goals: number
   assists: number
   points: number
   saves: number
+  ga: number
   source_note: string
 }
 
@@ -204,6 +203,7 @@ export type BoxscoreGame = {
   goals: number
   assists: number
   saves: number
+  ga: number
   players: BoxscorePlayerStat[]
 }
 
@@ -225,6 +225,7 @@ export function boxscoreGamesBySeason(year: number): BoxscoreGame[] {
         goals: 0,
         assists: 0,
         saves: 0,
+        ga: 0,
         players: [],
       })
     }
@@ -233,6 +234,7 @@ export function boxscoreGamesBySeason(year: number): BoxscoreGame[] {
     game.goals += player.goals
     game.assists += player.assists
     game.saves += player.saves
+    game.ga += player.ga
     game.players.push(player)
   }
 
@@ -244,6 +246,7 @@ export function boxscoreGamesBySeason(year: number): BoxscoreGame[] {
           b.goals - a.goals ||
           b.assists - a.assists ||
           b.saves - a.saves ||
+          b.ga - a.ga ||
           a.player_name.localeCompare(b.player_name),
       ),
     }))
@@ -263,12 +266,11 @@ function boxscorePlayerStatsBySeason(year: number): BoxscorePlayerStat[] {
       site: row.site,
       venue: row.venue,
       player_name: row.player_name,
-      number: row.number,
-      class: row.class,
       goals: toNumber(row.goals),
       assists: toNumber(row.assists),
       points: toNumber(row.points),
       saves: toNumber(row.saves),
+      ga: toNumber(row.ga),
       source_note: row.source_note,
     }))
     .filter((row) => row.season === year)

@@ -2,6 +2,7 @@ export const runtime = "nodejs";
 export const revalidate = 60;
 
 import Link from "next/link";
+import { Fragment } from "react";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { gamesBySeason, listSeasons } from "@/lib/games";
@@ -62,6 +63,7 @@ export default async function SeasonYearPage({ params }: Props) {
   }
 
   const cell = "text-left px-3 py-2 border-b";
+  const boxscoresByGameNumber = new Map(boxscoreGames.map((game) => [game.game_number, game]));
 
   return (
     <main className="max-w-6xl mx-auto p-6 space-y-6">
@@ -86,18 +88,66 @@ export default async function SeasonYearPage({ params }: Props) {
             </tr>
           </thead>
           <tbody>
-            {games.map((g, i) => (
-              <tr key={`${g.date}-${g.opponent}-${i}`} className="odd:bg-white even:bg-neutral-50">
-                <td className={cell}>{g.date}</td>
-                <td className={cell}>{g.opponent}</td>
-                <td className={cell}>{g.venue || ""}</td>
-                <td className={cell}>{g.home_away || ""}</td>
-                <td className={cell}>{g.competition || ""}</td>
-                <td className={cell}>{g.result || ""}</td>
-                <td className={cell}>{g.score || ""}</td>
-                <td className={cell}>{g.notes || ""}</td>
-              </tr>
-            ))}
+            {games.map((g, i) => {
+              const boxscore = boxscoresByGameNumber.get(i + 1)
+
+              return (
+                <Fragment key={`${g.date}-${g.opponent}-${i}`}>
+                  <tr key={`${g.date}-${g.opponent}-${i}`} className="odd:bg-white even:bg-neutral-50">
+                    <td className={cell}>{g.date}</td>
+                    <td className={cell}>{g.opponent}</td>
+                    <td className={cell}>{g.venue || ""}</td>
+                    <td className={cell}>{g.home_away || ""}</td>
+                    <td className={cell}>{g.competition || ""}</td>
+                    <td className={cell}>{g.result || ""}</td>
+                    <td className={cell}>{g.score || ""}</td>
+                    <td className={cell}>{g.notes || ""}</td>
+                  </tr>
+                  {boxscore && (
+                    <tr key={`${g.date}-${g.opponent}-${i}-boxscore`} className="bg-white">
+                      <td colSpan={8} className="border-b px-3 py-3">
+                        <details>
+                          <summary className="cursor-pointer text-sm font-semibold text-neutral-700">
+                            Boxscore: G {boxscore.goals}, A {boxscore.assists}
+                            {boxscore.saves ? `, Saves ${boxscore.saves}` : ""}
+                            {boxscore.ga ? `, GA ${boxscore.ga}` : ""}
+                          </summary>
+                          <div className="mt-3 overflow-x-auto rounded-lg border">
+                            <table className="min-w-[520px] w-full text-sm">
+                              <thead className="bg-neutral-50">
+                                <tr>
+                                  <th className={cell}>Player</th>
+                                  <th className={cell}>G</th>
+                                  <th className={cell}>A</th>
+                                  <th className={cell}>Pts</th>
+                                  <th className={cell}>Saves</th>
+                                  <th className={cell}>GA</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {boxscore.players.map((player) => (
+                                  <tr
+                                    key={`${boxscore.season}-${boxscore.game_number}-${player.player_name}`}
+                                    className="odd:bg-white even:bg-neutral-50"
+                                  >
+                                    <td className={cell}>{player.player_name}</td>
+                                    <td className={cell}>{player.goals || ""}</td>
+                                    <td className={cell}>{player.assists || ""}</td>
+                                    <td className={cell}>{player.points || ""}</td>
+                                    <td className={cell}>{player.saves || ""}</td>
+                                    <td className={cell}>{player.ga || ""}</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </details>
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
+              )
+            })}
           </tbody>
         </table>
       </div>
@@ -164,65 +214,6 @@ export default async function SeasonYearPage({ params }: Props) {
                 ))}
               </tbody>
             </table>
-          </div>
-        </section>
-        )}
-        {boxscoreGames.length > 0 && (
-        <section className="rounded-xl border p-6">
-          <div className="mb-4">
-            <h2 className="text-2xl font-bold">Game Boxscores</h2>
-            <p className="mt-1 text-sm text-neutral-600">
-              Hortonville-only goals, assists, and goalkeeper saves from available game boxscores.
-            </p>
-          </div>
-          <div className="space-y-3">
-            {boxscoreGames.map((game) => (
-              <details key={`${game.season}-${game.game_number}`} className="rounded-lg border bg-white">
-                <summary className="cursor-pointer px-4 py-3 font-semibold">
-                  <span>{game.date}</span>
-                  {game.time ? <span className="ml-2 text-neutral-500">{game.time}</span> : null}
-                  <span className="mx-2 text-neutral-400">|</span>
-                  <span>{game.result} {game.score}</span>
-                  <span className="mx-2 text-neutral-400">|</span>
-                  <span>{game.site === "Away" ? "@ " : "vs "}{game.opponent}</span>
-                  <span className="ml-3 text-sm font-normal text-neutral-600">
-                    G: {game.goals} A: {game.assists}
-                    {game.saves ? ` Saves: ${game.saves}` : ""}
-                  </span>
-                </summary>
-                <div className="overflow-x-auto border-t">
-                  <table className="min-w-[650px] w-full text-sm">
-                    <thead className="bg-neutral-50">
-                      <tr>
-                        <th className={cell}>Player</th>
-                        <th className={cell}>#</th>
-                        <th className={cell}>Class</th>
-                        <th className={cell}>G</th>
-                        <th className={cell}>A</th>
-                        <th className={cell}>Pts</th>
-                        <th className={cell}>Saves</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {game.players.map((player) => (
-                        <tr
-                          key={`${game.season}-${game.game_number}-${player.player_name}-${player.number}`}
-                          className="odd:bg-white even:bg-neutral-50"
-                        >
-                          <td className={cell}>{player.player_name}</td>
-                          <td className={cell}>{player.number}</td>
-                          <td className={cell}>{player.class}</td>
-                          <td className={cell}>{player.goals || ""}</td>
-                          <td className={cell}>{player.assists || ""}</td>
-                          <td className={cell}>{player.points || ""}</td>
-                          <td className={cell}>{player.saves || ""}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </details>
-            ))}
           </div>
         </section>
         )}
