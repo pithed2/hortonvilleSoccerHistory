@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="bg-foreground/95 text-background py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4 mb-8 pb-8 border-b border-background/20">
-          <img src="/logos/modern-bear-logo.png" alt="Hortonville Soccer Logo" className="h-12 w-12 object-contain" />
+          <img src="/logos/modern-bear-logo-white-fill.png" alt="Hortonville Soccer Logo" className="h-12 w-12 object-contain" />
           <div>
             <h3 className="font-black text-lg">Hortonville Soccer</h3>
             <p className="text-sm text-background/80">The teams, fields, coaches, records, and stories that shaped the Hortonville Soccer Program</p>

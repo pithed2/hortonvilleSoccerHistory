@@ -15,7 +15,7 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center mb-8">
           <img
-            src="/logos/modern-bear-logo.png"
+            src="/logos/modern-bear-logo-white-fill.png"
             alt="Hortonville Soccer Bear Logo"
             className="h-24 md:h-32 w-auto drop-shadow-lg"
           />

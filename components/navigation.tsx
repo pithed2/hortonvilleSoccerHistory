@@ -27,7 +27,7 @@ export function Navigation() {
             href="/"
             className="flex items-center gap-3 font-bold text-xl tracking-tight hover:opacity-80 transition-opacity"
           >
-            <img src="/logos/modern-bear-logo.png" alt="Hortonville Soccer Logo" className="h-10 w-10 object-contain" />
+            <img src="/logos/modern-bear-logo-white-fill.png" alt="Hortonville Soccer Logo" className="h-10 w-10 object-contain" />
             <span className="hidden sm:inline">HORTONVILLE SOCCER</span>
           </Link>
 

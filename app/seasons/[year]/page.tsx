@@ -65,6 +65,11 @@ export default async function SeasonYearPage({ params }: Props) {
   const cell = "text-left px-3 py-2 border-b";
   const boxscoresByGameNumber = new Map(boxscoreGames.map((game) => [game.game_number, game]));
   const statCell = (value: number, show: boolean) => (show && Number.isFinite(value) ? value : "");
+  const statPill = (label: string, value: number) => (
+    <span className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-neutral-700 ring-1 ring-neutral-200">
+      {label} {value}
+    </span>
+  );
 
   return (
     <main className="max-w-6xl mx-auto p-6 space-y-6">
@@ -91,6 +96,8 @@ export default async function SeasonYearPage({ params }: Props) {
           <tbody>
             {games.map((g, i) => {
               const boxscore = boxscoresByGameNumber.get(i + 1)
+              const hasBoxscoreSaves = boxscore?.players.some((player) => player.has_saves) ?? false
+              const hasBoxscoreGa = boxscore?.players.some((player) => player.has_ga) ?? false
 
               return (
                 <Fragment key={`${g.date}-${g.opponent}-${i}`}>
@@ -107,13 +114,22 @@ export default async function SeasonYearPage({ params }: Props) {
                   {boxscore && (
                     <tr key={`${g.date}-${g.opponent}-${i}-boxscore`} className="bg-white">
                       <td colSpan={8} className="border-b px-3 py-3">
-                        <details>
-                          <summary className="cursor-pointer text-sm font-semibold text-neutral-700">
-                            Boxscore: G {boxscore.goals}, A {boxscore.assists}
-                            {boxscore.saves ? `, Saves ${boxscore.saves}` : ""}
-                            {boxscore.ga ? `, GA ${boxscore.ga}` : ""}
+                        <details className="group rounded-lg border border-primary/20 bg-primary/5">
+                          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-neutral-800">
+                            <span className="flex flex-wrap items-center gap-2">
+                              <span className="text-primary">Box Score</span>
+                              {statPill("G", boxscore.goals)}
+                              {statPill("A", boxscore.assists)}
+                              {hasBoxscoreSaves && statPill("Saves", boxscore.saves)}
+                              {hasBoxscoreGa && statPill("GA", boxscore.ga)}
+                            </span>
+                            <span className="shrink-0 text-xs font-semibold uppercase tracking-wide text-primary">
+                              <span className="group-open:hidden">Show</span>
+                              <span className="hidden group-open:inline">Hide</span>
+                            </span>
                           </summary>
-                          <div className="mt-3 overflow-x-auto rounded-lg border">
+                          <div className="border-t border-primary/15 px-4 pb-4 pt-3">
+                          <div className="overflow-x-auto rounded-lg border bg-white">
                             <table className="min-w-[520px] w-full text-sm">
                               <thead className="bg-neutral-50">
                                 <tr>
@@ -141,6 +157,7 @@ export default async function SeasonYearPage({ params }: Props) {
                                 ))}
                               </tbody>
                             </table>
+                          </div>
                           </div>
                         </details>
                       </td>

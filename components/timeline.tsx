@@ -33,7 +33,7 @@ export function Timeline() {
       description:
         "The boys program won the 2013 Bay Conference championship, added regional titles in 2019 and 2020, and came within one game of state in both 2019 and 2020.",
       milestone: "2013 Bay Conference champions",
-      logo: "/logos/modern-bear-logo.png",
+      logo: "/logos/modern-bear-logo-red-fill.png",
       logoAlt: "Modern Bear Logo",
     },
     {
@@ -42,7 +42,7 @@ export function Timeline() {
       description:
         "The boys program added regional championships in 2023 and 2025, won the 2025 Fox Valley Association championship, and reached as high as seventh in the WSCA Division 1 rankings.",
       milestone: "2025 FVA champions",
-      logo: "/logos/modern-bear-logo.png",
+      logo: "/logos/modern-bear-logo-red-fill.png",
       logoAlt: "Modern Bear Logo",
     },
   ]
