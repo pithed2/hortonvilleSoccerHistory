@@ -61,6 +61,36 @@ function toNumber(value) {
   return Number.isFinite(n) ? n : 0
 }
 
+function excelSerialDateToIso(value) {
+  const serial = Number(value)
+  if (!Number.isFinite(serial) || serial <= 0) return ""
+
+  // Excel's serial day 1 is 1900-01-01, with the historical 1900 leap-year bug.
+  const epoch = Date.UTC(1899, 11, 30)
+  const date = new Date(epoch + serial * 24 * 60 * 60 * 1000)
+  return date.toISOString().slice(0, 10)
+}
+
+function cleanDate(value) {
+  if (value instanceof Date) {
+    return value.toISOString().slice(0, 10)
+  }
+
+  if (typeof value === "number") {
+    return excelSerialDateToIso(value)
+  }
+
+  const text = cleanName(value)
+  if (!text) return ""
+
+  const parsed = new Date(text)
+  if (!Number.isNaN(parsed.getTime())) {
+    return parsed.toISOString().slice(0, 10)
+  }
+
+  return text
+}
+
 function sheetRows(sheetName) {
   const sheet = workbook.Sheets[sheetName]
   if (!sheet) {
@@ -160,23 +190,42 @@ function readCsvRows(filePath) {
 // Team Game Data
 // -----------------------------------------------------------------------------
 
-function teamGoalsAgainstBySeason() {
-  const totals = new Map()
+function scheduleGamesBySeason() {
+  const gamesBySeason = new Map()
 
   for (const row of readCsvRows(gamesCsvPath)) {
     const season = Number(row.season_year)
-    const score = String(row.score || "").trim()
-    const match = score.match(/^(\d+)\s*-\s*(\d+)$/)
+    if (!season) continue
 
-    if (!season || !match) continue
+    if (!gamesBySeason.has(season)) {
+      gamesBySeason.set(season, [])
+    }
 
-    const goalsAgainst = Number(match[2])
-    totals.set(season, (totals.get(season) ?? 0) + goalsAgainst)
+    gamesBySeason.get(season).push(row)
+  }
+
+  return gamesBySeason
+}
+
+function teamGoalsAgainstBySeason() {
+  const totals = new Map()
+
+  for (const [season, games] of scheduleGames.entries()) {
+    for (const game of games) {
+      const score = String(game.score || "").trim()
+      const match = score.match(/^(\d+)\s*-\s*(\d+)$/)
+
+      if (!match) continue
+
+      const goalsAgainst = Number(match[2])
+      totals.set(season, (totals.get(season) ?? 0) + goalsAgainst)
+    }
   }
 
   return totals
 }
 
+const scheduleGames = scheduleGamesBySeason()
 const goalsAgainstBySeason = teamGoalsAgainstBySeason()
 
 // -----------------------------------------------------------------------------
@@ -379,27 +428,43 @@ const rawDetailSheets = [
   "2010 Raw Detail",
 ]
 
-const playerGameStats = rawDetailSheets.flatMap((sheetName) =>
-  sheetRows(sheetName).map((row) => ({
-    season: row.Season,
-    player_name: mappedPlayerName(row.Season, row.Player),
-    opponent: row.Opponent,
-    shots: row.Shots,
-    sog: row.SOG,
-    goals: row.Goals,
-    assists: row.Assists,
-    yc: row.YC,
-    rc: row.RC,
-    saves: row.Saves,
-    minutes: row.Minutes,
-  })),
-)
+const playerGameStats = rawDetailSheets.flatMap((sheetName) => {
+  const playerGameCounts = new Map()
+
+  return sheetRows(sheetName).map((row) => {
+    const season = Number(row.Season)
+    const playerName = mappedPlayerName(row.Season, row.Player)
+    const playerKey = mappingKey(season, playerName)
+    const gameNumber = (playerGameCounts.get(playerKey) ?? 0) + 1
+    const scheduleGame = scheduleGames.get(season)?.[gameNumber - 1]
+
+    playerGameCounts.set(playerKey, gameNumber)
+
+    return {
+      season: row.Season,
+      game_number: gameNumber,
+      date: cleanDate(row.Date) || cleanDate(scheduleGame?.date),
+      player_name: playerName,
+      opponent: row.Opponent,
+      shots: row.Shots,
+      sog: row.SOG,
+      goals: row.Goals,
+      assists: row.Assists,
+      yc: row.YC,
+      rc: row.RC,
+      saves: row.Saves,
+      minutes: row.Minutes,
+    }
+  })
+})
 
 writeCsv(
   "player-game-stats.csv",
   playerGameStats,
   [
     "season",
+    "game_number",
+    "date",
     "player_name",
     "opponent",
     "shots",
