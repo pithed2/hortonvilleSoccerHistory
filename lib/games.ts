@@ -96,9 +96,10 @@ export async function loadGames(): Promise<Game[]> {
 
 export async function gamesBySeason(year: number) {
   const all = await loadGames();
-  return all
-    .filter(g => g.season_year === year)
-    .sort((a, b) => a.date.localeCompare(b.date) || a.opponent.localeCompare(b.opponent));
+  // Keep the CSV order as the game order. This matters for tournament days
+  // where multiple games share one date and legacy boxscores are matched by
+  // "game 1, game 2, game 3" from the original stat sheets.
+  return all.filter(g => g.season_year === year);
 }
 
 export async function listSeasons(): Promise<number[]> {
