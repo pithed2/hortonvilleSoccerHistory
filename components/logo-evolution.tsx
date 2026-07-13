@@ -20,7 +20,7 @@ export function LogoEvolution() {
       title: "Modern Bear Logo",
       description:
         "The current fierce bear mascot with soccer ball detail, representing competitive growth and evolution.",
-      image: "/logos/modern-bear-logo-red-fill.png",
+      image: "/logos/modern-bear-logo-white-fill.png",
       alt: "Modern Hortonville Bear Logo",
     },
     {
