@@ -37,22 +37,21 @@ export function StoriesSection() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {stories.map((story) => (
-            <div
+            <article
               key={story.title}
-              className="bg-card rounded-lg p-8 border border-border hover:border-primary transition-colors cursor-pointer group"
+              className="rounded-lg border border-border bg-card p-8"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-black mb-2 group-hover:text-primary transition-colors">{story.title}</h3>
+                  <h3 className="text-xl font-black mb-2">{story.title}</h3>
                   <p className="text-sm font-semibold text-primary">{story.year}</p>
                 </div>
               </div>
               <p className="text-muted-foreground mb-4">{story.excerpt}</p>
-              <div className="flex items-center justify-between pt-4 border-t border-border">
+              <div className="pt-4 border-t border-border">
                 <p className="text-xs font-semibold text-muted-foreground">By {story.author}</p>
-                <span className="text-primary font-semibold text-sm">Read More →</span>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

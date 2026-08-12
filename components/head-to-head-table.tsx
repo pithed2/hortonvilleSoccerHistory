@@ -43,8 +43,9 @@ export function HeadToHeadTable({ records }: { records: OpponentRecord[] }) {
   const cell = "border-b px-3 py-3 text-left tabular-nums";
 
   return (
-    <div className="overflow-x-auto rounded-xl border bg-card shadow-sm">
-      <table className="w-full min-w-[760px] text-sm">
+    <div className="archive-table-wrap">
+      <table className="archive-table min-w-[760px]">
+        <caption className="sr-only">All-time record against each documented opponent</caption>
         <thead className="bg-muted/60">
           <tr>
             {columns.map((column) => {
@@ -52,6 +53,7 @@ export function HeadToHeadTable({ records }: { records: OpponentRecord[] }) {
               return (
                 <th
                   key={column.key}
+                  scope="col"
                   className="border-b p-0 text-left"
                   aria-sort={active ? (direction === "asc" ? "ascending" : "descending") : "none"}
                 >
@@ -70,7 +72,7 @@ export function HeadToHeadTable({ records }: { records: OpponentRecord[] }) {
                 </th>
               );
             })}
-            <th className="border-b px-3 py-4"><span className="sr-only">View games</span></th>
+            <th scope="col" className="border-b px-3 py-4"><span className="sr-only">Game history</span></th>
           </tr>
         </thead>
         <tbody>
@@ -84,7 +86,7 @@ export function HeadToHeadTable({ records }: { records: OpponentRecord[] }) {
               <td className={cell}>{record.gf}</td>
               <td className={cell}>{record.ga}</td>
               <td className={`${cell} text-right`}>
-                <Link className="whitespace-nowrap font-semibold text-primary underline decoration-dotted" href={`/head-to-head/${record.slug}`}>
+                <Link className="text-link whitespace-nowrap" href={`/head-to-head/${record.slug}`}>
                   View games
                 </Link>
               </td>

@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react"
 import type { SeasonRow } from "@/lib/types"
+import Link from "next/link"
+import { EmptyState } from "@/components/archive-ui"
 
 type SortKey = "season" | "wins" | "winPct"
 
@@ -19,7 +21,7 @@ export function SeasonStatsTable({ rows }: { rows: SeasonRow[] }) {
   const sortButton = (key: SortKey, label: string) => (
     <button
       onClick={() => setSortBy(key)}
-      className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
+      className={`min-h-11 rounded-lg px-4 py-2 font-semibold transition-colors ${
         sortBy === key ? "bg-primary text-primary-foreground" : "bg-muted text-foreground hover:bg-muted/80"
       }`}
     >
@@ -35,21 +37,20 @@ export function SeasonStatsTable({ rows }: { rows: SeasonRow[] }) {
         {sortButton("winPct", "Win %")}
       </div>
 
-      <div className="overflow-x-auto rounded-2xl border bg-card shadow-sm">
+      <div className="archive-table-wrap">
         {rows.length === 0 ? (
-          <div className="p-6 text-sm text-muted-foreground">
-            No season data found. Check that <code>public/data/games.csv</code> exists and has rows.
-          </div>
+          <EmptyState title="No season data found" description={<>Check that <code>public/data/games.csv</code> exists and has rows.</>} />
         ) : (
-          <table className="w-full min-w-[760px]">
+          <table className="archive-table min-w-[760px]">
+            <caption className="sr-only">Season-by-season team records, goals, coaches, and achievements</caption>
             <thead className="bg-muted/60">
               <tr className="border-b border-border">
-                <th className="text-left py-4 px-4 font-black">Season</th>
-                <th className="text-left py-4 px-4 font-semibold">Record</th>
-                <th className="text-center py-4 px-4 font-semibold">Win %</th>
-                <th className="text-center py-4 px-4 font-semibold">GF/GA</th>
-                <th className="text-left py-4 px-4 font-semibold">Coach</th>
-                <th className="text-left py-4 px-4 font-semibold">Notes</th>
+                <th scope="col" className="text-left py-4 px-4 font-black">Season</th>
+                <th scope="col" className="text-left py-4 px-4 font-semibold">Record</th>
+                <th scope="col" className="text-center py-4 px-4 font-semibold">Win %</th>
+                <th scope="col" className="text-center py-4 px-4 font-semibold">GF/GA</th>
+                <th scope="col" className="text-left py-4 px-4 font-semibold">Coach</th>
+                <th scope="col" className="text-left py-4 px-4 font-semibold">Notes</th>
               </tr>
             </thead>
             <tbody>
@@ -59,9 +60,9 @@ export function SeasonStatsTable({ rows }: { rows: SeasonRow[] }) {
                   className={`border-b border-border/50 ${idx % 2 === 0 ? "bg-muted/30" : ""} hover:bg-muted/50 transition-colors`}
                 >
                   <td className="py-4 px-4 font-black text-primary">
-                    <a href={`/seasons/${row.season_year}`} className="underline decoration-dotted">
+                    <Link href={`/seasons/${row.season_year}`} className="text-link">
                       {row.season_year}
-                    </a>
+                    </Link>
                   </td>
                   <td className="py-4 px-4 font-semibold">
                     {row.played ? `${row.wins}-${row.losses}-${row.ties}` : "Incomplete"}
@@ -73,7 +74,7 @@ export function SeasonStatsTable({ rows }: { rows: SeasonRow[] }) {
                     <span className="font-semibold">{row.played ? row.ga : "-"}</span>
                   </td>
                   <td className="py-4 px-4 text-sm">{row.coach || "-"}</td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground italic">{row.notes || "-"}</td>
+                  <td className="py-4 px-4 text-sm text-foreground/75">{row.notes || "-"}</td>
                 </tr>
               ))}
             </tbody>

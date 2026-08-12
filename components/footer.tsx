@@ -1,4 +1,6 @@
 export function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="bg-foreground/95 text-background py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +82,7 @@ export function Footer() {
         </div>
         <div className="border-t border-background/20 pt-8">
           <p className="text-center text-sm text-background/70">
-            Copyright 2026 Hortonville Soccer History. A living archive built by our community.
+            Copyright {currentYear} Hortonville Soccer History. A living archive built by our community.
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { Award, CalendarDays, ClipboardCheck, Trophy } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { coachRecords } from "@/lib/games"
+import { ContentContainer, PageHeader } from "@/components/archive-ui"
 
 type ExpandedRecord = { wins: number; losses: number; ties: number; label: string }
 type CoachInfo = { fullName: string; highlights: string[]; current?: boolean; expandedRecord?: ExpandedRecord }
@@ -30,18 +31,10 @@ export default async function CoachingRecordsPage() {
 
   return <main className="min-h-screen bg-background">
     <Navigation />
-    <header className="relative overflow-hidden bg-primary py-16 text-primary-foreground md:py-20">
-      <div className="absolute -right-16 -top-24 h-80 w-80 rounded-full border-[48px] border-white/5" />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-white/70">Program leadership</p>
-        <h1 className="text-4xl font-black tracking-tight md:text-6xl">Coaching Records</h1>
-        <p className="mt-4 max-w-2xl text-lg text-white/85">The head coaches who built, guided, and sustained Hortonville boys soccer.</p>
-        <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold"><span className="rounded-full bg-white/12 px-4 py-2">{records.length} head coaches</span><span className="rounded-full bg-white/12 px-4 py-2">{totalSeasons} documented seasons</span></div>
-      </div>
-    </header>
+    <PageHeader eyebrow="Program leadership" title="Coaching Records" description="The head coaches who built, guided, and sustained Hortonville boys soccer."><span>{records.length} head coaches</span><span>{totalSeasons} documented seasons</span></PageHeader>
 
-    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-      <aside className="mb-12 flex gap-4 rounded-2xl border border-primary/20 bg-primary/5 p-6">
+    <ContentContainer className="py-12 md:py-14">
+      <aside className="surface-card mb-12 flex gap-4 border-primary/20 bg-primary/5 p-6">
         <ClipboardCheck className="mt-0.5 h-6 w-6 shrink-0 text-primary" aria-hidden="true" />
         <div><h2 className="font-black">How records are counted</h2><p className="mt-1 text-sm leading-relaxed text-muted-foreground">The main totals below are calculated from documented varsity games in the archive. When a broader coaching total includes reported scrimmages, it is shown separately so the historical game data and expanded total remain clearly distinguished.</p></div>
       </aside>
@@ -58,7 +51,7 @@ export default async function CoachingRecordsPage() {
 
           return <article key={coach.name} className="relative pl-12 md:pl-20">
             <span className="absolute left-1.5 top-8 flex h-7 w-7 items-center justify-center rounded-full border-4 border-background bg-primary md:left-[18px] md:h-8 md:w-8"><span className="h-2 w-2 rounded-full bg-white" /></span>
-            <div className="overflow-hidden rounded-2xl border bg-card shadow-sm">
+            <div className="surface-card overflow-hidden">
               <div className="border-b bg-muted/25 p-6 md:p-8">
                 <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
                   <div><p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">{coach.tenureStart}-{info?.current ? "Present" : coach.tenureEnd}</p><h2 className="mt-2 text-3xl font-black md:text-4xl">{displayName}</h2></div>
@@ -79,7 +72,7 @@ export default async function CoachingRecordsPage() {
           </article>
         })}
       </div>
-    </div>
+    </ContentContainer>
     <Footer />
   </main>
 }

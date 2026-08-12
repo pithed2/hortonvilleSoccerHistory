@@ -59,17 +59,17 @@ export function PhotoGallery() {
           {filtered.map((photo) => (
             <div
               key={photo.id}
-              className="group relative overflow-hidden rounded-lg bg-card border border-border hover:border-primary transition-colors cursor-pointer"
+              className="group relative overflow-hidden rounded-lg bg-card border border-border"
             >
               <div className="aspect-square relative overflow-hidden bg-muted">
                 <Image
                   src={photo.src || "/placeholder.svg"}
                   alt={photo.alt}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="object-cover"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-foreground/80 to-transparent p-4 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100">
                 <p className="text-primary-foreground font-semibold text-sm">{photo.alt}</p>
               </div>
             </div>
@@ -84,7 +84,7 @@ export function PhotoGallery() {
             href="/#contribute"
             className="inline-block bg-accent text-accent-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            Browse Full Album
+            Help Build the Archive
           </a>
         </div>
       </div>

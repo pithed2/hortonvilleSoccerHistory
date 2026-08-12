@@ -3,6 +3,7 @@ import { ArrowRight, CalendarDays, Swords, Trophy } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import { seasonRows } from "@/lib/games";
+import { ContentContainer, PageHeader, SectionHeading } from "@/components/archive-ui";
 
 export const runtime = "nodejs";
 export const revalidate = 60;
@@ -16,25 +17,15 @@ export default async function SeasonsPage() {
     <main className="min-h-screen bg-background">
       <Navigation />
 
-      <header className="relative overflow-hidden bg-primary py-16 text-primary-foreground md:py-20">
-        <div className="absolute -right-16 -top-24 h-80 w-80 rounded-full border-[48px] border-white/5" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-white/70">Program archive</p>
-          <h1 className="text-4xl font-black tracking-tight md:text-6xl">Seasons</h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/85">
-            Explore every documented varsity season, from schedules and results to rosters, player statistics, and box scores.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
-            <span className="rounded-full bg-white/12 px-4 py-2">{seasons.length} seasons</span>
-            {firstYear && latestYear && <span className="rounded-full bg-white/12 px-4 py-2">{firstYear}–{latestYear}</span>}
-          </div>
-        </div>
-      </header>
+      <PageHeader eyebrow="Program archive" title="Seasons" description="Explore every documented varsity season, from schedules and results to rosters, player statistics, and box scores.">
+        <span>{seasons.length} seasons</span>
+        {firstYear && latestYear && <span>{firstYear}–{latestYear}</span>}
+      </PageHeader>
 
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <ContentContainer className="py-12 md:py-14">
         <Link
           href="/head-to-head"
-          className="group mb-14 flex flex-col gap-6 overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 p-6 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg md:flex-row md:items-center md:justify-between md:p-8"
+          className="surface-card-interactive group mb-14 flex flex-col gap-6 overflow-hidden border-primary/20 bg-primary/5 p-6 md:flex-row md:items-center md:justify-between md:p-8"
         >
           <div className="flex items-start gap-5">
             <span className="rounded-xl bg-primary p-3 text-primary-foreground shadow-sm"><Swords className="h-7 w-7" /></span>
@@ -51,20 +42,14 @@ export default async function SeasonsPage() {
           </span>
         </Link>
 
-        <div className="mb-7 flex items-end justify-between gap-4">
-          <div>
-            <p className="mb-1 text-sm font-bold uppercase tracking-[0.16em] text-primary">Year by year</p>
-            <h2 className="text-3xl font-black">Season Archive</h2>
-          </div>
-          <p className="hidden text-sm text-muted-foreground sm:block">Select a season for the full record</p>
-        </div>
+        <SectionHeading eyebrow="Year by year" title="Season Archive" aside={<p className="hidden text-sm text-muted-foreground sm:block">Select a season for the full record</p>} />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {seasons.map((season) => (
             <Link
               key={season.season_year}
               href={`/seasons/${season.season_year}`}
-              className="group rounded-2xl border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+              className="surface-card-interactive group p-6"
             >
               <div className="mb-6 flex items-start justify-between">
                 <div>
@@ -101,7 +86,7 @@ export default async function SeasonsPage() {
             </Link>
           ))}
         </div>
-      </div>
+      </ContentContainer>
       <Footer />
     </main>
   );

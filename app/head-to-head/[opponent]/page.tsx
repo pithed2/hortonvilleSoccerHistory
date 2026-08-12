@@ -28,7 +28,8 @@ export default async function OpponentPage({ params }: Props) {
       <h1 className="mt-4 text-3xl font-black md:text-4xl">Hortonville vs. {opponent}</h1>
       <p className="mt-2 text-lg text-muted-foreground">{games.length} games · {wins}-{losses}-{ties}</p>
     </div><div className="overflow-x-auto rounded-xl border"><table className="w-full min-w-[850px] text-sm">
-      <thead className="bg-muted/50"><tr><th className={cell}>Season</th><th className={cell}>Date</th><th className={cell}>Venue</th><th className={cell}>Competition</th><th className={cell}>Result</th><th className={cell}>Score</th><th className={cell}>Notes</th></tr></thead>
+      <caption className="sr-only">Documented games between Hortonville and {opponent}</caption>
+      <thead className="bg-muted/50"><tr><th scope="col" className={cell}>Season</th><th scope="col" className={cell}>Date</th><th scope="col" className={cell}>Venue</th><th scope="col" className={cell}>Competition</th><th scope="col" className={cell}>Result</th><th scope="col" className={cell}>Score</th><th scope="col" className={cell}>Notes</th></tr></thead>
       <tbody>{games.map((game) => <tr key={`${game.season_year}-${game.gameNumber}`} className="odd:bg-background even:bg-muted/20">
         <td className={cell}><Link className="underline decoration-dotted" href={`/seasons/${game.season_year}`}>{game.season_year}</Link></td>
         <td className={cell}>{game.date}</td><td className={cell}>{game.venue || game.home_away || ""}</td><td className={cell}>{game.competition || ""}</td>

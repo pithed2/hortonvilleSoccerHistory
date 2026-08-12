@@ -1,4 +1,6 @@
 import { programOverview } from "@/lib/games"
+import Link from "next/link"
+import { ContentContainer } from "@/components/archive-ui"
 
 export async function StatsSection() {
   const overview = await programOverview()
@@ -16,44 +18,45 @@ export async function StatsSection() {
   ]
 
   return (
-    <section id="stats" className="py-20 md:py-32 bg-primary/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-black mb-4 text-balance">By The Numbers</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+    <section id="stats" className="bg-primary/5 py-16 md:py-20">
+      <ContentContainer>
+        <div className="mb-10 text-center md:mb-12">
+          <p className="section-eyebrow">Program overview</p>
+          <h2 className="section-title text-balance">By The Numbers</h2>
+          <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             The Hortonville Boys Soccer program spanning over twenty years
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="mb-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mb-12">
           {stats.map((stat) => (
-            <div
+            <article
               key={stat.label}
-              className="bg-card rounded-lg p-8 border border-border text-center hover:border-primary transition-colors"
+              className="surface-card p-6 text-center md:p-7"
             >
-              <p className="text-5xl md:text-6xl font-black text-primary mb-3">{stat.value}</p>
-              <p className="text-lg font-semibold text-foreground">{stat.label}</p>
-            </div>
+              <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">{stat.value}</p>
+              <h3 className="mt-2 text-sm font-semibold text-muted-foreground sm:text-base">{stat.label}</h3>
+            </article>
           ))}
         </div>
 
         <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+          <div className="flex flex-col justify-center gap-3 sm:flex-row">
+            <Link
               href="/stats"
-              className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/90 transition-colors"
+              className="action-primary"
             >
               View Season-by-Season Stats
-            </a>
-            <a
+            </Link>
+            <Link
               href="/coaching-records"
-              className="inline-block px-8 py-3 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary/10 transition-colors"
+              className="action-secondary"
             >
               Coaching Records
-            </a>
+            </Link>
           </div>
         </div>
-      </div>
+      </ContentContainer>
     </section>
   )
 }

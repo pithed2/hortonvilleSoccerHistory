@@ -125,4 +125,48 @@
   body {
     @apply bg-background text-foreground;
   }
+  :where(a[href], button, summary, [tabindex]):focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--background);
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .page-header {
+    @apply relative overflow-hidden bg-primary py-14 text-primary-foreground md:py-20;
+  }
+  .page-header-decoration {
+    @apply absolute -right-16 -top-24 h-80 w-80 rounded-full border-[48px] border-white/5;
+  }
+  .page-eyebrow, .section-eyebrow {
+    @apply mb-2 text-sm font-bold uppercase tracking-[0.18em] text-primary;
+  }
+  .page-eyebrow { @apply mb-3 tracking-[0.22em] text-white/70; }
+  .page-title { @apply text-4xl font-black tracking-tight md:text-6xl; }
+  .page-description { @apply mt-4 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg; }
+  .page-header-meta { @apply mt-7 flex flex-wrap gap-3 text-sm font-semibold; }
+  .page-header-meta > * { @apply rounded-full bg-white/12 px-4 py-2; }
+  .section-heading { @apply mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between; }
+  .section-title { @apply text-2xl font-black tracking-tight sm:text-3xl; }
+  .section-description { @apply mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base; }
+  .surface-card { @apply rounded-2xl border bg-card shadow-sm; }
+  .surface-card-interactive { @apply rounded-2xl border bg-card shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg; }
+  .archive-table-wrap { @apply overflow-x-auto rounded-2xl border bg-card shadow-sm; }
+  .archive-table { @apply w-full min-w-[720px] text-sm; }
+  .archive-table caption { @apply sr-only; }
+  .archive-table thead { @apply bg-muted/60; }
+  .archive-table th { @apply border-b px-4 py-3 text-left font-bold whitespace-nowrap; }
+  .archive-table td { @apply border-b border-border/60 px-4 py-3 align-middle; }
+  .archive-table tbody tr { @apply transition-colors even:bg-muted/20 hover:bg-primary/5; }
+  .archive-table tbody tr:last-child td { @apply border-b-0; }
+  .action-primary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary/90; }
+  .action-secondary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border bg-background px-5 py-2.5 text-sm font-bold text-foreground transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary; }
+  .text-link { @apply font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary; }
+  .empty-state { @apply flex min-h-48 flex-col items-center justify-center rounded-2xl border border-dashed bg-muted/20 px-6 py-10 text-center; }
+  .empty-state-icon { @apply mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary; }
+  .empty-state-icon svg { @apply size-6; }
 }
