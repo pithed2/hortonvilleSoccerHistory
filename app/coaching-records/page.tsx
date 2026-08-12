@@ -91,6 +91,12 @@ export default async function CoachingRecordsPage() {
                       <p className="text-3xl font-black text-primary">{coach.winPct.toFixed(1)}%</p>
                     </div>
                   </div>
+                  {coach.name === "Everett" && (
+                    <p className="mt-6 border-t border-border pt-4 text-sm text-muted-foreground">
+                      Record shown: documented varsity matches. Scrimmage results are acknowledged separately and are not
+                      included in the W-L-T total because complete scrimmage records are unavailable.
+                    </p>
+                  )}
                 </div>
 
                 <div className="p-8">

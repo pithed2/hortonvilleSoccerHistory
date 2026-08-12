@@ -1,7 +1,7 @@
 // lib/games.ts
 import fs from 'node:fs';
 import path from 'node:path';
-import { Game, SeasonRow, CoachRecord } from './types';
+import { Game, SeasonRow, CoachRecord, IndexedGame, OpponentRecord } from './types';
 import { headers } from "next/headers";
 
 // RFC4180-ish CSV parse that handles quotes + commas and BOM
@@ -107,6 +107,46 @@ export async function listSeasons(): Promise<number[]> {
   return Array.from(new Set(all.map(g => g.season_year)))
     .filter(Boolean)
     .sort((a, b) => b - a);
+}
+
+export function opponentSlug(opponent: string): string {
+  return opponent.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+export async function opponentRecords(): Promise<OpponentRecord[]> {
+  const records = new Map<string, OpponentRecord>();
+  for (const game of await loadGames()) {
+    const opponent = game.opponent.trim();
+    if (!opponent) continue;
+    if (!records.has(opponent)) records.set(opponent, {
+      opponent, slug: opponentSlug(opponent), played: 0, wins: 0, losses: 0, ties: 0, gf: 0, ga: 0,
+    });
+    const record = records.get(opponent)!;
+    record.played += 1;
+    const result = (game.result || "").toUpperCase();
+    if (result === "W") record.wins += 1;
+    else if (result === "L") record.losses += 1;
+    else if (result === "T" || result === "D") record.ties += 1;
+    if (game.score && /^\s*\d+\s*-\s*\d+\s*$/.test(game.score)) {
+      const [gf, ga] = game.score.split("-").map((value) => Number(value.trim()));
+      record.gf += gf; record.ga += ga;
+    }
+  }
+  return Array.from(records.values()).sort((a, b) => a.opponent.localeCompare(b.opponent));
+}
+
+export async function gamesByOpponentSlug(slug: string): Promise<{ opponent?: string; games: IndexedGame[] }> {
+  const games = await loadGames();
+  const opponent = games.find((game) => opponentSlug(game.opponent.trim()) === slug)?.opponent.trim();
+  if (!opponent) return { games: [] };
+  const seasonGameNumbers = new Map<number, number>();
+  const indexed = games.map((game) => {
+    const gameNumber = (seasonGameNumbers.get(game.season_year) ?? 0) + 1;
+    seasonGameNumbers.set(game.season_year, gameNumber);
+    return { ...game, gameNumber };
+  });
+  return { opponent, games: indexed.filter((game) => game.opponent.trim() === opponent).sort((a, b) => b.date.localeCompare(a.date)) };
 }
 
 // Optional per-season notes (e.g. "Won Bay Conference"), keyed by season_year.

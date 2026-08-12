@@ -37,3 +37,16 @@ export type CoachRecord = {
   winPct: number; // wins / games, expressed 0-100
   bestSeason?: SeasonRow;
 };
+
+export type OpponentRecord = {
+  opponent: string;
+  slug: string;
+  played: number;
+  wins: number;
+  losses: number;
+  ties: number;
+  gf: number;
+  ga: number;
+};
+
+export type IndexedGame = Game & { gameNumber: number };
