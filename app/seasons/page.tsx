@@ -79,11 +79,11 @@ export default async function SeasonsPage() {
               <div className="grid grid-cols-2 gap-4 border-y py-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Record</p>
-                  <p className="mt-1 text-xl font-black">{season.wins}-{season.losses}-{season.ties}</p>
+                  <p className="mt-1 text-xl font-black">{season.played ? `${season.wins}-${season.losses}-${season.ties}` : "Incomplete"}</p>
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Goals</p>
-                  <p className="mt-1 text-xl font-black">{season.gf}-{season.ga}</p>
+                  <p className="mt-1 text-xl font-black">{season.played ? `${season.gf}-${season.ga}` : "-"}</p>
                 </div>
               </div>
 

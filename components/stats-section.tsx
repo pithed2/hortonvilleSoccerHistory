@@ -11,7 +11,7 @@ export async function StatsSection() {
     { label: "Head Coaches", value: String(overview.headCoaches) },
     {
       label: "Years Active",
-      value: overview.yearStart && overview.yearEnd ? `${overview.yearStart}-${overview.yearEnd}` : "—",
+      value: overview.yearStart && overview.yearEnd ? `${overview.yearStart}-${overview.yearEnd}` : "-",
     },
   ]
 

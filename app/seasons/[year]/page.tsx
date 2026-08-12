@@ -2,275 +2,107 @@ export const runtime = "nodejs";
 export const revalidate = 60;
 
 import Link from "next/link";
-import { Fragment } from "react";
-import { Navigation } from "@/components/navigation";
+import { CalendarDays, Goal, Shield, Trophy, Users } from "lucide-react";
 import { Footer } from "@/components/footer";
-import { gamesBySeason, listSeasons } from "@/lib/games";
+import { Navigation } from "@/components/navigation";
+import { gamesBySeason, listSeasons, seasonRows } from "@/lib/games";
+import type { Game } from "@/lib/types";
 import {
   boxscoreGamesBySeason,
   goalkeeperSeasonStatsBySeason,
   playerSeasonStatsBySeason,
   rosterBySeason,
-} from "@/lib/player-stats"
+  type BoxscoreGame,
+} from "@/lib/player-stats";
 
 type Props = { params: Promise<{ year: string }> };
 
 export async function generateStaticParams() {
-  // Prebuild all known seasons at build time
-  const years = await listSeasons();
-  return years.map((y) => ({ year: String(y) }));
+  return (await listSeasons()).map((year) => ({ year: String(year) }));
+}
+
+function ResultBadge({ result }: { result?: string }) {
+  const value = (result || "-").toUpperCase();
+  const color = value === "W" ? "bg-green-100 text-green-800" : value === "L" ? "bg-red-100 text-red-800" : "bg-blue-100 text-blue-800";
+  return <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full text-xs font-black ${color}`}>{value}</span>;
+}
+
+function BoxScore({ boxscore }: { boxscore: BoxscoreGame }) {
+  const hasSaves = boxscore.players.some((player) => player.has_saves);
+  const hasGa = boxscore.players.some((player) => player.has_ga);
+  const cell = "border-b px-3 py-2 text-left tabular-nums";
+  return (
+    <details className="group mt-3 rounded-xl border border-primary/20 bg-primary/5">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-bold">
+        <span className="flex flex-wrap items-center gap-2">
+          <span className="text-primary">Box Score</span>
+          <span className="rounded-full bg-background px-2.5 py-1 text-xs ring-1 ring-border">G {boxscore.goals}</span>
+          <span className="rounded-full bg-background px-2.5 py-1 text-xs ring-1 ring-border">A {boxscore.assists}</span>
+          {hasSaves ? <span className="rounded-full bg-background px-2.5 py-1 text-xs ring-1 ring-border">Saves {boxscore.saves}</span> : null}
+        </span>
+        <span className="text-xs uppercase tracking-wide text-primary"><span className="group-open:hidden">Show</span><span className="hidden group-open:inline">Hide</span></span>
+      </summary>
+      <div className="overflow-x-auto border-t border-primary/15 bg-background">
+        <table className="w-full min-w-[520px] text-sm">
+          <thead className="bg-muted/50"><tr><th className={cell}>Player</th><th className={cell}>G</th><th className={cell}>A</th><th className={cell}>Pts</th><th className={cell}>Saves</th><th className={cell}>GA</th></tr></thead>
+          <tbody>{boxscore.players.map((player) => <tr key={player.player_name} className="even:bg-muted/20">
+            <td className={`${cell} font-semibold`}>{player.player_name}</td><td className={cell}>{player.is_goalkeeper ? "" : player.goals}</td>
+            <td className={cell}>{player.is_goalkeeper ? "" : player.assists}</td><td className={cell}>{player.is_goalkeeper ? "" : player.points}</td>
+            <td className={cell}>{player.has_saves ? player.saves : ""}</td><td className={cell}>{hasGa && player.has_ga ? player.ga : ""}</td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+    </details>
+  );
+}
+
+function GameRow({ game, number, boxscore }: { game: Game; number: number; boxscore?: BoxscoreGame }) {
+  return <article id={`game-${number}`} className="scroll-mt-36 rounded-2xl border bg-card p-4 shadow-sm target:border-primary target:ring-4 target:ring-primary/10 md:rounded-none md:border-0 md:border-b md:p-0 md:shadow-none">
+    <div className="grid gap-4 md:grid-cols-[110px_minmax(150px,1.3fr)_120px_minmax(150px,1fr)_70px_80px_minmax(180px,1.4fr)] md:items-center md:gap-0">
+      <div className="flex items-start justify-between gap-4 md:contents"><p className="text-xs font-bold uppercase tracking-wide text-muted-foreground md:order-1 md:px-3 md:py-4 md:text-sm md:normal-case">{game.date}</p><h3 className="text-lg font-black md:order-2 md:px-3 md:py-4 md:text-sm">{game.opponent}</h3><span className="md:order-5 md:px-3 md:py-4"><ResultBadge result={game.result} /></span></div>
+      <div className="grid grid-cols-2 gap-3 border-y py-3 text-sm md:contents"><div className="md:order-6 md:px-3 md:py-4"><p className="text-xs font-semibold text-muted-foreground md:hidden">Score</p><p className="font-black">{game.score || "-"}</p></div><div className="md:order-3 md:px-3 md:py-4"><p className="text-xs font-semibold text-muted-foreground md:hidden">Venue</p><p className="font-semibold">{game.venue || game.home_away || "-"}</p></div></div>
+      <p className="text-sm text-muted-foreground md:order-4 md:px-3 md:py-4">{game.competition || "-"}</p>
+      <div className="text-sm md:order-7 md:px-3 md:py-4">{game.notes ? <p className="font-semibold">{game.notes}</p> : null}</div>
+    </div>
+    {boxscore ? <div className="md:px-3 md:pb-4"><BoxScore boxscore={boxscore} /></div> : null}
+  </article>;
 }
 
 export default async function SeasonYearPage({ params }: Props) {
   const { year: raw } = await params;
-  const year = parseInt(raw, 10);
-
-  if (!raw || !Number.isFinite(year)) {
-    return (
-      <main className="max-w-6xl mx-auto p-6">
-        <Navigation />
-        <h1 className="text-2xl font-bold">Invalid season</h1>
-        <p className="mt-2 text-sm text-neutral-600">
-          The URL must be like <code>/seasons/2005</code>.
-        </p>
-        <p className="mt-2 text-sm text-neutral-600">
-          Received: <code>{raw}</code>
-        </p>
-        <Footer />
-      </main>
-    );
+  const year = Number.parseInt(raw, 10);
+  const [games, rows] = await Promise.all([gamesBySeason(year), seasonRows()]);
+  const summary = rows.find((row) => row.season_year === year);
+  if (!Number.isFinite(year) || !summary) {
+    return <main className="min-h-screen bg-background"><Navigation /><div className="mx-auto max-w-4xl px-4 py-20"><h1 className="text-3xl font-black">Season not found</h1><p className="mt-3 text-muted-foreground">No documented season was found for this year.</p><Link href="/seasons" className="mt-6 inline-block font-bold text-primary underline">Back to seasons</Link></div><Footer /></main>;
   }
 
-  const games = await gamesBySeason(year);
   const roster = rosterBySeason(year);
   const playerStats = playerSeasonStatsBySeason(year);
   const goalkeeperStats = goalkeeperSeasonStatsBySeason(year);
-  const boxscoreGames = boxscoreGamesBySeason(year);
-  
-  
-  if (!games.length) {
-    return (
-      <main className="max-w-6xl mx-auto p-6">
-        <Navigation />
-        <h1 className="text-2xl font-bold">{year} Season</h1>
-        <p className="mt-2 text-sm text-neutral-600">
-          No games found for {year}. Make sure <code>public/data/games.csv</code> (or <code>games_textscore.csv</code>) contains rows with <code>season_year = {year}</code>.
-        </p>
-        <p className="mt-4"><Link href="/seasons" className="underline">Back to seasons</Link></p>
-        <Footer />
-      </main>
-    );
-  }
+  const boxscores = new Map(boxscoreGamesBySeason(year).map((game) => [game.game_number, game]));
+  const cell = "border-b px-3 py-3 text-left tabular-nums";
+  const sections = [{ id: "schedule", label: "Schedule", show: true }, { id: "roster", label: "Roster", show: roster.length > 0 }, { id: "players", label: "Player Stats", show: playerStats.length > 0 }, { id: "goalkeepers", label: "Goalkeepers", show: goalkeeperStats.length > 0 }];
 
-  const cell = "text-left px-3 py-2 border-b";
-  const boxscoresByGameNumber = new Map(boxscoreGames.map((game) => [game.game_number, game]));
-  const statCell = (value: number, show: boolean) => (show && Number.isFinite(value) ? value : "");
-  const statPill = (label: string, value: number) => (
-    <span className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-neutral-700 ring-1 ring-neutral-200">
-      {label} {value}
-    </span>
-  );
-
-  return (
-    <main className="max-w-6xl mx-auto p-6 space-y-6">
-      <Navigation />
-      <header className="flex items-center justify-between gap-4">
-        <h1 className="text-3xl font-bold">{year} Season</h1>
-        <Link href="/seasons" className="text-sm underline text-neutral-600">← All seasons</Link>
-      </header>
-
-      <div className="overflow-x-auto rounded-xl border">
-        <table className="min-w-[900px] w-full text-sm">
-          <thead className="bg-neutral-50">
-            <tr>
-              <th className={cell}>Date</th>
-              <th className={cell}>Opponent</th>
-              <th className={cell}>Venue</th>
-              <th className={cell}>H/A</th>
-              <th className={cell}>Competition</th>
-              <th className={cell}>Result</th>
-              <th className={cell}>Score</th>
-              <th className={cell}>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map((g, i) => {
-              const boxscore = boxscoresByGameNumber.get(i + 1)
-              const hasBoxscoreSaves = boxscore?.players.some((player) => player.has_saves) ?? false
-              const hasBoxscoreGa = boxscore?.players.some((player) => player.has_ga) ?? false
-
-              return (
-                <Fragment key={`${g.date}-${g.opponent}-${i}`}>
-                  <tr key={`${g.date}-${g.opponent}-${i}`} className="odd:bg-white even:bg-neutral-50">
-                    <td className={cell}>{g.date}</td>
-                    <td className={cell}>{g.opponent}</td>
-                    <td className={cell}>{g.venue || ""}</td>
-                    <td className={cell}>{g.home_away || ""}</td>
-                    <td className={cell}>{g.competition || ""}</td>
-                    <td className={cell}>{g.result || ""}</td>
-                    <td className={cell}>{g.score || ""}</td>
-                    <td className={cell}>{g.notes || ""}</td>
-                  </tr>
-                  {boxscore && (
-                    <tr key={`${g.date}-${g.opponent}-${i}-boxscore`} className="bg-white">
-                      <td colSpan={8} className="border-b px-3 py-3">
-                        <details className="group rounded-lg border border-primary/20 bg-primary/5">
-                          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-neutral-800">
-                            <span className="flex flex-wrap items-center gap-2">
-                              <span className="text-primary">Box Score</span>
-                              {statPill("G", boxscore.goals)}
-                              {statPill("A", boxscore.assists)}
-                              {hasBoxscoreSaves && statPill("Saves", boxscore.saves)}
-                              {hasBoxscoreGa && statPill("GA", boxscore.ga)}
-                            </span>
-                            <span className="shrink-0 text-xs font-semibold uppercase tracking-wide text-primary">
-                              <span className="group-open:hidden">Show</span>
-                              <span className="hidden group-open:inline">Hide</span>
-                            </span>
-                          </summary>
-                          <div className="border-t border-primary/15 px-4 pb-4 pt-3">
-                          <div className="overflow-x-auto rounded-lg border bg-white">
-                            <table className="min-w-[520px] w-full text-sm">
-                              <thead className="bg-neutral-50">
-                                <tr>
-                                  <th className={cell}>Player</th>
-                                  <th className={cell}>G</th>
-                                  <th className={cell}>A</th>
-                                  <th className={cell}>Pts</th>
-                                  <th className={cell}>Saves</th>
-                                  <th className={cell}>GA</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {boxscore.players.map((player) => (
-                                  <tr
-                                    key={`${boxscore.season}-${boxscore.game_number}-${player.player_name}`}
-                                    className="odd:bg-white even:bg-neutral-50"
-                                  >
-                                    <td className={cell}>{player.player_name}</td>
-                                    <td className={cell}>{statCell(player.goals, !player.is_goalkeeper)}</td>
-                                    <td className={cell}>{statCell(player.assists, !player.is_goalkeeper)}</td>
-                                    <td className={cell}>{statCell(player.points, !player.is_goalkeeper)}</td>
-                                    <td className={cell}>{statCell(player.saves, player.has_saves)}</td>
-                                    <td className={cell}>{statCell(player.ga, player.has_ga)}</td>
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                          </div>
-                        </details>
-                      </td>
-                    </tr>
-                  )}
-                </Fragment>
-              )
-            })}
-          </tbody>
-        </table>
+  return <main className="min-h-screen bg-background"><Navigation />
+    <header className="relative overflow-hidden bg-primary py-14 text-primary-foreground md:py-18"><div className="absolute -right-16 -top-24 h-80 w-80 rounded-full border-[48px] border-white/5" /><div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Link href="/seasons" className="text-sm font-semibold text-white/80 hover:text-white">Back to all seasons</Link>
+      <div className="mt-5 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"><div><p className="text-sm font-bold uppercase tracking-[0.2em] text-white/70">Boys varsity</p><h1 className="mt-2 text-5xl font-black tracking-tight md:text-6xl">{year} Season</h1>{summary.notes ? <p className="mt-4 flex items-center gap-2 text-lg font-bold">{summary.played ? <Trophy className="h-5 w-5" /> : null}{summary.notes}</p> : null}</div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4"><div className="rounded-xl bg-white/12 p-4"><p className="text-xs font-bold uppercase text-white/65">Record</p><p className="mt-1 text-2xl font-black">{summary.played ? `${summary.wins}-${summary.losses}-${summary.ties}` : "Incomplete"}</p></div><div className="rounded-xl bg-white/12 p-4"><p className="text-xs font-bold uppercase text-white/65">Goals For</p><p className="mt-1 text-2xl font-black">{summary.played ? summary.gf : "-"}</p></div><div className="rounded-xl bg-white/12 p-4"><p className="text-xs font-bold uppercase text-white/65">Goals Against</p><p className="mt-1 text-2xl font-black">{summary.played ? summary.ga : "-"}</p></div><div className="rounded-xl bg-white/12 p-4"><p className="text-xs font-bold uppercase text-white/65">Coach</p><p className="mt-1 text-lg font-black">{summary.coach || "-"}</p></div></div>
       </div>
-        {roster.length > 0 && (
-          <section className="rounded-xl border p-6">
-            <h2 className="text-2xl font-bold mb-4">Roster</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead className="bg-neutral-50">
-                  <tr>
-                    <th className={cell}>Name</th>
-                    <th className={cell}>Class</th>
-                    <th className={cell}>Number</th>
-                    <th className={cell}>Position</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {roster.map((player) => (
-                    <tr key={`${player.season}-${player.player_name}`} className="odd:bg-white even:bg-neutral-50">
-                      <td className={cell}>{player.player_name}</td>
-                      <td className={cell}>{player.class}</td>
-                      <td className={cell}>{player.number}</td>
-                      <td className={cell}>{player.position}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        )}
-        {playerStats.length > 0 && (
-        <section className="rounded-xl border p-6">
-          <h2 className="text-2xl font-bold mb-4">Player Stats</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-[900px] w-full text-sm">
-              <thead className="bg-neutral-50">
-                <tr>
-                  <th className={cell}>Player</th>
-                  <th className={cell}>GP</th>
-                  <th className={cell}>G</th>
-                  <th className={cell}>A</th>
-                  <th className={cell}>Pts</th>
-                  <th className={cell}>Shots</th>
-                  <th className={cell}>SOG</th>
-                  <th className={cell}>YC</th>
-                  <th className={cell}>RC</th>
-                  <th className={cell}>Saves</th>
-                </tr>
-              </thead>
-              <tbody>
-                {playerStats.map((player) => (
-                  <tr key={`${player.season}-${player.player_name}`} className="odd:bg-white even:bg-neutral-50">
-                    <td className={cell}>{player.player_name}</td>
-                    <td className={cell}>{player.gp}</td>
-                    <td className={cell}>{player.goals}</td>
-                    <td className={cell}>{player.assists}</td>
-                    <td className={cell}>{player.points}</td>
-                    <td className={cell}>{player.shots}</td>
-                    <td className={cell}>{player.sog}</td>
-                    <td className={cell}>{player.yc}</td>
-                    <td className={cell}>{player.rc}</td>
-                    <td className={cell}>{player.saves}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-        )}
-              {goalkeeperStats.length > 0 && (
-        <section className="rounded-xl border p-6">
-          <h2 className="text-2xl font-bold mb-4">Goalkeeper Stats</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-[800px] w-full text-sm">
-              <thead className="bg-neutral-50">
-                <tr>
-                  <th className={cell}>Player</th>
-                  <th className={cell}>GP</th>
-                  <th className={cell}>Min</th>
-                  <th className={cell}>GA</th>
-                  <th className={cell}>Saves</th>
-                  <th className={cell}>Save %</th>
-                  <th className={cell}>GAA</th>
-                  <th className={cell}>Opp SOG</th>
-                </tr>
-              </thead>
-              <tbody>
-                {goalkeeperStats.map((keeper) => (
-                  <tr key={`${keeper.season}-${keeper.player_name}`} className="odd:bg-white even:bg-neutral-50">
-                    <td className={cell}>{keeper.player_name}</td>
-                    <td className={cell}>{keeper.gp}</td>
-                    <td className={cell}>{keeper.minutes}</td>
-                    <td className={cell}>{keeper.ga}</td>
-                    <td className={cell}>{keeper.saves}</td>
-                    <td className={cell}>{keeper.save_pct ? `${(keeper.save_pct * 100).toFixed(1)}%` : ""}</td>
-                    <td className={cell}>{keeper.gaa ? keeper.gaa.toFixed(2) : ""}</td>
-                    <td className={cell}>{keeper.opp_sog || ""}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-        )}  
-      <Footer />
-    </main>
-  );
+    </div></header>
+    <div className="sticky top-16 z-30 border-b bg-background/95 backdrop-blur"><nav aria-label="Season sections" className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">{sections.filter((section) => section.show).map((section) => <a key={section.id} href={`#${section.id}`} className="whitespace-nowrap rounded-full border bg-card px-4 py-2 text-sm font-bold hover:border-primary hover:text-primary">{section.label}</a>)}</nav></div>
+    <div className="mx-auto max-w-7xl space-y-14 px-4 py-12 sm:px-6 lg:px-8">
+      <section id="schedule" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><CalendarDays className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Schedule & Results</h2></div>
+        {!games.length ? <div className="rounded-2xl border border-dashed bg-muted/30 p-8 text-center"><h3 className="text-xl font-black">Records incomplete</h3><p className="mt-2 text-muted-foreground">The {year} season is part of the known program history, but its schedule and results have not yet been added to the archive.</p></div> : null}
+        <div className="space-y-4 md:space-y-0 md:overflow-hidden md:rounded-2xl md:border md:bg-card md:shadow-sm">
+          <div className="hidden grid-cols-[110px_minmax(150px,1.3fr)_120px_minmax(150px,1fr)_70px_80px_minmax(180px,1.4fr)] bg-muted/60 text-sm font-bold md:grid"><span className="px-3 py-4">Date</span><span className="px-3 py-4">Opponent</span><span className="px-3 py-4">Venue</span><span className="px-3 py-4">Competition</span><span className="px-3 py-4">Result</span><span className="px-3 py-4">Score</span><span className="px-3 py-4">Notes / Box Score</span></div>
+          {games.map((game, index) => <GameRow key={`${game.date}-${game.opponent}-${index}`} game={game} number={index + 1} boxscore={boxscores.get(index + 1)} />)}
+        </div>
+      </section>
+      {roster.length ? <section id="roster" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><Users className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Roster</h2></div><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{roster.map((player) => <div key={player.player_name} className="flex items-center gap-4 rounded-xl border bg-card p-4"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 font-black text-primary">{player.number || "-"}</span><div><p className="font-bold">{player.player_name}</p><p className="text-sm text-muted-foreground">{[player.class, player.position].filter(Boolean).join(" / ") || "Rostered player"}</p></div></div>)}</div></section> : null}
+      {playerStats.length ? <section id="players" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><Goal className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Player Stats</h2></div><div className="overflow-x-auto rounded-2xl border bg-card shadow-sm"><table className="w-full min-w-[820px] text-sm"><thead className="bg-muted/60"><tr><th className={cell}>Player</th><th className={cell}>GP</th><th className={cell}>G</th><th className={cell}>A</th><th className={cell}>Pts</th><th className={cell}>Shots</th><th className={cell}>SOG</th><th className={cell}>YC</th><th className={cell}>RC</th></tr></thead><tbody>{playerStats.map((player) => <tr key={player.player_name} className="even:bg-muted/20"><td className={`${cell} font-bold`}>{player.player_name}</td><td className={cell}>{player.gp}</td><td className={cell}>{player.goals}</td><td className={cell}>{player.assists}</td><td className={`${cell} font-black text-primary`}>{player.points}</td><td className={cell}>{player.shots}</td><td className={cell}>{player.sog}</td><td className={cell}>{player.yc}</td><td className={cell}>{player.rc}</td></tr>)}</tbody></table></div></section> : null}
+      {goalkeeperStats.length ? <section id="goalkeepers" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><Shield className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Goalkeepers</h2></div><div className="overflow-x-auto rounded-2xl border bg-card shadow-sm"><table className="w-full min-w-[720px] text-sm"><thead className="bg-muted/60"><tr><th className={cell}>Player</th><th className={cell}>GP</th><th className={cell}>Minutes</th><th className={cell}>GA</th><th className={cell}>Saves</th><th className={cell}>Save %</th><th className={cell}>GAA</th></tr></thead><tbody>{goalkeeperStats.map((keeper) => <tr key={keeper.player_name} className="even:bg-muted/20"><td className={`${cell} font-bold`}>{keeper.player_name}</td><td className={cell}>{keeper.gp}</td><td className={cell}>{keeper.minutes}</td><td className={cell}>{keeper.ga}</td><td className={cell}>{keeper.saves}</td><td className={cell}>{keeper.save_pct ? `${(keeper.save_pct * 100).toFixed(1)}%` : "-"}</td><td className={cell}>{keeper.gaa ? keeper.gaa.toFixed(2) : "-"}</td></tr>)}</tbody></table></div></section> : null}
+    </div><Footer />
+  </main>;
 }

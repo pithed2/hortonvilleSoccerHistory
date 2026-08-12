@@ -33,7 +33,7 @@ export default async function OpponentPage({ params }: Props) {
         <td className={cell}><Link className="underline decoration-dotted" href={`/seasons/${game.season_year}`}>{game.season_year}</Link></td>
         <td className={cell}>{game.date}</td><td className={cell}>{game.venue || game.home_away || ""}</td><td className={cell}>{game.competition || ""}</td>
         <td className={cell}>{game.result || ""}</td><td className={cell}>{game.score || ""}</td>
-        <td className={cell}>{game.notes || ""}{boxscores.has(`${game.season_year}-${game.gameNumber}`) && <Link className="ml-2 whitespace-nowrap font-semibold text-primary underline decoration-dotted" href={`/seasons/${game.season_year}`}>Box score</Link>}</td>
+        <td className={cell}>{game.notes || ""}{boxscores.has(`${game.season_year}-${game.gameNumber}`) && <Link className="ml-2 whitespace-nowrap font-semibold text-primary underline decoration-dotted" href={`/seasons/${game.season_year}#game-${game.gameNumber}`}>Box score</Link>}</td>
       </tr>)}</tbody>
     </table></div></section><Footer />
   </main>;

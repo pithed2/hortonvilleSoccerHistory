@@ -35,14 +35,14 @@ export function SeasonStatsTable({ rows }: { rows: SeasonRow[] }) {
         {sortButton("winPct", "Win %")}
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto rounded-2xl border bg-card shadow-sm">
         {rows.length === 0 ? (
           <div className="p-6 text-sm text-muted-foreground">
             No season data found. Check that <code>public/data/games.csv</code> exists and has rows.
           </div>
         ) : (
-          <table className="w-full">
-            <thead>
+          <table className="w-full min-w-[760px]">
+            <thead className="bg-muted/60">
               <tr className="border-b border-border">
                 <th className="text-left py-4 px-4 font-black">Season</th>
                 <th className="text-left py-4 px-4 font-semibold">Record</th>
@@ -64,16 +64,16 @@ export function SeasonStatsTable({ rows }: { rows: SeasonRow[] }) {
                     </a>
                   </td>
                   <td className="py-4 px-4 font-semibold">
-                    {row.wins}-{row.losses}-{row.ties}
+                    {row.played ? `${row.wins}-${row.losses}-${row.ties}` : "Incomplete"}
                   </td>
-                  <td className="py-4 px-4 text-center font-semibold">{row.winPct.toFixed(1)}%</td>
+                  <td className="py-4 px-4 text-center font-semibold">{row.played ? `${row.winPct.toFixed(1)}%` : "-"}</td>
                   <td className="py-4 px-4 text-center text-sm">
-                    <span className="font-semibold">{row.gf}</span>
+                    <span className="font-semibold">{row.played ? row.gf : "-"}</span>
                     <span className="text-muted-foreground"> / </span>
-                    <span className="font-semibold">{row.ga}</span>
+                    <span className="font-semibold">{row.played ? row.ga : "-"}</span>
                   </td>
-                  <td className="py-4 px-4 text-sm">{row.coach || "—"}</td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground italic">{row.notes || "—"}</td>
+                  <td className="py-4 px-4 text-sm">{row.coach || "-"}</td>
+                  <td className="py-4 px-4 text-sm text-muted-foreground italic">{row.notes || "-"}</td>
                 </tr>
               ))}
             </tbody>

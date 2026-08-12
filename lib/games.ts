@@ -103,10 +103,7 @@ export async function gamesBySeason(year: number) {
 }
 
 export async function listSeasons(): Promise<number[]> {
-  const all = await loadGames();
-  return Array.from(new Set(all.map(g => g.season_year)))
-    .filter(Boolean)
-    .sort((a, b) => b - a);
+  return (await seasonRows()).map((row) => row.season_year);
 }
 
 export function opponentSlug(opponent: string): string {
@@ -118,13 +115,13 @@ export async function opponentRecords(): Promise<OpponentRecord[]> {
   const records = new Map<string, OpponentRecord>();
   for (const game of await loadGames()) {
     const opponent = game.opponent.trim();
-    if (!opponent) continue;
+    const result = (game.result || "").toUpperCase();
+    if (!opponent || !["W", "L", "T", "D"].includes(result)) continue;
     if (!records.has(opponent)) records.set(opponent, {
       opponent, slug: opponentSlug(opponent), played: 0, wins: 0, losses: 0, ties: 0, gf: 0, ga: 0,
     });
     const record = records.get(opponent)!;
     record.played += 1;
-    const result = (game.result || "").toUpperCase();
     if (result === "W") record.wins += 1;
     else if (result === "L") record.losses += 1;
     else if (result === "T" || result === "D") record.ties += 1;
@@ -146,23 +143,32 @@ export async function gamesByOpponentSlug(slug: string): Promise<{ opponent?: st
     seasonGameNumbers.set(game.season_year, gameNumber);
     return { ...game, gameNumber };
   });
-  return { opponent, games: indexed.filter((game) => game.opponent.trim() === opponent).sort((a, b) => b.date.localeCompare(a.date)) };
+  return {
+    opponent,
+    games: indexed
+      .filter((game) => game.opponent.trim() === opponent && ["W", "L", "T", "D"].includes((game.result || "").toUpperCase()))
+      .sort((a, b) => b.date.localeCompare(a.date)),
+  };
 }
 
 // Optional per-season notes (e.g. "Won Bay Conference"), keyed by season_year.
 // This file is supplementary -- if it's missing, notes are simply blank.
-async function loadSeasonNotes(): Promise<Record<number, string>> {
+async function loadSeasonMetadata(): Promise<Record<number, { coach?: string; notes?: string }>> {
   const csvText = await readDataFile('seasons.csv');
   if (!csvText) return {};
   const { cols, rows } = parseCSV(csvText);
   const ix = (k: string) => cols.indexOf(k);
   const yi = ix('season_year');
   const ni = ix('notes');
+  const ci = ix('coach');
   if (yi < 0) return {};
-  const map: Record<number, string> = {};
+  const map: Record<number, { coach?: string; notes?: string }> = {};
   for (const parts of rows) {
     const y = Number(parts[yi]);
-    if (Number.isFinite(y) && ni >= 0 && parts[ni]) map[y] = parts[ni];
+    if (Number.isFinite(y)) map[y] = {
+      coach: ci >= 0 && parts[ci] ? parts[ci] : undefined,
+      notes: ni >= 0 && parts[ni] ? parts[ni] : undefined,
+    };
   }
   return map;
 }
@@ -172,8 +178,18 @@ async function loadSeasonNotes(): Promise<Record<number, string>> {
 // hand-rolling its own CSV parse or hardcoding numbers that will drift the
 // next time a season gets added to games.csv.
 export async function seasonRows(): Promise<SeasonRow[]> {
-  const [games, notes] = await Promise.all([loadGames(), loadSeasonNotes()]);
+  const [games, metadata] = await Promise.all([loadGames(), loadSeasonMetadata()]);
   const acc = new Map<number, SeasonRow>();
+
+  for (const [yearText, season] of Object.entries(metadata)) {
+    const year = Number(yearText);
+    acc.set(year, {
+      season_year: year,
+      coach: season.coach,
+      played: 0, wins: 0, losses: 0, ties: 0, gf: 0, ga: 0, winPct: 0,
+      notes: season.notes,
+    });
+  }
 
   for (const g of games) {
     if (!acc.has(g.season_year)) {
@@ -181,17 +197,16 @@ export async function seasonRows(): Promise<SeasonRow[]> {
         season_year: g.season_year,
         coach: g.coach || undefined,
         played: 0, wins: 0, losses: 0, ties: 0, gf: 0, ga: 0, winPct: 0,
-        notes: notes[g.season_year],
+        notes: metadata[g.season_year]?.notes,
       });
     }
     const row = acc.get(g.season_year)!;
-    row.played += 1;
     if (!row.coach && g.coach) row.coach = g.coach;
 
     const r = (g.result || '').toUpperCase();
-    if (r === 'W') row.wins += 1;
-    else if (r === 'L') row.losses += 1;
-    else if (r === 'T' || r === 'D') row.ties += 1;
+    if (r === 'W') { row.wins += 1; row.played += 1; }
+    else if (r === 'L') { row.losses += 1; row.played += 1; }
+    else if (r === 'T' || r === 'D') { row.ties += 1; row.played += 1; }
 
     if (g.score && /^\s*\d+\s*-\s*\d+\s*$/.test(g.score)) {
       const [a, b] = g.score.split('-').map(s => Number(s.trim()));

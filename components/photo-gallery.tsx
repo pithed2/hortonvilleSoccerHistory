@@ -81,7 +81,7 @@ export function PhotoGallery() {
             Want to see more? Connect with our Google Photos album to browse thousands of images
           </p>
           <a
-            href="#contribute"
+            href="/#contribute"
             className="inline-block bg-accent text-accent-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Browse Full Album

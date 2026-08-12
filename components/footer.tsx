@@ -15,7 +15,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#timeline" className="text-background/80 hover:text-background transition">
+                <a href="/history" className="text-background/80 hover:text-background transition">
                   History
                 </a>
               </li>
@@ -25,12 +25,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="text-background/80 hover:text-background transition">
+                <a href="/photos" className="text-background/80 hover:text-background transition">
                   Photos
                 </a>
               </li>
               <li>
-                <a href="#coaches" className="text-background/80 hover:text-background transition">
+                <a href="/coaches" className="text-background/80 hover:text-background transition">
                   Coaches
                 </a>
               </li>
@@ -40,29 +40,29 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm">Resources</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-background/80 hover:text-background transition">
-                  Google Photos Album
-                </a>
+                <span className="text-background/60">Google Photos Album <span className="text-xs">(coming soon)</span></span>
               </li>
               <li>
-                <a href="#" className="text-background/80 hover:text-background transition">
-                  Google Drive Archive
-                </a>
+                <span className="text-background/60">Google Drive Archive <span className="text-xs">(coming soon)</span></span>
               </li>
               <li>
-                <a href="#" className="text-background/80 hover:text-background transition">
-                  Looker Studio Dashboard
-                </a>
+                <span className="text-background/60">Looker Studio Dashboard <span className="text-xs">(coming soon)</span></span>
               </li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-4 text-sm">Contact</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-background/80">Email: info@hortonvillesoccer.com</li>
-              <li className="text-background/80">Phone: (555) 123-4567</li>
               <li>
-                <a href="#contribute" className="text-background hover:text-background/80 transition font-semibold">
+                <a
+                  href="mailto:AndrewMMontalbano@gmail.com"
+                  className="text-background/80 hover:text-background transition"
+                >
+                  AndrewMMontalbano@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="/#contribute" className="text-background hover:text-background/80 transition font-semibold">
                   Contribute
                 </a>
               </li>
@@ -80,7 +80,7 @@ export function Footer() {
         </div>
         <div className="border-t border-background/20 pt-8">
           <p className="text-center text-sm text-background/70">
-            © 2026 Hortonville Soccer History. A living archive built by our community.
+            Copyright 2026 Hortonville Soccer History. A living archive built by our community.
           </p>
         </div>
       </div>

@@ -1,122 +1,85 @@
-import { Navigation } from "@/components/navigation"
+import { Award, CalendarDays, ClipboardCheck, Trophy } from "lucide-react"
 import { Footer } from "@/components/footer"
+import { Navigation } from "@/components/navigation"
 import { coachRecords } from "@/lib/games"
 
-// games.csv only records coach surnames ("Ruhle", "Montalbano", "Everett").
-// Full names and narrative highlights aren't derivable from the data, so
-// they're curated here rather than invented from the CSV. Add an entry when
-// a new coach's games start appearing in games.csv, or this coach falls
-// back to displaying their CSV surname with no extra highlights.
-const COACH_INFO: Record<string, { fullName: string; highlights: string[] }> = {
+type ExpandedRecord = { wins: number; losses: number; ties: number; label: string }
+type CoachInfo = { fullName: string; highlights: string[]; current?: boolean; expandedRecord?: ExpandedRecord }
+
+const COACH_INFO: Record<string, CoachInfo> = {
   Everett: {
     fullName: "Paul Everett",
+    current: true,
     highlights: ["Longest-tenured head coach in program history", "Pioneered the identity and standards of Hortonville soccer"],
+    expandedRecord: { wins: 179, losses: 109, ties: 41, label: "Including reported scrimmages" },
   },
   Montalbano: {
     fullName: "Andy Montalbano",
-    highlights: [
-      "2009: First season under the lights at Akin Field",
-      "Led the program through the transition to varsity legitimacy",
-    ],
+    highlights: ["2009: First season under the lights at Akin Field", "Led the program through the transition to varsity legitimacy"],
   },
-    Ruhle: {
+  Ruhle: {
     fullName: "Gary Ruhle",
     highlights: ["Program's first recorded varsity seasons", "Built the program from scratch"],
   },
-
 }
 
 export default async function CoachingRecordsPage() {
   const coachOrder = ["Everett", "Montalbano", "Ruhle"]
-  const records = (await coachRecords()).sort(
-    (a, b) => coachOrder.indexOf(a.name) - coachOrder.indexOf(b.name),
-  )
+  const records = (await coachRecords()).sort((a, b) => coachOrder.indexOf(a.name) - coachOrder.indexOf(b.name))
+  const totalSeasons = records.reduce((sum, coach) => sum + coach.seasons, 0)
 
-  return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
-
-      <div className="bg-primary text-primary-foreground py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-black mb-4">Coaching Records</h1>
-          <p className="text-lg opacity-90">Head coaching history and achievements</p>
-        </div>
+  return <main className="min-h-screen bg-background">
+    <Navigation />
+    <header className="relative overflow-hidden bg-primary py-16 text-primary-foreground md:py-20">
+      <div className="absolute -right-16 -top-24 h-80 w-80 rounded-full border-[48px] border-white/5" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-white/70">Program leadership</p>
+        <h1 className="text-4xl font-black tracking-tight md:text-6xl">Coaching Records</h1>
+        <p className="mt-4 max-w-2xl text-lg text-white/85">The head coaches who built, guided, and sustained Hortonville boys soccer.</p>
+        <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold"><span className="rounded-full bg-white/12 px-4 py-2">{records.length} head coaches</span><span className="rounded-full bg-white/12 px-4 py-2">{totalSeasons} documented seasons</span></div>
       </div>
+    </header>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="space-y-8">
-          {records.map((coach, idx) => {
-            const info = COACH_INFO[coach.name]
-            const displayName = info?.fullName ?? coach.name
-            const highlights = [...(info?.highlights ?? [])]
-            if (coach.bestSeason) {
-              highlights.unshift(
-                `${coach.bestSeason.season_year}: ${coach.bestSeason.wins}-${coach.bestSeason.losses}-${coach.bestSeason.ties} season (${coach.bestSeason.winPct.toFixed(1)}%)${coach.bestSeason.notes ? ` — ${coach.bestSeason.notes}` : ""}`,
-              )
-            }
+    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <aside className="mb-12 flex gap-4 rounded-2xl border border-primary/20 bg-primary/5 p-6">
+        <ClipboardCheck className="mt-0.5 h-6 w-6 shrink-0 text-primary" aria-hidden="true" />
+        <div><h2 className="font-black">How records are counted</h2><p className="mt-1 text-sm leading-relaxed text-muted-foreground">The main totals below are calculated from documented varsity games in the archive. When a broader coaching total includes reported scrimmages, it is shown separately so the historical game data and expanded total remain clearly distinguished.</p></div>
+      </aside>
 
-            return (
-              <div key={coach.name} className="bg-card border border-border rounded-lg overflow-hidden">
-                <div
-                  className={`${idx === 0 ? "bg-primary/10 border-b border-border" : "bg-muted/30 border-b border-border"} p-8`}
-                >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                    <div>
-                      <h2 className="text-3xl font-black text-primary mb-2">{displayName}</h2>
-                      <p className="text-lg font-semibold text-muted-foreground">
-                        {coach.tenureStart}-{coach.tenureEnd === new Date().getFullYear() ? "Present" : coach.tenureEnd}
-                      </p>
-                    </div>
-                    <div className="text-right mt-4 md:mt-0">
-                      <p className="text-sm font-semibold text-muted-foreground">Seasons</p>
-                      <p className="text-4xl font-black text-primary">{coach.seasons}</p>
-                    </div>
-                  </div>
+      <div className="relative space-y-8 before:absolute before:bottom-8 before:left-5 before:top-8 before:w-px before:bg-border md:before:left-8">
+        {records.map((coach) => {
+          const info = COACH_INFO[coach.name]
+          const displayName = info?.fullName ?? coach.name
+          const highlights = [...(info?.highlights ?? [])]
+          if (coach.bestSeason) highlights.unshift(`${coach.bestSeason.season_year}: ${coach.bestSeason.wins}-${coach.bestSeason.losses}-${coach.bestSeason.ties} season (${coach.bestSeason.winPct.toFixed(1)}%)${coach.bestSeason.notes ? ` - ${coach.bestSeason.notes}` : ""}`)
+          const expanded = info?.expandedRecord
+          const reportedScrimmages = expanded ? { wins: expanded.wins - coach.wins, losses: expanded.losses - coach.losses, ties: expanded.ties - coach.ties } : undefined
+          const expandedGames = expanded ? expanded.wins + expanded.losses + expanded.ties : 0
 
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div>
-                      <p className="text-sm font-semibold text-muted-foreground mb-1">Wins</p>
-                      <p className="text-3xl font-black text-green-600">{coach.wins}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-muted-foreground mb-1">Losses</p>
-                      <p className="text-3xl font-black text-red-600">{coach.losses}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-muted-foreground mb-1">Ties</p>
-                      <p className="text-3xl font-black text-blue-600">{coach.ties}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-muted-foreground mb-1">Win %</p>
-                      <p className="text-3xl font-black text-primary">{coach.winPct.toFixed(1)}%</p>
-                    </div>
-                  </div>
-                  {coach.name === "Everett" && (
-                    <p className="mt-6 border-t border-border pt-4 text-sm text-muted-foreground">
-                      Record shown: documented varsity matches. Scrimmage results are acknowledged separately and are not
-                      included in the W-L-T total because complete scrimmage records are unavailable.
-                    </p>
-                  )}
+          return <article key={coach.name} className="relative pl-12 md:pl-20">
+            <span className="absolute left-1.5 top-8 flex h-7 w-7 items-center justify-center rounded-full border-4 border-background bg-primary md:left-[18px] md:h-8 md:w-8"><span className="h-2 w-2 rounded-full bg-white" /></span>
+            <div className="overflow-hidden rounded-2xl border bg-card shadow-sm">
+              <div className="border-b bg-muted/25 p-6 md:p-8">
+                <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+                  <div><p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">{coach.tenureStart}-{info?.current ? "Present" : coach.tenureEnd}</p><h2 className="mt-2 text-3xl font-black md:text-4xl">{displayName}</h2></div>
+                  <div className="flex items-center gap-3 rounded-xl border bg-background px-4 py-3"><CalendarDays className="h-5 w-5 text-primary" /><div><p className="text-xs font-semibold uppercase text-muted-foreground">Seasons</p><p className="text-2xl font-black">{coach.seasons}</p></div></div>
                 </div>
 
-                <div className="p-8">
-                  <h3 className="font-black mb-4">Highlights & Achievements</h3>
-                  <ul className="space-y-2">
-                    {highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-foreground">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <div className="mt-7"><p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">Documented varsity record</p><div className="grid grid-cols-2 gap-3 md:grid-cols-5">
+                  {[['Wins', coach.wins, 'text-green-700'], ['Losses', coach.losses, 'text-red-700'], ['Ties', coach.ties, 'text-blue-700'], ['Games', coach.wins + coach.losses + coach.ties, 'text-foreground'], ['Win %', `${coach.winPct.toFixed(1)}%`, 'text-primary']].map(([label, value, color]) => <div key={String(label)} className="rounded-xl border bg-background p-4"><p className="text-xs font-semibold uppercase text-muted-foreground">{label}</p><p className={`mt-1 text-2xl font-black ${color}`}>{value}</p></div>)}
+                </div></div>
+
+                {expanded && reportedScrimmages ? <div className="mt-6 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+                  <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"><div><p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">{expanded.label}</p><p className="mt-1 text-3xl font-black">{expanded.wins}-{expanded.losses}-{expanded.ties}</p><p className="mt-2 text-sm text-muted-foreground">Expanded total: {expandedGames} contests, {((expanded.wins / expandedGames) * 100).toFixed(1)}% wins</p></div><div className="rounded-xl bg-background px-4 py-3 ring-1 ring-border"><p className="text-xs font-semibold uppercase text-muted-foreground">Reported scrimmage subtotal</p><p className="mt-1 text-xl font-black">{reportedScrimmages.wins}-{reportedScrimmages.losses}-{reportedScrimmages.ties}</p><p className="text-xs text-muted-foreground">22 contests not itemized in the game archive</p></div></div>
+                </div> : null}
               </div>
-            )
-          })}
-        </div>
-      </div>
 
-      <Footer />
-    </main>
-  )
+              <div className="p-6 md:p-8"><div className="mb-5 flex items-center gap-3"><Award className="h-5 w-5 text-primary" /><h3 className="text-lg font-black">Highlights & Achievements</h3></div><ul className="grid gap-3 md:grid-cols-2">{highlights.map((highlight) => <li key={highlight} className="flex items-start gap-3 rounded-xl bg-muted/40 p-4"><Trophy className="mt-0.5 h-4 w-4 shrink-0 text-primary" /><span className="text-sm font-semibold leading-relaxed">{highlight}</span></li>)}</ul></div>
+            </div>
+          </article>
+        })}
+      </div>
+    </div>
+    <Footer />
+  </main>
 }
