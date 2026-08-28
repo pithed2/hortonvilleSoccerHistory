@@ -24,11 +24,6 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/photos" className="text-background/80 hover:text-background transition">
-                  Photos
-                </a>
-              </li>
-              <li>
                 <a href="/coaches" className="text-background/80 hover:text-background transition">
                   Coaches
                 </a>
