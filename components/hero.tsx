@@ -36,10 +36,10 @@ export function Hero() {
               Explore Photos
             </a>
             <a
-              href="/history#kits"
+              href="/seasons/2026"
               className="border-2 border-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-colors"
             >
-              See Our Evolution
+              Follow the 2026 Season
             </a>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { Facebook, Instagram } from "lucide-react"
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -22,11 +24,6 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/history#kits" className="text-background/80 hover:text-background transition">
-                  Kit History
-                </a>
-              </li>
-              <li>
                 <a href="/photos" className="text-background/80 hover:text-background transition">
                   Photos
                 </a>
@@ -39,18 +36,16 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-sm">Resources</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <span className="text-background/60">Google Photos Album <span className="text-xs">(coming soon)</span></span>
-              </li>
-              <li>
-                <span className="text-background/60">Google Drive Archive <span className="text-xs">(coming soon)</span></span>
-              </li>
-              <li>
-                <span className="text-background/60">Looker Studio Dashboard <span className="text-xs">(coming soon)</span></span>
-              </li>
-            </ul>
+            <h4 className="font-semibold mb-4 text-sm">Follow the Team</h4>
+            <div className="flex gap-3">
+              <a href="https://www.instagram.com/hortonvillesoccer/" target="_blank" rel="noreferrer" aria-label="Hortonville Soccer on Instagram" className="flex h-11 w-11 items-center justify-center rounded-full bg-background/10 text-background transition hover:bg-background hover:text-foreground">
+                <Instagram className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61588501114059" target="_blank" rel="noreferrer" aria-label="Hortonville Soccer on Facebook" className="flex h-11 w-11 items-center justify-center rounded-full bg-background/10 text-background transition hover:bg-background hover:text-foreground">
+                <Facebook className="h-5 w-5" aria-hidden="true" />
+              </a>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-background/70">Current news, match-day updates, photos, and program announcements.</p>
           </div>
           <div>
             <h4 className="font-semibold mb-4 text-sm">Contact</h4>
@@ -71,12 +66,12 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-sm">Kit Archive</h4>
+            <h4 className="font-semibold mb-4 text-sm">Current Season</h4>
             <p className="text-sm text-background/80 leading-relaxed">
-              We are documenting nearly 20 Hortonville soccer kits, from early uniforms to the modern home, away, warmup, and cold-weather sets.
+              Follow the 2026 varsity team with the latest schedule, results, roster, and player statistics.
             </p>
-            <a href="/history#kits" className="inline-block mt-3 text-sm text-background hover:text-background/80 font-semibold">
-              View kit history
+            <a href="/seasons/2026" className="inline-block mt-3 text-sm text-background hover:text-background/80 font-semibold">
+              View the 2026 season
             </a>
           </div>
         </div>
