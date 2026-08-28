@@ -37,11 +37,11 @@ export function Timeline() {
       logoAlt: "Modern Bear Logo",
     },
     {
-      period: "2021-2025",
-      title: "FVA Success and a Living Archive",
+      period: "2021-2026",
+      title: "FVA Success and the Current Team",
       description:
-        "The boys program added regional championships in 2023 and 2025, won the 2025 Fox Valley Association championship, and reached as high as seventh in the WSCA Division 1 rankings.",
-      milestone: "2025 FVA champions",
+        "The boys program added regional championships in 2023 and 2025, won the 2025 Fox Valley Association championship, reached as high as seventh in the WSCA Division 1 rankings, and continues into the 2026 season.",
+      milestone: "2026 season underway",
       logo: "/logos/modern-bear-logo-white-fill.png",
       logoAlt: "Modern Bear Logo",
     },
