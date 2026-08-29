@@ -1,7 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Timeline } from "@/components/timeline"
 import { FoundingStory } from "@/components/founding-story"
-import { ContributeSection } from "@/components/contribute-section"
 import { Footer } from "@/components/footer"
 
 
@@ -11,7 +10,6 @@ export default function HistoryPage() {
       <Navigation />
       <Timeline />
       <FoundingStory />
-      <ContributeSection />
       <Footer />
     </main>
   )
