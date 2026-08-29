@@ -1,7 +1,7 @@
 import { createHash, timingSafeEqual } from "node:crypto"
 
 export const COACH_COOKIE = "hortonville-coach-access"
-const DEFAULT_PASSWORD_HASH = "c4a1934a051d3d37e3c5028187a88682aed0c419aac400097b64904590dd5460"
+const DEFAULT_PASSWORD_HASH = "4df2f3f868ffadba59a3df0549f4651c2f36b222061ba25cfa33ae6237fc503b"
 
 function passwordHash() {
   const configured = process.env.COACH_CORNER_PASSWORD
