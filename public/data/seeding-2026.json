@@ -1,7 +1,7 @@
 {
-  "source": "Seeding_Builder_v2026.xlsx",
+  "source": "StatsPlus team schedules; Hortonville maintained manually",
   "season": 2026,
-  "generatedAt": "2026-08-29T03:45:51.779Z",
+  "generatedAt": "2026-08-29T04:12:33.477Z",
   "teams": [
     {
       "Team": "Chippewa Falls",
@@ -71,59 +71,23 @@
   "schedule": [
     {
       "Date": "2026-08-25",
-      "Team": "Chippewa Falls",
-      "Opponent": "Superior",
-      "Location": "H",
-      "Result": "L",
-      "Score": "0-2"
-    },
-    {
-      "Date": "2026-08-25",
-      "Team": "Superior",
-      "Opponent": "Chippewa Falls",
-      "Location": "A",
-      "Result": "W",
-      "Score": "2-0"
-    },
-    {
-      "Date": "2026-08-25",
-      "Team": "Hortonville",
-      "Opponent": "West De Pere",
-      "Location": "H",
-      "Result": "W",
-      "Score": "3-1"
-    },
-    {
-      "Date": "2026-08-25",
-      "Team": "DC Everest",
-      "Opponent": "Oshkosh West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-08-25",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "Holmen",
-      "Location": "H",
-      "Result": "L",
-      "Score": "0-1"
-    },
-    {
-      "Date": "2026-08-25",
       "Team": "Appleton North",
-      "Opponent": "Notre Dame Academy",
+      "Opponent": "Notre Dame",
       "Location": "A",
-      "Result": "T",
-      "Score": "1-1"
+      "Result": "D",
+      "Score": "1-1",
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-08-25",
       "Team": "Appleton West",
       "Opponent": "Marshfield",
-      "Location": "A",
-      "Result": "T",
-      "Score": "2-2"
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-08-25",
@@ -131,39 +95,79 @@
       "Opponent": "Wisconsin Rapids",
       "Location": "H",
       "Result": "W",
-      "Score": "6-3"
+      "Score": "6-3",
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-08-25",
-      "Team": "Wisconsin Rapids",
-      "Opponent": "Bay Port",
+      "Team": "Chippewa Falls",
+      "Opponent": "Superior",
+      "Location": "H",
+      "Result": "L",
+      "Score": "0-2",
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-08-25",
+      "Team": "DC Everest",
+      "Opponent": "Oshkosh West",
+      "Location": "H",
+      "Result": "D",
+      "Score": "1-1",
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
+    },
+    {
+      "Date": "2026-08-25",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Holmen",
       "Location": "A",
       "Result": "L",
-      "Score": "3-6"
+      "Score": "0-1",
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-08-25",
       "Team": "Eau Claire North",
       "Opponent": "La Crosse Logan",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Location": "A",
+      "Result": "W",
+      "Score": "5-3",
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-08-25",
       "Team": "Green Bay Preble",
       "Opponent": "Kimberly",
+      "Location": "A",
+      "Result": "D",
+      "Score": "0-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-08-25",
+      "Team": "Hortonville",
+      "Opponent": "West De Pere",
       "Location": "H",
-      "Result": "T",
-      "Score": "0-0"
+      "Result": "W",
+      "Score": "3-1",
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-08-25",
       "Team": "Kimberly",
       "Opponent": "Green Bay Preble",
-      "Location": "A",
-      "Result": "T",
-      "Score": "0-0"
+      "Location": "H",
+      "Result": "D",
+      "Score": "0-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-08-25",
@@ -171,23 +175,79 @@
       "Opponent": "Fond du Lac",
       "Location": "A",
       "Result": "W",
-      "Score": "2-0"
+      "Score": "2-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
+    },
+    {
+      "Date": "2026-08-25",
+      "Team": "Superior",
+      "Opponent": "Chippewa Falls",
+      "Location": "A",
+      "Result": "W",
+      "Score": "2-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
+    },
+    {
+      "Date": "2026-08-25",
+      "Team": "Wisconsin Rapids",
+      "Opponent": "Bay Port",
+      "Location": "A",
+      "Result": "L",
+      "Score": "3-6",
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-08-26",
       "Team": "Wausau West",
       "Opponent": "Mosinee",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
+    },
+    {
+      "Date": "2026-08-27",
+      "Team": "Appleton North",
+      "Opponent": "Fox Valley Lutheran",
+      "Location": "A",
+      "Result": "L",
+      "Score": "2-3",
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
+    },
+    {
+      "Date": "2026-08-27",
+      "Team": "Bay Port",
+      "Opponent": "Neenah",
+      "Location": "A",
+      "Result": "L",
+      "Score": "2-3",
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-08-27",
       "Team": "Chippewa Falls",
       "Opponent": "La Crosse Logan",
       "Location": "A",
-      "Result": null,
-      "Score": null
+      "Result": "W",
+      "Score": "6-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-08-27",
+      "Team": "Green Bay Preble",
+      "Opponent": "Appleton East",
+      "Location": "A",
+      "Result": "W",
+      "Score": "1-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-08-27",
@@ -195,39 +255,19 @@
       "Opponent": "Marshfield",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-08-27",
-      "Team": "Appleton North",
-      "Opponent": "Fox Valley Lutheran",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-08-27",
-      "Team": "Bay Port",
-      "Opponent": "Neenah",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-08-27",
-      "Team": "Green Bay Preble",
-      "Opponent": "Appleton East",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-08-27",
       "Team": "SPASH",
       "Opponent": "Homestead",
       "Location": "H",
-      "Result": null,
-      "Score": null
+      "Result": "L",
+      "Score": "1-3",
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-08-27",
@@ -235,23 +275,29 @@
       "Opponent": "Oshkosh West",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-08-28",
       "Team": "Appleton West",
       "Opponent": "Bay Port",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Location": "A",
+      "Result": "L",
+      "Score": "0-6",
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-08-28",
       "Team": "Bay Port",
       "Opponent": "Appleton West",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Location": "H",
+      "Result": "W",
+      "Score": "6-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-08-28",
@@ -259,55 +305,89 @@
       "Opponent": "Madison Memorial",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-08-28",
-      "Team": "Green Bay Preble",
-      "Opponent": "Eau Claire Memorial",
-      "Location": "A",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Wausau West",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-08-28",
       "Team": "Eau Claire Memorial",
       "Opponent": "Green Bay Preble",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-08-28",
+      "Team": "Green Bay Preble",
+      "Opponent": "Eau Claire Memorial",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-08-28",
       "Team": "Hudson",
       "Opponent": "Middleton",
       "Location": "H",
-      "Result": null,
-      "Score": null
+      "Result": "D",
+      "Score": "0-0",
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-08-28",
-      "Team": "Kimberly",
-      "Opponent": "Arrowhead",
+      "Team": "Wausau West",
+      "Opponent": "Eau Claire Memorial",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-08-28",
       "Team": "Wausau West",
       "Opponent": "Sheboygan North",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
+    },
+    {
+      "Date": "2026-08-29",
+      "Team": "Appleton West",
+      "Opponent": "Xavier",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-08-29",
       "Team": "Chippewa Falls",
       "Opponent": "Altoona",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
     },
     {
       "Date": "2026-08-29",
@@ -315,15 +395,9 @@
       "Opponent": "Neenah",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-08-29",
-      "Team": "Appleton West",
-      "Opponent": "Xavier",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-08-29",
@@ -331,39 +405,59 @@
       "Opponent": "Madison La Follette",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-08-29",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Wausau West",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-08-29",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Sheboygan North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-08-29",
       "Team": "Eau Claire North",
       "Opponent": "Holmen",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-08-29",
       "Team": "Eau Claire North",
       "Opponent": "Sparta",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-08-29",
       "Team": "Green Bay Preble",
       "Opponent": "Wausau West",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-08-29",
-      "Team": "Wausau West",
-      "Opponent": "Green Bay Preble",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-08-29",
@@ -371,31 +465,49 @@
       "Opponent": "Verona",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-08-29",
-      "Team": "Superior",
-      "Opponent": "Holmen",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-08-29",
       "Team": "Superior",
       "Opponent": "Sparta",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
     },
     {
       "Date": "2026-08-29",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "Sheboygan North",
+      "Team": "Superior",
+      "Opponent": "Holmen",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
+    },
+    {
+      "Date": "2026-08-29",
+      "Team": "Wausau West",
+      "Opponent": "Eau Claire Memorial",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
+    },
+    {
+      "Date": "2026-08-29",
+      "Team": "Wausau West",
+      "Opponent": "Green Bay Preble",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-08-29",
@@ -403,7 +515,29 @@
       "Opponent": "Onalaska",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
+    },
+    {
+      "Date": "2026-09-01",
+      "Team": "Appleton North",
+      "Opponent": "Appleton West",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
+    },
+    {
+      "Date": "2026-09-01",
+      "Team": "Appleton West",
+      "Opponent": "Appleton North",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-09-01",
@@ -411,7 +545,19 @@
       "Opponent": "Eau Claire Memorial",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-09-01",
+      "Team": "DC Everest",
+      "Opponent": "SPASH",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-09-01",
@@ -419,7 +565,19 @@
       "Opponent": "Chippewa Falls",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-09-01",
+      "Team": "Eau Claire North",
+      "Opponent": "Hudson",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-01",
@@ -427,15 +585,29 @@
       "Opponent": "Neenah",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-09-01",
-      "Team": "DC Everest",
-      "Opponent": "SPASH",
+      "Team": "Hudson",
+      "Opponent": "Eau Claire North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
+    },
+    {
+      "Date": "2026-09-01",
+      "Team": "Kimberly",
+      "Opponent": "Oshkosh North",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-01",
@@ -443,95 +615,39 @@
       "Opponent": "DC Everest",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-01",
-      "Team": "Appleton North",
-      "Opponent": "Appleton West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-01",
-      "Team": "Appleton West",
-      "Opponent": "Appleton North",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-01",
-      "Team": "Eau Claire North",
-      "Opponent": "Hudson",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-01",
-      "Team": "Hudson",
-      "Opponent": "Eau Claire North",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-01",
-      "Team": "Kimberly",
-      "Opponent": "Oshkosh North",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-09-01",
       "Team": "Wausau West",
       "Opponent": "Wisconsin Rapids",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-01",
       "Team": "Wisconsin Rapids",
       "Opponent": "Wausau West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-01",
-      "Team": "Superior",
-      "Opponent": "Hibbing",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-03",
-      "Team": "Chippewa Falls",
-      "Opponent": "Wausau East",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-03",
-      "Team": "Hortonville",
-      "Opponent": "Oshkosh North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-09-03",
-      "Team": "DC Everest",
-      "Opponent": "Bay Port",
+      "Team": "Appleton North",
+      "Opponent": "Oshkosh West",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-09-03",
@@ -539,55 +655,79 @@
       "Opponent": "DC Everest",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-09-03",
-      "Team": "Appleton North",
-      "Opponent": "Oshkosh West",
+      "Team": "Chippewa Falls",
+      "Opponent": "Wausau East",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
     },
     {
       "Date": "2026-09-03",
-      "Team": "Appleton West",
-      "Opponent": "Neenah",
+      "Team": "DC Everest",
+      "Opponent": "Bay Port",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-09-03",
       "Team": "De Pere",
       "Opponent": "Wausau West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-03",
-      "Team": "Wausau West",
-      "Opponent": "De Pere",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-09-03",
       "Team": "Green Bay Preble",
       "Opponent": "Green Bay Southwest",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-09-03",
+      "Team": "Hortonville",
+      "Opponent": "Oshkosh North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
+    },
+    {
+      "Date": "2026-09-03",
+      "Team": "Hudson",
+      "Opponent": "Minneapolis Southwest (MN)",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-09-03",
       "Team": "Kimberly",
       "Opponent": "Appleton East",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-03",
@@ -595,15 +735,9 @@
       "Opponent": "Wisconsin Rapids",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-03",
-      "Team": "Wisconsin Rapids",
-      "Opponent": "SPASH",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-09-03",
@@ -611,39 +745,129 @@
       "Opponent": "River Falls",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
+    },
+    {
+      "Date": "2026-09-03",
+      "Team": "Wausau West",
+      "Opponent": "De Pere",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
+    },
+    {
+      "Date": "2026-09-03",
+      "Team": "Wisconsin Rapids",
+      "Opponent": "SPASH",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-09-04",
       "Team": "Eau Claire North",
       "Opponent": "Rice Lake",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-05",
       "Team": "Eau Claire North",
       "Opponent": "SPASH",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-05",
       "Team": "SPASH",
       "Opponent": "Eau Claire North",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
+    },
+    {
+      "Date": "2026-09-08",
+      "Team": "Appleton North",
+      "Opponent": "Kaukauna",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
+    },
+    {
+      "Date": "2026-09-08",
+      "Team": "Appleton West",
+      "Opponent": "Oshkosh West",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-09-08",
       "Team": "Chippewa Falls",
       "Opponent": "River Falls",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-09-08",
+      "Team": "DC Everest",
+      "Opponent": "Wausau West",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
+    },
+    {
+      "Date": "2026-09-08",
+      "Team": "De Pere",
+      "Opponent": "Green Bay Preble",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-09-08",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "New Richmond",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-09-08",
+      "Team": "Green Bay Preble",
+      "Opponent": "De Pere",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-09-08",
@@ -651,71 +875,19 @@
       "Opponent": "Appleton East",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-08",
-      "Team": "DC Everest",
-      "Opponent": "Wausau West",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-08",
-      "Team": "Wausau West",
-      "Opponent": "DC Everest",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-08",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "New Richmond",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-08",
-      "Team": "Appleton North",
-      "Opponent": "Kaukauna",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-08",
-      "Team": "Appleton West",
-      "Opponent": "Oshkosh West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-08",
-      "Team": "De Pere",
-      "Opponent": "Green Bay Preble",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-08",
-      "Team": "Green Bay Preble",
-      "Opponent": "De Pere",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-09-08",
       "Team": "Hudson",
       "Opponent": "Menomonie",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-09-08",
@@ -723,15 +895,29 @@
       "Opponent": "Fond du Lac",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-08",
       "Team": "Superior",
-      "Opponent": "Spooner",
+      "Opponent": "Spooner/Shell Lake",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
+    },
+    {
+      "Date": "2026-09-08",
+      "Team": "Wausau West",
+      "Opponent": "DC Everest",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-08",
@@ -739,47 +925,29 @@
       "Opponent": "Marshfield",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-09-10",
-      "Team": "Chippewa Falls",
-      "Opponent": "Marshfield",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-10",
-      "Team": "DC Everest",
-      "Opponent": "Superior",
+      "Team": "Appleton North",
+      "Opponent": "West De Pere",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-10",
-      "Team": "Superior",
-      "Opponent": "DC Everest",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-09-10",
       "Team": "Appleton West",
       "Opponent": "Green Bay Preble",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-10",
-      "Team": "Green Bay Preble",
-      "Opponent": "Appleton West",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-09-10",
@@ -787,7 +955,29 @@
       "Opponent": "De Pere",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
+    },
+    {
+      "Date": "2026-09-10",
+      "Team": "Chippewa Falls",
+      "Opponent": "Marshfield",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-09-10",
+      "Team": "DC Everest",
+      "Opponent": "Superior",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-09-10",
@@ -795,31 +985,29 @@
       "Opponent": "Bay Port",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-09-10",
       "Team": "Eau Claire North",
       "Opponent": "Wausau West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-10",
-      "Team": "Wausau West",
-      "Opponent": "Eau Claire North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-10",
-      "Team": "Eau Claire North",
-      "Opponent": "Rice Lake",
-      "Location": "H",
+      "Team": "Green Bay Preble",
+      "Opponent": "Appleton West",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-09-10",
@@ -827,87 +1015,69 @@
       "Opponent": "Wausau East",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
+    },
+    {
+      "Date": "2026-09-10",
+      "Team": "Superior",
+      "Opponent": "DC Everest",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
+    },
+    {
+      "Date": "2026-09-10",
+      "Team": "Wausau West",
+      "Opponent": "Eau Claire North",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-11",
       "Team": "Eau Claire Memorial",
       "Opponent": "Monona Grove",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-09-11",
       "Team": "Hudson",
       "Opponent": "Kimberly",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-09-11",
       "Team": "Kimberly",
       "Opponent": "Hudson",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-12",
-      "Team": "Chippewa Falls",
-      "Opponent": "Wisconsin Rapids",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-12",
-      "Team": "Wisconsin Rapids",
-      "Opponent": "Chippewa Falls",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-12",
-      "Team": "Hortonville",
-      "Opponent": "Bay Port",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-12",
-      "Team": "Bay Port",
-      "Opponent": "Hortonville",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-12",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "Waunakee",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-12",
       "Team": "Appleton North",
       "Opponent": "Green Bay Preble",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-12",
-      "Team": "Green Bay Preble",
-      "Opponent": "Appleton North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-09-12",
@@ -915,23 +1085,79 @@
       "Opponent": "Pulaski",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
+    },
+    {
+      "Date": "2026-09-12",
+      "Team": "Bay Port",
+      "Opponent": "Hortonville",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
+    },
+    {
+      "Date": "2026-09-12",
+      "Team": "Chippewa Falls",
+      "Opponent": "Wisconsin Rapids",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-09-12",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Waunakee",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-09-12",
+      "Team": "Green Bay Preble",
+      "Opponent": "Appleton North",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-09-12",
+      "Team": "Hortonville",
+      "Opponent": "Bay Port",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-09-12",
       "Team": "Hudson",
       "Opponent": "Cedarburg",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-09-12",
       "Team": "Kimberly",
       "Opponent": "Cedarburg",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-12",
@@ -939,7 +1165,9 @@
       "Opponent": "La Crosse Central",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-09-12",
@@ -947,7 +1175,9 @@
       "Opponent": "Wausau West",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
     },
     {
       "Date": "2026-09-12",
@@ -955,31 +1185,59 @@
       "Opponent": "Superior",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
+    },
+    {
+      "Date": "2026-09-12",
+      "Team": "Wisconsin Rapids",
+      "Opponent": "Chippewa Falls",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
+    },
+    {
+      "Date": "2026-09-15",
+      "Team": "Appleton North",
+      "Opponent": "Kimberly",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
+    },
+    {
+      "Date": "2026-09-15",
+      "Team": "Appleton West",
+      "Opponent": "Kaukauna",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
+    },
+    {
+      "Date": "2026-09-15",
+      "Team": "Bay Port",
+      "Opponent": "West De Pere",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-09-15",
       "Team": "Chippewa Falls",
       "Opponent": "Hudson",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Hudson",
-      "Opponent": "Chippewa Falls",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Hortonville",
-      "Opponent": "Fond du Lac",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
     },
     {
       "Date": "2026-09-15",
@@ -987,47 +1245,9 @@
       "Opponent": "Marshfield",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "River Falls",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Appleton North",
-      "Opponent": "Kimberly",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Kimberly",
-      "Opponent": "Appleton North",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Appleton West",
-      "Opponent": "Kaukauna",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Bay Port",
-      "Opponent": "West De Pere",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-09-15",
@@ -1035,7 +1255,19 @@
       "Opponent": "Sheboygan North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-09-15",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "River Falls",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-09-15",
@@ -1043,7 +1275,9 @@
       "Opponent": "New Richmond",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-15",
@@ -1051,7 +1285,39 @@
       "Opponent": "Pulaski",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-09-15",
+      "Team": "Hortonville",
+      "Opponent": "Fond du Lac",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
+    },
+    {
+      "Date": "2026-09-15",
+      "Team": "Hudson",
+      "Opponent": "Chippewa Falls",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
+    },
+    {
+      "Date": "2026-09-15",
+      "Team": "Kimberly",
+      "Opponent": "Appleton North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-15",
@@ -1059,7 +1325,9 @@
       "Opponent": "Wausau West",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-09-15",
@@ -1067,79 +1335,89 @@
       "Opponent": "SPASH",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-15",
-      "Team": "Superior",
-      "Opponent": "Washburn",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-15",
       "Team": "Wisconsin Rapids",
       "Opponent": "Wausau East",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-17",
-      "Team": "Chippewa Falls",
-      "Opponent": "Baldwin-Woodville",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-09-17",
       "Team": "Appleton North",
       "Opponent": "Oshkosh North",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-09-17",
       "Team": "Bay Port",
       "Opponent": "Wausau West",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-09-17",
-      "Team": "Wausau West",
-      "Opponent": "Bay Port",
+      "Team": "Chippewa Falls",
+      "Opponent": "Baldwin-Woodville",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-09-17",
+      "Team": "DC Everest",
+      "Opponent": "De Pere",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
+    },
+    {
+      "Date": "2026-09-17",
+      "Team": "De Pere",
+      "Opponent": "DC Everest",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-09-17",
       "Team": "Eau Claire North",
       "Opponent": "Menomonie",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-17",
-      "Team": "SPASH",
-      "Opponent": "Appleton East",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-17",
       "Team": "Green Bay Preble",
       "Opponent": "Hortonville",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-09-17",
@@ -1147,7 +1425,9 @@
       "Opponent": "Green Bay Preble",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-09-17",
@@ -1155,39 +1435,49 @@
       "Opponent": "Oshkosh West",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
+    },
+    {
+      "Date": "2026-09-17",
+      "Team": "SPASH",
+      "Opponent": "Appleton East",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
+    },
+    {
+      "Date": "2026-09-17",
+      "Team": "Wausau West",
+      "Opponent": "Bay Port",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-18",
       "Team": "Superior",
-      "Opponent": "Mesabi East",
+      "Opponent": "Mesabi East (MN)",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-19",
-      "Team": "Chippewa Falls",
-      "Opponent": "Wausau West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-19",
-      "Team": "Wausau West",
-      "Opponent": "Chippewa Falls",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
     },
     {
       "Date": "2026-09-19",
       "Team": "Appleton North",
       "Opponent": "Seymour",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-09-19",
@@ -1195,39 +1485,19 @@
       "Opponent": "Kimberly",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-09-19",
-      "Team": "Kimberly",
-      "Opponent": "Bay Port",
-      "Location": "H",
+      "Team": "Chippewa Falls",
+      "Opponent": "Wausau West",
+      "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-19",
-      "Team": "Hudson",
-      "Opponent": "Hill-Murray",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-19",
-      "Team": "Superior",
-      "Opponent": "Hermantown",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-19",
-      "Team": "Green Bay Preble",
-      "Opponent": "DC Everest",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
     },
     {
       "Date": "2026-09-19",
@@ -1235,7 +1505,59 @@
       "Opponent": "Green Bay Preble",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
+    },
+    {
+      "Date": "2026-09-19",
+      "Team": "De Pere",
+      "Opponent": "Hortonville",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-09-19",
+      "Team": "Green Bay Preble",
+      "Opponent": "DC Everest",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-09-19",
+      "Team": "Hudson",
+      "Opponent": "Hill-Murray (MN)",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
+    },
+    {
+      "Date": "2026-09-19",
+      "Team": "Kimberly",
+      "Opponent": "Bay Port",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
+    },
+    {
+      "Date": "2026-09-19",
+      "Team": "Wausau West",
+      "Opponent": "Chippewa Falls",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-19",
@@ -1243,79 +1565,39 @@
       "Opponent": "Neenah",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
-      "Date": "2026-09-22",
+      "Date": "2026-09-21",
       "Team": "Chippewa Falls",
       "Opponent": "Rice Lake",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-22",
-      "Team": "Hortonville",
-      "Opponent": "Appleton North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
     },
     {
       "Date": "2026-09-22",
       "Team": "Appleton North",
       "Opponent": "Hortonville",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-22",
-      "Team": "DC Everest",
-      "Opponent": "Wisconsin Rapids",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-22",
-      "Team": "Wisconsin Rapids",
-      "Opponent": "DC Everest",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-22",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "Hudson",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-22",
-      "Team": "Hudson",
-      "Opponent": "Eau Claire Memorial",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-09-22",
       "Team": "Appleton West",
       "Opponent": "Kimberly",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-22",
-      "Team": "Kimberly",
-      "Opponent": "Appleton West",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-09-22",
@@ -1323,7 +1605,19 @@
       "Opponent": "Pulaski",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
+    },
+    {
+      "Date": "2026-09-22",
+      "Team": "DC Everest",
+      "Opponent": "Wisconsin Rapids",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-09-22",
@@ -1331,15 +1625,29 @@
       "Opponent": "Manitowoc Lincoln",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-09-22",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Hudson",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-09-22",
       "Team": "Eau Claire North",
       "Opponent": "Menomonie",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-22",
@@ -1347,7 +1655,39 @@
       "Opponent": "Ashwaubenon",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-09-22",
+      "Team": "Hortonville",
+      "Opponent": "Appleton North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
+    },
+    {
+      "Date": "2026-09-22",
+      "Team": "Hudson",
+      "Opponent": "Eau Claire Memorial",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
+    },
+    {
+      "Date": "2026-09-22",
+      "Team": "Kimberly",
+      "Opponent": "Appleton West",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-22",
@@ -1355,47 +1695,39 @@
       "Opponent": "Marshfield",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-22",
-      "Team": "Superior",
-      "Opponent": "Cloquet",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-09-22",
       "Team": "Wausau West",
       "Opponent": "Wausau East",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
-      "Date": "2026-09-24",
-      "Team": "Hortonville",
-      "Opponent": "Appleton West",
-      "Location": "H",
+      "Date": "2026-09-22",
+      "Team": "Wisconsin Rapids",
+      "Opponent": "DC Everest",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-09-24",
       "Team": "Appleton West",
       "Opponent": "Hortonville",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-24",
-      "Team": "DC Everest",
-      "Opponent": "Wausau East",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-09-24",
@@ -1403,39 +1735,59 @@
       "Opponent": "Green Bay Southwest",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
+    },
+    {
+      "Date": "2026-09-24",
+      "Team": "DC Everest",
+      "Opponent": "Wausau East",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-09-24",
       "Team": "De Pere",
       "Opponent": "West De Pere",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-09-24",
       "Team": "Green Bay Preble",
-      "Opponent": "Notre Dame Academy",
+      "Opponent": "Notre Dame",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-09-24",
+      "Team": "Hortonville",
+      "Opponent": "Appleton West",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-09-24",
       "Team": "Wausau West",
       "Opponent": "Marshfield",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-25",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "DC Everest",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-25",
@@ -1443,15 +1795,29 @@
       "Opponent": "Eau Claire Memorial",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
+    },
+    {
+      "Date": "2026-09-25",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "DC Everest",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-09-25",
       "Team": "Eau Claire North",
       "Opponent": "Marshfield",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-09-25",
@@ -1459,7 +1825,9 @@
       "Opponent": "SPASH",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-09-25",
@@ -1467,39 +1835,9 @@
       "Opponent": "Hudson",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-26",
-      "Team": "DC Everest",
-      "Opponent": "Hudson",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-26",
-      "Team": "Hudson",
-      "Opponent": "DC Everest",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-26",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "SPASH",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-26",
-      "Team": "SPASH",
-      "Opponent": "Eau Claire Memorial",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-09-26",
@@ -1507,31 +1845,149 @@
       "Opponent": "Wauwatosa East",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-09-26",
-      "Team": "De Pere",
-      "Opponent": "Arrowhead",
+      "Team": "DC Everest",
+      "Opponent": "Hudson",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
+    },
+    {
+      "Date": "2026-09-26",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "SPASH",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-09-26",
       "Team": "Eau Claire North",
       "Opponent": "Altoona",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
+    },
+    {
+      "Date": "2026-09-26",
+      "Team": "Hudson",
+      "Opponent": "DC Everest",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
+    },
+    {
+      "Date": "2026-09-26",
+      "Team": "SPASH",
+      "Opponent": "Eau Claire Memorial",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "Appleton North",
+      "Opponent": "Appleton East",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "Appleton West",
+      "Opponent": "Oshkosh North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "Bay Port",
+      "Opponent": "Ashwaubenon",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-09-29",
       "Team": "Chippewa Falls",
       "Opponent": "Menomonie",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "DC Everest",
+      "Opponent": "SPASH",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "De Pere",
+      "Opponent": "Notre Dame",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Eau Claire North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "Eau Claire North",
+      "Opponent": "Eau Claire Memorial",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
+    },
+    {
+      "Date": "2026-09-29",
+      "Team": "Green Bay Preble",
+      "Opponent": "Sheboygan North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-09-29",
@@ -1539,87 +1995,19 @@
       "Opponent": "Oshkosh West",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "DC Everest",
-      "Opponent": "SPASH",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "SPASH",
-      "Opponent": "DC Everest",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "Eau Claire North",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "Eau Claire North",
-      "Opponent": "Eau Claire Memorial",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "Appleton North",
-      "Opponent": "Appleton East",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "Appleton West",
-      "Opponent": "Oshkosh North",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "Bay Port",
-      "Opponent": "Ashwaubenon",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "De Pere",
-      "Opponent": "Notre Dame Academy",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-09-29",
-      "Team": "Green Bay Preble",
-      "Opponent": "Sheboygan North",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-09-29",
       "Team": "Hudson",
       "Opponent": "New Richmond",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-09-29",
@@ -1627,95 +2015,79 @@
       "Opponent": "Kaukauna",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-09-29",
-      "Team": "Superior",
-      "Opponent": "Grand Rapids",
+      "Team": "SPASH",
+      "Opponent": "DC Everest",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-09-29",
       "Team": "Wausau West",
       "Opponent": "Wisconsin Rapids",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-09-29",
       "Team": "Wisconsin Rapids",
       "Opponent": "Wausau West",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-01",
-      "Team": "Hortonville",
-      "Opponent": "Kimberly",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-01",
-      "Team": "Kimberly",
-      "Opponent": "Hortonville",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-01",
-      "Team": "DC Everest",
-      "Opponent": "Wausau West",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-01",
-      "Team": "Wausau West",
-      "Opponent": "DC Everest",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-10-01",
       "Team": "Appleton North",
       "Opponent": "Neenah",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-10-01",
       "Team": "Appleton West",
       "Opponent": "Fond du Lac",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-10-01",
       "Team": "Bay Port",
       "Opponent": "Green Bay Preble",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-10-01",
-      "Team": "Green Bay Preble",
-      "Opponent": "Bay Port",
+      "Team": "DC Everest",
+      "Opponent": "Wausau West",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-10-01",
@@ -1723,7 +2095,39 @@
       "Opponent": "Pulaski",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-10-01",
+      "Team": "Green Bay Preble",
+      "Opponent": "Bay Port",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-10-01",
+      "Team": "Hortonville",
+      "Opponent": "Kimberly",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
+    },
+    {
+      "Date": "2026-10-01",
+      "Team": "Kimberly",
+      "Opponent": "Hortonville",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-10-01",
@@ -1731,15 +2135,19 @@
       "Opponent": "Wausau East",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-10-01",
-      "Team": "Superior",
-      "Opponent": "Marshall",
+      "Team": "Wausau West",
+      "Opponent": "DC Everest",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-10-01",
@@ -1747,39 +2155,49 @@
       "Opponent": "Marshfield",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
+    },
+    {
+      "Date": "2026-10-02",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "DeForest Area",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-10-02",
       "Team": "Hudson",
       "Opponent": "Oregon",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-10-03",
       "Team": "Eau Claire Memorial",
       "Opponent": "Oregon",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-10-03",
       "Team": "Eau Claire North",
       "Opponent": "Wisconsin Rapids",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-03",
-      "Team": "Wisconsin Rapids",
-      "Opponent": "Eau Claire North",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-10-03",
@@ -1787,95 +2205,79 @@
       "Opponent": "Superior",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-10-03",
-      "Team": "Superior",
-      "Opponent": "Eau Claire North",
-      "Location": "A",
+      "Team": "Hudson",
+      "Opponent": "DeForest Area",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-10-03",
       "Team": "Superior",
       "Opponent": "Wisconsin Rapids",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
+    },
+    {
+      "Date": "2026-10-03",
+      "Team": "Superior",
+      "Opponent": "Eau Claire North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
+    },
+    {
+      "Date": "2026-10-03",
+      "Team": "Wisconsin Rapids",
+      "Opponent": "Eau Claire North",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-10-03",
       "Team": "Wisconsin Rapids",
       "Opponent": "Superior",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-05",
-      "Team": "Superior",
-      "Opponent": "Proctor",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-06",
-      "Team": "Chippewa Falls",
-      "Opponent": "Eau Claire North",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-06",
-      "Team": "Eau Claire North",
-      "Opponent": "Chippewa Falls",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-06",
-      "Team": "Hortonville",
-      "Opponent": "Kaukauna",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-06",
-      "Team": "DC Everest",
-      "Opponent": "Marshfield",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-06",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "Rice Lake",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-10-06",
       "Team": "Appleton North",
       "Opponent": "Fond du Lac",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-10-06",
       "Team": "Appleton West",
       "Opponent": "Appleton East",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-10-06",
@@ -1883,7 +2285,29 @@
       "Opponent": "Sheboygan North",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
+    },
+    {
+      "Date": "2026-10-06",
+      "Team": "Chippewa Falls",
+      "Opponent": "Eau Claire North",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-10-06",
+      "Team": "DC Everest",
+      "Opponent": "Marshfield",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-10-06",
@@ -1891,23 +2315,59 @@
       "Opponent": "Green Bay Southwest",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-10-06",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Rice Lake",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-10-06",
+      "Team": "Eau Claire North",
+      "Opponent": "Chippewa Falls",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-10-06",
       "Team": "Green Bay Preble",
       "Opponent": "Manitowoc Lincoln",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-10-06",
+      "Team": "Hortonville",
+      "Opponent": "Kaukauna",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-10-06",
       "Team": "Hudson",
       "Opponent": "River Falls",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-10-06",
@@ -1915,23 +2375,39 @@
       "Opponent": "Neenah",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-06",
-      "Team": "Superior",
-      "Opponent": "Denfeld",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-10-06",
       "Team": "Wisconsin Rapids",
       "Opponent": "Wausau East",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
+    },
+    {
+      "Date": "2026-10-08",
+      "Team": "Appleton West",
+      "Opponent": "Neenah",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
+    },
+    {
+      "Date": "2026-10-08",
+      "Team": "Bay Port",
+      "Opponent": "Notre Dame",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-10-08",
@@ -1939,31 +2415,9 @@
       "Opponent": "Wisconsin Rapids",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-08",
-      "Team": "Wisconsin Rapids",
-      "Opponent": "DC Everest",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-08",
-      "Team": "Appleton West",
-      "Opponent": "Neenah",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-08",
-      "Team": "Bay Port",
-      "Opponent": "Notre Dame Academy",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-10-08",
@@ -1971,23 +2425,29 @@
       "Opponent": "Ashwaubenon",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-10-08",
       "Team": "Green Bay Preble",
       "Opponent": "West De Pere",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-10-08",
       "Team": "Hudson",
       "Opponent": "New Richmond",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-10-08",
@@ -1995,7 +2455,9 @@
       "Opponent": "Marshfield",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-10-08",
@@ -2003,55 +2465,89 @@
       "Opponent": "Hayward",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
     },
     {
       "Date": "2026-10-08",
       "Team": "Wausau West",
       "Opponent": "Wausau East",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
+    },
+    {
+      "Date": "2026-10-08",
+      "Team": "Wisconsin Rapids",
+      "Opponent": "DC Everest",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-10-09",
       "Team": "Appleton North",
       "Opponent": "De Pere",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
+    },
+    {
+      "Date": "2026-10-09",
+      "Team": "Bay Port",
+      "Opponent": "Sheboygan Christian/Lutheran",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-10-09",
       "Team": "De Pere",
       "Opponent": "Appleton North",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-10-09",
       "Team": "Eau Claire North",
       "Opponent": "Arcadia",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-10-09",
       "Team": "Kimberly",
       "Opponent": "Beloit Memorial",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50343/",
+      "SourceTeam": "Kimberly"
     },
     {
       "Date": "2026-10-10",
-      "Team": "Hortonville",
-      "Opponent": "DC Everest",
+      "Team": "Appleton North",
+      "Opponent": "Wausau West",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-10-10",
@@ -2059,23 +2555,9 @@
       "Opponent": "Hortonville",
       "Location": "A",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-10",
-      "Team": "Appleton North",
-      "Opponent": "Wausau West",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-10",
-      "Team": "Wausau West",
-      "Opponent": "Appleton North",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-10-10",
@@ -2083,15 +2565,39 @@
       "Opponent": "Kenosha Tremper",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-10-10",
       "Team": "Green Bay Preble",
       "Opponent": "Sturgeon Bay",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
+    },
+    {
+      "Date": "2026-10-10",
+      "Team": "Hortonville",
+      "Opponent": "DC Everest",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
+    },
+    {
+      "Date": "2026-10-10",
+      "Team": "Wausau West",
+      "Opponent": "Appleton North",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-10-10",
@@ -2099,47 +2605,19 @@
       "Opponent": "Oshkosh North",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-13",
-      "Team": "Chippewa Falls",
-      "Opponent": "New Richmond",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-13",
-      "Team": "Hortonville",
-      "Opponent": "Notre Dame Academy",
-      "Location": "A",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-13",
-      "Team": "DC Everest",
-      "Opponent": "Wausau East",
-      "Location": "H",
-      "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-13",
-      "Team": "Eau Claire Memorial",
-      "Opponent": "Menomonie",
-      "Location": "A",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-10-13",
       "Team": "Appleton West",
-      "Opponent": "Gibraltar",
+      "Opponent": "Gibraltar/Sevastopol",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-10-13",
@@ -2147,39 +2625,79 @@
       "Opponent": "Sun Prairie East",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-10-13",
-      "Team": "Bay Port",
-      "Opponent": "Sun Prairie",
+      "Team": "Chippewa Falls",
+      "Opponent": "New Richmond",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-10-13",
+      "Team": "DC Everest",
+      "Opponent": "Wausau East",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50324/",
+      "SourceTeam": "D.C. Everest"
     },
     {
       "Date": "2026-10-13",
       "Team": "De Pere",
       "Opponent": "Appleton East",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
+    },
+    {
+      "Date": "2026-10-13",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Menomonie",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
     },
     {
       "Date": "2026-10-13",
       "Team": "Eau Claire North",
       "Opponent": "River Falls",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
+    },
+    {
+      "Date": "2026-10-13",
+      "Team": "Hortonville",
+      "Opponent": "Notre Dame Academy",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "Manual entry",
+      "SourceTeam": "Hortonville"
     },
     {
       "Date": "2026-10-13",
       "Team": "Hudson",
       "Opponent": "Rice Lake",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     },
     {
       "Date": "2026-10-13",
@@ -2187,7 +2705,19 @@
       "Opponent": "Wisconsin Rapids",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
+    },
+    {
+      "Date": "2026-10-13",
+      "Team": "Wausau West",
+      "Opponent": "Marshfield",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-10-13",
@@ -2195,31 +2725,29 @@
       "Opponent": "SPASH",
       "Location": "H",
       "Result": null,
-      "Score": null
-    },
-    {
-      "Date": "2026-10-13",
-      "Team": "Wausau West",
-      "Opponent": "Marshfield",
-      "Location": "H",
-      "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50377/",
+      "SourceTeam": "Wisconsin Rapids"
     },
     {
       "Date": "2026-10-15",
       "Team": "Appleton North",
       "Opponent": "Hartford",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50315/",
+      "SourceTeam": "Appleton North"
     },
     {
       "Date": "2026-10-15",
       "Team": "Appleton West",
       "Opponent": "Fox Valley Lutheran",
-      "Location": "H",
+      "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50316/",
+      "SourceTeam": "Appleton West"
     },
     {
       "Date": "2026-10-15",
@@ -2227,31 +2755,39 @@
       "Opponent": "Manitowoc Lincoln",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50319/",
+      "SourceTeam": "Bay Port"
     },
     {
       "Date": "2026-10-15",
       "Team": "De Pere",
       "Opponent": "Kohler",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50325/",
+      "SourceTeam": "De Pere"
     },
     {
       "Date": "2026-10-15",
       "Team": "Eau Claire North",
       "Opponent": "Medford",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
     },
     {
       "Date": "2026-10-15",
       "Team": "Green Bay Preble",
       "Opponent": "Green Bay East",
-      "Location": "A",
+      "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50332/",
+      "SourceTeam": "Green Bay Preble"
     },
     {
       "Date": "2026-10-15",
@@ -2259,7 +2795,9 @@
       "Opponent": "Wausau West",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50367/",
+      "SourceTeam": "Stevens Point"
     },
     {
       "Date": "2026-10-15",
@@ -2267,7 +2805,9 @@
       "Opponent": "SPASH",
       "Location": "A",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50374/",
+      "SourceTeam": "Wausau West"
     },
     {
       "Date": "2026-10-16",
@@ -2275,39 +2815,41 @@
       "Opponent": "New Richmond",
       "Location": "H",
       "Result": null,
-      "Score": null
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50370/",
+      "SourceTeam": "Superior"
     }
   ],
   "overall": [
     {
       "Team": "Chippewa Falls",
       "GS": 15,
-      "GP": 1,
-      "W": 0,
+      "GP": 2,
+      "W": 1,
       "L": 1,
       "T": 0,
-      "GF": 0,
+      "GF": 6,
       "GA": 2,
-      "GD": -2,
-      "Points": 0,
+      "GD": 4,
+      "Points": 3,
       "Group": "Group A"
     },
     {
       "Team": "DC Everest",
-      "GS": 18,
-      "GP": 0,
+      "GS": 19,
+      "GP": 1,
       "W": 0,
       "L": 0,
-      "T": 0,
-      "GF": 0,
-      "GA": 0,
+      "T": 1,
+      "GF": 1,
+      "GA": 1,
       "GD": 0,
-      "Points": 0,
+      "Points": 1,
       "Group": "Group A"
     },
     {
       "Team": "Eau Claire Memorial",
-      "GS": 15,
+      "GS": 18,
       "GP": 1,
       "W": 0,
       "L": 1,
@@ -2320,33 +2862,33 @@
     },
     {
       "Team": "Eau Claire North",
-      "GS": 20,
-      "GP": 0,
-      "W": 0,
+      "GS": 19,
+      "GP": 1,
+      "W": 1,
       "L": 0,
       "T": 0,
-      "GF": 0,
-      "GA": 0,
-      "GD": 0,
-      "Points": 0,
+      "GF": 5,
+      "GA": 3,
+      "GD": 2,
+      "Points": 3,
       "Group": "Group A"
     },
     {
       "Team": "Hudson",
-      "GS": 16,
-      "GP": 0,
+      "GS": 18,
+      "GP": 1,
       "W": 0,
       "L": 0,
-      "T": 0,
+      "T": 1,
       "GF": 0,
       "GA": 0,
       "GD": 0,
-      "Points": 0,
+      "Points": 1,
       "Group": "Group A"
     },
     {
       "Team": "Superior",
-      "GS": 20,
+      "GS": 12,
       "GP": 1,
       "W": 1,
       "L": 0,
@@ -2359,7 +2901,7 @@
     },
     {
       "Team": "Wausau West",
-      "GS": 19,
+      "GS": 21,
       "GP": 0,
       "W": 0,
       "L": 0,
@@ -2372,7 +2914,7 @@
     },
     {
       "Team": "Wisconsin Rapids",
-      "GS": 17,
+      "GS": 18,
       "GP": 1,
       "W": 0,
       "L": 1,
@@ -2385,46 +2927,46 @@
     },
     {
       "Team": "Appleton North",
-      "GS": 16,
-      "GP": 1,
+      "GS": 17,
+      "GP": 2,
       "W": 0,
-      "L": 0,
+      "L": 1,
       "T": 1,
-      "GF": 1,
-      "GA": 1,
-      "GD": 0,
+      "GF": 3,
+      "GA": 4,
+      "GD": -1,
       "Points": 1,
       "Group": "Group B"
     },
     {
       "Team": "Appleton West",
-      "GS": 17,
+      "GS": 16,
       "GP": 1,
       "W": 0,
-      "L": 0,
-      "T": 1,
-      "GF": 2,
-      "GA": 2,
-      "GD": 0,
-      "Points": 1,
+      "L": 1,
+      "T": 0,
+      "GF": 0,
+      "GA": 6,
+      "GD": -6,
+      "Points": 0,
       "Group": "Group B"
     },
     {
       "Team": "Bay Port",
       "GS": 19,
-      "GP": 1,
-      "W": 1,
-      "L": 0,
+      "GP": 3,
+      "W": 2,
+      "L": 1,
       "T": 0,
-      "GF": 6,
-      "GA": 3,
-      "GD": 3,
-      "Points": 3,
+      "GF": 14,
+      "GA": 6,
+      "GD": 8,
+      "Points": 6,
       "Group": "Group B"
     },
     {
       "Team": "De Pere",
-      "GS": 17,
+      "GS": 18,
       "GP": 0,
       "W": 0,
       "L": 0,
@@ -2438,14 +2980,14 @@
     {
       "Team": "Green Bay Preble",
       "GS": 19,
-      "GP": 1,
-      "W": 0,
+      "GP": 2,
+      "W": 1,
       "L": 0,
       "T": 1,
-      "GF": 0,
+      "GF": 1,
       "GA": 0,
-      "GD": 0,
-      "Points": 1,
+      "GD": 1,
+      "Points": 4,
       "Group": "Group B"
     },
     {
@@ -2463,7 +3005,7 @@
     },
     {
       "Team": "Kimberly",
-      "GS": 15,
+      "GS": 14,
       "GP": 1,
       "W": 0,
       "L": 0,
@@ -2477,13 +3019,13 @@
     {
       "Team": "SPASH",
       "GS": 17,
-      "GP": 1,
+      "GP": 2,
       "W": 1,
-      "L": 0,
+      "L": 1,
       "T": 0,
-      "GF": 2,
-      "GA": 0,
-      "GD": 2,
+      "GF": 3,
+      "GA": 3,
+      "GD": 0,
       "Points": 3,
       "Group": "Group B"
     }
@@ -2500,31 +3042,40 @@
         "Composite": 38
       },
       {
-        "Team": "DC Everest",
+        "Team": "Chippewa Falls",
         "Group": "Group A",
         "GroupPoints": 0,
-        "OverallPoints": 0,
-        "GD": 0,
+        "OverallPoints": 3,
+        "GD": 4,
         "Seed": 2,
-        "Composite": 0
+        "Composite": 10
       },
       {
         "Team": "Eau Claire North",
         "Group": "Group A",
         "GroupPoints": 0,
-        "OverallPoints": 0,
+        "OverallPoints": 3,
+        "GD": 2,
+        "Seed": 3,
+        "Composite": 8
+      },
+      {
+        "Team": "DC Everest",
+        "Group": "Group A",
+        "GroupPoints": 0,
+        "OverallPoints": 1,
         "GD": 0,
-        "Seed": 2,
-        "Composite": 0
+        "Seed": 4,
+        "Composite": 2
       },
       {
         "Team": "Hudson",
         "Group": "Group A",
         "GroupPoints": 0,
-        "OverallPoints": 0,
+        "OverallPoints": 1,
         "GD": 0,
-        "Seed": 2,
-        "Composite": 0
+        "Seed": 4,
+        "Composite": 2
       },
       {
         "Team": "Wausau West",
@@ -2532,7 +3083,7 @@
         "GroupPoints": 0,
         "OverallPoints": 0,
         "GD": 0,
-        "Seed": 2,
+        "Seed": 6,
         "Composite": 0
       },
       {
@@ -2541,17 +3092,8 @@
         "GroupPoints": 0,
         "OverallPoints": 0,
         "GD": -1,
-        "Seed": 6,
-        "Composite": -1
-      },
-      {
-        "Team": "Chippewa Falls",
-        "Group": "Group A",
-        "GroupPoints": 0,
-        "OverallPoints": 0,
-        "GD": -2,
         "Seed": 7,
-        "Composite": -2
+        "Composite": -1
       },
       {
         "Team": "Wisconsin Rapids",
@@ -2565,13 +3107,22 @@
     ],
     "Group B": [
       {
+        "Team": "Bay Port",
+        "Group": "Group B",
+        "GroupPoints": 3,
+        "OverallPoints": 6,
+        "GD": 8,
+        "Seed": 1,
+        "Composite": 50
+      },
+      {
         "Team": "Green Bay Preble",
         "Group": "Group B",
         "GroupPoints": 1,
-        "OverallPoints": 1,
-        "GD": 0,
-        "Seed": 1,
-        "Composite": 12
+        "OverallPoints": 4,
+        "GD": 1,
+        "Seed": 2,
+        "Composite": 19
       },
       {
         "Team": "Kimberly",
@@ -2579,17 +3130,8 @@
         "GroupPoints": 1,
         "OverallPoints": 1,
         "GD": 0,
-        "Seed": 1,
-        "Composite": 12
-      },
-      {
-        "Team": "Bay Port",
-        "Group": "Group B",
-        "GroupPoints": 0,
-        "OverallPoints": 3,
-        "GD": 3,
         "Seed": 3,
-        "Composite": 9
+        "Composite": 12
       },
       {
         "Team": "Hortonville",
@@ -2605,27 +3147,18 @@
         "Group": "Group B",
         "GroupPoints": 0,
         "OverallPoints": 3,
-        "GD": 2,
-        "Seed": 4,
-        "Composite": 8
+        "GD": 0,
+        "Seed": 5,
+        "Composite": 6
       },
       {
         "Team": "Appleton North",
         "Group": "Group B",
         "GroupPoints": 0,
         "OverallPoints": 1,
-        "GD": 0,
+        "GD": -1,
         "Seed": 6,
-        "Composite": 2
-      },
-      {
-        "Team": "Appleton West",
-        "Group": "Group B",
-        "GroupPoints": 0,
-        "OverallPoints": 1,
-        "GD": 0,
-        "Seed": 6,
-        "Composite": 2
+        "Composite": 1
       },
       {
         "Team": "De Pere",
@@ -2633,8 +3166,17 @@
         "GroupPoints": 0,
         "OverallPoints": 0,
         "GD": 0,
-        "Seed": 8,
+        "Seed": 7,
         "Composite": 0
+      },
+      {
+        "Team": "Appleton West",
+        "Group": "Group B",
+        "GroupPoints": 0,
+        "OverallPoints": 0,
+        "GD": -6,
+        "Seed": 8,
+        "Composite": -6
       }
     ]
   },
@@ -2676,7 +3218,7 @@
         "Appleton North": "No Match",
         "Appleton West": "No Match",
         "Bay Port": "Scheduled",
-        "De Pere": "No Match",
+        "De Pere": "Scheduled",
         "Green Bay Preble": "Scheduled",
         "Hortonville": "Scheduled",
         "Kimberly": "No Match",
@@ -2693,7 +3235,7 @@
         "Eau Claire North": "Scheduled",
         "Hudson": "Scheduled",
         "Superior": "No Match",
-        "Wausau West": "No Match",
+        "Wausau West": "Scheduled",
         "Wisconsin Rapids": "No Match",
         "Appleton North": "No Match",
         "Appleton West": "No Match",
@@ -2777,7 +3319,7 @@
       "opponents": {
         "Chippewa Falls": "Scheduled",
         "DC Everest": "Scheduled",
-        "Eau Claire Memorial": "No Match",
+        "Eau Claire Memorial": "Scheduled",
         "Eau Claire North": "Scheduled",
         "Hudson": "No Match",
         "Superior": "Scheduled",
@@ -2851,7 +3393,7 @@
         "Wisconsin Rapids": "No Match",
         "Appleton North": "Scheduled",
         "Appleton West": null,
-        "Bay Port": "Scheduled",
+        "Bay Port": 0,
         "De Pere": "No Match",
         "Green Bay Preble": "Scheduled",
         "Hortonville": "Scheduled",
@@ -2872,7 +3414,7 @@
         "Wausau West": "Scheduled",
         "Wisconsin Rapids": 3,
         "Appleton North": "No Match",
-        "Appleton West": "Scheduled",
+        "Appleton West": 3,
         "Bay Port": null,
         "De Pere": "Scheduled",
         "Green Bay Preble": "Scheduled",
@@ -2886,7 +3428,7 @@
       "group": "Group B",
       "opponents": {
         "Chippewa Falls": "No Match",
-        "DC Everest": "No Match",
+        "DC Everest": "Scheduled",
         "Eau Claire Memorial": "No Match",
         "Eau Claire North": "No Match",
         "Hudson": "No Match",
@@ -2898,7 +3440,7 @@
         "Bay Port": "Scheduled",
         "De Pere": null,
         "Green Bay Preble": "Scheduled",
-        "Hortonville": "No Match",
+        "Hortonville": "Scheduled",
         "Kimberly": "No Match",
         "SPASH": "No Match"
       }
@@ -2991,5 +3533,12 @@
         "SPASH": null
       }
     }
-  ]
+  ],
+  "sourceUrl": "https://soccer.statsplus.net/rankings/rankings/2/?division=0&year=2026",
+  "sync": {
+    "importedTeams": 15,
+    "importedRows": 260,
+    "manualTeam": "Hortonville",
+    "manualRows": 15
+  }
 }
