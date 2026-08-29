@@ -1,0 +1,70 @@
+"use client"
+
+import { useMemo, useState } from "react"
+import { CalendarDays, ChevronRight, Goal, ShieldCheck, Trophy } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { coachLogout } from "./actions"
+
+type Standing = { Team: string; GS: number; GP: number; W: number; L: number; T: number; GF: number; GA: number; GD: number; Points: number; Group: string }
+type Game = { Date: string; Team: string; Opponent: string; Location: string; Result: string | null; Score: string | null }
+type Seed = { Team: string; Group: string; GroupPoints: number; OverallPoints: number; GD: number; Seed: number; Composite: number }
+type Data = { generatedAt: string; overall: Standing[]; schedule: Game[]; seedings: Record<string, Seed[]>; headToHead: { team: string; group: string; opponents: Record<string, string | number | null> }[] }
+
+export function CoachDashboard({ data }: { data: Data }) {
+  const [group, setGroup] = useState("Group B")
+  const [team, setTeam] = useState("Hortonville")
+  const [view, setView] = useState<"seeding" | "schedule" | "head">("seeding")
+  const groupTeams = data.overall.filter(row => row.Group === group)
+  const selected = data.overall.find(row => row.Team === team) || groupTeams[0]
+  const games = useMemo(() => data.schedule.filter(game => game.Team === team), [data.schedule, team])
+  const played = games.filter(game => game.Result)
+  const upcoming = games.filter(game => !game.Result)
+  const h2h = data.headToHead.find(row => row.team === team)
+
+  function switchGroup(value: string) { setGroup(value); const first = data.overall.find(row => row.Group === value); if (first) setTeam(first.Team) }
+
+  return (
+    <main className="min-h-screen bg-[#f7f7f5]">
+      <header className="border-b bg-neutral-950 text-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6">
+          <div><p className="text-xs font-bold uppercase tracking-[0.22em] text-red-400">Hortonville Soccer · 2026</p><h1 className="mt-1 text-2xl font-bold">Coach’s Corner</h1></div>
+          <form action={coachLogout}><Button type="submit" variant="outline" className="border-white/20 bg-transparent text-white hover:bg-white hover:text-black">Sign out</Button></form>
+        </div>
+      </header>
+      <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6">
+        <section className="mb-6 flex flex-col gap-4 rounded-2xl bg-primary p-5 text-white shadow-lg sm:flex-row sm:items-end sm:justify-between">
+          <div><p className="text-sm font-semibold text-white/70">Drill into the seeding picture</p><h2 className="mt-1 text-3xl font-bold">{team}</h2><p className="mt-1 text-sm text-white/80">{group} · {played.length} played · {upcoming.length} remaining</p></div>
+          <div className="flex flex-wrap gap-2">
+            <Select value={group} onValueChange={switchGroup}><SelectTrigger className="w-36 border-white/30 bg-white text-black"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="Group A">Group A</SelectItem><SelectItem value="Group B">Group B</SelectItem></SelectContent></Select>
+            <Select value={team} onValueChange={setTeam}><SelectTrigger className="w-52 border-white/30 bg-white text-black"><SelectValue /></SelectTrigger><SelectContent>{groupTeams.map(row => <SelectItem key={row.Team} value={row.Team}>{row.Team}</SelectItem>)}</SelectContent></Select>
+          </div>
+        </section>
+
+        <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Metric icon={<Trophy />} label="Overall points" value={selected?.Points ?? 0} />
+          <Metric icon={<ShieldCheck />} label="Record" value={`${selected?.W ?? 0}-${selected?.L ?? 0}-${selected?.T ?? 0}`} />
+          <Metric icon={<Goal />} label="Goal difference" value={(selected?.GD ?? 0) > 0 ? `+${selected.GD}` : selected?.GD ?? 0} />
+          <Metric icon={<CalendarDays />} label="Games scheduled" value={selected?.GS ?? games.length} />
+        </section>
+
+        <div className="mt-7 flex gap-2 overflow-x-auto pb-1">{([['seeding','Seeding board'],['schedule','Team schedule'],['head','Head to head']] as const).map(([id,label]) => <Button key={id} variant={view === id ? 'default' : 'outline'} onClick={() => setView(id)}>{label}</Button>)}</div>
+
+        <section className="mt-4">
+          {view === "seeding" && <SeedingTable rows={data.seedings[group]} team={team} />}
+          {view === "schedule" && <ScheduleTable games={games} />}
+          {view === "head" && <HeadToHead opponents={h2h?.opponents || {}} team={team} />}
+        </section>
+        <p className="mt-5 text-xs text-muted-foreground">Source: Seeding Builder v2026 · snapshot updated {new Date(data.generatedAt).toLocaleDateString()}</p>
+      </div>
+    </main>
+  )
+}
+
+function Metric({ icon, label, value }: { icon: React.ReactNode; label: string; value: React.ReactNode }) { return <Card className="gap-3 py-5"><CardContent className="flex items-center gap-4"><span className="grid size-10 place-items-center rounded-lg bg-red-50 text-primary">{icon}</span><div><p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</p><p className="text-2xl font-bold">{value}</p></div></CardContent></Card> }
+function SeedingTable({ rows, team }: { rows: Seed[]; team: string }) { return <Card><CardHeader><CardTitle>Live {rows?.[0]?.Group} seeding</CardTitle></CardHeader><CardContent><Table><TableHeader><TableRow><TableHead>Seed</TableHead><TableHead>Team</TableHead><TableHead>Group pts</TableHead><TableHead>Overall pts</TableHead><TableHead>GD</TableHead></TableRow></TableHeader><TableBody>{rows?.map(row => <TableRow key={row.Team} className={row.Team === team ? "bg-red-50 font-semibold" : ""}><TableCell><Badge variant={row.Team === team ? "default" : "secondary"}>#{row.Seed}</Badge></TableCell><TableCell>{row.Team}</TableCell><TableCell>{row.GroupPoints}</TableCell><TableCell>{row.OverallPoints}</TableCell><TableCell>{row.GD > 0 ? `+${row.GD}` : row.GD}</TableCell></TableRow>)}</TableBody></Table></CardContent></Card> }
+function ScheduleTable({ games }: { games: Game[] }) { return <Card><CardHeader><CardTitle>Full team schedule</CardTitle></CardHeader><CardContent><Table><TableHeader><TableRow><TableHead>Date</TableHead><TableHead>Opponent</TableHead><TableHead>Site</TableHead><TableHead>Result</TableHead></TableRow></TableHeader><TableBody>{games.map((game, i) => <TableRow key={`${game.Date}-${game.Opponent}-${i}`}><TableCell>{new Date(`${game.Date}T12:00:00`).toLocaleDateString(undefined,{month:'short',day:'numeric'})}</TableCell><TableCell>{game.Opponent}</TableCell><TableCell>{game.Location === 'H' ? 'Home' : 'Away'}</TableCell><TableCell>{game.Result ? <Badge variant={game.Result === 'W' ? 'default' : 'secondary'}>{game.Result} {game.Score}</Badge> : <span className="text-muted-foreground">Scheduled</span>}</TableCell></TableRow>)}</TableBody></Table></CardContent></Card> }
+function HeadToHead({ opponents, team }: { opponents: Record<string, string | number | null>; team: string }) { const rows = Object.entries(opponents).filter(([name]) => name !== team); return <Card><CardHeader><CardTitle>Head-to-head map</CardTitle></CardHeader><CardContent className="grid gap-2 sm:grid-cols-2">{rows.map(([name, status]) => <div key={name} className="flex items-center justify-between rounded-lg border bg-white p-3"><span className="font-medium">{name}</span><span className="flex items-center gap-1 text-sm text-muted-foreground">{status ?? '—'}<ChevronRight className="size-4" /></span></div>)}</CardContent></Card> }

@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero"
 import { CurrentSeasonSection } from "@/components/current-season-section"
 import { Timeline } from "@/components/timeline"
 import { StatsSection } from "@/components/stats-section"
-import { ContributeSection } from "@/components/contribute-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <CurrentSeasonSection />
       <Timeline />
       <StatsSection />
-      <ContributeSection />
       <Footer />
     </main>
   )

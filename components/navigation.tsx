@@ -12,7 +12,10 @@ const navItems = [
   { label: "Seasons", href: "/seasons" },
 ]
 
-const secondaryNavItems = [{ label: "Coaching Records", href: "/coaching-records" }]
+const secondaryNavItems = [
+  { label: "Coaching Records", href: "/coaching-records" },
+  { label: "Coach’s Corner", href: "/coachs-corner" },
+]
 
 export function Navigation() {
   const pathname = usePathname()
