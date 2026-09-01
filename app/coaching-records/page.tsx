@@ -1,25 +1,29 @@
 import { Award, CalendarDays, ClipboardCheck, Trophy } from "lucide-react"
+import Image from "next/image"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { coachRecords } from "@/lib/games"
 import { ContentContainer, PageHeader } from "@/components/archive-ui"
 
 type ExpandedRecord = { wins: number; losses: number; ties: number; label: string }
-type CoachInfo = { fullName: string; highlights: string[]; current?: boolean; expandedRecord?: ExpandedRecord }
+type CoachInfo = { fullName: string; image: string; highlights: string[]; current?: boolean; expandedRecord?: ExpandedRecord }
 
 const COACH_INFO: Record<string, CoachInfo> = {
   Everett: {
     fullName: "Paul Everett",
+    image: "/coaches/paul-everett.jpg",
     current: true,
     highlights: ["Longest-tenured head coach in program history", "Pioneered the identity and standards of Hortonville soccer"],
     expandedRecord: { wins: 179, losses: 109, ties: 41, label: "Including reported scrimmages" },
   },
   Montalbano: {
     fullName: "Andy Montalbano",
+    image: "/coaches/andy-montalbano.jpg",
     highlights: ["2009: First season under the lights at Akin Field", "Led the program through the transition to varsity legitimacy"],
   },
   Ruhle: {
     fullName: "Gary Ruhle",
+    image: "/coaches/gary-ruhle.jpg",
     highlights: ["Program's first recorded varsity seasons", "Built the program from scratch"],
   },
 }
@@ -54,7 +58,7 @@ export default async function CoachingRecordsPage() {
             <div className="surface-card overflow-hidden">
               <div className="border-b bg-muted/25 p-6 md:p-8">
                 <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
-                  <div><p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">{coach.tenureStart}-{info?.current ? "Present" : coach.tenureEnd}</p><h2 className="mt-2 text-3xl font-black md:text-4xl">{displayName}</h2></div>
+                  <div className="flex items-center gap-5"><div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-xl border bg-muted shadow-sm md:h-28 md:w-24"><Image src={info.image} alt={`${displayName}, Hortonville boys soccer coach`} fill sizes="96px" className="object-cover object-top" /></div><div><p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">{coach.tenureStart}-{info?.current ? "Present" : coach.tenureEnd}</p><h2 className="mt-2 text-3xl font-black md:text-4xl">{displayName}</h2></div></div>
                   <div className="flex items-center gap-3 rounded-xl border bg-background px-4 py-3"><CalendarDays className="h-5 w-5 text-primary" /><div><p className="text-xs font-semibold uppercase text-muted-foreground">Seasons</p><p className="text-2xl font-black">{coach.seasons}</p></div></div>
                 </div>
 

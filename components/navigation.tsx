@@ -7,7 +7,6 @@ import { useEffect, useState } from "react"
 const navItems = [
   { label: "History", href: "/history" },
   { label: "Fields", href: "/fields" },
-  { label: "Photos", href: "/photos" },
   { label: "Coaches", href: "/coaches" },
   { label: "Stats", href: "/stats" },
   { label: "Seasons", href: "/seasons" },
@@ -15,6 +14,7 @@ const navItems = [
 
 const secondaryNavItems = [
   { label: "Coaching Records", href: "/coaching-records" },
+  { label: "Coach’s Corner", href: "/coachs-corner" },
   { label: "JV", href: "https://hortonville-jv-soccer-2026.pithed2.chatgpt.site/" },
 ]
 

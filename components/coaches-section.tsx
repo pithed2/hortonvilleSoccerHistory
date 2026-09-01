@@ -8,21 +8,21 @@ export function CoachesSection() {
       years: "2011-Present",
       role: "Boys Head Coach",
       description: "Continuing to build excellence and advocate for program growth and development",
-      image: "/male-coach-portrait.jpg",
+      image: "/coaches/paul-everett.jpg",
     },
     {
       name: "Andy Montalbano",
       years: "2007-2010",
       role: "Boys Head Coach",
       description: "Led the program through the transition to Akin Field and established varsity legitimacy",
-      image: "/male-coach-portrait.jpg",
+      image: "/coaches/andy-montalbano.jpg",
     },
         {
       name: "Gary Ruhle",
       years: "2003-2006",
       role: "Boys Head Coach",
       description: "Built the foundation for the soccer program in its early years",
-      image: "/male-coach-portrait.jpg",
+      image: "/coaches/gary-ruhle.jpg",
     },
   ]
 
@@ -36,7 +36,7 @@ export function CoachesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid gap-8 md:grid-cols-3">
           {coaches.map((coach) => (
             <div key={coach.name} className="group">
               <Link

@@ -297,7 +297,7 @@ export type AllTimeLeader = {
 export function allTimePlayerLeaders(): AllTimeLeader[] {
   const byPlayer = new Map<string, AllTimeLeader>()
 
-  for (const row of playerSeasonStatsBySeasonRange(2007, 2025)) {
+  for (const row of playerSeasonStatsBySeasonRange(2007, 2026)) {
     if (!byPlayer.has(row.player_name)) {
       byPlayer.set(row.player_name, {
         player_name: row.player_name,

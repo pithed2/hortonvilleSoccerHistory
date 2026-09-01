@@ -30,16 +30,10 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/photos"
-              className="bg-accent text-accent-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-            >
-              Explore Photos
-            </a>
-            <a
-              href="/history#kits"
+              href="/seasons/2026"
               className="border-2 border-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-colors"
             >
-              See Our Evolution
+              Follow the 2026 Season
             </a>
           </div>
         </div>
