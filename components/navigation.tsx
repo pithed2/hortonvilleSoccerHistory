@@ -13,7 +13,10 @@ const navItems = [
   { label: "Seasons", href: "/seasons" },
 ]
 
-const secondaryNavItems = [{ label: "Coaching Records", href: "/coaching-records" }]
+const secondaryNavItems = [
+  { label: "Coaching Records", href: "/coaching-records" },
+  { label: "JV", href: "https://hortonville-jv-soccer-2026.pithed2.chatgpt.site/" },
+]
 
 export function Navigation() {
   const pathname = usePathname()
