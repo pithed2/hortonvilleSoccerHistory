@@ -1,5 +1,6 @@
 type CoachGame = { Date: string; Team: string; Opponent: string; Location: string; Result: string | null; Score: string | null; Source?: string; SourceTeam?: string }
-type CoachData = { generatedAt: string; sourceUrl?: string; teams: { Team: string; Group: string }[]; schedule: CoachGame[]; [key: string]: unknown }
+type Ranking = { Team: string; Rank: number; Rating: number; SOS: number; GP: number; W: number; L: number; T: number; GF: number; GA: number }
+type CoachData = { generatedAt: string; sourceUrl?: string; teams: { Team: string; Group: string }[]; rankings?: Ranking[]; schedule: CoachGame[]; [key: string]: unknown }
 
 function parseCsv(text: string) {
   const [header, ...rows] = text.trim().split(/\r?\n/)
@@ -32,7 +33,9 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
       else T++
       if (game.Score) { const [gf, ga] = game.Score.split("-").map(Number); GF += gf; GA += ga }
     }
-    return { Team: team, GS: games.length, GP: played.length, W, L, T, GF, GA, GD: GF - GA, Points: W * 3 + T, Group: teamGroups[team] }
+    const ranking = data.rankings?.find((row) => row.Team === team)
+    if (ranking) return { Team: team, GS: games.length, GP: ranking.GP, W: ranking.W, L: ranking.L, T: ranking.T, GF: ranking.GF, GA: ranking.GA, GD: ranking.GF - ranking.GA, Points: ranking.W * 3 + ranking.T, Group: teamGroups[team], Rank: ranking.Rank, Rating: ranking.Rating, SOS: ranking.SOS }
+    return { Team: team, GS: games.length, GP: played.length, W, L, T, GF, GA, GD: GF - GA, Points: W * 3 + T, Group: teamGroups[team], Rank: null, Rating: null, SOS: null }
   }
   const overall = data.teams.map(({ Team }) => summarize(Team))
   const groupPoints = (team: string) => schedule.filter((game) => game.Team === team && teamGroups[game.Opponent] === teamGroups[team])
@@ -40,7 +43,7 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
   const seedGroup = (group: string) => {
     const rows = overall.filter((row) => row.Group === group).map((row) => {
       const GroupPoints = groupPoints(row.Team)
-      return { Team: row.Team, Group: group, GroupPoints, OverallPoints: row.Points, GD: row.GD, Seed: 0, Composite: GroupPoints * 10 + row.Points * 2 + row.GD }
+      return { Team: row.Team, Group: group, GroupPoints, OverallPoints: row.Points, GD: row.GD, Rank: row.Rank, Rating: row.Rating, Seed: 0, Composite: GroupPoints * 10 + row.Points * 2 + row.GD }
     }).sort((a, b) => b.Composite - a.Composite || a.Team.localeCompare(b.Team))
     let previous: typeof rows[number] | undefined
     rows.forEach((row, index) => { row.Seed = previous?.Composite === row.Composite ? previous.Seed : index + 1; previous = row })

@@ -1,7 +1,7 @@
 {
   "source": "StatsPlus team schedules; Hortonville maintained manually",
   "season": 2026,
-  "generatedAt": "2026-08-29T04:12:33.477Z",
+  "generatedAt": "2026-09-02T05:00:00.000Z",
   "teams": [
     {
       "Team": "Chippewa Falls",
@@ -67,6 +67,24 @@
       "Team": "SPASH",
       "Group": "Group B"
     }
+  ],
+  "rankings": [
+    { "Team": "Chippewa Falls", "Rank": 153, "Rating": 1495.56, "SOS": 1571.88, "GP": 4, "W": 1, "L": 2, "T": 1, "GF": 7, "GA": 6 },
+    { "Team": "DC Everest", "Rank": 29, "Rating": 1798.87, "SOS": 1753.10, "GP": 3, "W": 0, "L": 2, "T": 1, "GF": 3, "GA": 5 },
+    { "Team": "Eau Claire Memorial", "Rank": 36, "Rating": 1773.40, "SOS": 1707.67, "GP": 4, "W": 1, "L": 2, "T": 1, "GF": 7, "GA": 8 },
+    { "Team": "Eau Claire North", "Rank": 173, "Rating": 1442.42, "SOS": 1396.35, "GP": 3, "W": 2, "L": 1, "T": 0, "GF": 7, "GA": 5 },
+    { "Team": "Hudson", "Rank": 6, "Rating": 2010.84, "SOS": 1943.49, "GP": 2, "W": 1, "L": 0, "T": 1, "GF": 4, "GA": 3 },
+    { "Team": "Superior", "Rank": 60, "Rating": 1700.41, "SOS": 1482.35, "GP": 3, "W": 3, "L": 0, "T": 0, "GF": 12, "GA": 1 },
+    { "Team": "Wausau West", "Rank": 121, "Rating": 1562.45, "SOS": 1697.35, "GP": 3, "W": 1, "L": 2, "T": 0, "GF": 7, "GA": 7 },
+    { "Team": "Wisconsin Rapids", "Rank": 90, "Rating": 1622.22, "SOS": 1666.51, "GP": 3, "W": 1, "L": 1, "T": 1, "GF": 5, "GA": 6 },
+    { "Team": "Appleton North", "Rank": 56, "Rating": 1710.55, "SOS": 1664.30, "GP": 3, "W": 1, "L": 1, "T": 1, "GF": 8, "GA": 4 },
+    { "Team": "Appleton West", "Rank": 135, "Rating": 1529.91, "SOS": 1686.96, "GP": 3, "W": 0, "L": 2, "T": 1, "GF": 2, "GA": 13 },
+    { "Team": "Bay Port", "Rank": 28, "Rating": 1799.19, "SOS": 1672.04, "GP": 3, "W": 2, "L": 1, "T": 0, "GF": 14, "GA": 6 },
+    { "Team": "De Pere", "Rank": 24, "Rating": 1814.03, "SOS": 1672.85, "GP": 2, "W": 1, "L": 1, "T": 0, "GF": 7, "GA": 4 },
+    { "Team": "Green Bay Preble", "Rank": 22, "Rating": 1814.80, "SOS": 1664.91, "GP": 4, "W": 3, "L": 0, "T": 1, "GF": 10, "GA": 1 },
+    { "Team": "Hortonville", "Rank": 10, "Rating": 1946.01, "SOS": 1704.84, "GP": 3, "W": 2, "L": 0, "T": 1, "GF": 16, "GA": 4 },
+    { "Team": "Kimberly", "Rank": 45, "Rating": 1747.44, "SOS": 1842.94, "GP": 3, "W": 1, "L": 1, "T": 1, "GF": 2, "GA": 3 },
+    { "Team": "SPASH", "Rank": 47, "Rating": 1739.10, "SOS": 1700.99, "GP": 3, "W": 2, "L": 1, "T": 0, "GF": 5, "GA": 4 }
   ],
   "schedule": [
     {
@@ -524,8 +542,8 @@
       "Team": "Appleton North",
       "Opponent": "Appleton West",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "5-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50315/",
       "SourceTeam": "Appleton North"
     },
@@ -534,8 +552,8 @@
       "Team": "Appleton West",
       "Opponent": "Appleton North",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-5",
       "Source": "https://soccer.statsplus.net/rankings/team/50316/",
       "SourceTeam": "Appleton West"
     },
@@ -544,8 +562,8 @@
       "Team": "Chippewa Falls",
       "Opponent": "Eau Claire Memorial",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-3",
       "Source": "https://soccer.statsplus.net/rankings/team/50323/",
       "SourceTeam": "Chippewa Falls"
     },
@@ -554,8 +572,8 @@
       "Team": "DC Everest",
       "Opponent": "SPASH",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "1-2",
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
       "SourceTeam": "D.C. Everest"
     },
@@ -564,8 +582,8 @@
       "Team": "Eau Claire Memorial",
       "Opponent": "Chippewa Falls",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "3-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50327/",
       "SourceTeam": "Eau Claire Memorial"
     },
@@ -614,8 +632,8 @@
       "Team": "SPASH",
       "Opponent": "DC Everest",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "2-1",
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
       "SourceTeam": "Stevens Point"
     },
