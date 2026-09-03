@@ -15,7 +15,7 @@ const navItems = [
 const secondaryNavItems = [
   { label: "Coaching Records", href: "/coaching-records" },
   { label: "Coach’s Corner", href: "/coachs-corner" },
-  { label: "JV", href: "https://hortonville-jv-soccer-2026.pithed2.chatgpt.site/" },
+  { label: "JV", href: "/jv" },
 ]
 
 export function Navigation() {
