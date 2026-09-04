@@ -1,30 +1,49 @@
-import { cookies } from "next/headers"
 import Link from "next/link"
-import { CalendarDays, ChevronRight, LogOut, ShieldCheck, Target, Trophy } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowRight, Clock3, Trophy, Users } from "lucide-react"
 import { Navigation } from "@/components/navigation"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { JV_COOKIE, validJvCookie } from "@/lib/jv-auth"
-import { jvStats } from "@/lib/jv-stats"
-import { jvLogout } from "./actions"
-import { JvLogin } from "./login"
 
-export const dynamic = "force-dynamic"
+const teams = [
+  {
+    name: "JV Red",
+    description: "Follow the 2026 season with results, schedule, full roster statistics, and individual game box scores.",
+    status: "Season live",
+    href: "/jv/red",
+    tone: "red",
+  },
+  {
+    name: "JV White",
+    description: "A dedicated season page for JV White schedules, results, player statistics, and team progress.",
+    status: "In Progress",
+    href: null,
+    tone: "white",
+  },
+  {
+    name: "JV Black/Gray",
+    description: "A dedicated home for the developing JV Black/Gray team and its season information.",
+    status: "In Progress",
+    href: null,
+    tone: "gray",
+  },
+] as const
 
-export default async function JvPage() {
-  const jar = await cookies()
-  if (!validJvCookie(jar.get(JV_COOKIE)?.value)) return <><Navigation /><JvLogin /></>
-  const games = jvStats.record.wins + jvStats.record.losses + jvStats.record.ties
+export default function JvLandingPage() {
   return <><Navigation /><main id="main-content" className="min-h-screen bg-[#080c13] text-slate-100">
-    <header className="sticky top-0 z-20 border-b border-white/10 bg-[#080c13]/90 backdrop-blur-xl"><div className="mx-auto flex min-h-18 max-w-7xl items-center justify-between px-5 py-3 lg:px-8"><div className="flex items-center gap-3"><div className="grid size-9 place-items-center rounded-full border border-red-500/40 bg-red-600/15 text-sm font-black text-red-400">H</div><div><p className="text-sm font-black uppercase tracking-[.12em] text-white">Hortonville JV Soccer</p><p className="text-[11px] text-slate-500">2026 Season Center</p></div></div><form action={jvLogout}><Button variant="ghost" size="sm" type="submit" className="text-slate-400 hover:bg-white/5 hover:text-white"><LogOut /> <span className="hidden sm:inline">Lock site</span></Button></form></div></header>
-    <div className="mx-auto max-w-7xl px-5 pb-16 pt-9 lg:px-8">
-      <section className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p className="mb-3 text-xs font-bold uppercase tracking-[.2em] text-red-400">Boys Soccer · {jvStats.team}</p><h1 className="text-4xl font-black tracking-[-.04em] text-white sm:text-5xl">Season dashboard</h1><p className="mt-3 flex items-center gap-2 text-sm text-slate-500"><span className="size-1.5 rounded-full bg-emerald-400" />Workbook data · Updated {jvStats.updated}</p></div><div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[.035] px-5 py-4"><ShieldCheck className="size-5 text-emerald-400" /><div><p className="text-xs font-bold text-white">Private team page</p><p className="text-xs text-slate-500">Protected inside Hortonville Soccer</p></div></div></section>
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4"><article className="relative overflow-hidden rounded-3xl border border-red-500/25 bg-gradient-to-br from-red-600 to-red-800 p-6"><p className="text-xs font-bold uppercase tracking-[.18em] text-red-100/75">Overall record</p><p className="mt-6 text-5xl font-black text-white">{jvStats.record.wins}–{jvStats.record.losses}–{jvStats.record.ties}</p><p className="mt-3 text-sm text-red-100/70">{games} matches played</p></article><StatCard icon={<Trophy />} label="Conference" value={jvStats.record.conference} note="Fox Valley Association" /><StatCard icon={<Target />} label="Goals" value={`${jvStats.totals.goalsFor}`} note={`${(jvStats.totals.goalsFor / games).toFixed(1)} per match`} /><StatCard icon={<CalendarDays />} label="Goal difference" value={`${jvStats.totals.goalsFor - jvStats.totals.goalsAgainst >= 0 ? "+" : ""}${jvStats.totals.goalsFor - jvStats.totals.goalsAgainst}`} note={`${jvStats.totals.goalsAgainst} goals allowed`} /></section>
-      <section className="mt-8 grid gap-6 xl:grid-cols-[1.35fr_.65fr]"><article id="schedule" className="rounded-3xl border border-white/10 bg-[#0d131e] p-5 sm:p-7"><p className="text-xs font-bold uppercase tracking-[.16em] text-slate-500">Match center</p><h2 className="mt-1 text-xl font-bold text-white">Recent results</h2><div className="mt-5 space-y-2">{jvStats.recent.map(game => <Link href={`/jv/games/${game.id}`} key={game.id} className="group grid grid-cols-[56px_1fr_auto_auto] items-center gap-3 rounded-2xl border border-white/5 bg-white/[.025] p-4 hover:border-red-500/25 hover:bg-white/[.055]"><p className="text-xs font-bold uppercase text-slate-500">{game.date}</p><div><p className="font-bold text-white">{game.opponent}</p><p className="text-xs text-slate-500">{game.location} · Box score</p></div><p className="text-xl font-black text-white">{game.score}</p><ChevronRight className="size-4 text-slate-600 group-hover:text-red-400" /></Link>)}</div></article><article className="rounded-3xl border border-white/10 bg-[#0d131e] p-5 sm:p-7"><p className="text-xs font-bold uppercase tracking-[.16em] text-slate-500">Coming up</p><h2 className="mt-1 text-xl font-bold text-white">Next matches</h2><div className="mt-5 space-y-1">{jvStats.upcoming.map((game,index) => <div key={`${game.date}-${game.opponent}`} className="flex items-center gap-4 border-b border-white/5 py-4 last:border-0"><div className={`grid size-11 shrink-0 place-items-center rounded-xl text-xs font-black ${index === 0 ? "bg-red-600 text-white" : "bg-white/5 text-slate-400"}`}>{game.date}</div><div><p className="font-bold text-white">{game.opponent}</p><p className="text-xs text-slate-500">{game.location}</p></div></div>)}</div></article></section>
-      <section className="mt-8 grid gap-6 xl:grid-cols-[.65fr_1.35fr]"><article className="rounded-3xl border border-white/10 bg-[#0d131e] p-6"><p className="text-xs font-bold uppercase tracking-[.16em] text-slate-500">Team totals</p><h2 className="mt-1 text-xl font-bold text-white">By the numbers</h2><div className="mt-6 grid grid-cols-2 gap-3">{[["Shots",jvStats.totals.shots],["Shots on goal",jvStats.totals.sog],["Saves",jvStats.totals.saves],["Goals allowed",jvStats.totals.goalsAgainst]].map(([label,value]) => <div key={label} className="rounded-2xl bg-white/[.035] p-4"><p className="text-2xl font-black text-white">{value}</p><p className="mt-1 text-xs text-slate-500">{label}</p></div>)}</div></article><article id="players" className="rounded-3xl border border-white/10 bg-[#0d131e] p-5 sm:p-7"><p className="text-xs font-bold uppercase tracking-[.16em] text-slate-500">Player stats</p><h2 className="mt-1 text-xl font-bold text-white">Full roster</h2><p className="mt-1 text-xs text-slate-500">GP reflects team participation · Goals: 2 points · Assists: 1 point</p><div className="max-h-[36rem] overflow-auto"><Table><TableHeader><TableRow className="border-white/10 hover:bg-transparent"><TableHead className="text-slate-500">Player</TableHead><TableHead className="text-center text-slate-500">GP</TableHead><TableHead className="text-center text-slate-500">G</TableHead><TableHead className="text-center text-slate-500">A</TableHead><TableHead className="text-right text-slate-500">Pts</TableHead></TableRow></TableHeader><TableBody>{jvStats.players.map(player => <TableRow key={player.number} className="border-white/5"><TableCell><div className="flex items-center gap-3"><span className="grid size-8 place-items-center rounded-lg bg-red-600/15 text-xs font-black text-red-400">{player.number}</span><span className="font-semibold text-white">{player.name}</span></div></TableCell><TableCell className="text-center text-slate-300">{player.gp}</TableCell><TableCell className="text-center text-slate-300">{player.goals}</TableCell><TableCell className="text-center text-slate-300">{player.assists}</TableCell><TableCell className="text-right font-black text-white">{player.points}</TableCell></TableRow>)}</TableBody></Table></div></article></section>
-      <footer className="mt-12 border-t border-white/8 pt-6 text-center text-xs text-slate-600">Hortonville JV Boys Soccer · Statistics are unofficial and maintained by the team.</footer>
-    </div>
+    <section className="border-b border-white/8 bg-[radial-gradient(circle_at_top_right,rgba(220,38,38,.18),transparent_42%)]">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:py-24 lg:px-8">
+        <div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[.22em] text-red-400">Hortonville Boys Soccer · 2026</p><h1 className="mt-4 text-5xl font-black tracking-[-.05em] text-white sm:text-7xl">One program.<br /><span className="text-red-500">Every JV team.</span></h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">Choose a team to follow its schedule, results, statistics, and season story. More JV team pages will come online as their information is prepared.</p></div>
+        <div className="mt-10 flex flex-wrap gap-3 text-sm text-slate-400"><span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[.035] px-4 py-2"><Users className="size-4 text-red-400" /> Three JV team groups</span><span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[.035] px-4 py-2"><Trophy className="size-4 text-red-400" /> Built around each season</span></div>
+      </div>
+    </section>
+
+    <section className="mx-auto max-w-7xl px-5 py-12 sm:py-16 lg:px-8">
+      <div className="mb-7"><p className="text-xs font-bold uppercase tracking-[.18em] text-slate-500">Team center</p><h2 className="mt-2 text-3xl font-black text-white">Select a JV team</h2></div>
+      <div className="grid gap-5 lg:grid-cols-3">{teams.map((team) => {
+        const card = <article className={`group relative min-h-72 overflow-hidden rounded-[30px] border p-7 transition ${team.href ? "border-red-500/30 bg-gradient-to-br from-red-700/35 via-[#101722] to-[#0d131e] hover:-translate-y-1 hover:border-red-400/60 hover:shadow-2xl hover:shadow-red-950/30" : "border-white/8 bg-[#0d131e]"}`}>
+          <div className={`absolute right-0 top-0 size-40 translate-x-14 -translate-y-14 rounded-full blur-3xl ${team.tone === "red" ? "bg-red-600/25" : team.tone === "white" ? "bg-white/10" : "bg-slate-500/10"}`} />
+          <div className="relative flex h-full flex-col"><div className="flex items-center justify-between"><span className={`rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[.12em] ${team.href ? "bg-emerald-500/15 text-emerald-400" : "bg-white/5 text-slate-500"}`}>{team.status}</span>{team.href ? <ArrowRight className="size-5 text-red-400 transition group-hover:translate-x-1" /> : <Clock3 className="size-5 text-slate-600" />}</div><h3 className="mt-12 text-4xl font-black tracking-[-.04em] text-white">{team.name}</h3><p className="mt-4 leading-7 text-slate-400">{team.description}</p><p className={`mt-auto pt-7 text-sm font-bold ${team.href ? "text-red-400" : "text-slate-600"}`}>{team.href ? "Open season dashboard" : "Team page coming soon"}</p></div>
+        </article>
+        return team.href ? <Link key={team.name} href={team.href} className="block rounded-[30px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-4 focus-visible:ring-offset-[#080c13]">{card}</Link> : <div key={team.name}>{card}</div>
+      })}</div>
+    </section>
   </main></>
 }
-
-function StatCard({ icon, label, value, note }: { icon: React.ReactNode; label: string; value: string; note: string }) { return <article className="rounded-3xl border border-white/10 bg-[#0d131e] p-6"><div className="flex items-center justify-between"><p className="text-xs font-bold uppercase tracking-[.18em] text-slate-500">{label}</p><span className="text-red-400 [&>svg]:size-4">{icon}</span></div><p className="mt-6 text-4xl font-black text-white">{value}</p><p className="mt-3 text-sm text-slate-500">{note}</p></article> }
