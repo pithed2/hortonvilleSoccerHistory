@@ -11,7 +11,7 @@ type RawLine = [string, number, number, number, number, number, number, number, 
 const line = ([player, shots, sog, goals, assists, yc, rc, saves, gkMinutes]: RawLine): PlayerBoxLine => ({ player, shots, sog, goals, assists, yc, rc, saves, gkMinutes })
 
 export const jvStats = {
-  team: "JV1",
+  team: "JV Red",
   updated: "September 3, 2026",
   record: { wins: 3, losses: 2, ties: 0, conference: "2–1–0" },
   totals: { goalsFor: 19, goalsAgainst: 5, shots: 93, sog: 55, saves: 19 },
@@ -23,8 +23,14 @@ export const jvStats = {
     { id: 1, date: "Aug 25", opponent: "De Pere", location: "Home", score: "2–3", result: "L" },
   ],
   upcoming: [
-    { date: "Sep 10", opponent: "Fond du Lac", location: "Home" },
+    { date: "Sep 10", opponent: "St. Mary Central", location: "Home" },
     { date: "Sep 15", opponent: "Neenah", location: "Away" },
+    { date: "Sep 17", opponent: "Shawano", location: "Away" },
+    { date: "Sep 21", opponent: "Fox Valley Lutheran", location: "Home" },
+    { date: "Sep 22", opponent: "Appleton North", location: "Home" },
+    { date: "Sep 28", opponent: "Fox Valley Lutheran", location: "Away" },
+    { date: "Oct 1", opponent: "Kimberly", location: "Home" },
+    { date: "Oct 10", opponent: "DC Everest", location: "Home" },
   ],
   players: [
     { number: 22, name: "Amos Arndt", gp: 5, goals: 5, assists: 1, points: 11 },
