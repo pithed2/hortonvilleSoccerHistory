@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation"
+import { permanentRedirect } from "next/navigation"
 
 type Props = { params: Promise<{ gameId: string }> }
 
 export default async function LegacyJvGamePage({ params }: Props) {
-  redirect(`/jv/red/games/${(await params).gameId}`)
+  permanentRedirect(`/jv/red/games/${(await params).gameId}`)
 }

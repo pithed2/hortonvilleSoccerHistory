@@ -1,62 +1,43 @@
-import { programOverview } from "@/lib/games"
 import Link from "next/link"
-import { ContentContainer } from "@/components/archive-ui"
+import { ArrowRight, BarChart3, ListOrdered, Swords } from "lucide-react"
+import { programOverview } from "@/lib/games"
+
+const destinations = [
+  { title: "Season Statistics", detail: "Year-by-year records and team performance", href: "/stats", icon: BarChart3 },
+  { title: "All-Time Leaders", detail: "Goals, assists, points, shots, and saves", href: "/stats/leaders", icon: ListOrdered },
+  { title: "Head to Head", detail: "Hortonville’s record against every opponent", href: "/head-to-head", icon: Swords },
+] as const
 
 export async function StatsSection() {
   const overview = await programOverview()
-
   const stats = [
-    { label: "Total Seasons", value: String(overview.seasons) },
-    { label: "All-Time Record", value: `${overview.wins}-${overview.losses}-${overview.ties}` },
-    { label: "Career Win Rate", value: `${overview.winPct.toFixed(1)}%` },
-    { label: "Total Goals Scored", value: overview.gf.toLocaleString() },
-    { label: "Head Coaches", value: String(overview.headCoaches) },
-    {
-      label: "Years Active",
-      value: overview.yearStart && overview.yearEnd ? `${overview.yearStart}-${overview.yearEnd}` : "-",
-    },
+    { label: "Documented seasons", value: String(overview.seasons) },
+    { label: "Program record", value: `${overview.wins}-${overview.losses}-${overview.ties}` },
+    { label: "Win percentage", value: `${overview.winPct.toFixed(1)}%` },
+    { label: "Goals scored", value: overview.gf.toLocaleString() },
   ]
 
   return (
-    <section id="stats" className="bg-primary/5 py-16 md:py-20">
-      <ContentContainer>
-        <div className="mb-10 text-center md:mb-12">
-          <p className="section-eyebrow">Program overview</p>
-          <h2 className="section-title text-balance">By The Numbers</h2>
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            The Hortonville Boys Soccer program spanning over twenty years
-          </p>
-        </div>
-
-        <div className="mb-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mb-12">
-          {stats.map((stat) => (
-            <article
-              key={stat.label}
-              className="surface-card p-6 text-center md:p-7"
-            >
-              <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">{stat.value}</p>
-              <h3 className="mt-2 text-sm font-semibold text-muted-foreground sm:text-base">{stat.label}</h3>
-            </article>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <div className="flex flex-col justify-center gap-3 sm:flex-row">
-            <Link
-              href="/stats"
-              className="action-primary"
-            >
-              View Season-by-Season Stats
-            </Link>
-            <Link
-              href="/coaching-records"
-              className="action-secondary"
-            >
-              Coaching Records
-            </Link>
+    <section id="stats" className="bg-muted/25 py-14 sm:py-18" aria-labelledby="program-numbers-title">
+      <div className="site-container">
+        <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <div>
+            <p className="section-eyebrow">Program records</p>
+            <h2 id="program-numbers-title" className="text-3xl font-black tracking-tight sm:text-4xl">Program by the Numbers</h2>
+            <p className="mt-3 max-w-xl leading-7 text-muted-foreground">A living record of Hortonville boys soccer, compiled from the seasons and statistics currently documented in the archive.</p>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {stats.map((stat) => <article key={stat.label} className="surface-card border-t-4 border-t-primary p-5"><p className="text-2xl font-black tracking-tight sm:text-3xl">{stat.value}</p><h3 className="mt-2 text-xs font-bold uppercase leading-5 tracking-[0.08em] text-muted-foreground">{stat.label}</h3></article>)}
           </div>
         </div>
-      </ContentContainer>
+
+        <div className="mt-8 grid gap-3 lg:grid-cols-3">
+          {destinations.map((destination) => {
+            const Icon = destination.icon
+            return <Link key={destination.href} href={destination.href} className="group flex items-center gap-4 rounded-2xl border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary"><Icon className="size-5" aria-hidden="true" /></span><span className="min-w-0 flex-1"><strong className="block font-black">{destination.title}</strong><span className="mt-1 block text-xs leading-5 text-muted-foreground">{destination.detail}</span></span><ArrowRight className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" aria-hidden="true" /></Link>
+          })}
+        </div>
+      </div>
     </section>
   )
 }

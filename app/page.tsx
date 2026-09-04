@@ -1,7 +1,8 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
+import { TeamSelector } from "@/components/team-selector"
 import { CurrentSeasonSection } from "@/components/current-season-section"
-import { Timeline } from "@/components/timeline"
+import { HistoryPreview } from "@/components/history-preview"
 import { StatsSection } from "@/components/stats-section"
 import { Footer } from "@/components/footer"
 
@@ -10,8 +11,9 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <Hero />
+      <TeamSelector />
       <CurrentSeasonSection />
-      <Timeline />
+      <HistoryPreview />
       <StatsSection />
       <Footer />
     </main>

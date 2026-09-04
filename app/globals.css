@@ -137,19 +137,19 @@
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
   .page-header {
-    @apply relative overflow-hidden bg-primary py-14 text-primary-foreground md:py-20;
+    @apply relative overflow-hidden border-b border-white/10 bg-[#0b0d10] py-10 text-white md:py-14;
   }
   .page-header-decoration {
-    @apply absolute -right-16 -top-24 h-80 w-80 rounded-full border-[48px] border-white/5;
+    @apply absolute -right-16 -top-24 h-80 w-80 rounded-full border-[48px] border-primary/10;
   }
   .page-eyebrow, .section-eyebrow {
     @apply mb-2 text-sm font-bold uppercase tracking-[0.18em] text-primary;
   }
-  .page-eyebrow { @apply mb-3 tracking-[0.22em] text-white/70; }
-  .page-title { @apply text-4xl font-black tracking-tight md:text-6xl; }
-  .page-description { @apply mt-4 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg; }
-  .page-header-meta { @apply mt-7 flex flex-wrap gap-3 text-sm font-semibold; }
-  .page-header-meta > * { @apply rounded-full bg-white/12 px-4 py-2; }
+  .page-eyebrow { @apply mb-2 tracking-[0.22em] text-primary; }
+  .page-title { @apply text-4xl font-black tracking-tight md:text-5xl; }
+  .page-description { @apply mt-3 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg; }
+  .page-header-meta { @apply mt-5 flex flex-wrap gap-2 text-sm font-semibold text-white/75; }
+  .page-header-meta > * { @apply rounded-full border border-white/10 bg-white/[0.06] px-3.5 py-1.5; }
   .section-heading { @apply mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between; }
   .section-title { @apply text-2xl font-black tracking-tight sm:text-3xl; }
   .section-description { @apply mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base; }

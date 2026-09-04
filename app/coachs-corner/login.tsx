@@ -14,7 +14,7 @@ export function CoachLogin() {
         <div className="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground"><LockKeyhole /></div>
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Hortonville Boys Soccer</p>
         <h1 className="mt-2 text-3xl font-bold">Coach’s Corner</h1>
-        <p className="mt-3 text-sm leading-6 text-muted-foreground">A private workspace for 2026 seeding, schedules, results, and head-to-head scouting.</p>
+        <p className="mt-3 text-sm leading-6 text-muted-foreground">A coach-focused workspace for 2026 seeding, schedules, results, and head-to-head review.</p>
         <form action={action} className="mt-7 space-y-4">
           <label className="block text-sm font-semibold" htmlFor="coach-password">Shared coach password</label>
           <Input id="coach-password" name="password" type="password" autoComplete="current-password" required autoFocus />
