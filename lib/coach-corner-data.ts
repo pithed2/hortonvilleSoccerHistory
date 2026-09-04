@@ -45,10 +45,31 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
   const seedGroup = (group: string) => {
     const rows = overall.filter((row) => row.Group === group).map((row) => {
       const GroupPoints = groupPoints(row.Team)
-      return { Team: row.Team, Group: group, GroupPoints, OverallPoints: row.Points, GD: row.GD, Rank: row.Rank, Rating: row.Rating, Seed: 0, Composite: GroupPoints * 10 + row.Points * 2 + row.GD }
-    }).sort((a, b) => b.Composite - a.Composite || a.Team.localeCompare(b.Team))
+      return { Team: row.Team, Group: group, GroupPoints, HeadToHeadPoints: 0, HeadToHeadDetail: "", OverallPoints: row.Points, GD: row.GD, Rank: row.Rank, Rating: row.Rating, Seed: 0 }
+    })
+    for (const row of rows) {
+      const tiedTeams = new Set(rows.filter((candidate) => candidate.GroupPoints === row.GroupPoints).map((candidate) => candidate.Team))
+      const tiedGames = schedule.filter((game) => game.Team === row.Team && tiedTeams.has(game.Opponent) && game.Result)
+      row.HeadToHeadPoints = tiedGames.reduce((points, game) => points + (game.Result === "W" ? 3 : game.Result && ["D", "T"].includes(game.Result) ? 1 : 0), 0)
+      row.HeadToHeadDetail = tiedGames.map((game) => `${game.Result === "D" ? "T" : game.Result} vs ${game.Opponent}`).join(", ")
+    }
+    rows.sort((a, b) => b.GroupPoints - a.GroupPoints
+      || b.HeadToHeadPoints - a.HeadToHeadPoints
+      || b.OverallPoints - a.OverallPoints
+      || b.GD - a.GD
+      || (b.Rating ?? Number.NEGATIVE_INFINITY) - (a.Rating ?? Number.NEGATIVE_INFINITY)
+      || a.Team.localeCompare(b.Team))
     let previous: typeof rows[number] | undefined
-    rows.forEach((row, index) => { row.Seed = previous?.Composite === row.Composite ? previous.Seed : index + 1; previous = row })
+    rows.forEach((row, index) => {
+      const tied = previous !== undefined
+        && previous.GroupPoints === row.GroupPoints
+        && previous.HeadToHeadPoints === row.HeadToHeadPoints
+        && previous.OverallPoints === row.OverallPoints
+        && previous.GD === row.GD
+        && previous.Rating === row.Rating
+      row.Seed = tied && previous ? previous.Seed : index + 1
+      previous = row
+    })
     return rows
   }
   const teamNames = data.teams.map(({ Team }) => Team)
