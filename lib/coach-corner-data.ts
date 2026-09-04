@@ -33,7 +33,9 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
       else T++
       if (game.Score) { const [gf, ga] = game.Score.split("-").map(Number); GF += gf; GA += ga }
     }
-    const ranking = data.rankings?.find((row) => row.Team === team)
+    // Hortonville's local schedule is updated after each match, so it is the
+    // authoritative source for the current record and scoring totals.
+    const ranking = team === "Hortonville" ? undefined : data.rankings?.find((row) => row.Team === team)
     if (ranking) return { Team: team, GS: games.length, GP: ranking.GP, W: ranking.W, L: ranking.L, T: ranking.T, GF: ranking.GF, GA: ranking.GA, GD: ranking.GF - ranking.GA, Points: ranking.W * 3 + ranking.T, Group: teamGroups[team], Rank: ranking.Rank, Rating: ranking.Rating, SOS: ranking.SOS }
     return { Team: team, GS: games.length, GP: played.length, W, L, T, GF, GA, GD: GF - GA, Points: W * 3 + T, Group: teamGroups[team], Rank: null, Rating: null, SOS: null }
   }
