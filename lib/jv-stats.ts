@@ -15,6 +15,9 @@ export const jvStats = {
   updated: "September 3, 2026",
   record: { wins: 3, losses: 2, ties: 0, conference: "2–1–0" },
   totals: { goalsFor: 19, goalsAgainst: 5, shots: 93, sog: 55, saves: 19 },
+  goalkeepers: [
+    { number: 31, name: "Henri Waite", games: 5, saves: 19, minutes: 375, goalsAgainst: 5 },
+  ],
   recent: [
     { id: 5, date: "Sep 3", opponent: "Oshkosh North", location: "Away", score: "1–0", result: "W" },
     { id: 4, date: "Sep 1", opponent: "Neenah", location: "Home", score: "0–2", result: "L" },
