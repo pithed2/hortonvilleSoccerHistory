@@ -12,7 +12,7 @@ export function CoachLogin() {
     <main className="grid min-h-[calc(100vh-4rem)] place-items-center bg-[radial-gradient(circle_at_top,#fee2e2,transparent_45%)] px-4">
       <section className="w-full max-w-md rounded-2xl border bg-white p-8 shadow-xl">
         <div className="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground"><LockKeyhole /></div>
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Hortonville Soccer</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Hortonville Boys Soccer</p>
         <h1 className="mt-2 text-3xl font-bold">Coach’s Corner</h1>
         <p className="mt-3 text-sm leading-6 text-muted-foreground">A private workspace for 2026 seeding, schedules, results, and head-to-head scouting.</p>
         <form action={action} className="mt-7 space-y-4">

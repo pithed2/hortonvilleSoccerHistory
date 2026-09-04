@@ -16,17 +16,17 @@ export function Hero() {
         <div className="flex justify-center mb-8">
           <img
             src="/logos/modern-bear-logo-white-fill.png"
-            alt="Hortonville Soccer Bear Logo"
+            alt="Hortonville Boys Soccer Bear Logo"
             className="h-24 md:h-32 w-auto drop-shadow-lg"
           />
         </div>
 
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-balance">
-            Passion & Excellence - Hortonville Soccer
+            Hortonville Boys Soccer
           </h1>
           <p className="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto text-balance text-primary-foreground/90">
-            The teams, fields, coaches, records, and stories that shaped the Hortonville Soccer Program
+            Current teams, schedules, results, statistics, coaches, and the history that built our program.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

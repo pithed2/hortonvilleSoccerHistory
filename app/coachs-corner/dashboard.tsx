@@ -31,7 +31,7 @@ export function CoachDashboard({ data }: { data: Data }) {
     <main className="min-h-screen bg-[#f7f7f5]">
       <header className="border-b bg-neutral-950 text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6">
-          <div><p className="text-xs font-bold uppercase tracking-[0.22em] text-red-400">Hortonville Soccer · 2026</p><h1 className="mt-1 text-2xl font-bold">Coach’s Corner</h1></div>
+          <div><p className="text-xs font-bold uppercase tracking-[0.22em] text-red-400">Hortonville Boys Soccer · 2026</p><h1 className="mt-1 text-2xl font-bold">Coach’s Corner</h1></div>
           <form action={coachLogout}><Button type="submit" variant="outline" className="border-white/20 bg-transparent text-white hover:bg-white hover:text-black">Sign out</Button></form>
         </div>
       </header>

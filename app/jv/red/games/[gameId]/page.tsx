@@ -9,7 +9,7 @@ type Props = { params: Promise<{ gameId: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const game = getJvBoxScore(Number((await params).gameId))
-  if (!game) return { title: "Game not found | Hortonville JV Soccer" }
+  if (!game) return { title: "Game not found" }
   return { title: `Hortonville ${game.team.goals}–${game.opponentTotals.goals} ${game.opponent} | JV Red Box Score` }
 }
 

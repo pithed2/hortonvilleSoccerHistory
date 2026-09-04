@@ -41,9 +41,9 @@ export function Navigation() {
     <nav aria-label="Primary navigation" className="sticky top-0 z-50 bg-primary text-primary-foreground shadow-lg">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-xl font-bold tracking-tight transition-opacity hover:opacity-80" aria-label="Hortonville Soccer home">
+          <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-xl font-bold tracking-tight transition-opacity hover:opacity-80" aria-label="Hortonville Boys Soccer home">
             <img src="/logos/modern-bear-logo-white-fill.png" alt="" className="h-10 w-10 object-contain" />
-            <span className="hidden sm:inline">HORTONVILLE SOCCER</span>
+            <span className="hidden sm:inline">HORTONVILLE BOYS SOCCER</span>
           </Link>
 
           <div className="hidden items-center gap-7 md:flex">
