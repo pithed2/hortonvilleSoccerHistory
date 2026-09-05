@@ -1,4 +1,6 @@
-import Script from "next/script"
+"use client"
+
+import { useEffect } from "react"
 import { Facebook, Instagram } from "lucide-react"
 
 const FACEBOOK_PAGE_URL = "https://www.facebook.com/profile.php?id=61588501114059"
@@ -10,7 +12,32 @@ const INSTAGRAM_URL = "https://www.instagram.com/hortonvillesoccer/"
 // update it whenever you want to feature a different post.
 const INSTAGRAM_FEATURED_POST_URL = "https://www.instagram.com/p/Dc2RTgHDQ5c/"
 
+declare global {
+  interface Window {
+    FB?: { XFBML: { parse: () => void } }
+    instgrm?: { Embeds: { process: () => void } }
+  }
+}
+
+function loadEmbedScript(src: string, id: string) {
+  if (document.getElementById(id)) return
+  const script = document.createElement("script")
+  script.id = id
+  script.src = src
+  script.async = true
+  script.crossOrigin = "anonymous"
+  document.body.appendChild(script)
+}
+
 export function SocialFeedSection() {
+  useEffect(() => {
+    if (window.FB) window.FB.XFBML.parse()
+    else loadEmbedScript("https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0", "facebook-jssdk")
+
+    if (window.instgrm) window.instgrm.Embeds.process()
+    else loadEmbedScript("https://www.instagram.com/embed.js", "instagram-embed-js")
+  }, [])
+
   return (
     <section className="border-t bg-muted/20 py-14 sm:py-16" aria-labelledby="social-feed-title">
       <div className="site-container">
@@ -31,20 +58,21 @@ export function SocialFeedSection() {
               </div>
             </div>
             <div id="fb-root" />
-            <Script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" crossOrigin="anonymous" />
-            <div
-              className="fb-page"
-              data-href={FACEBOOK_PAGE_URL}
-              data-tabs="timeline"
-              data-height="500"
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="false"
-              data-show-facepile="true"
-            >
-              <blockquote cite={FACEBOOK_PAGE_URL} className="fb-xfbml-parse-ignore">
-                <a href={FACEBOOK_PAGE_URL} target="_blank" rel="noreferrer">Hortonville Boys Soccer</a>
-              </blockquote>
+            <div className="overflow-hidden rounded-xl">
+              <div
+                className="fb-page"
+                data-href={FACEBOOK_PAGE_URL}
+                data-tabs="timeline"
+                data-height="300"
+                data-small-header="true"
+                data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="false"
+              >
+                <blockquote cite={FACEBOOK_PAGE_URL} className="fb-xfbml-parse-ignore">
+                  <a href={FACEBOOK_PAGE_URL} target="_blank" rel="noreferrer">Hortonville Boys Soccer</a>
+                </blockquote>
+              </div>
             </div>
           </article>
 
@@ -57,10 +85,9 @@ export function SocialFeedSection() {
               </div>
             </div>
             {INSTAGRAM_FEATURED_POST_URL ? (
-              <>
-                <Script src="https://www.instagram.com/embed.js" />
-                <blockquote className="instagram-media" data-instgrm-permalink={INSTAGRAM_FEATURED_POST_URL} data-instgrm-version="14" style={{ margin: 0 }} />
-              </>
+              <div className="mx-auto max-h-[340px] w-full max-w-[340px] overflow-y-auto rounded-xl">
+                <blockquote className="instagram-media" data-instgrm-permalink={INSTAGRAM_FEATURED_POST_URL} data-instgrm-version="14" style={{ margin: 0, minWidth: 0, width: "100%" }} />
+              </div>
             ) : (
               <div className="empty-state">
                 <div className="empty-state-icon"><Instagram className="size-6" aria-hidden="true" /></div>
