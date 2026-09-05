@@ -19,13 +19,48 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <a href="/jv" className="text-background/80 hover:text-background transition">
+                  JV Teams
+                </a>
+              </li>
+              <li>
                 <a href="/history" className="text-background/80 hover:text-background transition">
                   History
                 </a>
               </li>
               <li>
+                <a href="/fields" className="text-background/80 hover:text-background transition">
+                  Fields
+                </a>
+              </li>
+              <li>
+                <a href="/seasons" className="text-background/80 hover:text-background transition">
+                  Season Archive
+                </a>
+              </li>
+              <li>
+                <a href="/stats" className="text-background/80 hover:text-background transition">
+                  Season Statistics
+                </a>
+              </li>
+              <li>
+                <a href="/stats/leaders" className="text-background/80 hover:text-background transition">
+                  All-Time Leaders
+                </a>
+              </li>
+              <li>
+                <a href="/head-to-head" className="text-background/80 hover:text-background transition">
+                  Head to Head
+                </a>
+              </li>
+              <li>
                 <a href="/coaches" className="text-background/80 hover:text-background transition">
                   Coaches
+                </a>
+              </li>
+              <li>
+                <a href="/coaching-records" className="text-background/80 hover:text-background transition">
+                  Coaching Records
                 </a>
               </li>
             </ul>
@@ -54,7 +89,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#contribute" className="text-background hover:text-background/80 transition font-semibold">
+                <a href="mailto:AndrewMMontalbano@gmail.com?subject=Contributing%20to%20the%20archive" className="text-background hover:text-background/80 transition font-semibold">
                   Contribute
                 </a>
               </li>

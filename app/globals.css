@@ -155,6 +155,7 @@
   .section-description { @apply mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base; }
   .surface-card { @apply rounded-2xl border bg-card shadow-sm; }
   .surface-card-interactive { @apply rounded-2xl border bg-card shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg; }
+  .surface-card-dark { @apply rounded-2xl border border-white/10 bg-white/[0.05]; }
   .archive-table-wrap { @apply overflow-x-auto rounded-2xl border bg-card shadow-sm; }
   .archive-table { @apply w-full min-w-[720px] text-sm; }
   .archive-table caption { @apply sr-only; }

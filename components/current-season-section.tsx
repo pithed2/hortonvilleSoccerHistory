@@ -1,16 +1,11 @@
 import Link from "next/link"
-import { ArrowRight, CalendarDays, MapPin } from "lucide-react"
+import { ArrowRight, CalendarDays, Facebook, Instagram, MapPin } from "lucide-react"
 import { gamesBySeason, seasonRows } from "@/lib/games"
+import { resultTone } from "@/lib/utils"
 
 function formatDate(value: string) {
   const date = new Date(`${value}T12:00:00Z`)
   return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(date)
-}
-
-function resultTone(result?: string) {
-  if (result === "W") return "bg-emerald-100 text-emerald-800"
-  if (result === "L") return "bg-red-100 text-red-800"
-  return "bg-amber-100 text-amber-800"
 }
 
 export async function CurrentSeasonSection() {
@@ -19,17 +14,27 @@ export async function CurrentSeasonSection() {
   if (!current) return null
 
   const games = await gamesBySeason(current.season_year)
-  const completed = games.filter((game) => ["W", "L", "T", "D"].includes((game.result || "").toUpperCase()))
-  const upcoming = games.filter((game) => !["W", "L", "T", "D"].includes((game.result || "").toUpperCase())).slice(0, 3)
+  const numbered = games.map((game, index) => ({ game, number: index + 1 }))
+  const completed = numbered.filter(({ game }) => ["W", "L", "T", "D"].includes((game.result || "").toUpperCase()))
+  const upcoming = numbered.filter(({ game }) => !["W", "L", "T", "D"].includes((game.result || "").toUpperCase())).slice(0, 3).map(({ game }) => game)
   const recent = completed.slice(-3).reverse()
 
   return (
     <section className="bg-background py-14 sm:py-16" aria-labelledby="match-center-title">
       <div className="site-container">
-        <div className="mb-7 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div className="section-heading">
           <div>
             <p className="section-eyebrow">Varsity match center</p>
-            <h2 id="match-center-title" className="text-3xl font-black tracking-tight sm:text-4xl">Follow the season</h2>
+            <h2 id="match-center-title" className="section-title">Follow the season</h2>
+            <div className="mt-3 flex items-center gap-3">
+              <a href="https://www.instagram.com/hortonvillesoccer/" target="_blank" rel="noreferrer" aria-label="Hortonville Boys Soccer on Instagram" className="flex size-9 items-center justify-center rounded-full border text-muted-foreground transition hover:border-primary hover:text-primary">
+                <Instagram className="size-4" aria-hidden="true" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61588501114059" target="_blank" rel="noreferrer" aria-label="Hortonville Boys Soccer on Facebook" className="flex size-9 items-center justify-center rounded-full border text-muted-foreground transition hover:border-primary hover:text-primary">
+                <Facebook className="size-4" aria-hidden="true" />
+              </a>
+              <span className="text-sm text-muted-foreground">Match-day updates and photos</span>
+            </div>
           </div>
           <Link href={`/seasons/${current.season_year}`} className="action-primary w-fit">
             Full season <ArrowRight className="size-4" aria-hidden="true" />
@@ -49,13 +54,13 @@ export async function CurrentSeasonSection() {
             </div>
 
             <div className="mt-6 divide-y">
-              {recent.length ? recent.map((game) => (
-                <div key={`${game.date}-${game.opponent}`} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0">
+              {recent.length ? recent.map(({ game, number }) => (
+                <Link key={`${game.date}-${game.opponent}`} href={`/seasons/${current.season_year}#game-${number}`} className="flex items-center gap-4 py-4 transition hover:bg-muted/30 first:pt-0 last:pb-0">
                   <time dateTime={game.date} className="w-14 shrink-0 text-sm font-bold text-muted-foreground">{formatDate(game.date)}</time>
                   <p className="min-w-0 flex-1 font-black">{game.opponent}</p>
                   <span className={`rounded-full px-2.5 py-1 text-xs font-black ${resultTone(game.result)}`}>{game.result}</span>
                   <p className="w-11 text-right text-lg font-black tabular-nums">{game.score}</p>
-                </div>
+                </Link>
               )) : <p className="text-muted-foreground">No completed matches are currently listed.</p>}
             </div>
           </article>

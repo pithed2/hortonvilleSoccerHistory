@@ -33,9 +33,14 @@ export function HistoryPreview() {
       <div className="site-container relative">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-primary">Our history</p>
-            <h2 id="history-preview-title" className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Built one generation at a time</h2>
+            <p className="section-eyebrow">Our history</p>
+            <h2 id="history-preview-title" className="section-title">Built one generation at a time</h2>
             <p className="mt-4 text-base leading-7 text-white/65 sm:text-lg">From the program’s earliest pickup games to conference championships and today’s teams, every season adds to the story.</p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-bold text-white/70">
+              <Link href="/fields" className="transition hover:text-white">Fields</Link>
+              <Link href="/coaches" className="transition hover:text-white">Coaches</Link>
+              <Link href="/coaching-records" className="transition hover:text-white">Records</Link>
+            </div>
           </div>
           <Link href="/history" className="inline-flex min-h-12 w-fit items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 font-black text-white transition hover:-translate-y-0.5 hover:bg-primary/90">
             Explore Our History <ArrowRight className="size-4" aria-hidden="true" />
@@ -44,7 +49,7 @@ export function HistoryPreview() {
 
         <ol className="relative mt-10 grid gap-4 lg:grid-cols-3">
           {milestones.map((milestone, index) => (
-            <li key={milestone.year} className="relative rounded-2xl border border-white/10 bg-white/[0.05] p-6">
+            <li key={milestone.year} className="surface-card-dark relative p-6">
               {index < milestones.length - 1 ? <span className="absolute left-[calc(100%+1px)] top-9 hidden h-px w-4 bg-primary/50 lg:block" aria-hidden="true" /> : null}
               <div className="flex items-center justify-between gap-4">
                 <span className="text-sm font-black uppercase tracking-[0.16em] text-primary">{milestone.year}</span>

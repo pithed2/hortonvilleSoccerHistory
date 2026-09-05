@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { getJvBoxScore, getJvTeam, isJvTeamSlug } from "@/lib/jv-teams"
+import { resultTone } from "@/lib/utils"
 
 type Props = { params: Promise<{ team: string; gameId: string }> }
 
@@ -33,7 +34,7 @@ export default async function JvGamePage({ params }: Props) {
       <section className="surface-card overflow-hidden">
         <div className="border-b bg-gradient-to-br from-primary/10 via-background to-background px-5 py-7 sm:px-9 sm:py-9">
           <div className="flex flex-wrap gap-5 text-xs font-semibold uppercase tracking-[.13em] text-muted-foreground"><span className="flex items-center gap-2"><CalendarDays className="size-4 text-primary" />{formatDate(game.date)}</span><span className="flex items-center gap-2"><MapPin className="size-4 text-primary" />{game.location}</span>{game.conference ? <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">Conference</span> : null}</div>
-          <div className="mt-8 grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-5"><div><p className="text-xs font-bold uppercase tracking-[.18em] text-primary">Hortonville</p><p className="mt-2 text-xl font-black sm:text-4xl">Polar Bears</p></div><div className="text-center"><p className="text-4xl font-black tabular-nums sm:text-6xl">{game.team.goals}<span className="mx-2 text-border">–</span>{game.opponentTotals.goals}</p><p className={`mx-auto mt-3 w-fit rounded-lg px-3 py-1 text-xs font-black ${game.result === "W" ? "bg-emerald-100 text-emerald-800" : "bg-red-100 text-red-800"}`}>FINAL · {game.result}</p></div><div className="text-right"><p className="text-xs font-bold uppercase tracking-[.18em] text-muted-foreground">Opponent</p><p className="mt-2 text-xl font-black sm:text-4xl">{game.opponent}</p></div></div>
+          <div className="mt-8 grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-5"><div><p className="text-xs font-bold uppercase tracking-[.18em] text-primary">Hortonville</p><p className="mt-2 text-xl font-black sm:text-4xl">Polar Bears</p></div><div className="text-center"><p className="text-4xl font-black tabular-nums sm:text-6xl">{game.team.goals}<span className="mx-2 text-border">–</span>{game.opponentTotals.goals}</p><p className={`mx-auto mt-3 w-fit rounded-lg px-3 py-1 text-xs font-black ${resultTone(game.result)}`}>FINAL · {game.result}</p></div><div className="text-right"><p className="text-xs font-bold uppercase tracking-[.18em] text-muted-foreground">Opponent</p><p className="mt-2 text-xl font-black sm:text-4xl">{game.opponent}</p></div></div>
         </div>
 
         <div className="grid gap-8 p-5 sm:p-9 lg:grid-cols-[.9fr_1.1fr]">

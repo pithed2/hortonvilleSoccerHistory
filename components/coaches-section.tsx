@@ -41,13 +41,14 @@ export function CoachesSection() {
             <div key={coach.name} className="group">
               <Link
                 href="/coaching-records"
-                className="relative block overflow-hidden rounded-lg bg-card border border-border mb-4 h-64"
+                className="relative block aspect-[3/4] overflow-hidden rounded-lg bg-card border border-border mb-4"
               >
                 <Image
                   src={coach.image || "/placeholder.svg"}
                   alt={coach.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
               </Link>
               <h3 className="text-lg font-black mb-1">{coach.name}</h3>

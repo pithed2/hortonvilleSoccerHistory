@@ -32,10 +32,10 @@ export function TeamSelector() {
   return (
     <section className="border-b bg-muted/20 py-10 sm:py-12" aria-labelledby="team-selector-title">
       <div className="site-container">
-        <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div className="section-heading">
           <div>
             <p className="section-eyebrow">The program</p>
-            <h2 id="team-selector-title" className="text-2xl font-black tracking-tight sm:text-3xl">Choose your team</h2>
+            <h2 id="team-selector-title" className="section-title">Choose your team</h2>
           </div>
           <Link href="/jv" className="text-link w-fit text-sm">View all JV teams</Link>
         </div>
@@ -43,7 +43,7 @@ export function TeamSelector() {
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {teams.map((team) => {
             const content = (
-              <article className={`group flex min-h-44 flex-col rounded-2xl border p-5 transition ${team.href ? "bg-card shadow-sm hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg" : "border-dashed bg-muted/30"}`}>
+              <article className={`group flex min-h-44 flex-col p-5 ${team.href ? "surface-card-interactive" : "rounded-2xl border border-dashed bg-muted/30"}`}>
                 <div className="flex items-center justify-between gap-3">
                   <span className={`rounded-full px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.12em] ${team.href ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"}`}>
                     {team.status}

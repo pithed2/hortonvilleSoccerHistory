@@ -6,6 +6,7 @@ import { CalendarDays, Goal, Shield, Trophy, Users } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import { gamesBySeason, listSeasons, seasonRows } from "@/lib/games";
+import { resultTone } from "@/lib/utils";
 import type { Game } from "@/lib/types";
 import {
   boxscoreGamesBySeason,
@@ -23,8 +24,7 @@ export async function generateStaticParams() {
 
 function ResultBadge({ result }: { result?: string }) {
   const value = (result || "-").toUpperCase();
-  const color = value === "W" ? "bg-green-100 text-green-800" : value === "L" ? "bg-red-100 text-red-800" : "bg-blue-100 text-blue-800";
-  return <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full text-xs font-black ${color}`}>{value}</span>;
+  return <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full text-xs font-black ${resultTone(value)}`}>{value}</span>;
 }
 
 function BoxScore({ boxscore }: { boxscore: BoxscoreGame }) {

@@ -23,7 +23,7 @@ export async function StatsSection() {
         <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
           <div>
             <p className="section-eyebrow">Program records</p>
-            <h2 id="program-numbers-title" className="text-3xl font-black tracking-tight sm:text-4xl">Program by the Numbers</h2>
+            <h2 id="program-numbers-title" className="section-title">Program by the Numbers</h2>
             <p className="mt-3 max-w-xl leading-7 text-muted-foreground">A living record of Hortonville boys soccer, compiled from the seasons and statistics currently documented in the archive.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -34,7 +34,7 @@ export async function StatsSection() {
         <div className="mt-6 grid gap-3 lg:grid-cols-3">
           {destinations.map((destination) => {
             const Icon = destination.icon
-            return <Link key={destination.href} href={destination.href} className="group flex items-center gap-4 rounded-2xl border bg-card p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary"><Icon className="size-5" aria-hidden="true" /></span><span className="min-w-0 flex-1"><strong className="block font-black">{destination.title}</strong><span className="mt-1 block text-xs leading-5 text-muted-foreground">{destination.detail}</span></span><ArrowRight className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" aria-hidden="true" /></Link>
+            return <Link key={destination.href} href={destination.href} className="surface-card-interactive group flex items-center gap-4 p-4"><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary"><Icon className="size-5" aria-hidden="true" /></span><span className="min-w-0 flex-1"><strong className="block font-black">{destination.title}</strong><span className="mt-1 block text-xs leading-5 text-muted-foreground">{destination.detail}</span></span><ArrowRight className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" aria-hidden="true" /></Link>
           })}
         </div>
       </div>

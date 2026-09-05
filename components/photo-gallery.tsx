@@ -81,7 +81,7 @@ export function PhotoGallery() {
             Want to see more? Connect with our Google Photos album to browse thousands of images
           </p>
           <a
-            href="/#contribute"
+            href="mailto:AndrewMMontalbano@gmail.com?subject=Contributing%20to%20the%20archive"
             className="inline-block bg-accent text-accent-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Help Build the Archive
