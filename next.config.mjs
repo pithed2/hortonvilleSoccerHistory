@@ -15,7 +15,8 @@ const nextConfig = {
       "img-src 'self' data: blob:",
       "font-src 'self'",
       "style-src 'self' 'unsafe-inline'",
-      `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} https://va.vercel-scripts.com`,
+      `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} https://va.vercel-scripts.com https://connect.facebook.net https://www.instagram.com`,
+      "frame-src https://www.facebook.com https://www.instagram.com",
       "connect-src 'self' https://*.vercel-insights.com",
       ...(isDevelopment ? [] : ["upgrade-insecure-requests"]),
     ].join("; ")

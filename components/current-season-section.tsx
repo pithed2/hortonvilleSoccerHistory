@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, CalendarDays, Facebook, Instagram, MapPin } from "lucide-react"
+import { ArrowRight, CalendarDays, MapPin } from "lucide-react"
 import { gamesBySeason, seasonRows } from "@/lib/games"
 import { resultTone } from "@/lib/utils"
 
@@ -26,15 +26,6 @@ export async function CurrentSeasonSection() {
           <div>
             <p className="section-eyebrow">Varsity match center</p>
             <h2 id="match-center-title" className="section-title">Follow the season</h2>
-            <div className="mt-3 flex items-center gap-3">
-              <a href="https://www.instagram.com/hortonvillesoccer/" target="_blank" rel="noreferrer" aria-label="Hortonville Boys Soccer on Instagram" className="flex size-9 items-center justify-center rounded-full border text-muted-foreground transition hover:border-primary hover:text-primary">
-                <Instagram className="size-4" aria-hidden="true" />
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=61588501114059" target="_blank" rel="noreferrer" aria-label="Hortonville Boys Soccer on Facebook" className="flex size-9 items-center justify-center rounded-full border text-muted-foreground transition hover:border-primary hover:text-primary">
-                <Facebook className="size-4" aria-hidden="true" />
-              </a>
-              <span className="text-sm text-muted-foreground">Match-day updates and photos</span>
-            </div>
           </div>
           <Link href={`/seasons/${current.season_year}`} className="action-primary w-fit">
             Full season <ArrowRight className="size-4" aria-hidden="true" />

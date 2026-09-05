@@ -19,14 +19,19 @@ function LeaderTable({
   title,
   rows,
   statKey,
+  note,
 }: {
   title: string
   rows: ReturnType<typeof allTimePlayerLeaders>
   statKey: keyof ReturnType<typeof allTimePlayerLeaders>[number]
+  note?: string
 }) {
   return (
     <section className="surface-card overflow-hidden">
-      <div className="flex items-center gap-3 border-b bg-primary/5 px-6 py-5"><Medal className="h-5 w-5 text-primary" /><h2 className="text-2xl font-black">{title}</h2></div>
+      <div className="border-b bg-primary/5 px-6 py-5">
+        <div className="flex items-center gap-3"><Medal className="h-5 w-5 text-primary" /><h2 className="text-2xl font-black">{title}</h2></div>
+        {note ? <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{note}</p> : null}
+      </div>
       <div className="overflow-x-auto">
         <table className="archive-table min-w-[560px]">
           <caption className="sr-only">Top ten Hortonville players ranked by career {title.toLowerCase()}</caption>
@@ -67,7 +72,6 @@ export default function LeadersPage() {
         <LeaderTable title="Goals" rows={topBy(leaders, "goals")} statKey="goals" />
         <LeaderTable title="Assists" rows={topBy(leaders, "assists")} statKey="assists" />
         <LeaderTable title="Points" rows={topBy(leaders, "points")} statKey="points" />
-        <LeaderTable title="Shots" rows={topBy(leaders, "shots")} statKey="shots" />
         <LeaderTable title="Saves" rows={topBy(leaders, "saves")} statKey="saves" />
       </ContentContainer>
 

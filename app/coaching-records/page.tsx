@@ -6,7 +6,7 @@ import { coachRecords } from "@/lib/games"
 import { ContentContainer, PageHeader } from "@/components/archive-ui"
 
 type ExpandedRecord = { wins: number; losses: number; ties: number; label: string }
-type CoachInfo = { fullName: string; image: string; highlights: string[]; current?: boolean; expandedRecord?: ExpandedRecord }
+type CoachInfo = { fullName: string; image: string; highlights: string[]; current?: boolean; expandedRecord?: ExpandedRecord; recordNote?: string }
 
 const COACH_INFO: Record<string, CoachInfo> = {
   Everett: {
@@ -25,6 +25,7 @@ const COACH_INFO: Record<string, CoachInfo> = {
     fullName: "Gary Ruhle",
     image: "/coaches/gary-ruhle.jpg",
     highlights: ["Program's first recorded varsity seasons", "Built the program from scratch"],
+    recordNote: "Season records for 2003 and 2004 are not currently documented in the archive and are not reflected in the totals below.",
   },
 }
 
@@ -65,6 +66,8 @@ export default async function CoachingRecordsPage() {
                 <div className="mt-7"><p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">Documented varsity record</p><div className="grid grid-cols-2 gap-3 md:grid-cols-5">
                   {[['Wins', coach.wins, 'text-green-700'], ['Losses', coach.losses, 'text-red-700'], ['Ties', coach.ties, 'text-blue-700'], ['Games', coach.wins + coach.losses + coach.ties, 'text-foreground'], ['Win %', `${coach.winPct.toFixed(1)}%`, 'text-primary']].map(([label, value, color]) => <div key={String(label)} className="rounded-xl border bg-background p-4"><p className="text-xs font-semibold uppercase text-muted-foreground">{label}</p><p className={`mt-1 text-2xl font-black ${color}`}>{value}</p></div>)}
                 </div></div>
+
+                {info?.recordNote ? <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{info.recordNote}</p> : null}
 
                 {expanded && reportedScrimmages ? <div className="mt-6 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
                   <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"><div><p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">{expanded.label}</p><p className="mt-1 text-3xl font-black">{expanded.wins}-{expanded.losses}-{expanded.ties}</p><p className="mt-2 text-sm text-muted-foreground">Expanded total: {expandedGames} contests, {((expanded.wins / expandedGames) * 100).toFixed(1)}% wins</p></div><div className="rounded-xl bg-background px-4 py-3 ring-1 ring-border"><p className="text-xs font-semibold uppercase text-muted-foreground">Reported scrimmage subtotal</p><p className="mt-1 text-xl font-black">{reportedScrimmages.wins}-{reportedScrimmages.losses}-{reportedScrimmages.ties}</p><p className="text-xs text-muted-foreground">22 contests not itemized in the game archive</p></div></div>

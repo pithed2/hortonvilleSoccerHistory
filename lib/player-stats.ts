@@ -297,10 +297,10 @@ export type AllTimeLeader = {
 export function allTimePlayerLeaders(): AllTimeLeader[] {
   const byPlayer = new Map<string, AllTimeLeader>()
 
-  for (const row of playerSeasonStatsBySeasonRange(2007, 2026)) {
-    if (!byPlayer.has(row.player_name)) {
-      byPlayer.set(row.player_name, {
-        player_name: row.player_name,
+  function ensure(name: string): AllTimeLeader {
+    if (!byPlayer.has(name)) {
+      byPlayer.set(name, {
+        player_name: name,
         seasons: [],
         gp: 0,
         goals: 0,
@@ -311,8 +311,11 @@ export function allTimePlayerLeaders(): AllTimeLeader[] {
         saves: 0,
       })
     }
+    return byPlayer.get(name)!
+  }
 
-    const leader = byPlayer.get(row.player_name)!
+  for (const row of playerSeasonStatsBySeasonRange(2007, 2026)) {
+    const leader = ensure(row.player_name)
     leader.seasons.push(row.season)
     leader.gp += row.gp
     leader.goals += row.goals
@@ -320,12 +323,37 @@ export function allTimePlayerLeaders(): AllTimeLeader[] {
     leader.points += row.points
     leader.shots += row.shots
     leader.sog += row.sog
+  }
+
+  // Saves come from the dedicated goalkeeper stats file, not the general player
+  // stats file: every documented season has a full goalkeeper entry there, while
+  // the general file only sporadically records saves for goalkeepers.
+  for (const row of allGoalkeeperSeasonStats()) {
+    const leader = ensure(row.player_name)
+    leader.seasons.push(row.season)
     leader.saves += row.saves
   }
 
   return Array.from(byPlayer.values()).map((leader) => ({
     ...leader,
     seasons: Array.from(new Set(leader.seasons)).sort((a, b) => a - b),
+  }))
+}
+
+function allGoalkeeperSeasonStats(): GoalkeeperSeasonStats[] {
+  return readRows("goalkeeper-season-stats.csv").map((row) => ({
+    season: toNumber(row.season),
+    player_name: row.player_name,
+    class: row.class,
+    number: row.number,
+    gp: toNumber(row.gp),
+    minutes: toNumber(row.minutes),
+    ga: toNumber(row.ga),
+    saves: toNumber(row.saves),
+    pksv: toNumber(row.pksv),
+    save_pct: toNumber(row.save_pct),
+    gaa: toNumber(row.gaa),
+    opp_sog: toNumber(row.opp_sog),
   }))
 }
 
