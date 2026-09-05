@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { Facebook, Instagram } from "lucide-react"
 
 const FACEBOOK_PAGE_URL = "https://www.facebook.com/profile.php?id=61588501114059"
@@ -14,12 +14,12 @@ const INSTAGRAM_FEATURED_POST_URL = "https://www.instagram.com/p/Dc2RTgHDQ5c/"
 
 declare global {
   interface Window {
-    FB?: { XFBML: { parse: () => void } }
+    FB?: { XFBML: { parse: (node?: HTMLElement) => void } }
     instgrm?: { Embeds: { process: () => void } }
   }
 }
 
-function loadEmbedScript(src: string, id: string) {
+function loadScriptOnce(src: string, id: string) {
   if (document.getElementById(id)) return
   const script = document.createElement("script")
   script.id = id
@@ -30,12 +30,34 @@ function loadEmbedScript(src: string, id: string) {
 }
 
 export function SocialFeedSection() {
-  useEffect(() => {
-    if (window.FB) window.FB.XFBML.parse()
-    else loadEmbedScript("https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0", "facebook-jssdk")
+  const fbContainerRef = useRef<HTMLDivElement>(null)
+  const igContainerRef = useRef<HTMLDivElement>(null)
 
+  // FB/IG scripts mutate this markup directly (replacing it with an iframe),
+  // outside React's knowledge. Rendering into a ref'd container that React
+  // never puts JSX children into — instead filled once via innerHTML — keeps
+  // React from ever trying to reconcile/removeChild nodes the third-party
+  // script has already swapped out (which otherwise crashes on remount).
+  useEffect(() => {
+    const fbContainer = fbContainerRef.current
+    if (fbContainer && !fbContainer.hasChildNodes()) {
+      fbContainer.innerHTML = `
+        <div class="fb-page" data-href="${FACEBOOK_PAGE_URL}" data-tabs="timeline" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+          <blockquote cite="${FACEBOOK_PAGE_URL}" class="fb-xfbml-parse-ignore">
+            <a href="${FACEBOOK_PAGE_URL}" target="_blank" rel="noreferrer">Hortonville Boys Soccer</a>
+          </blockquote>
+        </div>
+      `
+    }
+    if (window.FB) window.FB.XFBML.parse(fbContainer ?? undefined)
+    else loadScriptOnce("https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0", "facebook-jssdk")
+
+    const igContainer = igContainerRef.current
+    if (igContainer && !igContainer.hasChildNodes() && INSTAGRAM_FEATURED_POST_URL) {
+      igContainer.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${INSTAGRAM_FEATURED_POST_URL}" data-instgrm-version="14" style="margin:0;min-width:0;width:100%"></blockquote>`
+    }
     if (window.instgrm) window.instgrm.Embeds.process()
-    else loadEmbedScript("https://www.instagram.com/embed.js", "instagram-embed-js")
+    else loadScriptOnce("https://www.instagram.com/embed.js", "instagram-embed-js")
   }, [])
 
   return (
@@ -58,22 +80,7 @@ export function SocialFeedSection() {
               </div>
             </div>
             <div id="fb-root" />
-            <div className="overflow-hidden rounded-xl">
-              <div
-                className="fb-page"
-                data-href={FACEBOOK_PAGE_URL}
-                data-tabs="timeline"
-                data-height="300"
-                data-small-header="true"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="false"
-              >
-                <blockquote cite={FACEBOOK_PAGE_URL} className="fb-xfbml-parse-ignore">
-                  <a href={FACEBOOK_PAGE_URL} target="_blank" rel="noreferrer">Hortonville Boys Soccer</a>
-                </blockquote>
-              </div>
-            </div>
+            <div ref={fbContainerRef} className="min-h-[300px] overflow-hidden rounded-xl" />
           </article>
 
           <article className="surface-card p-5 sm:p-7">
@@ -85,9 +92,7 @@ export function SocialFeedSection() {
               </div>
             </div>
             {INSTAGRAM_FEATURED_POST_URL ? (
-              <div className="mx-auto max-h-[340px] w-full max-w-[340px] overflow-y-auto rounded-xl">
-                <blockquote className="instagram-media" data-instgrm-permalink={INSTAGRAM_FEATURED_POST_URL} data-instgrm-version="14" style={{ margin: 0, minWidth: 0, width: "100%" }} />
-              </div>
+              <div ref={igContainerRef} className="mx-auto max-h-[340px] w-full max-w-[340px] overflow-y-auto rounded-xl" />
             ) : (
               <div className="empty-state">
                 <div className="empty-state-icon"><Instagram className="size-6" aria-hidden="true" /></div>
