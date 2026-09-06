@@ -83,8 +83,14 @@ export default async function SeasonYearPage({ params }: Props) {
 
   const roster = rosterBySeason(year);
   const varsityHistory = varsityHistoryByPlayer();
-  const playerStats = playerSeasonStatsBySeason(year).sort((a, b) => compareJerseyNumbers(a.number, b.number) || a.player_name.localeCompare(b.player_name));
+  const playerStats = playerSeasonStatsBySeason(year);
   const goalkeeperStats = goalkeeperSeasonStatsBySeason(year).sort((a, b) => compareJerseyNumbers(a.number, b.number) || a.player_name.localeCompare(b.player_name));
+  for (const keeper of goalkeeperStats) {
+    if (!roster.some(player => player.player_name === keeper.player_name)) {
+      roster.push({ season: year, player_name: keeper.player_name, number: keeper.number, class: keeper.class, position: "GK" });
+    }
+  }
+  roster.sort((a, b) => compareJerseyNumbers(a.number, b.number) || a.player_name.localeCompare(b.player_name));
   const boxscores = new Map(boxscoreGamesBySeason(year).map((game) => [game.game_number, game]));
   const cell = "border-b px-3 py-3 text-left tabular-nums";
   const sections = [{ id: "schedule", label: "Schedule", show: true }, { id: "roster", label: "Roster", show: roster.length > 0 }, { id: "players", label: "Player Stats", show: playerStats.length > 0 }, { id: "goalkeepers", label: "Goalkeepers", show: goalkeeperStats.length > 0 }];
