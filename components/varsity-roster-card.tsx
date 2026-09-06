@@ -27,6 +27,7 @@ export function VarsityRosterCard({ player, history }: { player: RosterPlayer; h
       <ChevronDown aria-hidden="true" className="h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-180" />
     </summary>
     <div className="space-y-5 border-t p-4">
+      <p className="text-sm text-muted-foreground"><span className="font-semibold text-foreground">Games played (GP):</span> Only games in which a statistic was recorded for this player are counted. Season and career totals may be lower than the actual number of games played.</p>
       <section aria-label={`${player.player_name} varsity career totals`} className="rounded-xl border border-primary/20 bg-primary/5 p-3">
         <h3 className="font-black text-primary">Varsity career totals</h3>
         {history.some(season => season.stats) ? <StatGrid row={scoringTotals} fields={fieldStats.slice(0, 4)} /> : null}
