@@ -27,6 +27,7 @@ const navGroups = [
     links: [
       { label: "Season Statistics", href: "/stats" },
       { label: "All-Time Leaders", href: "/stats/leaders" },
+      { label: "Single-Game & Season Records", href: "/stats/records" },
       { label: "Head to Head", href: "/head-to-head" },
     ],
   },

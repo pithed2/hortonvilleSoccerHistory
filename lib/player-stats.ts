@@ -81,6 +81,14 @@ export type RosterPlayer = {
   position: string
 }
 
+export function varsityRecordSources() {
+  return {
+    players: readRows("player-season-stats.csv"),
+    keepers: readRows("goalkeeper-season-stats.csv"),
+    boxscores: readRows("boxscore-player-stats.csv"),
+  }
+}
+
 export type VarsitySeasonHistory = {
   season: number
   stats?: Record<string, string>

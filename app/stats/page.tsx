@@ -19,6 +19,7 @@ export default async function StatsPage() {
       <PageHeader eyebrow="Program records" title="Season Statistics" description="The complete documented record of Hortonville boys varsity soccer." />
 
       <ContentContainer className="py-12 md:py-16">
+        <Link href="/stats/records" className="action-primary mb-8">Single-Game &amp; Season Records <ArrowRight className="h-4 w-4" /></Link>
         {/* Program Overview */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-14">
           <div className="surface-card p-6"><Trophy className="mb-4 h-6 w-6 text-primary" />
