@@ -71,6 +71,35 @@ export type RosterPlayer = {
   position: string
 }
 
+export type VarsitySeasonHistory = {
+  season: number
+  stats?: Record<string, string>
+  goalkeeper?: Record<string, string>
+}
+
+/** Include roster-only seasons, preserving blanks as undocumented statistics. */
+export function varsityHistoryByPlayer(): Map<string, VarsitySeasonHistory[]> {
+  const players = new Map<string, Map<number, VarsitySeasonHistory>>()
+  for (const [file, kind] of [
+    ["rosters.csv", "roster"],
+    ["player-season-stats.csv", "stats"],
+    ["goalkeeper-season-stats.csv", "goalkeeper"],
+  ] as const) {
+    for (const row of readRows(file)) {
+      const season = Number(row.season)
+      if (!row.player_name || !Number.isInteger(season) || season <= 0) continue
+      const seasons = players.get(row.player_name) ?? new Map<number, VarsitySeasonHistory>()
+      const entry = seasons.get(season) ?? { season }
+      if (kind !== "roster") entry[kind] = row
+      seasons.set(season, entry)
+      players.set(row.player_name, seasons)
+    }
+  }
+  return new Map(Array.from(players, ([name, seasons]) => [
+    name, Array.from(seasons.values()).sort((a, b) => b.season - a.season),
+  ]))
+}
+
 export function rosterBySeason(year: number): RosterPlayer[] {
   return readRows("rosters.csv")
     .map((row) => ({

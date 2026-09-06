@@ -2,6 +2,7 @@ export const runtime = "nodejs";
 export const revalidate = 60;
 
 import Link from "next/link";
+import { VarsityRosterCard } from "@/components/varsity-roster-card";
 import { CalendarDays, Goal, Shield, Trophy, Users } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
@@ -13,6 +14,7 @@ import {
   goalkeeperSeasonStatsBySeason,
   playerSeasonStatsBySeason,
   rosterBySeason,
+  varsityHistoryByPlayer,
   type BoxscoreGame,
 } from "@/lib/player-stats";
 
@@ -79,6 +81,7 @@ export default async function SeasonYearPage({ params }: Props) {
   }
 
   const roster = rosterBySeason(year);
+  const varsityHistory = varsityHistoryByPlayer();
   const playerStats = playerSeasonStatsBySeason(year);
   const goalkeeperStats = goalkeeperSeasonStatsBySeason(year);
   const boxscores = new Map(boxscoreGamesBySeason(year).map((game) => [game.game_number, game]));
@@ -101,7 +104,7 @@ export default async function SeasonYearPage({ params }: Props) {
           {games.map((game, index) => <GameRow key={`${game.date}-${game.opponent}-${index}`} game={game} number={index + 1} boxscore={boxscores.get(index + 1)} />)}
         </div>
       </section>
-      {roster.length ? <section id="roster" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><Users className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Roster</h2></div><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{roster.map((player) => <div key={player.player_name} className="flex items-center gap-4 rounded-xl border bg-card p-4"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 font-black text-primary">{player.number || "-"}</span><div><p className="font-bold">{player.player_name}</p><p className="text-sm text-muted-foreground">{[player.class, player.position].filter(Boolean).join(" / ") || "Rostered player"}</p></div></div>)}</div></section> : null}
+      {roster.length ? <section id="roster" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><Users className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Roster</h2></div><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{roster.map((player) => <VarsityRosterCard key={player.player_name} player={player} history={varsityHistory.get(player.player_name) ?? []} />)}</div></section> : null}
       {playerStats.length ? <section id="players" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><Goal className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Player Stats</h2></div><div className="overflow-x-auto rounded-2xl border bg-card shadow-sm"><table className="w-full min-w-[820px] text-sm"><caption className="sr-only">{year} player season statistics</caption><thead className="bg-muted/60"><tr><th scope="col" className={cell}>Player</th><th scope="col" className={cell}>GP</th><th scope="col" className={cell}>G</th><th scope="col" className={cell}>A</th><th scope="col" className={cell}>Pts</th><th scope="col" className={cell}>Shots</th><th scope="col" className={cell}>SOG</th><th scope="col" className={cell}>YC</th><th scope="col" className={cell}>RC</th></tr></thead><tbody>{playerStats.map((player) => <tr key={player.player_name} className="even:bg-muted/20"><td className={`${cell} font-bold`}>{player.player_name}</td><td className={cell}>{player.gp}</td><td className={cell}>{player.goals}</td><td className={cell}>{player.assists}</td><td className={`${cell} font-black text-primary`}>{player.points}</td><td className={cell}>{player.shots}</td><td className={cell}>{player.sog}</td><td className={cell}>{player.yc}</td><td className={cell}>{player.rc}</td></tr>)}</tbody></table></div></section> : null}
       {goalkeeperStats.length ? <section id="goalkeepers" className="scroll-mt-36"><div className="mb-6 flex items-center gap-3"><Shield className="h-6 w-6 text-primary" /><h2 className="text-3xl font-black">Goalkeepers</h2></div><div className="overflow-x-auto rounded-2xl border bg-card shadow-sm"><table className="w-full min-w-[720px] text-sm"><caption className="sr-only">{year} goalkeeper season statistics</caption><thead className="bg-muted/60"><tr><th scope="col" className={cell}>Player</th><th scope="col" className={cell}>GP</th><th scope="col" className={cell}>Minutes</th><th scope="col" className={cell}>GA</th><th scope="col" className={cell}>Saves</th><th scope="col" className={cell}>Save %</th><th scope="col" className={cell}>GAA</th></tr></thead><tbody>{goalkeeperStats.map((keeper) => <tr key={keeper.player_name} className="even:bg-muted/20"><td className={`${cell} font-bold`}>{keeper.player_name}</td><td className={cell}>{keeper.gp}</td><td className={cell}>{keeper.minutes}</td><td className={cell}>{keeper.ga}</td><td className={cell}>{keeper.saves}</td><td className={cell}>{keeper.save_pct ? `${(keeper.save_pct * 100).toFixed(1)}%` : "-"}</td><td className={cell}>{keeper.gaa ? keeper.gaa.toFixed(2) : "-"}</td></tr>)}</tbody></table></div></section> : null}
     </div><Footer />
