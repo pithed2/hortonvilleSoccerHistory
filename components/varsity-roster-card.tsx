@@ -36,7 +36,7 @@ export function VarsityRosterCard({ player, history }: { player: RosterPlayer; h
       </section>
       {history.map(({ season, stats, goalkeeper }) => <section key={season} aria-label={`${player.player_name} ${season} statistics`}>
         <h3 className="font-black text-primary">{season} season</h3>
-        {stats ? <StatGrid row={stats} fields={fieldStats} /> : !goalkeeper ? <p className="mt-2 text-sm text-muted-foreground">Rostered this season; statistics not yet available.</p> : null}
+        {stats ? <StatGrid row={stats} fields={fieldStats} /> : !goalkeeper ? <p className="mt-2 text-sm text-muted-foreground">Rostered this season with no recorded goals, assists, or goalkeeper stats. Defensive contributions and other contributions on the field are not reflected in these numbers.</p> : null}
         {goalkeeper ? <><h4 className="mt-3 text-sm font-bold">Goalkeeping</h4><StatGrid row={goalkeeper} fields={keeperStats} />{goalkeeper.source_note ? <p className="mt-2 text-xs text-muted-foreground">{goalkeeper.source_note}</p> : null}</> : null}
       </section>)}
       <p className="text-xs text-muted-foreground">— = not recorded. Documented varsity seasons shown, newest first.</p>
