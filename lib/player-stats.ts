@@ -2,6 +2,11 @@ import fs from "node:fs"
 import path from "node:path"
 import { compareJerseyNumbers } from "./roster-order"
 
+// Verified historical spelling aliases. Jersey numbers never identify a player.
+const playerNameAliases: Record<string, string> = {
+  "Fenton Hershi": "Fenton Hirschi",
+}
+
 function parseCSV(text: string): { cols: string[]; rows: string[][] } {
   const clean = text.replace(/\r/g, "").replace(/^\uFEFF/, "")
   const lines = clean.split("\n").filter((line) => line.length)
@@ -60,6 +65,10 @@ function readRows(fileName: string): Record<string, string>[] {
     cols.forEach((col, index) => {
       row[col] = parts[index] ?? ""
     })
+    if (row.player_name) {
+      const name = row.player_name.trim().replace(/\s+/g, " ")
+      row.player_name = playerNameAliases[name] ?? name
+    }
     return row
   })
 }
