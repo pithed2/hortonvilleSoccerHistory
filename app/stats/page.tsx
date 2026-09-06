@@ -48,7 +48,7 @@ export default async function StatsPage() {
           <div>
             <h2 className="text-2xl font-black mb-2">All-Time Player Leaders</h2>
             <p className="text-muted-foreground">
-              View leaders for goals, assists, points, shots, and saves from available player stats.
+              View leaders for goals, assists, points, and saves from available player stats.
             </p>
           </div>
           <Link

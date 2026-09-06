@@ -1,5 +1,6 @@
 import fs from "node:fs"
 import path from "node:path"
+import { compareJerseyNumbers } from "./roster-order"
 
 function parseCSV(text: string): { cols: string[]; rows: string[][] } {
   const clean = text.replace(/\r/g, "").replace(/^\uFEFF/, "")
@@ -110,7 +111,7 @@ export function rosterBySeason(year: number): RosterPlayer[] {
       position: row.position,
     }))
     .filter((row) => row.season === year)
-    .sort((a, b) => a.player_name.localeCompare(b.player_name))
+    .sort((a, b) => compareJerseyNumbers(a.number, b.number) || a.player_name.localeCompare(b.player_name))
 }
 
 export type PlayerSeasonStats = {

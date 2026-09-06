@@ -4,7 +4,7 @@ import { programOverview } from "@/lib/games"
 
 const destinations = [
   { title: "Season Statistics", detail: "Year-by-year records and team performance", href: "/stats", icon: BarChart3 },
-  { title: "All-Time Leaders", detail: "Goals, assists, points, shots, and saves", href: "/stats/leaders", icon: ListOrdered },
+  { title: "All-Time Leaders", detail: "Goals, assists, points, and saves", href: "/stats/leaders", icon: ListOrdered },
   { title: "Head to Head", detail: "Hortonville’s record against every opponent", href: "/head-to-head", icon: Swords },
 ] as const
 
