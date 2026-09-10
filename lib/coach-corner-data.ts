@@ -48,16 +48,16 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
       return { Team: row.Team, Group: group, GroupPoints, HeadToHeadPoints: 0, HeadToHeadDetail: "", OverallPoints: row.Points, GD: row.GD, Rank: row.Rank, Rating: row.Rating, Seed: 0 }
     })
     for (const row of rows) {
-      const tiedTeams = new Set(rows.filter((candidate) => candidate.GroupPoints === row.GroupPoints).map((candidate) => candidate.Team))
+      const tiedTeams = new Set(rows.filter((candidate) => candidate.OverallPoints === row.OverallPoints && candidate.Team !== row.Team).map((candidate) => candidate.Team))
       const tiedGames = schedule.filter((game) => game.Team === row.Team && tiedTeams.has(game.Opponent) && game.Result)
       row.HeadToHeadPoints = tiedGames.reduce((points, game) => points + (game.Result === "W" ? 3 : game.Result && ["D", "T"].includes(game.Result) ? 1 : 0), 0)
       row.HeadToHeadDetail = tiedGames.map((game) => `${game.Result === "D" ? "T" : game.Result} vs ${game.Opponent}`).join(", ")
     }
-    rows.sort((a, b) => b.GroupPoints - a.GroupPoints
+    rows.sort((a, b) => b.OverallPoints - a.OverallPoints
       || b.HeadToHeadPoints - a.HeadToHeadPoints
-      || b.OverallPoints - a.OverallPoints
-      || b.GD - a.GD
       || (b.Rating ?? Number.NEGATIVE_INFINITY) - (a.Rating ?? Number.NEGATIVE_INFINITY)
+      || b.GroupPoints - a.GroupPoints
+      || b.GD - a.GD
       || a.Team.localeCompare(b.Team))
     let previous: typeof rows[number] | undefined
     rows.forEach((row, index) => {
