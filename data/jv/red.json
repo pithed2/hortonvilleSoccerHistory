@@ -2,40 +2,56 @@
   "stats": {
     "slug": "red",
     "team": "JV Red",
-    "updated": "September 3, 2026",
+    "updated": "September 10, 2026",
     "audit": {
       "sourceFile": "2026_Season_Stats.xlsx",
-      "sourceModifiedAt": "2026-09-04T04:37:25.000Z",
-      "sourceSha256": "f22f38fcba01580b5dfea413af605100c9a72a9dbfad5dfbf141d3f72d786d87",
-      "importedAt": "2026-09-04T18:19:00.127Z",
+      "sourceModifiedAt": "2026-09-10T23:30:55.000Z",
+      "sourceSha256": "4925ab588049c7e956664e078f52a3146fc0c8ceed75982caadf7a001ae2241c",
+      "importedAt": "2026-09-10T23:41:04.267Z",
       "validation": "passed",
       "validationSummary": "Schedule, completed-game count, team totals, player totals, goalkeeper totals, and scoring logs reconciled.",
       "approvedBy": "Andrew Montalbano"
     },
     "record": {
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
       "conference": "2–1–0"
     },
     "totals": {
-      "goalsFor": 19,
+      "goalsFor": 28,
       "goalsAgainst": 5,
-      "shots": 93,
-      "sog": 55,
-      "saves": 19
+      "shots": 112,
+      "sog": 66,
+      "saves": 21
     },
     "goalkeepers": [
       {
         "number": 31,
         "name": "Henri Waite",
-        "games": 5,
-        "saves": 19,
-        "minutes": 375,
+        "games": 6,
+        "saves": 20,
+        "minutes": 430,
         "goalsAgainst": 5
+      },
+      {
+        "number": 5,
+        "name": "Nolan Raaths",
+        "games": 1,
+        "saves": 1,
+        "minutes": 5,
+        "goalsAgainst": 0
       }
     ],
     "recent": [
+      {
+        "id": 6,
+        "date": "Sep 10",
+        "opponent": "St. Mary Central",
+        "location": "Home",
+        "score": "9–0",
+        "result": "W"
+      },
       {
         "id": 5,
         "date": "Sep 3",
@@ -79,11 +95,6 @@
     ],
     "upcoming": [
       {
-        "date": "Sep 10",
-        "opponent": "St. Mary Central",
-        "location": "Home"
-      },
-      {
         "date": "Sep 15",
         "opponent": "Neenah",
         "location": "Away"
@@ -123,23 +134,47 @@
       {
         "number": 22,
         "name": "Amos Arndt",
-        "gp": 5,
-        "goals": 5,
+        "gp": 6,
+        "goals": 6,
         "assists": 1,
-        "points": 11
+        "points": 13
+      },
+      {
+        "number": 6,
+        "name": "Parker Anderson",
+        "gp": 6,
+        "goals": 5,
+        "assists": 2,
+        "points": 12
       },
       {
         "number": 15,
         "name": "Sam Radle",
-        "gp": 5,
+        "gp": 6,
         "goals": 3,
         "assists": 1,
         "points": 7
       },
       {
-        "number": 6,
-        "name": "Parker Anderson",
-        "gp": 5,
+        "number": 20,
+        "name": "Beckett Feldbruegge",
+        "gp": 6,
+        "goals": 3,
+        "assists": 0,
+        "points": 6
+      },
+      {
+        "number": 12,
+        "name": "Brody Schroeder",
+        "gp": 6,
+        "goals": 3,
+        "assists": 0,
+        "points": 6
+      },
+      {
+        "number": 16,
+        "name": "Carson Sanford",
+        "gp": 6,
         "goals": 2,
         "assists": 1,
         "points": 5
@@ -147,71 +182,47 @@
       {
         "number": 19,
         "name": "Timmy VanSchyndel",
-        "gp": 5,
+        "gp": 6,
         "goals": 2,
         "assists": 1,
+        "points": 5
+      },
+      {
+        "number": 9,
+        "name": "Ben Parker",
+        "gp": 6,
+        "goals": 1,
+        "assists": 3,
         "points": 5
       },
       {
         "number": 14,
         "name": "Owen Pavich",
-        "gp": 5,
+        "gp": 6,
         "goals": 1,
         "assists": 3,
         "points": 5
       },
       {
-        "number": 20,
-        "name": "Beckett Feldbruegge",
-        "gp": 5,
-        "goals": 2,
-        "assists": 0,
-        "points": 4
-      },
-      {
-        "number": 12,
-        "name": "Brody Schroeder",
-        "gp": 5,
-        "goals": 2,
-        "assists": 0,
-        "points": 4
-      },
-      {
         "number": 10,
         "name": "Hunter Hasseler",
-        "gp": 5,
+        "gp": 6,
         "goals": 1,
         "assists": 1,
-        "points": 3
-      },
-      {
-        "number": 9,
-        "name": "Ben Parker",
-        "gp": 5,
-        "goals": 0,
-        "assists": 3,
         "points": 3
       },
       {
         "number": 18,
         "name": "Grayson Ackermann",
-        "gp": 5,
+        "gp": 6,
         "goals": 1,
         "assists": 0,
         "points": 2
       },
       {
-        "number": 16,
-        "name": "Carson Sanford",
-        "gp": 5,
-        "goals": 0,
-        "assists": 1,
-        "points": 1
-      },
-      {
         "number": 24,
         "name": "Ethen LaPlant",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -219,7 +230,7 @@
       {
         "number": 23,
         "name": "Jaxon Wolff",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -227,7 +238,7 @@
       {
         "number": 26,
         "name": "Leon Ryzhov",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -235,7 +246,23 @@
       {
         "number": 8,
         "name": "Oliver Plamann",
-        "gp": 5,
+        "gp": 6,
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      {
+        "number": 2,
+        "name": "Parker Rugotska",
+        "gp": 6,
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      {
+        "number": 4,
+        "name": "Weston Ehr",
+        "gp": 6,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -243,7 +270,7 @@
       {
         "number": 13,
         "name": "Aaron Young",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -251,7 +278,7 @@
       {
         "number": 3,
         "name": "Dylan McFarlane",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -259,7 +286,15 @@
       {
         "number": 21,
         "name": "Easton Slomski",
-        "gp": 5,
+        "gp": 6,
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      {
+        "number": 17,
+        "name": "Henri Waite",
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -267,7 +302,7 @@
       {
         "number": 31,
         "name": "Henri Waite",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -283,7 +318,7 @@
       {
         "number": 11,
         "name": "Jaxton Seefeldt",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -291,23 +326,7 @@
       {
         "number": 5,
         "name": "Nolan Raaths",
-        "gp": 5,
-        "goals": 0,
-        "assists": 0,
-        "points": 0
-      },
-      {
-        "number": 2,
-        "name": "Parker Rugotska",
-        "gp": 5,
-        "goals": 0,
-        "assists": 0,
-        "points": 0
-      },
-      {
-        "number": 4,
-        "name": "Weston Ehr",
-        "gp": 5,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -1246,6 +1265,230 @@
           "half": "2nd",
           "scorer": "15 - Sam Radle",
           "assist": "16 - Carson Sanford"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "date": "2026-09-10",
+      "opponent": "St. Mary Central",
+      "location": "Home",
+      "conference": false,
+      "result": "W",
+      "team": {
+        "shots": 19,
+        "sog": 11,
+        "saves": 2,
+        "yc": 0,
+        "rc": 0,
+        "goals": 9
+      },
+      "opponentTotals": {
+        "shots": 2,
+        "saves": 1,
+        "goals": 0
+      },
+      "players": [
+        {
+          "player": "2 - Parker Rugotska",
+          "shots": 0,
+          "sog": 0,
+          "goals": 0,
+          "assists": 1,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "4 - Weston Ehr",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 1,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "5 - Nolan Raaths",
+          "shots": 0,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 1,
+          "gkMinutes": 5
+        },
+        {
+          "player": "6 - Parker Anderson",
+          "shots": 4,
+          "sog": 3,
+          "goals": 3,
+          "assists": 1,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "9 - Ben Parker",
+          "shots": 1,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "12 - Brody Schroeder",
+          "shots": 2,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "14 - Owen Pavich",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "15 - Sam Radle",
+          "shots": 2,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "16 - Carson Sanford",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "31 - Henri Waite",
+          "shots": 0,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 1,
+          "gkMinutes": 55
+        },
+        {
+          "player": "16 - Carson Sanford",
+          "shots": 2,
+          "sog": 2,
+          "goals": 2,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "20 - Beckett Feldbruegge",
+          "shots": 2,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "21 - Easton Slomski",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "22 - Amos Arndt",
+          "shots": 2,
+          "sog": 2,
+          "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        }
+      ],
+      "scoring": [
+        {
+          "half": "1st",
+          "scorer": "6 - Parker Anderson",
+          "assist": "2 - Parker Rugotska"
+        },
+        {
+          "half": "1st",
+          "scorer": "18 - Grayson Ackermann",
+          "assist": "6 - Parker Anderson"
+        },
+        {
+          "half": "1st",
+          "scorer": "6 - Parker Anderson",
+          "assist": null
+        },
+        {
+          "half": "1st",
+          "scorer": "18 - Grayson Ackermann",
+          "assist": null
+        },
+        {
+          "half": "1st",
+          "scorer": "20 - Beckett Feldbruegge",
+          "assist": null
+        },
+        {
+          "half": "1st",
+          "scorer": "22 - Amos Arndt",
+          "assist": "4 - Weston Ehr"
+        },
+        {
+          "half": "1st",
+          "scorer": "9 - Ben Parker",
+          "assist": null
+        },
+        {
+          "half": "2nd",
+          "scorer": "12 - Brody Schroeder",
+          "assist": null
+        },
+        {
+          "half": "2nd",
+          "scorer": "6 - Parker Anderson",
+          "assist": null
         }
       ]
     }
