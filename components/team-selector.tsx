@@ -22,9 +22,9 @@ const teams = [
   },
   {
     name: "JV Black/Gray",
-    detail: "Team season center",
-    href: null,
-    status: "In Progress",
+    detail: "Team schedules and game details",
+    href: "/jv/black-gray",
+    status: "Season Live",
   },
 ] as const
 
