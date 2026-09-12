@@ -1,0 +1,36 @@
+{
+  "team": "JV Black/Gray",
+  "updated": "2026-09-12",
+  "squads": {
+    "black": {
+      "name": "JV Black",
+      "roster": []
+    },
+    "gray": {
+      "name": "JV Gray",
+      "roster": [
+        { "number": "21/1", "name": "Ayden Lenth", "position": "GK" },
+        { "number": "2", "name": "Aarav Patel", "position": "M" },
+        { "number": "3", "name": "Emery Liesch", "position": "D" },
+        { "number": "4", "name": "Wyatt Harrop", "position": "D" },
+        { "number": "5", "name": "Joseph Nennig", "position": "D" },
+        { "number": "6", "name": "Levi Goin", "position": "M" },
+        { "number": "7", "name": "Ezekiel Hartjes", "position": "M" },
+        { "number": "8", "name": "Colton Daniels", "position": "F" },
+        { "number": "9", "name": "Neel Patel", "position": "F" },
+        { "number": "10", "name": "Myles Froehlich", "position": "F" },
+        { "number": "12", "name": "Ethan Nysse", "position": "M" },
+        { "number": "13", "name": "Jacob Sommers", "position": "D" },
+        { "number": "14", "name": "Jovany ElwingVargas", "position": "D" },
+        { "number": "17", "name": "Keegan Vancamp", "position": "D" },
+        { "number": "22", "name": "Kellan Mullock", "position": "D" },
+        { "number": "25", "name": "Max Lorge", "position": "D" }
+      ]
+    }
+  },
+  "audit": {
+    "sourceFile": "2026 Hortonville Boys Soccer JV Gray.pdf",
+    "importedAt": "2026-09-12",
+    "notes": "JV Gray roster imported from official program roster PDF. JV Black roster and game-by-game stats for both squads are still pending."
+  }
+}

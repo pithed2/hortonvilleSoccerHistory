@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowUpRight, Clock3 } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 const teams = [
   {
@@ -41,28 +41,20 @@ export function TeamSelector() {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          {teams.map((team) => {
-            const content = (
-              <article className={`group flex min-h-44 flex-col p-5 ${team.href ? "surface-card-interactive" : "rounded-2xl border border-dashed bg-muted/30"}`}>
+          {teams.map((team) => (
+            <Link key={team.name} href={team.href} className="rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4">
+              <article className="surface-card-interactive group flex min-h-44 flex-col p-5">
                 <div className="flex items-center justify-between gap-3">
-                  <span className={`rounded-full px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.12em] ${team.href ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"}`}>
+                  <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.12em] text-primary">
                     {team.status}
                   </span>
-                  {team.href ? <ArrowUpRight className="size-5 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" /> : <Clock3 className="size-5 text-muted-foreground/60" aria-hidden="true" />}
+                  <ArrowUpRight className="size-5 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
                 </div>
                 <h3 className="mt-7 text-2xl font-black tracking-tight">{team.name}</h3>
                 <p className="mt-1 text-sm leading-6 text-muted-foreground">{team.detail}</p>
               </article>
-            )
-
-            return team.href ? (
-              <Link key={team.name} href={team.href} className="rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4">
-                {content}
-              </Link>
-            ) : (
-              <div key={team.name}>{content}</div>
-            )
-          })}
+            </Link>
+          ))}
         </div>
       </div>
     </section>
