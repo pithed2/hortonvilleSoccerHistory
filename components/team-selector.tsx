@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
-const teams = [
+const teams: Array<{ name: string; detail: string; status: string; href: string }> = [
   {
     name: "Varsity",
     detail: "Schedule, roster, and statistics",
@@ -26,7 +26,7 @@ const teams = [
     href: "/jv/black-gray",
     status: "Season Live",
   },
-] as const
+]
 
 export function TeamSelector() {
   return (

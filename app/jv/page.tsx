@@ -4,11 +4,11 @@ import { ArrowRight, Trophy, Users } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 
-const teams = [
+const teams: Array<{ name: string; description: string; status: string; href: string }> = [
   { name: "JV Red", description: "Results, schedule, full roster statistics, and individual game box scores for Coach Andy's JV Red team.", status: "Season Live", href: "/jv/red" },
   { name: "JV White", description: "Results, schedule, full roster statistics, and individual game box scores for Coach Alex's JV White team.", status: "Season Live", href: "/jv/white" },
   { name: "JV Black/Gray", description: "Results, schedule, full roster statistics, and individual game box scores for Coach Seth's JV Black & Gray teams.", status: "Season Live", href: "/jv/black-gray" },
-] as const
+]
 
 export default function JvLandingPage() {
   return <main id="main-content" className="min-h-screen bg-background">

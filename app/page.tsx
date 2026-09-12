@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { TeamSelector } from "@/components/team-selector"
+import { ImportantLinks } from "@/components/important-links"
 import { CurrentSeasonSection } from "@/components/current-season-section"
 import { SocialFeedSection } from "@/components/social-feed-section"
 import { HistoryPreview } from "@/components/history-preview"
@@ -13,6 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <TeamSelector />
+      <ImportantLinks />
       <CurrentSeasonSection />
       <SocialFeedSection />
       <HistoryPreview />
