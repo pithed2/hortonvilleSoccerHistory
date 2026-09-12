@@ -5,7 +5,7 @@ import { Navigation } from "@/components/navigation"
 
 const teams = [
   { name: "JV Red", description: "Results, schedule, full roster statistics, and individual game box scores.", status: "Season live", href: "/jv/red" },
-  { name: "JV White", description: "A dedicated season page for schedules, results, player statistics, and team progress.", status: "In Progress", href: null },
+  { name: "JV White", description: "A dedicated season page for schedules, results, player statistics, and team progress.", status: "Season live", href: "/jv/white" },
   { name: "JV Black/Gray", description: "A dedicated home for the team and its season information.", status: "In Progress", href: null },
 ] as const
 
