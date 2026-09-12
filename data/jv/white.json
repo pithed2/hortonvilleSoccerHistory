@@ -4,16 +4,15 @@
     "team": "JV White",
     "updated": "September 11, 2026",
     "sourceLabel": "Team score sheets",
-    "gamesNote": "Games assume every rostered JV White player participated in every recorded match, per team instructions. Goals: 2 points · Assists: 1 point.",
+    "gamesNote": "Games reflect team participation · Goals: 2 points · Assists: 1 point",
     "notes": [
-      "Rostered players with no goals or assists still contribute through defending and other play not reflected in these statistics.",
-      "Ben Decker’s minutes assume full matches: 80 minutes, reduced to 60 for wins by eight or more goals."
+      "Rostered players with no goals or assists still contribute through defending and other play not reflected in these statistics."
     ],
     "audit": {
       "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections",
       "sourceModifiedAt": "",
       "sourceSha256": "",
-      "importedAt": "2026-09-12T02:29:39.240Z",
+      "importedAt": "2026-09-12T02:29:39.24Z",
       "validation": "passed",
       "validationSummary": "All six results, venues, kickoff times, goalkeeper saves, and goal attribution confirmed by the team. Player goals total 36. Goalkeeper minutes and added shots on goal follow team instructions.",
       "approvedBy": "Andrew Montalbano"
@@ -357,8 +356,6 @@
       "result": "W",
       "sourceFile": "1000007458.jpg",
       "notes": [
-        "Shots on goal include one added for every goal, per team instructions.",
-        "Ben Decker credited with 60 minutes per the team’s full-match and mercy-rule assumptions.",
         "Wyatt Mauthepasch’s five goals include one penalty kick. Ben Decker recorded one assist."
       ],
       "scoringRecorded": false,
@@ -692,10 +689,7 @@
       "conference": false,
       "result": "T",
       "sourceFile": "1000007454.jpg",
-      "notes": [
-        "Shots on goal include one added for every goal, per team instructions.",
-        "Ben Decker credited with 80 minutes per the team’s full-match and mercy-rule assumptions."
-      ],
+      "notes": [],
       "scoringRecorded": false,
       "unattributedGoals": 0,
       "team": {
@@ -1026,11 +1020,7 @@
       "conference": true,
       "result": "W",
       "sourceFile": "1000007457.jpg",
-      "notes": [
-        "Shots on goal include one added for every goal, per team instructions.",
-        "Ben Decker credited with 60 minutes per the team’s full-match and mercy-rule assumptions.",
-        "Connor Schmitt is credited with the goal marked “1–OG” on the original sheet, as confirmed by the team."
-      ],
+      "notes": [],
       "scoringRecorded": false,
       "unattributedGoals": 0,
       "team": {
@@ -1361,10 +1351,7 @@
       "conference": false,
       "result": "W",
       "sourceFile": "1000007455.jpg",
-      "notes": [
-        "Shots on goal include one added for every goal, per team instructions.",
-        "Ben Decker credited with 60 minutes per the team’s full-match and mercy-rule assumptions."
-      ],
+      "notes": [],
       "scoringRecorded": false,
       "unattributedGoals": 0,
       "team": {
@@ -1695,10 +1682,7 @@
       "conference": false,
       "result": "W",
       "sourceFile": "1000007456.jpg",
-      "notes": [
-        "Shots on goal include one added for every goal, per team instructions.",
-        "Ben Decker credited with 80 minutes per the team’s full-match and mercy-rule assumptions."
-      ],
+      "notes": [],
       "scoringRecorded": false,
       "unattributedGoals": 0,
       "team": {
@@ -2029,10 +2013,7 @@
       "conference": true,
       "result": "W",
       "sourceFile": "1000007453.jpg",
-      "notes": [
-        "Shots on goal include one added for every goal, per team instructions.",
-        "Ben Decker credited with 80 minutes per the team’s full-match and mercy-rule assumptions."
-      ],
+      "notes": [],
       "scoringRecorded": false,
       "unattributedGoals": 0,
       "team": {
