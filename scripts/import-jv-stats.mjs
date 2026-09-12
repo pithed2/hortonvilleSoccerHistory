@@ -2,6 +2,7 @@ import { createHash } from "node:crypto"
 import fs from "node:fs"
 import path from "node:path"
 import XLSX from "xlsx"
+import { isJvConferenceOpponent } from "../lib/jv-conference.mjs"
 
 const projectRoot = process.cwd()
 const config = JSON.parse(fs.readFileSync(path.join(projectRoot, "data", "jv", "teams.config.json"), "utf8"))
@@ -104,7 +105,7 @@ const boxScores = completed.map((row) => {
     date: isoDate(row.Date),
     opponent: text(row.Opponent),
     location: text(row["H/A"]).toUpperCase() === "H" ? "Home" : "Away",
-    conference: text(row["Conf?"]).toUpperCase() === "Y",
+    conference: isJvConferenceOpponent(text(row.Opponent)),
     result: text(row.Result).toUpperCase(),
     team: { shots: number(row["Team Shots"]), sog: number(row["Team SOG"]), saves: number(row["Team Saves"]), yc: number(row["Team YC"]), rc: number(row["Team RC"]), goals: number(row.GF) },
     opponentTotals: { shots: number(row["Opp Shots"]), saves: number(row["Opp Saves"]), goals: number(row.GA) },
@@ -138,7 +139,7 @@ const goalkeepers = [...goalkeepersByKey.entries()].map(([key, totals]) => {
 const wins = completed.filter((row) => text(row.Result).toUpperCase() === "W").length
 const losses = completed.filter((row) => text(row.Result).toUpperCase() === "L").length
 const ties = completed.filter((row) => text(row.Result).toUpperCase() === "T").length
-const conferenceGames = completed.filter((row) => text(row["Conf?"]).toUpperCase() === "Y")
+const conferenceGames = completed.filter((row) => isJvConferenceOpponent(text(row.Opponent)))
 const conferenceRecord = ["W", "L", "T"].map((result) => conferenceGames.filter((row) => text(row.Result).toUpperCase() === result).length).join("–")
 const totals = completed.reduce((sum, row) => ({ goalsFor: sum.goalsFor + number(row.GF), goalsAgainst: sum.goalsAgainst + number(row.GA), shots: sum.shots + number(row["Team Shots"]), sog: sum.sog + number(row["Team SOG"]), saves: sum.saves + number(row["Team Saves"]) }), { goalsFor: 0, goalsAgainst: 0, shots: 0, sog: 0, saves: 0 })
 const sourceBuffer = fs.readFileSync(sourcePath)

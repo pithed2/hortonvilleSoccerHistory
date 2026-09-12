@@ -1,3 +1,4 @@
+import { isJvConferenceOpponent, jvConferenceRecord } from "./jv-conference.mjs"
 import whiteData from "@/data/jv/white.json"
 import redData from "@/data/jv/red.json"
 
@@ -49,7 +50,12 @@ export function isJvTeamSlug(value: string): value is JvTeamSlug {
 }
 
 export function getJvTeam(slug: JvTeamSlug) {
-  return teams[slug] ?? null
+  const bundle = teams[slug]
+  if (!bundle) return null
+  return {
+    stats: { ...bundle.stats, record: { ...bundle.stats.record, conference: jvConferenceRecord(bundle.boxScores) } },
+    boxScores: bundle.boxScores.map(game => ({ ...game, conference: isJvConferenceOpponent(game.opponent) })),
+  }
 }
 
 export function getJvBoxScore(slug: JvTeamSlug, id: number) {

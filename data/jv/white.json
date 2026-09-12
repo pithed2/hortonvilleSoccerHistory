@@ -22,7 +22,7 @@
       "wins": 5,
       "losses": 0,
       "ties": 1,
-      "conference": "Not confirmed"
+      "conference": "2–0–0"
     },
     "totals": {
       "goalsFor": 36,
@@ -1023,7 +1023,7 @@
       "date": "2026-08-27",
       "opponent": "Neenah",
       "location": "Home · Grass Field",
-      "conference": false,
+      "conference": true,
       "result": "W",
       "sourceFile": "1000007457.jpg",
       "notes": [
@@ -2026,7 +2026,7 @@
       "date": "2026-09-08",
       "opponent": "Appleton East",
       "location": "Home · Akin Field",
-      "conference": false,
+      "conference": true,
       "result": "W",
       "sourceFile": "1000007453.jpg",
       "notes": [
