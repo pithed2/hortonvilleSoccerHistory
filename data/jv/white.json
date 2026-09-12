@@ -4,7 +4,7 @@
     "team": "JV White",
     "updated": "September 11, 2026",
     "sourceLabel": "Team score sheets",
-    "gamesNote": "Games count only matches with a recorded goal, assist, or goalkeeper appearance. A zero does not mean the player did not play. Goals: 2 points · Assists: 1 point.",
+    "gamesNote": "Games assume every rostered JV White player participated in every recorded match, per team instructions. Goals: 2 points · Assists: 1 point.",
     "notes": [
       "Rostered players with no goals or assists still contribute through defending and other play not reflected in these statistics.",
       "Ben Decker’s minutes assume full matches: 80 minutes, reduced to 60 for wins by eight or more goals."
@@ -132,7 +132,7 @@
       {
         "number": 2,
         "name": "Riley Loewenhagen",
-        "gp": 0,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -141,7 +141,7 @@
       {
         "number": 3,
         "name": "Riley Handevidt",
-        "gp": 0,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -150,7 +150,7 @@
       {
         "number": 4,
         "name": "Isaac Reynolds",
-        "gp": 2,
+        "gp": 6,
         "goals": 1,
         "assists": 1,
         "points": 3,
@@ -159,7 +159,7 @@
       {
         "number": 5,
         "name": "Carter Possley",
-        "gp": 2,
+        "gp": 6,
         "goals": 0,
         "assists": 4,
         "points": 4,
@@ -168,7 +168,7 @@
       {
         "number": 6,
         "name": "Jack Lorge",
-        "gp": 3,
+        "gp": 6,
         "goals": 1,
         "assists": 2,
         "points": 4,
@@ -177,7 +177,7 @@
       {
         "number": 7,
         "name": "Wyatt Mauthepasch",
-        "gp": 5,
+        "gp": 6,
         "goals": 8,
         "assists": 4,
         "points": 20,
@@ -186,7 +186,7 @@
       {
         "number": 8,
         "name": "Adam Palmer",
-        "gp": 0,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -195,7 +195,7 @@
       {
         "number": 9,
         "name": "Sam Larson",
-        "gp": 1,
+        "gp": 6,
         "goals": 1,
         "assists": 1,
         "points": 3,
@@ -204,7 +204,7 @@
       {
         "number": 10,
         "name": "Liam Evenson",
-        "gp": 5,
+        "gp": 6,
         "goals": 6,
         "assists": 5,
         "points": 17,
@@ -213,7 +213,7 @@
       {
         "number": 11,
         "name": "Bryce Draeger",
-        "gp": 1,
+        "gp": 6,
         "goals": 1,
         "assists": 0,
         "points": 2,
@@ -222,7 +222,7 @@
       {
         "number": 12,
         "name": "Connor Schmitt",
-        "gp": 2,
+        "gp": 6,
         "goals": 1,
         "assists": 1,
         "points": 3,
@@ -231,7 +231,7 @@
       {
         "number": 13,
         "name": "Bennett Froelich",
-        "gp": 1,
+        "gp": 6,
         "goals": 2,
         "assists": 0,
         "points": 4,
@@ -240,7 +240,7 @@
       {
         "number": 14,
         "name": "Matthew Racine",
-        "gp": 2,
+        "gp": 6,
         "goals": 3,
         "assists": 1,
         "points": 7,
@@ -249,7 +249,7 @@
       {
         "number": 15,
         "name": "Josh Petricca",
-        "gp": 1,
+        "gp": 6,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -258,7 +258,7 @@
       {
         "number": 16,
         "name": "Liam Adkins",
-        "gp": 1,
+        "gp": 6,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -267,7 +267,7 @@
       {
         "number": 17,
         "name": "Ollie Schmidt",
-        "gp": 0,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -276,7 +276,7 @@
       {
         "number": 18,
         "name": "James Forsythe",
-        "gp": 1,
+        "gp": 6,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -285,7 +285,7 @@
       {
         "number": 20,
         "name": "Nate Shaw",
-        "gp": 1,
+        "gp": 6,
         "goals": 2,
         "assists": 1,
         "points": 5,
@@ -303,7 +303,7 @@
       {
         "number": 22,
         "name": "Grayson Whitver",
-        "gp": 1,
+        "gp": 6,
         "goals": 1,
         "assists": 0,
         "points": 2,
@@ -312,7 +312,7 @@
       {
         "number": 23,
         "name": "Nate Diedrich",
-        "gp": 0,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -321,7 +321,7 @@
       {
         "number": 24,
         "name": "Carter Halford",
-        "gp": 0,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -330,7 +330,7 @@
       {
         "number": 25,
         "name": "Carter Hirschi",
-        "gp": 2,
+        "gp": 6,
         "goals": 1,
         "assists": 2,
         "points": 4,
@@ -339,7 +339,7 @@
       {
         "number": 26,
         "name": "Lachlan Elliott",
-        "gp": 0,
+        "gp": 6,
         "goals": 0,
         "assists": 0,
         "points": 0,
