@@ -4,33 +4,181 @@
   "squads": {
     "black": {
       "name": "JV Black",
-      "roster": []
+      "roster": [
+        {
+          "number": "21/1",
+          "name": "Ayden Lenth",
+          "position": "GK"
+        },
+        {
+          "number": "2",
+          "name": "Henri Biese",
+          "position": "D"
+        },
+        {
+          "number": "3",
+          "name": "Zachary Schramm",
+          "position": "D"
+        },
+        {
+          "number": "5",
+          "name": "Parker Mischler",
+          "position": "M"
+        },
+        {
+          "number": "6",
+          "name": "Finley Hoag",
+          "position": "M"
+        },
+        {
+          "number": "8",
+          "name": "Maxwell Gust",
+          "position": "F"
+        },
+        {
+          "number": "9",
+          "name": "Hudson Adkins",
+          "position": "D"
+        },
+        {
+          "number": "10",
+          "name": "Stanley Stinski©",
+          "position": "D"
+        },
+        {
+          "number": "12",
+          "name": "Nolan Annoye",
+          "position": "D"
+        },
+        {
+          "number": "14",
+          "name": "Zander Simons ©",
+          "position": "F"
+        },
+        {
+          "number": "15",
+          "name": "Rylen Mcclure",
+          "position": "M"
+        },
+        {
+          "number": "22",
+          "name": "Jaxon Laabs",
+          "position": "D"
+        },
+        {
+          "number": "23",
+          "name": "Liam Stanke",
+          "position": "D"
+        },
+        {
+          "number": "24",
+          "name": "Wesley Welbes",
+          "position": "D"
+        }
+      ],
+      "rosterNote": "2026 base roster"
     },
     "gray": {
       "name": "JV Gray",
       "roster": [
-        { "number": "21/1", "name": "Ayden Lenth", "position": "GK" },
-        { "number": "2", "name": "Aarav Patel", "position": "M" },
-        { "number": "3", "name": "Emery Liesch", "position": "D" },
-        { "number": "4", "name": "Wyatt Harrop", "position": "D" },
-        { "number": "5", "name": "Joseph Nennig", "position": "D" },
-        { "number": "6", "name": "Levi Goin", "position": "M" },
-        { "number": "7", "name": "Ezekiel Hartjes", "position": "M" },
-        { "number": "8", "name": "Colton Daniels", "position": "F" },
-        { "number": "9", "name": "Neel Patel", "position": "F" },
-        { "number": "10", "name": "Myles Froehlich", "position": "F" },
-        { "number": "12", "name": "Ethan Nysse", "position": "M" },
-        { "number": "13", "name": "Jacob Sommers", "position": "D" },
-        { "number": "14", "name": "Jovany ElwingVargas", "position": "D" },
-        { "number": "17", "name": "Keegan Vancamp", "position": "D" },
-        { "number": "22", "name": "Kellan Mullock", "position": "D" },
-        { "number": "25", "name": "Max Lorge", "position": "D" }
-      ]
+        {
+          "number": "21/1",
+          "name": "Ayden Lenth",
+          "position": "GK"
+        },
+        {
+          "number": "2",
+          "name": "Aarav Patel",
+          "position": "M"
+        },
+        {
+          "number": "3",
+          "name": "Emery Liesch",
+          "position": "D"
+        },
+        {
+          "number": "4",
+          "name": "Wyatt Harrop",
+          "position": "D"
+        },
+        {
+          "number": "5",
+          "name": "Joseph Nennig",
+          "position": "D"
+        },
+        {
+          "number": "6",
+          "name": "Levi Goin",
+          "position": "M"
+        },
+        {
+          "number": "7",
+          "name": "Ezekiel Hartjes",
+          "position": "M"
+        },
+        {
+          "number": "8",
+          "name": "Colton Daniels",
+          "position": "F"
+        },
+        {
+          "number": "9",
+          "name": "Neel Patel",
+          "position": "F"
+        },
+        {
+          "number": "10",
+          "name": "Myles Froehlich",
+          "position": "F"
+        },
+        {
+          "number": "12",
+          "name": "Ethan Nysse",
+          "position": "M"
+        },
+        {
+          "number": "13",
+          "name": "Jacob Sommers",
+          "position": "M"
+        },
+        {
+          "number": "14",
+          "name": "Jovany ElwingVargas",
+          "position": "D"
+        },
+        {
+          "number": "17",
+          "name": "Keegan Vancamp",
+          "position": "D"
+        },
+        {
+          "number": "22",
+          "name": "Kellan Mullock",
+          "position": "D"
+        },
+        {
+          "number": "25",
+          "name": "Max Lorge",
+          "position": "D"
+        }
+      ],
+      "rosterNote": "2026 base roster"
     }
   },
   "audit": {
-    "sourceFile": "2026 Hortonville Boys Soccer JV Gray.pdf",
+    "sources": [
+      {
+        "sourceFile": "2026 Boys Soccer - JV Black Roster_Populated.docx",
+        "sourceSha256": "f88da342c90dd484c7857ea79e6c35bba8ac8ffce076ce3118f5d00386150c29",
+        "gameDate": "2026-09-14"
+      },
+      {
+        "sourceFile": "2026 Boys Soccer - JV Gray Roster_Populated.docx",
+        "sourceSha256": "8928642e417db4392563fbe64046efb3d0433685157f8253128cbb484ffc4487",
+        "gameDate": "2026-09-17"
+      }
+    ],
     "importedAt": "2026-09-12",
-    "notes": "JV Gray roster imported from official program roster PDF. JV Black roster and game-by-game stats for both squads are still pending."
+    "notes": "Imported the base rosters from both supplied DOCX files: 14 JV Black players and 16 JV Gray players. Excluded the five appended players with unspecified numbers and positions from each squad per user clarification. All 16 prior JV Gray names and numbers match; Jacob Sommers position updated from D to M. Normalized Jovany ElWingVargas to existing Jovany ElwingVargas spelling. Game-by-game stats remain pending."
   }
 }

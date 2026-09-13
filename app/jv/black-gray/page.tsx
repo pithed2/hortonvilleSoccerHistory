@@ -19,11 +19,12 @@ function sortRoster(roster: RosterPlayer[]) {
   })
 }
 
-function RosterCard({ name, roster }: { name: string; roster: RosterPlayer[] }) {
+function RosterCard({ name, roster, rosterNote }: { name: string; roster: RosterPlayer[]; rosterNote: string }) {
   return (
     <article className="surface-card p-5 sm:p-7">
       <p className="section-eyebrow">Roster</p>
       <h2 className="text-2xl font-black">{name}</h2>
+      <p className="mt-2 text-sm text-muted-foreground">{rosterNote}</p>
       {roster.length ? (
         <div className="mt-4 overflow-x-auto">
           <Table>
@@ -31,9 +32,9 @@ function RosterCard({ name, roster }: { name: string; roster: RosterPlayer[] }) 
             <TableBody>
               {sortRoster(roster).map((player) => (
                 <TableRow key={`${player.number}-${player.name}`}>
-                  <TableCell className="font-black text-primary">{player.number}</TableCell>
+                  <TableCell className="font-black text-primary">{player.number || "—"}</TableCell>
                   <TableCell className="font-semibold">{player.name}</TableCell>
-                  <TableCell className="text-right text-muted-foreground">{player.position}</TableCell>
+                  <TableCell className="text-right text-muted-foreground">{player.position || "—"}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -53,8 +54,8 @@ export default function JvBlackGrayPage() {
     <div className="site-container space-y-6 py-10">
       <p className="text-sm leading-6 text-muted-foreground">{JV_CONFERENCE_NOTE}</p>
       <div className="grid gap-5 lg:grid-cols-2">
-        <RosterCard name={blackGrayData.squads.black.name} roster={blackGrayData.squads.black.roster} />
-        <RosterCard name={blackGrayData.squads.gray.name} roster={blackGrayData.squads.gray.roster} />
+        <RosterCard name={blackGrayData.squads.black.name} roster={blackGrayData.squads.black.roster} rosterNote={blackGrayData.squads.black.rosterNote} />
+        <RosterCard name={blackGrayData.squads.gray.name} roster={blackGrayData.squads.gray.roster} rosterNote={blackGrayData.squads.gray.rosterNote} />
       </div>
       <JvCalendar teams={["JV Black", "JV Gray"]} />
     </div>
