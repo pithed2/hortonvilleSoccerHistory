@@ -1,7 +1,7 @@
 {
-  "source": "StatsPlus rankings as of 2026-09-09 and schedules retrieved 2026-09-10; Hortonville through 2026-09-08 from MaxPreps",
+  "source": "StatsPlus rankings and schedules checked 2026-09-12; Hortonville through 2026-09-12 from MaxPreps",
   "season": 2026,
-  "generatedAt": "2026-09-10T05:49:44.874Z",
+  "generatedAt": "2026-09-13T03:26:05.986Z",
   "teams": [
     {
       "Team": "Chippewa Falls",
@@ -71,45 +71,45 @@
   "rankings": [
     {
       "Team": "Hudson",
-      "Rank": 6,
-      "Rating": 2011.15,
-      "SOS": 1709.44,
-      "GP": 4,
-      "W": 3,
-      "L": 0,
-      "T": 1,
-      "GF": 17,
-      "GA": 5
-    },
-    {
-      "Team": "Hortonville",
-      "Rank": 10,
-      "Rating": 1950.5,
-      "SOS": 1663.66,
+      "Rank": 7,
+      "Rating": 2011.86,
+      "SOS": 1654.55,
       "GP": 5,
       "W": 4,
       "L": 0,
       "T": 1,
-      "GF": 21,
+      "GF": 25,
+      "GA": 5
+    },
+    {
+      "Team": "Hortonville",
+      "Rank": 9,
+      "Rating": 1968.86,
+      "SOS": 1662.21,
+      "GP": 6,
+      "W": 5,
+      "L": 0,
+      "T": 1,
+      "GF": 27,
       "GA": 7
     },
     {
       "Team": "De Pere",
-      "Rank": 18,
-      "Rating": 1866.31,
-      "SOS": 1656.3,
-      "GP": 4,
-      "W": 3,
+      "Rank": 13,
+      "Rating": 1891.82,
+      "SOS": 1668.4,
+      "GP": 5,
+      "W": 4,
       "L": 1,
       "T": 0,
-      "GF": 20,
+      "GF": 25,
       "GA": 4
     },
     {
       "Team": "DC Everest",
-      "Rank": 19,
+      "Rank": 20,
       "Rating": 1843.54,
-      "SOS": 1708.46,
+      "SOS": 1700.6,
       "GP": 5,
       "W": 2,
       "L": 2,
@@ -118,58 +118,46 @@
       "GA": 7
     },
     {
-      "Team": "Green Bay Preble",
-      "Rank": 39,
-      "Rating": 1776.03,
-      "SOS": 1626.47,
-      "GP": 6,
+      "Team": "Appleton North",
+      "Rank": 37,
+      "Rating": 1784.45,
+      "SOS": 1668.25,
+      "GP": 7,
       "W": 4,
       "L": 1,
-      "T": 1,
-      "GF": 13,
-      "GA": 4
+      "T": 2,
+      "GF": 17,
+      "GA": 6
     },
     {
-      "Team": "Bay Port",
-      "Rank": 44,
-      "Rating": 1756.72,
-      "SOS": 1717.19,
-      "GP": 4,
-      "W": 2,
-      "L": 2,
-      "T": 0,
-      "GF": 14,
-      "GA": 9
-    },
-    {
-      "Team": "Appleton North",
-      "Rank": 46,
-      "Rating": 1750.02,
-      "SOS": 1639.04,
-      "GP": 5,
-      "W": 3,
+      "Team": "Green Bay Preble",
+      "Rank": 39,
+      "Rating": 1780,
+      "SOS": 1630.08,
+      "GP": 8,
+      "W": 5,
       "L": 1,
-      "T": 1,
-      "GF": 13,
+      "T": 2,
+      "GF": 22,
       "GA": 5
     },
     {
       "Team": "SPASH",
-      "Rank": 48,
-      "Rating": 1745.07,
-      "SOS": 1628.65,
-      "GP": 4,
-      "W": 3,
+      "Rank": 45,
+      "Rating": 1760.64,
+      "SOS": 1592.82,
+      "GP": 6,
+      "W": 5,
       "L": 1,
       "T": 0,
-      "GF": 9,
+      "GF": 13,
       "GA": 4
     },
     {
       "Team": "Eau Claire Memorial",
       "Rank": 49,
       "Rating": 1742.61,
-      "SOS": 1725.3,
+      "SOS": 1736.43,
       "GP": 5,
       "W": 1,
       "L": 3,
@@ -178,10 +166,22 @@
       "GA": 10
     },
     {
+      "Team": "Bay Port",
+      "Rank": 56,
+      "Rating": 1712.86,
+      "SOS": 1783.77,
+      "GP": 6,
+      "W": 2,
+      "L": 4,
+      "T": 0,
+      "GF": 14,
+      "GA": 20
+    },
+    {
       "Team": "Superior",
-      "Rank": 60,
+      "Rank": 58,
       "Rating": 1706.36,
-      "SOS": 1422.89,
+      "SOS": 1428.96,
       "GP": 5,
       "W": 5,
       "L": 0,
@@ -191,9 +191,9 @@
     },
     {
       "Team": "Kimberly",
-      "Rank": 71,
+      "Rank": 73,
       "Rating": 1674.75,
-      "SOS": 1752,
+      "SOS": 1752.45,
       "GP": 6,
       "W": 2,
       "L": 3,
@@ -205,7 +205,7 @@
       "Team": "Wisconsin Rapids",
       "Rank": 75,
       "Rating": 1667.98,
-      "SOS": 1592.75,
+      "SOS": 1584.24,
       "GP": 5,
       "W": 3,
       "L": 1,
@@ -217,7 +217,7 @@
       "Team": "Chippewa Falls",
       "Rank": 139,
       "Rating": 1515.59,
-      "SOS": 1548.18,
+      "SOS": 1550.18,
       "GP": 6,
       "W": 2,
       "L": 3,
@@ -229,7 +229,7 @@
       "Team": "Wausau West",
       "Rank": 141,
       "Rating": 1514.04,
-      "SOS": 1732.7,
+      "SOS": 1743.77,
       "GP": 6,
       "W": 1,
       "L": 5,
@@ -239,27 +239,27 @@
     },
     {
       "Team": "Appleton West",
-      "Rank": 155,
-      "Rating": 1487.65,
-      "SOS": 1650.39,
-      "GP": 5,
+      "Rank": 161,
+      "Rating": 1471.86,
+      "SOS": 1671.9,
+      "GP": 7,
       "W": 0,
-      "L": 4,
+      "L": 6,
       "T": 1,
       "GF": 4,
-      "GA": 19
+      "GA": 28
     },
     {
       "Team": "Eau Claire North",
-      "Rank": 181,
-      "Rating": 1411.89,
-      "SOS": 1502.33,
-      "GP": 5,
+      "Rank": 180,
+      "Rating": 1411.33,
+      "SOS": 1592.28,
+      "GP": 6,
       "W": 2,
-      "L": 3,
+      "L": 4,
       "T": 0,
       "GF": 8,
-      "GA": 12
+      "GA": 20
     }
   ],
   "schedule": [
@@ -311,7 +311,7 @@
       "Result": "D",
       "Score": "1-1",
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-08-25",
@@ -371,7 +371,7 @@
       "Result": "W",
       "Score": "2-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-08-25",
@@ -461,7 +461,7 @@
       "Result": "L",
       "Score": "1-3",
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-08-27",
@@ -601,7 +601,7 @@
       "Result": "L",
       "Score": "1-2",
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-08-29",
@@ -751,7 +751,7 @@
       "Result": "L",
       "Score": "1-2",
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-01",
@@ -768,8 +768,8 @@
       "Team": "Eau Claire North",
       "Opponent": "Hudson",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-8",
       "Source": "https://soccer.statsplus.net/rankings/team/50328/",
       "SourceTeam": "Eau Claire North"
     },
@@ -788,8 +788,8 @@
       "Team": "Hudson",
       "Opponent": "Eau Claire North",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "8-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50336/",
       "SourceTeam": "Hudson"
     },
@@ -811,7 +811,7 @@
       "Result": "W",
       "Score": "2-1",
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-01",
@@ -881,7 +881,7 @@
       "Result": "W",
       "Score": "3-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-03",
@@ -981,7 +981,7 @@
       "Result": "W",
       "Score": "4-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-08",
@@ -1021,7 +1021,7 @@
       "Result": "W",
       "Score": "4-2",
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-08",
@@ -1118,8 +1118,8 @@
       "Team": "Appleton North",
       "Opponent": "West De Pere",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "3-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50315/",
       "SourceTeam": "Appleton North"
     },
@@ -1128,8 +1128,8 @@
       "Team": "Appleton West",
       "Opponent": "Green Bay Preble",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-8",
       "Source": "https://soccer.statsplus.net/rankings/team/50316/",
       "SourceTeam": "Appleton West"
     },
@@ -1138,8 +1138,8 @@
       "Team": "Bay Port",
       "Opponent": "De Pere",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-5",
       "Source": "https://soccer.statsplus.net/rankings/team/50319/",
       "SourceTeam": "Bay Port"
     },
@@ -1161,15 +1161,15 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-10",
       "Team": "De Pere",
       "Opponent": "Bay Port",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "5-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50325/",
       "SourceTeam": "De Pere"
     },
@@ -1188,8 +1188,8 @@
       "Team": "Green Bay Preble",
       "Opponent": "Appleton West",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "8-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50332/",
       "SourceTeam": "Green Bay Preble"
     },
@@ -1198,10 +1198,10 @@
       "Team": "SPASH",
       "Opponent": "Wausau East",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "1-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-10",
@@ -1258,8 +1258,8 @@
       "Team": "Appleton North",
       "Opponent": "Green Bay Preble",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "D",
+      "Score": "1-1",
       "Source": "https://soccer.statsplus.net/rankings/team/50315/",
       "SourceTeam": "Appleton North"
     },
@@ -1268,8 +1268,8 @@
       "Team": "Appleton West",
       "Opponent": "Pulaski",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-1",
       "Source": "https://soccer.statsplus.net/rankings/team/50316/",
       "SourceTeam": "Appleton West"
     },
@@ -1278,8 +1278,8 @@
       "Team": "Bay Port",
       "Opponent": "Hortonville",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-6",
       "Source": "https://soccer.statsplus.net/rankings/team/50319/",
       "SourceTeam": "Bay Port"
     },
@@ -1308,8 +1308,8 @@
       "Team": "Green Bay Preble",
       "Opponent": "Appleton North",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "D",
+      "Score": "1-1",
       "Source": "https://soccer.statsplus.net/rankings/team/50332/",
       "SourceTeam": "Green Bay Preble"
     },
@@ -1318,8 +1318,8 @@
       "Team": "Hortonville",
       "Opponent": "Bay Port",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "6-0",
       "Source": "Main 2026 schedule",
       "SourceTeam": "Hortonville"
     },
@@ -1358,10 +1358,10 @@
       "Team": "SPASH",
       "Opponent": "La Crosse Central",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "3-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-12",
@@ -1441,7 +1441,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-15",
@@ -1521,7 +1521,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-15",
@@ -1581,7 +1581,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-17",
@@ -1641,7 +1641,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-17",
@@ -1701,7 +1701,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-19",
@@ -1821,7 +1821,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-22",
@@ -1901,7 +1901,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-22",
@@ -1951,7 +1951,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-24",
@@ -2001,7 +2001,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-25",
@@ -2041,7 +2041,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-26",
@@ -2061,7 +2061,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-26",
@@ -2101,7 +2101,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-29",
@@ -2151,7 +2151,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-09-29",
@@ -2231,7 +2231,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-09-29",
@@ -2291,7 +2291,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-10-01",
@@ -2341,7 +2341,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-10-01",
@@ -2511,7 +2511,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-10-06",
@@ -2621,7 +2621,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-10-08",
@@ -2661,7 +2661,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-10-08",
@@ -2761,7 +2761,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-10-10",
@@ -2851,7 +2851,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
-      "SourceTeam": "D.C. Everest"
+      "SourceTeam": "DC Everest"
     },
     {
       "Date": "2026-10-13",
@@ -2911,7 +2911,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-10-13",
@@ -3001,7 +3001,7 @@
       "Result": null,
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50367/",
-      "SourceTeam": "Stevens Point"
+      "SourceTeam": "SPASH"
     },
     {
       "Date": "2026-10-15",
@@ -3039,7 +3039,7 @@
       "Group": "Group A",
       "Rank": 139,
       "Rating": 1515.59,
-      "SOS": 1548.18
+      "SOS": 1550.18
     },
     {
       "Team": "DC Everest",
@@ -3053,9 +3053,9 @@
       "GD": 3,
       "Points": 7,
       "Group": "Group A",
-      "Rank": 19,
+      "Rank": 20,
       "Rating": 1843.54,
-      "SOS": 1708.46
+      "SOS": 1700.6
     },
     {
       "Team": "Eau Claire Memorial",
@@ -3071,39 +3071,39 @@
       "Group": "Group A",
       "Rank": 49,
       "Rating": 1742.61,
-      "SOS": 1725.3
+      "SOS": 1736.43
     },
     {
       "Team": "Eau Claire North",
       "GS": 19,
-      "GP": 5,
+      "GP": 6,
       "W": 2,
-      "L": 3,
+      "L": 4,
       "T": 0,
       "GF": 8,
-      "GA": 12,
-      "GD": -4,
+      "GA": 20,
+      "GD": -12,
       "Points": 6,
       "Group": "Group A",
-      "Rank": 181,
-      "Rating": 1411.89,
-      "SOS": 1502.33
+      "Rank": 180,
+      "Rating": 1411.33,
+      "SOS": 1592.28
     },
     {
       "Team": "Hudson",
       "GS": 18,
-      "GP": 4,
-      "W": 3,
+      "GP": 5,
+      "W": 4,
       "L": 0,
       "T": 1,
-      "GF": 17,
+      "GF": 25,
       "GA": 5,
-      "GD": 12,
-      "Points": 10,
+      "GD": 20,
+      "Points": 13,
       "Group": "Group A",
-      "Rank": 6,
-      "Rating": 2011.15,
-      "SOS": 1709.44
+      "Rank": 7,
+      "Rating": 2011.86,
+      "SOS": 1654.55
     },
     {
       "Team": "Superior",
@@ -3117,9 +3117,9 @@
       "GD": 16,
       "Points": 15,
       "Group": "Group A",
-      "Rank": 60,
+      "Rank": 58,
       "Rating": 1706.36,
-      "SOS": 1422.89
+      "SOS": 1428.96
     },
     {
       "Team": "Wausau West",
@@ -3135,7 +3135,7 @@
       "Group": "Group A",
       "Rank": 141,
       "Rating": 1514.04,
-      "SOS": 1732.7
+      "SOS": 1743.77
     },
     {
       "Team": "Wisconsin Rapids",
@@ -3151,103 +3151,103 @@
       "Group": "Group A",
       "Rank": 75,
       "Rating": 1667.98,
-      "SOS": 1592.75
+      "SOS": 1584.24
     },
     {
       "Team": "Appleton North",
       "GS": 17,
-      "GP": 5,
-      "W": 3,
+      "GP": 7,
+      "W": 4,
       "L": 1,
-      "T": 1,
-      "GF": 13,
-      "GA": 5,
-      "GD": 8,
-      "Points": 10,
+      "T": 2,
+      "GF": 17,
+      "GA": 6,
+      "GD": 11,
+      "Points": 14,
       "Group": "Group B",
-      "Rank": 46,
-      "Rating": 1750.02,
-      "SOS": 1639.04
+      "Rank": 37,
+      "Rating": 1784.45,
+      "SOS": 1668.25
     },
     {
       "Team": "Appleton West",
       "GS": 17,
-      "GP": 5,
+      "GP": 7,
       "W": 0,
-      "L": 4,
+      "L": 6,
       "T": 1,
       "GF": 4,
-      "GA": 19,
-      "GD": -15,
+      "GA": 28,
+      "GD": -24,
       "Points": 1,
       "Group": "Group B",
-      "Rank": 155,
-      "Rating": 1487.65,
-      "SOS": 1650.39
+      "Rank": 161,
+      "Rating": 1471.86,
+      "SOS": 1671.9
     },
     {
       "Team": "Bay Port",
       "GS": 19,
-      "GP": 4,
+      "GP": 6,
       "W": 2,
-      "L": 2,
+      "L": 4,
       "T": 0,
       "GF": 14,
-      "GA": 9,
-      "GD": 5,
+      "GA": 20,
+      "GD": -6,
       "Points": 6,
       "Group": "Group B",
-      "Rank": 44,
-      "Rating": 1756.72,
-      "SOS": 1717.19
+      "Rank": 56,
+      "Rating": 1712.86,
+      "SOS": 1783.77
     },
     {
       "Team": "De Pere",
       "GS": 18,
-      "GP": 4,
-      "W": 3,
+      "GP": 5,
+      "W": 4,
       "L": 1,
       "T": 0,
-      "GF": 20,
+      "GF": 25,
       "GA": 4,
-      "GD": 16,
-      "Points": 9,
+      "GD": 21,
+      "Points": 12,
       "Group": "Group B",
-      "Rank": 18,
-      "Rating": 1866.31,
-      "SOS": 1656.3
+      "Rank": 13,
+      "Rating": 1891.82,
+      "SOS": 1668.4
     },
     {
       "Team": "Green Bay Preble",
       "GS": 19,
-      "GP": 6,
-      "W": 4,
+      "GP": 8,
+      "W": 5,
       "L": 1,
-      "T": 1,
-      "GF": 13,
-      "GA": 4,
-      "GD": 9,
-      "Points": 13,
+      "T": 2,
+      "GF": 22,
+      "GA": 5,
+      "GD": 17,
+      "Points": 17,
       "Group": "Group B",
       "Rank": 39,
-      "Rating": 1776.03,
-      "SOS": 1626.47
+      "Rating": 1780,
+      "SOS": 1630.08
     },
     {
       "Team": "Hortonville",
       "GS": 16,
-      "GP": 5,
-      "W": 4,
+      "GP": 6,
+      "W": 5,
       "L": 0,
       "T": 1,
-      "GF": 21,
+      "GF": 27,
       "GA": 7,
-      "GD": 14,
-      "Points": 13,
+      "GD": 20,
+      "Points": 16,
       "Group": "Group B",
-      "Rank": 10,
-      "Rating": 1950.5,
-      "SOS": 1663.66
+      "Rank": 9,
+      "Rating": 1968.86,
+      "SOS": 1662.21
     },
     {
       "Team": "Kimberly",
@@ -3261,25 +3261,25 @@
       "GD": -4,
       "Points": 7,
       "Group": "Group B",
-      "Rank": 71,
+      "Rank": 73,
       "Rating": 1674.75,
-      "SOS": 1752
+      "SOS": 1752.45
     },
     {
       "Team": "SPASH",
       "GS": 16,
-      "GP": 4,
-      "W": 3,
+      "GP": 6,
+      "W": 5,
       "L": 1,
       "T": 0,
-      "GF": 9,
+      "GF": 13,
       "GA": 4,
-      "GD": 5,
-      "Points": 9,
+      "GD": 9,
+      "Points": 15,
       "Group": "Group B",
-      "Rank": 48,
-      "Rating": 1745.07,
-      "SOS": 1628.65
+      "Rank": 45,
+      "Rating": 1760.64,
+      "SOS": 1592.82
     }
   ],
   "seedings": {
@@ -3292,9 +3292,21 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 15,
         "GD": 16,
-        "Rank": 60,
+        "Rank": 58,
         "Rating": 1706.36,
         "Seed": 1
+      },
+      {
+        "Team": "Hudson",
+        "Group": "Group A",
+        "GroupPoints": 3,
+        "HeadToHeadPoints": 0,
+        "HeadToHeadDetail": "",
+        "OverallPoints": 13,
+        "GD": 20,
+        "Rank": 7,
+        "Rating": 2011.86,
+        "Seed": 2
       },
       {
         "Team": "Wisconsin Rapids",
@@ -3306,7 +3318,7 @@
         "GD": 3,
         "Rank": 75,
         "Rating": 1667.98,
-        "Seed": 2
+        "Seed": 3
       },
       {
         "Team": "DC Everest",
@@ -3316,33 +3328,9 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 7,
         "GD": 3,
-        "Rank": 19,
+        "Rank": 20,
         "Rating": 1843.54,
-        "Seed": 3
-      },
-      {
-        "Team": "Eau Claire Memorial",
-        "Group": "Group A",
-        "GroupPoints": 3,
-        "HeadToHeadPoints": 0,
-        "HeadToHeadDetail": "",
-        "OverallPoints": 4,
-        "GD": -2,
-        "Rank": 49,
-        "Rating": 1742.61,
         "Seed": 4
-      },
-      {
-        "Team": "Hudson",
-        "Group": "Group A",
-        "GroupPoints": 0,
-        "HeadToHeadPoints": 0,
-        "HeadToHeadDetail": "",
-        "OverallPoints": 10,
-        "GD": 12,
-        "Rank": 6,
-        "Rating": 2011.15,
-        "Seed": 5
       },
       {
         "Team": "Chippewa Falls",
@@ -3354,7 +3342,7 @@
         "GD": 3,
         "Rank": 139,
         "Rating": 1515.59,
-        "Seed": 6
+        "Seed": 5
       },
       {
         "Team": "Eau Claire North",
@@ -3363,9 +3351,21 @@
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
         "OverallPoints": 6,
-        "GD": -4,
-        "Rank": 181,
-        "Rating": 1411.89,
+        "GD": -12,
+        "Rank": 180,
+        "Rating": 1411.33,
+        "Seed": 6
+      },
+      {
+        "Team": "Eau Claire Memorial",
+        "Group": "Group A",
+        "GroupPoints": 3,
+        "HeadToHeadPoints": 0,
+        "HeadToHeadDetail": "",
+        "OverallPoints": 4,
+        "GD": -2,
+        "Rank": 49,
+        "Rating": 1742.61,
         "Seed": 7
       },
       {
@@ -3383,28 +3383,76 @@
     ],
     "Group B": [
       {
-        "Team": "Appleton North",
+        "Team": "Green Bay Preble",
+        "Group": "Group B",
+        "GroupPoints": 5,
+        "HeadToHeadPoints": 0,
+        "HeadToHeadDetail": "",
+        "OverallPoints": 17,
+        "GD": 17,
+        "Rank": 39,
+        "Rating": 1780,
+        "Seed": 1
+      },
+      {
+        "Team": "Hortonville",
         "Group": "Group B",
         "GroupPoints": 3,
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
-        "OverallPoints": 10,
-        "GD": 8,
-        "Rank": 46,
-        "Rating": 1750.02,
-        "Seed": 1
+        "OverallPoints": 16,
+        "GD": 20,
+        "Rank": 9,
+        "Rating": 1968.86,
+        "Seed": 2
+      },
+      {
+        "Team": "SPASH",
+        "Group": "Group B",
+        "GroupPoints": 0,
+        "HeadToHeadPoints": 0,
+        "HeadToHeadDetail": "",
+        "OverallPoints": 15,
+        "GD": 9,
+        "Rank": 45,
+        "Rating": 1760.64,
+        "Seed": 3
+      },
+      {
+        "Team": "Appleton North",
+        "Group": "Group B",
+        "GroupPoints": 4,
+        "HeadToHeadPoints": 0,
+        "HeadToHeadDetail": "",
+        "OverallPoints": 14,
+        "GD": 11,
+        "Rank": 37,
+        "Rating": 1784.45,
+        "Seed": 4
       },
       {
         "Team": "De Pere",
         "Group": "Group B",
-        "GroupPoints": 3,
+        "GroupPoints": 6,
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
-        "OverallPoints": 9,
-        "GD": 16,
-        "Rank": 18,
-        "Rating": 1866.31,
-        "Seed": 2
+        "OverallPoints": 12,
+        "GD": 21,
+        "Rank": 13,
+        "Rating": 1891.82,
+        "Seed": 5
+      },
+      {
+        "Team": "Kimberly",
+        "Group": "Group B",
+        "GroupPoints": 1,
+        "HeadToHeadPoints": 0,
+        "HeadToHeadDetail": "",
+        "OverallPoints": 7,
+        "GD": -4,
+        "Rank": 73,
+        "Rating": 1674.75,
+        "Seed": 6
       },
       {
         "Team": "Bay Port",
@@ -3413,57 +3461,9 @@
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
         "OverallPoints": 6,
-        "GD": 5,
-        "Rank": 44,
-        "Rating": 1756.72,
-        "Seed": 3
-      },
-      {
-        "Team": "Green Bay Preble",
-        "Group": "Group B",
-        "GroupPoints": 1,
-        "HeadToHeadPoints": 1,
-        "HeadToHeadDetail": "T vs Kimberly",
-        "OverallPoints": 13,
-        "GD": 9,
-        "Rank": 39,
-        "Rating": 1776.03,
-        "Seed": 4
-      },
-      {
-        "Team": "Kimberly",
-        "Group": "Group B",
-        "GroupPoints": 1,
-        "HeadToHeadPoints": 1,
-        "HeadToHeadDetail": "T vs Green Bay Preble",
-        "OverallPoints": 7,
-        "GD": -4,
-        "Rank": 71,
-        "Rating": 1674.75,
-        "Seed": 5
-      },
-      {
-        "Team": "Hortonville",
-        "Group": "Group B",
-        "GroupPoints": 0,
-        "HeadToHeadPoints": 0,
-        "HeadToHeadDetail": "",
-        "OverallPoints": 13,
-        "GD": 14,
-        "Rank": 10,
-        "Rating": 1950.5,
-        "Seed": 6
-      },
-      {
-        "Team": "SPASH",
-        "Group": "Group B",
-        "GroupPoints": 0,
-        "HeadToHeadPoints": 0,
-        "HeadToHeadDetail": "",
-        "OverallPoints": 9,
-        "GD": 5,
-        "Rank": 48,
-        "Rating": 1745.07,
+        "GD": -6,
+        "Rank": 56,
+        "Rating": 1712.86,
         "Seed": 7
       },
       {
@@ -3473,9 +3473,9 @@
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
         "OverallPoints": 1,
-        "GD": -15,
-        "Rank": 155,
-        "Rating": 1487.65,
+        "GD": -24,
+        "Rank": 161,
+        "Rating": 1471.86,
         "Seed": 8
       }
     ]
@@ -3555,7 +3555,7 @@
         "DC Everest": "No Match",
         "Eau Claire Memorial": "Scheduled",
         "Eau Claire North": null,
-        "Hudson": "Scheduled",
+        "Hudson": 0,
         "Superior": "Scheduled",
         "Wausau West": "Scheduled",
         "Wisconsin Rapids": "Scheduled",
@@ -3576,7 +3576,7 @@
         "Chippewa Falls": "Scheduled",
         "DC Everest": "Scheduled",
         "Eau Claire Memorial": "Scheduled",
-        "Eau Claire North": "Scheduled",
+        "Eau Claire North": 3,
         "Hudson": null,
         "Superior": "No Match",
         "Wausau West": "No Match",
@@ -3673,7 +3673,7 @@
         "Appleton West": 3,
         "Bay Port": "No Match",
         "De Pere": "Scheduled",
-        "Green Bay Preble": "Scheduled",
+        "Green Bay Preble": 1,
         "Hortonville": "Scheduled",
         "Kimberly": "Scheduled",
         "SPASH": "No Match"
@@ -3695,7 +3695,7 @@
         "Appleton West": null,
         "Bay Port": 0,
         "De Pere": "No Match",
-        "Green Bay Preble": "Scheduled",
+        "Green Bay Preble": 0,
         "Hortonville": "Scheduled",
         "Kimberly": "Scheduled",
         "SPASH": "No Match"
@@ -3716,9 +3716,9 @@
         "Appleton North": "No Match",
         "Appleton West": 3,
         "Bay Port": null,
-        "De Pere": "Scheduled",
+        "De Pere": 0,
         "Green Bay Preble": "Scheduled",
-        "Hortonville": "Scheduled",
+        "Hortonville": 0,
         "Kimberly": "Scheduled",
         "SPASH": "No Match"
       }
@@ -3737,7 +3737,7 @@
         "Wisconsin Rapids": "No Match",
         "Appleton North": "Scheduled",
         "Appleton West": "No Match",
-        "Bay Port": "Scheduled",
+        "Bay Port": 3,
         "De Pere": null,
         "Green Bay Preble": 3,
         "Hortonville": "Scheduled",
@@ -3757,8 +3757,8 @@
         "Superior": "No Match",
         "Wausau West": 3,
         "Wisconsin Rapids": "No Match",
-        "Appleton North": "Scheduled",
-        "Appleton West": "Scheduled",
+        "Appleton North": 1,
+        "Appleton West": 3,
         "Bay Port": "Scheduled",
         "De Pere": 0,
         "Green Bay Preble": null,
@@ -3781,7 +3781,7 @@
         "Wisconsin Rapids": "No Match",
         "Appleton North": "Scheduled",
         "Appleton West": "Scheduled",
-        "Bay Port": "Scheduled",
+        "Bay Port": 3,
         "De Pere": "Scheduled",
         "Green Bay Preble": "Scheduled",
         "Hortonville": null,
@@ -3840,7 +3840,7 @@
     "importedRows": 260,
     "manualTeam": "Hortonville",
     "manualRows": 15,
-    "statsPlusAsOf": "2026-09-09",
+    "statsPlusAsOf": "2026-09-12",
     "refreshedTeams": 15,
     "refreshedRows": 260,
     "hortonvilleSource": "public/data/games_2026.csv",
