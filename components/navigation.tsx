@@ -83,6 +83,9 @@ export function Navigation() {
                 )
               })}
 
+              <Link href="/#important-links" className="flex min-h-11 items-center rounded-lg px-3 text-sm font-bold text-white/85 transition-colors hover:bg-white/10 hover:text-white">
+                Links
+              </Link>
               <div className="ml-2 h-6 w-px bg-white/30" aria-hidden="true" />
               <Link href="/coachs-corner" className={`ml-2 inline-flex min-h-10 items-center gap-2 rounded-lg border px-3 text-sm font-bold transition-colors ${isActive("/coachs-corner") ? "border-white bg-white text-primary" : "border-white/40 text-white hover:border-white hover:bg-white/10"}`} aria-current={isActive("/coachs-corner") ? "page" : undefined}>
                 <LockKeyhole className="size-4" aria-hidden="true" /> Coach’s Corner
@@ -112,6 +115,9 @@ export function Navigation() {
               ))}
             </div>
             <div className="mt-4 border-t border-white/20 pt-4">
+              <Link href="/#important-links" onClick={() => setIsOpen(false)} className="mb-3 flex min-h-11 items-center rounded-lg px-4 text-sm font-bold text-white/85 transition-colors hover:bg-white/10 hover:text-white">
+                Links
+              </Link>
               <Link href="/coachs-corner" onClick={() => setIsOpen(false)} className="flex min-h-11 items-center gap-2 rounded-lg border border-white/40 px-4 text-sm font-bold text-white hover:bg-white/10">
                 <LockKeyhole className="size-4" aria-hidden="true" /> Coach’s Corner
               </Link>

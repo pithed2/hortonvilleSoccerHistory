@@ -19,6 +19,11 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <a href="/#important-links" className="text-background/80 hover:text-background transition">
+                  Important Links
+                </a>
+              </li>
+              <li>
                 <a href="/jv" className="text-background/80 hover:text-background transition">
                   JV Teams
                 </a>

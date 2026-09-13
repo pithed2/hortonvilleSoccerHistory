@@ -29,7 +29,7 @@ const links = [
 
 export function ImportantLinks() {
   return (
-    <section id="important-links" aria-labelledby="important-links-title" className="border-b bg-muted/20 py-10 sm:py-12">
+    <section id="important-links" aria-labelledby="important-links-title" className="scroll-mt-16 border-b bg-muted/20 py-10 sm:py-12">
       <div className="site-container">
         <div className="section-heading">
           <div><p className="section-eyebrow">For players &amp; families</p><h2 id="important-links-title" className="section-title">Important links</h2></div>

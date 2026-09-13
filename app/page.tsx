@@ -14,11 +14,11 @@ export default function Home() {
       <Navigation />
       <Hero />
       <TeamSelector />
-      <ImportantLinks />
       <CurrentSeasonSection />
       <SocialFeedSection />
       <HistoryPreview />
       <StatsSection />
+      <ImportantLinks />
       <Footer />
     </main>
   )
