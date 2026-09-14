@@ -1,88 +1,33 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { JvCalendar } from "@/components/jv-calendar"
-import { JV_CONFERENCE_NOTE } from "@/lib/jv-conference.mjs"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { JvSeasonDashboard, type JvDashboardStats } from "@/components/jv-season-dashboard"
+import { jvConferenceRecord } from "@/lib/jv-conference.mjs"
 import blackGrayData from "@/data/jv/black-gray.json"
+import calendar from "@/data/jv/calendar.json"
 
 export const metadata: Metadata = { title: "JV Black & Gray 2026" }
 
-type RosterPlayer = { number: string; name: string; position: string }
-
-function sortRoster(roster: RosterPlayer[]) {
-  return [...roster].sort((a, b) => {
-    const left = Number.parseInt(a.number, 10)
-    const right = Number.parseInt(b.number, 10)
-    return (Number.isFinite(left) ? left : Infinity) - (Number.isFinite(right) ? right : Infinity)
-  })
-}
-
-function RosterCard({ name, roster, rosterNote }: { name: string; roster: RosterPlayer[]; rosterNote: string }) {
-  return (
-    <article className="surface-card p-5 sm:p-7">
-      <p className="section-eyebrow">Roster</p>
-      <h2 className="text-2xl font-black">{name}</h2>
-      <p className="mt-2 text-sm text-muted-foreground">{rosterNote}</p>
-      {roster.length ? (
-        <div className="mt-4 overflow-x-auto">
-          <Table>
-            <TableHeader><TableRow><TableHead>#</TableHead><TableHead>Player</TableHead><TableHead className="text-right">Position</TableHead></TableRow></TableHeader>
-            <TableBody>
-              {sortRoster(roster).map((player) => (
-                <TableRow key={`${player.number}-${player.name}`}>
-                  <TableCell className="font-black text-primary">{player.number || "—"}</TableCell>
-                  <TableCell className="font-semibold">{player.name}</TableCell>
-                  <TableCell className="text-right text-muted-foreground">{player.position || "—"}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      ) : (
-        <p className="mt-4 text-sm text-muted-foreground">Roster not yet available.</p>
-      )}
-    </article>
-  )
-}
+const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${date}T12:00:00Z`))
 
 export default function JvBlackGrayPage() {
   const results = blackGrayData.results
-  const wins = results.filter(game => game.result === "W").length
-  const losses = results.filter(game => game.result === "L").length
-  const ties = results.filter(game => game.result === "T").length
-  return <main id="main-content" className="min-h-screen bg-background">
-    <Navigation />
-    <header className="page-header"><div className="site-container"><Link href="/jv" className="text-sm font-semibold">Back to all JV teams</Link><p className="page-eyebrow mt-5">Hortonville Boys Soccer · 2026</p><h1 className="page-title">JV Black &amp; Gray</h1><p className="page-description">Follow Coach Seth’s JV Black and JV Gray teams throughout the season.</p></div></header>
-    <div className="site-container space-y-6 py-10">
-      <p className="text-sm leading-6 text-muted-foreground">{JV_CONFERENCE_NOTE}</p>
-      <section className="surface-card p-5 sm:p-7" aria-labelledby="results-title">
-        <p className="section-eyebrow">Combined JV Black &amp; Gray</p>
-        <h2 id="results-title" className="text-2xl font-black">Results</h2>
-        <p className="mt-2 font-bold">Reported record: {wins}–{losses}–{ties} (W–L–T)</p>
-        <p className="mt-2 text-sm text-muted-foreground">Player statistics are not yet available for these games.</p>
-        <div className="mt-4 overflow-x-auto">
-          <Table>
-            <TableHeader><TableRow><TableHead>Date</TableHead><TableHead>Opponent</TableHead><TableHead>Site</TableHead><TableHead>Result</TableHead><TableHead>Score</TableHead></TableRow></TableHeader>
-            <TableBody>{results.map(game => (
-              <TableRow key={`${game.date}-${game.opponent}`}>
-                <TableCell className="whitespace-nowrap"><time dateTime={game.date}>{new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${game.date}T12:00:00Z`))}</time></TableCell>
-                <TableCell className="font-semibold">{game.opponent}</TableCell>
-                <TableCell>{game.location}</TableCell>
-                <TableCell>{game.result === "W" ? "Win" : game.result === "L" ? "Loss" : "Tie"}</TableCell>
-                <TableCell className="whitespace-nowrap">{game.score ?? "Score pending"}</TableCell>
-              </TableRow>
-            ))}</TableBody>
-          </Table>
-        </div>
-      </section>
-      <div className="grid gap-5 lg:grid-cols-2">
-        <RosterCard name={blackGrayData.squads.black.name} roster={blackGrayData.squads.black.roster} rosterNote={blackGrayData.squads.black.rosterNote} />
-        <RosterCard name={blackGrayData.squads.gray.name} roster={blackGrayData.squads.gray.roster} rosterNote={blackGrayData.squads.gray.rosterNote} />
-      </div>
-      <JvCalendar teams={["JV Black", "JV Gray"]} />
-    </div>
-    <Footer />
-  </main>
+  const completeScores = results.every(game => game.score !== null)
+  const players = Object.values(blackGrayData.squads).flatMap(squad => squad.roster.map(player => ({
+    number: player.number, name: player.name, squad: squad.name,
+    gp: null, goals: null, assists: null, points: null,
+  })))
+  const goalkeeperNames = new Set(Object.values(blackGrayData.squads).flatMap(squad => squad.roster.filter(player => player.position === "GK").map(player => player.name)))
+  const stats: JvDashboardStats = {
+    slug: "black-gray", team: "JV Black/Gray", updated: formatDate(blackGrayData.updated) + ", 2026",
+    sourceLabel: "Team-reported results",
+    gamesNote: "Base rosters by squad · — means statistics are not yet available.",
+    notes: ["Player and goalkeeper statistics are coming soon. Dashes indicate unavailable data, not zero. Results and records combine JV Black and JV Gray.", "The August 28 FVL loss is included in the record. Its score is pending, so season goal totals and averages are not yet complete."],
+    audit: { sourceFile: "Team rosters and reported results", sourceModifiedAt: "", sourceSha256: "", importedAt: blackGrayData.resultsAudit.importedAt, validation: "warning", validationSummary: "Six reported results; FVL score and player statistics pending.", approvedBy: "Andrew Montalbano" },
+    record: { wins: results.filter(game => game.result === "W").length, losses: results.filter(game => game.result === "L").length, ties: results.filter(game => game.result === "T").length, conference: jvConferenceRecord(results) },
+    totals: { goalsFor: completeScores ? results.reduce((sum, game) => sum + Number(game.score?.split("-")[0]), 0) : null, goalsAgainst: completeScores ? results.reduce((sum, game) => sum + Number(game.score?.split("-")[1]), 0) : null, shots: null, sog: null, saves: null },
+    recent: results.map((game, index) => ({ id: index + 1, date: formatDate(game.date), opponent: game.opponent, location: game.location, score: game.score, result: game.result, boxScoreAvailable: false })).reverse(),
+    upcoming: calendar.events.filter(event => ["JV Black", "JV Gray"].includes(event.team) && event.date > blackGrayData.updated).sort((a, b) => a.start.localeCompare(b.start)).slice(0, 4).map(event => ({ date: formatDate(event.date), opponent: event.opponent, location: `${event.team} · ${event.home ? "Home" : "Away"}` })),
+    players,
+    goalkeepers: [...goalkeeperNames].map(name => ({ name, number: players.find(player => player.name === name)!.number, games: null, saves: null, minutes: null, goalsAgainst: null })),
+  }
+  return <JvSeasonDashboard stats={stats} />
 }
