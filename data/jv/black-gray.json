@@ -234,7 +234,7 @@
         { "name": "Ethan Nysse", "goals": 1, "assists": 0 }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": 1, "goalsAgainst": 3 }
+        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 3 }
       ]
     },
     {
