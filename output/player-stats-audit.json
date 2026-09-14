@@ -1,0 +1,6096 @@
+{
+  "varsity": [
+    {
+      "season": "2026",
+      "games": [
+        {
+          "id": "1",
+          "date": "8/25",
+          "opponent": "West De Pere",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "8/27",
+          "opponent": "Marshfield",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 10,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "9/1",
+          "opponent": "Neenah",
+          "score": "3-3",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "9/3",
+          "opponent": "Oshkosh North",
+          "score": "3-2",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "2026-09-08",
+          "opponent": "Appleton East",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "2026-09-12",
+          "opponent": "Bay Port",
+          "score": "6-0",
+          "playerGoals": 6,
+          "assists": 4,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Fenton Hirschi",
+          "recordedGames": 5,
+          "goals": 1,
+          "assists": 6,
+          "points": 8
+        },
+        {
+          "name": "Roman Glad",
+          "recordedGames": 3,
+          "goals": 4,
+          "assists": 2,
+          "points": 10
+        },
+        {
+          "name": "Evan Langkan",
+          "recordedGames": 3,
+          "goals": 3,
+          "assists": 3,
+          "points": 9
+        },
+        {
+          "name": "Ben Diedrich",
+          "recordedGames": 3,
+          "goals": 4,
+          "assists": 1,
+          "points": 9
+        },
+        {
+          "name": "Eli Ryan",
+          "recordedGames": 5,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Mason Lyons",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Noah Rindt",
+          "recordedGames": 5,
+          "goals": 6,
+          "assists": 2,
+          "points": 14
+        },
+        {
+          "name": "Jacob Plutz",
+          "recordedGames": 5,
+          "goals": 3,
+          "assists": 5,
+          "points": 11
+        },
+        {
+          "name": "Anthony Zanon",
+          "recordedGames": 3,
+          "goals": 3,
+          "assists": 4,
+          "points": 10
+        },
+        {
+          "name": "David Grasse",
+          "recordedGames": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Connor Rindt",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "James Baker",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Sawyer Davis",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": [
+        {
+          "name": "Eli Ryan",
+          "recordedGames": 5,
+          "saves": 17,
+          "ga": 5,
+          "storedSaves": "17",
+          "storedGA": "5",
+          "savesComplete": true,
+          "gaComplete": true
+        },
+        {
+          "name": "David Grasse",
+          "recordedGames": 4,
+          "saves": 11,
+          "ga": 2,
+          "storedSaves": "11",
+          "storedGA": "2",
+          "savesComplete": true,
+          "gaComplete": true
+        }
+      ],
+      "secondaryGameLogMissing": [
+        "6"
+      ]
+    }
+  ],
+  "jv": [
+    {
+      "team": "JV Red",
+      "games": [
+        {
+          "id": 1,
+          "date": "2026-08-25",
+          "opponent": "De Pere",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 2,
+          "saves": 5,
+          "minutes": 80,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 2,
+          "date": "2026-08-27",
+          "opponent": "Marshfield",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 6,
+          "saves": 1,
+          "minutes": 65,
+          "logConflicts": [
+            {
+              "name": "Jaxon Wolff",
+              "key": "assists",
+              "boxScore": 1,
+              "scoringLog": 0
+            }
+          ],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 3,
+          "date": "2026-08-31",
+          "opponent": "Oshkosh West",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 7,
+          "saves": 3,
+          "minutes": 70,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 4,
+          "date": "2026-09-01",
+          "opponent": "Neenah",
+          "score": "0-2",
+          "playerGoals": 0,
+          "assists": 0,
+          "saves": 7,
+          "minutes": 80,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 5,
+          "date": "2026-09-03",
+          "opponent": "Oshkosh North",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "saves": 3,
+          "minutes": 80,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 6,
+          "date": "2026-09-10",
+          "opponent": "St. Mary Central",
+          "score": "9-0",
+          "playerGoals": 9,
+          "assists": 3,
+          "saves": 2,
+          "minutes": 60,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        }
+      ],
+      "players": [
+        {
+          "number": 22,
+          "name": "Amos Arndt",
+          "goals": 6,
+          "assists": 1,
+          "points": 13,
+          "matchesStored": true
+        },
+        {
+          "number": 6,
+          "name": "Parker Anderson",
+          "goals": 5,
+          "assists": 2,
+          "points": 12,
+          "matchesStored": true
+        },
+        {
+          "number": 15,
+          "name": "Sam Radle",
+          "goals": 3,
+          "assists": 1,
+          "points": 7,
+          "matchesStored": true
+        },
+        {
+          "number": 20,
+          "name": "Beckett Feldbruegge",
+          "goals": 3,
+          "assists": 0,
+          "points": 6,
+          "matchesStored": true
+        },
+        {
+          "number": 12,
+          "name": "Brody Schroeder",
+          "goals": 3,
+          "assists": 0,
+          "points": 6,
+          "matchesStored": true
+        },
+        {
+          "number": 16,
+          "name": "Carson Sanford",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 19,
+          "name": "Timmy VanSchyndel",
+          "goals": 2,
+          "assists": 1,
+          "points": 5,
+          "matchesStored": true
+        },
+        {
+          "number": 9,
+          "name": "Ben Parker",
+          "goals": 1,
+          "assists": 3,
+          "points": 5,
+          "matchesStored": true
+        },
+        {
+          "number": 14,
+          "name": "Owen Pavich",
+          "goals": 1,
+          "assists": 3,
+          "points": 5,
+          "matchesStored": true
+        },
+        {
+          "number": 10,
+          "name": "Hunter Hasseler",
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "matchesStored": true
+        },
+        {
+          "number": 18,
+          "name": "Grayson Ackermann",
+          "goals": 3,
+          "assists": 0,
+          "points": 6,
+          "matchesStored": true
+        },
+        {
+          "number": 24,
+          "name": "Ethen LaPlant",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 23,
+          "name": "Jaxon Wolff",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 26,
+          "name": "Leon Ryzhov",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 8,
+          "name": "Oliver Plamann",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 2,
+          "name": "Parker Rugotska",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 4,
+          "name": "Weston Ehr",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 13,
+          "name": "Aaron Young",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 3,
+          "name": "Dylan McFarlane",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 21,
+          "name": "Easton Slomski",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 17,
+          "name": "Henri Waite",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 31,
+          "name": "Henri Waite",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 7,
+          "name": "Isaac Reiland",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 11,
+          "name": "Jaxton Seefeldt",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 5,
+          "name": "Nolan Raaths",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        }
+      ],
+      "goalkeeperTotals": [
+        {
+          "name": "Henri Waite",
+          "games": 6,
+          "saves": 20,
+          "minutes": 430,
+          "stored": {
+            "number": 31,
+            "name": "Henri Waite",
+            "games": 6,
+            "saves": 20,
+            "minutes": 430,
+            "goalsAgainst": 5
+          }
+        },
+        {
+          "name": "Nolan Raaths",
+          "games": 1,
+          "saves": 1,
+          "minutes": 5,
+          "stored": {
+            "number": 5,
+            "name": "Nolan Raaths",
+            "games": 1,
+            "saves": 1,
+            "minutes": 5,
+            "goalsAgainst": 0
+          }
+        }
+      ]
+    },
+    {
+      "team": "JV White",
+      "games": [
+        {
+          "id": 1,
+          "date": "2026-08-25",
+          "opponent": "West De Pere",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 6,
+          "saves": 5,
+          "minutes": 60,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 2,
+          "date": "2026-09-01",
+          "opponent": "Green Bay Preble",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 2,
+          "saves": 1,
+          "minutes": 80,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 3,
+          "date": "2026-08-27",
+          "opponent": "Neenah",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 8,
+          "saves": 0,
+          "minutes": 60,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 4,
+          "date": "2026-08-22",
+          "opponent": "Wisconsin Rapids",
+          "score": "11-0",
+          "playerGoals": 11,
+          "assists": 10,
+          "saves": 2,
+          "minutes": 60,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 5,
+          "date": "2026-08-22",
+          "opponent": "SPASH",
+          "score": "5-1",
+          "playerGoals": 5,
+          "assists": 3,
+          "saves": 0,
+          "minutes": 80,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 6,
+          "date": "2026-09-08",
+          "opponent": "Appleton East",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "saves": 3,
+          "minutes": 80,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        },
+        {
+          "id": 7,
+          "date": "2026-09-12",
+          "opponent": "Bay Port",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "saves": 8,
+          "minutes": 80,
+          "logConflicts": [],
+          "duplicatePlayers": []
+        }
+      ],
+      "players": [
+        {
+          "number": 0,
+          "name": "Ben Decker",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 2,
+          "name": "Riley Loewenhagen",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 3,
+          "name": "Riley Handevidt",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 4,
+          "name": "Isaac Reynolds",
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "matchesStored": true
+        },
+        {
+          "number": 5,
+          "name": "Carter Possley",
+          "goals": 0,
+          "assists": 4,
+          "points": 4,
+          "matchesStored": true
+        },
+        {
+          "number": 6,
+          "name": "Jack Lorge",
+          "goals": 1,
+          "assists": 2,
+          "points": 4,
+          "matchesStored": true
+        },
+        {
+          "number": 7,
+          "name": "Wyatt Mauthepasch",
+          "goals": 8,
+          "assists": 5,
+          "points": 21,
+          "matchesStored": true
+        },
+        {
+          "number": 8,
+          "name": "Adam Palmer",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 9,
+          "name": "Sam Larson",
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "matchesStored": true
+        },
+        {
+          "number": 10,
+          "name": "Liam Evenson",
+          "goals": 7,
+          "assists": 5,
+          "points": 19,
+          "matchesStored": true
+        },
+        {
+          "number": 11,
+          "name": "Bryce Draeger",
+          "goals": 1,
+          "assists": 0,
+          "points": 2,
+          "matchesStored": true
+        },
+        {
+          "number": 12,
+          "name": "Connor Schmitt",
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "matchesStored": true
+        },
+        {
+          "number": 13,
+          "name": "Bennett Froelich",
+          "goals": 2,
+          "assists": 0,
+          "points": 4,
+          "matchesStored": true
+        },
+        {
+          "number": 14,
+          "name": "Matthew Racine",
+          "goals": 3,
+          "assists": 1,
+          "points": 7,
+          "matchesStored": true
+        },
+        {
+          "number": 15,
+          "name": "Josh Petricca",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 16,
+          "name": "Liam Adkins",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 17,
+          "name": "Ollie Schmidt",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 18,
+          "name": "James Forsythe",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 20,
+          "name": "Nate Shaw",
+          "goals": 2,
+          "assists": 1,
+          "points": 5,
+          "matchesStored": true
+        },
+        {
+          "number": 21,
+          "name": "Reno Brei",
+          "goals": 9,
+          "assists": 4,
+          "points": 22,
+          "matchesStored": true
+        },
+        {
+          "number": 22,
+          "name": "Grayson Whitver",
+          "goals": 1,
+          "assists": 0,
+          "points": 2,
+          "matchesStored": true
+        },
+        {
+          "number": 23,
+          "name": "Nate Diedrich",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "matchesStored": true
+        },
+        {
+          "number": 24,
+          "name": "Carter Halford",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        },
+        {
+          "number": 25,
+          "name": "Carter Hirschi",
+          "goals": 1,
+          "assists": 2,
+          "points": 4,
+          "matchesStored": true
+        },
+        {
+          "number": 26,
+          "name": "Lachlan Elliott",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "matchesStored": true
+        }
+      ],
+      "goalkeeperTotals": [
+        {
+          "name": "Ben Decker",
+          "games": 7,
+          "saves": 19,
+          "minutes": 500,
+          "stored": {
+            "number": 0,
+            "name": "Ben Decker",
+            "games": 7,
+            "saves": 19,
+            "minutes": 500,
+            "goalsAgainst": 4
+          }
+        }
+      ]
+    },
+    {
+      "team": "JV Black/Gray",
+      "games": [
+        {
+          "date": "2026-08-25",
+          "opponent": "Appleton East",
+          "location": "Away",
+          "result": "L",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "date": "2026-08-26",
+          "opponent": "Green Bay Preble",
+          "location": "Away",
+          "result": "L",
+          "score": "0-3",
+          "playerGoals": null,
+          "assists": null,
+          "unattributedGoals": 0
+        },
+        {
+          "date": "2026-08-28",
+          "opponent": "FVL",
+          "location": "Home",
+          "result": "L",
+          "score": "2-4",
+          "playerGoals": null,
+          "assists": null,
+          "unattributedGoals": 2
+        },
+        {
+          "date": "2026-08-31",
+          "opponent": "Appleton North",
+          "location": "Away",
+          "result": "W",
+          "score": "2-1",
+          "playerGoals": null,
+          "assists": null,
+          "unattributedGoals": 2
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Appleton East",
+          "location": "Home",
+          "result": "T",
+          "score": "1-1",
+          "playerGoals": null,
+          "assists": null,
+          "unattributedGoals": 1
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Little Chute",
+          "location": "Away",
+          "result": "W",
+          "score": "4-2",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Neel Patel",
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Ethan Nysse",
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Colton Daniels",
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Henri Biese",
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Aarav Patel",
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Ezekiel Hartjes",
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        }
+      ],
+      "goalkeeperTotals": [
+        {
+          "name": "Ayden Lenth",
+          "reportedGames": 2,
+          "goalsAgainst": 5,
+          "minutes": 160,
+          "recordedSaves": 1,
+          "saves": null
+        }
+      ]
+    }
+  ],
+  "historical": [
+    {
+      "season": "2007",
+      "games": [
+        {
+          "id": "1",
+          "date": "2007-08-25",
+          "opponent": "Sauk Prairie",
+          "score": "0-1",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "2007-08-25",
+          "opponent": "Howards Grove",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "2007-08-25",
+          "opponent": "Kiel",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "2007-08-27",
+          "opponent": "Clintonville",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "2007-08-28",
+          "opponent": "West De Pere",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "2007-08-30",
+          "opponent": "Kaukauna",
+          "score": "1-8",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "2007-09-04",
+          "opponent": "Luxemburg-Casco",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "2007-09-06",
+          "opponent": "Marinette",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "2007-09-11",
+          "opponent": "New London",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "2007-09-13",
+          "opponent": "Seymour",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "2007-09-15",
+          "opponent": "Milwaukee Ronald Reagan",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "2007-09-15",
+          "opponent": "Oshkosh Lourdes",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "2007-09-15",
+          "opponent": "Howards Grove",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "2007-09-18",
+          "opponent": "Shawano",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "2007-09-20",
+          "opponent": "West De Pere",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "2007-09-22",
+          "opponent": "Seymour",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "2007-09-22",
+          "opponent": "Marinette",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "2007-09-22",
+          "opponent": "Little Chute",
+          "score": "0-1",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "2007-09-27",
+          "opponent": "Luxemburg-Casco",
+          "score": "1-6",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "2007-10-02",
+          "opponent": "Marinette",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "21",
+          "date": "2007-10-04",
+          "opponent": "New London",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "22",
+          "date": "2007-10-09",
+          "opponent": "Seymour",
+          "score": "3-2",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "23",
+          "date": "2007-10-11",
+          "opponent": "Shawano",
+          "score": "0-1",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "24",
+          "date": "2007-10-18",
+          "opponent": "Neenah",
+          "score": "0-10",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Padraic Emerine",
+          "recordedGames": 24,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Addison Hellenbrand",
+          "recordedGames": 5,
+          "goals": 4,
+          "assists": 1,
+          "points": 9
+        },
+        {
+          "name": "Mick Harrington",
+          "recordedGames": 8,
+          "goals": 3,
+          "assists": 2,
+          "points": 8
+        },
+        {
+          "name": "Michael Charteris",
+          "recordedGames": 5,
+          "goals": 6,
+          "assists": 1,
+          "points": 13
+        },
+        {
+          "name": "Derek Storch",
+          "recordedGames": 12,
+          "goals": 15,
+          "assists": 2,
+          "points": 32
+        },
+        {
+          "name": "Taner Rose",
+          "recordedGames": 3,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Joe Mueller",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Eric Vickers",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Josh Foley",
+          "recordedGames": 3,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Brett Morth",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Matt Obry",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Luke Korth",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": [
+        {
+          "name": "Padraic Emerine",
+          "recordedGames": 24,
+          "saves": 259,
+          "ga": 51,
+          "storedSaves": "259",
+          "storedGA": "48.61",
+          "savesComplete": true,
+          "gaComplete": true
+        },
+        {
+          "name": "Mick Harrington",
+          "recordedGames": 4,
+          "saves": 4,
+          "ga": 0,
+          "storedSaves": "4",
+          "storedGA": "1.46",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 1,
+          "saves": 3,
+          "ga": 0,
+          "storedSaves": "3",
+          "storedGA": "0.35",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Luke Korth",
+          "recordedGames": 1,
+          "saves": 6,
+          "ga": 0,
+          "storedSaves": "6",
+          "storedGA": "0.58",
+          "savesComplete": true,
+          "gaComplete": false
+        }
+      ]
+    },
+    {
+      "season": "2008",
+      "games": [
+        {
+          "id": "1",
+          "date": "2008-08-30",
+          "opponent": "Plymouth",
+          "score": "1-4",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "2008-08-30",
+          "opponent": "Oostburg",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "2008-08-30",
+          "opponent": "Beaver Dam",
+          "score": "0-2",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "2008-09-04",
+          "opponent": "West De Pere",
+          "score": "2-4",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "2008-09-09",
+          "opponent": "Luxemburg-Casco",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "2008-09-11",
+          "opponent": "Marinette",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "2008-09-16",
+          "opponent": "New London",
+          "score": "0-4",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "2008-09-18",
+          "opponent": "Seymour",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "2008-09-20",
+          "opponent": "Milwaukee Ronald Reagan",
+          "score": "3-2",
+          "playerGoals": 3,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "2008-09-20",
+          "opponent": "Howards Grove",
+          "score": "0-0",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "2008-09-20",
+          "opponent": "Oshkosh Lourdes",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "2008-09-23",
+          "opponent": "Shawano",
+          "score": "0-1",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "2008-09-25",
+          "opponent": "West De Pere",
+          "score": "0-2",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "2008-10-02",
+          "opponent": "Luxemburg-Casco",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "2008-10-07",
+          "opponent": "Marinette",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "2008-10-09",
+          "opponent": "New London",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "2008-10-11",
+          "opponent": "Kimberly",
+          "score": "0-6",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "2008-10-11",
+          "opponent": "Little Chute",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "2008-10-11",
+          "opponent": "Marinette",
+          "score": "0-0",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "2008-10-14",
+          "opponent": "Seymour",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "21",
+          "date": "2008-10-16",
+          "opponent": "Shawano",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "22",
+          "date": "2008-10-24",
+          "opponent": "Hartford",
+          "score": "0-4",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Josh Foley",
+          "recordedGames": 5,
+          "goals": 4,
+          "assists": 2,
+          "points": 10
+        },
+        {
+          "name": "Padraic Emerine",
+          "recordedGames": 22,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Derek Storch",
+          "recordedGames": 8,
+          "goals": 12,
+          "assists": 3,
+          "points": 27
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 4,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Addison Hellenbrand",
+          "recordedGames": 4,
+          "goals": 4,
+          "assists": 1,
+          "points": 9
+        },
+        {
+          "name": "Alex Eggen",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "David Quale",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Eric Vickers",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Taylor Kerscher",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Mitch Neuman",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Jon Pethke",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Brett Morth",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Ben Kellner",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Spencer Gillespie",
+          "recordedGames": 2,
+          "goals": 3,
+          "assists": 0,
+          "points": 6
+        },
+        {
+          "name": "Joe Reed",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Phil Schumacher",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": [
+        {
+          "name": "Padraic Emerine",
+          "recordedGames": 22,
+          "saves": 137,
+          "ga": 40,
+          "storedSaves": "137",
+          "storedGA": "38.85",
+          "savesComplete": true,
+          "gaComplete": true
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 3,
+          "saves": 2,
+          "ga": 0,
+          "storedSaves": "2",
+          "storedGA": "0.76",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Ben Kellner",
+          "recordedGames": 1,
+          "saves": 0,
+          "ga": 0,
+          "storedSaves": "0",
+          "storedGA": "0.13",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Phil Schumacher",
+          "recordedGames": 1,
+          "saves": 3,
+          "ga": 0,
+          "storedSaves": "3",
+          "storedGA": "0.25",
+          "savesComplete": true,
+          "gaComplete": false
+        }
+      ]
+    },
+    {
+      "season": "2009",
+      "games": [
+        {
+          "id": "1",
+          "date": "2009-08-25",
+          "opponent": "Fox Valley Lutheran",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "2009-08-27",
+          "opponent": "Luxemburg-Casco",
+          "score": "0-6",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "2009-09-01",
+          "opponent": "Marinette",
+          "score": "7-0",
+          "playerGoals": 7,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "2009-09-03",
+          "opponent": "New London",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "2009-09-08",
+          "opponent": "Seymour",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "2009-09-10",
+          "opponent": "Shawano",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "2009-09-15",
+          "opponent": "West De Pere",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "2009-09-19",
+          "opponent": "Milwaukee Ronald Reagan",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "2009-09-19",
+          "opponent": "Oshkosh Lourdes",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "2009-09-19",
+          "opponent": "Little Chute",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "2009-09-22",
+          "opponent": "Luxemburg-Casco",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "2009-09-24",
+          "opponent": "Marinette",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "2009-09-26",
+          "opponent": "Kimberly",
+          "score": "1-4",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "2009-09-26",
+          "opponent": "Pulaski",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "2009-09-29",
+          "opponent": "New London",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "2009-10-01",
+          "opponent": "Seymour",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "2009-10-06",
+          "opponent": "West De Pere",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "2009-10-10",
+          "opponent": "Little Chute",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "2009-10-10",
+          "opponent": "Kimberly",
+          "score": "0-2",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "2009-10-10",
+          "opponent": "Marinette",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "21",
+          "date": "2009-10-13",
+          "opponent": "Appleton North",
+          "score": "2-4",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Steven Huss",
+          "recordedGames": 20,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 13,
+          "goals": 13,
+          "assists": 2,
+          "points": 28
+        },
+        {
+          "name": "Derek Storch",
+          "recordedGames": 13,
+          "goals": 15,
+          "assists": 5,
+          "points": 35
+        },
+        {
+          "name": "Alejandro Belmar",
+          "recordedGames": 8,
+          "goals": 6,
+          "assists": 3,
+          "points": 15
+        },
+        {
+          "name": "Addison Hellenbrand",
+          "recordedGames": 4,
+          "goals": 3,
+          "assists": 3,
+          "points": 9
+        },
+        {
+          "name": "Mitch Neuman",
+          "recordedGames": 4,
+          "goals": 3,
+          "assists": 1,
+          "points": 7
+        },
+        {
+          "name": "David Herrmann",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Brett Morth",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Joe Reed",
+          "recordedGames": 4,
+          "goals": 3,
+          "assists": 2,
+          "points": 8
+        },
+        {
+          "name": "Dan Baker",
+          "recordedGames": 5,
+          "goals": 1,
+          "assists": 4,
+          "points": 6
+        },
+        {
+          "name": "Charlie Carlson",
+          "recordedGames": 1,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Ben Kellner",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "David Quale",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Barry Schomisch",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": [
+        {
+          "name": "Steven Huss",
+          "recordedGames": 20,
+          "saves": 109,
+          "ga": 31,
+          "storedSaves": "109",
+          "storedGA": "29.15",
+          "savesComplete": true,
+          "gaComplete": true
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 4,
+          "saves": 3,
+          "ga": 0,
+          "storedSaves": "3",
+          "storedGA": "0.61",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Barry Schomisch",
+          "recordedGames": 2,
+          "saves": 4,
+          "ga": 0,
+          "storedSaves": "4",
+          "storedGA": "1.24",
+          "savesComplete": true,
+          "gaComplete": false
+        }
+      ]
+    },
+    {
+      "season": "2010",
+      "games": [
+        {
+          "id": "1",
+          "date": "2010-08-17",
+          "opponent": "Appleton East",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "2010-08-19",
+          "opponent": "Oshkosh West",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "2010-08-24",
+          "opponent": "Fox Valley Lutheran",
+          "score": "1-5",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "2010-08-26",
+          "opponent": "Marinette",
+          "score": "0-1",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "2010-08-28",
+          "opponent": "Fond du Lac",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "2010-08-31",
+          "opponent": "Luxemburg-Casco",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "2010-09-02",
+          "opponent": "New London",
+          "score": "3-3",
+          "playerGoals": 3,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "2010-09-07",
+          "opponent": "Seymour",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "2010-09-09",
+          "opponent": "Shawano",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "2010-09-11",
+          "opponent": "Green Bay West",
+          "score": "0-0",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "2010-09-11",
+          "opponent": "Winnebago Lutheran Academy",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "2010-09-11",
+          "opponent": "Menasha",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "2010-09-14",
+          "opponent": "West De Pere",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "2010-09-16",
+          "opponent": "Kaukauna",
+          "score": "0-1",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "2010-09-17",
+          "opponent": "Oshkosh North",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "2010-09-21",
+          "opponent": "Luxemburg-Casco",
+          "score": "0-1",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "2010-09-28",
+          "opponent": "New London",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "2010-09-30",
+          "opponent": "Seymour",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "2010-10-04",
+          "opponent": "Marinette",
+          "score": "4-3",
+          "playerGoals": 4,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "2010-10-05",
+          "opponent": "Shawano",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "21",
+          "date": "2010-10-07",
+          "opponent": "West De Pere",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "22",
+          "date": "2010-10-12",
+          "opponent": "Appleton North",
+          "score": "0-6",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Barry Schomisch",
+          "recordedGames": 18,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Charlie Carlson",
+          "recordedGames": 5,
+          "goals": 3,
+          "assists": 2,
+          "points": 8
+        },
+        {
+          "name": "Dan Baker",
+          "recordedGames": 9,
+          "goals": 12,
+          "assists": 2,
+          "points": 26
+        },
+        {
+          "name": "Joe Reed",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 3,
+          "points": 7
+        },
+        {
+          "name": "Alejandro Belmar",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Chase Van Krey",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 9,
+          "goals": 2,
+          "assists": 4,
+          "points": 8
+        },
+        {
+          "name": "Brent Heuer",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Marco Delbecchi",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Travis Watson",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Michael Ziehr",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Alex Kaminski",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Nathan Ongemach",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "David Herrmann",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Nate LaCoursiere",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": [
+        {
+          "name": "Barry Schomisch",
+          "recordedGames": 18,
+          "saves": 111,
+          "ga": 40,
+          "storedSaves": "111",
+          "storedGA": "34.83",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Adam Schomisch",
+          "recordedGames": 6,
+          "saves": 25,
+          "ga": 3,
+          "storedSaves": "25",
+          "storedGA": "6.49",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Chase Van Krey",
+          "recordedGames": 1,
+          "saves": 1,
+          "ga": 0,
+          "storedSaves": "1",
+          "storedGA": "0.64",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "Nathan Ongemach",
+          "recordedGames": 1,
+          "saves": 6,
+          "ga": 1,
+          "storedSaves": "6",
+          "storedGA": "2.04",
+          "savesComplete": true,
+          "gaComplete": true
+        }
+      ]
+    },
+    {
+      "season": "2011",
+      "games": [
+        {
+          "id": "2",
+          "date": "Thu Aug 18",
+          "opponent": "Waupaca",
+          "score": "5-1",
+          "playerGoals": 6,
+          "assists": 3,
+          "unattributedGoals": -1
+        },
+        {
+          "id": "3",
+          "date": "Tue Aug 23",
+          "opponent": "Denmark",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 9,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Thu Aug 25",
+          "opponent": "Seymour",
+          "score": "5-2",
+          "playerGoals": 5,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Tue Aug 30",
+          "opponent": "West De Pere",
+          "score": "1-2",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": -1
+        },
+        {
+          "id": "6",
+          "date": "Thu Sep 1",
+          "opponent": "Shawano",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Tue Sep 6",
+          "opponent": "Luxemburg-Casco",
+          "score": "5-1",
+          "playerGoals": 5,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Thu Sep 8",
+          "opponent": "Marinette",
+          "score": "6-0",
+          "playerGoals": 6,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Sat Sep 10",
+          "opponent": "Saint Mary's Springs",
+          "score": "7-1",
+          "playerGoals": 7,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Sep 10",
+          "opponent": "Green Bay NEW Lutheran",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Sat Sep 10",
+          "opponent": "New Holstein/Brillion",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Tue Sep 13",
+          "opponent": "New London",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "Thu Sep 15",
+          "opponent": "Denmark",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Tue Sep 20",
+          "opponent": "Seymour",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Thu Sep 22",
+          "opponent": "West De Pere",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "Tue Sep 27",
+          "opponent": "Shawano",
+          "score": "2-4",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Mon Oct 3",
+          "opponent": "New London",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Tue Oct 4",
+          "opponent": "Marinette",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "Thu Oct 6",
+          "opponent": "Luxemburg-Casco",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Chase Van Krey",
+          "recordedGames": 12,
+          "goals": 20,
+          "assists": 3,
+          "points": 43
+        },
+        {
+          "name": "Phillip Proft",
+          "recordedGames": 1,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Stefan Hartz",
+          "recordedGames": 14,
+          "goals": 13,
+          "assists": 14,
+          "points": 40
+        },
+        {
+          "name": "Charlie Carlson",
+          "recordedGames": 13,
+          "goals": 7,
+          "assists": 15,
+          "points": 29
+        },
+        {
+          "name": "Anders Carlson",
+          "recordedGames": 10,
+          "goals": 13,
+          "assists": 6,
+          "points": 32
+        },
+        {
+          "name": "Aaron Mueller",
+          "recordedGames": 6,
+          "goals": 3,
+          "assists": 5,
+          "points": 11
+        },
+        {
+          "name": "Marco Delbecchi",
+          "recordedGames": 8,
+          "goals": 7,
+          "assists": 6,
+          "points": 20
+        },
+        {
+          "name": "Ryan Yonekura",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Barry Schomisch",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Mario Silva",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Zachary Lohrer",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Kenny Kronemaker",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Brian Herrmann",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2012",
+      "games": [
+        {
+          "id": "1",
+          "date": "Thu Aug 16",
+          "opponent": "Waupaca",
+          "score": "5-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "2",
+          "date": "Mon Aug 20",
+          "opponent": "Appleton East",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Thu Aug 23",
+          "opponent": "Manitowoc Lincoln",
+          "score": "0-3",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Fri Aug 24",
+          "opponent": "Freedom",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Thu Aug 30",
+          "opponent": "Seymour",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Tue Sep 11",
+          "opponent": "Denmark",
+          "score": "11-0",
+          "playerGoals": 11,
+          "assists": 10,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Thu Sep 13",
+          "opponent": "West De Pere",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Sep 15",
+          "opponent": "Berlin",
+          "score": "7-0",
+          "playerGoals": 7,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Sat Sep 15",
+          "opponent": "Portage/Poynette",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Tue Sep 18",
+          "opponent": "Luxemburg-Casco",
+          "score": "5-2",
+          "playerGoals": 5,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "Thu Sep 20",
+          "opponent": "Marinette",
+          "score": "3-5",
+          "playerGoals": 2,
+          "assists": 3,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "14",
+          "date": "Mon Sep 24",
+          "opponent": "Clintonville",
+          "score": "4-1",
+          "playerGoals": 3,
+          "assists": 4,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "15",
+          "date": "Tue Sep 25",
+          "opponent": "New London",
+          "score": "7-2",
+          "playerGoals": 7,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "Tue Oct 2",
+          "opponent": "Marinette",
+          "score": "4-2",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Thu Oct 4",
+          "opponent": "New London",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 3,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Kenny Kronemaker",
+          "recordedGames": 15,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Stefan Hartz",
+          "recordedGames": 15,
+          "goals": 17,
+          "assists": 5,
+          "points": 39
+        },
+        {
+          "name": "Brian Herrmann",
+          "recordedGames": 15,
+          "goals": 3,
+          "assists": 1,
+          "points": 7
+        },
+        {
+          "name": "Giovanni Belmar",
+          "recordedGames": 15,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Phil Proft",
+          "recordedGames": 15,
+          "goals": 0,
+          "assists": 6,
+          "points": 6
+        },
+        {
+          "name": "Aaron Mueller",
+          "recordedGames": 15,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Anders Carlson",
+          "recordedGames": 15,
+          "goals": 3,
+          "assists": 2,
+          "points": 8
+        },
+        {
+          "name": "Andrew Westphal",
+          "recordedGames": 15,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Craig Harrington",
+          "recordedGames": 15,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Dan Kaminski",
+          "recordedGames": 15,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Jacob Biese",
+          "recordedGames": 15,
+          "goals": 4,
+          "assists": 1,
+          "points": 9
+        },
+        {
+          "name": "John Boushley",
+          "recordedGames": 15,
+          "goals": 8,
+          "assists": 1,
+          "points": 17
+        },
+        {
+          "name": "Kellen Krueger",
+          "recordedGames": 15,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Kenny Kromenaker",
+          "recordedGames": 15,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Killian Gutierrez",
+          "recordedGames": 15,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Marco Delbecchi",
+          "recordedGames": 15,
+          "goals": 13,
+          "assists": 19,
+          "points": 45
+        },
+        {
+          "name": "Patrick Quale",
+          "recordedGames": 15,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Ryan Yonekura",
+          "recordedGames": 15,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2013",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 20",
+          "opponent": "Clintonville",
+          "score": "11-0",
+          "playerGoals": 10,
+          "assists": 8,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "2",
+          "date": "Thu Aug 22",
+          "opponent": "Manitowoc Lincoln",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Fri Aug 23",
+          "opponent": "Freedom",
+          "score": "10-2",
+          "playerGoals": 10,
+          "assists": 6,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Thu Sep 5",
+          "opponent": "Luxemburg-Casco",
+          "score": "4-2",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Tue Sep 10",
+          "opponent": "Denmark",
+          "score": "13-0",
+          "playerGoals": 13,
+          "assists": 12,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Thu Sep 12",
+          "opponent": "Marinette",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Tue Sep 17",
+          "opponent": "Seymour",
+          "score": "3-2",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Sat Sep 21",
+          "opponent": "Montello/Westfield",
+          "score": "8-2",
+          "playerGoals": 8,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "Sat Sep 21",
+          "opponent": "Mayville",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Sat Sep 21",
+          "opponent": "Ripon",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Tue Sep 24",
+          "opponent": "Shawano",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "Thu Sep 26",
+          "opponent": "Waupaca",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "Sat Sep 28",
+          "opponent": "Ashwaubenon",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Sat Sep 28",
+          "opponent": "Plymouth",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Tue Oct 1",
+          "opponent": "New London",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "Thu Oct 3",
+          "opponent": "Denmark",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 10,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "21",
+          "date": "Tue Oct 8",
+          "opponent": "New London",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "22",
+          "date": "Thu Oct 10",
+          "opponent": "Shawano",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "23",
+          "date": "Tue Oct 15",
+          "opponent": "Rhinelander",
+          "score": "5-1",
+          "playerGoals": 5,
+          "assists": 4,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Anders Carlson",
+          "recordedGames": 14,
+          "goals": 25,
+          "assists": 9,
+          "points": 59
+        },
+        {
+          "name": "Marco Delbecchi",
+          "recordedGames": 16,
+          "goals": 23,
+          "assists": 17,
+          "points": 63
+        },
+        {
+          "name": "Patrick Quale",
+          "recordedGames": 9,
+          "goals": 7,
+          "assists": 7,
+          "points": 21
+        },
+        {
+          "name": "Dakota Honeycutt",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Jake Buhler",
+          "recordedGames": 7,
+          "goals": 5,
+          "assists": 4,
+          "points": 14
+        },
+        {
+          "name": "John Boushley",
+          "recordedGames": 12,
+          "goals": 9,
+          "assists": 11,
+          "points": 29
+        },
+        {
+          "name": "Stefan Hartz",
+          "recordedGames": 10,
+          "goals": 8,
+          "assists": 7,
+          "points": 23
+        },
+        {
+          "name": "Aaron Mueller",
+          "recordedGames": 8,
+          "goals": 3,
+          "assists": 9,
+          "points": 15
+        },
+        {
+          "name": "Elliot Ray",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Giovanni Belmar",
+          "recordedGames": 6,
+          "goals": 2,
+          "assists": 4,
+          "points": 8
+        },
+        {
+          "name": "Sean Sellers",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Craig Harrington",
+          "recordedGames": 4,
+          "goals": 3,
+          "assists": 3,
+          "points": 9
+        },
+        {
+          "name": "Jacob Biese",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 3,
+          "points": 5
+        },
+        {
+          "name": "Kellen Krueger",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Phil Proft",
+          "recordedGames": 3,
+          "goals": 3,
+          "assists": 2,
+          "points": 8
+        },
+        {
+          "name": "Jonathan Quale",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2014",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 19",
+          "opponent": "Little Chute",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "Thu Aug 21",
+          "opponent": "New London",
+          "score": "4-2",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Sat Aug 23",
+          "opponent": "Wausau East",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Sat Aug 23",
+          "opponent": "Iron Mountain",
+          "score": "9-1",
+          "playerGoals": 9,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Thu Aug 28",
+          "opponent": "Kaukauna",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Tue Sep 9",
+          "opponent": "Oshkosh North",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Sat Sep 13",
+          "opponent": "Marshfield",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Sep 13",
+          "opponent": "Holmen",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Sat Sep 20",
+          "opponent": "NFDL/Oakfield/Springs",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "Sat Sep 20",
+          "opponent": "Berlin",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Sat Sep 20",
+          "opponent": "Milton",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Tue Sep 23",
+          "opponent": "Appleton East",
+          "score": "5-2",
+          "playerGoals": 5,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "Thu Sep 25",
+          "opponent": "Waupaca",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "Sat Sep 27",
+          "opponent": "Winneconne",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Tue Sep 30",
+          "opponent": "Fond du Lac",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Stefan Hartz",
+          "recordedGames": 8,
+          "goals": 10,
+          "assists": 10,
+          "points": 30
+        },
+        {
+          "name": "Jake Buhler",
+          "recordedGames": 12,
+          "goals": 13,
+          "assists": 7,
+          "points": 33
+        },
+        {
+          "name": "Anders Carlson",
+          "recordedGames": 13,
+          "goals": 17,
+          "assists": 6,
+          "points": 40
+        },
+        {
+          "name": "Jake LaCoursiere",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Karl Wirtz",
+          "recordedGames": 3,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Jonathan Quale",
+          "recordedGames": 4,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Ramiro Rosas",
+          "recordedGames": 4,
+          "goals": 0,
+          "assists": 4,
+          "points": 4
+        },
+        {
+          "name": "Giovanni Belmar",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Jacob Biese",
+          "recordedGames": 4,
+          "goals": 0,
+          "assists": 4,
+          "points": 4
+        },
+        {
+          "name": "Kellen Krueger",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Mason Guyette",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Patrick Quale",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Jon Schroeder",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Aaron Voss",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Dom Petinato",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Dylan Loeffler",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Eli Nichols",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Geo Belmar",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Jacob Ziegert",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Jake Bakich",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Jesus Leon",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2015",
+      "games": [
+        {
+          "id": "2",
+          "date": "Sat Aug 29",
+          "opponent": "Seymour",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Thu Sep 3",
+          "opponent": "Waupaca",
+          "score": "4-3",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Thu Sep 10",
+          "opponent": "Kimberly",
+          "score": "2-7",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Mon Sep 14",
+          "opponent": "St. Mary Catholic",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Thu Sep 17",
+          "opponent": "Little Chute",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Sat Sep 19",
+          "opponent": "Ripon",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Sep 19",
+          "opponent": "Berlin",
+          "score": "1-4",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Sat Sep 19",
+          "opponent": "Winneconne",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "Tue Oct 6",
+          "opponent": "Appleton East",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "Thu Oct 15",
+          "opponent": "Oshkosh West",
+          "score": "1-5",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Jake Buhler",
+          "recordedGames": 8,
+          "goals": 8,
+          "assists": 5,
+          "points": 21
+        },
+        {
+          "name": "Tony Vue",
+          "recordedGames": 5,
+          "goals": 2,
+          "assists": 3,
+          "points": 7
+        },
+        {
+          "name": "Jonathan Quale",
+          "recordedGames": 7,
+          "goals": 10,
+          "assists": 4,
+          "points": 24
+        },
+        {
+          "name": "Jacob Biese",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 4,
+          "points": 8
+        },
+        {
+          "name": "Brice Richardson",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Jake Bakich",
+          "recordedGames": 6,
+          "goals": 2,
+          "assists": 5,
+          "points": 9
+        },
+        {
+          "name": "Dom Petinato",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2016",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 23",
+          "opponent": "Pulaski",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "Thu Aug 25",
+          "opponent": "Kaukauna",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Sat Aug 27",
+          "opponent": "Seymour",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Thu Sep 8",
+          "opponent": "Green Bay West",
+          "score": "9-1",
+          "playerGoals": 9,
+          "assists": 9,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Tue Sep 13",
+          "opponent": "Oshkosh North",
+          "score": "3-6",
+          "playerGoals": 3,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Thu Sep 15",
+          "opponent": "Fond du Lac",
+          "score": "8-1",
+          "playerGoals": 8,
+          "assists": 6,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Sat Sep 17",
+          "opponent": "Ripon",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Sat Sep 17",
+          "opponent": "Berlin",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Sep 17",
+          "opponent": "Wautoma/Wild Rose",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Tue Sep 20",
+          "opponent": "Neenah",
+          "score": "1-5",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Tue Sep 27",
+          "opponent": "Appleton North",
+          "score": "3-11",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Tue Oct 4",
+          "opponent": "Appleton West",
+          "score": "7-2",
+          "playerGoals": 6,
+          "assists": 6,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "16",
+          "date": "Thu Oct 6",
+          "opponent": "New London",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Thu Oct 13",
+          "opponent": "Appleton East",
+          "score": "6-0",
+          "playerGoals": 6,
+          "assists": 5,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Jake Buhler",
+          "recordedGames": 13,
+          "goals": 25,
+          "assists": 8,
+          "points": 58
+        },
+        {
+          "name": "Jake Bakich",
+          "recordedGames": 10,
+          "goals": 8,
+          "assists": 9,
+          "points": 25
+        },
+        {
+          "name": "Preston Long",
+          "recordedGames": 5,
+          "goals": 1,
+          "assists": 5,
+          "points": 7
+        },
+        {
+          "name": "Jonathan Quale",
+          "recordedGames": 8,
+          "goals": 12,
+          "assists": 9,
+          "points": 33
+        },
+        {
+          "name": "Wyatt Griesbach",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Jacob Ziegert",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Brice Richardson",
+          "recordedGames": 7,
+          "goals": 2,
+          "assists": 6,
+          "points": 10
+        },
+        {
+          "name": "Kaden Bonikowske",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Payton Claybaugh",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Austin Breitbach",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Dillon Biese",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Josh Wilkins",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Carter Tews",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Jacob Ahles",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Sam Marsden",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2017",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 22",
+          "opponent": "Pulaski",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Tue Aug 29",
+          "opponent": "Oshkosh West",
+          "score": "1-8",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Thu Aug 31",
+          "opponent": "Green Bay East",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Tue Sep 5",
+          "opponent": "Fond du Lac",
+          "score": "3-4",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Thu Sep 7",
+          "opponent": "New London",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Tue Sep 12",
+          "opponent": "Oshkosh North",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Sep 16",
+          "opponent": "Ripon",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Sat Sep 16",
+          "opponent": "Berlin",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Tue Sep 19",
+          "opponent": "Neenah",
+          "score": "1-9",
+          "playerGoals": 0,
+          "assists": 1,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "13",
+          "date": "Thu Sep 21",
+          "opponent": "Green Bay West",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Tue Sep 26",
+          "opponent": "Appleton North",
+          "score": "1-6",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Thu Oct 19",
+          "opponent": "Ashwaubenon",
+          "score": "6-3",
+          "playerGoals": 6,
+          "assists": 5,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Ian Hoyer",
+          "recordedGames": 4,
+          "goals": 8,
+          "assists": 2,
+          "points": 18
+        },
+        {
+          "name": "Tony Vue",
+          "recordedGames": 6,
+          "goals": 5,
+          "assists": 3,
+          "points": 13
+        },
+        {
+          "name": "Jake Bakich",
+          "recordedGames": 11,
+          "goals": 5,
+          "assists": 11,
+          "points": 21
+        },
+        {
+          "name": "Payton Claybaugh",
+          "recordedGames": 3,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Austin Breitbach",
+          "recordedGames": 2,
+          "goals": 3,
+          "assists": 0,
+          "points": 6
+        },
+        {
+          "name": "Brice Richardson",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Jacob Ziegert",
+          "recordedGames": 4,
+          "goals": 5,
+          "assists": 1,
+          "points": 11
+        },
+        {
+          "name": "Sam Vicchiolo",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Alex Knight",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Kaden Bonikowske",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Hayden Thompson",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Eric Rohloff",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Carter Tews",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Preston Long",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Dillon Biese",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Luke Petrasko",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2018",
+      "games": [
+        {
+          "id": "3",
+          "date": "Mon Aug 27",
+          "opponent": "Ashwaubenon",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Thu Aug 30",
+          "opponent": "Pulaski",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Thu Sep 6",
+          "opponent": "Green Bay West",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Sat Sep 15",
+          "opponent": "Stoughton",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Sat Sep 15",
+          "opponent": "Winneconne",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Sat Sep 15",
+          "opponent": "Freedom",
+          "score": "2-0",
+          "playerGoals": 1,
+          "assists": 2,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "11",
+          "date": "Thu Sep 20",
+          "opponent": "Waupaca",
+          "score": "3-2",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Tue Sep 25",
+          "opponent": "Kaukauna",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Thu Oct 4",
+          "opponent": "Appleton East",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Mon Oct 8",
+          "opponent": "Fond du Lac",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Tue Oct 16",
+          "opponent": "Green Bay West",
+          "score": "9-0",
+          "playerGoals": 9,
+          "assists": 7,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Ian Hoyer",
+          "recordedGames": 11,
+          "goals": 16,
+          "assists": 5,
+          "points": 37
+        },
+        {
+          "name": "Chase Laughlin",
+          "recordedGames": 5,
+          "goals": 4,
+          "assists": 6,
+          "points": 14
+        },
+        {
+          "name": "Alex Knight",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Carter Tews",
+          "recordedGames": 5,
+          "goals": 2,
+          "assists": 5,
+          "points": 9
+        },
+        {
+          "name": "Travis Schmitz",
+          "recordedGames": 4,
+          "goals": 0,
+          "assists": 4,
+          "points": 4
+        },
+        {
+          "name": "Lukas Ives",
+          "recordedGames": 1,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Taylor Thyssen",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Brice Richardson",
+          "recordedGames": 4,
+          "goals": 1,
+          "assists": 3,
+          "points": 5
+        },
+        {
+          "name": "Noah Lopez",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 3,
+          "points": 7
+        },
+        {
+          "name": "Dillon Biese",
+          "recordedGames": 5,
+          "goals": 5,
+          "assists": 3,
+          "points": 13
+        },
+        {
+          "name": "Erik Rohloff",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Kaden Bonikowske",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Owen Engel",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Drew Klein",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2019",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 27",
+          "opponent": "Wausau East",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "Thu Aug 29",
+          "opponent": "New London",
+          "score": "8-1",
+          "playerGoals": 8,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Tue Sep 3",
+          "opponent": "Pulaski",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Tue Sep 10",
+          "opponent": "Fond du Lac",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Thu Sep 12",
+          "opponent": "Green Bay East",
+          "score": "4-2",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Tue Sep 17",
+          "opponent": "Appleton East",
+          "score": "4-5",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Thu Sep 19",
+          "opponent": "Waupaca",
+          "score": "4-2",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Sep 21",
+          "opponent": "Portage/Poynette",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Sat Sep 21",
+          "opponent": "Omro",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Tue Sep 24",
+          "opponent": "Appleton North",
+          "score": "2-7",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Sat Oct 5",
+          "opponent": "Marshfield",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Mon Oct 7",
+          "opponent": "Kaukauna",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Tue Oct 15",
+          "opponent": "Kimberly",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Tue Oct 22",
+          "opponent": "Green Bay West",
+          "score": "13-0",
+          "playerGoals": 13,
+          "assists": 11,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "Sat Oct 26",
+          "opponent": "Marshfield",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "21",
+          "date": "Thu Oct 31",
+          "opponent": "Pulaski",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Kaden Bonikowske",
+          "recordedGames": 14,
+          "goals": 19,
+          "assists": 12,
+          "points": 50
+        },
+        {
+          "name": "Dillon Biese",
+          "recordedGames": 11,
+          "goals": 10,
+          "assists": 6,
+          "points": 26
+        },
+        {
+          "name": "Ian Hoyer",
+          "recordedGames": 15,
+          "goals": 17,
+          "assists": 11,
+          "points": 45
+        },
+        {
+          "name": "Austin Breitbach",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Drew Klein",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Joey Peikert",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Carter Tews",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 3,
+          "points": 7
+        },
+        {
+          "name": "Chase Laughlin",
+          "recordedGames": 8,
+          "goals": 5,
+          "assists": 5,
+          "points": 15
+        },
+        {
+          "name": "Noah Lopez",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Archer Lorenz",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Travis Schmitz",
+          "recordedGames": 3,
+          "goals": 0,
+          "assists": 4,
+          "points": 4
+        },
+        {
+          "name": "Alex Knight",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Gage Gansen",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2020",
+      "games": [
+        {
+          "id": "1",
+          "date": "Fri Sep 25",
+          "opponent": "Marshfield",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Sat Oct 3",
+          "opponent": "Wausau East",
+          "score": "5-0",
+          "playerGoals": 6,
+          "assists": 5,
+          "unattributedGoals": -1
+        },
+        {
+          "id": "6",
+          "date": "Sat Oct 10",
+          "opponent": "Marshfield",
+          "score": "3-3",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Tue Oct 13",
+          "opponent": "D.C. Everest",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Tue Oct 20",
+          "opponent": "Wausau West",
+          "score": "2-4",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Sat Oct 24",
+          "opponent": "West Bend West",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Thu Oct 29",
+          "opponent": "Slinger",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Daniel Lopez",
+          "recordedGames": 5,
+          "goals": 5,
+          "assists": 2,
+          "points": 12
+        },
+        {
+          "name": "Noah Lopez",
+          "recordedGames": 7,
+          "goals": 4,
+          "assists": 4,
+          "points": 12
+        },
+        {
+          "name": "Ian Hoyer",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 4,
+          "points": 8
+        },
+        {
+          "name": "Alex Knight",
+          "recordedGames": 4,
+          "goals": 4,
+          "assists": 4,
+          "points": 12
+        },
+        {
+          "name": "Travis Schmitz",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 4,
+          "points": 6
+        },
+        {
+          "name": "Chase Laughlin",
+          "recordedGames": 3,
+          "goals": 3,
+          "assists": 0,
+          "points": 6
+        },
+        {
+          "name": "Miles Montalbano",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Hayden Hassler",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Archer Lorenz",
+          "recordedGames": 1,
+          "goals": 3,
+          "assists": 0,
+          "points": 6
+        },
+        {
+          "name": "Mason Freeman",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2021",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 24",
+          "opponent": "Green Bay Southwest",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Sat Aug 28",
+          "opponent": "West De Pere",
+          "score": "7-1",
+          "playerGoals": 7,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Tue Aug 31",
+          "opponent": "New London",
+          "score": "7-0",
+          "playerGoals": 7,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Thu Sep 2",
+          "opponent": "Bay Port",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Tue Sep 7",
+          "opponent": "Kaukauna",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Thu Sep 9",
+          "opponent": "Appleton West",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Sat Sep 11",
+          "opponent": "Shawano",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 9,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Tue Sep 14",
+          "opponent": "Fond du Lac",
+          "score": "4-3",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Fri Sep 17",
+          "opponent": "Pulaski",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Tue Sep 21",
+          "opponent": "Oshkosh West",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "Tue Sep 28",
+          "opponent": "Kimberly",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Thu Sep 30",
+          "opponent": "Waupaca",
+          "score": "9-0",
+          "playerGoals": 9,
+          "assists": 6,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Sat Oct 2",
+          "opponent": "Marshfield",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "Sat Oct 9",
+          "opponent": "Wisconsin Rapids",
+          "score": "1-4",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Tue Oct 12",
+          "opponent": "Oshkosh North",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Thu Oct 14",
+          "opponent": "Neenah",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "Tue Oct 19",
+          "opponent": "Wisconsin Rapids",
+          "score": "3-5",
+          "playerGoals": 3,
+          "assists": 1,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Chase Laughlin",
+          "recordedGames": 11,
+          "goals": 22,
+          "assists": 7,
+          "points": 51
+        },
+        {
+          "name": "Dylan Glad",
+          "recordedGames": 8,
+          "goals": 6,
+          "assists": 9,
+          "points": 21
+        },
+        {
+          "name": "Noah Lopez",
+          "recordedGames": 9,
+          "goals": 12,
+          "assists": 6,
+          "points": 30
+        },
+        {
+          "name": "Drew Klein",
+          "recordedGames": 9,
+          "goals": 5,
+          "assists": 5,
+          "points": 15
+        },
+        {
+          "name": "Rodrigo Castellanos Campos",
+          "recordedGames": 9,
+          "goals": 7,
+          "assists": 9,
+          "points": 23
+        },
+        {
+          "name": "Charlie O'Brien",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Hayden Hasseler",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Mason Freeman",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Miles Montalbano",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 3,
+          "points": 7
+        },
+        {
+          "name": "Jorge Pena Fillaega",
+          "recordedGames": 10,
+          "goals": 7,
+          "assists": 10,
+          "points": 24
+        },
+        {
+          "name": "Owen Vedder",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Joey Peikert",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Logan Johnson",
+          "recordedGames": 4,
+          "goals": 1,
+          "assists": 3,
+          "points": 5
+        },
+        {
+          "name": "Eli Weyenberg",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Will Cesar",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Lucas Gosz",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2022",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 23",
+          "opponent": "Marshfield",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "Fri Aug 26",
+          "opponent": "Pulaski",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Thu Sep 1",
+          "opponent": "Neenah",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Tue Sep 6",
+          "opponent": "Kaukauna",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Thu Sep 8",
+          "opponent": "Appleton West",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Sat Sep 10",
+          "opponent": "Green Bay East",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Sat Sep 10",
+          "opponent": "Manitowoc Lincoln",
+          "score": "7-0",
+          "playerGoals": 7,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Sat Sep 17",
+          "opponent": "De Pere",
+          "score": "1-2",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "Tue Oct 4",
+          "opponent": "Oshkosh North",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "Fri Oct 7",
+          "opponent": "Onalaska",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Thu Oct 13",
+          "opponent": "Marinette",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 4,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Dylan Glad",
+          "recordedGames": 5,
+          "goals": 4,
+          "assists": 3,
+          "points": 11
+        },
+        {
+          "name": "Cade Mansfield",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 3,
+          "points": 5
+        },
+        {
+          "name": "Eli Weyenberg",
+          "recordedGames": 5,
+          "goals": 4,
+          "assists": 2,
+          "points": 10
+        },
+        {
+          "name": "Charlie O'Brien",
+          "recordedGames": 6,
+          "goals": 6,
+          "assists": 3,
+          "points": 15
+        },
+        {
+          "name": "Owen Vedder",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Alex Mocarski",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Wesley Barker",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Bryce Kreski",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Brody Hanson",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Derek Adamson",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Michael VanSchynel",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Henry Whisler",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Luciano Pineda Saadi",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2023",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 22",
+          "opponent": "Pulaski",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "Thu Aug 24",
+          "opponent": "Marshfield",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Tue Aug 29",
+          "opponent": "Bay Port",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "Thu Aug 31",
+          "opponent": "Neenah",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Tue Sep 5",
+          "opponent": "Kimberly",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Thu Sep 7",
+          "opponent": "Kaukauna",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "Sat Sep 9",
+          "opponent": "Green Bay East",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Sat Sep 9",
+          "opponent": "Manitowoc Lincoln",
+          "score": "8-0",
+          "playerGoals": 7,
+          "assists": 3,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "9",
+          "date": "Tue Sep 12",
+          "opponent": "Fond du Lac",
+          "score": "1-3",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Tue Sep 19",
+          "opponent": "Oshkosh West",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Thu Sep 21",
+          "opponent": "Appleton West",
+          "score": "6-0",
+          "playerGoals": 6,
+          "assists": 6,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "Sat Sep 23",
+          "opponent": "Wisconsin Rapids",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Tue Sep 26",
+          "opponent": "Oshkosh North",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "Thu Oct 5",
+          "opponent": "Waupaca",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Mon Oct 9",
+          "opponent": "Ashwaubenon",
+          "score": "7-0",
+          "playerGoals": 7,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Tue Oct 17",
+          "opponent": "Green Bay West",
+          "score": "10-0",
+          "playerGoals": 9,
+          "assists": 6,
+          "unattributedGoals": 1
+        },
+        {
+          "id": "20",
+          "date": "Sat Oct 21",
+          "opponent": "Port Washington",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Dylan Glad",
+          "recordedGames": 14,
+          "goals": 21,
+          "assists": 14,
+          "points": 56
+        },
+        {
+          "name": "Charlie O'Brien",
+          "recordedGames": 6,
+          "goals": 8,
+          "assists": 2,
+          "points": 18
+        },
+        {
+          "name": "Owen Vedder",
+          "recordedGames": 6,
+          "goals": 8,
+          "assists": 2,
+          "points": 18
+        },
+        {
+          "name": "Wesley Barker",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Fenton Hirschi",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 4
+        },
+        {
+          "name": "Roman Glad",
+          "recordedGames": 6,
+          "goals": 3,
+          "assists": 5,
+          "points": 11
+        },
+        {
+          "name": "Cade Mansfield",
+          "recordedGames": 4,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Andrew Heinz",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "name": "Henry Whisler",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Noah Rindt",
+          "recordedGames": 4,
+          "goals": 3,
+          "assists": 3,
+          "points": 9
+        },
+        {
+          "name": "Josh Jakusz",
+          "recordedGames": 3,
+          "goals": 2,
+          "assists": 2,
+          "points": 6
+        },
+        {
+          "name": "Caleb Schewe",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Elliot Vedder",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Bryce Kreski",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Jacob Plutz",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Hayden Hasseler",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Jensen Sipes",
+          "recordedGames": 2,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "name": "Eugenio Ongay",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2024",
+      "games": [
+        {
+          "id": "1",
+          "date": "Tue Aug 27",
+          "opponent": "Marshfield",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "Thu Aug 29",
+          "opponent": "Wausau East",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "Tue Sep 3",
+          "opponent": "Neenah",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "Sat Sep 7",
+          "opponent": "Green Bay East",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "Sat Sep 7",
+          "opponent": "Manitowoc Lincoln",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 6,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "Thu Sep 12",
+          "opponent": "Kaukauna",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "Tue Sep 17",
+          "opponent": "Fond du Lac",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "Thu Sep 19",
+          "opponent": "Appleton East",
+          "score": "5-0",
+          "playerGoals": 5,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "Sat Sep 21",
+          "opponent": "Green Bay Preble",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "Tue Sep 24",
+          "opponent": "Oshkosh West",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "Thu Sep 26",
+          "opponent": "Appleton West",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "Tue Oct 1",
+          "opponent": "Oshkosh North",
+          "score": "6-0",
+          "playerGoals": 6,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "Thu Oct 3",
+          "opponent": "West De Pere",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "Sat Oct 5",
+          "opponent": "Notre Dame",
+          "score": "2-3",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "Tue Oct 8",
+          "opponent": "Appleton North",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "Fri Oct 11",
+          "opponent": "Sturgeon Bay",
+          "score": "7-0",
+          "playerGoals": 7,
+          "assists": 6,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "Tue Oct 15",
+          "opponent": "Waupaca",
+          "score": "6-0",
+          "playerGoals": 6,
+          "assists": 5,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "Tue Oct 22",
+          "opponent": "Appleton West",
+          "score": "4-3",
+          "playerGoals": 4,
+          "assists": 4,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Noah Rindt",
+          "recordedGames": 12,
+          "goals": 8,
+          "assists": 8,
+          "points": 24
+        },
+        {
+          "name": "Jacob Plutz",
+          "recordedGames": 8,
+          "goals": 7,
+          "assists": 3,
+          "points": 17
+        },
+        {
+          "name": "Dylan Glad",
+          "recordedGames": 12,
+          "goals": 9,
+          "assists": 11,
+          "points": 29
+        },
+        {
+          "name": "Anthony Zanon",
+          "recordedGames": 6,
+          "goals": 6,
+          "assists": 1,
+          "points": 13
+        },
+        {
+          "name": "Wesley Barker",
+          "recordedGames": 7,
+          "goals": 6,
+          "assists": 2,
+          "points": 14
+        },
+        {
+          "name": "Caleb Schewe",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Roman Glad",
+          "recordedGames": 10,
+          "goals": 18,
+          "assists": 4,
+          "points": 40
+        },
+        {
+          "name": "Andrew Heinz",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Elliot Vedder",
+          "recordedGames": 7,
+          "goals": 6,
+          "assists": 6,
+          "points": 18
+        },
+        {
+          "name": "Henry Whisler",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Cade Mansfield",
+          "recordedGames": 6,
+          "goals": 2,
+          "assists": 6,
+          "points": 10
+        },
+        {
+          "name": "Fenton Hirschi",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Derek Adamson",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 3,
+          "points": 3
+        },
+        {
+          "name": "Eli Shattuck",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": []
+    },
+    {
+      "season": "2025",
+      "games": [
+        {
+          "id": "1",
+          "date": "8/26",
+          "opponent": "West De Pere",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "2",
+          "date": "8/28",
+          "opponent": "Wausau West",
+          "score": "4-0",
+          "playerGoals": 4,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "3",
+          "date": "9/2",
+          "opponent": "Neenah",
+          "score": "0-0",
+          "playerGoals": 0,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "4",
+          "date": "9/4",
+          "opponent": "Oshkosh North",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "5",
+          "date": "9/6",
+          "opponent": "Green Bay East",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "6",
+          "date": "9/6",
+          "opponent": "Manitowoc Lincoln",
+          "score": "10-0",
+          "playerGoals": 10,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "7",
+          "date": "9/9",
+          "opponent": "Appleton East",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "8",
+          "date": "9/11",
+          "opponent": "Fond du Lac",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "9",
+          "date": "9/13",
+          "opponent": "Fox Valley Lutheran",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "10",
+          "date": "9/16",
+          "opponent": "Appleton North",
+          "score": "7-0",
+          "playerGoals": 7,
+          "assists": 6,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "11",
+          "date": "9/19",
+          "opponent": "De Pere",
+          "score": "3-2",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "12",
+          "date": "9/20",
+          "opponent": "Green Bay Preble",
+          "score": "3-1",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "13",
+          "date": "9/23",
+          "opponent": "Appleton West",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "14",
+          "date": "9/25",
+          "opponent": "Oshkosh West",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "15",
+          "date": "9/30",
+          "opponent": "Kaukauna",
+          "score": "2-0",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "16",
+          "date": "10/4",
+          "opponent": "Marshfield",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 8,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "17",
+          "date": "10/7",
+          "opponent": "Kimberly",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 0,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "18",
+          "date": "10/11",
+          "opponent": "Notre Dame Academy",
+          "score": "4-1",
+          "playerGoals": 4,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "19",
+          "date": "10/13",
+          "opponent": "D.C. Everest",
+          "score": "1-1",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "20",
+          "date": "10/16",
+          "opponent": "Waupaca",
+          "score": "8-0",
+          "playerGoals": 8,
+          "assists": 7,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "21",
+          "date": "10/21",
+          "opponent": "Wausau West",
+          "score": "3-0",
+          "playerGoals": 3,
+          "assists": 3,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "22",
+          "date": "10/25",
+          "opponent": "Green Bay Preble",
+          "score": "1-0",
+          "playerGoals": 1,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "23",
+          "date": "10/30",
+          "opponent": "D.C. Everest",
+          "score": "2-1",
+          "playerGoals": 2,
+          "assists": 1,
+          "unattributedGoals": 0
+        },
+        {
+          "id": "24",
+          "date": "11/1",
+          "opponent": "Hudson",
+          "score": "2-2",
+          "playerGoals": 2,
+          "assists": 2,
+          "unattributedGoals": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Evan Langkan",
+          "recordedGames": 9,
+          "goals": 11,
+          "assists": 4,
+          "points": 26
+        },
+        {
+          "name": "Grant Decker",
+          "recordedGames": 24,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Roman Glad",
+          "recordedGames": 17,
+          "goals": 26,
+          "assists": 11,
+          "points": 63
+        },
+        {
+          "name": "Jacob Plutz",
+          "recordedGames": 14,
+          "goals": 10,
+          "assists": 15,
+          "points": 35
+        },
+        {
+          "name": "Anthony Zanon",
+          "recordedGames": 4,
+          "goals": 3,
+          "assists": 2,
+          "points": 8
+        },
+        {
+          "name": "Elliot Vedder",
+          "recordedGames": 11,
+          "goals": 8,
+          "assists": 6,
+          "points": 22
+        },
+        {
+          "name": "James Baker",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 2,
+          "points": 2
+        },
+        {
+          "name": "Fenton Hirschi",
+          "recordedGames": 9,
+          "goals": 7,
+          "assists": 5,
+          "points": 19
+        },
+        {
+          "name": "Noah Rindt",
+          "recordedGames": 7,
+          "goals": 5,
+          "assists": 6,
+          "points": 16
+        },
+        {
+          "name": "Thomas Grasse",
+          "recordedGames": 3,
+          "goals": 1,
+          "assists": 3,
+          "points": 5
+        },
+        {
+          "name": "Henry Whisler",
+          "recordedGames": 3,
+          "goals": 3,
+          "assists": 1,
+          "points": 7
+        },
+        {
+          "name": "Cade Mansfield",
+          "recordedGames": 8,
+          "goals": 6,
+          "assists": 6,
+          "points": 18
+        },
+        {
+          "name": "Andrew Barker",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Wesley Barker",
+          "recordedGames": 8,
+          "goals": 3,
+          "assists": 6,
+          "points": 12
+        },
+        {
+          "name": "Caleb Schewe",
+          "recordedGames": 4,
+          "goals": 1,
+          "assists": 4,
+          "points": 6
+        },
+        {
+          "name": "Ben Diedrich",
+          "recordedGames": 2,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "name": "Eli Shattuck",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "Emmett Tweed",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "name": "Sawyer Davis",
+          "recordedGames": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "name": "David Grasse",
+          "recordedGames": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "name": "Eli Ryan",
+          "recordedGames": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        }
+      ],
+      "differences": [],
+      "duplicateRows": [],
+      "goalkeeperTotals": [
+        {
+          "name": "Grant Decker",
+          "recordedGames": 24,
+          "saves": 58,
+          "ga": 11,
+          "storedSaves": "58",
+          "storedGA": "11",
+          "savesComplete": true,
+          "gaComplete": false
+        },
+        {
+          "name": "David Grasse",
+          "recordedGames": 1,
+          "saves": 0,
+          "ga": 0,
+          "storedSaves": "0",
+          "storedGA": "0",
+          "savesComplete": true,
+          "gaComplete": true
+        },
+        {
+          "name": "Eli Ryan",
+          "recordedGames": 2,
+          "saves": 0,
+          "ga": 0,
+          "storedSaves": "0",
+          "storedGA": "0",
+          "savesComplete": true,
+          "gaComplete": true
+        }
+      ]
+    }
+  ]
+}

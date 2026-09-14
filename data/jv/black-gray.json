@@ -234,7 +234,7 @@
         { "name": "Ethan Nysse", "goals": 1, "assists": 0 }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": 1 }
+        { "name": "Ayden Lenth", "minutes": 80, "saves": 1, "goalsAgainst": 3 }
       ]
     },
     {
@@ -249,14 +249,14 @@
         { "name": "Ezekiel Hartjes", "goals": 0, "assists": 1 }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": null }
+        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 2 }
       ]
     }
   ],
   "statsAudit": {
     "source": "Andrew Montalbano",
     "importedAt": "2026-09-14",
-    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable."
+    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable."
   },
   "resultsAudit": {
     "source": "Andrew Montalbano",

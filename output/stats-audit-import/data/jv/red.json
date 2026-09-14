@@ -7,9 +7,9 @@
       "sourceFile": "2026_Season_Stats.xlsx",
       "sourceModifiedAt": "2026-09-10T23:30:55.000Z",
       "sourceSha256": "4925ab588049c7e956664e078f52a3146fc0c8ceed75982caadf7a001ae2241c",
-      "importedAt": "2026-09-10T23:41:04.267Z",
+      "importedAt": "2026-09-14T13:29:59.134Z",
       "validation": "warning",
-      "validationSummary": "September 14 retally: all season scoring and goalkeeper totals match the six game box scores. Source workbook conflict remains for August 27 vs. Marshfield: Jaxon Wolff has 1 assist in Game Log but 0 in Goal Log. Retained the reported assist pending clarification.",
+      "validationSummary": "Game 2: 23 - Jaxon Wolff has 1 assists in Game Log but 0 in Goal Log. Game 6: 16 - Carson Sanford has 2 goals in Game Log but 0 in Goal Log. Game 6: 18 - Grayson Ackermann has 0 goals in Game Log but 2 in Goal Log.",
       "approvedBy": "Andrew Montalbano"
     },
     "record": {
@@ -175,9 +175,9 @@
         "number": 16,
         "name": "Carson Sanford",
         "gp": 6,
-        "goals": 0,
+        "goals": 2,
         "assists": 1,
-        "points": 1
+        "points": 5
       },
       {
         "number": 19,
@@ -215,9 +215,9 @@
         "number": 18,
         "name": "Grayson Ackermann",
         "gp": 6,
-        "goals": 3,
+        "goals": 1,
         "assists": 0,
-        "points": 6
+        "points": 2
       },
       {
         "number": 24,
@@ -1400,7 +1400,7 @@
           "gkMinutes": 55
         },
         {
-          "player": "18 - Grayson Ackermann",
+          "player": "16 - Carson Sanford",
           "shots": 2,
           "sog": 2,
           "goals": 2,

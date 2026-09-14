@@ -65,6 +65,19 @@ for (const row of completed) {
   const expectedGoals = number(row.GF)
   const loggedGoals = goalLogRows.filter((goal) => number(goal["Game #"]) === gameNumber).length + number(row["Own Goals For"])
   if (expectedGoals !== loggedGoals) issues.push(`Game ${gameNumber}: GF is ${expectedGoals}, but Goal Log plus own goals is ${loggedGoals}.`)
+  const playerLines = gameLogRows.filter((entry) => number(entry["Game #"]) === gameNumber)
+  const scoringLines = goalLogRows.filter((entry) => number(entry["Game #"]) === gameNumber)
+  const playerKeys = new Set([
+    ...playerLines.map((entry) => text(entry["Player (No. - Name)"])),
+    ...scoringLines.flatMap((entry) => [text(entry["Scorer (No. - Name)"]), text(entry["Assist (No. - Name)"])].filter(Boolean)),
+  ])
+  for (const key of playerKeys) {
+    for (const [stat, goalColumn] of [["Goals", "Scorer (No. - Name)"], ["Assists", "Assist (No. - Name)"]]) {
+      const gameLogTotal = playerLines.filter((entry) => text(entry["Player (No. - Name)"]) === key).reduce((sum, entry) => sum + number(entry[stat]), 0)
+      const goalLogTotal = scoringLines.filter((entry) => text(entry[goalColumn]) === key).length
+      if (gameLogTotal !== goalLogTotal) issues.push(`Game ${gameNumber}: ${key} has ${gameLogTotal} ${stat.toLowerCase()} in Game Log but ${goalLogTotal} in Goal Log.`)
+    }
+  }
 }
 
 const playerTotals = new Map()
