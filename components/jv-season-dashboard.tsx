@@ -9,6 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import type { JvTeamStats } from "@/lib/jv-teams"
 
 export type JvDashboardStats = Omit<JvTeamStats, "totals" | "players" | "goalkeepers" | "recent"> & {
+ scoredGames?: number
  totals: { goalsFor: number | null; goalsAgainst: number | null; shots: number | null; sog: number | null; saves: number | null }
  players: Array<{ number: string | number; name: string; squad?: string; gp: number | null; goals: number | null; assists: number | null; points: number | null }>
  goalkeepers: Array<{ number: string | number; name: string; games: number | null; saves: number | null; minutes: number | null; recordedSaves?: number; goalsAgainst: number | null }>
@@ -32,6 +33,8 @@ export function JvSeasonDashboard({ stats: jvStats }: { stats: JvDashboardStats 
       time: event.time, bus: !event.home ? event.bus : null,
     }))
   const games = jvStats.record.wins + jvStats.record.losses + jvStats.record.ties
+  const scoredGames = jvStats.scoredGames ?? games
+  const partialScores = scoredGames < games
   const goalDifference = jvStats.totals.goalsFor == null || jvStats.totals.goalsAgainst == null ? null : jvStats.totals.goalsFor - jvStats.totals.goalsAgainst
 
   return <main className="min-h-screen bg-background">
@@ -44,8 +47,8 @@ export function JvSeasonDashboard({ stats: jvStats }: { stats: JvDashboardStats 
           <div><p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Boys soccer · {jvStats.team}</p><h1 className="mt-1 text-4xl font-black tracking-tight md:text-5xl">2026 Season</h1><p className="mt-3 flex items-center gap-2 text-sm text-white/60"><span className="size-1.5 rounded-full bg-emerald-400" />{jvStats.sourceLabel ?? "Workbook data"} · Updated {jvStats.updated}</p></div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
             <HeaderStat label="Record" value={`${jvStats.record.wins}-${jvStats.record.losses}-${jvStats.record.ties}`} />
-            <HeaderStat label="Goals For" value={`${jvStats.totals.goalsFor ?? "—"}`} />
-            <HeaderStat label="Goals Against" value={`${jvStats.totals.goalsAgainst ?? "—"}`} />
+            <HeaderStat label={partialScores ? "Goals For (known)" : "Goals For"} value={`${jvStats.totals.goalsFor ?? "—"}`} />
+            <HeaderStat label={partialScores ? "Goals Against (known)" : "Goals Against"} value={`${jvStats.totals.goalsAgainst ?? "—"}`} />
             <HeaderStat label="Conference" value="FVA" compact />
           </div>
         </div>
@@ -55,7 +58,7 @@ export function JvSeasonDashboard({ stats: jvStats }: { stats: JvDashboardStats 
     <div className="sticky top-16 z-30 border-b bg-background/95 backdrop-blur"><nav aria-label="JV season sections" className="site-container flex gap-2 overflow-x-auto py-3"><a href="#schedule" className="whitespace-nowrap rounded-full border bg-card px-4 py-2 text-sm font-bold hover:border-primary hover:text-primary">Schedule</a><a href="#players" className="whitespace-nowrap rounded-full border bg-card px-4 py-2 text-sm font-bold hover:border-primary hover:text-primary">Player Stats</a><a href="#goalkeepers" className="whitespace-nowrap rounded-full border bg-card px-4 py-2 text-sm font-bold hover:border-primary hover:text-primary">Goalkeepers</a></nav></div>
 
     <div className="site-container space-y-8 py-10 sm:py-12">
-      <section className="grid gap-4 sm:grid-cols-3"><StatCard icon={<Target />} label="Goals per match" value={jvStats.totals.goalsFor == null ? "—" : (jvStats.totals.goalsFor / Math.max(games, 1)).toFixed(1)} note={jvStats.totals.goalsFor == null ? "Awaiting complete scores" : `${jvStats.totals.goalsFor} total goals`} /><StatCard icon={<CalendarDays />} label="Goal difference" value={goalDifference == null ? "—" : `${goalDifference >= 0 ? "+" : ""}${goalDifference}`} note={`${games} matches played`} /><StatCard icon={<Trophy />} label="Record vs. FVA opponents" value={jvStats.record.conference} note="Conference games · W–L–T" /></section>
+      <section className="grid gap-4 sm:grid-cols-3"><StatCard icon={<Target />} label="Goals per match" value={jvStats.totals.goalsFor == null ? "—" : (jvStats.totals.goalsFor / Math.max(scoredGames, 1)).toFixed(1)} note={jvStats.totals.goalsFor == null ? "Awaiting complete scores" : partialScores ? `${jvStats.totals.goalsFor} goals in ${scoredGames} games with scores` : `${jvStats.totals.goalsFor} total goals`} /><StatCard icon={<CalendarDays />} label="Goal difference" value={goalDifference == null ? "—" : `${goalDifference >= 0 ? "+" : ""}${goalDifference}`} note={partialScores ? `${scoredGames} of ${games} matches have scores` : `${games} matches played`} /><StatCard icon={<Trophy />} label="Record vs. FVA opponents" value={jvStats.record.conference} note="Conference games · W–L–T" /></section>
 
       {jvStats.notes?.length ? <aside className="rounded-2xl border bg-muted/30 p-5 text-sm text-muted-foreground">{jvStats.notes.map(note => <p key={note} className="py-1">{note}</p>)}</aside> : null}
       <p className="text-sm leading-6 text-muted-foreground">{JV_CONFERENCE_NOTE}</p>
@@ -66,7 +69,7 @@ export function JvSeasonDashboard({ stats: jvStats }: { stats: JvDashboardStats 
 
       <section className="grid gap-6 xl:grid-cols-[.65fr_1.35fr]">
         <div className="min-w-0 space-y-6">
-          <article className="surface-card p-6"><p className="section-eyebrow">Team totals</p><h2 className="text-2xl font-black">By the numbers</h2><div className="mt-6 grid grid-cols-2 gap-3">{[["Saves",jvStats.totals.saves],["Goals allowed",jvStats.totals.goalsAgainst]].map(([label,value]) => <div key={label} className="rounded-xl bg-muted/50 p-4"><p className="text-2xl font-black">{value ?? "—"}</p><p className="mt-1 text-xs text-muted-foreground">{label}</p></div>)}</div></article>
+          <article className="surface-card p-6"><p className="section-eyebrow">Team totals</p><h2 className="text-2xl font-black">By the numbers</h2><div className="mt-6 grid grid-cols-2 gap-3">{[["Saves",jvStats.totals.saves],[partialScores ? "Goals allowed (known)" : "Goals allowed",jvStats.totals.goalsAgainst]].map(([label,value]) => <div key={label} className="rounded-xl bg-muted/50 p-4"><p className="text-2xl font-black">{value ?? "—"}</p><p className="mt-1 text-xs text-muted-foreground">{label}</p></div>)}</div></article>
           <article id="goalkeepers" className="surface-card scroll-mt-36 p-6"><p className="section-eyebrow">Goalkeeper stats</p><h2 className="text-2xl font-black">Season totals</h2><div className="mt-5 overflow-x-auto"><Table><TableHeader><TableRow><TableHead>Goalkeeper</TableHead><TableHead className="text-center">SV</TableHead><TableHead className="text-center">MIN</TableHead><TableHead className="text-right">GA</TableHead></TableRow></TableHeader><TableBody>{[...jvStats.goalkeepers].sort((a, b) => compareJerseyNumbers(a.number, b.number) || a.name.localeCompare(b.name)).map(goalkeeper => <TableRow key={goalkeeper.name}><TableCell><p className="font-semibold">{goalkeeper.name}</p><p className="text-xs text-muted-foreground">#{goalkeeper.number} · {goalkeeper.games ?? "—"} GP</p></TableCell><TableCell className="text-center font-bold">{goalkeeper.saves ?? (goalkeeper.recordedSaves != null ? `${goalkeeper.recordedSaves} recorded*` : "—")}</TableCell><TableCell className="text-center font-bold">{goalkeeper.minutes ?? "—"}</TableCell><TableCell className="text-right font-bold">{goalkeeper.goalsAgainst ?? "—"}</TableCell></TableRow>)}</TableBody></Table></div></article>
         </div>
         <article id="players" className="surface-card min-w-0 scroll-mt-36 p-5 sm:p-7"><p className="section-eyebrow">Player stats</p><h2 className="text-2xl font-black">Full roster</h2><p className="mt-1 text-xs text-muted-foreground">{jvStats.gamesNote ?? "GP reflects team participation · Goals: 2 points · Assists: 1 point"}</p><div className="mt-4 max-h-[36rem] overflow-auto"><Table><TableHeader><TableRow><TableHead>Player</TableHead><TableHead className="text-center">GP</TableHead><TableHead className="text-center">G</TableHead><TableHead className="text-center">A</TableHead><TableHead className="text-right">Pts</TableHead></TableRow></TableHeader><TableBody>{[...jvStats.players].sort((a, b) => compareJerseyNumbers(a.number, b.number) || a.name.localeCompare(b.name)).map(player => <TableRow key={`${player.squad ?? ""}-${player.number}-${player.name}`}><TableCell><div className="flex items-center gap-3"><span className="grid size-8 place-items-center rounded-lg bg-primary/10 text-xs font-black text-primary">{player.number}</span><span><span className="font-semibold">{player.name}</span>{player.squad ? <span className="block text-xs text-muted-foreground">{player.squad}</span> : null}</span></div></TableCell><TableCell className="text-center">{player.gp ?? "—"}</TableCell><TableCell className="text-center">{player.goals ?? "—"}</TableCell><TableCell className="text-center">{player.assists ?? "—"}</TableCell><TableCell className="text-right font-black text-primary">{player.points ?? "—"}</TableCell></TableRow>)}</TableBody></Table></div></article>
