@@ -1,6 +1,6 @@
 {
   "team": "JV Black/Gray",
-  "updated": "2026-09-12",
+  "updated": "2026-09-13",
   "squads": {
     "black": {
       "name": "JV Black",
@@ -180,5 +180,54 @@
     ],
     "importedAt": "2026-09-12",
     "notes": "Imported the base rosters from both supplied DOCX files: 14 JV Black players and 16 JV Gray players. Excluded the five appended players with unspecified numbers and positions from each squad per user clarification. All 16 prior JV Gray names and numbers match; Jacob Sommers position updated from D to M. Normalized Jovany ElWingVargas to existing Jovany ElwingVargas spelling. Game-by-game stats remain pending."
+  },
+  "results": [
+    {
+      "date": "2026-08-25",
+      "opponent": "Appleton East",
+      "location": "Away",
+      "result": "L",
+      "score": "2-3"
+    },
+    {
+      "date": "2026-08-26",
+      "opponent": "Green Bay Preble",
+      "location": "Away",
+      "result": "L",
+      "score": "0-3"
+    },
+    {
+      "date": "2026-08-28",
+      "opponent": "FVL",
+      "location": "Home",
+      "result": "L",
+      "score": null
+    },
+    {
+      "date": "2026-08-31",
+      "opponent": "Appleton North",
+      "location": "Away",
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "date": "2026-09-08",
+      "opponent": "Appleton East",
+      "location": "Home",
+      "result": "T",
+      "score": "1-1"
+    },
+    {
+      "date": "2026-09-10",
+      "opponent": "Little Chute",
+      "location": "Away",
+      "result": "W",
+      "score": "4-2"
+    }
+  ],
+  "resultsAudit": {
+    "source": "Andrew Montalbano",
+    "importedAt": "2026-09-14T04:28:18.125Z",
+    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL loss confirmed; score pending. Individual player and goalkeeper statistics were not supplied."
   }
 }
