@@ -238,6 +238,42 @@
       ]
     },
     {
+      "date": "2026-08-26",
+      "opponent": "Green Bay Preble",
+      "players": [
+      ],
+      "goalkeepers": [
+        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 3 }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "opponent": "FVL",
+      "players": [
+      ],
+      "goalkeepers": [
+        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 4 }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "opponent": "Appleton North",
+      "players": [
+      ],
+      "goalkeepers": [
+        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 1 }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "opponent": "Appleton East",
+      "players": [
+      ],
+      "goalkeepers": [
+        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 1 }
+      ]
+    },
+    {
       "date": "2026-09-10",
       "opponent": "Little Chute",
       "players": [
