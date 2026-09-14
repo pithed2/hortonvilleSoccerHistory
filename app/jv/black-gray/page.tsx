@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { JvSeasonDashboard, type JvDashboardStats } from "@/components/jv-season-dashboard"
 import { jvConferenceRecord } from "@/lib/jv-conference.mjs"
 import blackGrayData from "@/data/jv/black-gray.json"
-import calendar from "@/data/jv/calendar.json"
 
 export const metadata: Metadata = { title: "JV Black & Gray 2026" }
 
@@ -25,7 +24,7 @@ export default function JvBlackGrayPage() {
     record: { wins: results.filter(game => game.result === "W").length, losses: results.filter(game => game.result === "L").length, ties: results.filter(game => game.result === "T").length, conference: jvConferenceRecord(results) },
     totals: { goalsFor: completeScores ? results.reduce((sum, game) => sum + Number(game.score?.split("-")[0]), 0) : null, goalsAgainst: completeScores ? results.reduce((sum, game) => sum + Number(game.score?.split("-")[1]), 0) : null, shots: null, sog: null, saves: null },
     recent: results.map((game, index) => ({ id: index + 1, date: formatDate(game.date), opponent: game.opponent, location: game.location, score: game.score, result: game.result, boxScoreAvailable: false })).reverse(),
-    upcoming: calendar.events.filter(event => ["JV Black", "JV Gray"].includes(event.team) && event.date > blackGrayData.updated).sort((a, b) => a.start.localeCompare(b.start)).slice(0, 4).map(event => ({ date: formatDate(event.date), opponent: event.opponent, location: `${event.team} · ${event.home ? "Home" : "Away"}` })),
+    upcoming: [],
     players,
     goalkeepers: [...goalkeeperNames].map(name => ({ name, number: players.find(player => player.name === name)!.number, games: null, saves: null, minutes: null, goalsAgainst: null })),
   }

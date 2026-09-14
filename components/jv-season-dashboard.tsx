@@ -17,13 +17,20 @@ export type JvDashboardStats = Omit<JvTeamStats, "totals" | "players" | "goalkee
 
 export function JvSeasonDashboard({ stats: jvStats }: { stats: JvDashboardStats }) {
  const teamSlug = jvStats.slug
-  const calendarTeams = teamSlug === "black-gray" ? ["JV Black", "JV Gray"] : [jvStats.team]
-  const upcoming = jvStats.upcoming.map(game => {
-    const event = calendar.events.find(event => calendarTeams.includes(event.team)
-      && event.opponent === game.opponent
-      && new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${event.date}T12:00:00Z`)) === game.date)
-    return { ...game, time: event?.time, bus: event && !event.home ? event.bus : null }
-  })
+  const calendarTeams = teamSlug === "black-gray" ? ["JV Black", "JV Gray", "JV Black/Gray"] : [jvStats.team]
+  const dateLabel = (date: string) => new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(date + "T12:00:00Z"))
+  const latestResult = jvStats.recent.reduce((latest, game) => {
+    const date = new Date(game.date + " 2026 12:00:00 GMT").toISOString().slice(0, 10)
+    return date > latest ? date : latest
+  }, "2026-01-01")
+  const upcoming = calendar.events
+    .filter(event => calendarTeams.includes(event.team) && event.date > latestResult)
+    .sort((a, b) => a.start.localeCompare(b.start))
+    .map(event => ({
+      id: event.id, date: dateLabel(event.date), opponent: event.opponent,
+      location: (teamSlug === "black-gray" ? event.team + " · " : "") + (event.home ? "Home" : "Away") + (event.location ? " · " + event.location : ""),
+      time: event.time, bus: !event.home ? event.bus : null,
+    }))
   const games = jvStats.record.wins + jvStats.record.losses + jvStats.record.ties
   const goalDifference = jvStats.totals.goalsFor == null || jvStats.totals.goalsAgainst == null ? null : jvStats.totals.goalsFor - jvStats.totals.goalsAgainst
 
@@ -54,7 +61,7 @@ export function JvSeasonDashboard({ stats: jvStats }: { stats: JvDashboardStats 
       <p className="text-sm leading-6 text-muted-foreground">{JV_CONFERENCE_NOTE}</p>
       <section id="schedule" className="scroll-mt-36 grid gap-6 xl:grid-cols-[1.35fr_.65fr]">
         <article className="surface-card p-5 sm:p-7"><p className="section-eyebrow">Match center</p><h2 className="text-2xl font-black">Recent results</h2><div className="mt-5 space-y-2">{jvStats.recent.map(game => <ResultCard key={game.id} game={game} teamSlug={teamSlug} />)}</div></article>
-        <article className="surface-card p-5 sm:p-7"><p className="section-eyebrow">Coming up</p><h2 className="text-2xl font-black">Next matches</h2><div className="mt-5 divide-y">{!upcoming.length ? <p className="text-sm text-muted-foreground">Upcoming schedule has not been added.</p> : null}{upcoming.map((game,index) => <div key={`${game.date}-${game.opponent}`} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0"><div className={`grid size-11 shrink-0 place-items-center rounded-xl text-xs font-black ${index === 0 ? "bg-primary text-white" : "bg-muted text-muted-foreground"}`}>{game.date}</div><div className="min-w-0"><p className="truncate font-bold">{game.opponent}</p>{isJvConferenceOpponent(game.opponent) ? <span className="text-xs font-semibold text-primary">Conference</span> : null}<p className="text-xs text-muted-foreground">{game.location}</p><p className="text-xs text-muted-foreground">Game: {game.time ?? "Time TBD"} · Central</p>{game.bus ? <p className="text-xs text-muted-foreground">Bus loads: {game.bus}</p> : null}</div></div>)}</div></article>
+        <article className="surface-card p-5 sm:p-7"><p className="section-eyebrow">Coming up</p><h2 className="text-2xl font-black">Next matches</h2><div className="mt-5 divide-y">{!upcoming.length ? <p className="text-sm text-muted-foreground">Upcoming schedule has not been added.</p> : null}{upcoming.map((game,index) => <div key={game.id} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0"><div className={`grid size-11 shrink-0 place-items-center rounded-xl text-xs font-black ${index === 0 ? "bg-primary text-white" : "bg-muted text-muted-foreground"}`}>{game.date}</div><div className="min-w-0"><p className="truncate font-bold">{game.opponent}</p>{isJvConferenceOpponent(game.opponent) ? <span className="text-xs font-semibold text-primary">Conference</span> : null}<p className="text-xs text-muted-foreground">{game.location}</p><p className="text-xs text-muted-foreground">Game: {game.time ?? "Time TBD"} · Central</p>{game.bus ? <p className="text-xs text-muted-foreground">Bus loads: {game.bus}</p> : null}</div></div>)}</div></article>
       </section>
 
       <section className="grid gap-6 xl:grid-cols-[.65fr_1.35fr]">

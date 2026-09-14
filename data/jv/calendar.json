@@ -364,6 +364,17 @@
       "bus": "2:30 PM"
     },
     {
+      "id": "coach-schedule-black-gray-2026-09-17",
+      "team": "JV Black/Gray",
+      "opponent": "Manitowoc Lincoln",
+      "date": "2026-09-17",
+      "time": "4:30 PM",
+      "start": "2026-09-17T21:30:00Z",
+      "home": true,
+      "location": "JV Grass Soccer Field",
+      "bus": null
+    },
+    {
       "id": "ev-e144aab9-3670-4023-b8f1-9579cc933efc@calendar.sportsyou.com",
       "team": "Varsity",
       "opponent": "Green Bay Preble",
@@ -588,8 +599,8 @@
       "team": "JV Gray",
       "opponent": "Appleton West",
       "date": "2026-10-09",
-      "time": "4:30 PM",
-      "start": "2026-10-09T21:30:00Z",
+      "time": "4:00 PM",
+      "start": "2026-10-09T21:00:00Z",
       "home": true,
       "location": "Grass Field",
       "bus": null
@@ -599,8 +610,8 @@
       "team": "JV Red",
       "opponent": "DC Everest",
       "date": "2026-10-10",
-      "time": "10:00 AM",
-      "start": "2026-10-10T15:00:00Z",
+      "time": "10:30 AM",
+      "start": "2026-10-10T15:30:00Z",
       "home": true,
       "location": "Akin Field",
       "bus": null
@@ -614,6 +625,17 @@
       "start": "2026-10-10T17:30:00Z",
       "home": true,
       "location": "Akin Field",
+      "bus": null
+    },
+    {
+      "id": "coach-schedule-black-gray-2026-10-12",
+      "team": "JV Black/Gray",
+      "opponent": "Lourdes Academy",
+      "date": "2026-10-12",
+      "time": "4:00 PM",
+      "start": "2026-10-12T21:00:00Z",
+      "home": true,
+      "location": "JV Grass Soccer Field",
       "bus": null
     },
     {
