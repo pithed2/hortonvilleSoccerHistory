@@ -1,6 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
+import Link from "next/link"
 import { CalendarDays, ChevronRight, Goal, ShieldCheck, Trophy } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -37,6 +38,10 @@ export function CoachDashboard({ data }: { data: Data }) {
         </div>
       </header>
       <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6">
+        <Link href="/coachs-corner/weekly-review" className="mb-6 flex items-center justify-between gap-4 rounded-2xl border bg-white p-5 shadow-sm hover:border-primary">
+          <div><p className="text-xs font-bold uppercase tracking-wide text-primary">Weekly updates</p><h2 className="mt-1 text-xl font-bold">Weekly Update Review</h2><p className="mt-1 text-sm text-muted-foreground">Regional results, the week ahead, and review versions.</p></div>
+          <ChevronRight className="size-6 shrink-0 text-primary" />
+        </Link>
         <section className="mb-6 flex flex-col gap-4 rounded-2xl bg-primary p-5 text-white shadow-lg sm:flex-row sm:items-end sm:justify-between">
           <div><p className="text-sm font-semibold text-white/70">Drill into the seeding picture</p><h2 className="mt-1 text-3xl font-bold">{team}</h2><p className="mt-1 text-sm text-white/80">{group} · {played.length} played · {upcoming.length} remaining</p></div>
           <div className="flex flex-wrap gap-2">

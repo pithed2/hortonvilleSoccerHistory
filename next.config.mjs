@@ -2,6 +2,9 @@
 const isDevelopment = process.env.NODE_ENV === "development"
 
 const nextConfig = {
+  outputFileTracingIncludes: {
+    "/coachs-corner/weekly-review/*/download": ["./data/coachs-corner/weekly-reviews/*.docx"],
+  },
   images: {
     unoptimized: true,
   },
