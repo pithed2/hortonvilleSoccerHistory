@@ -1,6 +1,6 @@
 {
   "team": "JV Black/Gray",
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "squads": {
     "black": {
       "name": "JV Black",
@@ -201,7 +201,7 @@
       "opponent": "FVL",
       "location": "Home",
       "result": "L",
-      "score": null
+      "score": "2-4"
     },
     {
       "date": "2026-08-31",
@@ -225,9 +225,42 @@
       "score": "4-2"
     }
   ],
+  "gameStats": [
+    {
+      "date": "2026-08-25",
+      "opponent": "Appleton East",
+      "players": [
+        { "name": "Neel Patel", "goals": 1, "assists": 0 },
+        { "name": "Ethan Nysse", "goals": 1, "assists": 0 }
+      ],
+      "goalkeepers": [
+        { "name": "Ayden Lenth", "minutes": 80, "saves": 1 }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "opponent": "Little Chute",
+      "players": [
+        { "name": "Colton Daniels", "goals": 1, "assists": 1 },
+        { "name": "Neel Patel", "goals": 1, "assists": 0 },
+        { "name": "Ethan Nysse", "goals": 1, "assists": 0 },
+        { "name": "Henri Biese", "goals": 1, "assists": 0 },
+        { "name": "Aarav Patel", "goals": 0, "assists": 1 },
+        { "name": "Ezekiel Hartjes", "goals": 0, "assists": 1 }
+      ],
+      "goalkeepers": [
+        { "name": "Ayden Lenth", "minutes": 80, "saves": null }
+      ]
+    }
+  ],
+  "statsAudit": {
+    "source": "Andrew Montalbano",
+    "importedAt": "2026-09-14",
+    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable."
+  },
   "resultsAudit": {
     "source": "Andrew Montalbano",
     "importedAt": "2026-09-14T04:28:18.125Z",
-    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL loss confirmed; score pending. Individual player and goalkeeper statistics were not supplied."
+    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats."
   }
 }
