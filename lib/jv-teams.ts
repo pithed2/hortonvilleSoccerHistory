@@ -1,6 +1,7 @@
 import { isJvConferenceOpponent, jvConferenceRecord } from "./jv-conference.mjs"
 import whiteData from "@/data/jv/white.json"
 import redData from "@/data/jv/red.json"
+import { getBlackGrayBundle } from "./black-gray-team"
 
 export type JvTeamSlug = "red" | "white" | "black-gray" | "black" | "gray"
 export type PlayerBoxLine = { player: string; shots: number | null; sog: number; goals: number; assists: number; yc: number | null; rc: number | null; saves: number | null; gkMinutes: number | null }
@@ -35,7 +36,7 @@ export type JvTeamStats = {
   goalkeepers: Array<{ number: number; name: string; games: number; saves: number | null; minutes: number | null; recordedSaves?: number; goalsAgainst: number }>
   recent: Array<{ id: number; date: string; opponent: string; location: string; kickoff?: string; score: string; result: string }>
   upcoming: Array<{ date: string; opponent: string; location: string }>
-  players: Array<{ number: number; name: string; gp: number; goals: number; assists: number; points: number }>
+  players: Array<{ number: number; name: string; squad?: string; gp: number; goals: number; assists: number; points: number }>
 }
 
 type JvTeamBundle = { stats: JvTeamStats; boxScores: BoxScore[] }
@@ -43,6 +44,8 @@ type JvTeamBundle = { stats: JvTeamStats; boxScores: BoxScore[] }
 const teams: Partial<Record<JvTeamSlug, JvTeamBundle>> = {
   red: redData as JvTeamBundle,
   white: whiteData as JvTeamBundle,
+  black: getBlackGrayBundle("black"),
+  gray: getBlackGrayBundle("gray"),
 }
 
 export function isJvTeamSlug(value: string): value is JvTeamSlug {

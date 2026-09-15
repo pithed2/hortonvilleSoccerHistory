@@ -56,8 +56,8 @@ export default function JvBlackGrayPage() {
     <div className="site-container space-y-6 py-10">
       <p className="text-sm leading-6 text-muted-foreground">{JV_CONFERENCE_NOTE}</p>
       <div className="grid gap-5 lg:grid-cols-2">
-        <SquadCard name={blackGrayData.squads.black.name} roster={blackGrayData.squads.black.roster} href="/jv/black-gray/black" />
-        <SquadCard name={blackGrayData.squads.gray.name} roster={blackGrayData.squads.gray.roster} href="/jv/black-gray/gray" />
+        <SquadCard name={blackGrayData.squads.black.name} roster={blackGrayData.squads.black.roster} href="/jv/black" />
+        <SquadCard name={blackGrayData.squads.gray.name} roster={blackGrayData.squads.gray.roster} href="/jv/gray" />
       </div>
       <JvCalendar teams={["JV Black", "JV Gray"]} />
     </div>

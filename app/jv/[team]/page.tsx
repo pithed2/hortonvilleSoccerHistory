@@ -5,7 +5,7 @@ import { JvSeasonDashboard } from "@/components/jv-season-dashboard"
 
 type Props = { params: Promise<{ team: string }> }
 
-export function generateStaticParams() { return [{ team: "red" }, { team: "white" }] }
+export function generateStaticParams() { return [{ team: "red" }, { team: "white" }, { team: "black" }, { team: "gray" }] }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const teamSlug = (await params).team
