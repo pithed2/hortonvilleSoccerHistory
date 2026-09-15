@@ -13,7 +13,7 @@ const COACH_INFO: Record<string, CoachInfo> = {
     fullName: "Paul Everett",
     image: "/coaches/paul-everett.jpg",
     current: true,
-    highlights: ["Longest-tenured head coach in program history", "Pioneered the identity and standards of Hortonville soccer"],
+    highlights: ["Longest-tenured head coach in program history", "Pioneered the identity and standards of Hortonville soccer", "Had a hand in nearly every asset the program has today — equipment, jerseys, senior banners, sheds, and concessions"],
     expandedRecord: { wins: 179, losses: 109, ties: 41, label: "Including reported scrimmages" },
   },
   Montalbano: {

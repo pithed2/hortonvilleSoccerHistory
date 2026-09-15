@@ -7,7 +7,7 @@ export function CoachesSection() {
       name: "Paul Everett",
       years: "2011-Present",
       role: "Boys Head Coach",
-      description: "Continuing to build excellence and advocate for program growth and development",
+      description: "Built the program into a genuine varsity strength, with involvement in nearly every aspect of the program's assets", 
       image: "/coaches/paul-everett.jpg",
     },
     {
