@@ -34,9 +34,10 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
       if (game.Score) { const [gf, ga] = game.Score.split("-").map(Number); GF += gf; GA += ga }
     }
     const ranking = data.rankings?.find((row) => row.Team === team)
-    // Hortonville's local schedule is updated after each match, so it remains
-    // authoritative for the record while StatsPlus supplies rank/rating data.
-    if (ranking && team !== "Hortonville") return { Team: team, GS: games.length, GP: ranking.GP, W: ranking.W, L: ranking.L, T: ranking.T, GF: ranking.GF, GA: ranking.GA, GD: ranking.GF - ranking.GA, Points: ranking.W * 3 + ranking.T, Group: teamGroups[team], Rank: ranking.Rank, Rating: ranking.Rating, SOS: ranking.SOS }
+    // Use game results when coverage matches or exceeds the ranking snapshot,
+    // so coach-confirmed results also count in records, points, and goal totals.
+    // Keep ranking aggregates only when their game coverage is more complete.
+    if (ranking && team !== "Hortonville" && played.length < ranking.GP) return { Team: team, GS: games.length, GP: ranking.GP, W: ranking.W, L: ranking.L, T: ranking.T, GF: ranking.GF, GA: ranking.GA, GD: ranking.GF - ranking.GA, Points: ranking.W * 3 + ranking.T, Group: teamGroups[team], Rank: ranking.Rank, Rating: ranking.Rating, SOS: ranking.SOS }
     return { Team: team, GS: games.length, GP: played.length, W, L, T, GF, GA, GD: GF - GA, Points: W * 3 + T, Group: teamGroups[team], Rank: ranking?.Rank ?? null, Rating: ranking?.Rating ?? null, SOS: ranking?.SOS ?? null }
   }
   const overall = data.teams.map(({ Team }) => summarize(Team))

@@ -1,6 +1,6 @@
 {
   "team": "JV Black/Gray",
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "squads": {
     "black": {
       "name": "JV Black",
@@ -223,6 +223,13 @@
       "location": "Away",
       "result": "W",
       "score": "4-2"
+    },
+    {
+      "date": "2026-09-14",
+      "opponent": "Little Chute",
+      "location": "Home",
+      "result": "W",
+      "score": "4-1"
     }
   ],
   "gameStats": [
@@ -539,12 +546,55 @@
         "Finley Hoag",
         "Stanley Stinski©"
       ]
+    },
+    {
+      "date": "2026-09-14",
+      "opponent": "Little Chute",
+      "players": [
+        {
+          "name": "Maxwell Gust",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Zander Simons ©",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Levi Goin",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Ethan Nysse",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Neel Patel",
+          "goals": 0,
+          "assists": 1
+        }
+      ],
+      "goalkeepers": [
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 1
+        }
+      ],
+      "notes": [
+        "September 14 JV Black home game vs Little Chute. Source: JV_Black_Little_Chute.jpg and Andrew Montalbano clarification: 4-1 win; assist to Neel Patel; final handwritten player is Ethan Nysse with one goal and no assist; Ayden Lenth played 80 minutes and allowed one goal. Saves and full participation were not confirmed."
+      ],
+      "unattributedGoals": 0
     }
   ],
   "statsAudit": {
     "source": "Andrew Montalbano",
     "importedAt": "2026-09-16",
-    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable. Added scoring for August 31 at Appleton North (JV Gray, 2 goals matching the 2-1 final) and August 28 vs FVL (JV Black, 2 goals matching the 2-4 final; Ethan Nysse guested from Gray). September 8 vs Appleton East (1-1 tie): the single Hortonville goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano. Green Bay Preble (0-3) confirmed to have no individual goals or assists."
+    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable. Added scoring for August 31 at Appleton North (JV Gray, 2 goals matching the 2-1 final) and August 28 vs FVL (JV Black, 2 goals matching the 2-4 final; Ethan Nysse guested from Gray). September 8 vs Appleton East (1-1 tie): the single Hortonville goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano. Green Bay Preble (0-3) confirmed to have no individual goals or assists. Added September 14 JV Black 4-1 win vs Little Chute from supplied score sheet and coach clarification."
   },
   "resultsAudit": {
     "source": "Andrew Montalbano",

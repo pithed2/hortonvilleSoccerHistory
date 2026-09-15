@@ -1,0 +1,56 @@
+import concurrent.futures, datetime, html, json, pathlib, re, urllib.request
+
+root = pathlib.Path('data/coachs-corner/seeding-2026.json')
+data = json.loads(root.read_text(encoding='utf8'))
+def fetch(url):
+    return urllib.request.urlopen(url, timeout=30).read().decode()
+def cells(text):
+    def clean(c):
+        value = html.unescape(re.sub(r'<[^>]*>', ' ', c)).strip()
+        return {'D.C. Everest':'DC Everest','Stevens Point':'SPASH'}.get(value,value)
+    return [[clean(c) for c in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row, re.S)] for row in re.findall(r'<tr[^>]*>(.*?)</tr>', text, re.S)]
+rank_html = fetch(data['sourceUrl'])
+names = {x['Team'] for x in data['teams']}
+ranks = []
+ranking_rows = [row for row in cells(rank_html) if len(row) >= 13 and row[7].isdigit()]
+for rank, row in enumerate(ranking_rows, 1):
+    if row[1] in names:
+        ranks.append(dict(Team=row[1], Rank=rank, Rating=float(row[3]), SOS=float(row[4]), GP=int(row[7]), W=int(row[8]), L=int(row[9]), T=int(row[10]), GF=int(row[11]), GA=int(row[12])))
+assert len(ranks) == len(names)
+sources = {g['Team']: g['Source'] for g in data['schedule'] if g['Team'] != 'Hortonville' and g.get('Source','').startswith('https://soccer.statsplus.net/rankings/team/')}
+def refresh(item):
+    team, url = item
+    matches = []
+    for row in cells(fetch(url)):
+        if len(row) < 7 or not re.fullmatch(r'\d\d-\d\d', row[1]): continue
+        assert team in (row[3],row[5])
+        home = row[5] == team
+        score = re.fullmatch(r'(\d+)\s*-\s*(\d+)', row[4])
+        pair = [int(score[1]),int(score[2])] if score else None
+        if home and pair: pair.reverse()
+        result = ('W' if pair[0]>pair[1] else 'L' if pair[0]<pair[1] else 'D') if pair else None
+        matches.append(dict(Date='2026-'+row[1], Team=team, Opponent=row[3] if home else row[5], Location='H' if home else 'A', Result=result, Score='-'.join(map(str,pair)) if pair else None, Source=url, SourceTeam=team))
+    assert len(matches)>0
+    return matches
+with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+    refreshed = [g for matches in pool.map(refresh,sources.items()) for g in matches]
+old = {(g['Team'],g['Date'],g['Opponent']):g for g in data['schedule']}
+changes = []
+for g in refreshed:
+    before = old.get((g['Team'],g['Date'],g['Opponent']))
+    if before and before['Score'] != g['Score']: changes.append({'team':g['Team'],'date':g['Date'],'opponent':g['Opponent'],'before':before['Score'],'after':g['Score']})
+    if before and before['Score'] and not g['Score']:
+        g.update(Result=before['Result'],Score=before['Score'],Source=before['Source'])
+for team,opponent,date,result,score in [('Kimberly','Hudson','2026-09-11','L','0-4'),('Hudson','Kimberly','2026-09-11','W','4-0'),('Kimberly','Stillwater (MN)','2026-09-12','L','1-4')]:
+    matches=[g for g in refreshed if g['Team']==team and g['Opponent']==opponent and g['Date']==date]
+    assert len(matches)==1
+    g=matches[0]
+    if g['Score'] != score:
+        g.update(RankingResult=g['Result'],RankingScore=g['Score'],ManualResult=True,Result=result,Score=score,Source='Andrew Montalbano')
+data['schedule']=sorted([g for g in data['schedule'] if g['Team']=='Hortonville']+refreshed,key=lambda g:(g['Date'],g['Team']))
+data['rankings']=ranks
+data['generatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+data['source']='StatsPlus rankings and team schedules refreshed; coach-confirmed Kimberly 0-4 Hudson and Kimberly 1-4 Stillwater results retained.'
+data['sync'].update(statsPlusAsOf=datetime.date.today().isoformat(),refreshedTeams=len(sources),refreshedRows=len(refreshed),manualResults=['Kimberly 0-4 Hudson (September 11)','Kimberly 1-4 Stillwater (September 12)'])
+root.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+print(json.dumps(changes,indent=2))
