@@ -628,17 +628,6 @@
       "bus": null
     },
     {
-      "id": "coach-schedule-black-gray-2026-10-12",
-      "team": "JV Gray",
-      "opponent": "Lourdes Academy",
-      "date": "2026-10-12",
-      "time": "4:00 PM",
-      "start": "2026-10-12T21:00:00Z",
-      "home": true,
-      "location": "JV Grass Soccer Field",
-      "bus": null
-    },
-    {
       "id": "ev-f0c25dc6-d28d-46fc-8539-db1ab088b757@calendar.sportsyou.com",
       "team": "JV White",
       "opponent": "Notre Dame",
