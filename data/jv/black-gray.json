@@ -230,69 +230,230 @@
       "date": "2026-08-25",
       "opponent": "Appleton East",
       "players": [
-        { "name": "Neel Patel", "goals": 1, "assists": 0 },
-        { "name": "Ethan Nysse", "goals": 1, "assists": 0 }
+        {
+          "name": "Neel Patel",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Ethan Nysse",
+          "goals": 1,
+          "assists": 0
+        }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 3 }
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 3
+        }
       ]
     },
     {
       "date": "2026-08-26",
       "opponent": "Green Bay Preble",
-      "players": [
-      ],
+      "players": [],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 3 }
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 3
+        }
       ]
     },
     {
       "date": "2026-08-28",
       "opponent": "FVL",
       "players": [
+        {
+          "name": "Parker Mischler",
+          "goals": 1,
+          "assists": 0,
+          "sot": 0
+        },
+        {
+          "name": "Maxwell Gust",
+          "goals": 1,
+          "assists": 0,
+          "sot": 0
+        },
+        {
+          "name": "Ethan Nysse",
+          "goals": 0,
+          "assists": 1,
+          "sot": 1
+        }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 4 }
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 4
+        }
+      ],
+      "notes": [
+        "Ethan Nysse (normally JV Gray) guested for JV Black in this game per the score sheet.",
+        "SOT recorded as the literal tally shown on the sheet (not combined with goals).",
+        "Participation list reflects every player with a mark on the sheet for this game; Ethan Nysse is included as a Gray guest, not a Black roster addition."
+      ],
+      "played": [
+        "Ayden Lenth",
+        "Henri Biese",
+        "Zachary Schramm",
+        "Parker Mischler",
+        "Finley Hoag",
+        "Maxwell Gust",
+        "Hudson Adkins",
+        "Stanley Stinski©",
+        "Nolan Annoye",
+        "Zander Simons ©",
+        "Rylen Mcclure",
+        "Jaxon Laabs",
+        "Liam Stanke",
+        "Wesley Welbes",
+        "Ethan Nysse"
       ]
     },
     {
       "date": "2026-08-31",
       "opponent": "Appleton North",
       "players": [
+        {
+          "name": "Neel Patel",
+          "goals": 1,
+          "assists": 0,
+          "sot": 1
+        },
+        {
+          "name": "Ethan Nysse",
+          "goals": 1,
+          "assists": 1,
+          "sot": 2
+        }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 1 }
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 1
+        }
+      ],
+      "notes": [
+        "SOT recorded as the literal tally shown on the sheet (not combined with goals).",
+        "Participation list reflects every player with a mark on the sheet for this game."
+      ],
+      "played": [
+        "Ayden Lenth",
+        "Aarav Patel",
+        "Emery Liesch",
+        "Wyatt Harrop",
+        "Joseph Nennig",
+        "Levi Goin",
+        "Ezekiel Hartjes",
+        "Colton Daniels",
+        "Neel Patel",
+        "Myles Froehlich",
+        "Ethan Nysse",
+        "Jacob Sommers",
+        "Jovany ElwingVargas",
+        "Keegan Vancamp",
+        "Kellan Mullock",
+        "Max Lorge"
       ]
     },
     {
       "date": "2026-09-08",
       "opponent": "Appleton East",
       "players": [
+        {
+          "name": "Ethan Nysse",
+          "goals": 1,
+          "assists": 0,
+          "sot": 0
+        }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 1 }
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 1
+        }
+      ],
+      "unattributedGoals": 0,
+      "played": [
+        "Ayden Lenth",
+        "Henri Biese",
+        "Zachary Schramm",
+        "Parker Mischler",
+        "Finley Hoag",
+        "Maxwell Gust",
+        "Hudson Adkins",
+        "Stanley Stinski©",
+        "Nolan Annoye",
+        "Zander Simons ©",
+        "Rylen Mcclure",
+        "Jaxon Laabs",
+        "Liam Stanke",
+        "Wesley Welbes"
+      ],
+      "notes": [
+        "Goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano."
       ]
     },
     {
       "date": "2026-09-10",
       "opponent": "Little Chute",
       "players": [
-        { "name": "Colton Daniels", "goals": 1, "assists": 1 },
-        { "name": "Neel Patel", "goals": 1, "assists": 0 },
-        { "name": "Ethan Nysse", "goals": 1, "assists": 0 },
-        { "name": "Henri Biese", "goals": 1, "assists": 0 },
-        { "name": "Aarav Patel", "goals": 0, "assists": 1 },
-        { "name": "Ezekiel Hartjes", "goals": 0, "assists": 1 }
+        {
+          "name": "Colton Daniels",
+          "goals": 1,
+          "assists": 1
+        },
+        {
+          "name": "Neel Patel",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Ethan Nysse",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Henri Biese",
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "name": "Aarav Patel",
+          "goals": 0,
+          "assists": 1
+        },
+        {
+          "name": "Ezekiel Hartjes",
+          "goals": 0,
+          "assists": 1
+        }
       ],
       "goalkeepers": [
-        { "name": "Ayden Lenth", "minutes": 80, "saves": null, "goalsAgainst": 2 }
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 2
+        }
       ]
     }
   ],
   "statsAudit": {
     "source": "Andrew Montalbano",
-    "importedAt": "2026-09-14",
-    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable."
+    "importedAt": "2026-09-16",
+    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable. Added scoring for August 31 at Appleton North (JV Gray, 2 goals matching the 2-1 final) and August 28 vs FVL (JV Black, 2 goals matching the 2-4 final; Ethan Nysse guested from Gray). September 8 vs Appleton East (1-1 tie): the single Hortonville goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano. Green Bay Preble (0-3) confirmed to have no individual goals or assists."
   },
   "resultsAudit": {
     "source": "Andrew Montalbano",

@@ -2,7 +2,7 @@ import { isJvConferenceOpponent, jvConferenceRecord } from "./jv-conference.mjs"
 import whiteData from "@/data/jv/white.json"
 import redData from "@/data/jv/red.json"
 
-export type JvTeamSlug = "red" | "white" | "black-gray"
+export type JvTeamSlug = "red" | "white" | "black-gray" | "black" | "gray"
 export type PlayerBoxLine = { player: string; shots: number | null; sog: number; goals: number; assists: number; yc: number | null; rc: number | null; saves: number | null; gkMinutes: number | null }
 export type BoxScore = {
   id: number; date: string; opponent: string; location: string; kickoff?: string; conference: boolean; result: string

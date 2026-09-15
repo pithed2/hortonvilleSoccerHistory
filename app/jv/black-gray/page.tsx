@@ -1,44 +1,66 @@
 import type { Metadata } from "next"
-import { JvSeasonDashboard, type JvDashboardStats } from "@/components/jv-season-dashboard"
-import { jvConferenceRecord } from "@/lib/jv-conference.mjs"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { JvCalendar } from "@/components/jv-calendar"
+import { JV_CONFERENCE_NOTE } from "@/lib/jv-conference.mjs"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import blackGrayData from "@/data/jv/black-gray.json"
 
 export const metadata: Metadata = { title: "JV Black & Gray 2026" }
 
-const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${date}T12:00:00Z`))
+type RosterPlayer = { number: string; name: string; position: string }
+
+function sortRoster(roster: RosterPlayer[]) {
+  return [...roster].sort((a, b) => {
+    const left = Number.parseInt(a.number, 10)
+    const right = Number.parseInt(b.number, 10)
+    return (Number.isFinite(left) ? left : Infinity) - (Number.isFinite(right) ? right : Infinity)
+  })
+}
+
+function SquadCard({ name, roster, href }: { name: string; roster: RosterPlayer[]; href: string }) {
+  return (
+    <article className="surface-card p-5 sm:p-7">
+      <div className="flex items-center justify-between gap-4">
+        <div><p className="section-eyebrow">Roster</p><h2 className="text-2xl font-black">{name}</h2></div>
+        <Link href={href} className="action-primary w-fit shrink-0">Full season <ArrowRight className="size-4" aria-hidden="true" /></Link>
+      </div>
+      {roster.length ? (
+        <div className="mt-4 overflow-x-auto">
+          <Table>
+            <TableHeader><TableRow><TableHead>#</TableHead><TableHead>Player</TableHead><TableHead className="text-right">Position</TableHead></TableRow></TableHeader>
+            <TableBody>
+              {sortRoster(roster).map((player) => (
+                <TableRow key={`${player.number}-${player.name}`}>
+                  <TableCell className="font-black text-primary">{player.number}</TableCell>
+                  <TableCell className="font-semibold">{player.name}</TableCell>
+                  <TableCell className="text-right text-muted-foreground">{player.position}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      ) : (
+        <p className="mt-4 text-sm text-muted-foreground">Roster not yet available.</p>
+      )}
+    </article>
+  )
+}
 
 export default function JvBlackGrayPage() {
-  const results = blackGrayData.results
-  const scoredGames = results.filter(game => game.score !== null)
-  const reportedPlayers = blackGrayData.gameStats.flatMap(game => game.players)
-  const players = Object.values(blackGrayData.squads).flatMap(squad => squad.roster.map(player => {
-    const lines = reportedPlayers.filter(line => line.name === player.name)
-    const goals = lines.length ? lines.reduce((sum, line) => sum + line.goals, 0) : null
-    const assists = lines.length ? lines.reduce((sum, line) => sum + line.assists, 0) : null
-    return {
-    number: player.number, name: player.name, squad: squad.name,
-    gp: null, goals, assists, points: goals !== null && assists !== null ? goals * 2 + assists : null,
-  }}))
-  const goalkeeperNames = new Set(Object.values(blackGrayData.squads).flatMap(squad => squad.roster.filter(player => player.position === "GK").map(player => player.name)))
-  const stats: JvDashboardStats = {
-    slug: "black-gray", team: "JV Black/Gray", updated: formatDate(blackGrayData.updated) + ", 2026",
-    sourceLabel: "Team-reported results",
-    gamesNote: "Base rosters by squad · Player and goalkeeper totals cover reported statistics only.",
-    notes: ["Results and records combine JV Black and JV Gray. Player totals are partial, covering only August 25 at Appleton East and September 10 at Little Chute. Full player appearances and other game statistics will be entered soon; dashes indicate unknown values."], 
-    audit: { sourceFile: "Team rosters and reported results", sourceModifiedAt: "", sourceSha256: "", importedAt: blackGrayData.statsAudit.importedAt, validation: "warning", validationSummary: "Six final scores confirmed; scoring and goalkeeper statistics supplied for two games only.", approvedBy: "Andrew Montalbano" },
-    record: { wins: results.filter(game => game.result === "W").length, losses: results.filter(game => game.result === "L").length, ties: results.filter(game => game.result === "T").length, conference: jvConferenceRecord(results) },
-    totals: { goalsFor: scoredGames.length ? scoredGames.reduce((sum, game) => sum + Number(game.score?.split("-")[0]), 0) : null, goalsAgainst: scoredGames.length ? scoredGames.reduce((sum, game) => sum + Number(game.score?.split("-")[1]), 0) : null, shots: null, sog: null, saves: null },
-    scoredGames: scoredGames.length,
-    recent: results.map((game, index) => ({ id: index + 1, date: formatDate(game.date), opponent: game.opponent, location: game.location, score: game.score, result: game.result, boxScoreAvailable: false })).reverse(),
-    upcoming: [],
-    players,
-    goalkeepers: [...goalkeeperNames].map(name => {
-      const lines = blackGrayData.gameStats.flatMap<{ name: string; minutes: number; saves: number | null; goalsAgainst?: number | null }>(game => game.goalkeepers).filter(line => line.name === name)
-      return { name, number: players.find(player => player.name === name)!.number,
-        games: lines.length || null, saves: null,
-        recordedSaves: lines.some(line => line.saves !== null) ? lines.reduce((sum, line) => sum + (line.saves ?? 0), 0) : undefined,
-        minutes: lines.length ? lines.reduce((sum, line) => sum + line.minutes, 0) : null, goalsAgainst: lines.length && lines.every(line => line.goalsAgainst != null) ? lines.reduce((sum, line) => sum + line.goalsAgainst!, 0) : null }
-    }),
-  }
-  return <JvSeasonDashboard stats={stats} />
+  return <main id="main-content" className="min-h-screen bg-background">
+    <Navigation />
+    <header className="page-header"><div className="site-container"><Link href="/jv" className="text-sm font-semibold">Back to all JV teams</Link><p className="page-eyebrow mt-5">Hortonville Boys Soccer · 2026</p><h1 className="page-title">JV Black &amp; Gray</h1><p className="page-description">Follow Coach Seth’s JV Black and JV Gray teams throughout the season.</p></div></header>
+    <div className="site-container space-y-6 py-10">
+      <p className="text-sm leading-6 text-muted-foreground">{JV_CONFERENCE_NOTE}</p>
+      <div className="grid gap-5 lg:grid-cols-2">
+        <SquadCard name={blackGrayData.squads.black.name} roster={blackGrayData.squads.black.roster} href="/jv/black-gray/black" />
+        <SquadCard name={blackGrayData.squads.gray.name} roster={blackGrayData.squads.gray.roster} href="/jv/black-gray/gray" />
+      </div>
+      <JvCalendar teams={["JV Black", "JV Gray"]} />
+    </div>
+    <Footer />
+  </main>
 }
