@@ -191,7 +191,7 @@
     },
     {
       "date": "2026-08-26",
-      "opponent": "Green Bay Preble",
+      "opponent": "Preble",
       "location": "Away",
       "result": "L",
       "score": "0-3"
@@ -252,7 +252,7 @@
     },
     {
       "date": "2026-08-26",
-      "opponent": "Green Bay Preble",
+      "opponent": "Preble",
       "players": [],
       "goalkeepers": [
         {
@@ -261,6 +261,9 @@
           "saves": null,
           "goalsAgainst": 3
         }
+      ],
+      "notes": [
+        "No goals or assists recorded for Hortonville in this game."
       ]
     },
     {
