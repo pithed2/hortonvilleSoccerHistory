@@ -38,21 +38,19 @@ old = {(g['Team'],g['Date'],g['Opponent']):g for g in data['schedule']}
 changes = []
 for g in refreshed:
     before = old.get((g['Team'],g['Date'],g['Opponent']))
-    if before and before['Score'] != g['Score']: changes.append({'team':g['Team'],'date':g['Date'],'opponent':g['Opponent'],'before':before['Score'],'after':g['Score']})
+    # Keep supplied results only until StatsPlus publishes a score.
+    # Published scores use the fresh StatsPlus source and drop manual metadata.
     if before and before['Score'] and not g['Score']:
         g.update(Result=before['Result'],Score=before['Score'],Source=before['Source'])
         for key in ('SourceVerifiedAt', 'ManualResult', 'RankingResult', 'RankingScore'):
             if key in before: g[key] = before[key]
-for team,opponent,date,result,score in [('Kimberly','Hudson','2026-09-11','L','0-4'),('Hudson','Kimberly','2026-09-11','W','4-0'),('Kimberly','Stillwater (MN)','2026-09-12','L','1-4')]:
-    matches=[g for g in refreshed if g['Team']==team and g['Opponent']==opponent and g['Date']==date]
-    assert len(matches)==1
-    g=matches[0]
-    if g['Score'] != score:
-        g.update(RankingResult=g['Result'],RankingScore=g['Score'],ManualResult=True,Result=result,Score=score,Source='Andrew Montalbano')
+    if before and (before['Score'] != g['Score'] or before.get('Source') != g.get('Source')):
+        changes.append({'team':g['Team'],'date':g['Date'],'opponent':g['Opponent'],'before':before['Score'],'after':g['Score'],'source':g['Source']})
 data['schedule']=sorted([g for g in data['schedule'] if g['Team']=='Hortonville']+refreshed,key=lambda g:(g['Date'],g['Team']))
 data['rankings']=ranks
 data['generatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat()
-data['source']='StatsPlus rankings and team schedules refreshed; coach-confirmed Kimberly 0-4 Hudson and Kimberly 1-4 Stillwater results retained.'
-data['sync'].update(statsPlusAsOf=datetime.date.today().isoformat(),refreshedTeams=len(sources),refreshedRows=len(refreshed),manualResults=['Kimberly 0-4 Hudson (September 11)','Kimberly 1-4 Stillwater (September 12)'])
+manual_results = [f"{g['Team']} {g['Score']} {g['Opponent']} ({g['Date']})" for g in refreshed if g.get('ManualResult')]
+data['source']='StatsPlus rankings and team schedules refreshed.' + (' Supplied results retained where StatsPlus has no score yet.' if manual_results else '')
+data['sync'].update(statsPlusAsOf=datetime.date.today().isoformat(),refreshedTeams=len(sources),refreshedRows=len(refreshed),manualResults=manual_results)
 root.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps(changes,indent=2))
