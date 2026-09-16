@@ -41,6 +41,8 @@ for g in refreshed:
     if before and before['Score'] != g['Score']: changes.append({'team':g['Team'],'date':g['Date'],'opponent':g['Opponent'],'before':before['Score'],'after':g['Score']})
     if before and before['Score'] and not g['Score']:
         g.update(Result=before['Result'],Score=before['Score'],Source=before['Source'])
+        for key in ('SourceVerifiedAt', 'ManualResult', 'RankingResult', 'RankingScore'):
+            if key in before: g[key] = before[key]
 for team,opponent,date,result,score in [('Kimberly','Hudson','2026-09-11','L','0-4'),('Hudson','Kimberly','2026-09-11','W','4-0'),('Kimberly','Stillwater (MN)','2026-09-12','L','1-4')]:
     matches=[g for g in refreshed if g['Team']==team and g['Opponent']==opponent and g['Date']==date]
     assert len(matches)==1
