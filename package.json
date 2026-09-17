@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "refresh:coach": "node scripts/refresh-coach-corner.cjs",
     "build": "next build",
     "dev": "next dev",
     "import:jv": "node scripts/import-jv-stats.mjs --team=red",

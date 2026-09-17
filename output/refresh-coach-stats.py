@@ -20,6 +20,7 @@ for rank, row in enumerate(ranking_rows, 1):
         ranks.append(dict(Team=row[1], Rank=rank, Rating=float(row[3]), SOS=float(row[4]), GP=int(row[7]), W=int(row[8]), L=int(row[9]), T=int(row[10]), GF=int(row[11]), GA=int(row[12])))
 assert len(ranks) == len(names)
 sources = {g['Team']: g['Source'] for g in data['schedule'] if g['Team'] != 'Hortonville' and g.get('Source','').startswith('https://soccer.statsplus.net/rankings/team/')}
+assert set(sources) == names - {'Hortonville'}, 'Missing team schedule source'
 def refresh(item):
     team, url = item
     matches = []
@@ -37,6 +38,9 @@ def refresh(item):
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
     refreshed = [g for matches in pool.map(refresh,sources.items()) for g in matches]
 old = {(g['Team'],g['Date'],g['Opponent']):g for g in data['schedule']}
+refreshed_keys = {(g['Team'],g['Date'],g['Opponent']) for g in refreshed}
+assert len(refreshed_keys) == len(refreshed), 'Duplicate schedule entries'
+assert all(key in refreshed_keys for key, game in old.items() if game['Team'] != 'Hortonville' and game['Score']), 'A previously scored game disappeared; review before publishing'
 changes = []
 for g in refreshed:
     before = old.get((g['Team'],g['Date'],g['Opponent']))
@@ -54,13 +58,18 @@ data['opponentRecords']=opponent_records
 # Preserve qualifying fixtures after their opponent's record changes.
 records = {r['Team']: r for r in opponent_records}
 highlights = set(data.get('weeklyHighlights', []))
-week_start = datetime.date.today() - datetime.timedelta(days=datetime.date.today().weekday())
+today = datetime.date.today()
+week_start = today - datetime.timedelta(days=today.weekday())
+# Sunday's run prepares the coming Monday-Sunday slate.
+if today.weekday() == 6:
+    week_start += datetime.timedelta(days=7)
 week_end = week_start + datetime.timedelta(days=6)
 for game in data['schedule']:
     record = records.get(game['Opponent'])
     if record and record['W'] > record['L'] and week_start.isoformat() <= game['Date'] <= week_end.isoformat():
         highlights.add('|'.join((game['Date'], game['Team'], game['Opponent'])))
 data['weeklyHighlights'] = sorted(highlights)
+data['sync']['weeklyPreparedFor'] = week_start.isoformat()
 data['generatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat()
 manual_results = [f"{g['Team']} {g['Score']} {g['Opponent']} ({g['Date']})" for g in refreshed if g.get('ManualResult')]
 data['source']='StatsPlus rankings and team schedules refreshed.' + (' Supplied results retained where StatsPlus has no score yet.' if manual_results else '')

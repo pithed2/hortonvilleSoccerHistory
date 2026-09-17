@@ -1,7 +1,7 @@
 {
   "source": "StatsPlus rankings and team schedules refreshed. Supplied results retained where StatsPlus has no score yet.",
   "season": 2026,
-  "generatedAt": "2026-09-17T13:17:48.890042+00:00",
+  "generatedAt": "2026-09-17T13:25:25.725772+00:00",
   "teams": [
     {
       "Team": "Chippewa Falls",
@@ -3871,7 +3871,8 @@
     "hortonvilleRows": 16,
     "manualResults": [
       "Kimberly 1-4 Stillwater (MN) (2026-09-12)"
-    ]
+    ],
+    "weeklyPreparedFor": "2026-09-14"
   },
   "opponentRecords": [
     {
