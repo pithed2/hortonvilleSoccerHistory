@@ -23,5 +23,6 @@ export default async function CoachCornerPage() {
   const rawData = JSON.parse(fs.readFileSync(file, "utf8"))
   const hortonvilleCsv = fs.readFileSync(path.join(process.cwd(), "public", "data", "games_2026.csv"), "utf8")
   const data = withMainHortonvilleSchedule(rawData, hortonvilleCsv)
-  return <><Navigation /><CoachDashboard data={data} /></>
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date())
+  return <><Navigation /><CoachDashboard data={data} today={today} /></>
 }

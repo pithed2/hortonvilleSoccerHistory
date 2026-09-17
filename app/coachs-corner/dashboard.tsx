@@ -10,13 +10,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { resultTone } from "@/lib/utils"
 import { coachLogout } from "./actions"
+import { OnTap } from "./on-tap"
+import type { TeamRecord } from "@/lib/coach-weekly"
 
 type Standing = { Team: string; GS: number; GP: number; W: number; L: number; T: number; GF: number; GA: number; GD: number; Points: number; Group: string; Rank: number | null; Rating: number | null }
 type Game = { Date: string; Team: string; Opponent: string; Location: string; Result: string | null; Score: string | null; Source?: string }
 type Seed = { Team: string; Group: string; GroupPoints: number; HeadToHeadPoints: number; HeadToHeadDetail: string; OverallPoints: number; GD: number; Rank: number | null; Rating: number | null; Seed: number }
-type Data = { generatedAt: string; sourceUrl?: string; overall: Standing[]; schedule: Game[]; seedings: Record<string, Seed[]>; headToHead: { team: string; group: string; opponents: Record<string, string | number | null> }[] }
+type Data = { generatedAt: string; sourceUrl?: string; overall: Standing[]; schedule: Game[]; opponentRecords?: TeamRecord[]; weeklyHighlights?: string[]; seedings: Record<string, Seed[]>; headToHead: { team: string; group: string; opponents: Record<string, string | number | null> }[] }
 
-export function CoachDashboard({ data }: { data: Data }) {
+export function CoachDashboard({ data, today }: { data: Data; today: string }) {
   const [group, setGroup] = useState("Group B")
   const [team, setTeam] = useState("Hortonville")
   const [view, setView] = useState<"seeding" | "schedule" | "head">("seeding")
@@ -42,6 +44,7 @@ export function CoachDashboard({ data }: { data: Data }) {
           <div><p className="text-xs font-bold uppercase tracking-wide text-primary">Weekly updates</p><h2 className="mt-1 text-xl font-bold">Weekly Update Review</h2><p className="mt-1 text-sm text-muted-foreground">Regional results, the week ahead, and review versions.</p></div>
           <ChevronRight className="size-6 shrink-0 text-primary" />
         </Link>
+        <OnTap data={data} today={today} />
         <section className="mb-6 flex flex-col gap-4 rounded-2xl bg-primary p-5 text-white shadow-lg sm:flex-row sm:items-end sm:justify-between">
           <div><p className="text-sm font-semibold text-white/70">Drill into the seeding picture</p><h2 className="mt-1 text-3xl font-bold">{team}</h2><p className="mt-1 text-sm text-white/80">{group} · {played.length} played · {upcoming.length} remaining</p></div>
           <div className="flex flex-wrap gap-2">

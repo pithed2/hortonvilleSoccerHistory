@@ -12,8 +12,10 @@ def cells(text):
 rank_html = fetch(data['sourceUrl'])
 names = {x['Team'] for x in data['teams']}
 ranks = []
+opponent_records = []
 ranking_rows = [row for row in cells(rank_html) if len(row) >= 13 and row[7].isdigit()]
 for rank, row in enumerate(ranking_rows, 1):
+    opponent_records.append(dict(Team=row[1], W=int(row[8]), L=int(row[9]), T=int(row[10])))
     if row[1] in names:
         ranks.append(dict(Team=row[1], Rank=rank, Rating=float(row[3]), SOS=float(row[4]), GP=int(row[7]), W=int(row[8]), L=int(row[9]), T=int(row[10]), GF=int(row[11]), GA=int(row[12])))
 assert len(ranks) == len(names)
@@ -48,6 +50,17 @@ for g in refreshed:
         changes.append({'team':g['Team'],'date':g['Date'],'opponent':g['Opponent'],'before':before['Score'],'after':g['Score'],'source':g['Source']})
 data['schedule']=sorted([g for g in data['schedule'] if g['Team']=='Hortonville']+refreshed,key=lambda g:(g['Date'],g['Team']))
 data['rankings']=ranks
+data['opponentRecords']=opponent_records
+# Preserve qualifying fixtures after their opponent's record changes.
+records = {r['Team']: r for r in opponent_records}
+highlights = set(data.get('weeklyHighlights', []))
+week_start = datetime.date.today() - datetime.timedelta(days=datetime.date.today().weekday())
+week_end = week_start + datetime.timedelta(days=6)
+for game in data['schedule']:
+    record = records.get(game['Opponent'])
+    if record and record['W'] > record['L'] and week_start.isoformat() <= game['Date'] <= week_end.isoformat():
+        highlights.add('|'.join((game['Date'], game['Team'], game['Opponent'])))
+data['weeklyHighlights'] = sorted(highlights)
 data['generatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat()
 manual_results = [f"{g['Team']} {g['Score']} {g['Opponent']} ({g['Date']})" for g in refreshed if g.get('ManualResult')]
 data['source']='StatsPlus rankings and team schedules refreshed.' + (' Supplied results retained where StatsPlus has no score yet.' if manual_results else '')
