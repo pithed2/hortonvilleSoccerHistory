@@ -378,12 +378,12 @@
       "id": "coach-schedule-black-2026-09-17",
       "team": "JV Black",
       "opponent": "Manitowoc Lincoln",
-      "date": "2026-10-12",
+      "date": "2026-09-17",
       "time": "4:00 PM",
-      "start": "2026-10-12T21:00:00Z",
+      "start": "2026-09-17T21:00:00Z",
       "home": true,
       "location": "JV Grass Soccer Field",
-      "bus": null
+      "bus": "3:20 PM"
     },
     {
       "id": "ev-0fe26eac-b6ed-45aa-beb9-7995e39daf54@calendar.sportsyou.com",
