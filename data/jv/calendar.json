@@ -364,17 +364,6 @@
       "bus": "2:30 PM"
     },
     {
-      "id": "coach-schedule-black-gray-2026-09-17",
-      "team": "JV Black/Gray",
-      "opponent": "Manitowoc Lincoln",
-      "date": "2026-09-17",
-      "time": "4:30 PM",
-      "start": "2026-09-17T21:30:00Z",
-      "home": true,
-      "location": "JV Grass Soccer Field",
-      "bus": null
-    },
-    {
       "id": "ev-e144aab9-3670-4023-b8f1-9579cc933efc@calendar.sportsyou.com",
       "team": "Varsity",
       "opponent": "Green Bay Preble",
@@ -384,6 +373,17 @@
       "home": false,
       "location": "Green Bay Preble",
       "bus": "3:00 PM"
+    },
+    {
+      "id": "coach-schedule-black-2026-09-17",
+      "team": "JV Black",
+      "opponent": "Manitowoc Lincoln",
+      "date": "2026-10-12",
+      "time": "4:00 PM",
+      "start": "2026-10-12T21:00:00Z",
+      "home": true,
+      "location": "JV Grass Soccer Field",
+      "bus": null
     },
     {
       "id": "ev-0fe26eac-b6ed-45aa-beb9-7995e39daf54@calendar.sportsyou.com",

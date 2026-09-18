@@ -230,7 +230,14 @@
       "location": "Home",
       "result": "W",
       "score": "4-1"
-    }
+    }, 
+    {
+      "date": "2026-09-17",
+      "opponent": "Manitowoc Lincoln",
+      "location": "Home",
+      "result": "W",
+      "score": "2-0"
+    }    
   ],
   "gameStats": [
     {
@@ -589,6 +596,48 @@
         "September 14 JV Black home game vs Little Chute. Source: JV_Black_Little_Chute.jpg and Andrew Montalbano clarification: 4-1 win; assist to Neel Patel; final handwritten player is Ethan Nysse with one goal and no assist; Ayden Lenth played 80 minutes and allowed one goal. Saves and full participation were not confirmed."
       ],
       "unattributedGoals": 0
+    },
+    {
+      "date": "2026-09-17",
+      "opponent": "Manitowoc Lincoln",
+      "players": [
+      ],
+      "goalkeepers": [
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 0
+        }
+      ],
+      "notes": [
+        "Stats not yet collected",
+        "Participation list reflects every player with a mark on the sheet for this game; Ethan Nysse is included as a Gray guest, not a Black roster addition."
+      ],
+      "played": [
+        "Ayden Lenth",
+        "Henri Biese",
+        "Zachary Schramm",
+        "Parker Mischler",
+        "Finley Hoag",
+        "Maxwell Gust",
+        "Hudson Adkins",
+        "Stanley Stinski©",
+        "Nolan Annoye",
+        "Zander Simons ©",
+        "Rylen Mcclure",
+        "Jaxon Laabs",
+        "Liam Stanke",
+        "Wesley Welbes",
+        "Aarav Patel",
+        "Colton Daniels",
+        "Neel Patel",
+        "Jacob Sommers",
+        "Emery Liesch",
+        "Ethan Nysse",
+        "Levi Goin",
+        "Myles Froehlich"
+      ]
     }
   ],
   "statsAudit": {
