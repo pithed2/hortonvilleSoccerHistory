@@ -2,36 +2,39 @@
   "stats": {
     "slug": "red",
     "team": "JV Red",
-    "updated": "September 10, 2026",
+    "updated": "September 17, 2026",
     "audit": {
       "sourceFile": "2026_Season_Stats.xlsx",
-      "sourceModifiedAt": "2026-09-10T23:30:55.000Z",
-      "sourceSha256": "4925ab588049c7e956664e078f52a3146fc0c8ceed75982caadf7a001ae2241c",
-      "importedAt": "2026-09-10T23:41:04.267Z",
+      "sourceModifiedAt": "2026-09-18T01:40:11.000Z",
+      "sourceSha256": "aa06f041018875407b56a4adc7b63c9191636959b8918fae13c7540e9e5cc782",
+      "importedAt": "2026-09-18T02:00:10.112Z",
       "validation": "warning",
-      "validationSummary": "September 14 retally: all season scoring and goalkeeper totals match the six game box scores. Source workbook conflict remains for August 27 vs. Marshfield: Jaxon Wolff has 1 assist in Game Log but 0 in Goal Log. Retained the reported assist pending clarification.",
+      "validationSummary": "Game 2: 23 - Jaxon Wolff has 1 assists in Game Log but 0 in Goal Log. Game 6: 16 - Carson Sanford has 2 goals in Game Log but 0 in Goal Log. Game 6: 18 - Grayson Ackermann has 0 goals in Game Log but 2 in Goal Log.",
       "approvedBy": "Andrew Montalbano"
     },
+    "notes": [
+      "The Sep 15 game at Neenah was postponed; a makeup date has not yet been announced."
+    ],
     "record": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0,
       "conference": "2–1–0"
     },
     "totals": {
-      "goalsFor": 28,
+      "goalsFor": 30,
       "goalsAgainst": 5,
-      "shots": 112,
-      "sog": 66,
+      "shots": 139,
+      "sog": 79,
       "saves": 21
     },
     "goalkeepers": [
       {
         "number": 31,
         "name": "Henri Waite",
-        "games": 6,
+        "games": 7,
         "saves": 20,
-        "minutes": 430,
+        "minutes": 510,
         "goalsAgainst": 5
       },
       {
@@ -44,6 +47,14 @@
       }
     ],
     "recent": [
+      {
+        "id": 8,
+        "date": "Sep 17",
+        "opponent": "Shawano",
+        "location": "Away",
+        "score": "2–0",
+        "result": "W"
+      },
       {
         "id": 6,
         "date": "Sep 10",
@@ -100,11 +111,6 @@
         "location": "Away"
       },
       {
-        "date": "Sep 17",
-        "opponent": "Shawano",
-        "location": "Away"
-      },
-      {
         "date": "Sep 21",
         "opponent": "Fox Valley Lutheran",
         "location": "Home"
@@ -128,29 +134,34 @@
         "date": "Oct 10",
         "opponent": "DC Everest",
         "location": "Home"
+      },
+      {
+        "date": "Oct 12",
+        "opponent": "Lourdes Academy",
+        "location": "Home"
       }
     ],
     "players": [
       {
+        "number": 6,
+        "name": "Parker Anderson",
+        "gp": 7,
+        "goals": 6,
+        "assists": 2,
+        "points": 14
+      },
+      {
         "number": 22,
         "name": "Amos Arndt",
-        "gp": 6,
+        "gp": 7,
         "goals": 6,
         "assists": 1,
         "points": 13
       },
       {
-        "number": 6,
-        "name": "Parker Anderson",
-        "gp": 6,
-        "goals": 5,
-        "assists": 2,
-        "points": 12
-      },
-      {
         "number": 15,
         "name": "Sam Radle",
-        "gp": 6,
+        "gp": 7,
         "goals": 3,
         "assists": 1,
         "points": 7
@@ -158,7 +169,7 @@
       {
         "number": 20,
         "name": "Beckett Feldbruegge",
-        "gp": 6,
+        "gp": 7,
         "goals": 3,
         "assists": 0,
         "points": 6
@@ -166,23 +177,31 @@
       {
         "number": 12,
         "name": "Brody Schroeder",
-        "gp": 6,
+        "gp": 7,
         "goals": 3,
         "assists": 0,
         "points": 6
       },
       {
+        "number": 14,
+        "name": "Owen Pavich",
+        "gp": 7,
+        "goals": 1,
+        "assists": 4,
+        "points": 6
+      },
+      {
         "number": 16,
         "name": "Carson Sanford",
-        "gp": 6,
-        "goals": 0,
+        "gp": 7,
+        "goals": 2,
         "assists": 1,
-        "points": 1
+        "points": 5
       },
       {
         "number": 19,
         "name": "Timmy VanSchyndel",
-        "gp": 6,
+        "gp": 7,
         "goals": 2,
         "assists": 1,
         "points": 5
@@ -190,39 +209,39 @@
       {
         "number": 9,
         "name": "Ben Parker",
-        "gp": 6,
+        "gp": 7,
         "goals": 1,
         "assists": 3,
         "points": 5
       },
       {
-        "number": 14,
-        "name": "Owen Pavich",
-        "gp": 6,
-        "goals": 1,
-        "assists": 3,
-        "points": 5
+        "number": 18,
+        "name": "Grayson Ackermann",
+        "gp": 7,
+        "goals": 2,
+        "assists": 0,
+        "points": 4
       },
       {
         "number": 10,
         "name": "Hunter Hasseler",
-        "gp": 6,
+        "gp": 7,
         "goals": 1,
         "assists": 1,
         "points": 3
       },
       {
-        "number": 18,
-        "name": "Grayson Ackermann",
-        "gp": 6,
-        "goals": 3,
-        "assists": 0,
-        "points": 6
+        "number": 21,
+        "name": "Easton Slomski",
+        "gp": 7,
+        "goals": 0,
+        "assists": 1,
+        "points": 1
       },
       {
         "number": 24,
         "name": "Ethen LaPlant",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -230,7 +249,7 @@
       {
         "number": 23,
         "name": "Jaxon Wolff",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -238,7 +257,7 @@
       {
         "number": 26,
         "name": "Leon Ryzhov",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -246,7 +265,7 @@
       {
         "number": 8,
         "name": "Oliver Plamann",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -254,7 +273,7 @@
       {
         "number": 2,
         "name": "Parker Rugotska",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -262,7 +281,7 @@
       {
         "number": 4,
         "name": "Weston Ehr",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -270,7 +289,7 @@
       {
         "number": 13,
         "name": "Aaron Young",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -278,23 +297,7 @@
       {
         "number": 3,
         "name": "Dylan McFarlane",
-        "gp": 6,
-        "goals": 0,
-        "assists": 0,
-        "points": 0
-      },
-      {
-        "number": 21,
-        "name": "Easton Slomski",
-        "gp": 6,
-        "goals": 0,
-        "assists": 0,
-        "points": 0
-      },
-      {
-        "number": 17,
-        "name": "Henri Waite",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -302,7 +305,7 @@
       {
         "number": 31,
         "name": "Henri Waite",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -318,7 +321,7 @@
       {
         "number": 11,
         "name": "Jaxton Seefeldt",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -326,7 +329,7 @@
       {
         "number": 5,
         "name": "Nolan Raaths",
-        "gp": 6,
+        "gp": 7,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -1400,7 +1403,7 @@
           "gkMinutes": 55
         },
         {
-          "player": "18 - Grayson Ackermann",
+          "player": "16 - Carson Sanford",
           "shots": 2,
           "sog": 2,
           "goals": 2,
@@ -1489,6 +1492,217 @@
           "half": "2nd",
           "scorer": "6 - Parker Anderson",
           "assist": null
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "date": "2026-09-17",
+      "opponent": "Shawano",
+      "location": "Away",
+      "conference": false,
+      "result": "W",
+      "team": {
+        "shots": 27,
+        "sog": 13,
+        "saves": 0,
+        "yc": 0,
+        "rc": 0,
+        "goals": 2
+      },
+      "opponentTotals": {
+        "shots": 0,
+        "saves": 11,
+        "goals": 0
+      },
+      "players": [
+        {
+          "player": "2 - Parker Rugotska",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "4 - Weston Ehr",
+          "shots": 2,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "6 - Parker Anderson",
+          "shots": 3,
+          "sog": 2,
+          "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "9 - Ben Parker",
+          "shots": 1,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "10 - Hunter Hasseler",
+          "shots": 2,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "11 - Jaxton Seefeldt",
+          "shots": 1,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "13 - Aaron Young",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "14 - Owen Pavich",
+          "shots": 5,
+          "sog": 2,
+          "goals": 0,
+          "assists": 1,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "10 - Hunter Hasseler",
+          "shots": 1,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "16 - Carson Sanford",
+          "shots": 3,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "18 - Grayson Ackermann",
+          "shots": 2,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "20 - Beckett Feldbruegge",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "21 - Easton Slomski",
+          "shots": 1,
+          "sog": 1,
+          "goals": 0,
+          "assists": 1,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "22 - Amos Arndt",
+          "shots": 2,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "24 - Ethen LaPlant",
+          "shots": 1,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "31 - Henri Waite",
+          "shots": 0,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 80
+        }
+      ],
+      "scoring": [
+        {
+          "half": "2nd",
+          "scorer": "6 - Parker Anderson",
+          "assist": "21 - Easton Slomski"
+        },
+        {
+          "half": "2nd",
+          "scorer": "18 - Grayson Ackermann",
+          "assist": "14 - Owen Pavich"
         }
       ]
     }

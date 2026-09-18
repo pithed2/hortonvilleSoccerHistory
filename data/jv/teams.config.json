@@ -3,6 +3,8 @@
     "team": "JV Red",
     "sourcePath": "C:/Users/amontalbano/OneDrive - NorthWinds Technology Solutions/Documents (1)/Hortonville Soccer/2026 Boys/2026_Season_Stats.xlsx",
     "approvedBy": "Andrew Montalbano",
-    "inactivePlayers": ["Isaac Reiland"]
+    "inactivePlayers": ["Isaac Reiland"],
+    "excludeRosterNumbers": [17],
+    "notes": ["The Sep 15 game at Neenah was postponed; a makeup date has not yet been announced."]
   }
 }

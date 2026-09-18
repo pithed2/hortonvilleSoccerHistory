@@ -49,7 +49,8 @@ function shortDate(value) {
   return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${value}T00:00:00Z`))
 }
 
-const rosterRows = rows("Roster").filter((row) => text(row["Player Name"]))
+const excludeRosterNumbers = new Set(teamConfig.excludeRosterNumbers || [])
+const rosterRows = rows("Roster").filter((row) => text(row["Player Name"]) && !excludeRosterNumbers.has(number(row["No."])))
 const scheduleRows = rows("Schedule & Team Stats").filter((row) => number(row["Game #"]) && isoDate(row.Date) && text(row.Opponent))
 const gameLogRows = rows("Game Log").filter((row) => number(row["Game #"]) && text(row["Player (No. - Name)"]))
 const goalLogRows = rows("Goal Log").filter((row) => number(row["Game #"]) && text(row["Scorer (No. - Name)"]))
@@ -170,6 +171,7 @@ const output = {
       validationSummary: issues.length ? issues.join(" ") : "Schedule, completed-game count, team totals, player totals, goalkeeper totals, and scoring logs reconciled.",
       approvedBy,
     },
+    notes: teamConfig.notes || [],
     record: { wins, losses, ties, conference: conferenceRecord }, totals, goalkeepers,
     recent: [...completed].reverse().map((row) => ({ id: number(row["Game #"]), date: shortDate(isoDate(row.Date)), opponent: text(row.Opponent), location: text(row["H/A"]).toUpperCase() === "H" ? "Home" : "Away", score: `${number(row.GF)}–${number(row.GA)}`, result: text(row.Result).toUpperCase() })),
     upcoming: scheduleRows.filter((row) => !completedIds.has(number(row["Game #"]))).map((row) => ({ date: shortDate(isoDate(row.Date)), opponent: text(row.Opponent), location: text(row["H/A"]).toUpperCase() === "H" ? "Home" : "Away" })),
