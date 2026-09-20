@@ -1,17 +1,17 @@
 {
   "source": "https://soccer.statsplus.net/rankings/conference/5637/",
-  "updated": "2026-09-17",
+  "updated": "2026-09-20",
   "notes": "FVA conference-only records (not overall). Refresh from the source URL periodically — standings change weekly.",
   "standings": [
-    { "Team": "Appleton North", "W": 4, "L": 0, "T": 0 },
+    { "Team": "Appleton North", "W": 5, "L": 0, "T": 0 },
     { "Team": "Hortonville", "W": 3, "L": 0, "T": 1 },
-    { "Team": "Oshkosh West", "W": 2, "L": 1, "T": 1 },
+    { "Team": "Oshkosh West", "W": 2, "L": 1, "T": 2 },
+    { "Team": "Neenah", "W": 2, "L": 1, "T": 1 },
+    { "Team": "Kimberly", "W": 2, "L": 2, "T": 1 },
     { "Team": "Appleton East", "W": 2, "L": 2, "T": 0 },
-    { "Team": "Kaukauna", "W": 2, "L": 2, "T": 0 },
-    { "Team": "Kimberly", "W": 2, "L": 2, "T": 0 },
-    { "Team": "Neenah", "W": 1, "L": 1, "T": 1 },
+    { "Team": "Kaukauna", "W": 2, "L": 3, "T": 0 },
     { "Team": "Fond du Lac", "W": 1, "L": 2, "T": 1 },
-    { "Team": "Oshkosh North", "W": 0, "L": 4, "T": 0 },
-    { "Team": "Appleton West", "W": 0, "L": 3, "T": 0 }
+    { "Team": "Appleton West", "W": 0, "L": 3, "T": 0 },
+    { "Team": "Oshkosh North", "W": 0, "L": 5, "T": 0 }
   ]
 }
