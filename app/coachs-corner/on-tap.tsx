@@ -30,7 +30,7 @@ export function OnTap({ data, today }: { data: WeeklyData; today: string }) {
           <Button variant="outline" size="sm" onClick={() => setStart(currentWeek)} disabled={start === currentWeek}>This week</Button>
           <Button variant="outline" size="sm" onClick={() => setStart(shiftDate(start, 7))}>Next week</Button>
         </div>
-        <p className="mt-4 text-sm leading-6 text-muted-foreground">Monday–Sunday · Winning record means more wins than losses. Highlights stay listed after scores are entered. Records reflect the latest saved data; opponents without a known record aren’t classified as key matchups. FVA key matchups require a winning conference (FVA-only) record for at least one side.</p>
+        <p className="mt-4 text-sm leading-6 text-muted-foreground">Sunday–Saturday · Winning record means more wins than losses. Highlights stay listed after scores are entered. Records reflect the latest saved data; opponents without a known record aren’t classified as key matchups. FVA key matchups require a winning conference (FVA-only) record for at least one side.</p>
         <div className="mt-5 grid items-start gap-5 lg:grid-cols-2">
           {sections.map(section => (
             <section key={section.title} className={`overflow-hidden rounded-xl border ${section.isFva ? "lg:col-span-2" : ""}`}>

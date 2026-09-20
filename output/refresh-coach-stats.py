@@ -59,10 +59,7 @@ data['opponentRecords']=opponent_records
 records = {r['Team']: r for r in opponent_records}
 highlights = set(data.get('weeklyHighlights', []))
 today = datetime.date.today()
-week_start = today - datetime.timedelta(days=today.weekday())
-# Sunday's run prepares the coming Monday-Sunday slate.
-if today.weekday() == 6:
-    week_start += datetime.timedelta(days=7)
+week_start = today - datetime.timedelta(days=(today.weekday() + 1) % 7)
 week_end = week_start + datetime.timedelta(days=6)
 for game in data['schedule']:
     record = records.get(game['Opponent'])

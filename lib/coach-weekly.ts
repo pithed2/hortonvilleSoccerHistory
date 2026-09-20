@@ -12,7 +12,7 @@ export type WeeklyData = {
 
 export function weekStart(date: string) {
   const day = new Date(`${date}T12:00:00Z`)
-  day.setUTCDate(day.getUTCDate() - (day.getUTCDay() + 6) % 7)
+  day.setUTCDate(day.getUTCDate() - day.getUTCDay())
   return day.toISOString().slice(0, 10)
 }
 
