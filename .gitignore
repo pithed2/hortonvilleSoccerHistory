@@ -27,3 +27,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Temporary Coach's Corner refresh checkouts
+/output/coach-refresh-*/
