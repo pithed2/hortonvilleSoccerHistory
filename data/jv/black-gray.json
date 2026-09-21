@@ -601,6 +601,18 @@
       "date": "2026-09-17",
       "opponent": "Manitowoc Lincoln",
       "players": [
+        {
+          "name": "Ethan Nysse",
+          "goals": 1,
+          "assists": 1,
+          "sot": 3
+        }, 
+        {
+          "name": "Colton Daniels",
+          "goals": 1,
+          "assists": 0,
+          "sot": 1
+        }
       ],
       "goalkeepers": [
         {
@@ -611,7 +623,29 @@
         }
       ],
       "notes": [
-        "Stats not yet collected — only the final score and Ayden Lenth's goalkeeper line (80 min, 0 GA) are confirmed for this game."
+      ],
+      "played": [
+        "Ayden Lenth",
+        "Aarav Patel",
+        "Emery Liesch",
+        "Wyatt Harrop",
+        "Joseph Nennig",
+        "Levi Goin",
+        "Ezekiel Hartjes",
+        "Colton Daniels",
+        "Neel Patel",
+        "Myles Froehlich",
+        "Ethan Nysse",
+        "Jacob Sommers",
+        "Jovany ElwingVargas",
+        "Keegan Vancamp",
+        "Kellan Mullock",
+        "Max Lorge",
+        "Henri Biese",
+        "Parker Mischler",
+        "Hudson Adkins",
+        "Stanley Stinski",
+        "Zander Simons"
       ]
     }
   ],
