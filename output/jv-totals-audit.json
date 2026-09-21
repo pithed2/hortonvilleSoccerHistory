@@ -1,0 +1,980 @@
+{
+  "auditedAt": "2026-09-21T14:05:10.358Z",
+  "teams": [
+    {
+      "team": "JV Red",
+      "games": 7,
+      "players": [
+        {
+          "number": 6,
+          "name": "Parker Anderson",
+          "gp": 7,
+          "goals": 6,
+          "assists": 2,
+          "points": 14,
+          "recordedStatLines": 6
+        },
+        {
+          "number": 22,
+          "name": "Amos Arndt",
+          "gp": 7,
+          "goals": 6,
+          "assists": 1,
+          "points": 13,
+          "recordedStatLines": 7
+        },
+        {
+          "number": 15,
+          "name": "Sam Radle",
+          "gp": 7,
+          "goals": 3,
+          "assists": 1,
+          "points": 7,
+          "recordedStatLines": 5
+        },
+        {
+          "number": 20,
+          "name": "Beckett Feldbruegge",
+          "gp": 7,
+          "goals": 3,
+          "assists": 0,
+          "points": 6,
+          "recordedStatLines": 5
+        },
+        {
+          "number": 12,
+          "name": "Brody Schroeder",
+          "gp": 7,
+          "goals": 3,
+          "assists": 0,
+          "points": 6,
+          "recordedStatLines": 5
+        },
+        {
+          "number": 14,
+          "name": "Owen Pavich",
+          "gp": 7,
+          "goals": 1,
+          "assists": 4,
+          "points": 6,
+          "recordedStatLines": 7
+        },
+        {
+          "number": 16,
+          "name": "Carson Sanford",
+          "gp": 7,
+          "goals": 2,
+          "assists": 1,
+          "points": 5,
+          "recordedStatLines": 6
+        },
+        {
+          "number": 19,
+          "name": "Timmy VanSchyndel",
+          "gp": 7,
+          "goals": 2,
+          "assists": 1,
+          "points": 5,
+          "recordedStatLines": 2
+        },
+        {
+          "number": 9,
+          "name": "Ben Parker",
+          "gp": 7,
+          "goals": 1,
+          "assists": 3,
+          "points": 5,
+          "recordedStatLines": 5
+        },
+        {
+          "number": 18,
+          "name": "Grayson Ackermann",
+          "gp": 7,
+          "goals": 2,
+          "assists": 0,
+          "points": 4,
+          "recordedStatLines": 4
+        },
+        {
+          "number": 10,
+          "name": "Hunter Hasseler",
+          "gp": 7,
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "recordedStatLines": 6
+        },
+        {
+          "number": 21,
+          "name": "Easton Slomski",
+          "gp": 7,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 5
+        },
+        {
+          "number": 24,
+          "name": "Ethen LaPlant",
+          "gp": 7,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 2
+        },
+        {
+          "number": 23,
+          "name": "Jaxon Wolff",
+          "gp": 7,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 1
+        },
+        {
+          "number": 26,
+          "name": "Leon Ryzhov",
+          "gp": 7,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 2
+        },
+        {
+          "number": 8,
+          "name": "Oliver Plamann",
+          "gp": 7,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 3
+        },
+        {
+          "number": 2,
+          "name": "Parker Rugotska",
+          "gp": 7,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 3
+        },
+        {
+          "number": 4,
+          "name": "Weston Ehr",
+          "gp": 7,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 6
+        },
+        {
+          "number": 13,
+          "name": "Aaron Young",
+          "gp": 7,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "recordedStatLines": 1
+        },
+        {
+          "number": 3,
+          "name": "Dylan McFarlane",
+          "gp": 7,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "recordedStatLines": 0
+        },
+        {
+          "number": 31,
+          "name": "Henri Waite",
+          "gp": 7,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "recordedStatLines": 7
+        },
+        {
+          "number": 7,
+          "name": "Isaac Reiland",
+          "gp": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "recordedStatLines": 0
+        },
+        {
+          "number": 11,
+          "name": "Jaxton Seefeldt",
+          "gp": 7,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "recordedStatLines": 3
+        },
+        {
+          "number": 5,
+          "name": "Nolan Raaths",
+          "gp": 7,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "recordedStatLines": 2
+        }
+      ],
+      "goalkeepers": [
+        {
+          "number": 31,
+          "name": "Henri Waite",
+          "games": 7,
+          "saves": 20,
+          "minutes": 510,
+          "goalsAgainst": 5
+        },
+        {
+          "number": 5,
+          "name": "Nolan Raaths",
+          "games": 1,
+          "saves": 1,
+          "minutes": 5,
+          "goalsAgainst": 0
+        }
+      ],
+      "caveat": "GP preserved: sparse game stat lines do not establish full participation. Existing Game Log/Goal Log conflicts remain flagged in source audit."
+    },
+    {
+      "team": "JV White",
+      "games": 9,
+      "players": [
+        {
+          "number": 0,
+          "name": "Ben Decker",
+          "gp": 9,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "sog": 0,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 2,
+          "name": "Riley Loewenhagen",
+          "gp": 9,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "sog": 0,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 3,
+          "name": "Riley Handevidt",
+          "gp": 9,
+          "goals": 1,
+          "assists": 0,
+          "points": 2,
+          "sog": 3,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 4,
+          "name": "Isaac Reynolds",
+          "gp": 9,
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "sog": 4,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 5,
+          "name": "Carter Possley",
+          "gp": 9,
+          "goals": 1,
+          "assists": 4,
+          "points": 6,
+          "sog": 12,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 6,
+          "name": "Jack Lorge",
+          "gp": 9,
+          "goals": 1,
+          "assists": 4,
+          "points": 6,
+          "sog": 9,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 7,
+          "name": "Wyatt Mauthepasch",
+          "gp": 9,
+          "goals": 10,
+          "assists": 6,
+          "points": 26,
+          "sog": 32,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 8,
+          "name": "Adam Palmer",
+          "gp": 9,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "sog": 2,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 9,
+          "name": "Sam Larson",
+          "gp": 9,
+          "goals": 3,
+          "assists": 1,
+          "points": 7,
+          "sog": 3,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 10,
+          "name": "Liam Evenson",
+          "gp": 9,
+          "goals": 8,
+          "assists": 5,
+          "points": 21,
+          "sog": 23,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 11,
+          "name": "Bryce Draeger",
+          "gp": 9,
+          "goals": 1,
+          "assists": 0,
+          "points": 2,
+          "sog": 5,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 12,
+          "name": "Connor Schmitt",
+          "gp": 9,
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "sog": 3,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 13,
+          "name": "Bennett Froelich",
+          "gp": 9,
+          "goals": 2,
+          "assists": 0,
+          "points": 4,
+          "sog": 7,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 14,
+          "name": "Matthew Racine",
+          "gp": 9,
+          "goals": 3,
+          "assists": 1,
+          "points": 7,
+          "sog": 7,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 15,
+          "name": "Josh Petricca",
+          "gp": 9,
+          "goals": 0,
+          "assists": 3,
+          "points": 3,
+          "sog": 3,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 16,
+          "name": "Liam Adkins",
+          "gp": 9,
+          "goals": 1,
+          "assists": 2,
+          "points": 4,
+          "sog": 4,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 17,
+          "name": "Ollie Schmidt",
+          "gp": 9,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "sog": 0,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 18,
+          "name": "James Forsythe",
+          "gp": 9,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "sog": 3,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 20,
+          "name": "Nate Shaw",
+          "gp": 9,
+          "goals": 2,
+          "assists": 2,
+          "points": 6,
+          "sog": 5,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 21,
+          "name": "Reno Brei",
+          "gp": 9,
+          "goals": 10,
+          "assists": 4,
+          "points": 24,
+          "sog": 30,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 22,
+          "name": "Grayson Whitver",
+          "gp": 9,
+          "goals": 2,
+          "assists": 0,
+          "points": 4,
+          "sog": 5,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 23,
+          "name": "Nate Diedrich",
+          "gp": 9,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "sog": 2,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 24,
+          "name": "Carter Halford",
+          "gp": 9,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "sog": 0,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 25,
+          "name": "Carter Hirschi",
+          "gp": 9,
+          "goals": 1,
+          "assists": 2,
+          "points": 4,
+          "sog": 4,
+          "recordedStatLines": 9
+        },
+        {
+          "number": 26,
+          "name": "Lachlan Elliott",
+          "gp": 9,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "sog": 0,
+          "recordedStatLines": 9
+        }
+      ],
+      "goalkeepers": [
+        {
+          "number": 0,
+          "name": "Ben Decker",
+          "games": 9,
+          "saves": 24,
+          "minutes": 660,
+          "goalsAgainst": 4
+        }
+      ],
+      "caveat": null
+    },
+    {
+      "team": "JV Black",
+      "games": 5,
+      "players": [
+        {
+          "number": 21,
+          "name": "Ayden Lenth",
+          "gp": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 2,
+          "name": "Henri Biese",
+          "gp": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 3,
+          "name": "Zachary Schramm",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 5,
+          "name": "Parker Mischler",
+          "gp": 4,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "number": 6,
+          "name": "Finley Hoag",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 8,
+          "name": "Maxwell Gust",
+          "gp": 3,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "number": 9,
+          "name": "Hudson Adkins",
+          "gp": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 10,
+          "name": "Stanley Stinski",
+          "gp": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 12,
+          "name": "Nolan Annoye",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 14,
+          "name": "Zander Simons",
+          "gp": 4,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "number": 15,
+          "name": "Rylen Mcclure",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 22,
+          "name": "Jaxon Laabs",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 23,
+          "name": "Liam Stanke",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 24,
+          "name": "Wesley Welbes",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 9,
+          "name": "Neel Patel",
+          "squad": "Guest from JV Gray",
+          "gp": 4,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "number": 12,
+          "name": "Ethan Nysse",
+          "squad": "Guest from JV Gray",
+          "gp": 4,
+          "goals": 4,
+          "assists": 2,
+          "points": 10
+        },
+        {
+          "number": 2,
+          "name": "Aarav Patel",
+          "squad": "Guest from JV Gray",
+          "gp": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 6,
+          "name": "Levi Goin",
+          "squad": "Guest from JV Gray",
+          "gp": 4,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "number": 10,
+          "name": "Myles Froehlich",
+          "squad": "Guest from JV Gray",
+          "gp": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 3,
+          "name": "Emery Liesch",
+          "squad": "Guest from JV Gray",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 8,
+          "name": "Colton Daniels",
+          "squad": "Guest from JV Gray",
+          "gp": 2,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "number": 13,
+          "name": "Jacob Sommers",
+          "squad": "Guest from JV Gray",
+          "gp": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 17,
+          "name": "Keegan Vancamp",
+          "squad": "Guest from JV Gray",
+          "gp": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 5,
+          "name": "Joseph Nennig",
+          "squad": "Guest from JV Gray",
+          "gp": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 4,
+          "name": "Wyatt Harrop",
+          "squad": "Guest from JV Gray",
+          "gp": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 7,
+          "name": "Ezekiel Hartjes",
+          "squad": "Guest from JV Gray",
+          "gp": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 14,
+          "name": "Jovany ElwingVargas",
+          "squad": "Guest from JV Gray",
+          "gp": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 22,
+          "name": "Kellan Mullock",
+          "squad": "Guest from JV Gray",
+          "gp": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 25,
+          "name": "Max Lorge",
+          "squad": "Guest from JV Gray",
+          "gp": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        }
+      ],
+      "goalkeepers": [
+        {
+          "number": 21,
+          "name": "Ayden Lenth",
+          "games": 5,
+          "saves": null,
+          "minutes": 400,
+          "goalsAgainst": 9
+        }
+      ],
+      "incompleteLineups": [
+        "2026-09-14 vs Little Chute"
+      ],
+      "caveat": "Saves remain unknown where not recorded; GP counts only recorded lineups."
+    },
+    {
+      "team": "JV Gray",
+      "games": 3,
+      "players": [
+        {
+          "number": 21,
+          "name": "Ayden Lenth",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 2,
+          "name": "Aarav Patel",
+          "gp": 3,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "number": 3,
+          "name": "Emery Liesch",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 4,
+          "name": "Wyatt Harrop",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 5,
+          "name": "Joseph Nennig",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 6,
+          "name": "Levi Goin",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 7,
+          "name": "Ezekiel Hartjes",
+          "gp": 3,
+          "goals": 0,
+          "assists": 1,
+          "points": 1
+        },
+        {
+          "number": 8,
+          "name": "Colton Daniels",
+          "gp": 3,
+          "goals": 1,
+          "assists": 1,
+          "points": 3
+        },
+        {
+          "number": 9,
+          "name": "Neel Patel",
+          "gp": 3,
+          "goals": 2,
+          "assists": 0,
+          "points": 4
+        },
+        {
+          "number": 10,
+          "name": "Myles Froehlich",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 12,
+          "name": "Ethan Nysse",
+          "gp": 3,
+          "goals": 2,
+          "assists": 1,
+          "points": 5
+        },
+        {
+          "number": 13,
+          "name": "Jacob Sommers",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 14,
+          "name": "Jovany ElwingVargas",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 17,
+          "name": "Keegan Vancamp",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 22,
+          "name": "Kellan Mullock",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 25,
+          "name": "Max Lorge",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 2,
+          "name": "Henri Biese",
+          "squad": "Guest from JV Black",
+          "gp": 3,
+          "goals": 1,
+          "assists": 0,
+          "points": 2
+        },
+        {
+          "number": 5,
+          "name": "Parker Mischler",
+          "squad": "Guest from JV Black",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 6,
+          "name": "Finley Hoag",
+          "squad": "Guest from JV Black",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 10,
+          "name": "Stanley Stinski",
+          "squad": "Guest from JV Black",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 14,
+          "name": "Zander Simons",
+          "squad": "Guest from JV Black",
+          "gp": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        },
+        {
+          "number": 12,
+          "name": "Nolan Annoye",
+          "squad": "Guest from JV Black",
+          "gp": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0
+        }
+      ],
+      "goalkeepers": [
+        {
+          "number": 21,
+          "name": "Ayden Lenth",
+          "games": 3,
+          "saves": null,
+          "minutes": 240,
+          "goalsAgainst": 6
+        }
+      ],
+      "incompleteLineups": [],
+      "caveat": "Saves remain unknown where not recorded; GP counts only recorded lineups."
+    }
+  ]
+}

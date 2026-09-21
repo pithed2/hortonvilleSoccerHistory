@@ -3,6 +3,7 @@ import { JV_CONFERENCE_NOTE } from "@/lib/jv-conference.mjs"
 import { ArrowRight, Trophy, Users } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
+import { JvMatchCenter } from "@/components/jv-match-center"
 import { getJvTeam, type JvTeamSlug } from "@/lib/jv-teams"
 
 const teams: Array<{ name: string; description: string; status: string; href: string }> = [
@@ -71,6 +72,7 @@ export default function JvLandingPage() {
         </Link>
       ))}</div>
     </section>
+    <JvMatchCenter />
     <Footer />
   </main>
 }

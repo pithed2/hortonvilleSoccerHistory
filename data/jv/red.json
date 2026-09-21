@@ -1381,17 +1381,6 @@
           "gkMinutes": 0
         },
         {
-          "player": "16 - Carson Sanford",
-          "shots": 1,
-          "sog": 0,
-          "goals": 0,
-          "assists": 0,
-          "yc": 0,
-          "rc": 0,
-          "saves": 0,
-          "gkMinutes": 0
-        },
-        {
           "player": "31 - Henri Waite",
           "shots": 0,
           "sog": 0,
@@ -1401,17 +1390,6 @@
           "rc": 0,
           "saves": 1,
           "gkMinutes": 55
-        },
-        {
-          "player": "16 - Carson Sanford",
-          "shots": 2,
-          "sog": 2,
-          "goals": 2,
-          "assists": 0,
-          "yc": 0,
-          "rc": 0,
-          "saves": 0,
-          "gkMinutes": 0
         },
         {
           "player": "20 - Beckett Feldbruegge",
@@ -1440,6 +1418,17 @@
           "shots": 2,
           "sog": 2,
           "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "16 - Carson Sanford",
+          "shots": 3,
+          "sog": 2,
+          "goals": 2,
           "assists": 0,
           "yc": 0,
           "rc": 0,
@@ -1493,6 +1482,9 @@
           "scorer": "6 - Parker Anderson",
           "assist": null
         }
+      ],
+      "notes": [
+        "Season-total audit: combined two Carson Sanford stat rows into one without changing totals. The existing Game Log/Goal Log scorer conflict remains unresolved."
       ]
     },
     {
@@ -1561,17 +1553,6 @@
           "gkMinutes": 0
         },
         {
-          "player": "10 - Hunter Hasseler",
-          "shots": 2,
-          "sog": 1,
-          "goals": 0,
-          "assists": 0,
-          "yc": 0,
-          "rc": 0,
-          "saves": 0,
-          "gkMinutes": 0
-        },
-        {
           "player": "11 - Jaxton Seefeldt",
           "shots": 1,
           "sog": 1,
@@ -1599,17 +1580,6 @@
           "sog": 2,
           "goals": 0,
           "assists": 1,
-          "yc": 0,
-          "rc": 0,
-          "saves": 0,
-          "gkMinutes": 0
-        },
-        {
-          "player": "10 - Hunter Hasseler",
-          "shots": 1,
-          "sog": 1,
-          "goals": 0,
-          "assists": 0,
           "yc": 0,
           "rc": 0,
           "saves": 0,
@@ -1691,6 +1661,17 @@
           "rc": 0,
           "saves": 0,
           "gkMinutes": 80
+        },
+        {
+          "player": "10 - Hunter Hasseler",
+          "shots": 3,
+          "sog": 2,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
         }
       ],
       "scoring": [
@@ -1704,6 +1685,9 @@
           "scorer": "18 - Grayson Ackermann",
           "assist": "14 - Owen Pavich"
         }
+      ],
+      "notes": [
+        "Season-total audit: combined two Hunter Hasseler stat rows into one without changing totals."
       ]
     }
   ]

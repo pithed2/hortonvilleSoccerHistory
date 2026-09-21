@@ -42,7 +42,7 @@
         },
         {
           "number": "10",
-          "name": "Stanley Stinski©",
+          "name": "Stanley Stinski",
           "position": "D"
         },
         {
@@ -52,7 +52,7 @@
         },
         {
           "number": "14",
-          "name": "Zander Simons ©",
+          "name": "Zander Simons",
           "position": "F"
         },
         {
@@ -230,14 +230,14 @@
       "location": "Home",
       "result": "W",
       "score": "4-1"
-    }, 
+    },
     {
       "date": "2026-09-17",
       "opponent": "Manitowoc Lincoln",
       "location": "Home",
       "result": "W",
       "score": "2-0"
-    }    
+    }
   ],
   "gameStats": [
     {
@@ -271,9 +271,9 @@
         "Finley Hoag",
         "Maxwell Gust",
         "Hudson Adkins",
-        "Stanley Stinski©",
+        "Stanley Stinski",
         "Nolan Annoye",
-        "Zander Simons ©",
+        "Zander Simons",
         "Rylen Mcclure",
         "Jaxon Laabs",
         "Liam Stanke",
@@ -321,8 +321,8 @@
         "Henri Biese",
         "Parker Mischler",
         "Finley Hoag",
-        "Stanley Stinski©",
-        "Zander Simons ©"
+        "Stanley Stinski",
+        "Zander Simons"
       ]
     },
     {
@@ -369,9 +369,9 @@
         "Finley Hoag",
         "Maxwell Gust",
         "Hudson Adkins",
-        "Stanley Stinski©",
+        "Stanley Stinski",
         "Nolan Annoye",
-        "Zander Simons ©",
+        "Zander Simons",
         "Rylen Mcclure",
         "Jaxon Laabs",
         "Liam Stanke",
@@ -435,8 +435,8 @@
         "Henri Biese",
         "Parker Mischler",
         "Finley Hoag",
-        "Stanley Stinski©",
-        "Zander Simons ©",
+        "Stanley Stinski",
+        "Zander Simons",
         "Nolan Annoye"
       ]
     },
@@ -468,9 +468,9 @@
         "Finley Hoag",
         "Maxwell Gust",
         "Hudson Adkins",
-        "Stanley Stinski©",
+        "Stanley Stinski",
         "Nolan Annoye",
-        "Zander Simons ©",
+        "Zander Simons",
         "Rylen Mcclure",
         "Jaxon Laabs",
         "Liam Stanke",
@@ -547,11 +547,11 @@
         "Keegan Vancamp",
         "Kellan Mullock",
         "Max Lorge",
-        "Zander Simons ©",
+        "Zander Simons",
         "Henri Biese",
         "Parker Mischler",
         "Finley Hoag",
-        "Stanley Stinski©"
+        "Stanley Stinski"
       ]
     },
     {
@@ -564,7 +564,7 @@
           "assists": 0
         },
         {
-          "name": "Zander Simons ©",
+          "name": "Zander Simons",
           "goals": 1,
           "assists": 0
         },
@@ -606,7 +606,7 @@
           "goals": 1,
           "assists": 1,
           "sot": 3
-        }, 
+        },
         {
           "name": "Colton Daniels",
           "goals": 1,
@@ -622,8 +622,7 @@
           "goalsAgainst": 0
         }
       ],
-      "notes": [
-      ],
+      "notes": [],
       "played": [
         "Ayden Lenth",
         "Aarav Patel",
