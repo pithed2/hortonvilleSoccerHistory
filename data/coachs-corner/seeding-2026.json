@@ -1,7 +1,7 @@
 {
   "source": "StatsPlus rankings and team schedules refreshed.",
   "season": 2026,
-  "generatedAt": "2026-09-20T16:55:12.438464+00:00",
+  "generatedAt": "2026-09-21T14:06:44.055797+00:00",
   "teams": [
     {
       "Team": "Chippewa Falls",
@@ -229,7 +229,7 @@
       "Team": "Chippewa Falls",
       "Rank": 132,
       "Rating": 1548.04,
-      "SOS": 1578.47,
+      "SOS": 1583.83,
       "GP": 10,
       "W": 4,
       "L": 5,
@@ -239,7 +239,7 @@
     },
     {
       "Team": "Appleton West",
-      "Rank": 168,
+      "Rank": 169,
       "Rating": 1429.85,
       "SOS": 1657.79,
       "GP": 8,
@@ -251,9 +251,9 @@
     },
     {
       "Team": "Eau Claire North",
-      "Rank": 184,
+      "Rank": 185,
       "Rating": 1402.31,
-      "SOS": 1589.83,
+      "SOS": 1595.79,
       "GP": 9,
       "W": 3,
       "L": 6,
@@ -3059,7 +3059,7 @@
       "Group": "Group A",
       "Rank": 132,
       "Rating": 1548.04,
-      "SOS": 1578.47
+      "SOS": 1583.83
     },
     {
       "Team": "DC Everest",
@@ -3105,9 +3105,9 @@
       "GD": -22,
       "Points": 9,
       "Group": "Group A",
-      "Rank": 184,
+      "Rank": 185,
       "Rating": 1402.31,
-      "SOS": 1589.83
+      "SOS": 1595.79
     },
     {
       "Team": "Hudson",
@@ -3201,7 +3201,7 @@
       "GD": -28,
       "Points": 1,
       "Group": "Group B",
-      "Rank": 168,
+      "Rank": 169,
       "Rating": 1429.85,
       "SOS": 1657.79
     },
@@ -3372,7 +3372,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 9,
         "GD": -22,
-        "Rank": 184,
+        "Rank": 185,
         "Rating": 1402.31,
         "Seed": 6
       },
@@ -3494,7 +3494,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 1,
         "GD": -28,
-        "Rank": 168,
+        "Rank": 169,
         "Rating": 1429.85,
         "Seed": 8
       }
@@ -3860,7 +3860,7 @@
     "importedRows": 260,
     "manualTeam": "Hortonville",
     "manualRows": 15,
-    "statsPlusAsOf": "2026-09-20",
+    "statsPlusAsOf": "2026-09-21",
     "refreshedTeams": 15,
     "refreshedRows": 262,
     "hortonvilleSource": "public/data/games_2026.csv",
@@ -4872,6 +4872,12 @@
       "T": 1
     },
     {
+      "Team": "La Crosse Logan",
+      "W": 3,
+      "L": 6,
+      "T": 0
+    },
+    {
       "Team": "Appleton West",
       "W": 0,
       "L": 7,
@@ -5019,12 +5025,6 @@
       "Team": "Saint Lawrence Seminary",
       "W": 4,
       "L": 2,
-      "T": 0
-    },
-    {
-      "Team": "La Crosse Logan",
-      "W": 2,
-      "L": 6,
       "T": 0
     },
     {
@@ -5250,12 +5250,6 @@
       "T": 0
     },
     {
-      "Team": "Black River Falls/Alma Center Lincoln",
-      "W": 2,
-      "L": 1,
-      "T": 0
-    },
-    {
       "Team": "Rhinelander",
       "W": 2,
       "L": 4,
@@ -5326,6 +5320,12 @@
       "W": 1,
       "L": 8,
       "T": 1
+    },
+    {
+      "Team": "Black River Falls/Alma Center Lincoln",
+      "W": 2,
+      "L": 2,
+      "T": 0
     },
     {
       "Team": "Omro",
