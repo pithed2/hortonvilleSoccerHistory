@@ -1,7 +1,7 @@
 {
   "source": "StatsPlus rankings and team schedules refreshed.",
   "season": 2026,
-  "generatedAt": "2026-09-22T03:57:16.499207+00:00",
+  "generatedAt": "2026-09-22T12:02:45.881198+00:00",
   "teams": [
     {
       "Team": "Chippewa Falls",
@@ -196,7 +196,7 @@
       "T": 3,
       "GF": 7,
       "GA": 21,
-      "OverallRank": 73,
+      "OverallRank": 74,
       "D1Rank": 38
     },
     {
@@ -209,7 +209,7 @@
       "T": 1,
       "GF": 15,
       "GA": 10,
-      "OverallRank": 76,
+      "OverallRank": 77,
       "D1Rank": 39
     },
     {
@@ -222,7 +222,7 @@
       "T": 2,
       "GF": 13,
       "GA": 10,
-      "OverallRank": 77,
+      "OverallRank": 78,
       "D1Rank": 40
     },
     {
@@ -3192,7 +3192,7 @@
       "GD": 3,
       "Points": 14,
       "Group": "Group A",
-      "OverallRank": 77,
+      "OverallRank": 78,
       "D1Rank": 40,
       "Rating": 1653.29,
       "SOS": 1632
@@ -3311,7 +3311,7 @@
       "GD": -14,
       "Points": 9,
       "Group": "Group B",
-      "OverallRank": 73,
+      "OverallRank": 74,
       "D1Rank": 38,
       "Rating": 1669.25,
       "SOS": 1781.88
@@ -3328,7 +3328,7 @@
       "GD": 5,
       "Points": 16,
       "Group": "Group B",
-      "OverallRank": 76,
+      "OverallRank": 77,
       "D1Rank": 39,
       "Rating": 1653.53,
       "SOS": 1640.48
@@ -3370,7 +3370,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 14,
         "GD": 3,
-        "OverallRank": 77,
+        "OverallRank": 78,
         "D1Rank": 40,
         "Rating": 1653.29,
         "Seed": 3
@@ -3502,7 +3502,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 16,
         "GD": 5,
-        "OverallRank": 76,
+        "OverallRank": 77,
         "D1Rank": 39,
         "Rating": 1653.53,
         "Seed": 5
@@ -3528,7 +3528,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 9,
         "GD": -14,
-        "OverallRank": 73,
+        "OverallRank": 74,
         "D1Rank": 38,
         "Rating": 1669.25,
         "Seed": 7
@@ -3909,7 +3909,7 @@
     "importedRows": 260,
     "manualTeam": "Hortonville",
     "manualRows": 15,
-    "statsPlusAsOf": "2026-09-21",
+    "statsPlusAsOf": "2026-09-22",
     "refreshedTeams": 15,
     "refreshedRows": 262,
     "hortonvilleSource": "public/data/games_2026.csv",
@@ -4117,12 +4117,6 @@
       "T": 0
     },
     {
-      "Team": "Racine St. Catherine's",
-      "W": 6,
-      "L": 0,
-      "T": 2
-    },
-    {
       "Team": "Waunakee",
       "W": 8,
       "L": 2,
@@ -4209,6 +4203,12 @@
     {
       "Team": "Pewaukee",
       "W": 7,
+      "L": 1,
+      "T": 2
+    },
+    {
+      "Team": "Racine St. Catherine's",
+      "W": 6,
       "L": 1,
       "T": 2
     },
@@ -4339,6 +4339,12 @@
       "T": 1
     },
     {
+      "Team": "The Prairie School",
+      "W": 4,
+      "L": 4,
+      "T": 0
+    },
+    {
       "Team": "MCDS/ALCS/SAA",
       "W": 1,
       "L": 3,
@@ -4420,12 +4426,6 @@
       "Team": "Mukwonago",
       "W": 3,
       "L": 6,
-      "T": 0
-    },
-    {
-      "Team": "The Prairie School",
-      "W": 3,
-      "L": 4,
       "T": 0
     },
     {
