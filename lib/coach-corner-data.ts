@@ -1,5 +1,5 @@
 type CoachGame = { Date: string; Team: string; Opponent: string; Location: string; Result: string | null; Score: string | null; Source?: string; SourceTeam?: string }
-type Ranking = { Team: string; Rank: number; Rating: number; SOS: number; GP: number; W: number; L: number; T: number; GF: number; GA: number }
+type Ranking = { Team: string; OverallRank: number; D1Rank: number; Rating: number; SOS: number; GP: number; W: number; L: number; T: number; GF: number; GA: number }
 type CoachData = { generatedAt: string; sourceUrl?: string; teams: { Team: string; Group: string }[]; rankings?: Ranking[]; schedule: CoachGame[]; [key: string]: unknown }
 
 function parseCsv(text: string) {
@@ -37,8 +37,8 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
     // Use game results when coverage matches or exceeds the ranking snapshot,
     // so coach-confirmed results also count in records, points, and goal totals.
     // Keep ranking aggregates only when their game coverage is more complete.
-    if (ranking && team !== "Hortonville" && played.length < ranking.GP) return { Team: team, GS: games.length, GP: ranking.GP, W: ranking.W, L: ranking.L, T: ranking.T, GF: ranking.GF, GA: ranking.GA, GD: ranking.GF - ranking.GA, Points: ranking.W * 3 + ranking.T, Group: teamGroups[team], Rank: ranking.Rank, Rating: ranking.Rating, SOS: ranking.SOS }
-    return { Team: team, GS: games.length, GP: played.length, W, L, T, GF, GA, GD: GF - GA, Points: W * 3 + T, Group: teamGroups[team], Rank: ranking?.Rank ?? null, Rating: ranking?.Rating ?? null, SOS: ranking?.SOS ?? null }
+    if (ranking && team !== "Hortonville" && played.length < ranking.GP) return { Team: team, GS: games.length, GP: ranking.GP, W: ranking.W, L: ranking.L, T: ranking.T, GF: ranking.GF, GA: ranking.GA, GD: ranking.GF - ranking.GA, Points: ranking.W * 3 + ranking.T, Group: teamGroups[team], OverallRank: ranking.OverallRank, D1Rank: ranking.D1Rank, Rating: ranking.Rating, SOS: ranking.SOS }
+    return { Team: team, GS: games.length, GP: played.length, W, L, T, GF, GA, GD: GF - GA, Points: W * 3 + T, Group: teamGroups[team], OverallRank: ranking?.OverallRank ?? null, D1Rank: ranking?.D1Rank ?? null, Rating: ranking?.Rating ?? null, SOS: ranking?.SOS ?? null }
   }
   const overall = data.teams.map(({ Team }) => summarize(Team))
   const groupPoints = (team: string) => schedule.filter((game) => game.Team === team && teamGroups[game.Opponent] === teamGroups[team])
@@ -46,7 +46,7 @@ export function withMainHortonvilleSchedule(data: CoachData, csvText: string) {
   const seedGroup = (group: string) => {
     const rows = overall.filter((row) => row.Group === group).map((row) => {
       const GroupPoints = groupPoints(row.Team)
-      return { Team: row.Team, Group: group, GroupPoints, HeadToHeadPoints: 0, HeadToHeadDetail: "", OverallPoints: row.Points, GD: row.GD, Rank: row.Rank, Rating: row.Rating, Seed: 0 }
+      return { Team: row.Team, Group: group, GroupPoints, HeadToHeadPoints: 0, HeadToHeadDetail: "", OverallPoints: row.Points, GD: row.GD, OverallRank: row.OverallRank, D1Rank: row.D1Rank, Rating: row.Rating, Seed: 0 }
     })
     for (const row of rows) {
       const tiedTeams = new Set(rows.filter((candidate) => candidate.OverallPoints === row.OverallPoints && candidate.Team !== row.Team).map((candidate) => candidate.Team))

@@ -9,16 +9,26 @@ def cells(text):
         value = html.unescape(re.sub(r'<[^>]*>', ' ', c)).strip()
         return {'D.C. Everest':'DC Everest','Stevens Point':'SPASH'}.get(value,value)
     return [[clean(c) for c in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row, re.S)] for row in re.findall(r'<tr[^>]*>(.*?)</tr>', text, re.S)]
-rank_html = fetch(data['sourceUrl'])
 names = {x['Team'] for x in data['teams']}
-ranks = []
-opponent_records = []
-ranking_rows = [row for row in cells(rank_html) if len(row) >= 13 and row[7].isdigit()]
-for rank, row in enumerate(ranking_rows, 1):
-    opponent_records.append(dict(Team=row[1], W=int(row[8]), L=int(row[9]), T=int(row[10])))
-    if row[1] in names:
-        ranks.append(dict(Team=row[1], Rank=rank, Rating=float(row[3]), SOS=float(row[4]), GP=int(row[7]), W=int(row[8]), L=int(row[9]), T=int(row[10]), GF=int(row[11]), GA=int(row[12])))
-assert len(ranks) == len(names)
+
+def rank_table(url):
+    ranking_rows = [row for row in cells(fetch(url)) if len(row) >= 13 and row[7].isdigit()]
+    ranks_by_team = {}
+    records_by_team = {}
+    for rank, row in enumerate(ranking_rows, 1):
+        records_by_team[row[1]] = dict(Team=row[1], W=int(row[8]), L=int(row[9]), T=int(row[10]))
+        if row[1] in names:
+            ranks_by_team[row[1]] = dict(Team=row[1], Rank=rank, Rating=float(row[3]), SOS=float(row[4]), GP=int(row[7]), W=int(row[8]), L=int(row[9]), T=int(row[10]), GF=int(row[11]), GA=int(row[12]))
+    return ranks_by_team, records_by_team
+
+overall_ranks, opponent_records_by_team = rank_table(data['sourceUrl'])
+d1_ranks, _ = rank_table(data['d1SourceUrl'])
+assert len(overall_ranks) == len(names), 'Missing team on overall rankings page'
+assert len(d1_ranks) == len(names), 'Missing team on D1 rankings page'
+ranks = [dict(overall_ranks[team], OverallRank=overall_ranks[team]['Rank'], D1Rank=d1_ranks[team]['Rank']) for team in overall_ranks]
+for row in ranks:
+    del row['Rank']
+opponent_records = list(opponent_records_by_team.values())
 sources = {g['Team']: g['Source'] for g in data['schedule'] if g['Team'] != 'Hortonville' and g.get('Source','').startswith('https://soccer.statsplus.net/rankings/team/')}
 assert set(sources) == names - {'Hortonville'}, 'Missing team schedule source'
 def refresh(item):
