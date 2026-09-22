@@ -237,6 +237,13 @@
       "location": "Home",
       "result": "W",
       "score": "2-0"
+    },
+    {
+      "date": "2026-09-21",
+      "opponent": "Oshkosh West",
+      "location": "Away",
+      "result": "L",
+      "score": "1-2"
     }
   ],
   "gameStats": [
@@ -646,6 +653,24 @@
         "Stanley Stinski",
         "Zander Simons"
       ]
+    },
+    {
+      "date": "2026-09-21",
+      "opponent": "Oshkosh West",
+      "players": [],
+      "goalkeepers": [
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 2
+        }
+      ],
+      "notes": [
+        "Field player stats not yet collected — final score and Ayden Lenth's goalkeeper line (80 min, 2 GA) are confirmed for this game.",
+        "One of the two goals against was a penalty kick."
+      ],
+      "unattributedGoals": 1
     }
   ],
   "statsAudit": {
