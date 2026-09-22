@@ -40,6 +40,14 @@
     ],
     "recent": [
       {
+        "id": 10,
+        "date": "Sep 21",
+        "opponent": "De Pere",
+        "location": "Away",
+        "score": "0-4",
+        "result": "L"
+      },
+      {
         "id": 9,
         "date": "Sep 15",
         "opponent": "Fond du Lac",
@@ -164,7 +172,7 @@
         "goals": 1,
         "assists": 4,
         "points": 6,
-        "sog": 12
+        "sog": 14
       },
       {
         "number": 6,
@@ -182,7 +190,7 @@
         "goals": 10,
         "assists": 6,
         "points": 26,
-        "sog": 32
+        "sog": 34
       },
       {
         "number": 8,
@@ -191,7 +199,7 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "sog": 2
+        "sog": 3
       },
       {
         "number": 9,
@@ -200,7 +208,7 @@
         "goals": 3,
         "assists": 1,
         "points": 7,
-        "sog": 3
+        "sog": 4
       },
       {
         "number": 10,
@@ -209,7 +217,7 @@
         "goals": 8,
         "assists": 5,
         "points": 21,
-        "sog": 23
+        "sog": 27
       },
       {
         "number": 11,
@@ -218,7 +226,7 @@
         "goals": 1,
         "assists": 0,
         "points": 2,
-        "sog": 5
+        "sog": 6
       },
       {
         "number": 12,
@@ -263,7 +271,7 @@
         "goals": 1,
         "assists": 2,
         "points": 4,
-        "sog": 4
+        "sog": 5
       },
       {
         "number": 17,
@@ -299,7 +307,7 @@
         "goals": 10,
         "assists": 4,
         "points": 24,
-        "sog": 30
+        "sog": 34
       },
       {
         "number": 22,
@@ -3347,7 +3355,7 @@
       "location": "Away",
       "conference": false,
       "result": "L",
-      "sourceFile": "Final score only (chat), no scoresheet yet",
+      "sourceFile": "Scoresheet via text",
       "notes": [
         "Field player stats not yet collected — final score and Ben Decker's goalkeeper line (80 min, 4 GA) are confirmed for this game."
       ],
@@ -3375,7 +3383,7 @@
           "assists": 0,
           "yc": null,
           "rc": null,
-          "saves": null,
+          "saves": 4,
           "gkMinutes": 80,
           "recordedSog": 0,
           "goalsAgainst": 4
@@ -3419,7 +3427,7 @@
         {
           "player": "Carter Possley",
           "shots": null,
-          "sog": 0,
+          "sog": 2,
           "goals": 0,
           "assists": 0,
           "yc": null,
@@ -3443,7 +3451,7 @@
         {
           "player": "Wyatt Mauthepasch",
           "shots": null,
-          "sog": 0,
+          "sog": 2,
           "goals": 0,
           "assists": 0,
           "yc": null,
@@ -3455,7 +3463,7 @@
         {
           "player": "Adam Palmer",
           "shots": null,
-          "sog": 0,
+          "sog": 1,
           "goals": 0,
           "assists": 0,
           "yc": null,
@@ -3467,7 +3475,7 @@
         {
           "player": "Sam Larson",
           "shots": null,
-          "sog": 0,
+          "sog": 1,
           "goals": 0,
           "assists": 0,
           "yc": null,
@@ -3479,7 +3487,7 @@
         {
           "player": "Liam Evenson",
           "shots": null,
-          "sog": 0,
+          "sog": 4,
           "goals": 0,
           "assists": 0,
           "yc": null,
@@ -3491,7 +3499,7 @@
         {
           "player": "Bryce Draeger",
           "shots": null,
-          "sog": 0,
+          "sog": 1,
           "goals": 0,
           "assists": 0,
           "yc": null,
@@ -3551,7 +3559,7 @@
         {
           "player": "Liam Adkins",
           "shots": null,
-          "sog": 0,
+          "sog": 1,
           "goals": 0,
           "assists": 0,
           "yc": null,
@@ -3599,7 +3607,7 @@
         {
           "player": "Reno Brei",
           "shots": null,
-          "sog": 0,
+          "sog": 4,
           "goals": 0,
           "assists": 0,
           "yc": null,
