@@ -55,6 +55,20 @@ const scheduleRows = rows("Schedule & Team Stats").filter((row) => number(row["G
 const gameLogRows = rows("Game Log").filter((row) => number(row["Game #"]) && text(row["Player (No. - Name)"]))
 const goalLogRows = rows("Goal Log").filter((row) => number(row["Game #"]) && text(row["Scorer (No. - Name)"]))
 
+// Preserve confirmed attribution corrections while the source Game Log is stale.
+for (const correction of teamConfig.gameLogCorrections || []) {
+  const matches = gameLogRows.filter((row) => number(row["Game #"]) === correction.game
+    && text(row["Player (No. - Name)"]) === correction.player && number(row.Goals) === correction.goals)
+  if (matches.length > 1) throw new Error(`Ambiguous Game Log correction for game ${correction.game}.`)
+  if (matches.length === 1) {
+    const goals = goalLogRows.filter((row) => number(row["Game #"]) === correction.game
+      && text(row["Scorer (No. - Name)"]) === correction.correctedPlayer)
+    if (goals.length !== correction.goals) throw new Error(`Goal Log no longer supports correction for game ${correction.game}.`)
+    matches[0]["Player (No. - Name)"] = correction.correctedPlayer
+    console.log(`Applied correction: ${correction.reason}`)
+  }
+}
+
 const scheduleByGame = new Map(scheduleRows.map((row) => [number(row["Game #"]), row]))
 for (const row of gameLogRows) if (!scheduleByGame.has(number(row["Game #"]))) issues.push(`Game Log references missing game ${row["Game #"]}.`)
 for (const row of goalLogRows) if (!scheduleByGame.has(number(row["Game #"]))) issues.push(`Goal Log references missing game ${row["Game #"]}.`)
@@ -123,9 +137,15 @@ const boxScores = completed.map((row) => {
     result: text(row.Result).toUpperCase(),
     team: { shots: number(row["Team Shots"]), sog: number(row["Team SOG"]), saves: number(row["Team Saves"]), yc: number(row["Team YC"]), rc: number(row["Team RC"]), goals: number(row.GF) },
     opponentTotals: { shots: number(row["Opp Shots"]), saves: number(row["Opp Saves"]), goals: number(row.GA) },
-    players: playerRows.map((entry) => ({
+    players: [...playerRows.map((entry) => ({
       player: text(entry["Player (No. - Name)"]), shots: number(entry.Shots), sog: number(entry.SOG), goals: number(entry.Goals), assists: number(entry.Assists), yc: number(entry.YC), rc: number(entry.RC), saves: number(entry.Saves), gkMinutes: number(entry["GK Minutes"]),
-    })),
+    })).reduce((byPlayer, line) => {
+      const previous = byPlayer.get(line.player)
+      if (previous) {
+        for (const stat of ["shots", "sog", "goals", "assists", "yc", "rc", "saves", "gkMinutes"]) previous[stat] += line[stat]
+      } else byPlayer.set(line.player, line)
+      return byPlayer
+    }, new Map()).values()],
     scoring: goalLogRows.filter((goal) => number(goal["Game #"]) === id).map((goal) => ({ half: text(goal.Half), scorer: text(goal["Scorer (No. - Name)"]), assist: text(goal["Assist (No. - Name)"]) || null })),
   }
 })

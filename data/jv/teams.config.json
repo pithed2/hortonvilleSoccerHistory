@@ -5,6 +5,15 @@
     "approvedBy": "Andrew Montalbano",
     "inactivePlayers": ["Isaac Reiland"],
     "excludeRosterNumbers": [17],
+    "gameLogCorrections": [
+      {
+        "game": 6,
+        "player": "16 - Carson Sanford",
+        "goals": 2,
+        "correctedPlayer": "18 - Grayson Ackermann",
+        "reason": "September 10 scorer correction confirmed in commit b983412 and the workbook Goal Log."
+      }
+    ],
     "notes": ["The Sep 15 game at Neenah was postponed; a makeup date has not yet been announced."]
   }
 }
