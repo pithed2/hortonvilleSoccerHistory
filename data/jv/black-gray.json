@@ -1,6 +1,6 @@
 {
   "team": "JV Black/Gray",
-  "updated": "2026-09-15",
+  "updated": "2026-09-22",
   "squads": {
     "black": {
       "name": "JV Black",
@@ -241,6 +241,13 @@
     {
       "date": "2026-09-21",
       "opponent": "Oshkosh West",
+      "location": "Away",
+      "result": "L",
+      "score": "1-2"
+    },
+    {
+      "date": "2026-09-22",
+      "opponent": "New London",
       "location": "Away",
       "result": "L",
       "score": "1-2"
@@ -671,6 +678,16 @@
         "One of the two goals against was a penalty kick."
       ],
       "unattributedGoals": 1
+    },
+    {
+      "date": "2026-09-22",
+      "opponent": "New London",
+      "players": [],
+      "goalkeepers": [],
+      "notes": [
+        "JV Black lost 1-2 at New London. Final score supplied by Andrew Montalbano; individual statistics and participation are not yet available."
+      ],
+      "unattributedGoals": 1
     }
   ],
   "statsAudit": {
@@ -681,6 +698,6 @@
   "resultsAudit": {
     "source": "Andrew Montalbano",
     "importedAt": "2026-09-14T04:28:18.125Z",
-    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats."
+    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats. September 22 JV Black at New London confirmed as a 1-2 loss by Andrew Montalbano; individual stats unavailable."
   }
 }
