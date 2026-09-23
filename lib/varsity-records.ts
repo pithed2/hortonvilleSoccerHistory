@@ -49,8 +49,8 @@ export async function varsityRecords() {
   }
   return {
     singleGame: [
-      record("Most goals by a player", playerEntries(sources.boxscores, "goals", true), "Single game · recorded player box scores"),
-      record("Most assists by a player", playerEntries(sources.boxscores, "assists", true), "Single game · recorded player box scores"),
+      record("Most goals by a player", playerEntries(sources.boxscores, "goals", true).filter(entry => entry.value >= 3), "Single game · recorded player box scores · minimum 3 goals"),
+      record("Most assists by a player", playerEntries(sources.boxscores, "assists", true).filter(entry => entry.value >= 3), "Single game · recorded player box scores · minimum 3 assists"),
       record("Most saves by a player", playerEntries(sources.boxscores, "saves", true), "Single game · recorded goalkeeper saves"),
     ],
     season: [
