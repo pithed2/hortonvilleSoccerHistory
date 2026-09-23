@@ -2,13 +2,23 @@ import { loadGames, seasonRows } from "./games"
 import { varsityRecordSources } from "./player-stats"
 
 type Entry = { value: number; name: string; season: number; detail?: string; href: string }
-export type VarsityRecord = { title: string; note: string; holders: Entry[] }
+type RecordPlace = { rank: number; value: number; holders: Entry[] }
+export type VarsityRecord = { title: string; note: string; holders: Entry[]; runnersUp: RecordPlace[] }
+
+export function recordPlaces(entries: Entry[], minimum = false): RecordPlace[] {
+  const valid = entries.filter(entry => Number.isFinite(entry.value) && entry.value >= 0)
+  const values = [...new Set(valid.map(entry => entry.value))]
+    .sort((a, b) => minimum ? a - b : b - a).slice(0, 5)
+  return values.map((value, index) => ({
+    rank: index + 1,
+    value,
+    holders: valid.filter(entry => entry.value === value)
+      .sort((a, b) => a.season - b.season || a.name.localeCompare(b.name)),
+  }))
+}
 
 export function recordHolders(entries: Entry[], minimum = false): Entry[] {
-  const valid = entries.filter(entry => Number.isFinite(entry.value) && entry.value >= 0)
-  if (!valid.length) return []
-  const best = (minimum ? Math.min : Math.max)(...valid.map(entry => entry.value))
-  return valid.filter(entry => entry.value === best).sort((a, b) => a.season - b.season || a.name.localeCompare(b.name))
+  return recordPlaces(entries, minimum)[0]?.holders ?? []
 }
 
 export async function varsityRecords() {
@@ -33,7 +43,10 @@ export async function varsityRecords() {
   const complete = seasons.filter(season => season.played > 0 && !/in progress|incomplete|not yet/i.test(season.notes ?? "") && scored(season.season_year).length === season.played && games.filter(game => game.season_year === season.season_year).every(game => ["W", "L", "T", "D"].includes(game.result ?? "")))
   const conceded = complete.map(season => ({ value: season.ga, name: "Hortonville", season: season.season_year, detail: `${season.played} games`, href: `/seasons/${season.season_year}` }))
   const shutouts = seasons.filter(season => scored(season.season_year).length > 0).map(season => ({ value: scored(season.season_year).filter(game => Number(game.score!.split("-")[1]) === 0).length, name: "Hortonville", season: season.season_year, href: `/seasons/${season.season_year}` }))
-  const record = (title: string, entries: Entry[], note: string, minimum = false): VarsityRecord => ({ title, note, holders: recordHolders(entries, minimum) })
+  const record = (title: string, entries: Entry[], note: string, minimum = false): VarsityRecord => {
+    const places = recordPlaces(entries, minimum)
+    return { title, note, holders: places[0]?.holders ?? [], runnersUp: places.slice(1) }
+  }
   return {
     singleGame: [
       record("Most goals by a player", playerEntries(sources.boxscores, "goals", true), "Single game · recorded player box scores"),

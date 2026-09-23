@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Trophy } from "lucide-react"
+import { ChevronDown, Trophy } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ContentContainer, PageHeader, SectionHeading } from "@/components/archive-ui"
@@ -11,13 +11,32 @@ export const runtime = "nodejs"
 export const revalidate = 60
 
 function RecordCard({ record }: { record: VarsityRecord }) {
-  return <article className="surface-card min-w-0 p-6">
+  return <article className="surface-card min-w-0 self-start p-6">
     <div className="flex items-start justify-between gap-3"><h3 className="text-lg font-black">{record.title}</h3><Trophy aria-hidden="true" className="size-5 shrink-0 text-primary" /></div>
     {record.holders.length ? <>
       <p className="mt-4 text-5xl font-black tabular-nums text-primary">{record.holders[0].value}</p>
       {record.holders.length > 1 ? <p className="mt-2 text-xs font-bold uppercase text-muted-foreground">Tied record · {record.holders.length} holders</p> : null}
       <ul className="mt-4 space-y-3">{record.holders.map((holder, index) => <li key={`${holder.href}-${holder.name}-${index}`}><Link href={holder.href} className="font-bold underline decoration-primary/30 underline-offset-4 hover:text-primary">{holder.name} · {holder.season}</Link>{holder.detail ? <p className="mt-1 text-sm text-muted-foreground">{holder.detail}</p> : null}</li>)}</ul>
     </> : <p className="mt-4 text-sm text-muted-foreground">No qualifying records documented yet.</p>}
+    {record.runnersUp.length ? <details className="group mt-5 border-t">
+      <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 rounded-sm py-3 text-sm font-bold text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary [&::-webkit-details-marker]:hidden">
+        <span>Places 2–5<span className="sr-only"> · {record.title} · {record.note}</span></span>
+        <ChevronDown aria-hidden="true" className="size-4 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none" />
+      </summary>
+      <p className="mb-3 text-xs text-muted-foreground">Top five distinct totals. Ties share a place.</p>
+      <ol start={2} className="space-y-4 pb-2">
+        {record.runnersUp.map(place => <li key={place.rank} className="rounded-lg bg-muted/40 p-3">
+          <div className="mb-2 flex items-baseline justify-between gap-3">
+            <span className="text-xs font-bold text-muted-foreground">#{place.rank}{place.holders.length > 1 ? " · Tied" : ""}</span>
+            <span className="text-xl font-black tabular-nums">{place.value}</span>
+          </div>
+          <ul className="space-y-3">{place.holders.map((holder, index) => <li key={`${holder.href}-${holder.name}-${index}`}>
+            <Link href={holder.href} className="text-sm font-bold underline decoration-primary/30 underline-offset-4 hover:text-primary">{holder.name} · {holder.season}</Link>
+            {holder.detail ? <p className="mt-1 text-xs text-muted-foreground">{holder.detail}</p> : null}
+          </li>)}</ul>
+        </li>)}
+      </ol>
+    </details> : null}
     <p className="mt-5 border-t pt-3 text-xs text-muted-foreground">{record.note}</p>
   </article>
 }

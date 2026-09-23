@@ -683,9 +683,16 @@
       "date": "2026-09-22",
       "opponent": "New London",
       "players": [],
-      "goalkeepers": [],
+      "goalkeepers": [
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 2
+        }
+      ],
       "notes": [
-        "JV Black lost 1-2 at New London. Final score supplied by Andrew Montalbano; individual statistics and participation are not yet available."
+        "JV Black lost 1-2 at New London. Andrew Montalbano confirmed the final score and Ayden Lenth's 80 minutes and 2 goals against. Saves, field player statistics, and full participation are not yet available."
       ],
       "unattributedGoals": 1
     }
@@ -698,6 +705,6 @@
   "resultsAudit": {
     "source": "Andrew Montalbano",
     "importedAt": "2026-09-14T04:28:18.125Z",
-    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats. September 22 JV Black at New London confirmed as a 1-2 loss by Andrew Montalbano; individual stats unavailable."
+    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats. September 22 JV Black at New London confirmed as a 1-2 loss by Andrew Montalbano; Ayden Lenth played 80 minutes and allowed 2 goals. Saves and field player stats remain unavailable."
   }
 }
