@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { VarsityGameWeather } from "@/components/varsity-game-weather"
 import { ArrowRight, CalendarDays, MapPin } from "lucide-react"
 import { gamesBySeason, seasonRows } from "@/lib/games"
 import { resultTone } from "@/lib/utils"
@@ -77,6 +78,7 @@ export async function CurrentSeasonSection() {
                       <MapPin className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" />
                       {game.notes || "Location TBD"}
                     </p>
+                    <VarsityGameWeather game={game} />
                   </div>
                   <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-bold text-muted-foreground">{game.venue || "TBD"}</span>
                 </div>

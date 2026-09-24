@@ -3,6 +3,7 @@ export const revalidate = 60;
 
 import { compareJerseyNumbers } from "@/lib/roster-order";
 import Link from "next/link";
+import { VarsityGameWeather } from "@/components/varsity-game-weather";
 import { VarsityRosterCard } from "@/components/varsity-roster-card";
 import { CalendarDays, Goal, Shield, Trophy, Users } from "lucide-react";
 import { Footer } from "@/components/footer";
@@ -66,7 +67,7 @@ function GameRow({ game, number, boxscore }: { game: Game; number: number; boxsc
       <div className="flex items-start justify-between gap-4 md:contents"><p className="text-xs font-bold uppercase tracking-wide text-muted-foreground md:order-1 md:px-3 md:py-4 md:text-sm md:normal-case">{game.date}</p><h3 className="text-lg font-black md:order-2 md:px-3 md:py-4 md:text-sm">{game.opponent}</h3><span className="md:order-5 md:px-3 md:py-4"><ResultBadge result={game.result} /></span></div>
       <div className="grid grid-cols-2 gap-3 border-y py-3 text-sm md:contents"><div className="md:order-6 md:px-3 md:py-4"><p className="text-xs font-semibold text-muted-foreground md:hidden">Score</p><p className="font-black">{game.score || "-"}</p></div><div className="md:order-3 md:px-3 md:py-4"><p className="text-xs font-semibold text-muted-foreground md:hidden">Venue</p><p className="font-semibold">{game.venue || game.home_away || "-"}</p></div></div>
       <p className="text-sm text-muted-foreground md:order-4 md:px-3 md:py-4">{game.competition || "-"}</p>
-      <div className="text-sm md:order-7 md:px-3 md:py-4">{game.notes ? <p className="font-semibold">{game.notes}</p> : null}</div>
+      <div className="text-sm md:order-7 md:px-3 md:py-4">{game.notes ? <p className="font-semibold">{game.notes}</p> : null}<VarsityGameWeather game={game} /></div>
     </div>
     {boxscore ? <div className="md:px-3 md:pb-4"><BoxScore boxscore={boxscore} /></div> : null}
   </article>;

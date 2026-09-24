@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { GameWeather } from "@/components/game-weather"
 import { ChevronRight } from "lucide-react"
 import calendar from "@/data/jv/calendar.json"
 import { getJvTeam, type JvTeamSlug } from "@/lib/jv-teams"
@@ -41,6 +42,7 @@ export function JvMatchCenter() {
         {isJvConferenceOpponent(game.opponent) && <p className="text-xs font-semibold text-primary">Conference</p>}
         <p className="text-xs text-muted-foreground">{game.home ? "Home" : "Away"}{game.location ? ` · ${game.location}` : ""}</p>
         <p className="text-xs text-muted-foreground">Game: {game.time || "Time TBD"} · Central</p>
+        <GameWeather event={game} />
         {!game.home && game.bus && <p className="text-xs text-muted-foreground">Bus loads: {game.bus}</p>}
       </div>
     </li>

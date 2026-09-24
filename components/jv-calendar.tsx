@@ -1,4 +1,5 @@
 import calendar from "@/data/jv/calendar.json"
+import { GameWeather } from "@/components/game-weather"
 import { isJvConferenceOpponent } from "@/lib/jv-conference.mjs"
 
 export function JvCalendar({ teams }: { teams: string[] }) {
@@ -12,6 +13,7 @@ export function JvCalendar({ teams }: { teams: string[] }) {
       <ul className="divide-y rounded-xl border">{events.filter(event => event.date.startsWith(month)).map(event => <li key={event.id} className="grid gap-2 p-4 sm:grid-cols-[130px_1fr]">
         <div><p className="font-bold">{new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${event.date}T12:00:00Z`))}</p><p className="text-sm text-muted-foreground">{event.time}</p></div>
         <div><p className="text-xs font-bold text-primary">{event.team}{isJvConferenceOpponent(event.opponent) ? " · Conference" : ""}</p><p className="font-bold">{event.home ? "vs." : "at"} {event.opponent}</p><p className="text-sm text-muted-foreground">{event.home ? "Home" : "Away"}{event.location ? ` · ${event.location}` : ""}</p>{event.bus ? <p className="text-xs text-muted-foreground">Bus loads: {event.bus}</p> : null}</div>
+        <div className="sm:col-start-2"><GameWeather event={event} /></div>
       </li>)}</ul>
     </div>)}
     {!events.length ? <p className="mt-5 text-muted-foreground">No games scheduled.</p> : null}
