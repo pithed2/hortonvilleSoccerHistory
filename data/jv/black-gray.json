@@ -1,6 +1,6 @@
 {
   "team": "JV Black/Gray",
-  "updated": "2026-09-22",
+  "updated": "2026-09-24",
   "squads": {
     "black": {
       "name": "JV Black",
@@ -251,6 +251,13 @@
       "location": "Away",
       "result": "L",
       "score": "1-2"
+    },
+    {
+      "date": "2026-09-24",
+      "opponent": "Luxemburg-Casco",
+      "location": "Away",
+      "result": "L",
+      "score": "2-3"
     }
   ],
   "gameStats": [
@@ -695,16 +702,34 @@
         "JV Black lost 1-2 at New London. Andrew Montalbano confirmed the final score and Ayden Lenth's 80 minutes and 2 goals against. Saves, field player statistics, and full participation are not yet available."
       ],
       "unattributedGoals": 1
+    },
+    {
+      "date": "2026-09-24",
+      "opponent": "Luxemburg-Casco",
+      "players": [],
+      "goalkeepers": [
+        {
+          "name": "Ayden Lenth",
+          "minutes": 80,
+          "saves": null,
+          "goalsAgainst": 3
+        }
+      ],
+      "notes": [
+        "Played 9v9 at Luxemburg-Casco’s request because they did not have enough players for 11v11.",
+        "Andrew Montalbano confirmed the 2-3 loss and Ayden Lenth’s 80 minutes and 3 goals against. Full player stats, saves, and participation are pending."
+      ],
+      "unattributedGoals": 2
     }
   ],
   "statsAudit": {
     "source": "Andrew Montalbano",
-    "importedAt": "2026-09-16",
-    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable. Added scoring for August 31 at Appleton North (JV Gray, 2 goals matching the 2-1 final) and August 28 vs FVL (JV Black, 2 goals matching the 2-4 final; Ethan Nysse guested from Gray). September 8 vs Appleton East (1-1 tie): the single Hortonville goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano. Green Bay Preble (0-3) confirmed to have no individual goals or assists. Added September 14 JV Black 4-1 win vs Little Chute from supplied score sheet and coach clarification."
+    "importedAt": "2026-09-24",
+    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable. Added scoring for August 31 at Appleton North (JV Gray, 2 goals matching the 2-1 final) and August 28 vs FVL (JV Black, 2 goals matching the 2-4 final; Ethan Nysse guested from Gray). September 8 vs Appleton East (1-1 tie): the single Hortonville goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano. Green Bay Preble (0-3) confirmed to have no individual goals or assists. Added September 14 JV Black 4-1 win vs Little Chute from supplied score sheet and coach clarification. September 24: Ayden Lenth, 80 minutes and 3 GA; other stats pending."
   },
   "resultsAudit": {
     "source": "Andrew Montalbano",
     "importedAt": "2026-09-14T04:28:18.125Z",
-    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats. September 22 JV Black at New London confirmed as a 1-2 loss by Andrew Montalbano; Ayden Lenth played 80 minutes and allowed 2 goals. Saves and field player stats remain unavailable."
+    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats. September 22 JV Black at New London confirmed as a 1-2 loss by Andrew Montalbano; Ayden Lenth played 80 minutes and allowed 2 goals. Saves and field player stats remain unavailable. September 24 JV Gray lost 2-3 at Luxemburg-Casco; played 9v9 at the opponent’s request due to player availability."
   }
 }

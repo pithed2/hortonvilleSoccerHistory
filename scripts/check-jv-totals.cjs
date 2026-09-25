@@ -20,7 +20,7 @@ for (const slug of ['red', 'white']) {
   })
   for (const game of boxScores) {
     assert.equal(new Set(game.players.map(p => p.player)).size, game.players.length, `${slug} duplicate player: ${game.id}`)
-    assert.equal(sum(game.players, 'goals'), game.team.goals, `${slug} unattributed goals: ${game.id}`)
+    assert.equal(sum(game.players, 'goals') + (game.unattributedGoals ?? 0), game.team.goals, `${slug} goals reconciliation: ${game.id}`)
     for (const line of game.players) assert.equal(stats.players.filter(p => matches(line, p)).length, 1, `Unmatched player: ${line.player}`)
   }
   for (const keeper of stats.goalkeepers) {
@@ -29,6 +29,7 @@ for (const slug of ['red', 'white']) {
     assert.equal(keeper.games, lines.length, `${slug} ${keeper.name} keeper games`)
     assert.equal(keeper.minutes, sum(lines, 'gkMinutes'))
     assert.equal(keeper.saves, lines.every(l => l.saves != null) ? sum(lines, 'saves') : null)
+    if (keeper.recordedSaves != null) assert.equal(keeper.recordedSaves, sum(lines, 'saves'))
     let ga = 0
     for (const { game, line } of appearances) {
       const keepers = game.players.filter(p => p.gkMinutes > 0)

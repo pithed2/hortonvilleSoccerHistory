@@ -1,17 +1,68 @@
 {
   "source": "https://soccer.statsplus.net/rankings/conference/5637/",
-  "updated": "2026-09-20",
-  "notes": "FVA conference-only records (not overall). Refresh from the source URL periodically — standings change weekly.",
+  "updated": "2026-09-24",
+  "notes": "FVA conference-only records from StatsPlus, refreshed September 24. Hortonville’s 8-0 win at Appleton West is added from the MaxPreps final because StatsPlus has not posted it yet.",
   "standings": [
-    { "Team": "Appleton North", "W": 5, "L": 0, "T": 0 },
-    { "Team": "Hortonville", "W": 3, "L": 0, "T": 1 },
-    { "Team": "Oshkosh West", "W": 2, "L": 1, "T": 2 },
-    { "Team": "Neenah", "W": 2, "L": 1, "T": 1 },
-    { "Team": "Kimberly", "W": 2, "L": 2, "T": 1 },
-    { "Team": "Appleton East", "W": 2, "L": 2, "T": 0 },
-    { "Team": "Kaukauna", "W": 2, "L": 3, "T": 0 },
-    { "Team": "Fond du Lac", "W": 1, "L": 2, "T": 1 },
-    { "Team": "Appleton West", "W": 0, "L": 3, "T": 0 },
-    { "Team": "Oshkosh North", "W": 0, "L": 5, "T": 0 }
-  ]
+    {
+      "Team": "Appleton North",
+      "W": 5,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "Team": "Hortonville",
+      "W": 5,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "Team": "Oshkosh West",
+      "W": 3,
+      "L": 1,
+      "T": 2
+    },
+    {
+      "Team": "Kimberly",
+      "W": 3,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "Team": "Neenah",
+      "W": 3,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "Team": "Fond du Lac",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "Team": "Appleton East",
+      "W": 2,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "Team": "Kaukauna",
+      "W": 2,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "Team": "Oshkosh North",
+      "W": 0,
+      "L": 6,
+      "T": 0
+    },
+    {
+      "Team": "Appleton West",
+      "W": 0,
+      "L": 5,
+      "T": 0
+    }
+  ],
+  "latestResultSource": "https://www.maxpreps.com/print/contest_stats.aspx?ContestId=c1147f25-4c54-4e8a-bea9-0e65070f74bf&ssid=ca5a6045-d072-443c-85de-08ce0e287273&admin=1"
 }

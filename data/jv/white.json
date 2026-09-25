@@ -2,43 +2,55 @@
   "stats": {
     "slug": "white",
     "team": "JV White",
-    "updated": "September 21, 2026",
+    "updated": "September 24, 2026",
     "sourceLabel": "Team score sheets",
-    "gamesNote": "Games reflect team participation · Goals: 2 points · Assists: 1 point",
-    "notes": [],
+    "gamesNote": "GP reflects recorded participation; September 24 field player participation is pending. Goals: 2 points · Assists: 1 point",
+    "notes": [
+      "September 24 at Appleton West: 7-0 win. Ben Decker played 80 minutes with 0 goals against. Full player stats, saves, and participation are pending; the seven goals are not yet assigned to scorers."
+    ],
     "audit": {
       "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload)",
       "sourceModifiedAt": "",
       "sourceSha256": "",
-      "importedAt": "2026-09-16T02:46:13.191Z",
+      "importedAt": "2026-09-24",
       "validation": "passed",
-      "validationSummary": "Nine results imported; player goals total 48. September 15 goals/SOG/assists transcribed from the supplied score sheet photo; two marks were ambiguous (see game notes). Match and season totals validated by recomputation.",
+      "validationSummary": "Nine results imported; player goals total 48. September 15 goals/SOG/assists transcribed from the supplied score sheet photo; two marks were ambiguous (see game notes). Match and season totals validated by recomputation. September 24 result and goalkeeper minutes/GA supplied by Andrew Montalbano; seven goals remain unattributed and other match stats are pending.",
       "approvedBy": "Andrew Montalbano"
     },
     "record": {
-      "wins": 8,
+      "wins": 9,
       "losses": 1,
       "ties": 1,
-      "conference": "2–0–0"
+      "conference": "5–0–0"
     },
     "totals": {
-      "goalsFor": 48,
+      "goalsFor": 55,
       "goalsAgainst": 8,
       "shots": null,
       "sog": 166,
-      "saves": 24
+      "saves": null
     },
     "goalkeepers": [
       {
         "number": 0,
         "name": "Ben Decker",
-        "games": 10,
-        "saves": 24,
-        "minutes": 740,
-        "goalsAgainst": 8
+        "games": 11,
+        "saves": null,
+        "minutes": 820,
+        "goalsAgainst": 8,
+        "recordedSaves": 28
       }
     ],
     "recent": [
+      {
+        "id": 11,
+        "date": "Sep 24",
+        "opponent": "Appleton West",
+        "location": "Away",
+        "score": "7-0",
+        "result": "W",
+        "kickoff": "4:30 PM"
+      },
       {
         "id": 10,
         "date": "Sep 21",
@@ -132,7 +144,7 @@
       {
         "number": 0,
         "name": "Ben Decker",
-        "gp": 10,
+        "gp": 11,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -3356,8 +3368,7 @@
       "conference": false,
       "result": "L",
       "sourceFile": "Scoresheet via text",
-      "notes": [
-        ],
+      "notes": [],
       "scoringRecorded": false,
       "unattributedGoals": 0,
       "team": {
@@ -3678,6 +3689,49 @@
       ],
       "scoring": [],
       "scheduleSource": "Full Schedule.xlsx, Sheet1"
+    },
+    {
+      "id": 11,
+      "date": "2026-09-24",
+      "opponent": "Appleton West",
+      "location": "Away",
+      "kickoff": "4:30 PM",
+      "conference": true,
+      "result": "W",
+      "sourceFile": "Andrew Montalbano",
+      "notes": [
+        "September 24 at Appleton West: 7-0 win. Ben Decker played 80 minutes with 0 goals against. Full player stats, saves, and participation are pending; the seven goals are not yet assigned to scorers."
+      ],
+      "scoringRecorded": false,
+      "unattributedGoals": 7,
+      "team": {
+        "shots": null,
+        "sog": null,
+        "saves": null,
+        "yc": null,
+        "rc": null,
+        "goals": 7
+      },
+      "opponentTotals": {
+        "shots": null,
+        "saves": null,
+        "goals": 0
+      },
+      "players": [
+        {
+          "player": "Ben Decker",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": 80,
+          "goalsAgainst": 0
+        }
+      ],
+      "scoring": []
     }
   ]
 }
