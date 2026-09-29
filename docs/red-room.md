@@ -14,6 +14,8 @@ The seed command creates one identity for every current Varsity and JV player. A
 
 It also creates claimable coach identities for Andy Montalbano, Paul Everett, Seth Rogers, Alex Bonikowske, Shannon Everett, Marco Delbecchi, and Cooper Re. Coach accounts display unlimited test matches. Seven computer opponents form a progressive boss ladder. Players must meet both the win and correct-archive-answer requirement before the server accepts a challenge. Coaches receive bypass access for testing.
 
+Miles Montalbano (`NR-Miles`) and Dawson Montalbano (`NR-Dawson`) are private non-roster test identities. Only Coach Andy can see them from the regular program, and they can see and challenge only Coach Andy, one another, and the Celebrity Legends. Their completed matches and personal records persist, while any match involving a private identity is excluded from all-program leaderboard calculations and rating changes. Private identities receive immediate access to every Celebrity Legend for testing.
+
 - Tier 1, Gianluigi Buffon: 3 wins and 1 correct archive answer; adds a third goalkeeper zone every round.
 - Tier 2, Harry Kane: 5 wins and 2 correct archive answers; removes one keeper zone every round, but the Tottenham Tax rules out his first goal.
 - Tier 3, Cristiano Ronaldo: 7 wins and 3 correct archive answers; removes one goalkeeper zone every round.

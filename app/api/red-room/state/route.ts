@@ -2,6 +2,7 @@ import { desc, eq, or } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { getRedRoomDb } from "@/lib/red-room/db"
+import { canSeeRedRoomPlayer, isPrivateRedRoomMatch, isPrivateRedRoomPlayer } from "@/lib/red-room/access"
 import { legendAbilityLabel, legendProgress } from "@/lib/red-room/legends"
 import { challenges, players, rosterMemberships, triviaQuestions } from "@/lib/red-room/schema"
 
@@ -23,8 +24,13 @@ export async function GET() {
   const complete = myChallenges.filter((challenge) => challenge.status === "completed")
   const wins = complete.filter((challenge) => challenge.challengerId === me.id ? (challenge.challengerScore || 0) > (challenge.opponentScore || 0) : (challenge.opponentScore || 0) > (challenge.challengerScore || 0)).length
   const losses = complete.filter((challenge) => challenge.challengerId === me.id ? (challenge.challengerScore || 0) < (challenge.opponentScore || 0) : (challenge.opponentScore || 0) < (challenge.challengerScore || 0)).length
-  const leaderboard = roster.map((player) => {
-    const matches = allCompleted.filter((challenge) => challenge.challengerId === player.id || challenge.opponentId === player.id)
+  const overallCompleted = allCompleted.filter((challenge) => {
+    const challenger = playerById.get(challenge.challengerId)
+    const opponent = playerById.get(challenge.opponentId)
+    return challenger && opponent && !isPrivateRedRoomMatch(challenger, opponent)
+  })
+  const leaderboard = roster.filter((player) => !isPrivateRedRoomPlayer(player)).map((player) => {
+    const matches = overallCompleted.filter((challenge) => challenge.challengerId === player.id || challenge.opponentId === player.id)
     const wins = matches.filter((challenge) => challenge.challengerId === player.id ? (challenge.challengerScore || 0) > (challenge.opponentScore || 0) : (challenge.opponentScore || 0) > (challenge.challengerScore || 0)).length
     const losses = matches.filter((challenge) => challenge.challengerId === player.id ? (challenge.challengerScore || 0) < (challenge.opponentScore || 0) : (challenge.opponentScore || 0) < (challenge.challengerScore || 0)).length
     return { ...player, squads: squadByPlayer.get(player.id) || [], matches: matches.length, wins, losses, draws: matches.length - wins - losses }
@@ -39,7 +45,7 @@ export async function GET() {
   return NextResponse.json({
     authenticated: true,
     me: { id: me.id, displayName: me.displayName, publicTag: me.publicTag, accountType: me.accountType, isBot: me.isBot, specialAbility: me.specialAbility, specialAbilityLabel: me.specialAbilityLabel, matchCredits: me.matchCredits, rating: me.rating, tauntId: me.tauntId, victoryId: me.victoryId, celebrationId: me.celebrationId, squads: squadByPlayer.get(me.id) || [] },
-    players: roster.filter((player) => player.id !== me.id).map((player) => ({ ...player, specialAbilityLabel: legendAbilityLabel(player.specialAbility, player.specialAbilityLabel), squads: squadByPlayer.get(player.id) || [], legendUnlock: legendProgress(player.publicTag, wins, correctlyAnswered.size, me.accountType === "coach") })),
+    players: roster.filter((player) => player.id !== me.id && canSeeRedRoomPlayer(me, player)).map((player) => ({ ...player, specialAbilityLabel: legendAbilityLabel(player.specialAbility, player.specialAbilityLabel), squads: squadByPlayer.get(player.id) || [], legendUnlock: legendProgress(player.publicTag, wins, correctlyAnswered.size, me.accountType === "coach" || me.accountType === "private") })),
     challenges: myChallenges.map((challenge) => ({
       ...challenge,
       challengerName: playerById.get(challenge.challengerId)?.displayName,

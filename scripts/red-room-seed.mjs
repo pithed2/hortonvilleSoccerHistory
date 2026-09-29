@@ -48,6 +48,11 @@ const coaches = [
   { name: "Cooper Re", tag: "COACH-COOPER" },
 ]
 
+const privatePlayers = [
+  { name: "Miles Montalbano", tag: "NR-Miles" },
+  { name: "Dawson Montalbano", tag: "NR-Dawson" },
+]
+
 const legends = [
   { name: "Gianluigi Buffon", tag: "LEGEND-1", jersey: "1", rating: 1300, ability: "third_keeper_zone", label: "The Wall: adds a third goalkeeper zone every round" },
   { name: "Harry Kane", tag: "LEGEND-9", jersey: "9", rating: 1275, ability: "tottenham_tax", label: "Golden Boot: removes one keeper zone every round · Tottenham Tax: first goal is ruled out. When you think of 💩, I think of Tottenham." },
@@ -107,6 +112,27 @@ for (const coach of coaches) {
   }
   await client.execute({
     sql: "INSERT OR IGNORE INTO red_room_roster_memberships (player_id, squad, jersey, is_primary, created_at, updated_at) VALUES (?, 'Coaches', 'C', 1, ?, ?)",
+    args: [playerId, now, now],
+  })
+}
+
+for (const privatePlayer of privatePlayers) {
+  const playerId = stableId(privatePlayer.name)
+  const existing = await client.execute({ sql: "SELECT id FROM red_room_players WHERE id = ?", args: [playerId] })
+  if (!existing.rows.length) {
+    const key = makeClaimKey()
+    const salt = randomBytes(16).toString("hex")
+    const hash = scryptSync(key, salt, 64).toString("hex")
+    await client.execute({
+      sql: "INSERT INTO red_room_players (id, display_name, normalized_name, public_tag, account_type, claim_key_salt, claim_key_hash, created_at, updated_at) VALUES (?, ?, ?, ?, 'private', ?, ?, ?, ?)",
+      args: [playerId, privatePlayer.name, normalized(privatePlayer.name), privatePlayer.tag, salt, hash, now, now],
+    })
+    exported.push({ name: privatePlayer.name, tag: privatePlayer.tag, key })
+  } else {
+    await client.execute({ sql: "UPDATE red_room_players SET public_tag = ?, account_type = 'private', updated_at = ? WHERE id = ?", args: [privatePlayer.tag, now, playerId] })
+  }
+  await client.execute({
+    sql: "INSERT OR IGNORE INTO red_room_roster_memberships (player_id, squad, jersey, is_primary, created_at, updated_at) VALUES (?, 'Non-Roster', 'NR', 1, ?, ?)",
     args: [playerId, now, now],
   })
 }

@@ -10,7 +10,7 @@ export const players = sqliteTable("red_room_players", {
   displayName: text("display_name").notNull(),
   normalizedName: text("normalized_name").notNull().unique(),
   publicTag: text("public_tag").notNull().unique(),
-  accountType: text("account_type", { enum: ["player", "coach", "legend"] }).notNull().default("player"),
+  accountType: text("account_type", { enum: ["player", "coach", "legend", "private"] }).notNull().default("player"),
   isBot: integer("is_bot", { mode: "boolean" }).notNull().default(false),
   specialAbility: text("special_ability"),
   specialAbilityLabel: text("special_ability_label"),

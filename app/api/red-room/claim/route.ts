@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto"
-import { eq } from "drizzle-orm"
+import { eq, sql } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { createPlayerSession, validClaimKey } from "@/lib/red-room/auth"
 import { getRedRoomDb } from "@/lib/red-room/db"
@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   const key = String(body?.key || "").trim().toUpperCase()
   if (!tag || !key) return NextResponse.json({ error: "Enter your player tag and private key." }, { status: 400 })
   const db = getRedRoomDb()
-  const player = await db.select().from(players).where(eq(players.publicTag, tag)).get()
+  const player = await db.select().from(players).where(sql`upper(${players.publicTag}) = ${tag}`).get()
   if (!player || !validClaimKey(key, player.claimKeySalt, player.claimKeyHash)) {
     return NextResponse.json({ error: "That tag and key do not match." }, { status: 401 })
   }

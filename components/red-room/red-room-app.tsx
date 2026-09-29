@@ -7,7 +7,7 @@ import { ArrowLeft, BookOpen, Check, ChevronLeft, ChevronRight, Copy, LockKeyhol
 import { RED_ROOM_TAUNTS, RED_ROOM_VICTORY_CELEBRATIONS, RED_ROOM_VICTORY_YELLS, tauntLabel, victoryCelebration, victoryYell } from "@/lib/red-room/persona"
 
 type LegendUnlock = { wins: number; archiveAnswers: number; tier: number; currentWins: number; currentArchiveAnswers: number; unlocked: boolean; coachBypass: boolean }
-type Player = { id: string; displayName: string; publicTag: string; rating: number; squads: string[]; accountType: "player" | "coach" | "legend"; isBot: boolean; specialAbility: string | null; specialAbilityLabel: string | null; legendUnlock?: LegendUnlock | null }
+type Player = { id: string; displayName: string; publicTag: string; rating: number; squads: string[]; accountType: "player" | "coach" | "legend" | "private"; isBot: boolean; specialAbility: string | null; specialAbilityLabel: string | null; legendUnlock?: LegendUnlock | null }
 type ReplayPlay = { shooterId: string; keeperId: string; shot: number; covered: number[]; originalCovered?: number[]; goal: boolean; ability?: string }
 type Challenge = { id: string; code: string; status: string; challengerId: string; opponentId: string; challengerName: string; opponentName: string; challengerVictoryId: string; opponentVictoryId: string; challengerCelebrationId: string; opponentCelebrationId: string; challengerScore: number | null; opponentScore: number | null; replay: ReplayPlay[] | null; isMineToAnswer: boolean }
 type Leader = Player & { matches: number; wins: number; losses: number; draws: number }

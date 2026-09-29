@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto"
 import { and, eq, sql } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
+import { canChallengeRedRoomPlayer, isPrivateRedRoomMatch } from "@/lib/red-room/access"
 import { getRedRoomDb } from "@/lib/red-room/db"
 import { scoreMatch, validKeeps, validShots } from "@/lib/red-room/game"
 import { challenges, creditEvents, players } from "@/lib/red-room/schema"
@@ -23,6 +24,8 @@ export async function POST(request: Request, { params }: Props) {
   const result = scoreMatch(challenge.challengerId, challenge.opponentId, challenge.challengerShots, challenge.challengerKeeps, body.shots, body.keeps, { seed: challenge.id })
   const challenger = await db.select().from(players).where(eq(players.id, challenge.challengerId)).get()
   if (!challenger) return NextResponse.json({ error: "The challenger is unavailable." }, { status: 409 })
+  if (!canChallengeRedRoomPlayer(challenger, freshMe)) return NextResponse.json({ error: "That player is outside your challenge group." }, { status: 403 })
+  const privateMatch = isPrivateRedRoomMatch(challenger, freshMe)
   const expectedChallenger = 1 / (1 + 10 ** ((freshMe.rating - challenger.rating) / 400))
   const actualChallenger = result.challengerScore === result.opponentScore ? 0.5 : result.challengerScore > result.opponentScore ? 1 : 0
   const challengerRating = Math.round(challenger.rating + 24 * (actualChallenger - expectedChallenger))
@@ -31,8 +34,10 @@ export async function POST(request: Request, { params }: Props) {
   await db.transaction(async (tx) => {
     await tx.update(challenges).set({ status: "completed", opponentShots: body.shots, opponentKeeps: body.keeps, ...result, completedAt: now, updatedAt: now }).where(eq(challenges.id, challenge.id))
     await tx.update(players).set({ matchCredits: sql`${players.matchCredits} - 1`, updatedAt: now }).where(eq(players.id, me.id))
-    await tx.update(players).set({ rating: challengerRating, updatedAt: now }).where(eq(players.id, challenger.id))
-    await tx.update(players).set({ rating: opponentRating, updatedAt: now }).where(eq(players.id, freshMe.id))
+    if (!privateMatch) {
+      await tx.update(players).set({ rating: challengerRating, updatedAt: now }).where(eq(players.id, challenger.id))
+      await tx.update(players).set({ rating: opponentRating, updatedAt: now }).where(eq(players.id, freshMe.id))
+    }
     await tx.insert(creditEvents).values({ id: randomUUID(), playerId: me.id, delta: -1, reason: "challenge_answered", referenceId: challenge.id })
   })
   return NextResponse.json({ ok: true, result })

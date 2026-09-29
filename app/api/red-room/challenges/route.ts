@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto"
 import { and, eq, ne, or, sql } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
+import { canChallengeRedRoomPlayer, isPrivateRedRoomMatch } from "@/lib/red-room/access"
 import { getRedRoomDb } from "@/lib/red-room/db"
 import { botMoves, scoreMatch, unusedChallengeCode, validKeeps, validShots } from "@/lib/red-room/game"
 import { legendProgress } from "@/lib/red-room/legends"
@@ -16,9 +17,10 @@ export async function POST(request: Request) {
   const db = getRedRoomDb()
   const opponent = await db.select().from(players).where(and(eq(players.id, opponentId), ne(players.id, me.id))).get()
   if (!opponent) return NextResponse.json({ error: "Choose a roster opponent." }, { status: 400 })
+  if (!canChallengeRedRoomPlayer(me, opponent)) return NextResponse.json({ error: "That player is outside your challenge group." }, { status: 403 })
   const freshMe = await db.select().from(players).where(eq(players.id, me.id)).get()
   if (!freshMe || freshMe.matchCredits <= 0) return NextResponse.json({ error: "You need to beat an Archive Keeper question for another match pack." }, { status: 409 })
-  if (opponent.accountType === "legend" && freshMe.accountType !== "coach") {
+  if (opponent.accountType === "legend" && freshMe.accountType !== "coach" && freshMe.accountType !== "private") {
     const [matches, correctAttempts] = await Promise.all([
       db.select().from(challenges).where(and(eq(challenges.status, "completed"), or(eq(challenges.challengerId, me.id), eq(challenges.opponentId, me.id)))),
       db.select({ questionId: triviaAttempts.questionId }).from(triviaAttempts).where(and(eq(triviaAttempts.playerId, me.id), eq(triviaAttempts.correct, true))),
@@ -33,10 +35,11 @@ export async function POST(request: Request) {
   const now = new Date()
   const bot = opponent.isBot ? botMoves(opponent.id, id) : null
   const botResult = bot ? scoreMatch(me.id, opponent.id, body.shots, body.keeps, bot.shots, bot.keeps, { seed: id, challengerAbility: freshMe.specialAbility, opponentAbility: opponent.specialAbility }) : null
+  const privateMatch = isPrivateRedRoomMatch(freshMe, opponent)
   const expectedMe = 1 / (1 + 10 ** ((opponent.rating - freshMe.rating) / 400))
   const actualMe = botResult ? botResult.challengerScore === botResult.opponentScore ? 0.5 : botResult.challengerScore > botResult.opponentScore ? 1 : 0 : 0
-  const myRating = botResult ? Math.round(freshMe.rating + 24 * (actualMe - expectedMe)) : freshMe.rating
-  const opponentRating = botResult ? Math.round(opponent.rating + 24 * ((1 - actualMe) - (1 - expectedMe))) : opponent.rating
+  const myRating = botResult && !privateMatch ? Math.round(freshMe.rating + 24 * (actualMe - expectedMe)) : freshMe.rating
+  const opponentRating = botResult && !privateMatch ? Math.round(opponent.rating + 24 * ((1 - actualMe) - (1 - expectedMe))) : opponent.rating
   await db.transaction(async (tx) => {
     await tx.insert(challenges).values({ id, code, challengerId: me.id, opponentId, challengerShots: body.shots, challengerKeeps: body.keeps, opponentShots: bot?.shots, opponentKeeps: bot?.keeps, status: botResult ? "completed" : "pending", challengerScore: botResult?.challengerScore, opponentScore: botResult?.opponentScore, replay: botResult?.replay, completedAt: botResult ? now : null, expiresAt: new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000) })
     await tx.update(players).set({ matchCredits: sql`${players.matchCredits} - 1`, rating: myRating, updatedAt: now }).where(eq(players.id, me.id))
