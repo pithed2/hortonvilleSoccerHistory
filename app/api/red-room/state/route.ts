@@ -29,7 +29,8 @@ export async function GET() {
     const losses = matches.filter((challenge) => challenge.challengerId === player.id ? (challenge.challengerScore || 0) < (challenge.opponentScore || 0) : (challenge.opponentScore || 0) < (challenge.challengerScore || 0)).length
     return { ...player, squads: squadByPlayer.get(player.id) || [], matches: matches.length, wins, losses, draws: matches.length - wins - losses }
   }).filter((player) => player.matches > 0).sort((a, b) => b.rating - a.rating || b.wins - a.wins || a.displayName.localeCompare(b.displayName)).slice(0, 10)
-  const correctlyAnswered = new Set(attempts.filter((attempt) => attempt.correct).map((attempt) => attempt.questionId))
+  const activeQuestionIds = new Set(questions.map((question) => question.id))
+  const correctlyAnswered = new Set(attempts.filter((attempt) => attempt.correct && activeQuestionIds.has(attempt.questionId)).map((attempt) => attempt.questionId))
   const lastAttemptByQuestion = new Map<string, number>()
   for (const attempt of attempts) lastAttemptByQuestion.set(attempt.questionId, Math.max(lastAttemptByQuestion.get(attempt.questionId) || 0, attempt.attemptedAt.getTime()))
   const unansweredQuestion = questions.find((candidate) => !correctlyAnswered.has(candidate.id))

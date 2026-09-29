@@ -1,6 +1,7 @@
 import { createHash, randomBytes, scryptSync } from "node:crypto"
 import { mkdir, readFile, writeFile } from "node:fs/promises"
 import { createClient } from "@libsql/client"
+import { buildRedRoomQuestionBank } from "./red-room-question-bank.mjs"
 
 const readJson = async (path) => JSON.parse(await readFile(path, "utf8"))
 const [red, white, blackGray] = await Promise.all([readJson("data/jv/red.json"), readJson("data/jv/white.json"), readJson("data/jv/black-gray.json")])
@@ -124,28 +125,15 @@ for (const legend of legends) {
   })
 }
 
-await client.execute({
-  sql: "INSERT OR IGNORE INTO red_room_trivia_questions (id, prompt, answer, choices, hint, source_href, source_label, active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?)",
-  args: ["2015-09-14-jake-buhler-goals", "How many goals did Jake Buhler score against St. Mary Catholic on September 14, 2015?", "0", JSON.stringify(["0", "1", "2", "3"]), "The Polar Bears won 5–0. Look at the individual box score, not the team total.", "/seasons/2015#game-7", "2015 St. Mary Catholic box score", now, now],
-})
-
-const archiveRows = csvRows(await readFile("public/data/boxscore-player-stats.csv", "utf8"))
-  .filter((row) => Number(row.season) >= 2008 && Number(row.season) <= 2025 && row.player_name && row.opponent && Number(row.goals) <= 4 && (Number(row.goals) > 0 || Number(row.assists) > 0))
-const picked = []
-for (const row of archiveRows) {
-  const gameKey = `${row.season}-${row.game_number}`
-  if (picked.some((item) => item.gameKey === gameKey)) continue
-  picked.push({ ...row, gameKey })
-  if (picked.length === 30) break
-}
-for (const row of picked) {
-  const answer = String(Number(row.goals))
-  const choices = [...new Set([answer, "0", "1", "2", "3", "4"])].slice(0, 4).sort((a, b) => Number(a) - Number(b))
+const questionBank = await buildRedRoomQuestionBank()
+await client.execute({ sql: "UPDATE red_room_trivia_questions SET active = 0, updated_at = ?", args: [now] })
+for (const item of questionBank) {
   await client.execute({
-    sql: "INSERT OR IGNORE INTO red_room_trivia_questions (id, prompt, answer, choices, hint, source_href, source_label, active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?)",
-    args: [`archive-${row.season}-${row.game_number}-${stableId(row.player_name).slice(-8)}`, `How many goals did ${row.player_name} score against ${row.opponent} on ${row.date}?`, answer, JSON.stringify(choices), `Hortonville's result was ${row.score}. Check the individual box score line.`, `/seasons/${row.season}#game-${row.game_number}`, `${row.season} ${row.opponent} box score`, now, now],
+    sql: "INSERT INTO red_room_trivia_questions (id, prompt, answer, choices, hint, source_href, source_label, active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?) ON CONFLICT(id) DO UPDATE SET prompt = excluded.prompt, answer = excluded.answer, choices = excluded.choices, hint = excluded.hint, source_href = excluded.source_href, source_label = excluded.source_label, active = 1, updated_at = excluded.updated_at",
+    args: [item.id, item.prompt, item.answer, JSON.stringify(item.choices), item.hint, item.sourceHref, item.sourceLabel, now, now],
   })
 }
+console.log(`Seeded ${questionBank.length} active Red Room archive questions.`)
 
 if (exported.length) {
   await mkdir("output", { recursive: true })
