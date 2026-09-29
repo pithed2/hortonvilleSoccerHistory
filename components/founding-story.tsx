@@ -34,7 +34,7 @@ export function FoundingStory() {
               Heaven. I started talking to some of the coaches I would play with and setup some pickup JV games. We were
               able to get school transportation (Mrs. Sharon Becker the principal supported with transportation) and
               started playing just a couple of games with local high schools. New London was great. Early players were
-              Keaton Craddock (a goalie) and Ben Yankee."
+              Kenton Craddock (a goalie) and Ben Yankee."
             </p>
 
             <p>

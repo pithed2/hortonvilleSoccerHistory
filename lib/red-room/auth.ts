@@ -7,7 +7,7 @@ import { getRedRoomDb } from "./db"
 import { players, sessions } from "./schema"
 
 export const RED_ROOM_COOKIE = "red_room_session"
-const SESSION_DAYS = 30
+const SESSION_DAYS = 180
 
 export function hashToken(token: string) {
   return createHash("sha256").update(token).digest("hex")
