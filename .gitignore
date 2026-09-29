@@ -30,3 +30,7 @@ next-env.d.ts
 
 # Temporary Coach's Corner refresh checkouts
 /output/coach-refresh-*/
+
+# Local Red Room database and private player-key exports
+/.red-room/
+/output/red-room-player-keys-*.csv

@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import type { JvTeamStats } from "@/lib/jv-teams"
+import { RedRoomTrigger } from "@/components/red-room-trigger"
 
 export type JvDashboardStats = Omit<JvTeamStats, "totals" | "players" | "goalkeepers" | "recent"> & {
  scoredGames?: number
@@ -46,7 +47,7 @@ export function JvSeasonDashboard({ stats: jvStats }: { stats: JvDashboardStats 
       <div className="site-container relative">
         <Link href="/jv" className="text-sm font-semibold text-white/60 hover:text-white">Back to all JV teams</Link>
         <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div><p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Boys soccer · {jvStats.team}</p><h1 className="mt-1 text-4xl font-black tracking-tight md:text-5xl">2026 Season</h1><p className="mt-3 flex items-center gap-2 text-sm text-white/60"><span className="size-1.5 rounded-full bg-emerald-400" />{jvStats.sourceLabel ?? "Workbook data"} · Updated {jvStats.updated}</p></div>
+          <div className="flex items-center gap-5"><div>{teamSlug === "red" ? <RedRoomTrigger /> : null}</div><div><p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Boys soccer · {jvStats.team}</p><h1 className="mt-1 text-4xl font-black tracking-tight md:text-5xl">2026 Season</h1><p className="mt-3 flex items-center gap-2 text-sm text-white/60"><span className="size-1.5 rounded-full bg-emerald-400" />{jvStats.sourceLabel ?? "Workbook data"} · Updated {jvStats.updated}</p></div></div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
             <HeaderStat label="Conference" value={jvStats.record.conference} />
             <HeaderStat label="Overall" value={`${jvStats.record.wins}-${jvStats.record.losses}-${jvStats.record.ties}`} />
