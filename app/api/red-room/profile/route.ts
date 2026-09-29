@@ -2,12 +2,13 @@ import { eq } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { getRedRoomDb } from "@/lib/red-room/db"
+import { RED_ROOM_TAUNTS, RED_ROOM_VICTORY_CELEBRATIONS, RED_ROOM_VICTORY_YELLS } from "@/lib/red-room/persona"
 import { players } from "@/lib/red-room/schema"
 
 const allowed = {
-  tauntId: new Set(["pressure", "guess", "ice"]),
-  victoryId: new Set(["cold", "wall", "net"]),
-  celebrationId: new Set(["ice", "fist", "slide"]),
+  tauntId: new Set<string>(RED_ROOM_TAUNTS.map((taunt) => taunt.id)),
+  victoryId: new Set<string>(RED_ROOM_VICTORY_YELLS.map((victory) => victory.id)),
+  celebrationId: new Set<string>(RED_ROOM_VICTORY_CELEBRATIONS.map((celebration) => celebration.id)),
 }
 
 export async function POST(request: Request) {

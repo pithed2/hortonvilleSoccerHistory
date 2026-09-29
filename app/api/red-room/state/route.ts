@@ -10,7 +10,7 @@ export async function GET() {
   if (!me) return NextResponse.json({ authenticated: false })
   const db = getRedRoomDb()
   const [roster, memberships, myChallenges, allCompleted, questions, attempts] = await Promise.all([
-    db.select({ id: players.id, displayName: players.displayName, publicTag: players.publicTag, rating: players.rating, accountType: players.accountType, isBot: players.isBot, specialAbility: players.specialAbility, specialAbilityLabel: players.specialAbilityLabel }).from(players).orderBy(players.displayName),
+    db.select({ id: players.id, displayName: players.displayName, publicTag: players.publicTag, rating: players.rating, accountType: players.accountType, isBot: players.isBot, specialAbility: players.specialAbility, specialAbilityLabel: players.specialAbilityLabel, victoryId: players.victoryId, celebrationId: players.celebrationId }).from(players).orderBy(players.displayName),
     db.select().from(rosterMemberships),
     db.select().from(challenges).where(or(eq(challenges.challengerId, me.id), eq(challenges.opponentId, me.id))).orderBy(desc(challenges.createdAt)).limit(20),
     db.select().from(challenges).where(eq(challenges.status, "completed")),
@@ -39,6 +39,10 @@ export async function GET() {
       ...challenge,
       challengerName: playerById.get(challenge.challengerId)?.displayName,
       opponentName: playerById.get(challenge.opponentId)?.displayName,
+      challengerVictoryId: playerById.get(challenge.challengerId)?.victoryId,
+      opponentVictoryId: playerById.get(challenge.opponentId)?.victoryId,
+      challengerCelebrationId: playerById.get(challenge.challengerId)?.celebrationId,
+      opponentCelebrationId: playerById.get(challenge.opponentId)?.celebrationId,
       isMineToAnswer: challenge.status === "pending" && challenge.opponentId === me.id,
     })),
     stats: { matches: complete.length, wins, losses, draws: complete.length - wins - losses, archiveAnswers: correctlyAnswered.size },
