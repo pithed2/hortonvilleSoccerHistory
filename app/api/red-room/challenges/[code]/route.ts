@@ -20,7 +20,7 @@ export async function POST(request: Request, { params }: Props) {
   if (challenge.opponentId !== me.id) return NextResponse.json({ error: "That code is tied to another player." }, { status: 403 })
   const freshMe = await db.select().from(players).where(eq(players.id, me.id)).get()
   if (!freshMe || freshMe.matchCredits <= 0) return NextResponse.json({ error: "Unlock another match pack before answering this challenge." }, { status: 409 })
-  const result = scoreMatch(challenge.challengerId, challenge.opponentId, challenge.challengerShots, challenge.challengerKeeps, body.shots, body.keeps)
+  const result = scoreMatch(challenge.challengerId, challenge.opponentId, challenge.challengerShots, challenge.challengerKeeps, body.shots, body.keeps, { seed: challenge.id })
   const challenger = await db.select().from(players).where(eq(players.id, challenge.challengerId)).get()
   if (!challenger) return NextResponse.json({ error: "The challenger is unavailable." }, { status: 409 })
   const expectedChallenger = 1 / (1 + 10 ** ((freshMe.rating - challenger.rating) / 400))

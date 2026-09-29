@@ -37,6 +37,22 @@ const entries = [
   ...blackGray.squads.gray.roster.map((player) => ({ name: player.name, number: String(player.number), squad: "JV Gray", prefix: "JG" })),
 ]
 
+const coaches = [
+  { name: "Andy Montalbano", tag: "COACH-ANDY" },
+  { name: "Paul Everett", tag: "COACH-PAUL" },
+  { name: "Seth Rogers", tag: "COACH-SETH" },
+  { name: "Alex Bonikowske", tag: "COACH-ALEX" },
+  { name: "Shannon Everett", tag: "COACH-SHANNON" },
+  { name: "Marco Delbecchi", tag: "COACH-MARCO" },
+  { name: "Cooper Re", tag: "COACH-COOPER" },
+]
+
+const legends = [
+  { name: "Lionel Messi", tag: "LEGEND-10", jersey: "10", rating: 1350, ability: "erase_keeper_zone", label: "La Pulga: removes one goalkeeper zone every round" },
+  { name: "Cristiano Ronaldo", tag: "LEGEND-7", jersey: "7", rating: 1325, ability: "clutch_retake", label: "Siuuu Surge: his first saved shot becomes a goal" },
+  { name: "Gianluigi Buffon", tag: "LEGEND-1", jersey: "1", rating: 1300, ability: "third_keeper_zone", label: "The Wall: covers a third goal zone every round" },
+]
+
 const url = process.env.TURSO_DATABASE_URL || process.env.RED_ROOM_DATABASE_URL || "file:.red-room/red-room.db"
 await mkdir(".red-room", { recursive: true })
 const client = createClient({ url, authToken: process.env.TURSO_AUTH_TOKEN })
@@ -65,6 +81,41 @@ for (const entry of entries) {
   await client.execute({
     sql: "INSERT OR IGNORE INTO red_room_roster_memberships (player_id, squad, jersey, is_primary, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)",
     args: [playerId, entry.squad, entry.number, Number(count.rows[0].count) === 0 ? 1 : 0, now, now],
+  })
+}
+
+for (const coach of coaches) {
+  const playerId = stableId(coach.name)
+  const existing = await client.execute({ sql: "SELECT id FROM red_room_players WHERE id = ?", args: [playerId] })
+  if (!existing.rows.length) {
+    const key = makeClaimKey()
+    const salt = randomBytes(16).toString("hex")
+    const hash = scryptSync(key, salt, 64).toString("hex")
+    await client.execute({
+      sql: "INSERT INTO red_room_players (id, display_name, normalized_name, public_tag, account_type, claim_key_salt, claim_key_hash, match_credits, created_at, updated_at) VALUES (?, ?, ?, ?, 'coach', ?, ?, 999, ?, ?)",
+      args: [playerId, coach.name, normalized(coach.name), coach.tag, salt, hash, now, now],
+    })
+    exported.push({ name: coach.name, tag: coach.tag, key })
+  } else {
+    await client.execute({ sql: "UPDATE red_room_players SET account_type = 'coach', match_credits = MAX(match_credits, 999), updated_at = ? WHERE id = ?", args: [now, playerId] })
+  }
+  await client.execute({
+    sql: "INSERT OR IGNORE INTO red_room_roster_memberships (player_id, squad, jersey, is_primary, created_at, updated_at) VALUES (?, 'Coaches', 'C', 1, ?, ?)",
+    args: [playerId, now, now],
+  })
+}
+
+for (const legend of legends) {
+  const playerId = stableId(legend.name)
+  const salt = randomBytes(16).toString("hex")
+  const lockedHash = scryptSync(randomBytes(32).toString("hex"), salt, 64).toString("hex")
+  await client.execute({
+    sql: "INSERT INTO red_room_players (id, display_name, normalized_name, public_tag, account_type, is_bot, special_ability, special_ability_label, claim_key_salt, claim_key_hash, match_credits, rating, created_at, updated_at) VALUES (?, ?, ?, ?, 'legend', 1, ?, ?, ?, ?, 999, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET public_tag = excluded.public_tag, account_type = 'legend', is_bot = 1, special_ability = excluded.special_ability, special_ability_label = excluded.special_ability_label, rating = CASE WHEN red_room_players.rating = 1000 THEN excluded.rating ELSE red_room_players.rating END, updated_at = excluded.updated_at",
+    args: [playerId, legend.name, normalized(legend.name), legend.tag, legend.ability, legend.label, salt, lockedHash, legend.rating, now, now],
+  })
+  await client.execute({
+    sql: "INSERT OR IGNORE INTO red_room_roster_memberships (player_id, squad, jersey, is_primary, created_at, updated_at) VALUES (?, 'World Legends', ?, 1, ?, ?)",
+    args: [playerId, legend.jersey, now, now],
   })
 }
 
