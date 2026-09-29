@@ -48,9 +48,13 @@ const coaches = [
 ]
 
 const legends = [
-  { name: "Lionel Messi", tag: "LEGEND-10", jersey: "10", rating: 1350, ability: "erase_keeper_zone", label: "La Pulga: removes one goalkeeper zone every round" },
-  { name: "Cristiano Ronaldo", tag: "LEGEND-7", jersey: "7", rating: 1325, ability: "clutch_retake", label: "Siuuu Surge: his first saved shot becomes a goal" },
-  { name: "Gianluigi Buffon", tag: "LEGEND-1", jersey: "1", rating: 1300, ability: "third_keeper_zone", label: "The Wall: covers a third goal zone every round" },
+  { name: "Gianluigi Buffon", tag: "LEGEND-1", jersey: "1", rating: 1300, ability: "third_keeper_zone", label: "The Wall: adds a third goalkeeper zone every round" },
+  { name: "Harry Kane", tag: "LEGEND-9", jersey: "9", rating: 1275, ability: "tottenham_tax", label: "Golden Boot: removes one keeper zone every round · Tottenham Tax: first goal is ruled out" },
+  { name: "Cristiano Ronaldo", tag: "LEGEND-7", jersey: "7", rating: 1325, ability: "ronaldo_erase", label: "Siuuu Surge: removes one goalkeeper zone every round" },
+  { name: "Thierry Henry", tag: "LEGEND-14", jersey: "14", rating: 1375, ability: "arsenal_invincibles", label: "Va Va Voom: removes one keeper zone every round · Arsenal Invincibles: first save is overturned" },
+  { name: "Lionel Messi", tag: "LEGEND-10", jersey: "10", rating: 1400, ability: "messi_erase", label: "La Pulga: removes one goalkeeper zone every round" },
+  { name: "Prime Coach Paul", tag: "LEGEND-PAUL", jersey: "PE", rating: 1425, ability: "second_ball", label: "The Shed Is Open: produces a second ball when his first shot is saved" },
+  { name: "2013 Coach Marco", tag: "LEGEND-MARCO13", jersey: "13", rating: 1500, ability: "time_machine", label: "Bay Conference Time Machine: removes one keeper zone when shooting and adds one when saving" },
 ]
 
 const url = process.env.TURSO_DATABASE_URL || process.env.RED_ROOM_DATABASE_URL || "file:.red-room/red-room.db"

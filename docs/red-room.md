@@ -15,8 +15,12 @@ The seed command creates one identity for every current Varsity and JV player. A
 It also creates claimable coach identities for Andy Montalbano, Paul Everett, Seth Rogers, Alex Bonikowske, Shannon Everett, Marco Delbecchi, and Cooper Re. Coach accounts display unlimited test matches. Three computer opponents form a progressive boss ladder. Players must meet both the win and correct-archive-answer requirement before the server accepts a challenge. Coaches receive bypass access for testing.
 
 - Tier 1, Gianluigi Buffon: 3 wins and 1 correct archive answer; adds a third goalkeeper zone every round.
-- Tier 2, Cristiano Ronaldo: 7 wins and 3 correct archive answers; converts his first saved shot into a goal.
-- Tier 3, Lionel Messi: 12 wins and 5 correct archive answers; removes one goalkeeper zone on every shot.
+- Tier 2, Harry Kane: 5 wins and 2 correct archive answers; removes one keeper zone every round, but the Tottenham Tax rules out his first goal.
+- Tier 3, Cristiano Ronaldo: 7 wins and 3 correct archive answers; removes one goalkeeper zone every round.
+- Tier 4, Thierry Henry: 10 wins and 4 correct archive answers; removes one keeper zone every round, and the Arsenal Invincibles bonus overturns his first save.
+- Tier 5, Lionel Messi: 12 wins and 5 correct archive answers; removes one goalkeeper zone every round.
+- Tier 6, Prime Coach Paul: 16 wins and 6 correct archive answers; opens the equipment shed and produces a second ball after his first saved shot.
+- Tier 7, 2013 Coach Marco: 20 wins and 8 correct archive answers; removes one keeper zone when shooting and adds a third zone when saving.
 
 Ability choices are deterministic from the challenge ID, so a stored replay always produces the same outcome.
 

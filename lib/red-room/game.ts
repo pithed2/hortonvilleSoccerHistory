@@ -24,39 +24,60 @@ function effectiveCoverage(coverage: KeeperPick, shooterAbility: string | null |
   const originalCovered = [...coverage]
   const covered = [...coverage]
   const abilities: string[] = []
-  if (keeperAbility === "third_keeper_zone") {
+  if (keeperAbility === "third_keeper_zone" || keeperAbility === "time_machine") {
     const open = Array.from({ length: 9 }, (_, index) => index + 1).filter((zone) => !covered.includes(zone))
     covered.push(open[seededIndex(`${seed}:wall`, open.length)])
-    abilities.push("The Wall added a third save zone")
+    abilities.push(keeperAbility === "time_machine" ? "2013 Marco added a time-warp save zone" : "The Wall added a third save zone")
   }
-  if (shooterAbility === "erase_keeper_zone" && covered.length) {
+  if (["erase_keeper_zone", "messi_erase", "ronaldo_erase", "arsenal_invincibles", "tottenham_tax", "time_machine"].includes(shooterAbility || "") && covered.length) {
     const removed = covered.splice(seededIndex(`${seed}:erase`, covered.length), 1)[0]
-    abilities.push(`La Pulga erased keeper zone ${removed}`)
+    const name = shooterAbility === "messi_erase" ? "La Pulga" : shooterAbility === "ronaldo_erase" ? "Siuuu Surge" : shooterAbility === "arsenal_invincibles" ? "Va Va Voom" : shooterAbility === "tottenham_tax" ? "Golden Boot" : shooterAbility === "time_machine" ? "2013 Marco" : "Offensive bonus"
+    abilities.push(`${name} erased keeper zone ${removed}`)
   }
   return { covered, originalCovered, ability: abilities.join(" · ") || undefined }
+}
+
+function savedShotBonus(ability: string | null | undefined) {
+  if (ability === "arsenal_invincibles") return "Arsenal Invincibles overturned the first save"
+  if (ability === "second_ball") return "The Shed opened and Coach Paul produced a second ball"
+  return null
+}
+
+function addAbility(current: string | undefined, next: string) {
+  return current ? `${current} · ${next}` : next
 }
 
 export function scoreMatch(challengerId: string, opponentId: string, challengerShots: number[], challengerKeeps: KeeperPick[], opponentShots: number[], opponentKeeps: KeeperPick[], options: MatchOptions = {}) {
   const replay = []
   let challengerScore = 0
   let opponentScore = 0
-  let challengerRetakeUsed = false
-  let opponentRetakeUsed = false
+  let challengerSaveBonusUsed = false
+  let opponentSaveBonusUsed = false
+  let challengerTaxUsed = false
+  let opponentTaxUsed = false
   const seed = options.seed || `${challengerId}:${opponentId}`
   for (let round = 0; round < SHOT_COUNT; round++) {
     const challengerDefense = effectiveCoverage(opponentKeeps[round], options.challengerAbility, options.opponentAbility, `${seed}:${round}:challenger`)
     let challengerGoal = !challengerDefense.covered.includes(challengerShots[round])
     let challengerAbility = challengerDefense.ability
-    if (!challengerGoal && options.challengerAbility === "clutch_retake" && !challengerRetakeUsed) {
-      challengerGoal = true; challengerRetakeUsed = true; challengerAbility = "Siuuu Surge converted the first save"
+    const challengerBonus = savedShotBonus(options.challengerAbility)
+    if (!challengerGoal && challengerBonus && !challengerSaveBonusUsed) {
+      challengerGoal = true; challengerSaveBonusUsed = true; challengerAbility = addAbility(challengerAbility, challengerBonus)
+    }
+    if (challengerGoal && options.challengerAbility === "tottenham_tax" && !challengerTaxUsed) {
+      challengerGoal = false; challengerTaxUsed = true; challengerAbility = addAbility(challengerAbility, "Tottenham Tax ruled out the first goal")
     }
     if (challengerGoal) challengerScore++
     replay.push({ shooterId: challengerId, keeperId: opponentId, shot: challengerShots[round], covered: challengerDefense.covered, originalCovered: challengerDefense.originalCovered, goal: challengerGoal, ability: challengerAbility })
     const opponentDefense = effectiveCoverage(challengerKeeps[round], options.opponentAbility, options.challengerAbility, `${seed}:${round}:opponent`)
     let opponentGoal = !opponentDefense.covered.includes(opponentShots[round])
     let opponentAbility = opponentDefense.ability
-    if (!opponentGoal && options.opponentAbility === "clutch_retake" && !opponentRetakeUsed) {
-      opponentGoal = true; opponentRetakeUsed = true; opponentAbility = "Siuuu Surge converted the first save"
+    const opponentBonus = savedShotBonus(options.opponentAbility)
+    if (!opponentGoal && opponentBonus && !opponentSaveBonusUsed) {
+      opponentGoal = true; opponentSaveBonusUsed = true; opponentAbility = addAbility(opponentAbility, opponentBonus)
+    }
+    if (opponentGoal && options.opponentAbility === "tottenham_tax" && !opponentTaxUsed) {
+      opponentGoal = false; opponentTaxUsed = true; opponentAbility = addAbility(opponentAbility, "Tottenham Tax ruled out the first goal")
     }
     if (opponentGoal) opponentScore++
     replay.push({ shooterId: opponentId, keeperId: challengerId, shot: opponentShots[round], covered: opponentDefense.covered, originalCovered: opponentDefense.originalCovered, goal: opponentGoal, ability: opponentAbility })
