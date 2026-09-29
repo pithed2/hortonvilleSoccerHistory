@@ -19,8 +19,8 @@ It also creates claimable coach identities for Andy Montalbano, Paul Everett, Se
 - Tier 3, Cristiano Ronaldo: 7 wins and 3 correct archive answers; removes one goalkeeper zone every round.
 - Tier 4, Thierry Henry: 10 wins and 4 correct archive answers; removes one keeper zone every round, and the Arsenal Invincibles bonus overturns his first save.
 - Tier 5, Lionel Messi: 12 wins and 5 correct archive answers; removes one goalkeeper zone every round.
-- Tier 6, Prime Coach Paul: 16 wins and 6 correct archive answers; opens the equipment shed and produces a second ball after his first saved shot.
-- Tier 7, 2013 Coach Marco: 20 wins and 8 correct archive answers; removes one keeper zone when shooting and adds a third zone when saving.
+- Tier 6, 2013 Coach Marco: 16 wins and 6 correct archive answers; removes one keeper zone when shooting and adds a third zone when saving.
+- Tier 7, Prime Coach Paul: 20 wins and 8 correct archive answers; opens the equipment shed and produces a second ball after his first saved shot.
 
 Ability choices are deterministic from the challenge ID, so a stored replay always produces the same outcome.
 

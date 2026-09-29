@@ -4,8 +4,8 @@ export const LEGEND_REQUIREMENTS: Record<string, { wins: number; archiveAnswers:
   "LEGEND-7": { wins: 7, archiveAnswers: 3, tier: 3 },
   "LEGEND-14": { wins: 10, archiveAnswers: 4, tier: 4 },
   "LEGEND-10": { wins: 12, archiveAnswers: 5, tier: 5 },
-  "LEGEND-PAUL": { wins: 16, archiveAnswers: 6, tier: 6 },
-  "LEGEND-MARCO13": { wins: 20, archiveAnswers: 8, tier: 7 },
+  "LEGEND-MARCO13": { wins: 16, archiveAnswers: 6, tier: 6 },
+  "LEGEND-PAUL": { wins: 20, archiveAnswers: 8, tier: 7 },
 }
 
 export function legendProgress(tag: string, wins: number, archiveAnswers: number, coachBypass = false) {
