@@ -1,4 +1,6 @@
-export const RED_ROOM_TAUNTS = [
+export type RedRoomTaunt = { id: string; label: string; ownerTag?: string }
+
+export const RED_ROOM_TAUNTS: readonly RedRoomTaunt[] = [
   { id: "pressure", label: "Hope you like pressure." },
   { id: "guess", label: "Pick a corner. Any corner." },
   { id: "ice", label: "Cold enough in here?" },
@@ -9,7 +11,15 @@ export const RED_ROOM_TAUNTS = [
   { id: "net_missed_me", label: "The net says it missed me." },
   { id: "five_shots", label: "Five shots. Try to keep up." },
   { id: "best_guess", label: "Save your best guess for last." },
-] as const
+  { id: "pathetic", label: "Truly pathetic." },
+  { id: "seriously", label: "Seriously. That’s what you’re bringing?" },
+  { id: "andy_316", label: "Coach Andy 3.16 says I just whooped your butt!", ownerTag: "COACH-ANDY" },
+  { id: "change_question", label: "You think you know, but I change the question." },
+  { id: "flash_photography", label: "For the benefit of those with flash photography, I’ll just stand here for a moment." },
+  { id: "whos_next", label: "Who’s Next?" },
+  { id: "never_forget", label: "You will never forget the day you challenged {{username}}." },
+  { id: "mania", label: "What you gonna do when {{username}}-mania runs wild on you?" },
+]
 
 export const RED_ROOM_VICTORY_CELEBRATIONS = [
   { id: "ice", label: "Ice in the Veins", action: "Cross the arms and let the frost hit.", mark: "❄", yell: "ICE COLD." },
@@ -22,6 +32,7 @@ export const RED_ROOM_VICTORY_CELEBRATIONS = [
   { id: "layup", label: "Nothing but Net", action: "Dribble the invisible ball and finish the layup.", mark: "●", yell: "NOTHING BUT NET." },
   { id: "team_photo", label: "Team Photo", action: "Drop to a knee and pose for the group chat.", mark: "◎", yell: "SAY GOAL." },
   { id: "polar_roar", label: "Polar Bear Roar", action: "Claws out. Roar toward the Red Room.", mark: "🐻‍❄️", yell: "WELCOME TO THE DEN." },
+  { id: "akin_bell", label: "Akin Field — Ring the Bell", action: "Ring the Akin Field bell after an important home win.", mark: "🔔", yell: "RING THE BELL." },
 ] as const
 
 export const RED_ROOM_VICTORY_YELLS = [
@@ -30,8 +41,9 @@ export const RED_ROOM_VICTORY_YELLS = [
   { id: "net", label: "BACK OF THE NET." },
 ] as const
 
-export function tauntLabel(id: string) {
-  return RED_ROOM_TAUNTS.find((taunt) => taunt.id === id)?.label ?? RED_ROOM_TAUNTS[0].label
+export function tauntLabel(id: string, username?: string) {
+  const label = RED_ROOM_TAUNTS.find((taunt) => taunt.id === id)?.label ?? RED_ROOM_TAUNTS[0].label
+  return label.replaceAll("{{username}}", username || "me")
 }
 
 export function victoryCelebration(id: string) {

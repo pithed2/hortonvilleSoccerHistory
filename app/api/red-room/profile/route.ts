@@ -19,6 +19,8 @@ export async function POST(request: Request) {
   const victoryId = String(body?.victoryId || "")
   const celebrationId = String(body?.celebrationId || "")
   if (!allowed.tauntId.has(tauntId) || !allowed.victoryId.has(victoryId) || !allowed.celebrationId.has(celebrationId)) return NextResponse.json({ error: "Choose from the available options." }, { status: 400 })
+  const taunt = RED_ROOM_TAUNTS.find((option) => option.id === tauntId)
+  if (taunt?.ownerTag && taunt.ownerTag !== me.publicTag) return NextResponse.json({ error: "That taunt belongs to another player." }, { status: 403 })
   await getRedRoomDb().update(players).set({ tauntId, victoryId, celebrationId, updatedAt: new Date() }).where(eq(players.id, me.id))
   return NextResponse.json({ ok: true })
 }
