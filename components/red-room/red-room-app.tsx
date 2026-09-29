@@ -38,7 +38,6 @@ export function RedRoomApp() {
 
       {error ? <p className="rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-200">{error}</p> : null}
       {state.question ? <TriviaCard question={state.question} onDone={load} setError={setError} /> : null}
-      <LegendLadder players={state.players} />
 
       <section className="grid gap-6 xl:grid-cols-[1.1fr_.9fr]">
         <ChallengeBuilder me={state.me} players={state.players} disabled={state.me.matchCredits <= 0} onDone={load} setError={setError} />
@@ -49,6 +48,7 @@ export function RedRoomApp() {
         <ChallengeList challenges={state.challenges} me={state.me} />
         <ProfileCard me={state.me} onDone={load} setError={setError} />
       </section>
+      <LegendLadder players={state.players} />
       <Leaderboard leaders={state.leaderboard} />
     </div>
   </RoomFrame>
