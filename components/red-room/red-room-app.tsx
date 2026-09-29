@@ -35,7 +35,7 @@ export function RedRoomApp() {
     <div className="space-y-8">
       <header className="flex flex-col gap-5 border-b border-white/10 pb-7 sm:flex-row sm:items-end sm:justify-between">
         <div><p className="text-xs font-black uppercase tracking-[.35em] text-red-500">Identity confirmed · {state.me.publicTag}</p><h1 className="mt-2 text-4xl font-black uppercase italic sm:text-6xl">The Red Room</h1><p className="mt-2 text-white/55">{state.me.displayName} · {state.me.squads.join(" · ")}</p></div>
-        <div><div className="grid grid-cols-3 gap-2 text-center"><MiniStat value={state.me.accountType === "coach" ? "∞" : state.me.matchCredits} label="Matches" /><MiniStat value={`${state.stats.wins}-${state.stats.losses}-${state.stats.draws}`} label="W-L-D" /><MiniStat value={state.me.rating} label="Rating" /></div><button onClick={async () => { await fetch("/api/red-room/logout", { method: "POST" }); await load() }} className="mt-2 w-full text-xs font-bold uppercase tracking-wider text-white/35 hover:text-white">Switch player</button></div>
+        <div><div className="grid grid-cols-3 gap-2 text-center"><MiniStat value={state.me.accountType === "coach" ? "∞" : state.me.matchCredits} label="Challenges left" /><MiniStat value={`${state.stats.wins}-${state.stats.losses}-${state.stats.draws}`} label="W-L-D" /><MiniStat value={state.me.rating} label="Rating" /></div><button onClick={async () => { await fetch("/api/red-room/logout", { method: "POST" }); await load() }} className="mt-2 w-full text-xs font-bold uppercase tracking-wider text-white/35 hover:text-white">Switch player</button></div>
       </header>
 
       {error ? <p className="rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-200">{error}</p> : null}
