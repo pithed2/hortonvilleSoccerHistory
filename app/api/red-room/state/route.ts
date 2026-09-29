@@ -30,7 +30,11 @@ export async function GET() {
     return { ...player, squads: squadByPlayer.get(player.id) || [], matches: matches.length, wins, losses, draws: matches.length - wins - losses }
   }).filter((player) => player.matches > 0).sort((a, b) => b.rating - a.rating || b.wins - a.wins || a.displayName.localeCompare(b.displayName)).slice(0, 10)
   const correctlyAnswered = new Set(attempts.filter((attempt) => attempt.correct).map((attempt) => attempt.questionId))
-  const question = questions.find((candidate) => !correctlyAnswered.has(candidate.id)) || questions[0] || null
+  const lastAttemptByQuestion = new Map<string, number>()
+  for (const attempt of attempts) lastAttemptByQuestion.set(attempt.questionId, Math.max(lastAttemptByQuestion.get(attempt.questionId) || 0, attempt.attemptedAt.getTime()))
+  const unansweredQuestion = questions.find((candidate) => !correctlyAnswered.has(candidate.id))
+  const reviewQuestion = [...questions].sort((a, b) => (lastAttemptByQuestion.get(a.id) || 0) - (lastAttemptByQuestion.get(b.id) || 0))[0]
+  const question = unansweredQuestion || reviewQuestion || null
   return NextResponse.json({
     authenticated: true,
     me: { id: me.id, displayName: me.displayName, publicTag: me.publicTag, accountType: me.accountType, isBot: me.isBot, specialAbility: me.specialAbility, specialAbilityLabel: me.specialAbilityLabel, matchCredits: me.matchCredits, rating: me.rating, tauntId: me.tauntId, victoryId: me.victoryId, celebrationId: me.celebrationId, squads: squadByPlayer.get(me.id) || [] },
@@ -46,7 +50,8 @@ export async function GET() {
       isMineToAnswer: challenge.status === "pending" && challenge.opponentId === me.id,
     })),
     stats: { matches: complete.length, wins, losses, draws: complete.length - wins - losses, archiveAnswers: correctlyAnswered.size },
+    archive: { correct: correctlyAnswered.size, total: questions.length },
     leaderboard,
-    question: me.matchCredits <= 0 ? question || null : null,
+    question: me.matchCredits <= 0 && question ? { ...question, review: correctlyAnswered.has(question.id) } : null,
   })
 }

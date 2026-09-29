@@ -24,6 +24,8 @@ It also creates claimable coach identities for Andy Montalbano, Paul Everett, Se
 
 Ability choices are deterministic from the challenge ID, so a stored replay always produces the same outcome.
 
+Regular players begin with three match credits. Creating a challenge or answering one costs one credit. At zero credits, both game paths stay disabled and the Archive Keeper presents a historical question. A correct answer atomically adds three credits; the API rejects trivia submissions while credits remain. Wrong answers return a hint and a link to the supporting archive page. The seed currently builds a 31-question library from historical box scores. Players receive unseen questions first, then the least recently attempted review question after they have solved the full library. Legend progress counts distinct correctly answered questions.
+
 Seeding is idempotent: existing identities and keys are preserved. Keep the Player Key export private and distribute each row only to its matching player.
 
 ## Production setup
