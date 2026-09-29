@@ -4041,8 +4041,6 @@
       "result": "W",
       "sourceFile": "Score sheet photo, JV White vs Kimberly (chat upload)",
       "notes": [
-        "Wyatt Mauthepasch's Goals cell has a heavy tally mark that does not fit the final-score arithmetic (the other five scorers already total 7-2); treated as shots-on-goal marks rather than goals and excluded from his goal total.",
-        "Ben Decker's saves tally on the sheet is not clearly legible; goals against (2) matches the final score and is confirmed, but the exact save count is not recorded."
       ],
       "scoringRecorded": false,
       "unattributedGoals": 0,
@@ -4068,7 +4066,7 @@
           "assists": 0,
           "yc": null,
           "rc": null,
-          "saves": null,
+          "saves": 8,
           "gkMinutes": 80,
           "recordedSog": 0,
           "goalsAgainst": 2
