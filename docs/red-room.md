@@ -12,7 +12,7 @@ npm run dev
 
 The seed command creates one identity for every current Varsity and JV player. A player who appears on multiple rosters receives one identity with multiple roster memberships. Newly generated one-time Player Keys are exported to `output/red-room-player-keys-<timestamp>.csv`. That file and the local database are ignored by Git.
 
-It also creates claimable coach identities for Andy Montalbano, Paul Everett, Seth Rogers, Alex Bonikowske, Shannon Everett, Marco Delbecchi, and Cooper Re. Coach accounts display unlimited test matches. Three computer opponents form a progressive boss ladder. Players must meet both the win and correct-archive-answer requirement before the server accepts a challenge. Coaches receive bypass access for testing.
+It also creates claimable coach identities for Andy Montalbano, Paul Everett, Seth Rogers, Alex Bonikowske, Shannon Everett, Marco Delbecchi, and Cooper Re. Coach accounts display unlimited test matches. Seven computer opponents form a progressive boss ladder. Players must meet both the win and correct-archive-answer requirement before the server accepts a challenge. Coaches receive bypass access for testing.
 
 - Tier 1, Gianluigi Buffon: 3 wins and 1 correct archive answer; adds a third goalkeeper zone every round.
 - Tier 2, Harry Kane: 5 wins and 2 correct archive answers; removes one keeper zone every round, but the Tottenham Tax rules out his first goal.
@@ -29,8 +29,8 @@ Seeding is idempotent: existing identities and keys are preserved. Keep the Play
 ## Production setup
 
 1. Add the free Turso Cloud integration to the Vercel project.
-2. Confirm Vercel created `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` for Production and Preview.
-3. Pull or set those variables locally, then run `npm run db:setup:red-room` once against the hosted database.
+2. Connect the database to the Vercel project. The app accepts the integration's `hhs_TURSO_DATABASE_URL` and `hhs_TURSO_AUTH_TOKEN` names, as well as the standard unprefixed names.
+3. Pull those variables into an ignored local environment file, then run the migration and seed scripts once against the hosted database with Node's `--env-file` option.
 4. Save the generated Player Key export somewhere private before deleting the local copy.
 5. Deploy the application normally.
 

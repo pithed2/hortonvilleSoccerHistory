@@ -57,9 +57,10 @@ const legends = [
   { name: "2013 Coach Marco", tag: "LEGEND-MARCO13", jersey: "13", rating: 1500, ability: "time_machine", label: "Bay Conference Time Machine: removes one keeper zone when shooting and adds one when saving" },
 ]
 
-const url = process.env.TURSO_DATABASE_URL || process.env.RED_ROOM_DATABASE_URL || "file:.red-room/red-room.db"
+const url = process.env.TURSO_DATABASE_URL || process.env.hhs_TURSO_DATABASE_URL || process.env.RED_ROOM_DATABASE_URL || "file:.red-room/red-room.db"
+const authToken = process.env.TURSO_AUTH_TOKEN || process.env.hhs_TURSO_AUTH_TOKEN
 await mkdir(".red-room", { recursive: true })
-const client = createClient({ url, authToken: process.env.TURSO_AUTH_TOKEN })
+const client = createClient({ url, authToken })
 const exported = []
 const usedTags = new Set()
 const now = Date.now()
