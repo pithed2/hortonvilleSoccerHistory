@@ -38,7 +38,7 @@ function effectiveCoverage(coverage: KeeperPick, shooterAbility: string | null |
 }
 
 function savedShotBonus(ability: string | null | undefined) {
-  if (ability === "arsenal_invincibles") return "Arsenal Invincibles overturned the first save"
+  if (ability === "arsenal_invincibles") return "Arsenal Invincibles overturned the first save. Arsenal is the best football club of all time. Bow down to the Invincibles."
   if (ability === "second_ball") return "The Shed opened and Coach Paul produced a second ball"
   return null
 }
@@ -65,7 +65,7 @@ export function scoreMatch(challengerId: string, opponentId: string, challengerS
       challengerGoal = true; challengerSaveBonusUsed = true; challengerAbility = addAbility(challengerAbility, challengerBonus)
     }
     if (challengerGoal && options.challengerAbility === "tottenham_tax" && !challengerTaxUsed) {
-      challengerGoal = false; challengerTaxUsed = true; challengerAbility = addAbility(challengerAbility, "Tottenham Tax ruled out the first goal")
+      challengerGoal = false; challengerTaxUsed = true; challengerAbility = addAbility(challengerAbility, "Tottenham Tax ruled out the first goal. When you think of 💩, I think of Tottenham.")
     }
     if (challengerGoal) challengerScore++
     replay.push({ shooterId: challengerId, keeperId: opponentId, shot: challengerShots[round], covered: challengerDefense.covered, originalCovered: challengerDefense.originalCovered, goal: challengerGoal, ability: challengerAbility })
@@ -77,7 +77,7 @@ export function scoreMatch(challengerId: string, opponentId: string, challengerS
       opponentGoal = true; opponentSaveBonusUsed = true; opponentAbility = addAbility(opponentAbility, opponentBonus)
     }
     if (opponentGoal && options.opponentAbility === "tottenham_tax" && !opponentTaxUsed) {
-      opponentGoal = false; opponentTaxUsed = true; opponentAbility = addAbility(opponentAbility, "Tottenham Tax ruled out the first goal")
+      opponentGoal = false; opponentTaxUsed = true; opponentAbility = addAbility(opponentAbility, "Tottenham Tax ruled out the first goal. When you think of 💩, I think of Tottenham.")
     }
     if (opponentGoal) opponentScore++
     replay.push({ shooterId: opponentId, keeperId: challengerId, shot: opponentShots[round], covered: opponentDefense.covered, originalCovered: opponentDefense.originalCovered, goal: opponentGoal, ability: opponentAbility })

@@ -8,6 +8,15 @@ export const LEGEND_REQUIREMENTS: Record<string, { wins: number; archiveAnswers:
   "LEGEND-PAUL": { wins: 20, archiveAnswers: 8, tier: 7 },
 }
 
+const LEGEND_ABILITY_COPY: Record<string, string> = {
+  tottenham_tax: "Golden Boot: removes one keeper zone every round · Tottenham Tax: first goal is ruled out. When you think of 💩, I think of Tottenham.",
+  arsenal_invincibles: "Va Va Voom: removes one keeper zone every round · Arsenal Invincibles: first save is overturned. Arsenal is the best football club of all time. Bow down to the Invincibles.",
+}
+
+export function legendAbilityLabel(ability: string | null, fallback: string | null) {
+  return LEGEND_ABILITY_COPY[ability || ""] || fallback
+}
+
 export function legendProgress(tag: string, wins: number, archiveAnswers: number, coachBypass = false) {
   const requirement = LEGEND_REQUIREMENTS[tag]
   if (!requirement) return null
