@@ -1,50 +1,59 @@
 {
-  "auditedAt": "2026-09-25T03:09:04.275Z",
+  "auditedAt": "2026-09-29T03:27:36.147Z",
   "teams": [
     {
       "team": "JV Red",
-      "games": 9,
+      "games": 10,
       "players": [
         {
           "number": 6,
           "name": "Parker Anderson",
-          "gp": 9,
+          "gp": 10,
           "goals": 7,
           "assists": 2,
           "points": 16,
-          "recordedStatLines": 8
+          "recordedStatLines": 9
         },
         {
           "number": 22,
           "name": "Amos Arndt",
-          "gp": 9,
+          "gp": 10,
           "goals": 6,
           "assists": 1,
           "points": 13,
-          "recordedStatLines": 9
-        },
-        {
-          "number": 18,
-          "name": "Grayson Ackermann",
-          "gp": 9,
-          "goals": 4,
-          "assists": 0,
-          "points": 8,
-          "recordedStatLines": 7
+          "recordedStatLines": 10
         },
         {
           "number": 15,
           "name": "Sam Radle",
-          "gp": 9,
-          "goals": 3,
+          "gp": 10,
+          "goals": 5,
           "assists": 1,
+          "points": 11,
+          "recordedStatLines": 8
+        },
+        {
+          "number": 18,
+          "name": "Grayson Ackermann",
+          "gp": 10,
+          "goals": 4,
+          "assists": 2,
+          "points": 10,
+          "recordedStatLines": 8
+        },
+        {
+          "number": 14,
+          "name": "Owen Pavich",
+          "gp": 10,
+          "goals": 1,
+          "assists": 5,
           "points": 7,
-          "recordedStatLines": 7
+          "recordedStatLines": 10
         },
         {
           "number": 20,
           "name": "Beckett Feldbruegge",
-          "gp": 9,
+          "gp": 10,
           "goals": 3,
           "assists": 0,
           "points": 6,
@@ -53,25 +62,16 @@
         {
           "number": 12,
           "name": "Brody Schroeder",
-          "gp": 9,
+          "gp": 10,
           "goals": 3,
           "assists": 0,
           "points": 6,
           "recordedStatLines": 5
         },
         {
-          "number": 14,
-          "name": "Owen Pavich",
-          "gp": 9,
-          "goals": 1,
-          "assists": 4,
-          "points": 6,
-          "recordedStatLines": 9
-        },
-        {
           "number": 19,
           "name": "Timmy VanSchyndel",
-          "gp": 9,
+          "gp": 10,
           "goals": 2,
           "assists": 1,
           "points": 5,
@@ -80,16 +80,25 @@
         {
           "number": 9,
           "name": "Ben Parker",
-          "gp": 9,
+          "gp": 10,
           "goals": 1,
           "assists": 3,
           "points": 5,
           "recordedStatLines": 7
         },
         {
+          "number": 21,
+          "name": "Easton Slomski",
+          "gp": 10,
+          "goals": 1,
+          "assists": 1,
+          "points": 3,
+          "recordedStatLines": 6
+        },
+        {
           "number": 10,
           "name": "Hunter Hasseler",
-          "gp": 9,
+          "gp": 10,
           "goals": 1,
           "assists": 1,
           "points": 3,
@@ -98,25 +107,16 @@
         {
           "number": 16,
           "name": "Carson Sanford",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 1,
           "points": 1,
           "recordedStatLines": 6
         },
         {
-          "number": 21,
-          "name": "Easton Slomski",
-          "gp": 9,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "recordedStatLines": 5
-        },
-        {
           "number": 24,
           "name": "Ethen LaPlant",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 1,
           "points": 1,
@@ -125,7 +125,7 @@
         {
           "number": 23,
           "name": "Jaxon Wolff",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 1,
           "points": 1,
@@ -134,16 +134,25 @@
         {
           "number": 26,
           "name": "Leon Ryzhov",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 1,
           "points": 1,
           "recordedStatLines": 2
         },
         {
+          "number": 5,
+          "name": "Nolan Raaths",
+          "gp": 10,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "recordedStatLines": 3
+        },
+        {
           "number": 8,
           "name": "Oliver Plamann",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 1,
           "points": 1,
@@ -152,7 +161,7 @@
         {
           "number": 2,
           "name": "Parker Rugotska",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 1,
           "points": 1,
@@ -161,7 +170,7 @@
         {
           "number": 4,
           "name": "Weston Ehr",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 1,
           "points": 1,
@@ -170,7 +179,7 @@
         {
           "number": 13,
           "name": "Aaron Young",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 0,
           "points": 0,
@@ -179,7 +188,7 @@
         {
           "number": 3,
           "name": "Dylan McFarlane",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 0,
           "points": 0,
@@ -188,11 +197,11 @@
         {
           "number": 31,
           "name": "Henri Waite",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "recordedStatLines": 9
+          "recordedStatLines": 10
         },
         {
           "number": 7,
@@ -206,29 +215,20 @@
         {
           "number": 11,
           "name": "Jaxton Seefeldt",
-          "gp": 9,
+          "gp": 10,
           "goals": 0,
           "assists": 0,
           "points": 0,
           "recordedStatLines": 3
-        },
-        {
-          "number": 5,
-          "name": "Nolan Raaths",
-          "gp": 9,
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "recordedStatLines": 2
         }
       ],
       "goalkeepers": [
         {
           "number": 31,
           "name": "Henri Waite",
-          "games": 9,
-          "saves": 38,
-          "minutes": 670,
+          "games": 10,
+          "saves": 44,
+          "minutes": 750,
           "goalsAgainst": 7
         },
         {

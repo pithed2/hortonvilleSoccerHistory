@@ -14,6 +14,15 @@
         "reason": "September 10 scorer correction confirmed in commit b983412 and the workbook Goal Log."
       }
     ],
+    "secondaryAssists": [
+      {
+        "game": 11,
+        "half": "2nd",
+        "scorer": "21 - Easton Slomski",
+        "assist": "18 - Grayson Ackermann",
+        "reason": "Grayson took the corner kick before Owen Pavich played the ball back across goal for Easton Slomski. Confirmed by Andrew Montalbano."
+      }
+    ],
     "notes": ["The Sep 15 game at Neenah was postponed; a makeup date has not yet been announced."]
   }
 }

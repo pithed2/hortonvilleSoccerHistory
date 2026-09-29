@@ -12,7 +12,7 @@ export type BoxScore = {
   players: PlayerBoxLine[]
   notes?: string[]
   scoringRecorded?: boolean
-  scoring: Array<{ half: string; scorer: string; assist: string | null }>
+  scoring: Array<{ half: string; scorer: string; assist: string | null; secondaryAssist?: string | null }>
 }
 export type ImportAudit = {
   sourceFile: string

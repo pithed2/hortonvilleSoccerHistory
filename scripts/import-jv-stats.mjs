@@ -54,6 +54,7 @@ const rosterRows = rows("Roster").filter((row) => text(row["Player Name"]) && !e
 const scheduleRows = rows("Schedule & Team Stats").filter((row) => number(row["Game #"]) && isoDate(row.Date) && text(row.Opponent))
 const gameLogRows = rows("Game Log").filter((row) => number(row["Game #"]) && text(row["Player (No. - Name)"]))
 const goalLogRows = rows("Goal Log").filter((row) => number(row["Game #"]) && text(row["Scorer (No. - Name)"]))
+const secondaryAssists = teamConfig.secondaryAssists || []
 
 // Preserve confirmed attribution corrections while the source Game Log is stale.
 for (const correction of teamConfig.gameLogCorrections || []) {
@@ -82,14 +83,19 @@ for (const row of completed) {
   if (expectedGoals !== loggedGoals) issues.push(`Game ${gameNumber}: GF is ${expectedGoals}, but Goal Log plus own goals is ${loggedGoals}.`)
   const playerLines = gameLogRows.filter((entry) => number(entry["Game #"]) === gameNumber)
   const scoringLines = goalLogRows.filter((entry) => number(entry["Game #"]) === gameNumber)
+  const secondaryAssistLines = secondaryAssists.filter((entry) => number(entry.game) === gameNumber)
   const playerKeys = new Set([
     ...playerLines.map((entry) => text(entry["Player (No. - Name)"])),
     ...scoringLines.flatMap((entry) => [text(entry["Scorer (No. - Name)"]), text(entry["Assist (No. - Name)"])].filter(Boolean)),
+    ...secondaryAssistLines.map((entry) => text(entry.assist)).filter(Boolean),
   ])
   for (const key of playerKeys) {
     for (const [stat, goalColumn] of [["Goals", "Scorer (No. - Name)"], ["Assists", "Assist (No. - Name)"]]) {
       const gameLogTotal = playerLines.filter((entry) => text(entry["Player (No. - Name)"]) === key).reduce((sum, entry) => sum + number(entry[stat]), 0)
-      const goalLogTotal = scoringLines.filter((entry) => text(entry[goalColumn]) === key).length
+      const secondaryAssistTotal = stat === "Assists"
+        ? secondaryAssistLines.filter((entry) => text(entry.assist) === key).length
+        : 0
+      const goalLogTotal = scoringLines.filter((entry) => text(entry[goalColumn]) === key).length + secondaryAssistTotal
       if (gameLogTotal !== goalLogTotal) issues.push(`Game ${gameNumber}: ${key} has ${gameLogTotal} ${stat.toLowerCase()} in Game Log but ${goalLogTotal} in Goal Log.`)
     }
   }
@@ -146,7 +152,12 @@ const boxScores = completed.map((row) => {
       } else byPlayer.set(line.player, line)
       return byPlayer
     }, new Map()).values()],
-    scoring: goalLogRows.filter((goal) => number(goal["Game #"]) === id).map((goal) => ({ half: text(goal.Half), scorer: text(goal["Scorer (No. - Name)"]), assist: text(goal["Assist (No. - Name)"]) || null })),
+    scoring: goalLogRows.filter((goal) => number(goal["Game #"]) === id).map((goal) => {
+      const half = text(goal.Half)
+      const scorer = text(goal["Scorer (No. - Name)"])
+      const secondary = secondaryAssists.find((entry) => number(entry.game) === id && text(entry.half) === half && text(entry.scorer) === scorer)
+      return { half, scorer, assist: text(goal["Assist (No. - Name)"]) || null, ...(secondary ? { secondaryAssist: text(secondary.assist) } : {}) }
+    }),
   }
 })
 
