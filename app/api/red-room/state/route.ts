@@ -2,6 +2,7 @@ import { desc, eq, or } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { getRedRoomDb } from "@/lib/red-room/db"
+import { legendProgress } from "@/lib/red-room/legends"
 import { challenges, players, rosterMemberships, triviaQuestions } from "@/lib/red-room/schema"
 
 export async function GET() {
@@ -33,14 +34,14 @@ export async function GET() {
   return NextResponse.json({
     authenticated: true,
     me: { id: me.id, displayName: me.displayName, publicTag: me.publicTag, accountType: me.accountType, isBot: me.isBot, specialAbility: me.specialAbility, specialAbilityLabel: me.specialAbilityLabel, matchCredits: me.matchCredits, rating: me.rating, tauntId: me.tauntId, victoryId: me.victoryId, celebrationId: me.celebrationId, squads: squadByPlayer.get(me.id) || [] },
-    players: roster.filter((player) => player.id !== me.id).map((player) => ({ ...player, squads: squadByPlayer.get(player.id) || [] })),
+    players: roster.filter((player) => player.id !== me.id).map((player) => ({ ...player, squads: squadByPlayer.get(player.id) || [], legendUnlock: legendProgress(player.publicTag, wins, correctlyAnswered.size, me.accountType === "coach") })),
     challenges: myChallenges.map((challenge) => ({
       ...challenge,
       challengerName: playerById.get(challenge.challengerId)?.displayName,
       opponentName: playerById.get(challenge.opponentId)?.displayName,
       isMineToAnswer: challenge.status === "pending" && challenge.opponentId === me.id,
     })),
-    stats: { matches: complete.length, wins, losses, draws: complete.length - wins - losses },
+    stats: { matches: complete.length, wins, losses, draws: complete.length - wins - losses, archiveAnswers: correctlyAnswered.size },
     leaderboard,
     question: me.matchCredits <= 0 ? question || null : null,
   })

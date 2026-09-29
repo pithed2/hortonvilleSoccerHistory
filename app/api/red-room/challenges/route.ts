@@ -1,10 +1,11 @@
 import { randomUUID } from "node:crypto"
-import { and, eq, ne, sql } from "drizzle-orm"
+import { and, eq, ne, or, sql } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { getRedRoomDb } from "@/lib/red-room/db"
 import { botMoves, scoreMatch, unusedChallengeCode, validKeeps, validShots } from "@/lib/red-room/game"
-import { challenges, creditEvents, players } from "@/lib/red-room/schema"
+import { legendProgress } from "@/lib/red-room/legends"
+import { challenges, creditEvents, players, triviaAttempts } from "@/lib/red-room/schema"
 
 export async function POST(request: Request) {
   const me = await authenticatedPlayer()
@@ -17,6 +18,16 @@ export async function POST(request: Request) {
   if (!opponent) return NextResponse.json({ error: "Choose a roster opponent." }, { status: 400 })
   const freshMe = await db.select().from(players).where(eq(players.id, me.id)).get()
   if (!freshMe || freshMe.matchCredits <= 0) return NextResponse.json({ error: "You need to beat an Archive Keeper question for another match pack." }, { status: 409 })
+  if (opponent.accountType === "legend" && freshMe.accountType !== "coach") {
+    const [matches, correctAttempts] = await Promise.all([
+      db.select().from(challenges).where(and(eq(challenges.status, "completed"), or(eq(challenges.challengerId, me.id), eq(challenges.opponentId, me.id)))),
+      db.select({ questionId: triviaAttempts.questionId }).from(triviaAttempts).where(and(eq(triviaAttempts.playerId, me.id), eq(triviaAttempts.correct, true))),
+    ])
+    const wins = matches.filter((challenge) => challenge.challengerId === me.id ? (challenge.challengerScore || 0) > (challenge.opponentScore || 0) : (challenge.opponentScore || 0) > (challenge.challengerScore || 0)).length
+    const answered = new Set(correctAttempts.map((attempt) => attempt.questionId)).size
+    const progress = legendProgress(opponent.publicTag, wins, answered)
+    if (!progress?.unlocked) return NextResponse.json({ error: `That legend is still locked. Earn ${progress?.wins ?? 0} wins and solve ${progress?.archiveAnswers ?? 0} archive questions first.` }, { status: 403 })
+  }
   const id = randomUUID()
   const code = await unusedChallengeCode()
   const now = new Date()

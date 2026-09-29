@@ -12,11 +12,11 @@ npm run dev
 
 The seed command creates one identity for every current Varsity and JV player. A player who appears on multiple rosters receives one identity with multiple roster memberships. Newly generated one-time Player Keys are exported to `output/red-room-player-keys-<timestamp>.csv`. That file and the local database are ignored by Git.
 
-It also creates claimable coach identities for Andy Montalbano, Paul Everett, Seth Rogers, Alex Bonikowske, Shannon Everett, Marco Delbecchi, and Cooper Re. Coach accounts display unlimited test matches. Three starred computer opponents answer challenges immediately:
+It also creates claimable coach identities for Andy Montalbano, Paul Everett, Seth Rogers, Alex Bonikowske, Shannon Everett, Marco Delbecchi, and Cooper Re. Coach accounts display unlimited test matches. Three computer opponents form a progressive boss ladder. Players must meet both the win and correct-archive-answer requirement before the server accepts a challenge. Coaches receive bypass access for testing.
 
-- Lionel Messi removes one goalkeeper zone on every shot.
-- Cristiano Ronaldo converts his first saved shot into a goal.
-- Gianluigi Buffon adds a third goalkeeper zone every round.
+- Tier 1, Gianluigi Buffon: 3 wins and 1 correct archive answer; adds a third goalkeeper zone every round.
+- Tier 2, Cristiano Ronaldo: 7 wins and 3 correct archive answers; converts his first saved shot into a goal.
+- Tier 3, Lionel Messi: 12 wins and 5 correct archive answers; removes one goalkeeper zone on every shot.
 
 Ability choices are deterministic from the challenge ID, so a stored replay always produces the same outcome.
 
