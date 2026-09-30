@@ -2,44 +2,53 @@
   "stats": {
     "slug": "white",
     "team": "JV White",
-    "updated": "September 28, 2026",
+    "updated": "September 29, 2026",
     "sourceLabel": "Team score sheets",
     "gamesNote": "GP reflects recorded participation. Goals: 2 points · Assists: 1 point",
     "notes": [],
     "audit": {
-      "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload); Score sheet photo, JV White vs Appleton West (chat upload); Score sheet photo, JV White vs Kimberly (chat upload)",
+      "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload); Score sheet photo, JV White vs Appleton West (chat upload); Score sheet photo, JV White vs Kimberly (chat upload); JV_White_OshWest.jpg",
       "sourceModifiedAt": "",
       "sourceSha256": "",
       "importedAt": "2026-09-29",
       "validation": "passed",
-      "validationSummary": "Eleven results imported; player goals total 62 (verified by recomputation). September 24 vs Appleton West and September 28 vs Kimberly goals/SOG/assists transcribed from supplied score sheet photos; ambiguous marks (Liam Evenson's Sep 24 goal mark, Wyatt Mauthepasch's Sep 28 goal mark, Ben Decker's Sep 28 save tally) were excluded or left unrecorded and are noted on each box score. Match and season totals validated by recomputation.",
+      "validationSummary": "Thirteen results; goals, assists, points and goalkeeper totals reconciled against box scores. September 29 vs Oshkosh West: 1-0; Reno Brei goal; Wyatt Mauthepasch assist; Ben Decker 10 saves and 80 coach-confirmed minutes. Historical unknown saves remain unknown. Recorded saves include the eight saves already entered for September 28.",
       "approvedBy": "Andrew Montalbano"
     },
     "record": {
-      "wins": 10,
+      "wins": 11,
       "losses": 1,
       "ties": 1,
-      "conference": "6–0–0"
+      "conference": "7–0–0"
     },
     "totals": {
-      "goalsFor": 62,
+      "goalsFor": 63,
       "goalsAgainst": 10,
       "shots": null,
-      "sog": 202,
+      "sog": 213,
       "saves": null
     },
     "goalkeepers": [
       {
         "number": 0,
         "name": "Ben Decker",
-        "games": 12,
+        "games": 13,
         "saves": null,
-        "minutes": 900,
+        "minutes": 980,
         "goalsAgainst": 10,
-        "recordedSaves": 28
+        "recordedSaves": 46
       }
     ],
     "recent": [
+      {
+        "id": 13,
+        "date": "Sep 29",
+        "opponent": "Oshkosh West",
+        "location": "Home",
+        "score": "1-0",
+        "result": "W",
+        "kickoff": "4:30 PM"
+      },
       {
         "id": 12,
         "date": "Sep 28",
@@ -151,7 +160,7 @@
       {
         "number": 0,
         "name": "Ben Decker",
-        "gp": 12,
+        "gp": 13,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -160,7 +169,7 @@
       {
         "number": 2,
         "name": "Riley Loewenhagen",
-        "gp": 12,
+        "gp": 13,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -169,7 +178,7 @@
       {
         "number": 3,
         "name": "Riley Handevidt",
-        "gp": 12,
+        "gp": 13,
         "goals": 2,
         "assists": 0,
         "points": 4,
@@ -178,7 +187,7 @@
       {
         "number": 4,
         "name": "Isaac Reynolds",
-        "gp": 12,
+        "gp": 13,
         "goals": 1,
         "assists": 2,
         "points": 4,
@@ -187,7 +196,7 @@
       {
         "number": 5,
         "name": "Carter Possley",
-        "gp": 12,
+        "gp": 13,
         "goals": 2,
         "assists": 4,
         "points": 8,
@@ -196,7 +205,7 @@
       {
         "number": 6,
         "name": "Jack Lorge",
-        "gp": 12,
+        "gp": 13,
         "goals": 2,
         "assists": 4,
         "points": 8,
@@ -205,25 +214,25 @@
       {
         "number": 7,
         "name": "Wyatt Mauthepasch",
-        "gp": 12,
+        "gp": 13,
         "goals": 10,
-        "assists": 9,
-        "points": 29,
-        "sog": 36
+        "assists": 10,
+        "points": 30,
+        "sog": 41
       },
       {
         "number": 8,
         "name": "Adam Palmer",
-        "gp": 12,
+        "gp": 13,
         "goals": 0,
         "assists": 1,
         "points": 1,
-        "sog": 7
+        "sog": 8
       },
       {
         "number": 9,
         "name": "Sam Larson",
-        "gp": 12,
+        "gp": 13,
         "goals": 3,
         "assists": 1,
         "points": 7,
@@ -232,7 +241,7 @@
       {
         "number": 10,
         "name": "Liam Evenson",
-        "gp": 12,
+        "gp": 13,
         "goals": 11,
         "assists": 5,
         "points": 27,
@@ -241,16 +250,16 @@
       {
         "number": 11,
         "name": "Bryce Draeger",
-        "gp": 12,
+        "gp": 13,
         "goals": 1,
         "assists": 1,
         "points": 3,
-        "sog": 7
+        "sog": 9
       },
       {
         "number": 12,
         "name": "Connor Schmitt",
-        "gp": 12,
+        "gp": 13,
         "goals": 1,
         "assists": 1,
         "points": 3,
@@ -259,7 +268,7 @@
       {
         "number": 13,
         "name": "Bennett Froelich",
-        "gp": 12,
+        "gp": 13,
         "goals": 2,
         "assists": 1,
         "points": 5,
@@ -268,7 +277,7 @@
       {
         "number": 14,
         "name": "Matthew Racine",
-        "gp": 12,
+        "gp": 13,
         "goals": 3,
         "assists": 1,
         "points": 7,
@@ -277,7 +286,7 @@
       {
         "number": 15,
         "name": "Josh Petricca",
-        "gp": 12,
+        "gp": 13,
         "goals": 0,
         "assists": 3,
         "points": 3,
@@ -286,7 +295,7 @@
       {
         "number": 16,
         "name": "Liam Adkins",
-        "gp": 12,
+        "gp": 13,
         "goals": 3,
         "assists": 2,
         "points": 8,
@@ -295,7 +304,7 @@
       {
         "number": 17,
         "name": "Ollie Schmidt",
-        "gp": 12,
+        "gp": 13,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -304,16 +313,16 @@
       {
         "number": 18,
         "name": "James Forsythe",
-        "gp": 12,
+        "gp": 13,
         "goals": 1,
         "assists": 1,
         "points": 3,
-        "sog": 4
+        "sog": 5
       },
       {
         "number": 20,
         "name": "Nate Shaw",
-        "gp": 12,
+        "gp": 13,
         "goals": 2,
         "assists": 4,
         "points": 8,
@@ -322,16 +331,16 @@
       {
         "number": 21,
         "name": "Reno Brei",
-        "gp": 12,
-        "goals": 13,
+        "gp": 13,
+        "goals": 14,
         "assists": 5,
-        "points": 31,
-        "sog": 39
+        "points": 33,
+        "sog": 40
       },
       {
         "number": 22,
         "name": "Grayson Whitver",
-        "gp": 12,
+        "gp": 13,
         "goals": 3,
         "assists": 0,
         "points": 6,
@@ -340,16 +349,16 @@
       {
         "number": 23,
         "name": "Nate Diedrich",
-        "gp": 12,
+        "gp": 13,
         "goals": 1,
         "assists": 2,
         "points": 4,
-        "sog": 4
+        "sog": 5
       },
       {
         "number": 24,
         "name": "Carter Halford",
-        "gp": 12,
+        "gp": 13,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -358,7 +367,7 @@
       {
         "number": 25,
         "name": "Carter Hirschi",
-        "gp": 12,
+        "gp": 13,
         "goals": 1,
         "assists": 3,
         "points": 5,
@@ -367,7 +376,7 @@
       {
         "number": 26,
         "name": "Lachlan Elliott",
-        "gp": 12,
+        "gp": 13,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -4040,14 +4049,13 @@
       "conference": true,
       "result": "W",
       "sourceFile": "Score sheet photo, JV White vs Kimberly (chat upload)",
-      "notes": [
-      ],
+      "notes": [],
       "scoringRecorded": false,
       "unattributedGoals": 0,
       "team": {
         "shots": null,
         "sog": 13,
-        "saves": null,
+        "saves": 8,
         "yc": null,
         "rc": null,
         "goals": 7
@@ -4353,6 +4361,339 @@
           "sog": 0,
           "goals": 0,
           "assists": 1,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        }
+      ],
+      "scoring": [],
+      "scheduleSource": "SportsYou calendar"
+    },
+    {
+      "id": 13,
+      "date": "2026-09-29",
+      "opponent": "Oshkosh West",
+      "location": "Home · Akin Field",
+      "kickoff": "4:30 PM",
+      "conference": true,
+      "result": "W",
+      "sourceFile": "JV_White_OshWest.jpg (coach supplied)",
+      "notes": [
+        "Shots on goal include the 10 shot tallies plus Reno Brei’s goal, following the team score-sheet convention. Ben Decker’s full 80 minutes confirmed by coach."
+      ],
+      "scoringRecorded": false,
+      "unattributedGoals": 0,
+      "team": {
+        "shots": null,
+        "sog": 11,
+        "saves": 10,
+        "yc": null,
+        "rc": null,
+        "goals": 1
+      },
+      "opponentTotals": {
+        "shots": null,
+        "saves": null,
+        "goals": 0
+      },
+      "players": [
+        {
+          "player": "Ben Decker",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": 10,
+          "gkMinutes": 80,
+          "recordedSog": 0,
+          "goalsAgainst": 0
+        },
+        {
+          "player": "Riley Loewenhagen",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Riley Handevidt",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Isaac Reynolds",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Carter Possley",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Jack Lorge",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Wyatt Mauthepasch",
+          "shots": null,
+          "sog": 5,
+          "goals": 0,
+          "assists": 1,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 5
+        },
+        {
+          "player": "Adam Palmer",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Sam Larson",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Liam Evenson",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Bryce Draeger",
+          "shots": null,
+          "sog": 2,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 2
+        },
+        {
+          "player": "Connor Schmitt",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Bennett Froelich",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Matthew Racine",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Josh Petricca",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Liam Adkins",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Ollie Schmidt",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "James Forsythe",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Nate Shaw",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Reno Brei",
+          "shots": null,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Grayson Whitver",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Nate Diedrich",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Carter Halford",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Carter Hirschi",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Lachlan Elliott",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
           "yc": null,
           "rc": null,
           "saves": null,

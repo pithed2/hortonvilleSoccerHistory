@@ -1,24 +1,30 @@
 {
   "source": "https://soccer.statsplus.net/rankings/conference/5637/",
-  "updated": "2026-09-24",
-  "notes": "FVA conference-only records from StatsPlus, refreshed September 24. Hortonville’s 8-0 win at Appleton West is added from the MaxPreps final because StatsPlus has not posted it yet.",
+  "updated": "2026-09-29",
+  "notes": "FVA conference-only records from StatsPlus, refreshed September 29. Hortonville’s 6-1 win over Oshkosh West is added to both teams from the MaxPreps final because StatsPlus has not posted it yet.",
   "standings": [
     {
-      "Team": "Appleton North",
-      "W": 5,
-      "L": 1,
-      "T": 0
-    },
-    {
       "Team": "Hortonville",
-      "W": 5,
+      "W": 6,
       "L": 0,
       "T": 1
     },
     {
+      "Team": "Appleton North",
+      "W": 5,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "Team": "Appleton East",
+      "W": 4,
+      "L": 3,
+      "T": 0
+    },
+    {
       "Team": "Oshkosh West",
       "W": 3,
-      "L": 1,
+      "L": 2,
       "T": 2
     },
     {
@@ -36,14 +42,8 @@
     {
       "Team": "Fond du Lac",
       "W": 2,
-      "L": 2,
-      "T": 1
-    },
-    {
-      "Team": "Appleton East",
-      "W": 2,
       "L": 3,
-      "T": 0
+      "T": 1
     },
     {
       "Team": "Kaukauna",
