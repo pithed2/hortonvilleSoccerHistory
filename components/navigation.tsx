@@ -12,6 +12,7 @@ const navGroups = [
     links: [
       { label: "2026 Varsity", href: "/seasons/2026" },
       { label: "JV Teams", href: "/jv" },
+      { label: "Player Cards", href: "/player-cards" },
     ],
   },
   {

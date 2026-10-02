@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} font-sans antialiased`}> 
+      <body className={`${poppins.className} ${poppins.variable} font-sans antialiased`}> 
         <a
           href="#main-content"
           className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-foreground px-4 py-3 font-bold text-background shadow-lg transition-transform focus:translate-y-0"

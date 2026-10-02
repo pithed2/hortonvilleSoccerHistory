@@ -11,7 +11,7 @@ export async function GET() {
   if (!me) return NextResponse.json({ authenticated: false })
   const db = getRedRoomDb()
   const [roster, memberships, myChallenges, allCompleted, questions, attempts] = await Promise.all([
-    db.select({ id: players.id, displayName: players.displayName, publicTag: players.publicTag, rating: players.rating, accountType: players.accountType, isBot: players.isBot, specialAbility: players.specialAbility, specialAbilityLabel: players.specialAbilityLabel, victoryId: players.victoryId, celebrationId: players.celebrationId }).from(players).orderBy(players.displayName),
+    db.select({ id: players.id, displayName: players.displayName, publicTag: players.publicTag, rating: players.rating, accountType: players.accountType, isBot: players.isBot, specialAbility: players.specialAbility, specialAbilityLabel: players.specialAbilityLabel, tauntId: players.tauntId, victoryId: players.victoryId, celebrationId: players.celebrationId }).from(players).orderBy(players.displayName),
     db.select().from(rosterMemberships),
     db.select().from(challenges).where(or(eq(challenges.challengerId, me.id), eq(challenges.opponentId, me.id))).orderBy(desc(challenges.createdAt)).limit(20),
     db.select().from(challenges).where(eq(challenges.status, "completed")),
@@ -48,6 +48,8 @@ export async function GET() {
     players: roster.filter((player) => player.id !== me.id && canSeeRedRoomPlayer(me, player)).map((player) => ({ ...player, specialAbilityLabel: legendAbilityLabel(player.specialAbility, player.specialAbilityLabel), squads: squadByPlayer.get(player.id) || [], legendUnlock: legendProgress(player.publicTag, wins, correctlyAnswered.size, me.accountType === "coach" || me.accountType === "private") })),
     challenges: myChallenges.map((challenge) => ({
       ...challenge,
+      challengerTauntId: playerById.get(challenge.challengerId)?.tauntId || "pressure",
+      opponentTauntId: playerById.get(challenge.opponentId)?.tauntId || "pressure",
       challengerName: playerById.get(challenge.challengerId)?.displayName,
       opponentName: playerById.get(challenge.opponentId)?.displayName,
       challengerVictoryId: playerById.get(challenge.challengerId)?.victoryId,

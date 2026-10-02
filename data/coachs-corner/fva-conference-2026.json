@@ -1,13 +1,19 @@
 {
   "source": "https://soccer.statsplus.net/rankings/conference/5637/",
-  "updated": "2026-09-30",
-  "notes": "FVA conference-only records from StatsPlus, refreshed September 30. Includes the September 29 results, including Hortonville’s 6-1 win over Oshkosh West.",
+  "updated": "2026-10-01",
+  "notes": "FVA conference-only records from StatsPlus, refreshed October 1. Includes Appleton East’s 2-1 win over Oshkosh West. Hortonville (7-0-1) and Kimberly (4-3-1) include the October 1 Hortonville 3-0 win, verified against the MaxPreps box score; this result is not yet included in StatsPlus standings.",
   "standings": [
     {
       "Team": "Hortonville",
-      "W": 6,
+      "W": 7,
       "L": 0,
       "T": 1
+    },
+    {
+      "Team": "Appleton East",
+      "W": 5,
+      "L": 3,
+      "T": 0
     },
     {
       "Team": "Appleton North",
@@ -18,7 +24,7 @@
     {
       "Team": "Kimberly",
       "W": 4,
-      "L": 2,
+      "L": 3,
       "T": 1
     },
     {
@@ -28,15 +34,9 @@
       "T": 1
     },
     {
-      "Team": "Appleton East",
-      "W": 4,
-      "L": 3,
-      "T": 0
-    },
-    {
       "Team": "Oshkosh West",
       "W": 3,
-      "L": 2,
+      "L": 3,
       "T": 2
     },
     {
@@ -64,5 +64,14 @@
       "T": 0
     }
   ],
-  "latestResultSource": "https://www.maxpreps.com/print/contest_stats.aspx?ContestId=c1147f25-4c54-4e8a-bea9-0e65070f74bf&ssid=ca5a6045-d072-443c-85de-08ce0e287273&admin=1"
+  "latestResultSource": "https://www.maxpreps.com/print/contest_stats.aspx?ContestId=cc8c2051-9d73-4307-8738-201d864d26b0&ssid=ca5a6045-d072-443c-85de-08ce0e287273",
+  "resultOverrides": [
+    {
+      "date": "2026-10-01",
+      "team": "Hortonville",
+      "opponent": "Kimberly",
+      "score": "3-0",
+      "source": "https://www.maxpreps.com/print/contest_stats.aspx?ContestId=cc8c2051-9d73-4307-8738-201d864d26b0&ssid=ca5a6045-d072-443c-85de-08ce0e287273"
+    }
+  ]
 }

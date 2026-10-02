@@ -2,6 +2,7 @@
 const isDevelopment = process.env.NODE_ENV === "development"
 
 const nextConfig = {
+  experimental: { serverActions: { bodySizeLimit: "2mb" } },
   outputFileTracingIncludes: {
     "/coachs-corner/weekly-review/*/download": ["./data/coachs-corner/weekly-reviews/*.docx"],
   },

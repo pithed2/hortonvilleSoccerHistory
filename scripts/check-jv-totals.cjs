@@ -21,7 +21,14 @@ for (const slug of ['red', 'white']) {
   for (const game of boxScores) {
     assert.equal(new Set(game.players.map(p => p.player)).size, game.players.length, `${slug} duplicate player: ${game.id}`)
     assert.equal(sum(game.players, 'goals') + (game.unattributedGoals ?? 0), game.team.goals, `${slug} goals reconciliation: ${game.id}`)
-    for (const line of game.players) assert.equal(stats.players.filter(p => matches(line, p)).length, 1, `Unmatched player: ${line.player}`)
+    for (const line of game.players) {
+      // The source Game Log also records staff cautions. Keep those in the
+      // box score without treating the coach as a rostered player.
+      if (line.player.startsWith('HC - ')) {
+        for (const stat of ['shots', 'sog', 'goals', 'assists', 'saves', 'gkMinutes']) assert.equal(line[stat], 0, `Staff entry has player stats: ${line.player}`)
+        assert(line.yc > 0 || line.rc > 0, `Staff entry has no recorded card: ${line.player}`)
+      } else assert.equal(stats.players.filter(p => matches(line, p)).length, 1, `Unmatched player: ${line.player}`)
+    }
   }
   for (const keeper of stats.goalkeepers) {
     const appearances = boxScores.flatMap(game => game.players.filter(line => matches(line, keeper) && line.gkMinutes > 0).map(line => ({ game, line })))

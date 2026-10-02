@@ -1,0 +1,36 @@
+.scene { position: relative; isolation: isolate; aspect-ratio: 1.6; overflow: hidden; border-radius: 16px; background: linear-gradient(#09121d 0%, #182735 60%, #284f32 61%, #132b20 100%); }
+.lights { position: absolute; inset: 0; background: radial-gradient(ellipse at 0 0, #ffffff70, transparent 40%), radial-gradient(ellipse at 100% 0, #ffffff70, transparent 40%); }
+.net { position: absolute; left: 3%; right: 3%; top: 8%; height: 68%; display: grid; grid-template-columns: repeat(3, 1fr); border: 4px solid white; border-bottom-width: 2px; background: repeating-linear-gradient(0deg, transparent 0 13px, #ffffff17 13px 14px), repeating-linear-gradient(90deg, transparent 0 13px, #ffffff17 13px 14px); }
+.net span { color: #ffffff35; font-size: 10px; text-align: left; padding: 4px; border: 1px solid #ffffff18; }
+.net .covered { background: #c4f54e22; color: #dbffa4; }
+.keeper { position: absolute; width: 20%; left: var(--keeper-x); top: var(--keeper-y); transform: translate(-50%, -50%) rotate(var(--lean)); animation: dive 1.4s both; z-index: 2; }
+.keeper svg { width: 100%; filter: drop-shadow(0 5px 5px #0008); }
+.ball { position: absolute; left: var(--ball-x); top: var(--ball-y); font-size: 25px; transform: translate(-50%,-50%) scale(.65); animation: kick 1.4s both; z-index: 3; }
+.save .ball { animation: kick 1.4s both, rebound .65s 1.4s both; }
+.impact { position: absolute; top: 40%; left: 0; width: 100%; font-size: clamp(24px, 6vw, 42px); font-style: italic; font-weight: 950; color: #c4f54e; text-shadow: 0 3px 0 #000; animation: impact .4s 1.5s both; z-index: 4; }
+.save .impact { color: #ff5353; }
+.goal .net { animation: ripple .5s 1.4s; }
+.caption { position: absolute; bottom: 8px; width: 100%; color: #fff9; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.scene[data-paused="true"] * { animation-play-state: paused !important; }
+@keyframes dive { 0%, 28% { left: 50%; top: 54%; transform: translate(-50%,-50%) rotate(0); } 100% { left: var(--keeper-x); top: var(--keeper-y); transform: translate(-50%,-50%) rotate(var(--lean)); } }
+@keyframes kick { 0%, 20% { left: 50%; top: 88%; transform: translate(-50%,-50%) scale(1.25); } 100% { left: var(--ball-x); top: var(--ball-y); transform: translate(-50%,-50%) scale(.65) rotate(300deg); } }
+@keyframes rebound { to { top: 84%; transform: translate(-50%,-50%) scale(.9) rotate(440deg); } }
+@keyframes ripple { 50% { transform: scale(1.025); } }
+@keyframes impact { from { opacity: 0; transform: scale(1.6); } to { opacity: 1; transform: scale(1); } }
+.finish { position: relative; overflow: hidden; margin-top: 18px; padding: 24px 14px; border: 1px solid #ef444466; border-radius: 16px; background: radial-gradient(ellipse at top, #8b152b, #180a10 80%); animation: impact .4s both; }
+.winner { background: radial-gradient(ellipse at top, #a02635, #1b1018 80%); }
+.verdict { font-size: 11px; letter-spacing: .2em; font-weight: 900; color: #fca5a5; }
+.emblem { font-size: 50px; margin: 12px; animation: pose 1.2s ease-in-out 3; }
+.finish[data-celebration="slide"] .emblem { animation-name: slide; }
+.finish[data-celebration="akin_bell"] .emblem, .finish[data-celebration="guitar"] .emblem { animation-name: ring; }
+.finish[data-celebration="ice"] { background: radial-gradient(ellipse at top, #285c73, #101522 80%); }
+.finish[data-celebration="camera"] .emblem, .finish[data-celebration="team_photo"] .emblem { animation-name: flash; }
+.finish[data-celebration="statue"] .emblem { animation: impact .5s both; }
+.confetti { position: absolute; inset: 0; pointer-events: none; }
+.confetti i { position: absolute; top: -12px; width: 6px; height: 12px; animation: fall 2s ease-in 2; }
+@keyframes pose { 50% { transform: translateY(-10px) scale(1.15); } }
+@keyframes slide { from { transform: translateX(-100px) rotate(-15deg); } to { transform: translateX(0); } }
+@keyframes ring { 25% { transform: rotate(-25deg); } 75% { transform: rotate(25deg); } }
+@keyframes flash { 50% { filter: brightness(2); transform: scale(1.2); } }
+@keyframes fall { to { transform: translateY(320px) rotate(500deg); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .scene *, .finish, .finish * { animation: none !important; } .confetti { display: none; } }

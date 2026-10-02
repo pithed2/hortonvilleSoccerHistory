@@ -1,0 +1,2 @@
+import Link from "next/link"
+export default function CardNotFound() { return <main className="grid min-h-screen place-items-center bg-[#0d1018] p-6 text-white"><div className="max-w-md text-center"><h1 className="text-3xl font-black">This card isn’t available.</h1><p className="mt-4 text-white/60">It may still be in the studio, or the link may be incorrect. Ask Coach Andy for your current card link.</p><Link href="/player-cards" className="mt-6 inline-block underline">About player cards</Link></div></main> }

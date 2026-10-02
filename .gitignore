@@ -34,3 +34,5 @@ next-env.d.ts
 # Local Red Room database and private player-key exports
 /.red-room/
 /output/red-room-player-keys-*.csv
+/.player-cards.db*
+/.player-cards-test.db*
