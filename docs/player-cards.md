@@ -1,14 +1,14 @@
 # Player cards
 
-Player Cards is separate from the Red Room. `/player-cards` is the public landing page. Coaches use `/coachs-corner/player-cards` with existing Coach’s Corner sign-in.
+Player Cards is separate from the Red Room. Public release requires explicit user approval. Player Cards appears only inside Coach’s Corner; `/player-cards` redirects to the private studio. Coaches use `/coachs-corner/player-cards` with existing Coach’s Corner sign-in.
 
 ## Preparing a card
 
 1. Select a 2026 varsity player, Miles Montalbano (2021 alumni sample), or OG Andy (temporary example with supplied photos and Cracked Ice preselected). OG Andy appears only in the studio’s card choices, not the official roster or statistics; no historical season or stats are invented. Existing saved drafts take precedence over the example defaults.
 2. Supply a portrait and action photo, plus an optional separate back photo (JPG, PNG, WebP; up to 20 MB input). The browser resizes and compresses each image before saving. Adjust horizontal position, vertical position, and zoom.
 3. Enter a coach-supplied overview, up to 500 characters. Select Polar Red, Black & White, or Cracked Ice. Confirm permission to use the photos.
-4. Save a private draft or publish. Publishing snapshots official stats on the server. Draft edits never change the published version until published again.
-5. Copy the individual unlisted link or download its QR. Players download front and back PNGs at 1000 × 1400. Links use random 128-bit tokens, remain stable across updates, and stop working when a card is withdrawn. Anyone with a link can access it; there is no public player directory.
+4. Save a private draft or review copy. Review copies snapshot official stats on the server. Draft edits never change the review copy until saved again.
+5. Copy the individual unlisted link or download its QR. Players download front and back PNGs at 1000 × 1400. Links use random 128-bit tokens, remain stable across updates, and stop working when a card is withdrawn. All card links use `/coachs-corner/player-cards/[token]` and require coach sign-in before any card data is loaded. Legacy `/player-cards/[token]` links redirect to the protected route. There is no public player directory.
 
 Stats use the existing varsity archive, verified spelling aliases, and dedicated goalkeeper records. Unknown fields remain `—`; partial career totals use `*`. No invented ratings or unrecorded clean-sheet figures. Miles uses 2021 and 2020–2021 career totals rather than 2026. Current cards say “Conference Champions”; alumni cards do not.
 

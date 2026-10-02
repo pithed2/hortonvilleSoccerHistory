@@ -28,9 +28,9 @@ export async function savePlayerCard(id: string, input: CardDesign, publish: boo
   try {
     const player = await authorize(id)
     const design = designSchema.parse(input)
-    if (publish && (!design.portrait.src || !design.action.src || !design.overview || !design.rightsConfirmed)) return { error: "Add both photos and a player overview, then confirm permission to use the photos before publishing." }
+    if (publish && (!design.portrait.src || !design.action.src || !design.overview || !design.rightsConfirmed)) return { error: "Add both photos and a player overview, then confirm permission to use the photos before saving a review copy." }
     const token = await saveCard(id, design, publish ? { player, design, publishedAt: new Date().toISOString() } : undefined)
-    return { token, success: publish ? "Published. The player can now download this card." : "Draft saved. The shared card has not changed." }
+    return { token, success: publish ? "Review copy saved. Coach sign-in is required to view this card." : "Draft saved. The review copy has not changed." }
   } catch (error) { return { error: error instanceof z.ZodError ? error.issues[0].message : error instanceof Error ? error.message : "Could not save the card. Please try again." } }
 }
 export async function unpublishPlayerCard(id: string) {

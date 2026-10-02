@@ -40,7 +40,7 @@ export function CoachDashboard({ data, today }: { data: Data; today: string }) {
         </div>
       </header>
       <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6">
-        <Link href="/coachs-corner/player-cards" className="mb-6 flex items-center justify-between gap-4 rounded-2xl border bg-white p-5 shadow-sm hover:border-primary"><div><p className="text-xs font-bold uppercase tracking-wide text-primary">A treat from Coach Andy</p><h2 className="mt-1 text-xl font-bold">Player Card Studio</h2><p className="mt-1 text-sm text-muted-foreground">Prepare photos, player write-ups, and individual download links.</p></div><ChevronRight className="size-6 shrink-0 text-primary" /></Link>
+        <Link href="/coachs-corner/player-cards" className="mb-6 flex items-center justify-between gap-4 rounded-2xl border bg-white p-5 shadow-sm hover:border-primary"><div><p className="text-xs font-bold uppercase tracking-wide text-primary">A gift from the Coaches</p><h2 className="mt-1 text-xl font-bold">Player Card Studio</h2><p className="mt-1 text-sm text-muted-foreground">Prepare photos, player write-ups, and individual download links.</p></div><ChevronRight className="size-6 shrink-0 text-primary" /></Link>
         <Link href="/coachs-corner/weekly-review" className="mb-6 flex items-center justify-between gap-4 rounded-2xl border bg-white p-5 shadow-sm hover:border-primary">
           <div><p className="text-xs font-bold uppercase tracking-wide text-primary">Weekly updates</p><h2 className="mt-1 text-xl font-bold">Weekly Update Review</h2><p className="mt-1 text-sm text-muted-foreground">Regional results, the week ahead, and review versions.</p></div>
           <ChevronRight className="size-6 shrink-0 text-primary" />
