@@ -4,7 +4,7 @@ Player Cards is separate from the Red Room. `/player-cards` is the public landin
 
 ## Preparing a card
 
-1. Select a 2026 varsity player, or Miles Montalbano (2021 alumni sample).
+1. Select a 2026 varsity player, Miles Montalbano (2021 alumni sample), or OG Andy (temporary example with supplied photos and Cracked Ice preselected). OG Andy appears only in the studio’s card choices, not the official roster or statistics; no historical season or stats are invented. Existing saved drafts take precedence over the example defaults.
 2. Supply a portrait and action photo, plus an optional separate back photo (JPG, PNG, WebP; up to 20 MB input). The browser resizes and compresses each image before saving. Adjust horizontal position, vertical position, and zoom.
 3. Enter a coach-supplied overview, up to 500 characters. Select Polar Red, Black & White, or Cracked Ice. Confirm permission to use the photos.
 4. Save a private draft or publish. Publishing snapshots official stats on the server. Draft edits never change the published version until published again.

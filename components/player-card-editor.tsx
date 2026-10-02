@@ -25,7 +25,7 @@ async function preparePhoto(file: File) {
 }
 
 export function PlayerCardEditor({ players }: { players: CardPlayer[] }) {
-  const [id, setId] = useState(players.find((player) => player.name === "Miles Montalbano")?.id ?? players[0]?.id ?? "")
+  const [id, setId] = useState(players.find((player) => player.id === "og-andy")?.id ?? players.find((player) => player.name === "Miles Montalbano")?.id ?? players[0]?.id ?? "")
   const [design, setDesign] = useState<CardDesign>(blankCardDesign)
   const [busy, setBusy] = useState(true)
   const [dirty, setDirty] = useState(false)
@@ -71,8 +71,8 @@ export function PlayerCardEditor({ players }: { players: CardPlayer[] }) {
   if (!player) return <p>No varsity players found.</p>
   return <div className="grid gap-10 lg:grid-cols-[300px_minmax(0,1fr)]">
     <section className="space-y-5">
-      <label className="block text-sm font-bold">Player<select value={id} disabled={busy} onChange={(event) => { if (dirty && !window.confirm("Discard unsaved changes to this card?")) return; revision.current++; setBusy(true); setLoadError(false); setMessage(""); setToken(""); setPublished(false); setId(event.target.value) }} className="mt-2 w-full rounded-lg border border-white/20 bg-[#181c26] p-3">{players.map((entry) => <option key={entry.id} value={entry.id}>{entry.name} · #{entry.number}{entry.season !== 2026 ? " · Alumni sample" : ""}</option>)}</select></label>
-      <p className="text-xs leading-5 text-white/55">Stats are loaded from the varsity archive. Publishing saves a snapshot; publish again to refresh totals as the season progresses.</p>
+      <label className="block text-sm font-bold">Player<select value={id} disabled={busy} onChange={(event) => { if (dirty && !window.confirm("Discard unsaved changes to this card?")) return; revision.current++; setBusy(true); setLoadError(false); setMessage(""); setToken(""); setPublished(false); setId(event.target.value) }} className="mt-2 w-full rounded-lg border border-white/20 bg-[#181c26] p-3">{players.map((entry) => <option key={entry.id} value={entry.id}>{entry.name} · #{entry.number}{entry.example ? " · Temporary example" : entry.season !== 2026 ? " · Alumni sample" : ""}</option>)}</select></label>
+      <p className="text-xs leading-5 text-white/55">{player.example ? "Temporary example card. Your supplied photos are preloaded; stats have not been supplied." : "Stats are loaded from the varsity archive. Publishing saves a snapshot; publish again to refresh totals as the season progresses."}</p>
       <fieldset disabled={busy || loadError} className="space-y-5 disabled:opacity-50">
         <PhotoControls title="Portrait / front" photo={design.portrait} onFile={(file) => upload("portrait", file)} onCrop={(photo) => edit({ portrait: photo })} />
         <PhotoControls title="Action photo / back" photo={design.action} onFile={(file) => upload("action", file)} onCrop={(photo) => edit({ action: photo })} />
@@ -86,7 +86,7 @@ export function PlayerCardEditor({ players }: { players: CardPlayer[] }) {
       <p role="status" className="text-sm text-red-200">{busy ? "Working…" : message || (dirty ? "Unsaved changes" : "")}</p>
       {published && token ? <PlayerCardShare token={token} /> : <p className="text-xs text-white/40">Drafts are private. Publish when ready to create a working player link and QR code.</p>}
     </section>
-    <section><div className="mb-6 flex flex-wrap items-end justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-widest text-red-400">{player.season === 2026 ? "Championship collection" : "Alumni sample"}</p><h2 className="mt-2 text-3xl font-black">{player.name}</h2></div><span className="text-xs text-white/40">{published ? "Editing draft · shared version stays live" : "Private draft"}</span></div><div className="grid gap-6 md:grid-cols-2"><PlayerCardPreview player={player} design={design} side="front" /><PlayerCardPreview player={player} design={design} side="back" /></div><p className="mt-5 text-xs text-white/50">Preview and PNG use the same artwork. Crop each photo with the controls, then download either side to inspect the full-size result.</p></section>
+    <section><div className="mb-6 flex flex-wrap items-end justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-widest text-red-400">{player.example ? "Throwback example" : player.season === 2026 ? "Championship collection" : "Alumni sample"}</p><h2 className="mt-2 text-3xl font-black">{player.name}</h2></div><span className="text-xs text-white/40">{published ? "Editing draft · shared version stays live" : "Private draft"}</span></div><div className="grid gap-6 md:grid-cols-2"><PlayerCardPreview player={player} design={design} side="front" /><PlayerCardPreview player={player} design={design} side="back" /></div><p className="mt-5 text-xs text-white/50">Preview and PNG use the same artwork. Crop each photo with the controls, then download either side to inspect the full-size result.</p></section>
   </div>
 }
 

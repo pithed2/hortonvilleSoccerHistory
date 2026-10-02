@@ -1,5 +1,6 @@
 import { rosterBySeason, varsityHistoryByPlayer, type VarsitySeasonHistory } from "./player-stats"
 import type { CardPlayer } from "./player-card-types"
+import { ogAndyPlayer } from "./player-card-examples"
 
 export function cardPlayerId(name: string) { return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") }
 
@@ -15,7 +16,7 @@ export function cardTotal(history: VarsitySeasonHistory[], key: string, keeper =
 export function cardPlayers(): CardPlayer[] {
   const histories = varsityHistoryByPlayer()
   const roster = [...rosterBySeason(2026), ...rosterBySeason(2021).filter((player) => player.player_name === "Miles Montalbano")]
-  return roster.map((player) => {
+  const players: CardPlayer[] = roster.map((player) => {
     const year = player.season
     const history = (histories.get(player.player_name) ?? []).filter((entry) => entry.season <= year)
     const season = history.filter((entry) => entry.season === year)
@@ -26,4 +27,5 @@ export function cardPlayers(): CardPlayer[] {
     const first = years.length ? Math.min(...years) : year
     return { id: cardPlayerId(player.player_name), name: player.player_name, number: player.number, position: player.position, classYear: player.class, season: year, careerSpan: first === year ? String(year) : `${first}–${year}`, metrics, incomplete: metrics.some((metric) => /[—*]/.test(metric.season + metric.career)) }
   })
+  return [...players, ogAndyPlayer]
 }

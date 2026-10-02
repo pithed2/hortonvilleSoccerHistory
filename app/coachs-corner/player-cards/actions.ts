@@ -6,6 +6,7 @@ import { COACH_COOKIE, validCoachCookie } from "@/lib/coach-auth"
 import { cardPlayers } from "@/lib/player-cards"
 import { cardDraft, saveCard, withdrawCard } from "@/lib/player-card-store"
 import type { CardDesign } from "@/lib/player-card-types"
+import { exampleCardDesign } from "@/lib/player-card-examples"
 
 const photo = z.object({ src: z.string().max(600_000).refine((value) => !value || /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(value), "Use a JPEG, PNG, or WebP photo."), x: z.number().min(0).max(100), y: z.number().min(0).max(100), zoom: z.number().min(1).max(2) })
 const designSchema = z.object({ portrait: photo, action: photo, highlight: photo.optional(), overview: z.string().trim().max(500), theme: z.enum(["red", "black", "ice"]), rightsConfirmed: z.boolean() })
@@ -16,7 +17,12 @@ async function authorize(id: string) {
   return player
 }
 export async function loadCardDraft(id: string) {
-  try { await authorize(id); return { draft: await cardDraft(id) } } catch (error) { return { error: error instanceof Error ? error.message : "Could not load draft." } }
+  try {
+    await authorize(id)
+    const draft = await cardDraft(id)
+    const example = !draft ? exampleCardDesign(id) : undefined
+    return { draft: draft ?? (example ? { design: example, published: false, token: "" } : null) }
+  } catch (error) { return { error: error instanceof Error ? error.message : "Could not load draft." } }
 }
 export async function savePlayerCard(id: string, input: CardDesign, publish: boolean) {
   try {

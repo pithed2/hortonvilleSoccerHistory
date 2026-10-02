@@ -146,11 +146,11 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     ctx.drawImage(logo, 42, 25, 90, 90)
     text("HORTONVILLE", 160, 65, 38); text("POLAR BEARS / BOYS SOCCER", 160, 102, 20, "#FFFFFF")
     text(`#${player.number}`, 765, 100, 70, accent, 900, 190)
-    text(player.season === 2026 ? "2026 FOX VALLEY ASSOCIATION CHAMPIONS" : "ALUMNI EDITION", 55, 1140, 25, accent, 800, 890)
+    text(player.example ? "OG ANDY / EXAMPLE EDITION" : player.season === 2026 ? "2026 FOX VALLEY ASSOCIATION CHAMPIONS" : "ALUMNI EDITION", 55, 1140, 25, accent, 800, 890)
     const parts = player.name.split(" "), last = parts.pop() ?? "", first = parts.join(" ")
     text(first.toUpperCase(), 55, 1197, 44, "#fff", 700, 885)
     text(last.toUpperCase(), 50, 1284, 88, "#fff", 900, 900)
-    text([player.position, player.classYear, player.season].filter(Boolean).join("  /  "), 55, 1341, 25, "#FFFFFF")
+    text(player.example ? `#${player.number}  /  THROWBACK COLLECTION` : [player.position, player.classYear, player.season].filter(Boolean).join("  /  "), 55, 1341, 25, "#FFFFFF")
   } else {
     photo(highlight ?? action, highlight && design.highlight ? design.highlight : design.action, 0, 0, 1000, 650)
     if (isIce) {
@@ -161,10 +161,10 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     const shade = ctx.createLinearGradient(0, 350, 0, 650); shade.addColorStop(0, "#00000000"); shade.addColorStop(1, "#000000")
     ctx.fillStyle = shade; ctx.fillRect(0, 350, 1000, 300)
     numberWatermark(955, 985, 420, "right")
-    text(`${player.position}  /  #${player.number}`, 55, 70, 30)
+    text([player.position, `#${player.number}`].filter(Boolean).join("  /  "), 55, 70, 30)
     text(player.name.toUpperCase(), 50, 620, 58, "#fff", 900, 900)
     ctx.fillStyle = foilGradient(50, 650, 950, 660); ctx.fillRect(50, 655, 900, 5)
-    text(`VARSITY CAREER / ${player.careerSpan}`, 55, 700, 22, accent)
+    text(player.example ? "PLAYER SNAPSHOT / EXAMPLE EDITION" : `VARSITY CAREER / ${player.careerSpan}`, 55, 700, 22, accent)
     // Stat table: a bordered scoreboard grid — header bar, two distinct rows, and
     // ruled column/row dividers — rather than text floating on the bare background.
     const tableX = 50, tableW = 900, labelW = 230, headerH = 62, rowH = 74, tableTop = 730
@@ -175,7 +175,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     text("SEASON", tableX + 22, tableTop + 40, 22)
     player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.label, positions[i], tableTop + 40, 22) }); ctx.textAlign = "left"
     ctx.fillStyle = design.theme === "black" || isIce ? "rgba(255,255,255,.1)" : "rgba(228,0,43,.16)"; ctx.fillRect(tableX, seasonY, tableW, rowH)
-    text(String(player.season), tableX + 22, seasonY + 47, 28, accent, 800)
+    text(player.example ? "EXAMPLE" : String(player.season), tableX + 22, seasonY + 47, 28, accent, 800)
     player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.season, positions[i], seasonY + 47, 32) }); ctx.textAlign = "left"
     ctx.fillStyle = "rgba(255,255,255,.04)"; ctx.fillRect(tableX, careerY, tableW, rowH)
     text("CAREER", tableX + 22, careerY + 47, 28, "#fff", 800)
@@ -206,7 +206,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
       fontSize--
     } while (fontSize > 12)
     lines.forEach((value, i) => text(value, 55, 1030 + i * (fontSize + 6), fontSize, "#FFFFFF", 400))
-    if (player.incomplete) text("— Not recorded   * Documented totals; some seasons incomplete", 55, 1232, 18, "#9D9D9D", 400)
+    if (player.incomplete) text(player.example ? "— Stats not supplied for this example" : "— Not recorded   * Documented totals; some seasons incomplete", 55, 1232, 18, "#9D9D9D", 400)
     // Footer: a distinct panel band — crest, accent stripe, player name — Hortonville —
     // set apart from the overview text above instead of floating on the bare background.
     ctx.fillStyle = "rgba(255,255,255,.05)"; ctx.fillRect(50, 1248, 900, 140)
