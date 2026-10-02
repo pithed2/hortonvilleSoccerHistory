@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { TeamSelector } from "@/components/team-selector"
-import { StateRankingHighlight } from "@/components/state-ranking-highlight"
+import { ConferenceChampionshipHighlight } from "@/components/conference-championship-highlight"
 import { ImportantLinks } from "@/components/important-links"
 import { CurrentSeasonSection } from "@/components/current-season-section"
 import { SocialFeedSection } from "@/components/social-feed-section"
@@ -15,7 +15,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <TeamSelector />
-      <StateRankingHighlight />
+      <ConferenceChampionshipHighlight />
       <CurrentSeasonSection />
       <SocialFeedSection />
       <HistoryPreview />
