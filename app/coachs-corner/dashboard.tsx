@@ -12,6 +12,7 @@ import { resultTone } from "@/lib/utils"
 import { coachLogout } from "./actions"
 import { OnTap } from "./on-tap"
 import type { TeamRecord } from "@/lib/coach-weekly"
+import { groupRecords } from "@/lib/coach-group-records"
 
 type Standing = { Team: string; GS: number; GP: number; W: number; L: number; T: number; GF: number; GA: number; GD: number; Points: number; Group: string; OverallRank: number | null; D1Rank: number | null; Rating: number | null }
 type Game = { Date: string; Team: string; Opponent: string; Location: string; Result: string | null; Score: string | null; Source?: string }
@@ -65,7 +66,7 @@ export function CoachDashboard({ data, today }: { data: Data; today: string }) {
         <div className="mt-7 flex gap-2 overflow-x-auto pb-1">{([['seeding','Seeding board'],['schedule','Team schedule'],['head','Head to head']] as const).map(([id,label]) => <Button key={id} variant={view === id ? 'default' : 'outline'} onClick={() => setView(id)}>{label}</Button>)}</div>
 
         <section className="mt-4">
-          {view === "seeding" && <SeedingTable rows={data.seedings[group]} team={team} />}
+          {view === "seeding" && <div className="space-y-4"><SeedingTable rows={data.seedings[group]} team={team} /><GroupRecords teams={data.overall} games={data.schedule} group={group} team={team} /></div>}
           {view === "schedule" && <ScheduleTable games={games} />}
           {view === "head" && <HeadToHead opponents={h2h?.opponents || {}} games={games} team={team} />}
         </section>
@@ -76,6 +77,20 @@ export function CoachDashboard({ data, today }: { data: Data; today: string }) {
 }
 
 function Metric({ icon, label, value }: { icon: React.ReactNode; label: string; value: React.ReactNode }) { return <Card className="gap-3 py-5"><CardContent className="flex items-center gap-4"><span className="grid size-10 place-items-center rounded-lg bg-red-50 text-primary">{icon}</span><div><p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</p><p className="text-2xl font-bold">{value}</p></div></CardContent></Card> }
+function GroupRecords({ teams, games, group, team }: { teams: Standing[]; games: Game[]; group: string; team: string }) {
+  const rows = groupRecords(teams, games, group)
+  return <Card>
+    <CardHeader><CardTitle>{group} · Results within the group</CardTitle><p className="text-sm text-muted-foreground">How each team has done against the whole group. Ordered by points per match (3 for a win, 1 for a draw), then total points. This comparison does not change the seeding order.</p></CardHeader>
+    <CardContent><Table>
+      <TableHeader><TableRow><TableHead>Team</TableHead><TableHead>Played</TableHead><TableHead>W–L–T</TableHead><TableHead>Group pts</TableHead><TableHead>Pts / match</TableHead><TableHead>GF</TableHead><TableHead>GA</TableHead><TableHead>GD</TableHead><TableHead>Opponents faced</TableHead></TableRow></TableHeader>
+      <TableBody>{rows.map(row => <TableRow key={row.Team} className={row.Team === team ? "bg-red-50 font-semibold" : ""}>
+        <TableCell>{row.Team}</TableCell><TableCell>{row.GP}</TableCell><TableCell>{row.W}–{row.L}–{row.T}</TableCell><TableCell>{row.Points}</TableCell><TableCell className="font-bold">{row.PPG?.toFixed(2) ?? "–"}</TableCell>
+        <TableCell>{row.scored === row.GP && row.GP ? row.GF : "–"}</TableCell><TableCell>{row.scored === row.GP && row.GP ? row.GA : "–"}</TableCell><TableCell>{row.scored === row.GP && row.GP ? (row.GD > 0 ? `+${row.GD}` : row.GD) : "–"}</TableCell>
+        <TableCell><details><summary className="cursor-pointer">{row.opponents.length} of {row.possibleOpponents}</summary><p className="mt-2 max-w-60 whitespace-normal text-xs text-muted-foreground">{row.opponents.join(", ") || "No group opponents played yet."}</p></details></TableCell>
+      </TableRow>)}</TableBody>
+    </Table><p className="mt-4 text-xs text-muted-foreground">Completed group matches only; repeat meetings count as separate games. Opponents faced counts distinct teams. Goal totals appear only when every played match has a recorded score. Points per match adjusts for games played; opponent strength and remaining schedules still vary.</p></CardContent>
+  </Card>
+}
 function SeedingTable({ rows, team }: { rows: Seed[]; team: string }) { return <Card><CardHeader><CardTitle>Live {rows?.[0]?.Group} seeding</CardTitle><p className="text-sm text-muted-foreground">Order: overall points, head-to-head among teams tied on overall points, rating, group points, then goal difference.</p></CardHeader><CardContent><Table><TableHeader><TableRow><TableHead>Seed</TableHead><TableHead>Team</TableHead><TableHead>D1 rank</TableHead><TableHead>State rank</TableHead><TableHead>Rating</TableHead><TableHead>Group pts</TableHead><TableHead>H2H tiebreak</TableHead><TableHead>Overall pts</TableHead><TableHead>GD</TableHead></TableRow></TableHeader><TableBody>{rows?.map(row => <TableRow key={row.Team} className={row.Team === team ? "bg-red-50 font-semibold" : ""}><TableCell><Badge variant={row.Team === team ? "default" : "secondary"}>#{row.Seed}</Badge></TableCell><TableCell>{row.Team}</TableCell><TableCell>{row.D1Rank ? `#${row.D1Rank}` : "–"}</TableCell><TableCell>{row.OverallRank ? `#${row.OverallRank}` : "–"}</TableCell><TableCell>{row.Rating?.toFixed(1) ?? "–"}</TableCell><TableCell>{row.GroupPoints}</TableCell><TableCell>{row.HeadToHeadDetail ? <div><p className="font-semibold">{row.HeadToHeadDetail}</p><p className="text-xs text-muted-foreground">{row.HeadToHeadPoints} pts</p></div> : <span className="text-muted-foreground">–</span>}</TableCell><TableCell>{row.OverallPoints}</TableCell><TableCell>{row.GD > 0 ? `+${row.GD}` : row.GD}</TableCell></TableRow>)}</TableBody></Table></CardContent></Card> }
 function ScheduleTable({ games }: { games: Game[] }) { return <Card><CardHeader><CardTitle>Full team schedule</CardTitle></CardHeader><CardContent><Table><TableHeader><TableRow><TableHead>Date</TableHead><TableHead>Opponent</TableHead><TableHead>Site</TableHead><TableHead>Result</TableHead><TableHead>Source</TableHead></TableRow></TableHeader><TableBody>{games.map((game, i) => <TableRow key={`${game.Date}-${game.Opponent}-${i}`}><TableCell>{new Date(`${game.Date}T12:00:00`).toLocaleDateString(undefined,{month:'short',day:'numeric'})}</TableCell><TableCell>{game.Opponent}</TableCell><TableCell>{game.Location === 'H' ? 'Home' : 'Away'}</TableCell><TableCell>{game.Result ? <span className={`inline-flex items-center rounded-md px-2 py-0.5 text-xs font-bold ${resultTone(game.Result)}`}>{game.Result} {game.Score}</span> : <span className="text-muted-foreground">Scheduled</span>}</TableCell><TableCell>{game.Source?.startsWith('http') ? <a className="font-semibold text-primary underline" href={game.Source} target="_blank" rel="noreferrer">{game.Source.includes("maxpreps.com") ? "MaxPreps" : "StatsPlus"}</a> : <span className="text-muted-foreground">Manual</span>}</TableCell></TableRow>)}</TableBody></Table></CardContent></Card> }
 function HeadToHead({ opponents, games, team }: { opponents: Record<string, string | number | null>; games: Game[]; team: string }) {
