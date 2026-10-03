@@ -58,6 +58,7 @@ export async function varsityRecords() {
       record("Most goals by a player", playerEntries(sources.players, "goals"), "Season · recorded player totals"),
       record("Most team assists", teamEntries(sources.players, "assists"), "Season · sum of recorded player assists"),
       record("Most assists by a player", playerEntries(sources.players, "assists"), "Season · recorded player totals"),
+      record("Most points by a player", playerEntries(sources.players, "points"), "Season · recorded player points · 2 points per goal, 1 per assist"),
       record("Most team saves", teamEntries(sources.keepers, "saves"), "Season · sum of recorded goalkeeper saves"),
       record("Most saves by a player", playerEntries(sources.keepers, "saves"), "Season · recorded goalkeeper totals"),
       record("Fewest team goals conceded", conceded, "Completed seasons with all listed games scored · season lengths vary", true),
