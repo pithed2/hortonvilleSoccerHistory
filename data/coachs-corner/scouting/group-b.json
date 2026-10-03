@@ -1,0 +1,1082 @@
+{
+  "retrievedAt": "2026-10-03",
+  "ratingsAsOf": "2026-10-02",
+  "cutoff": "2026-10-03",
+  "group": "2026 D1 Sectional 1 Group B",
+  "teams": [
+    {
+      "id": "De Pere",
+      "name": "De Pere",
+      "rating": 2011.84,
+      "sos": 1718.1,
+      "stateRankAllDivisions": 6,
+      "sourceRecord": {
+        "w": 11,
+        "l": 1,
+        "d": 0,
+        "gf": 53,
+        "ga": 6
+      }
+    },
+    {
+      "id": "Hortonville",
+      "name": "Hortonville",
+      "rating": 1981.57,
+      "sos": 1702.93,
+      "stateRankAllDivisions": 9,
+      "sourceRecord": {
+        "w": 11,
+        "l": 1,
+        "d": 1,
+        "gf": 58,
+        "ga": 14
+      }
+    },
+    {
+      "id": "Green Bay Preble",
+      "name": "Green Bay Preble",
+      "rating": 1816.44,
+      "sos": 1701.49,
+      "stateRankAllDivisions": 31,
+      "sourceRecord": {
+        "w": 9,
+        "l": 3,
+        "d": 3,
+        "gf": 36,
+        "ga": 11
+      }
+    },
+    {
+      "id": "Appleton North",
+      "name": "Appleton North",
+      "rating": 1811.51,
+      "sos": 1674.31,
+      "stateRankAllDivisions": 35,
+      "sourceRecord": {
+        "w": 8,
+        "l": 3,
+        "d": 2,
+        "gf": 39,
+        "ga": 18
+      }
+    },
+    {
+      "id": "Kimberly",
+      "name": "Kimberly",
+      "rating": 1685.72,
+      "sos": 1763.73,
+      "stateRankAllDivisions": 73,
+      "sourceRecord": {
+        "w": 4,
+        "l": 7,
+        "d": 3,
+        "gf": 16,
+        "ga": 24
+      }
+    },
+    {
+      "id": "Bay Port",
+      "name": "Bay Port",
+      "rating": 1685.65,
+      "sos": 1711.47,
+      "stateRankAllDivisions": 74,
+      "sourceRecord": {
+        "w": 5,
+        "l": 6,
+        "d": 3,
+        "gf": 33,
+        "ga": 34
+      }
+    },
+    {
+      "id": "Stevens Point",
+      "name": "Stevens Point",
+      "rating": 1684.67,
+      "sos": 1668.61,
+      "stateRankAllDivisions": 75,
+      "sourceRecord": {
+        "w": 7,
+        "l": 5,
+        "d": 1,
+        "gf": 27,
+        "ga": 19
+      }
+    },
+    {
+      "id": "Appleton West",
+      "name": "Appleton West",
+      "rating": 1402.84,
+      "sos": 1673.55,
+      "stateRankAllDivisions": 186,
+      "sourceRecord": {
+        "w": 0,
+        "l": 11,
+        "d": 1,
+        "gf": 5,
+        "ga": 51
+      }
+    }
+  ],
+  "matches": [
+    {
+      "date": "2026-08-28",
+      "a": "De Pere",
+      "b": "Madison Memorial",
+      "ga": 4,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-29",
+      "a": "De Pere",
+      "b": "Madison La Follette",
+      "ga": 3,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-03",
+      "a": "De Pere",
+      "b": "Wausau West",
+      "ga": 10,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-08",
+      "a": "Green Bay Preble",
+      "b": "De Pere",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Bay Port",
+      "b": "De Pere",
+      "ga": 0,
+      "gb": 5,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "De Pere",
+      "b": "Sheboygan North",
+      "ga": 3,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-17",
+      "a": "D.C. Everest",
+      "b": "De Pere",
+      "ga": 0,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-19",
+      "a": "De Pere",
+      "b": "Hortonville",
+      "ga": 3,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "De Pere",
+      "b": "Manitowoc Lincoln",
+      "ga": 9,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-24",
+      "a": "West De Pere",
+      "b": "De Pere",
+      "ga": 0,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Notre Dame",
+      "b": "De Pere",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "De Pere",
+      "b": "Pulaski",
+      "ga": 2,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Hortonville",
+      "b": "West De Pere",
+      "ga": 3,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Marshfield",
+      "b": "Hortonville",
+      "ga": 0,
+      "gb": 10,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-01",
+      "a": "Neenah",
+      "b": "Hortonville",
+      "ga": 3,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Hortonville",
+      "b": "Oshkosh North",
+      "ga": 3,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-08",
+      "a": "Appleton East",
+      "b": "Hortonville",
+      "ga": 1,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Hortonville",
+      "b": "Bay Port",
+      "ga": 6,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Hortonville",
+      "b": "Fond du Lac",
+      "ga": 4,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Green Bay Preble",
+      "b": "Hortonville",
+      "ga": 1,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-19",
+      "a": "De Pere",
+      "b": "Hortonville",
+      "ga": 3,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Appleton North",
+      "b": "Hortonville",
+      "ga": 1,
+      "gb": 5,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Hortonville",
+      "b": "Appleton West",
+      "ga": 8,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Oshkosh West",
+      "b": "Hortonville",
+      "ga": 1,
+      "gb": 6,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Kimberly",
+      "b": "Hortonville",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Green Bay Preble",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Green Bay Preble",
+      "b": "Appleton East",
+      "ga": 1,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-28",
+      "a": "Eau Claire Memorial",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Wausau West",
+      "b": "Green Bay Preble",
+      "ga": 0,
+      "gb": 5,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Green Bay Preble",
+      "b": "Green Bay Southwest",
+      "ga": 3,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-08",
+      "a": "Green Bay Preble",
+      "b": "De Pere",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Green Bay Preble",
+      "b": "Appleton West",
+      "ga": 8,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Appleton North",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Pulaski",
+      "b": "Green Bay Preble",
+      "ga": 0,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Green Bay Preble",
+      "b": "Hortonville",
+      "ga": 1,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-19",
+      "a": "D.C. Everest",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Ashwaubenon",
+      "b": "Green Bay Preble",
+      "ga": 0,
+      "gb": 6,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Green Bay Preble",
+      "b": "Notre Dame",
+      "ga": 0,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Green Bay Preble",
+      "b": "Sheboygan North",
+      "ga": 2,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Bay Port",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Appleton North",
+      "b": "Notre Dame",
+      "ga": 1,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Appleton North",
+      "b": "Fox Valley Lutheran",
+      "ga": 2,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-01",
+      "a": "Appleton North",
+      "b": "Appleton West",
+      "ga": 5,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Oshkosh West",
+      "b": "Appleton North",
+      "ga": 1,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-08",
+      "a": "Appleton North",
+      "b": "Kaukauna",
+      "ga": 3,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-10",
+      "a": "West De Pere",
+      "b": "Appleton North",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Appleton North",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Kimberly",
+      "b": "Appleton North",
+      "ga": 1,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Oshkosh North",
+      "b": "Appleton North",
+      "ga": 1,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-19",
+      "a": "Seymour",
+      "b": "Appleton North",
+      "ga": 0,
+      "gb": 8,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Appleton North",
+      "b": "Hortonville",
+      "ga": 1,
+      "gb": 5,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Appleton North",
+      "b": "Appleton East",
+      "ga": 1,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Appleton North",
+      "b": "Neenah",
+      "ga": 4,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Green Bay Preble",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-28",
+      "a": "Kimberly",
+      "b": "Arrowhead",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Edgewood",
+      "b": "Kimberly",
+      "ga": 3,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-01",
+      "a": "Oshkosh North",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Kimberly",
+      "b": "Appleton East",
+      "ga": 0,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-08",
+      "a": "Fond du Lac",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-11",
+      "a": "Kimberly",
+      "b": "Hudson",
+      "ga": 0,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Kimberly",
+      "b": "Stillwater (MN)",
+      "ga": 1,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Kimberly",
+      "b": "Appleton North",
+      "ga": 1,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Kimberly",
+      "b": "Oshkosh West",
+      "ga": 1,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-19",
+      "a": "Bay Port",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Appleton West",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 7,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Kaukauna",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Kimberly",
+      "b": "Hortonville",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Wisconsin Rapids",
+      "b": "Bay Port",
+      "ga": 3,
+      "gb": 6,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Bay Port",
+      "b": "Neenah",
+      "ga": 2,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-28",
+      "a": "Appleton West",
+      "b": "Bay Port",
+      "ga": 0,
+      "gb": 6,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Bay Port",
+      "b": "D.C. Everest",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Bay Port",
+      "b": "De Pere",
+      "ga": 0,
+      "gb": 5,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Hortonville",
+      "b": "Bay Port",
+      "ga": 6,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "West De Pere",
+      "b": "Bay Port",
+      "ga": 1,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Bay Port",
+      "b": "Wausau West",
+      "ga": 2,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-19",
+      "a": "Bay Port",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Pulaski",
+      "b": "Bay Port",
+      "ga": 4,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Bay Port",
+      "b": "Green Bay Southwest",
+      "ga": 2,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-26",
+      "a": "Bay Port",
+      "b": "Wauwatosa East",
+      "ga": 2,
+      "gb": 5,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Ashwaubenon",
+      "b": "Bay Port",
+      "ga": 1,
+      "gb": 8,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Bay Port",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Stevens Point",
+      "b": "Fond du Lac",
+      "ga": 2,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Homestead",
+      "b": "Stevens Point",
+      "ga": 3,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-01",
+      "a": "D.C. Everest",
+      "b": "Stevens Point",
+      "ga": 1,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-05",
+      "a": "Stevens Point",
+      "b": "Eau Claire North",
+      "ga": 4,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Wausau East",
+      "b": "Stevens Point",
+      "ga": 0,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Stevens Point",
+      "b": "La Crosse Central",
+      "ga": 3,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Stevens Point",
+      "b": "Wausau West",
+      "ga": 2,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Appleton East",
+      "b": "Stevens Point",
+      "ga": 4,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Marshfield",
+      "b": "Stevens Point",
+      "ga": 0,
+      "gb": 7,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-25",
+      "a": "Stevens Point",
+      "b": "Hudson",
+      "ga": 0,
+      "gb": 4,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-26",
+      "a": "Eau Claire Memorial",
+      "b": "Stevens Point",
+      "ga": 2,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Stevens Point",
+      "b": "D.C. Everest",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Stevens Point",
+      "b": "Wausau East",
+      "ga": 5,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Marshfield",
+      "b": "Appleton West",
+      "ga": 2,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-08-28",
+      "a": "Appleton West",
+      "b": "Bay Port",
+      "ga": 0,
+      "gb": 6,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-01",
+      "a": "Appleton North",
+      "b": "Appleton West",
+      "ga": 5,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-03",
+      "a": "New London",
+      "b": "Appleton West",
+      "ga": 3,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-08",
+      "a": "Appleton West",
+      "b": "Oshkosh West",
+      "ga": 0,
+      "gb": 3,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Green Bay Preble",
+      "b": "Appleton West",
+      "ga": 8,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Appleton West",
+      "b": "Pulaski",
+      "ga": 0,
+      "gb": 1,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Kaukauna",
+      "b": "Appleton West",
+      "ga": 4,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Appleton West",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 7,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Hortonville",
+      "b": "Appleton West",
+      "ga": 8,
+      "gb": 0,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Appleton West",
+      "b": "Oshkosh North",
+      "ga": 1,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Appleton West",
+      "b": "Fond du Lac",
+      "ga": 0,
+      "gb": 2,
+      "status": "final",
+      "source": "StatsPlus team schedule"
+    }
+  ],
+  "notes": [
+    "Scores through Oct 1; future fixtures excluded.",
+    "Venue fields conflict across providers and are not used in this engine.",
+    "Stevens Point is the canonical ID for Stevens Point Area Senior High.",
+    "Coach voting factors have no WIAA prescribed weights."
+  ]
+}

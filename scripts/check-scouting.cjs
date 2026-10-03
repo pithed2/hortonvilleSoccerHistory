@@ -1,0 +1,32 @@
+const assert=require('node:assert/strict')
+const fs=require('node:fs')
+const ts=require('typescript')
+const compiled={exports:{}}
+new Function('exports','module',ts.transpileModule(fs.readFileSync('lib/scouting-seeding.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText)(compiled.exports,compiled)
+const {reviewSeeding,normalizeFixtures}=compiled.exports
+const group=JSON.parse(fs.readFileSync('data/coachs-corner/scouting/group-b.json','utf8'))
+const reports=JSON.parse(fs.readFileSync('data/coachs-corner/scouting/reports.json','utf8'))
+const result=reviewSeeding(group.teams,group.matches,group.cutoff)
+assert(result.records.every(t=>t.reconciled))
+assert.equal(result.pairs.length,28)
+assert.deepEqual(result.records.slice(0,2).map(t=>t.id),['De Pere','Hortonville'])
+for(const r of reports){const totals=r.matches.reduce((s,m)=>({w:s.w+(m.gf>m.ga),l:s.l+(m.gf<m.ga),d:s.d+(m.gf===m.ga),gf:s.gf+m.gf,ga:s.ga+m.ga}),{w:0,l:0,d:0,gf:0,ga:0});assert.deepEqual(totals,r.record,r.name);assert(fs.existsSync('public'+r.logo));assert.equal(r.video.length,3)}
+const m={date:'2026-10-01',a:'A',b:'B',ga:2,gb:1,status:'final'}
+assert.equal(normalizeFixtures([m,{...m,a:'B',b:'A',ga:1,gb:2}],group.cutoff).length,1)
+assert.throws(()=>normalizeFixtures([m,{...m,ga:3}],group.cutoff),/Conflicting/)
+assert.throws(()=>normalizeFixtures([{...m,date:'2026-02-30'}],group.cutoff),/Invalid/)
+assert.equal(normalizeFixtures([{...m,status:'scheduled'},{...m,date:'2026-10-10'}],group.cutoff).length,0)
+const dp=result.pairs.find(p=>p.a==='De Pere'&&p.b==='Hortonville')
+assert.equal(dp.delta,0)
+assert.equal(dp.h2h.w,1)
+const sampleTeams=[{id:'A',name:'A',rating:100,sos:0,sourceRecord:{w:0,l:0,d:0,gf:0,ga:0}},{id:'B',name:'B',rating:100,sos:0,sourceRecord:{w:0,l:0,d:0,gf:0,ga:0}},{id:'C',name:'C',rating:null,sos:0,sourceRecord:{w:0,l:0,d:0,gf:0,ga:0}}]
+const empty=reviewSeeding(sampleTeams,[],group.cutoff)
+assert(empty.pairs[0].flags.some(f=>f.startsWith('Equal ratings')))
+assert.equal(empty.pairs[0].delta,null)
+assert(empty.pairs[1].flags.some(f=>f.startsWith('Missing rating')))
+const cycle=reviewSeeding(sampleTeams,[m,{...m,a:'B',b:'C'},{...m,a:'C',b:'A'}],group.cutoff)
+assert.deepEqual(cycle.records.map(t=>t.id),['A','B','C'])
+assert(cycle.pairs.some(p=>p.flags.includes('Head-to-head favors the lower-rated team')))
+const repeated=reviewSeeding(sampleTeams,[m,{...m,date:'2026-09-30',ga:0,gb:1},{...m,a:'C',b:'B',ga:1,gb:1}],group.cutoff)
+assert.equal(repeated.pairs.find(p=>p.a==='A'&&p.b==='C').delta,0.5)
+console.log('Four report score reconciliations, logos, video prompts, eight-team baseline, 28 comparisons, duplicate/conflict handling, date validation and cutoffs passed.')
