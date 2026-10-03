@@ -39,6 +39,13 @@ export async function varsityRecords() {
     return Array.from(totals, ([season, value]) => ({ value, season, name: "Hortonville", href: `/seasons/${season}` }))
   }
   const scored = (year: number) => games.filter(game => game.season_year === year && ["W", "L", "T", "D"].includes(game.result ?? "") && /^\s*\d+\s*-\s*\d+\s*$/.test(game.score ?? ""))
+  const seasonGameNumbers = new Map<number, number>()
+  const singleGameTeamGoals: Entry[] = games.flatMap(game => {
+    const gameNumber = (seasonGameNumbers.get(game.season_year) ?? 0) + 1
+    seasonGameNumbers.set(game.season_year, gameNumber)
+    if (!["W", "L", "T", "D"].includes(game.result ?? "") || !/^\s*\d+\s*-\s*\d+\s*$/.test(game.score ?? "")) return []
+    return [{ value: Number(game.score!.split("-")[0]), name: "Hortonville", season: game.season_year, detail: `${game.date} · vs. ${game.opponent} · ${game.score}`, href: `/seasons/${game.season_year}#game-${gameNumber}` }]
+  })
   const teamGoals = seasons.filter(season => season.played > 0).map(season => ({ value: season.gf, name: "Hortonville", season: season.season_year, href: `/seasons/${season.season_year}` }))
   const complete = seasons.filter(season => season.played > 0 && !/in progress|incomplete|not yet/i.test(season.notes ?? "") && scored(season.season_year).length === season.played && games.filter(game => game.season_year === season.season_year).every(game => ["W", "L", "T", "D"].includes(game.result ?? "")))
   const conceded = complete.map(season => ({ value: season.ga, name: "Hortonville", season: season.season_year, detail: `${season.played} games`, href: `/seasons/${season.season_year}` }))
@@ -49,6 +56,7 @@ export async function varsityRecords() {
   }
   return {
     singleGame: [
+      record("Most goals scored by the team", singleGameTeamGoals, "Single game · Hortonville goals from recorded match scores"),
       record("Most goals by a player", playerEntries(sources.boxscores, "goals", true).filter(entry => entry.value >= 3), "Single game · recorded player box scores · minimum 3 goals"),
       record("Most assists by a player", playerEntries(sources.boxscores, "assists", true).filter(entry => entry.value >= 3), "Single game · recorded player box scores · minimum 3 assists"),
       record("Most saves by a player", playerEntries(sources.boxscores, "saves", true), "Single game · recorded goalkeeper saves"),
