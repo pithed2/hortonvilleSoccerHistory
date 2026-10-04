@@ -36,3 +36,11 @@ next-env.d.ts
 /output/red-room-player-keys-*.csv
 /.player-cards.db*
 /.player-cards-test.db*
+
+# Local recruiting research and drafts
+/docs/ncaa-mens-soccer-rules-2026.md
+/docs/recruiting-ai-tool-tips.md
+/docs/recruiting-blueprint/
+/docs/recruiting-refresh-plan.md
+/output/recruiting/
+/scripts/inventory-recruiting.py

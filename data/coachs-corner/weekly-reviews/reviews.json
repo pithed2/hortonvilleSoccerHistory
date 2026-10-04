@@ -1,5 +1,276 @@
 [
   {
+    "id": "2026-10-04-v4",
+    "title": "Weekly Regional Review",
+    "version": 4,
+    "published": "2026-10-04",
+    "author": "Andy - Hortonville Polar Bears Statistician",
+    "resultsPeriod": "Sun Sep 27 – Sat Oct 3",
+    "upcomingPeriod": "Sun Oct 4 – Sat Oct 10",
+    "filename": "2026-10-04-v4.docx",
+    "recordLabel": "Overall record",
+    "overview": [
+      "Bottom Line for Hortonville",
+      "Say hello to your 2-time and reigning FVA champions. We beat Oshkosh West 6-1 on Tuesday and then beat Kimberly 3-0 on Thursday, our first win over Kimberly ever. That alone was a good week. What made it final was what happened on the same Thursday night: Appleton North beat Neenah 4-3. Two results, one night, and the only team that could have caught us was done. North's loss to East killed their own chances, and their win over Neenah killed Neenah's. Kaukauna’s just for show on Tuesday. FVA is ours.",
+      "Give Appleton North their due here even though it worked out for us. Beating Neenah 4-3 on the road after being down 3 nil at half is not nothing, and it says their offense is real. But the loss to Appleton East the same week says the defense still isn't, and a team that can win a shootout and lose a tighter game in the same seven days is a team that hasn't figured out who it is yet. Neenah's still a good team that had a terrible half Thursday. Kimberly's still having the down year the record says they're having.  *shrug*",
+      "The latest WSCA poll came out and, in the way only a poll can, found a way to make this week feel smaller than it was. We dropped a spot, 9th to 10th, the same week we clinched the conference outright. De Pere jumped from 8th to 5th on the strength of an 11-1 record and a ten-game win streak with a 53-6 goal differential, which is a real case, I'm not going to pretend it isn't. I just don't know how we beat the snot out of every opponent placed in front of us and drop a spot.  But whatever, we’re not from Milwaukee or Madison and we’re not a blueblood program.",
+      "•  Kaukauna, Tuesday: 9th place in the conference at 2-6 and on a six-game losing streak. There is no good reason to slip here.  Should be a home game away from home to receive our plaque.",
+      "•  D.C. Everest, Saturday: non-conference, but it's a real measuring stick. They just put up back-to-back wins over SPASH and Wausau West and are playing slightly better ball. Should be a decent weekend game.",
+      "•  The poll: worth watching whether the wins against Osh West and Kimberly keep us in the Top 10 even though we haven’t lost since De Pere.  "
+    ],
+    "games": [
+      {
+        "when": "●  TUE 10/6",
+        "matchup": "Hortonville at Kaukauna",
+        "review": "The first game after clinching the title. Kaukauna's 3-9 and on a six-game skid, so there's no real excuse for anything but business as usual."
+      },
+      {
+        "when": "○  TUE 10/6",
+        "matchup": "Appleton North at Fond du Lac",
+        "review": "North has to answer for the Appleton East loss four days after it happened. A flat week here and the shootout win over Neenah starts looking like the outlier instead of the breakthrough."
+      },
+      {
+        "when": "○  TUE 10/6 · 7:00 PM",
+        "matchup": "DeForest Area at Madison West",
+        "review": "DeForest's 12-1-1 and has lost exactly once all year, to Arrowhead. Madison West is 9-1-1 and just took down Middleton. Two of the better Division 1 teams in the state, same night."
+      },
+      {
+        "when": "○  THU 10/8 · 6:30 PM",
+        "matchup": "Arrowhead vs. Middleton",
+        "review": "Makeup game from the postponement on October 1st. Arrowhead's unbeaten and ranked No. 1 in the state; Middleton's been in a real slide, 0-3-2 in their last five by most counts."
+      },
+      {
+        "when": "○  FRI 10/9 · 4:30 PM",
+        "matchup": "Appleton North at De Pere",
+        "review": "North gets no rest. De Pere's riding a ten-game win streak and just jumped to 5th in the state poll. A loss here and North's week goes from shaky to genuinely bad."
+      },
+      {
+        "when": "●  SAT 10/10 · 12:30 PM",
+        "matchup": "D.C. Everest at Hortonville",
+        "review": "Non-conference, but Everest's won back-to-back against SPASH and Wausau West and is playing its best soccer of the season right now. A real test the week after a title, which is exactly when teams tend to find out something about themselves."
+      },
+      {
+        "when": "○  SAT 10/10",
+        "matchup": "Marquette University at Middleton",
+        "review": "Marquette's quietly 6-3-3 after winning three of their last four. Another shot for Middleton to stop the bleeding."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Hortonville & the FVA",
+        "columns": [
+          "TEAM",
+          "LAST WEEK",
+          "RECORD",
+          "COMING UP"
+        ],
+        "rows": [
+          [
+            "Hortonville  (US)",
+            "We beat Oshkosh West 6-1 Tuesday, then beat Kimberly 3-0 Thursday for our first win over them ever. Combined with Appleton North losing to Appleton East and beating Neenah the same night, that's the Fox Valley Association, won outright. ",
+            "11-1-1",
+            "Tue at Kaukauna · Sat vs D.C. Everest (non-conf.) 12:30"
+          ],
+          [
+            "Appleton East",
+            "Beat Appleton North 2-1, then beat Oshkosh West 2-1. The best week anyone not named Hortonville had in conference, and the one that handed us the title.",
+            "7-4",
+            "Tue vs Appleton West 6:30 · Thu at Fox Valley Lutheran (non-conf.) 6:30"
+          ],
+          [
+            "Appleton North",
+            "Lost to Appleton East 1-2, then beat Neenah 4-3. A real win and a bad loss in the same week, which is why they're not catching us and also why nobody should write them off either.",
+            "8-3-2",
+            "Tue at Fond du Lac · Fri at De Pere 4:30"
+          ],
+          [
+            "Appleton West",
+            "Lost to Oshkosh North 1-2, then lost to Fond du Lac 0-2. Still winless at 0-12-1.",
+            "0-12-1",
+            "Tue at Appleton East 6:30 · Thu vs Neenah 6:30"
+          ],
+          [
+            "Fond du Lac",
+            "Lost to Neenah 1-4, then beat Appleton West 2-0.",
+            "6-5-1",
+            "Tue vs Appleton North · Thu at Germantown (non-conf.) 7:00"
+          ],
+          [
+            "Kaukauna",
+            "Lost to Kimberly 0-2, then lost to Oshkosh North 0-4. Sixth straight loss.",
+            "3-9",
+            "Tue vs Hortonville 6:30 · Thu vs Menasha (non-conf.) 7:00"
+          ],
+          [
+            "Kimberly",
+            "Beat Kaukauna 2-0, then lost to us 0-3. ",
+            "4-8-3",
+            "Tue vs Neenah 6:30"
+          ],
+          [
+            "Neenah",
+            "Beat Fond du Lac 4-1, then lost to Appleton North 4-3, snapping a five-game win streak. Tough loss.",
+            "9-2-2",
+            "Tue at Kimberly 6:30 · Thu at Appleton West 6:30"
+          ],
+          [
+            "Oshkosh North",
+            "Beat Appleton West 2-1, then beat Kaukauna 4-0, ending a seven-game home losing streak.",
+            "3-8",
+            "Tue at Oshkosh West 6:30 · Sat at Wisconsin Rapids Lincoln (non-conf.) 1:00"
+          ],
+          [
+            "Oshkosh West",
+            "Lost to us 1-6, then lost to Appleton East 1-2.",
+            "5-3-4",
+            "Tue vs Oshkosh North 6:30 · Thu at Green Bay West (non-conf.) 6:30"
+          ]
+        ]
+      },
+      {
+        "title": "Key FRCC Teams",
+        "columns": [
+          "TEAM",
+          "LAST WEEK",
+          "RECORD",
+          "COMING UP"
+        ],
+        "rows": [
+          [
+            "De Pere",
+            "Beat Notre Dame Academy 3-0, then beat Pulaski 2-0. That's a ten-game win streak, and it's why they jumped from 8th to 5th in the latest WSCA poll.",
+            "11-1",
+            "Tue vs Green Bay Southwest (non-conf.) 6:30 · Fri vs Appleton North 4:30"
+          ],
+          [
+            "Green Bay Preble",
+            "Beat Sheboygan North 2-0, then tied Bay Port 1-1.",
+            "9-3-3",
+            "Tue vs Manitowoc Lincoln (non-conf.) 6:30 · Thu at West De Pere 6:30"
+          ],
+          [
+            "Notre Dame Academy",
+            "Lost to De Pere 0-3, then lost to Sheboygan North 1-2. Two losses in a row after a solid stretch. Don't have a good read on how strong Sheboygan North actually is, so calling the second one a letdown, not a bad loss.",
+            "6-4-3",
+            "Mon vs Pulaski (non-conf.)"
+          ]
+        ]
+      },
+      {
+        "title": "Key Wisconsin Valley Teams",
+        "columns": [
+          "TEAM",
+          "LAST WEEK",
+          "RECORD",
+          "COMING UP"
+        ],
+        "rows": [
+          [
+            "SPASH",
+            "Lost to D.C. Everest 0-3, then beat Wausau East 5-0. The Everest loss is their third in four games; the Wausau East response at least says the issue isn't finishing.",
+            "7-5-1",
+            "Thu at Marshfield 7:00"
+          ],
+          [
+            "D.C. Everest",
+            "Beat SPASH 3-0, then beat Wausau West 3-1. Best week of their season, and they're playing us Saturday in Hortonville.",
+            "7-7-1",
+            "Tue vs Marshfield (non-conf.) 7:00 · Sat at Hortonville 12:30"
+          ],
+          [
+            "Wausau West",
+            "Beat Wisconsin Rapids Lincoln 2-1, then lost to D.C. Everest 1-3.",
+            "5-7-3",
+            "Thu at Wausau East 4:00 · Sat at Appleton North 1:00"
+          ],
+          [
+            "Wisconsin Rapids",
+            "Lost to Wausau West 1-2, then beat Marshfield 3-0.",
+            "6-3-2",
+            "Tue vs Wausau East · Thu at D.C. Everest 7:00 · Sat at Oshkosh North (non-conf.) 1:00"
+          ]
+        ]
+      },
+      {
+        "title": "Key Big Rivers Teams",
+        "columns": [
+          "TEAM",
+          "LAST WEEK",
+          "RECORD",
+          "COMING UP"
+        ],
+        "rows": [
+          [
+            "Hudson",
+            "Beat New Richmond 3-1, beat Oregon 5-0, then tied DeForest Area 1-1 Saturday. Still just the one loss all year.",
+            "12-1-2",
+            "Tue vs River Falls 7:00"
+          ],
+          [
+            "Eau Claire Memorial",
+            "Beat Eau Claire North 5-0.",
+            "5-6-1",
+            "Tue at Rice Lake 7:00"
+          ]
+        ]
+      },
+      {
+        "title": "Prominent Division 1 Teams",
+        "columns": [
+          "TEAM",
+          "LAST WEEK",
+          "RECORD",
+          "COMING UP"
+        ],
+        "rows": [
+          [
+            "Arrowhead",
+            "Beat Oak Creek 3-0, then beat Hartford Union 1-0. The scheduled Middleton game got postponed and moved to Thursday. Still unbeaten and ranked No. 1 in the state; sources disagree on the exact win total (12-0 to 15-0 depending on the tracker), so treat the record column as directional, not exact.",
+            "~14-0",
+            "Sun vs University Lake (non-conf.) 6:30 · Mon at Kettle Moraine 6:30 · Thu vs Middleton 6:30 (makeup) · Sat vs Oregon 12:00"
+          ],
+          [
+            "Marquette University",
+            "Beat Whitefish Bay 2-0 Saturday. Quietly 6-3-3 after winning three of their last four.",
+            "6-3-3",
+            "Tue vs Wauwatosa East · Sat at Middleton 6:00"
+          ],
+          [
+            "Madison West",
+            "Beat Middleton 3-2.",
+            "9-1-1",
+            "Tue at Verona 7:00 · Thu vs Sun Prairie West 7:00 · Sat vs DeForest Area 2:00"
+          ],
+          [
+            "Middleton",
+            "Lost to Madison West 2-3, then tied Kenosha Bradford 2-2 Saturday. Rough stretch right now, by most counts 0-3-2 in their last five; one tracker still has them at a stale 6-1-2 so the record below is approximate.",
+            "~8-3-5",
+            "Tue at Sun Prairie West · Thu vs Arrowhead 6:30 (makeup) · Sat vs Marquette University 6:00"
+          ],
+          [
+            "DeForest Area",
+            "Beat Oregon 1-0, then tied Hudson 1-1 Saturday. Still just the one loss on the year, to Arrowhead.",
+            "12-1-1",
+            "Tue vs Milton · Sat at Madison West 2:00"
+          ],
+          [
+            "Brookfield East",
+            "Tied Germantown 0-0, then tied Homestead 0-0. Kings of the draw lately.",
+            "7-1-5",
+            "Tue vs Brookfield Central (derby)"
+          ],
+          [
+            "Verona",
+            "Beat Vel Phillips Memorial 4-0.",
+            "11-1-4",
+            "Tue vs Madison West 7:00 · Thu vs Sun Prairie East 7:00"
+          ]
+        ]
+      }
+    ],
+    "sourceNote": "Results and schedules were pulled from soccer.statsplus.net, MaxPreps team schedule pages and recap articles, and zaleskisports.com team logs, then cross-checked where more than one source was available. Where sources gave conflicting season records (Arrowhead, Middleton), the review says so rather than picking the more convenient number. State ranking commentary refers to the current WSCA Division 1 poll. Where a scheduled game had no posted final, the review says so rather than assuming a result."
+  },
+  {
     "id": "2026-09-27-v3",
     "title": "Weekly Regional Review",
     "version": 3,
