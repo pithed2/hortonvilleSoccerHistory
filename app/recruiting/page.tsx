@@ -11,6 +11,19 @@ export const metadata: Metadata = {
 }
 
 const fileRoot = "/recruiting/downloads/"
+const guideSections = [
+  { number: 1, title: "Choose a school you want to attend", description: "Work out what matters to you in school, cost and soccer.", anchor: "section-1-choose-a-school-you-want-to-attend" },
+  { number: 2, title: "Select schools worth a closer look", description: "Build your school list and evaluate recruiting messages.", anchor: "section-2-how-to-select-schools-worth-a-closer-look" },
+  { number: 3, title: "Understand the college soccer pathways", description: "Explore NCAA, NAIA, junior college, reserve and club options.", anchor: "section-3-understand-the-college-soccer-pathways" },
+  { number: 4, title: "Research schools and programs", description: "Look into playing style, rosters and the player experience.", anchor: "section-4-research-schools-and-programs" },
+  { number: 5, title: "Academics, admission and eligibility", description: "Understand the school requirements and eligibility questions.", anchor: "section-5-academics-admission-and-eligibility" },
+  { number: 6, title: "Know when coaches can recruit", description: "Check the recruiting rules and timing for your pathway.", anchor: "section-6-know-when-coaches-can-recruit" },
+  { number: 7, title: "Build your player evidence", description: "Prepare your profile, film and coach references.", anchor: "section-7-build-your-player-evidence" },
+  { number: 8, title: "Contact coaches authentically", description: "Verify your recipient, write your introduction and follow up.", anchor: "section-8-contact-coaches-authentically" },
+  { number: 9, title: "Evaluate interest, camps and visits", description: "Assess opportunities and prepare useful questions.", anchor: "section-9-evaluate-interest-camps-and-visits" },
+  { number: 10, title: "Understand offers and real costs", description: "Compare the offer, financial aid and what your family would pay.", anchor: "section-10-understand-offers-and-real-costs" },
+  { number: 11, title: "Make the decision and prepare", description: "Choose your next step and get ready for the transition.", anchor: "section-11-make-the-decision-and-prepare" },
+] as const
 
 export default function RecruitingPage() {
   return (
@@ -27,6 +40,23 @@ export default function RecruitingPage() {
           <p className="mt-3 max-w-3xl leading-relaxed">Start with school, cost and the soccer experience you want. If you&apos;re exploring varsity, add your competition level, match role, film and coach feedback. You&apos;ll get levels to start researching, stretch questions and next steps, with an explanation of what supports each suggestion. Your answers can&apos;t replace a coach watching you or predict an offer.</p>
           <a href="/recruiting/best-fit.html" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-lg bg-primary px-5 py-3 font-bold text-primary-foreground">Start the fit guide <ArrowRight className="size-4" aria-hidden="true" /></a>
           <p className="mt-3 text-sm text-muted-foreground">Your answers stay on the page while it&apos;s open. You can download or print your notes before leaving.</p>
+        </section>
+
+        <section aria-labelledby="guide-sections-title" className="mt-12">
+          <h2 id="guide-sections-title" className="text-2xl font-bold">Explore the recruiting guide</h2>
+          <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">Start at the beginning or jump to the part you need today. Each section opens directly in the online blueprint.</p>
+          <a href="/recruiting/blueprint.html#introduction" className="mt-4 inline-flex min-h-11 items-center gap-2 font-bold text-primary">Read the introduction <ArrowRight className="size-4" aria-hidden="true" /></a>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {guideSections.map((section) => (
+              <a key={section.number} href={`/recruiting/blueprint.html#${section.anchor}`} className="group rounded-xl border bg-card p-5 transition-colors hover:border-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+                <p className="text-xs font-bold uppercase tracking-widest text-primary">Section {section.number}</p>
+                <h3 className="mt-2 text-lg font-bold">{section.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{section.description}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary">Read section <ArrowRight className="size-4" aria-hidden="true" /></span>
+              </a>
+            ))}
+          </div>
+          <a href="/recruiting/blueprint.html#ai-prompt-appendix" className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold text-primary">Explore the AI research prompts <ArrowRight className="size-4" aria-hidden="true" /></a>
         </section>
 
         <section id="downloads" aria-labelledby="downloads-title" className="mt-12 scroll-mt-24">
