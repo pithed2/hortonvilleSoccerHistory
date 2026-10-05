@@ -14,7 +14,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div>
             <h4 className="font-semibold mb-4 text-sm">Quick Links</h4>
             <ul className="space-y-2 text-sm">
@@ -58,16 +58,15 @@ export function Footer() {
                   Head to Head
                 </a>
               </li>
-              <li>
-                <a href="/coaches" className="text-background/80 hover:text-background transition">
-                  Coaches
-                </a>
-              </li>
-              <li>
-                <a href="/coaching-records" className="text-background/80 hover:text-background transition">
-                  Coaching Records
-                </a>
-              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4 text-sm">Coaches</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/coaches" className="text-background/80 hover:text-background transition">Coaching History</a></li>
+              <li><a href="/coaching-records" className="text-background/80 hover:text-background transition">Coaching Records</a></li>
+              <li><a href="/recruiting" className="text-background/80 hover:text-background transition">College Recruiting</a></li>
+              <li><a href="/recruiting#downloads" className="text-background/80 hover:text-background transition">Recruiting Guide &amp; Directory</a></li>
             </ul>
           </div>
           <div>

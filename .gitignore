@@ -28,6 +28,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Generated spreadsheet diagnostics and Python bytecode
+*.xlsx.inspect.ndjson
+__pycache__/
+*.py[cod]
+
+# Local Python runtime and disposable scratch files
+/.venv/
+/tmp/
+
 # Temporary Coach's Corner refresh checkouts
 /output/coach-refresh-*/
 
@@ -43,4 +52,9 @@ next-env.d.ts
 /docs/recruiting-blueprint/
 /docs/recruiting-refresh-plan.md
 /output/recruiting/
+# Working master, historical backups and local release staging.
+# Public reader files are committed only from /public/recruiting/.
+/outputs/college-soccer-directory/
+/outputs/recruiting-blueprint/
+/output/repo-cleanup-plan.json
 /scripts/inventory-recruiting.py

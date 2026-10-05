@@ -36,6 +36,7 @@ const navGroups = [
     links: [
       { label: "Coaching History", href: "/coaches" },
       { label: "Coaching Records", href: "/coaching-records" },
+      { label: "College Recruiting", href: "/recruiting" },
     ],
   },
 ] as const
