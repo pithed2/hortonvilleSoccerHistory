@@ -11,7 +11,7 @@ export const ogAndyPlayer: CardPlayer = {
 
 // Coach tester only; collegiate totals never enter Hortonville's varsity archive.
 export const cooperRePlayer: CardPlayer = {
-  id: "cooper-re-coach", name: "Cooper Re", number: "", position: "Assistant Coach", classYear: "",
+  id: "cooper-re-coach", name: "Cooper Re", number: "97", position: "Assistant Coach", classYear: "",
   season: 2026, statsSeason: 2025, careerSpan: "2022–2025", example: true, coach: true, incomplete: false,
   metrics: [
     { label: "GOALS", season: "16", career: "33" },
@@ -31,7 +31,7 @@ export function exampleCardDesign(id: string): CardDesign | undefined {
     return {
       portrait: photo("portrait.jpg", 50, 0), action: photo("action.jpg", 50, 30),
       highlight: { ...photo("back.jpg"), fit: "contain" },
-      overview: cooperReOverview, theme: "ice", rightsConfirmed: false,
+      overview: cooperReOverview, theme: "red", rightsConfirmed: false,
     }
   }
   if (id !== ogAndyPlayer.id) return undefined
