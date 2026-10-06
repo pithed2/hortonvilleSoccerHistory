@@ -61,6 +61,8 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
   const ctx = canvas.getContext("2d")!
   const [portrait, action, logo, highlight] = await Promise.all([design.portrait.src ? cardImage(design.portrait.src) : null, design.action.src ? cardImage(design.action.src) : null, cardImage("/logos/modern-bear-logo-white-fill.png"), design.highlight?.src ? cardImage(design.highlight.src) : null])
   const cooperBack = player.id === "cooper-re-coach" && side === "back"
+  const marcoBack = player.id === "marco-coach" && side === "back"
+  const snc = marcoBack ? await cardImage("/logos/marco-snc-transparent.png") : null
   const [kimberly, whitewater] = await Promise.all([
     cooperBack ? cardImage("/logos/cooper-kimberly.png") : null,
     cooperBack ? cardImage("/logos/cooper-uww-transparent.png") : null,
@@ -218,7 +220,12 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     // set apart from the overview text above instead of floating on the bare background.
     ctx.fillStyle = "rgba(255,255,255,.05)"; ctx.fillRect(50, 1248, 900, 140)
     ctx.strokeStyle = "rgba(255,255,255,.18)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(50, 1248); ctx.lineTo(950, 1248); ctx.stroke()
-    ctx.drawImage(logo, cooperBack ? 619 : 464, 1264, 72, 72)
+    ctx.drawImage(logo, cooperBack ? 619 : marcoBack ? 534 : 464, 1264, 72, 72)
+    if (snc) {
+      const scale = Math.min(120 / snc.naturalWidth, 72 / snc.naturalHeight)
+      const width = snc.naturalWidth * scale, height = snc.naturalHeight * scale
+      ctx.drawImage(snc, 430 - width / 2, 1300 - height / 2, width, height)
+    }
     if (kimberly && whitewater) {
       // Trim supplied canvas padding, then fit each mark in a 72px-high box.
       // Source proportions are retained in Kimberly, UWW, Hortonville order.
@@ -232,7 +239,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
       footerLogo(whitewater, [20, 200, 1510, 650], 500, 180)
     }
     ctx.fillStyle = foilGradient(50, 1341, 950, 1353); ctx.fillRect(50, 1344, 900, 6)
-    ctx.textAlign = "center"; text(cooperBack ? "COOPER RE | KIMBERLY | UWW | HORTONVILLE" : `${player.name.toUpperCase()}  /  HORTONVILLE`, 500, 1380, 27, "#fff", 800, 890); ctx.textAlign = "left"
+    ctx.textAlign = "center"; text(cooperBack ? "COOPER RE | KIMBERLY | UWW | HORTONVILLE" : marcoBack ? "MARCO DELBECCHI | SNC | HORTONVILLE" : `${player.name.toUpperCase()}  /  HORTONVILLE`, 500, 1380, 27, "#fff", 800, 890); ctx.textAlign = "left"
   }
   ctx.strokeStyle = isIce ? foilGradient(0, 0, CARD_WIDTH, CARD_HEIGHT) : accent; ctx.lineWidth = 12; ctx.strokeRect(6, 6, 988, 1388)
 }

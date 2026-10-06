@@ -49,7 +49,7 @@ export function exampleCardDesign(id: string): CardDesign | undefined {
 }
 
 export const marcoPlayer: CardPlayer = {
-  id: "marco-coach", name: "Marco", number: "", position: "Coach", classYear: "",
+  id: "marco-coach", name: "Marco Delbecchi", number: "", position: "Assistant Coach", classYear: "",
   season: 2026, careerSpan: "Hortonville & St. Norbert", example: true, coach: true, incomplete: false,
   statsTitle: "PLAYING CAREER / HORTONVILLE & ST. NORBERT",
   statsRowLabels: ["SNC", "HHS"],
