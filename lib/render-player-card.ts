@@ -60,6 +60,11 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
   canvas.height = CARD_HEIGHT
   const ctx = canvas.getContext("2d")!
   const [portrait, action, logo, highlight] = await Promise.all([design.portrait.src ? cardImage(design.portrait.src) : null, design.action.src ? cardImage(design.action.src) : null, cardImage("/logos/modern-bear-logo-white-fill.png"), design.highlight?.src ? cardImage(design.highlight.src) : null])
+  const cooperBack = player.id === "cooper-re-coach" && side === "back"
+  const [kimberly, whitewater] = await Promise.all([
+    cooperBack ? cardImage("/logos/cooper-kimberly.png") : null,
+    cooperBack ? cardImage("/logos/cooper-uww.png") : null,
+  ])
   const isIce = design.theme === "ice"
   const accent = design.theme === "black" || isIce ? "#FFFFFF" : "#E4002B"
   function text(value: string, x: number, y: number, size: number, color = "#fff", weight = 800, maxWidth?: number) {
@@ -214,8 +219,20 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     ctx.fillStyle = "rgba(255,255,255,.05)"; ctx.fillRect(50, 1248, 900, 140)
     ctx.strokeStyle = "rgba(255,255,255,.18)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(50, 1248); ctx.lineTo(950, 1248); ctx.stroke()
     ctx.drawImage(logo, 464, 1264, 72, 72)
+    if (kimberly && whitewater) {
+      // Trim supplied canvas padding, then fit each mark in a 72px-high box.
+      // Source proportions are retained; the central Polar Bear stays in place.
+      const footerLogo = (image: HTMLImageElement, crop: [number, number, number, number], centerX: number, maxWidth: number) => {
+        const [sx, sy, sw, sh] = crop
+        const scale = Math.min(maxWidth / sw, 72 / sh)
+        const width = sw * scale, height = sh * scale
+        ctx.drawImage(image, sx, sy, sw, sh, centerX - width / 2, 1300 - height / 2, width, height)
+      }
+      footerLogo(kimberly, [203, 56, 298, 245], 360, 90)
+      footerLogo(whitewater, [20, 135, 870, 350], 655, 180)
+    }
     ctx.fillStyle = foilGradient(50, 1341, 950, 1353); ctx.fillRect(50, 1344, 900, 6)
-    ctx.textAlign = "center"; text(`${player.name.toUpperCase()}  /  HORTONVILLE`, 500, 1380, 27, "#fff", 800, 890); ctx.textAlign = "left"
+    ctx.textAlign = "center"; text(cooperBack ? "COOPER RE | KIMBERLY | UWW | HORTONVILLE" : `${player.name.toUpperCase()}  /  HORTONVILLE`, 500, 1380, 27, "#fff", 800, 890); ctx.textAlign = "left"
   }
   ctx.strokeStyle = isIce ? foilGradient(0, 0, CARD_WIDTH, CARD_HEIGHT) : accent; ctx.lineWidth = 12; ctx.strokeRect(6, 6, 988, 1388)
 }
