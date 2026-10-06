@@ -1,0 +1,1411 @@
+{
+  "season": 2026,
+  "checkedAt": "2026-10-06",
+  "resultsThrough": "2026-10-01",
+  "coverage": [
+    {
+      "team": "Hortonville",
+      "available": true,
+      "source": "https://v0-hortonville-soccer-history.vercel.app/seasons/2026#schedule",
+      "conferenceSource": "https://v0-hortonville-soccer-history.vercel.app/seasons/2026#schedule"
+    },
+    {
+      "team": "Appleton North",
+      "available": true,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonno/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonno/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Neenah",
+      "available": true,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/neenah/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/neenah/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Appleton East",
+      "available": true,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonea/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonea/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Kimberly",
+      "available": false,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kimberly/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kimberly/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Oshkosh West",
+      "available": false,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshwes/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshwes/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Fond du Lac",
+      "available": false,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/fonddulac/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/fonddulac/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Kaukauna",
+      "available": true,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kaukauna/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kaukauna/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Oshkosh North",
+      "available": false,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshnor/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshnor/v/stats?competitor=athlete&range=conference&block=total"
+    },
+    {
+      "team": "Appleton West",
+      "available": false,
+      "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonwe/v/stats",
+      "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonwe/v/stats?competitor=athlete&range=conference&block=total"
+    }
+  ],
+  "players": [
+    {
+      "id": "Appleton North|Everett Van Groll",
+      "name": "Everett Van Groll",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Ben Wilke",
+      "name": "Ben Wilke",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Luke Borchardt",
+      "name": "Luke Borchardt",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Appleton North|Parker Brooks",
+      "name": "Parker Brooks",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 5,
+        "assists": 2,
+        "points": 12
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 2,
+        "points": 8
+      }
+    },
+    {
+      "id": "Appleton North|Cal Greer",
+      "name": "Cal Greer",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Appleton North|Caysen Leblanc",
+      "name": "Caysen Leblanc",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Josiah Flores",
+      "name": "Josiah Flores",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 6,
+        "assists": 1,
+        "points": 13
+      },
+      "conference": {
+        "goals": 5,
+        "assists": 0,
+        "points": 10
+      }
+    },
+    {
+      "id": "Appleton North|Bennett Vande Hey",
+      "name": "Bennett Vande Hey",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 3,
+        "assists": 1,
+        "points": 7
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 0,
+        "points": 4
+      }
+    },
+    {
+      "id": "Appleton North|Owen Pack",
+      "name": "Owen Pack",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Ray Toonen",
+      "name": "Ray Toonen",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 5,
+        "assists": 0,
+        "points": 10
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 0,
+        "points": 4
+      }
+    },
+    {
+      "id": "Appleton North|Yael Uriostegui",
+      "name": "Yael Uriostegui",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Knox Schneider",
+      "name": "Knox Schneider",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 2,
+        "assists": 6,
+        "points": 10
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 4,
+        "points": 6
+      }
+    },
+    {
+      "id": "Appleton North|Evan Apostolou",
+      "name": "Evan Apostolou",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 4,
+        "assists": 5,
+        "points": 13
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 4,
+        "points": 10
+      }
+    },
+    {
+      "id": "Appleton North|Eli Carlson",
+      "name": "Eli Carlson",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 2,
+        "assists": 3,
+        "points": 7
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      }
+    },
+    {
+      "id": "Appleton North|Marcus Marconi",
+      "name": "Marcus Marconi",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Yair Uriostegui",
+      "name": "Yair Uriostegui",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Dwyane Xiong",
+      "name": "Dwyane Xiong",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 3,
+        "assists": 1,
+        "points": 7
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 1,
+        "points": 7
+      }
+    },
+    {
+      "id": "Appleton North|Elijah Randerson",
+      "name": "Elijah Randerson",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 2,
+        "assists": 2,
+        "points": 6
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      }
+    },
+    {
+      "id": "Appleton North|Carlos Santos",
+      "name": "Carlos Santos",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton North|Henry Martin",
+      "name": "Henry Martin",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      }
+    },
+    {
+      "id": "Appleton North|Lewis Mattingly",
+      "name": "Lewis Mattingly",
+      "team": "Appleton North",
+      "overall": {
+        "goals": 1,
+        "assists": 4,
+        "points": 6
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 3,
+        "points": 5
+      }
+    },
+    {
+      "id": "Neenah|Oliver Peterka",
+      "name": "Oliver Peterka",
+      "team": "Neenah",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Neenah|Brode LaBarge",
+      "name": "Brode LaBarge",
+      "team": "Neenah",
+      "overall": {
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Neenah|Joseph Buttron",
+      "name": "Joseph Buttron",
+      "team": "Neenah",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": null
+    },
+    {
+      "id": "Neenah|Braulio Alvarado Zarate",
+      "name": "Braulio Alvarado Zarate",
+      "team": "Neenah",
+      "overall": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Neenah|Juan Alvarado",
+      "name": "Juan Alvarado",
+      "team": "Neenah",
+      "overall": {
+        "goals": 2,
+        "assists": 0,
+        "points": 4
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      }
+    },
+    {
+      "id": "Neenah|Tyler Geschrei",
+      "name": "Tyler Geschrei",
+      "team": "Neenah",
+      "overall": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      }
+    },
+    {
+      "id": "Neenah|Cooper Christie",
+      "name": "Cooper Christie",
+      "team": "Neenah",
+      "overall": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      }
+    },
+    {
+      "id": "Neenah|Owen Van Zeeland",
+      "name": "Owen Van Zeeland",
+      "team": "Neenah",
+      "overall": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      }
+    },
+    {
+      "id": "Neenah|Hunter Brown",
+      "name": "Hunter Brown",
+      "team": "Neenah",
+      "overall": {
+        "goals": 5,
+        "assists": 3,
+        "points": 13
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 1,
+        "points": 7
+      }
+    },
+    {
+      "id": "Neenah|Kolton Fleege",
+      "name": "Kolton Fleege",
+      "team": "Neenah",
+      "overall": {
+        "goals": 9,
+        "assists": 2,
+        "points": 20
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 2,
+        "points": 8
+      }
+    },
+    {
+      "id": "Neenah|Cristian Ortiz",
+      "name": "Cristian Ortiz",
+      "team": "Neenah",
+      "overall": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      "conference": null
+    },
+    {
+      "id": "Neenah|Owen Pire",
+      "name": "Owen Pire",
+      "team": "Neenah",
+      "overall": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Neenah|Ian Baetke",
+      "name": "Ian Baetke",
+      "team": "Neenah",
+      "overall": {
+        "goals": 11,
+        "assists": 5,
+        "points": 27
+      },
+      "conference": {
+        "goals": 9,
+        "assists": 3,
+        "points": 21
+      }
+    },
+    {
+      "id": "Neenah|Jordy Banda",
+      "name": "Jordy Banda",
+      "team": "Neenah",
+      "overall": {
+        "goals": 1,
+        "assists": 4,
+        "points": 6
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      }
+    },
+    {
+      "id": "Neenah|Evan Glennon",
+      "name": "Evan Glennon",
+      "team": "Neenah",
+      "overall": {
+        "goals": 0,
+        "assists": 3,
+        "points": 3
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Appleton East|Ryan Espy",
+      "name": "Ryan Espy",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Will Zachor",
+      "name": "Will Zachor",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      }
+    },
+    {
+      "id": "Appleton East|Anthony Jordan",
+      "name": "Anthony Jordan",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      }
+    },
+    {
+      "id": "Appleton East|Preston Schefe",
+      "name": "Preston Schefe",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Kingston Xiong",
+      "name": "Kingston Xiong",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Tyson Wheaton",
+      "name": "Tyson Wheaton",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Antar Barquet",
+      "name": "Antar Barquet",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Oliver Heinritz",
+      "name": "Oliver Heinritz",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Brady Koplitz",
+      "name": "Brady Koplitz",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      }
+    },
+    {
+      "id": "Appleton East|Levi Boegh",
+      "name": "Levi Boegh",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 0,
+        "points": 4
+      }
+    },
+    {
+      "id": "Appleton East|Lungwe Ramadhani",
+      "name": "Lungwe Ramadhani",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 7,
+        "assists": 2,
+        "points": 16
+      },
+      "conference": {
+        "goals": 6,
+        "assists": 2,
+        "points": 14
+      }
+    },
+    {
+      "id": "Appleton East|Christopher Perez Diaz",
+      "name": "Christopher Perez Diaz",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 2,
+        "points": 4
+      }
+    },
+    {
+      "id": "Appleton East|Ivan Vera",
+      "name": "Ivan Vera",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 3,
+        "assists": 3,
+        "points": 9
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 3,
+        "points": 7
+      }
+    },
+    {
+      "id": "Appleton East|Jasper Lewis",
+      "name": "Jasper Lewis",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Evan Olsen",
+      "name": "Evan Olsen",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Alex Quezada",
+      "name": "Alex Quezada",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 5,
+        "assists": 1,
+        "points": 11
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 1,
+        "points": 7
+      }
+    },
+    {
+      "id": "Appleton East|Zander Martin",
+      "name": "Zander Martin",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Will Larson",
+      "name": "Will Larson",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 2,
+        "assists": 5,
+        "points": 9
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 5,
+        "points": 9
+      }
+    },
+    {
+      "id": "Appleton East|Chase Bonovich",
+      "name": "Chase Bonovich",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Cooper Austin",
+      "name": "Cooper Austin",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Appleton East|Owen Teske",
+      "name": "Owen Teske",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Dylan Capelle",
+      "name": "Dylan Capelle",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Appleton East|Jack Benz",
+      "name": "Jack Benz",
+      "team": "Appleton East",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Ty Tripp",
+      "name": "Ty Tripp",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Zadyn Casey",
+      "name": "Zadyn Casey",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      }
+    },
+    {
+      "id": "Kaukauna|Mason Sewall",
+      "name": "Mason Sewall",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Moses Yairwe",
+      "name": "Moses Yairwe",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 3,
+        "assists": 1,
+        "points": 7
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      }
+    },
+    {
+      "id": "Kaukauna|Logan Laabs",
+      "name": "Logan Laabs",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Aiden Ferrier",
+      "name": "Aiden Ferrier",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Alvaro Covarrubias",
+      "name": "Alvaro Covarrubias",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    },
+    {
+      "id": "Kaukauna|Landon Krautkramer",
+      "name": "Landon Krautkramer",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 1,
+        "assists": 5,
+        "points": 7
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      }
+    },
+    {
+      "id": "Kaukauna|Ian West",
+      "name": "Ian West",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 3,
+        "assists": 2,
+        "points": 8
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 2,
+        "points": 6
+      }
+    },
+    {
+      "id": "Kaukauna|Eli Rayer",
+      "name": "Eli Rayer",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Zac Vosters",
+      "name": "Zac Vosters",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Dylan Wojcik",
+      "name": "Dylan Wojcik",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Everett Gillis",
+      "name": "Everett Gillis",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Alain Albarran",
+      "name": "Alain Albarran",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Holden Smith",
+      "name": "Holden Smith",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Bennett Stainton",
+      "name": "Bennett Stainton",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      }
+    },
+    {
+      "id": "Kaukauna|Thomas Bass",
+      "name": "Thomas Bass",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      }
+    },
+    {
+      "id": "Hortonville|Noah Rindt",
+      "name": "Noah Rindt",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 11,
+        "assists": 5,
+        "points": 27
+      },
+      "conference": {
+        "goals": 5,
+        "assists": 5,
+        "points": 15
+      }
+    },
+    {
+      "id": "Hortonville|Fenton Hirschi",
+      "name": "Fenton Hirschi",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 8,
+        "assists": 11,
+        "points": 27
+      },
+      "conference": {
+        "goals": 8,
+        "assists": 6,
+        "points": 22
+      }
+    },
+    {
+      "id": "Hortonville|Roman Glad",
+      "name": "Roman Glad",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 9,
+        "assists": 4,
+        "points": 22
+      },
+      "conference": {
+        "goals": 4,
+        "assists": 2,
+        "points": 10
+      }
+    },
+    {
+      "id": "Hortonville|Jacob Plutz",
+      "name": "Jacob Plutz",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 6,
+        "assists": 10,
+        "points": 22
+      },
+      "conference": {
+        "goals": 4,
+        "assists": 7,
+        "points": 15
+      }
+    },
+    {
+      "id": "Hortonville|Evan Langkan",
+      "name": "Evan Langkan",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 7,
+        "assists": 4,
+        "points": 18
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 0,
+        "points": 6
+      }
+    },
+    {
+      "id": "Hortonville|Ben Diedrich",
+      "name": "Ben Diedrich",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 6,
+        "assists": 6,
+        "points": 18
+      },
+      "conference": {
+        "goals": 3,
+        "assists": 4,
+        "points": 10
+      }
+    },
+    {
+      "id": "Hortonville|Anthony Zanon",
+      "name": "Anthony Zanon",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 5,
+        "assists": 5,
+        "points": 15
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      }
+    },
+    {
+      "id": "Hortonville|Caleb Schewe",
+      "name": "Caleb Schewe",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 2,
+        "assists": 0,
+        "points": 4
+      },
+      "conference": {
+        "goals": 2,
+        "assists": 0,
+        "points": 4
+      }
+    },
+    {
+      "id": "Hortonville|Connor Rindt",
+      "name": "Connor Rindt",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      }
+    },
+    {
+      "id": "Hortonville|Sawyer Davis",
+      "name": "Sawyer Davis",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      }
+    },
+    {
+      "id": "Hortonville|Ashtyn Beidel",
+      "name": "Ashtyn Beidel",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      }
+    },
+    {
+      "id": "Hortonville|Mason Lyons",
+      "name": "Mason Lyons",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 1,
+        "assists": 0,
+        "points": 2
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Hortonville|James Baker",
+      "name": "James Baker",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      }
+    },
+    {
+      "id": "Hortonville|Owen Ehr",
+      "name": "Owen Ehr",
+      "team": "Hortonville",
+      "overall": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
+      }
+    }
+  ]
+}
