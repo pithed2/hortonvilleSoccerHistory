@@ -71,7 +71,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
   function photo(image: HTMLImageElement | null, crop: CardPhoto, x: number, y: number, w: number, h: number) {
     ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip()
     if (image) {
-      const scale = Math.max(w / image.naturalWidth, h / image.naturalHeight) * crop.zoom
+      const scale = (crop.fit === "contain" ? Math.min : Math.max)(w / image.naturalWidth, h / image.naturalHeight) * crop.zoom
       const dw = image.naturalWidth * scale, dh = image.naturalHeight * scale
       ctx.drawImage(image, x - (dw - w) * crop.x / 100, y - (dh - h) * crop.y / 100, dw, dh)
     } else {
@@ -138,33 +138,35 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     numberWatermark(970, 1120, 560, "right")
     stripe(900)
     if (action) {
-      ctx.save(); ctx.translate(610, 800); ctx.rotate(.055); ctx.fillStyle = accent; ctx.fillRect(-7, -7, 354, 254)
-      photo(action, design.action, 0, 0, 340, 240); ctx.restore()
+      const insetW = player.coach ? 270 : 340, insetH = player.coach ? 340 : 240
+      ctx.save(); ctx.translate(player.coach ? 680 : 610, player.coach ? 720 : 800); ctx.rotate(.055); ctx.fillStyle = accent; ctx.fillRect(-7, -7, insetW + 14, insetH + 14)
+      photo(action, design.action, 0, 0, insetW, insetH); ctx.restore()
     }
     limitedEditionStamp(822, 1098, -.08)
     ctx.fillStyle = "#000000d9"; ctx.fillRect(0, 0, 1000, 145)
     ctx.drawImage(logo, 42, 25, 90, 90)
     text("HORTONVILLE", 160, 65, 38); text("POLAR BEARS / BOYS SOCCER", 160, 102, 20, "#FFFFFF")
-    text(`#${player.number}`, 765, 100, 70, accent, 900, 190)
-    text(player.example ? "OG ANDY / EXAMPLE EDITION" : player.season === 2026 ? "2026 FOX VALLEY ASSOCIATION CHAMPIONS" : "ALUMNI EDITION", 55, 1140, 25, accent, 800, 890)
+    if (player.number) text(`#${player.number}`, 765, 100, 70, accent, 900, 190)
+    text(player.coach ? "COACH COLLECTION / TESTER EDITION" : player.example ? "OG ANDY / EXAMPLE EDITION" : player.season === 2026 ? "2026 FOX VALLEY ASSOCIATION CHAMPIONS" : "ALUMNI EDITION", 55, 1140, 25, accent, 800, 890)
     const parts = player.name.split(" "), last = parts.pop() ?? "", first = parts.join(" ")
     text(first.toUpperCase(), 55, 1197, 44, "#fff", 700, 885)
     text(last.toUpperCase(), 50, 1284, 88, "#fff", 900, 900)
-    text(player.example ? `#${player.number}  /  THROWBACK COLLECTION` : [player.position, player.classYear, player.season].filter(Boolean).join("  /  "), 55, 1341, 25, "#FFFFFF")
+    text(player.coach ? `${player.position.toUpperCase()}  /  ${player.season}` : player.example ? `#${player.number}  /  THROWBACK COLLECTION` : [player.position, player.classYear, player.season].filter(Boolean).join("  /  "), 55, 1341, 25, "#FFFFFF")
   } else {
-    photo(highlight ?? action, highlight && design.highlight ? design.highlight : design.action, 0, 0, 1000, 650)
+    photo(highlight ?? action, highlight && design.highlight ? design.highlight : design.action, 0, player.coach ? 95 : 0, 1000, player.coach ? 450 : 650)
     if (isIce) {
       ctx.drawImage(crackedIceTexture(), 0, 0)
       ctx.fillStyle = "rgba(0,0,0,.94)"; ctx.fillRect(50, 650, 900, 738)
       ctx.fillStyle = "rgba(0,0,0,.75)"; ctx.fillRect(40, 25, 700, 65)
     }
-    const shade = ctx.createLinearGradient(0, 350, 0, 650); shade.addColorStop(0, "#00000000"); shade.addColorStop(1, "#000000")
-    ctx.fillStyle = shade; ctx.fillRect(0, 350, 1000, 300)
+    const shadeTop = player.coach ? 550 : 350
+    const shade = ctx.createLinearGradient(0, shadeTop, 0, 650); shade.addColorStop(0, "#00000000"); shade.addColorStop(1, "#000000")
+    ctx.fillStyle = shade; ctx.fillRect(0, shadeTop, 1000, 650 - shadeTop)
     numberWatermark(955, 985, 420, "right")
-    text([player.position, `#${player.number}`].filter(Boolean).join("  /  "), 55, 70, 30)
+    text([player.position, player.number ? `#${player.number}` : ""].filter(Boolean).join("  /  "), 55, 70, 30)
     text(player.name.toUpperCase(), 50, 620, 58, "#fff", 900, 900)
     ctx.fillStyle = foilGradient(50, 650, 950, 660); ctx.fillRect(50, 655, 900, 5)
-    text(player.example ? "PLAYER SNAPSHOT / EXAMPLE EDITION" : `VARSITY CAREER / ${player.careerSpan}`, 55, 700, 22, accent)
+    text(player.coach ? `UW–WHITEWATER CAREER / ${player.careerSpan}` : player.example ? "PLAYER SNAPSHOT / EXAMPLE EDITION" : `VARSITY CAREER / ${player.careerSpan}`, 55, 700, 22, accent)
     // Stat table: a bordered scoreboard grid — header bar, two distinct rows, and
     // ruled column/row dividers — rather than text floating on the bare background.
     const tableX = 50, tableW = 900, labelW = 230, headerH = 62, rowH = 74, tableTop = 730
@@ -175,7 +177,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     text("SEASON", tableX + 22, tableTop + 40, 22)
     player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.label, positions[i], tableTop + 40, 22) }); ctx.textAlign = "left"
     ctx.fillStyle = design.theme === "black" || isIce ? "rgba(255,255,255,.1)" : "rgba(228,0,43,.16)"; ctx.fillRect(tableX, seasonY, tableW, rowH)
-    text(player.example ? "EXAMPLE" : String(player.season), tableX + 22, seasonY + 47, 28, accent, 800)
+    text(player.coach ? String(player.statsSeason ?? player.season) : player.example ? "EXAMPLE" : String(player.season), tableX + 22, seasonY + 47, 28, accent, 800)
     player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.season, positions[i], seasonY + 47, 32) }); ctx.textAlign = "left"
     ctx.fillStyle = "rgba(255,255,255,.04)"; ctx.fillRect(tableX, careerY, tableW, rowH)
     text("CAREER", tableX + 22, careerY + 47, 28, "#fff", 800)
@@ -188,7 +190,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     ctx.moveTo(statColsX, tableTop); ctx.lineTo(statColsX, tableBottom)
     for (let i = 1; i < player.metrics.length; i++) { const dividerX = statColsX + statColsW * i / player.metrics.length; ctx.moveTo(dividerX, tableTop); ctx.lineTo(dividerX, tableBottom) }
     ctx.stroke()
-    text("PLAYER OVERVIEW", 55, 988, 20, accent)
+    text(player.coach ? "COACH OVERVIEW" : "PLAYER OVERVIEW", 55, 988, 20, accent)
     const overview = design.overview || "Your player overview will appear here."
     let fontSize = 28, lines: string[] = []
     do {

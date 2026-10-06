@@ -8,7 +8,7 @@ import { cardDraft, saveCard, withdrawCard } from "@/lib/player-card-store"
 import type { CardDesign } from "@/lib/player-card-types"
 import { exampleCardDesign } from "@/lib/player-card-examples"
 
-const photo = z.object({ src: z.string().max(600_000).refine((value) => !value || /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(value), "Use a JPEG, PNG, or WebP photo."), x: z.number().min(0).max(100), y: z.number().min(0).max(100), zoom: z.number().min(1).max(2) })
+const photo = z.object({ src: z.string().max(600_000).refine((value) => !value || /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(value), "Use a JPEG, PNG, or WebP photo."), x: z.number().min(0).max(100), y: z.number().min(0).max(100), zoom: z.number().min(1).max(2), fit: z.enum(["cover", "contain"]).optional() })
 const designSchema = z.object({ portrait: photo, action: photo, highlight: photo.optional(), overview: z.string().trim().max(500), theme: z.enum(["red", "black", "ice"]), rightsConfirmed: z.boolean() })
 async function authorize(id: string) {
   if (!validCoachCookie((await cookies()).get(COACH_COOKIE)?.value)) throw new Error("Sign in to Coach’s Corner to manage cards.")

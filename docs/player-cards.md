@@ -21,3 +21,9 @@ The table is created automatically on first use. It stores compressed images and
 ## Branding
 
 Hortonville Area School District (HASD): primary #E4002B, #000000, #FFFFFF; secondary #9D9D9D and #1E22AA. The three card finishes are Polar Red, Black & White, and Cracked Ice. Cracked Ice uses a reusable canvas texture with silver facets, red reflections, and a transparent center to preserve the photos. The same finish appears in previews, shared cards, and PNG downloads; no per-photo processing or additional image downloads are needed. Card typography reuses the site's self-hosted Poppins family, waiting for font loading before rendering; Arial is the approved fallback. Uses the existing Hortonville bear logo. Digital only; no print bleed or print production claims.
+
+## Cooper Re coach tester
+
+Cooper Re appears as an Assistant Coach tester in the private studio only. His 2026 card displays UW–Whitewater scoring totals: 2025 (16 goals, 5 assists, 37 points) and 2022–2025 career (33 goals, 11 assists, 77 points). These are coach-supplied collegiate statistics, separate from the Hortonville varsity archive. No Hortonville jersey number is assigned. The default Cracked Ice design includes an original overview under the 500-character limit; the supplied front portrait, action photograph, and All-American back graphic are preloaded. The back graphic uses contain sizing to preserve its headline and signature. Existing saved drafts take precedence over defaults.
+
+College honors verified against [UW–Whitewater’s December 4, 2025 announcement](https://uwwsports.com/news/2025/12/4/mens-soccer-cooper-re-earns-all-american-honors-from-usc.aspx). The two FVA Player of the Year awards and Assistant Coach role are supplied by the coach.

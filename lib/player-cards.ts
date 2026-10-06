@@ -1,6 +1,6 @@
 import { rosterBySeason, varsityHistoryByPlayer, type VarsitySeasonHistory } from "./player-stats"
 import type { CardPlayer } from "./player-card-types"
-import { ogAndyPlayer } from "./player-card-examples"
+import { cooperRePlayer, ogAndyPlayer } from "./player-card-examples"
 
 export function cardPlayerId(name: string) { return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") }
 
@@ -27,5 +27,5 @@ export function cardPlayers(): CardPlayer[] {
     const first = years.length ? Math.min(...years) : year
     return { id: cardPlayerId(player.player_name), name: player.player_name, number: player.number, position: player.position, classYear: player.class, season: year, careerSpan: first === year ? String(year) : `${first}–${year}`, metrics, incomplete: metrics.some((metric) => /[—*]/.test(metric.season + metric.career)) }
   })
-  return [...players, ogAndyPlayer]
+  return [...players, ogAndyPlayer, cooperRePlayer]
 }
