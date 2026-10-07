@@ -27,6 +27,7 @@ export function MatchFinish({ won, draw, mark, celebrationId, winner, yell, acti
   return <div className={`${styles.finish} ${won ? styles.winner : styles.loser}`} data-celebration={celebrationId} role="status">
     {won && !draw ? <div className={styles.confetti} aria-hidden="true">{Array.from({ length: 16 }, (_, i) => <i key={i} style={{ left: `${i * 6.5}%`, animationDelay: `${i % 5 * .13}s`, background: i % 2 ? "#fff" : "#ef4444" }} />)}</div> : null}
     <p className={styles.verdict}>{draw ? "UNFINISHED BUSINESS" : won ? "YOU OWN THE ROOM" : "THE ROOM GOT LOUD"}</p>
+    {celebrationId === "keyboard_warrior" && !draw ? <div className={styles.keyboard} aria-label="Computer Geek Keyboard Warrior typing celebration"><span>CTRL + ALT + DEFEAT</span><div aria-hidden="true">{Array.from({ length: 24 }, (_, i) => <i key={i} style={{ animationDelay: `${i % 7 * .09}s` }} />)}</div></div> : null}
     <div className={styles.emblem} aria-hidden="true">{draw ? "⚖" : mark}</div>
     <p className="text-xs font-black uppercase tracking-widest text-red-200">{draw ? "Level at the whistle" : `${winner} takes it`}</p>
     <p className="mt-2 text-2xl font-black italic">{draw ? "RUN IT BACK." : yell}</p>

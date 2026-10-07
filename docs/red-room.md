@@ -1,6 +1,6 @@
 # Red Room database
 
-The Red Room uses SQLite through libSQL. Local development writes to `.red-room/red-room.db`; production uses a Turso database connected through the Vercel Marketplace.
+The Red Room uses SQLite through libSQL. Local development writes to `.red-room/red-room.db`; production and preview use the shared Turso master database `database-cyan-arrow`, provisioned through Vercel Marketplace.
 
 ## Local setup
 
@@ -26,19 +26,25 @@ Miles Montalbano (`NR-Miles`) and Dawson Montalbano (`NR-Dawson`) are private no
 
 Ability choices are deterministic from the challenge ID, so a stored replay always produces the same outcome.
 
-Regular players begin with three match credits. Creating a challenge or answering one costs one credit. At zero credits, both game paths stay disabled and the Archive Keeper presents a multiple-choice historical question. A correct answer atomically adds three credits; the API rejects trivia submissions while credits remain. Wrong answers return a hint and a link to the supporting archive page. The seed builds a 200-question library spanning individual games, player and goalkeeper totals, season records, coaching records, head-to-head history, fields and facilities, the program origin story, major milestones, and logo history. Players receive unseen questions first, then the least recently attempted review question after they have solved the full library. Legend progress counts distinct correctly answered active questions.
+Regular players begin with 10 match credits. Creating a challenge or answering one costs one credit. At zero credits, both game paths stay disabled and the Archive Keeper presents a multiple-choice historical question. A correct answer atomically adds 10 credits; the API rejects trivia submissions while credits remain. Wrong answers return a hint and a link to the supporting archive page. The seed builds a 200-question library spanning individual games, player and goalkeeper totals, season records, coaching records, head-to-head history, fields and facilities, the program origin story, major milestones, and logo history. Players receive unseen questions first, then the least recently attempted review question after they have solved the full library. Legend progress counts distinct correctly answered active questions.
 
 Seeding is idempotent: existing identities and keys are preserved. Keep the Player Key export private and distribute each row only to its matching player.
 
 ## Production setup
 
-1. Add the free Turso Cloud integration to the Vercel project.
-2. Connect the database to the Vercel project. The app accepts the integration's `hhs_TURSO_DATABASE_URL` and `hhs_TURSO_AUTH_TOKEN` names, as well as the standard unprefixed names.
-3. Pull those variables into an ignored local environment file, then run the migration and seed scripts once against the hosted database with Node's `--env-file` option.
-4. Save the generated Player Key export somewhere private before deleting the local copy.
-5. Deploy the application normally.
+1. Provision a Turso database and set explicit `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` Vercel project variables to its master URL and credential, for both Production and Preview.
+2. Keep the marketplace resource disconnected from the project. Its automatic deployment provisioning previously created separate databases and split match history. Disconnecting the project preserves the database and existing branches; do not remove the resource itself.
+3. Pull the explicit variables into an ignored local environment file, then run the migration and seed scripts with Node's `--env-file` option for initial setup. Production must use the master URL rather than a `dpl-` branch URL.
+4. Save the generated Player Key export somewhere private.
+5. Deploy normally. Production ignores the legacy `hhs_` fallback, so it cannot silently return to an injected deployment database. Local SQLite fallback is available only outside production.
 
-The application falls back to local SQLite only outside production. Production remains unavailable until `TURSO_DATABASE_URL` is configured, preventing a deployment from silently writing to an ephemeral file.
+The credit migration adds seven credits to existing player/private balances exactly once and records the grant in the ledger. It preserves spent credits and leaves coaches and bots unchanged. New seeded identities explicitly receive 10 credits even on older databases whose original SQLite column default was three.
+
+## Login persistence
+
+The tag field uses `autocomplete="username"`; the private key is a password field with `autocomplete="current-password"`. The browser's password manager controls whether it offers to save and autofill those credentials. The app never puts the private key in local storage and stores only a salted scrypt hash in the database.
+
+Successful login sets a Secure (production), HttpOnly, SameSite=Lax cookie valid for 180 days. Its hashed session token is stored in the shared master database, so a deployment does not invalidate it. Logout deletes that session and clears its cookie. Personalized state responses use `Cache-Control: private, no-store`.
 
 ## Current model
 
@@ -50,3 +56,15 @@ The application falls back to local SQLite only outside production. Production r
 - `red_room_credit_events`: auditable match-credit ledger
 
 The historical game and player archive can move into additional SQLite tables later without changing the Red Room identity or competition data.
+
+## Accepting challenges
+
+Incoming pending challenges appear near the top of the page after login. Accept challenge selects the correct match and opens its five-round planner; the recipient never has to type a code. Pending incoming matches in Your matches open the same planner. The existing server authorization still restricts answers to the intended opponent, and credits are spent only when Play it out completes the match. Codes remain an optional lookup method. The state endpoint returns all personal matches so older pending challenges cannot fall outside a recent-history cutoff.
+
+## Coach Andy welcome match
+
+Run `node scripts/red-room-andy-welcome.mjs` against the master database to issue one randomized welcome challenge to every human account other than COACH-ANDY (including coaches and private accounts, excluding bots). The normal seed command also invokes this for newly added identities. Deterministic `andy-welcome:<player-id>` IDs prevent duplicates and preserve picks on reruns. Each creation spends one Coach Andy credit and writes its normal ledger event; recipients spend a credit only when answering.
+
+Welcome matches retain the andy_chief, book_of_andy, and keyboard_warrior persona regardless of later profile edits. The opener reminder appears only while the welcome is pending and the recipient has never completed a match against Coach Andy. Existing match history is preserved.
+
+`instructions_seen_at` records the first authenticated room visit. Migration initializes it from claimed_at for existing claimed accounts. Instructions open on the first visit and start collapsed on subsequent page visits, across devices. Users can always expand them manually.

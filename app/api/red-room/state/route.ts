@@ -1,4 +1,4 @@
-import { desc, eq, or } from "drizzle-orm"
+import { and, desc, eq, isNull, or } from "drizzle-orm"
 import { NextResponse } from "next/server"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { getRedRoomDb } from "@/lib/red-room/db"
@@ -8,12 +8,13 @@ import { challenges, players, rosterMemberships, triviaQuestions } from "@/lib/r
 
 export async function GET() {
   const me = await authenticatedPlayer()
-  if (!me) return NextResponse.json({ authenticated: false })
+  if (!me) return NextResponse.json({ authenticated: false }, { headers: { "Cache-Control": "private, no-store" } })
   const db = getRedRoomDb()
+  const firstVisit = me.instructionsSeenAt == null && (await db.update(players).set({ instructionsSeenAt: new Date() }).where(and(eq(players.id, me.id), isNull(players.instructionsSeenAt))).returning({ id: players.id })).length > 0
   const [roster, memberships, myChallenges, allCompleted, questions, attempts] = await Promise.all([
     db.select({ id: players.id, displayName: players.displayName, publicTag: players.publicTag, rating: players.rating, accountType: players.accountType, isBot: players.isBot, specialAbility: players.specialAbility, specialAbilityLabel: players.specialAbilityLabel, tauntId: players.tauntId, victoryId: players.victoryId, celebrationId: players.celebrationId }).from(players).orderBy(players.displayName),
     db.select().from(rosterMemberships),
-    db.select().from(challenges).where(or(eq(challenges.challengerId, me.id), eq(challenges.opponentId, me.id))).orderBy(desc(challenges.createdAt)).limit(20),
+    db.select().from(challenges).where(or(eq(challenges.challengerId, me.id), eq(challenges.opponentId, me.id))).orderBy(desc(challenges.createdAt)),
     db.select().from(challenges).where(eq(challenges.status, "completed")),
     db.select({ id: triviaQuestions.id, prompt: triviaQuestions.prompt, choices: triviaQuestions.choices, hint: triviaQuestions.hint, sourceHref: triviaQuestions.sourceHref, sourceLabel: triviaQuestions.sourceLabel }).from(triviaQuestions).where(eq(triviaQuestions.active, true)),
     db.query.triviaAttempts.findMany({ where: (attempt, { eq }) => eq(attempt.playerId, me.id) }),
@@ -44,17 +45,24 @@ export async function GET() {
   const question = unansweredQuestion || reviewQuestion || null
   return NextResponse.json({
     authenticated: true,
+    firstVisit,
+    andyWelcome: (() => {
+      const andy = roster.find((player) => player.publicTag === "COACH-ANDY")
+      const welcome = myChallenges.find((challenge) => challenge.id === `andy-welcome:${me.id}`)
+      const alreadyPlayedAndy = Boolean(andy && complete.some((challenge) => challenge.challengerId === andy.id || challenge.opponentId === andy.id))
+      return welcome?.status === "pending" && !alreadyPlayedAndy ? { challengeId: welcome.id } : null
+    })(),
     me: { id: me.id, displayName: me.displayName, publicTag: me.publicTag, accountType: me.accountType, isBot: me.isBot, specialAbility: me.specialAbility, specialAbilityLabel: me.specialAbilityLabel, matchCredits: me.matchCredits, rating: me.rating, tauntId: me.tauntId, victoryId: me.victoryId, celebrationId: me.celebrationId, squads: squadByPlayer.get(me.id) || [] },
     players: roster.filter((player) => player.id !== me.id && canSeeRedRoomPlayer(me, player)).map((player) => ({ ...player, specialAbilityLabel: legendAbilityLabel(player.specialAbility, player.specialAbilityLabel), squads: squadByPlayer.get(player.id) || [], legendUnlock: legendProgress(player.publicTag, wins, correctlyAnswered.size, me.accountType === "coach" || me.accountType === "private") })),
     challenges: myChallenges.map((challenge) => ({
       ...challenge,
-      challengerTauntId: playerById.get(challenge.challengerId)?.tauntId || "pressure",
+      challengerTauntId: challenge.id.startsWith("andy-welcome:") ? "andy_chief" : playerById.get(challenge.challengerId)?.tauntId || "pressure",
       opponentTauntId: playerById.get(challenge.opponentId)?.tauntId || "pressure",
       challengerName: playerById.get(challenge.challengerId)?.displayName,
       opponentName: playerById.get(challenge.opponentId)?.displayName,
-      challengerVictoryId: playerById.get(challenge.challengerId)?.victoryId,
+      challengerVictoryId: challenge.id.startsWith("andy-welcome:") ? "book_of_andy" : playerById.get(challenge.challengerId)?.victoryId,
       opponentVictoryId: playerById.get(challenge.opponentId)?.victoryId,
-      challengerCelebrationId: playerById.get(challenge.challengerId)?.celebrationId,
+      challengerCelebrationId: challenge.id.startsWith("andy-welcome:") ? "keyboard_warrior" : playerById.get(challenge.challengerId)?.celebrationId,
       opponentCelebrationId: playerById.get(challenge.opponentId)?.celebrationId,
       isMineToAnswer: challenge.status === "pending" && challenge.opponentId === me.id,
     })),
@@ -62,5 +70,5 @@ export async function GET() {
     archive: { correct: correctlyAnswered.size, total: questions.length },
     leaderboard,
     question: me.matchCredits <= 0 && question ? { ...question, review: correctlyAnswered.has(question.id) } : null,
-  })
+  }, { headers: { "Cache-Control": "private, no-store" } })
 }

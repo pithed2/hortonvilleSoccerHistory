@@ -1,6 +1,7 @@
 export type RedRoomTaunt = { id: string; label: string; ownerTag?: string }
 
 export const RED_ROOM_TAUNTS: readonly RedRoomTaunt[] = [
+  { id: "andy_chief", label: "Hey chief.  Object is to put the ball in the back of the net.", ownerTag: "COACH-ANDY" },
   { id: "pressure", label: "Hope you like pressure." },
   { id: "guess", label: "Pick a corner. Any corner." },
   { id: "ice", label: "Cold enough in here?" },
@@ -22,6 +23,7 @@ export const RED_ROOM_TAUNTS: readonly RedRoomTaunt[] = [
 ]
 
 export const RED_ROOM_VICTORY_CELEBRATIONS = [
+  { id: "keyboard_warrior", label: "Computer Geek Keyboard Warrior", action: "Mashes the keyboard. Hits Enter. Adjusts imaginary glasses. Another victory for the spreadsheet.", mark: "\u2328", yell: "SKILL ISSUE. CTRL + ALT + DEFEAT." },
   { id: "ice", label: "Ice in the Veins", action: "Cross the arms and let the frost hit.", mark: "❄", yell: "ICE COLD." },
   { id: "fist", label: "Old-School Wheel Away", action: "One fist up. Full sprint. Job done.", mark: "✊", yell: "JOB DONE." },
   { id: "slide", label: "Knee Slide", action: "The classic slide toward the corner.", mark: "⚡", yell: "BACK OF THE NET." },
@@ -36,6 +38,7 @@ export const RED_ROOM_VICTORY_CELEBRATIONS = [
 ] as const
 
 export const RED_ROOM_VICTORY_YELLS = [
+  { id: "book_of_andy", label: 'The Book of Andy says, and I quote, "Try and you may succeed.  Try against me and you shall fail."' },
   { id: "cold", label: "ICE COLD." },
   { id: "wall", label: "THE WALL HOLDS." },
   { id: "net", label: "BACK OF THE NET." },
@@ -62,14 +65,14 @@ export const RED_ROOM_VICTORY_YELLS = [
 ] as const
 
 export function tauntLabel(id: string, username?: string) {
-  const label = RED_ROOM_TAUNTS.find((taunt) => taunt.id === id)?.label ?? RED_ROOM_TAUNTS[0].label
+  const label = RED_ROOM_TAUNTS.find((taunt) => taunt.id === id)?.label ?? "Hope you like pressure."
   return label.replaceAll("{{username}}", username || "me")
 }
 
 export function victoryCelebration(id: string) {
-  return RED_ROOM_VICTORY_CELEBRATIONS.find((celebration) => celebration.id === id) ?? RED_ROOM_VICTORY_CELEBRATIONS[0]
+  return RED_ROOM_VICTORY_CELEBRATIONS.find((celebration) => celebration.id === id) ?? RED_ROOM_VICTORY_CELEBRATIONS.find((celebration) => celebration.id === "ice")!
 }
 
 export function victoryYell(id: string) {
-  return RED_ROOM_VICTORY_YELLS.find((victory) => victory.id === id)?.label ?? RED_ROOM_VICTORY_YELLS[0].label
+  return RED_ROOM_VICTORY_YELLS.find((victory) => victory.id === id)?.label ?? "ICE COLD."
 }

@@ -1,6 +1,7 @@
 import { createHash, randomBytes, scryptSync } from "node:crypto"
 import { mkdir, readFile, writeFile } from "node:fs/promises"
 import { createClient } from "@libsql/client"
+import { addAndyWelcomeChallenges } from "./red-room-andy-welcome.mjs"
 import { buildRedRoomQuestionBank } from "./red-room-question-bank.mjs"
 
 const readJson = async (path) => JSON.parse(await readFile(path, "utf8"))
@@ -83,7 +84,7 @@ for (const entry of entries) {
     const salt = randomBytes(16).toString("hex")
     const hash = scryptSync(key, salt, 64).toString("hex")
     await client.execute({
-      sql: "INSERT INTO red_room_players (id, display_name, normalized_name, public_tag, claim_key_salt, claim_key_hash, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+      sql: "INSERT INTO red_room_players (id, display_name, normalized_name, public_tag, claim_key_salt, claim_key_hash, match_credits, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, 10, ?, ?)",
       args: [playerId, entry.name, normalized(entry.name), tag, salt, hash, now, now],
     })
     exported.push({ name: entry.name, tag, key })
@@ -124,7 +125,7 @@ for (const privatePlayer of privatePlayers) {
     const salt = randomBytes(16).toString("hex")
     const hash = scryptSync(key, salt, 64).toString("hex")
     await client.execute({
-      sql: "INSERT INTO red_room_players (id, display_name, normalized_name, public_tag, account_type, claim_key_salt, claim_key_hash, created_at, updated_at) VALUES (?, ?, ?, ?, 'private', ?, ?, ?, ?)",
+      sql: "INSERT INTO red_room_players (id, display_name, normalized_name, public_tag, account_type, claim_key_salt, claim_key_hash, match_credits, created_at, updated_at) VALUES (?, ?, ?, ?, 'private', ?, ?, 10, ?, ?)",
       args: [playerId, privatePlayer.name, normalized(privatePlayer.name), privatePlayer.tag, salt, hash, now, now],
     })
     exported.push({ name: privatePlayer.name, tag: privatePlayer.tag, key })
@@ -168,4 +169,5 @@ if (exported.length) {
   await writeFile(target, ["player_name,public_tag,private_key", ...exported.map((row) => [row.name, row.tag, row.key].map(escape).join(","))].join("\n") + "\n")
   console.log(`Created ${exported.length} player identities. Private keys: ${target}`)
 } else console.log("Player identities already exist; no private keys were regenerated.")
+console.log("Coach Andy welcome challenges:", await addAndyWelcomeChallenges(client))
 client.close()
