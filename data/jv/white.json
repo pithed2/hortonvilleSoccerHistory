@@ -6,15 +6,15 @@
     "sourceLabel": "Team score sheets",
     "gamesNote": "GP reflects recorded participation. Goals: 2 points · Assists: 1 point",
     "notes": [
-      "October 6 vs Kaukauna: 3-0 win recorded; player stats pending."
+      "October 6 at Kaukauna: 3-0 win. Liam Evenson scored twice; James Forsythe scored once. Ben Decker recorded an 80-minute shutout with 3 saves."
     ],
     "audit": {
-      "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload); Score sheet photo, JV White vs Appleton West (chat upload); Score sheet photo, JV White vs Kimberly (chat upload); JV_White_OshWest.jpg",
+      "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload); Score sheet photo, JV White vs Appleton West (chat upload); Score sheet photo, JV White vs Kimberly (chat upload); JV_White_OshWest.jpg; Coach supplied Kaukauna player statistics 2026-10-07",
       "sourceModifiedAt": "",
       "sourceSha256": "",
-      "importedAt": "2026-09-29",
+      "importedAt": "2026-10-07",
       "validation": "passed",
-      "validationSummary": "Thirteen results; goals, assists, points and goalkeeper totals reconciled against box scores. September 29 vs Oshkosh West: 1-0; Reno Brei goal; Wyatt Mauthepasch assist; Ben Decker 10 saves and 80 coach-confirmed minutes. Historical unknown saves remain unknown. Recorded saves include the eight saves already entered for September 28. October 6: result only; three goals await player attribution.",
+      "validationSummary": "Fourteen results; goals, assists, points and goalkeeper totals reconciled against box scores. October 6 at Kaukauna: Liam Evenson 2 goals, James Forsythe 1 goal; Carter Possley, Wyatt Mauthepasch and Connor Schmitt 1 assist each; 10 shots on goal; Ben Decker 80 minutes, 3 saves, 0 goals against. Historical unknown saves remain unknown. Full Kaukauna lineup and goal-by-goal assist pairings were not supplied.",
       "approvedBy": "Andrew Montalbano"
     },
     "record": {
@@ -27,18 +27,18 @@
       "goalsFor": 66,
       "goalsAgainst": 10,
       "shots": null,
-      "sog": 213,
+      "sog": 223,
       "saves": null
     },
     "goalkeepers": [
       {
         "number": 0,
         "name": "Ben Decker",
-        "games": 13,
+        "games": 14,
         "saves": null,
-        "minutes": 980,
+        "minutes": 1060,
         "goalsAgainst": 10,
-        "recordedSaves": 46
+        "recordedSaves": 49
       }
     ],
     "recent": [
@@ -171,7 +171,7 @@
       {
         "number": 0,
         "name": "Ben Decker",
-        "gp": 13,
+        "gp": 14,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -180,11 +180,11 @@
       {
         "number": 2,
         "name": "Riley Loewenhagen",
-        "gp": 13,
+        "gp": 14,
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "sog": 0
+        "sog": 1
       },
       {
         "number": 3,
@@ -207,10 +207,10 @@
       {
         "number": 5,
         "name": "Carter Possley",
-        "gp": 13,
+        "gp": 14,
         "goals": 2,
-        "assists": 4,
-        "points": 8,
+        "assists": 5,
+        "points": 9,
         "sog": 16
       },
       {
@@ -225,20 +225,20 @@
       {
         "number": 7,
         "name": "Wyatt Mauthepasch",
-        "gp": 13,
+        "gp": 14,
         "goals": 10,
-        "assists": 10,
-        "points": 30,
-        "sog": 41
+        "assists": 11,
+        "points": 31,
+        "sog": 42
       },
       {
         "number": 8,
         "name": "Adam Palmer",
-        "gp": 13,
+        "gp": 14,
         "goals": 0,
         "assists": 1,
         "points": 1,
-        "sog": 8
+        "sog": 9
       },
       {
         "number": 9,
@@ -252,11 +252,11 @@
       {
         "number": 10,
         "name": "Liam Evenson",
-        "gp": 13,
-        "goals": 11,
+        "gp": 14,
+        "goals": 13,
         "assists": 5,
-        "points": 27,
-        "sog": 32
+        "points": 31,
+        "sog": 35
       },
       {
         "number": 11,
@@ -270,11 +270,11 @@
       {
         "number": 12,
         "name": "Connor Schmitt",
-        "gp": 13,
+        "gp": 14,
         "goals": 1,
-        "assists": 1,
-        "points": 3,
-        "sog": 3
+        "assists": 2,
+        "points": 4,
+        "sog": 5
       },
       {
         "number": 13,
@@ -324,11 +324,11 @@
       {
         "number": 18,
         "name": "James Forsythe",
-        "gp": 13,
-        "goals": 1,
+        "gp": 14,
+        "goals": 2,
         "assists": 1,
-        "points": 3,
-        "sog": 5
+        "points": 5,
+        "sog": 6
       },
       {
         "number": 20,
@@ -342,11 +342,11 @@
       {
         "number": 21,
         "name": "Reno Brei",
-        "gp": 13,
+        "gp": 14,
         "goals": 14,
         "assists": 5,
         "points": 33,
-        "sog": 40
+        "sog": 41
       },
       {
         "number": 22,
@@ -4723,16 +4723,18 @@
       "kickoff": "4:30 PM",
       "conference": true,
       "result": "W",
-      "sourceFile": "Coach supplied result 2026-10-07",
+      "sourceFile": "Coach supplied result and player statistics 2026-10-07",
       "notes": [
-        "Final score supplied by coach; player statistics and lineup pending."
+        "Player statistics confirmed by Andrew Montalbano on October 7. Liam Evenson: 2 goals; James Forsythe: 1 goal. Carter Possley, Wyatt Mauthepasch and Connor Schmitt: 1 assist each.",
+        "Ben Decker: 80 minutes, 3 saves, 0 goals against.",
+        "Full lineup and goal-by-goal assist pairings were not supplied; participation is recorded only for the nine named players."
       ],
       "scoringRecorded": false,
-      "unattributedGoals": 3,
+      "unattributedGoals": 0,
       "team": {
         "shots": null,
-        "sog": null,
-        "saves": null,
+        "sog": 10,
+        "saves": 3,
         "yc": null,
         "rc": null,
         "goals": 3
@@ -4742,7 +4744,117 @@
         "saves": null,
         "goals": 0
       },
-      "players": [],
+      "players": [
+        {
+          "player": "Ben Decker",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": 3,
+          "gkMinutes": 80,
+          "recordedSog": 0,
+          "goalsAgainst": 0
+        },
+        {
+          "player": "Riley Loewenhagen",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Carter Possley",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 1,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Wyatt Mauthepasch",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 1,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Adam Palmer",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Liam Evenson",
+          "shots": null,
+          "sog": 3,
+          "goals": 2,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 3
+        },
+        {
+          "player": "Connor Schmitt",
+          "shots": null,
+          "sog": 2,
+          "goals": 0,
+          "assists": 1,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 2
+        },
+        {
+          "player": "James Forsythe",
+          "shots": null,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Reno Brei",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        }
+      ],
       "scoring": []
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "auditedAt": "2026-10-02T02:58:51.185Z",
+  "auditedAt": "2026-10-07T16:07:59.350Z",
   "teams": [
     {
       "team": "JV Red",
@@ -253,27 +253,27 @@
     },
     {
       "team": "JV White",
-      "games": 13,
+      "games": 14,
       "players": [
         {
           "number": 0,
           "name": "Ben Decker",
-          "gp": 13,
+          "gp": 14,
           "goals": 0,
           "assists": 1,
           "points": 1,
           "sog": 0,
-          "recordedStatLines": 13
+          "recordedStatLines": 14
         },
         {
           "number": 2,
           "name": "Riley Loewenhagen",
-          "gp": 13,
+          "gp": 14,
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "sog": 0,
-          "recordedStatLines": 13
+          "sog": 1,
+          "recordedStatLines": 14
         },
         {
           "number": 3,
@@ -298,12 +298,12 @@
         {
           "number": 5,
           "name": "Carter Possley",
-          "gp": 13,
+          "gp": 14,
           "goals": 2,
-          "assists": 4,
-          "points": 8,
+          "assists": 5,
+          "points": 9,
           "sog": 16,
-          "recordedStatLines": 13
+          "recordedStatLines": 14
         },
         {
           "number": 6,
@@ -318,22 +318,22 @@
         {
           "number": 7,
           "name": "Wyatt Mauthepasch",
-          "gp": 13,
+          "gp": 14,
           "goals": 10,
-          "assists": 10,
-          "points": 30,
-          "sog": 41,
-          "recordedStatLines": 13
+          "assists": 11,
+          "points": 31,
+          "sog": 42,
+          "recordedStatLines": 14
         },
         {
           "number": 8,
           "name": "Adam Palmer",
-          "gp": 13,
+          "gp": 14,
           "goals": 0,
           "assists": 1,
           "points": 1,
-          "sog": 8,
-          "recordedStatLines": 13
+          "sog": 9,
+          "recordedStatLines": 14
         },
         {
           "number": 9,
@@ -348,12 +348,12 @@
         {
           "number": 10,
           "name": "Liam Evenson",
-          "gp": 13,
-          "goals": 11,
+          "gp": 14,
+          "goals": 13,
           "assists": 5,
-          "points": 27,
-          "sog": 32,
-          "recordedStatLines": 13
+          "points": 31,
+          "sog": 35,
+          "recordedStatLines": 14
         },
         {
           "number": 11,
@@ -368,12 +368,12 @@
         {
           "number": 12,
           "name": "Connor Schmitt",
-          "gp": 13,
+          "gp": 14,
           "goals": 1,
-          "assists": 1,
-          "points": 3,
-          "sog": 3,
-          "recordedStatLines": 13
+          "assists": 2,
+          "points": 4,
+          "sog": 5,
+          "recordedStatLines": 14
         },
         {
           "number": 13,
@@ -428,12 +428,12 @@
         {
           "number": 18,
           "name": "James Forsythe",
-          "gp": 13,
-          "goals": 1,
+          "gp": 14,
+          "goals": 2,
           "assists": 1,
-          "points": 3,
-          "sog": 5,
-          "recordedStatLines": 13
+          "points": 5,
+          "sog": 6,
+          "recordedStatLines": 14
         },
         {
           "number": 20,
@@ -448,12 +448,12 @@
         {
           "number": 21,
           "name": "Reno Brei",
-          "gp": 13,
+          "gp": 14,
           "goals": 14,
           "assists": 5,
           "points": 33,
-          "sog": 40,
-          "recordedStatLines": 13
+          "sog": 41,
+          "recordedStatLines": 14
         },
         {
           "number": 22,
@@ -510,11 +510,11 @@
         {
           "number": 0,
           "name": "Ben Decker",
-          "games": 13,
+          "games": 14,
           "saves": null,
-          "minutes": 980,
+          "minutes": 1060,
           "goalsAgainst": 10,
-          "recordedSaves": 46
+          "recordedSaves": 49
         }
       ],
       "caveat": null

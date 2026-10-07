@@ -33,7 +33,7 @@ for s in E.fromstring(parts['xl/workbook.xml']).find('s:sheets',N):
   if link.get('{'+REL+'}id','').startswith('urlRefresh') or link.get('ref','').rstrip('0123456789') in ['T','U']:links.remove(link)
  ids={r.get('Id') for r in sheetrels}
  for row_number,row in enumerate(values[s.get('name')][5:],6):
-  columns=[('K',10),('R',17),('T',19),('U',20)] if s.get('name') in ['D2','Inactive Programs'] else [('T',19),('U',20)]
+  columns=[('K',10),('R',17),('T',19),('U',20)] if s.get('name') in ['D2','NAIA','Inactive Programs'] else [('T',19),('U',20)]
   for column,index in columns:
    value=row[index] if index<len(row) else None
    if not isinstance(value,str) or not value.startswith(('https://','http://')):continue
