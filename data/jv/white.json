@@ -2,27 +2,29 @@
   "stats": {
     "slug": "white",
     "team": "JV White",
-    "updated": "September 29, 2026",
+    "updated": "October 7, 2026",
     "sourceLabel": "Team score sheets",
     "gamesNote": "GP reflects recorded participation. Goals: 2 points · Assists: 1 point",
-    "notes": [],
+    "notes": [
+      "October 6 vs Kaukauna: 3-0 win recorded; player stats pending."
+    ],
     "audit": {
       "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload); Score sheet photo, JV White vs Appleton West (chat upload); Score sheet photo, JV White vs Kimberly (chat upload); JV_White_OshWest.jpg",
       "sourceModifiedAt": "",
       "sourceSha256": "",
       "importedAt": "2026-09-29",
       "validation": "passed",
-      "validationSummary": "Thirteen results; goals, assists, points and goalkeeper totals reconciled against box scores. September 29 vs Oshkosh West: 1-0; Reno Brei goal; Wyatt Mauthepasch assist; Ben Decker 10 saves and 80 coach-confirmed minutes. Historical unknown saves remain unknown. Recorded saves include the eight saves already entered for September 28.",
+      "validationSummary": "Thirteen results; goals, assists, points and goalkeeper totals reconciled against box scores. September 29 vs Oshkosh West: 1-0; Reno Brei goal; Wyatt Mauthepasch assist; Ben Decker 10 saves and 80 coach-confirmed minutes. Historical unknown saves remain unknown. Recorded saves include the eight saves already entered for September 28. October 6: result only; three goals await player attribution.",
       "approvedBy": "Andrew Montalbano"
     },
     "record": {
-      "wins": 11,
+      "wins": 12,
       "losses": 1,
       "ties": 1,
-      "conference": "7–0–0"
+      "conference": "8–0–0"
     },
     "totals": {
-      "goalsFor": 63,
+      "goalsFor": 66,
       "goalsAgainst": 10,
       "shots": null,
       "sog": 213,
@@ -40,6 +42,15 @@
       }
     ],
     "recent": [
+      {
+        "id": 14,
+        "date": "Oct 6",
+        "opponent": "Kaukauna",
+        "location": "Away",
+        "kickoff": "4:30 PM",
+        "score": "3-0",
+        "result": "W"
+      },
       {
         "id": 13,
         "date": "Sep 29",
@@ -4703,6 +4714,36 @@
       ],
       "scoring": [],
       "scheduleSource": "SportsYou calendar"
+    },
+    {
+      "id": 14,
+      "date": "2026-10-06",
+      "opponent": "Kaukauna",
+      "location": "Away",
+      "kickoff": "4:30 PM",
+      "conference": true,
+      "result": "W",
+      "sourceFile": "Coach supplied result 2026-10-07",
+      "notes": [
+        "Final score supplied by coach; player statistics and lineup pending."
+      ],
+      "scoringRecorded": false,
+      "unattributedGoals": 3,
+      "team": {
+        "shots": null,
+        "sog": null,
+        "saves": null,
+        "yc": null,
+        "rc": null,
+        "goals": 3
+      },
+      "opponentTotals": {
+        "shots": null,
+        "saves": null,
+        "goals": 0
+      },
+      "players": [],
+      "scoring": []
     }
   ]
 }

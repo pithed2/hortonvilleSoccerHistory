@@ -1,66 +1,66 @@
 {
   "source": "https://soccer.statsplus.net/rankings/conference/5637/",
-  "updated": "2026-10-01",
-  "notes": "FVA conference-only records from StatsPlus, refreshed October 1. Includes Appleton East’s 2-1 win over Oshkosh West. Hortonville (7-0-1) and Kimberly (4-3-1) include the October 1 Hortonville 3-0 win, verified against the MaxPreps box score; this result is not yet included in StatsPlus standings.",
+  "updated": "2026-10-07",
+  "notes": "FVA conference-only records from StatsPlus, refreshed October 7. Hortonville’s October 6 win at Kaukauna (2-0) is added to both teams from MaxPreps because StatsPlus has not posted it yet.",
   "standings": [
     {
       "Team": "Hortonville",
-      "W": 7,
+      "W": 8,
       "L": 0,
       "T": 1
     },
     {
-      "Team": "Appleton East",
-      "W": 5,
-      "L": 3,
-      "T": 0
-    },
-    {
       "Team": "Appleton North",
-      "W": 5,
+      "W": 7,
       "L": 2,
       "T": 0
     },
     {
-      "Team": "Kimberly",
-      "W": 4,
+      "Team": "Appleton East",
+      "W": 6,
       "L": 3,
-      "T": 1
+      "T": 0
     },
     {
       "Team": "Neenah",
-      "W": 4,
-      "L": 1,
+      "W": 5,
+      "L": 2,
       "T": 1
     },
     {
       "Team": "Oshkosh West",
-      "W": 3,
+      "W": 4,
       "L": 3,
       "T": 2
     },
     {
-      "Team": "Fond du Lac",
-      "W": 2,
+      "Team": "Kimberly",
+      "W": 4,
       "L": 4,
+      "T": 1
+    },
+    {
+      "Team": "Fond du Lac",
+      "W": 3,
+      "L": 5,
       "T": 1
     },
     {
       "Team": "Kaukauna",
       "W": 2,
-      "L": 5,
+      "L": 7,
       "T": 0
     },
     {
       "Team": "Oshkosh North",
-      "W": 1,
-      "L": 6,
+      "W": 2,
+      "L": 7,
       "T": 0
     },
     {
       "Team": "Appleton West",
       "W": 0,
-      "L": 6,
+      "L": 8,
       "T": 0
     }
   ],

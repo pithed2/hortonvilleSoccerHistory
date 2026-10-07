@@ -1,6 +1,7 @@
 """Maintain the working directory; never replace the published reader snapshot."""
 from pathlib import Path
 import csv, json, posixpath, shutil, zipfile
+from datetime import datetime
 from lxml import etree as E
 import openpyxl
 ROOT=Path(__file__).resolve().parents[1]
@@ -65,7 +66,7 @@ entries[appendix_name]=appendix.read_bytes()
 with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
  for n,data in entries.items():z.writestr(n,data)
 queue=list(csv.DictReader((ROOT/'output/recruiting/contact-verification-queue.csv').open(encoding='utf-8-sig')))
-status=dict(checkedLabel='October 5, 2026',reviewed=sum(r['status'].startswith('reviewed') for r in queue),pending=sum(r['status'].startswith('pending') for r in queue))
+status=dict(checkedLabel=datetime.now().strftime('%B %d, %Y').replace(' 0',' '),reviewed=sum(r['status'].startswith('reviewed') for r in queue),pending=sum(r['status'].startswith('pending') for r in queue))
 status['queueMeaning']='Research tracking only. D1 and user-populated D3 are completed contact baselines; D3 pending queue entries do not mean population is unfinished.'
 status['coverage']={}
 for division in ['D1','D2','D3','NAIA','JUCO']:

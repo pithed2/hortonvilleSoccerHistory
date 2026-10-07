@@ -7,7 +7,9 @@
       "team": "Hortonville",
       "available": true,
       "source": "https://v0-hortonville-soccer-history.vercel.app/seasons/2026#schedule",
-      "conferenceSource": "https://v0-hortonville-soccer-history.vercel.app/seasons/2026#schedule"
+      "conferenceSource": "https://v0-hortonville-soccer-history.vercel.app/seasons/2026#schedule",
+      "checkedAt": "2026-10-07",
+      "resultsThrough": "2026-10-06"
     },
     {
       "team": "Appleton North",
@@ -1217,14 +1219,14 @@
       "name": "Fenton Hirschi",
       "team": "Hortonville",
       "overall": {
-        "goals": 8,
-        "assists": 11,
-        "points": 27
+        "goals": 9,
+        "assists": 12,
+        "points": 30
       },
       "conference": {
-        "goals": 8,
-        "assists": 6,
-        "points": 22
+        "goals": 9,
+        "assists": 7,
+        "points": 25
       }
     },
     {
@@ -1232,14 +1234,14 @@
       "name": "Roman Glad",
       "team": "Hortonville",
       "overall": {
-        "goals": 9,
+        "goals": 10,
         "assists": 4,
-        "points": 22
+        "points": 24
       },
       "conference": {
-        "goals": 4,
+        "goals": 5,
         "assists": 2,
-        "points": 10
+        "points": 12
       }
     },
     {
@@ -1248,13 +1250,13 @@
       "team": "Hortonville",
       "overall": {
         "goals": 6,
-        "assists": 10,
-        "points": 22
+        "assists": 11,
+        "points": 23
       },
       "conference": {
         "goals": 4,
-        "assists": 7,
-        "points": 15
+        "assists": 8,
+        "points": 16
       }
     },
     {

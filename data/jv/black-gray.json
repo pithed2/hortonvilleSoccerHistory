@@ -1,6 +1,6 @@
 {
   "team": "JV Black/Gray",
-  "updated": "2026-09-24",
+  "updated": "2026-10-07",
   "squads": {
     "black": {
       "name": "JV Black",
@@ -258,6 +258,13 @@
       "location": "Away",
       "result": "L",
       "score": "2-3"
+    },
+    {
+      "date": "2026-10-06",
+      "opponent": "New London",
+      "location": "Away",
+      "result": "L",
+      "score": "0-2"
     }
   ],
   "gameStats": [
