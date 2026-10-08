@@ -34,7 +34,7 @@ export function getBlackGrayBundle(squad: SquadKey): { stats: JvTeamStats; boxSc
   const conferenceGames: { opponent: string; result: string }[] = []
   let wins = 0, losses = 0, ties = 0, goalsFor = 0, goalsAgainst = 0
 
-  const gkGames: { minutes: number; saves: number | null; goalsAgainst: number }[] = []
+  const gkGames = new Map<string, { minutes: number; saves: number | null; goalsAgainst: number }[]>()
   const playerTotals = new Map<string, { goals: number; assists: number; gp: number }>()
   for (const player of roster) playerTotals.set(player.name, { goals: 0, assists: 0, gp: 0 })
 
@@ -74,11 +74,18 @@ export function getBlackGrayBundle(squad: SquadKey): { stats: JvTeamStats; boxSc
       }
     }
 
-    const gk = stat?.goalkeepers.find((g) => blackGrayData.squads[squad].roster.some((p) => p.name === g.name))
-    if (gk) gkGames.push({ minutes: gk.minutes, saves: gk.saves, goalsAgainst: gk.goalsAgainst })
+    const gameKeepers = stat?.goalkeepers ?? []
+    for (const keeper of gameKeepers) {
+      const games = gkGames.get(keeper.name) ?? []
+      games.push(keeper)
+      gkGames.set(keeper.name, games)
+    }
+    const gameSaves = gameKeepers.some((keeper) => keeper.saves != null)
+      ? gameKeepers.reduce((sum, keeper) => sum + (keeper.saves ?? 0), 0)
+      : null
 
     const boxPlayers: PlayerBoxLine[] = lineupNames
-      .filter((name) => name !== gk?.name)
+      .filter((name) => !gameKeepers.some((keeper) => keeper.name === name))
       .map((name) => {
         const line = statPlayers.find((p) => p.name === name) as { name: string; goals: number; assists: number; sot?: number } | undefined
         return {
@@ -93,8 +100,8 @@ export function getBlackGrayBundle(squad: SquadKey): { stats: JvTeamStats; boxSc
           gkMinutes: null,
         }
       })
-    if (gk) {
-      boxPlayers.unshift({ player: gk.name, shots: null, sog: 0, goals: 0, assists: 0, yc: null, rc: null, saves: gk.saves, gkMinutes: gk.minutes })
+    for (const keeper of [...gameKeepers].reverse()) {
+      boxPlayers.unshift({ player: keeper.name, shots: null, sog: 0, goals: 0, assists: 0, yc: null, rc: null, saves: keeper.saves, gkMinutes: keeper.minutes })
     }
 
     const notes = [...(stat?.notes ?? [])]
@@ -108,7 +115,7 @@ export function getBlackGrayBundle(squad: SquadKey): { stats: JvTeamStats; boxSc
       kickoff: event.time,
       conference,
       result: result.result,
-      team: { shots: null, sog: boxPlayers.reduce((sum, p) => sum + p.sog, 0), saves: gk?.saves ?? null, yc: null, rc: null, goals: gf },
+      team: { shots: null, sog: boxPlayers.reduce((sum, p) => sum + p.sog, 0), saves: gameSaves, yc: null, rc: null, goals: gf },
       opponentTotals: { shots: null, saves: null, goals: ga },
       players: boxPlayers,
       notes,
@@ -129,15 +136,34 @@ export function getBlackGrayBundle(squad: SquadKey): { stats: JvTeamStats; boxSc
     points: totals.goals * 2 + totals.assists,
   }))
 
-  const goalkeeperPlayer = roster.find((player) => player.position === "GK")
-  const goalkeepers: JvTeamStats["goalkeepers"] = goalkeeperPlayer ? [{
-    number: goalkeeperNumber,
-    name: goalkeeperPlayer.name,
-    games: gkGames.length,
-    saves: gkGames.some((g) => g.saves != null) ? gkGames.reduce((sum, g) => sum + (g.saves ?? 0), 0) : null,
-    minutes: gkGames.length ? gkGames.reduce((sum, g) => sum + g.minutes, 0) : null,
-    goalsAgainst: gkGames.length ? gkGames.reduce((sum, g) => sum + g.goalsAgainst, 0) : 0,
-  }] : []
+  // Include home-roster keepers' guest appearances in their season totals.
+  for (const stat of blackGrayData.gameStats) {
+    const isGuestGame = calendarData.events.some((event) =>
+      event.team === calendarTeamName[squad === "black" ? "gray" : "black"] &&
+      event.date === stat.date && event.opponent === stat.opponent)
+    if (!isGuestGame) continue
+    for (const keeper of stat.goalkeepers.filter((keeper) => rosterNames.has(keeper.name))) {
+      const games = gkGames.get(keeper.name) ?? []
+      games.push(keeper)
+      gkGames.set(keeper.name, games)
+    }
+  }
+
+  const keeperNames = new Set([
+    ...roster.filter((player) => player.position === "GK").map((player) => player.name),
+    ...gkGames.keys(),
+  ])
+  const goalkeepers: JvTeamStats["goalkeepers"] = [...keeperNames].map((name) => {
+    const games = gkGames.get(name) ?? []
+    return {
+      number: rosterNumber(name),
+      name,
+      games: games.length,
+      saves: games.some((g) => g.saves != null) ? games.reduce((sum, g) => sum + (g.saves ?? 0), 0) : null,
+      minutes: games.length ? games.reduce((sum, g) => sum + g.minutes, 0) : null,
+      goalsAgainst: games.reduce((sum, g) => sum + g.goalsAgainst, 0),
+    }
+  })
 
   const stats: JvTeamStats = {
     slug: squad,
@@ -156,7 +182,7 @@ export function getBlackGrayBundle(squad: SquadKey): { stats: JvTeamStats; boxSc
       approvedBy: "Andrew Montalbano",
     },
     record: { wins, losses, ties, conference: jvConferenceRecord(conferenceGames) },
-    totals: { goalsFor, goalsAgainst, shots: null, sog: boxScores.reduce((sum, g) => sum + (g.team.sog ?? 0), 0), saves: goalkeepers[0]?.saves ?? null },
+    totals: { goalsFor, goalsAgainst, shots: null, sog: boxScores.reduce((sum, g) => sum + (g.team.sog ?? 0), 0), saves: boxScores.some((g) => g.team.saves != null) ? boxScores.reduce((sum, g) => sum + (g.team.saves ?? 0), 0) : null },
     goalkeepers,
     recent,
     upcoming: [],
