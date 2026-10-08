@@ -1,0 +1,357 @@
+Browser tab: 5, Title: "Bound | Neenah Rockets | Boys Soccer | 2026-27", URL: "https://www.gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule".
+1 AXWebArea Bound | Neenah Rockets | Boys Soccer | 2026-27, URL: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule
+	2 container
+		3 container Description: desktop header, ID: header
+			4 container Description: desktop header sub container, ID: mainheader
+				5 link Description: Bound, Value: gobound.com/
+				6 container navbarToggler
+					7 content list
+						8 link Description: Wisconsin, Value: gobound.com/wi
+						9 link Description: Conferences, Value: gobound.com/wi/conferences
+						10 link Description: Districts, Value: gobound.com/wi/districts
+						11 link Description: Schools, Value: gobound.com/wi/schools
+						12 link Description: Clubs, Value: gobound.com/wi/clubs
+						13 link Description: Tournaments, Value: gobound.com/tournaments/explore
+					14 content list
+						15 link gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule
+						16 link Description: Learn More, Value: lets.gobound.com/
+					17 container
+						18 text field (settable) SchoolSearch
+					19 link Description: Sign In, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule
+					20 link Create Account
+						21 text Create Account
+		22 container Description: team sub-header, ID: subheader
+			23 container
+				24 link Description: Neenah Logo, Value: gobound.com/direct/schools/h202303121744177645859A1A6e5aDdb…
+				25 link Description: Neenah Rockets, Value: gobound.com/direct/schools/h202303121744177645859A1A6e5aDdb…
+				26 heading Boys Soccer 2026-27 VARSITY, Value: 3
+					27 container
+						28 link Description: Boys Soccer , Value: gobound.com/wi/wiaa/bsc/2026-27
+						29 link (collapsed) Description: 2026-27, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule, Secondary Actions: Expand
+					30 image
+					31 text VARSITY
+				32 content list
+					33 link (collapsed) Description: Varsity, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule, Secondary Actions: Expand
+					34 link Description: Schedule, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule
+					35 link Description: Practices, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/practices
+					36 link Description: Roster, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/roster
+					37 link Description: Staff, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/staff
+					38 link Description: Stats, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/stats
+					39 link Description: Power Index, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/powerindex
+					40 link Description: Seasons, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/history
+				41 link Description: Notifications, Value: gobound.com/follows/load
+		42 container
+			43 heading Schedule, Value: 4
+				44 text Schedule
+			45 link Description:  Print, Value: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedulePrint
+			46 table
+				47 row
+					48 cell
+						49 text Date
+					50 cell
+						51 text Opponent(s)
+					52 cell
+						53 text Result
+					54 cell
+						55 text Caption
+					56 cell
+						57 text Location
+					58 cell
+						59 text Transportation
+				60 row
+					61 cell
+						62 text 8/22/26
+					63 cell
+						64 text JV/V Boys Soccer
+						65 link Description: opponent-logo, Value: gobound.com/direct/teams/h2025112409292140139ef2c4f43854c/s…
+						66 link Description: opponent-logo, Value: gobound.com/direct/teams/h202511240930004949ecbe58091c546/s…
+						67 link Description: opponent-logo, Value: gobound.com/direct/teams/h20250912063653237ce6eb7ab175040/s…
+						68 link Description: opponent-logo, Value: gobound.com/direct/teams/h202605050432003163a40e23dd27f47/s…
+					69 cell
+						70 link Description: 10:30 AM , Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h202602170454400331e2…
+						71 container Description: CT, game time shown in the host school's timezone, Help: Game time shown in the host school's timezone
+							72 text CT
+					73 cell
+						74 text Scrimmage
+					75 cell
+						76 text Madison Elementary School
+				77 row
+					78 cell
+						79 text 8/27/26
+					80 cell
+						81 text vs
+						82 image opponent-logo
+						83 link Description: Bay Port, Value: gobound.com/direct/teams/h20251124092852391752b93df6b1f4e/s…
+					84 cell
+						85 link Description: W 3-2, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260522031943995c01…
+					86 cell
+						87 text Neenah High School Soccer Stadium
+				88 row
+					89 cell
+						90 text 8/29/26
+					91 cell
+						92 text @
+						93 image opponent-logo
+						94 link Description: D.C. Everest, Value: gobound.com/direct/teams/h20260528054320173de835cc48cf446/s…
+					95 cell
+						96 link Description: W 2-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260528034357903f13…
+					97 cell
+						98 text D.C. Everest High School
+				99 row
+					100 cell
+						101 text 9/1/26
+					102 cell
+						103 text @
+						104 image opponent-logo
+						105 link Description: Hortonville, Value: gobound.com/direct/teams/h2025112409292140139ef2c4f43854c/s…
+					106 cell
+						107 link Description: T 3-3, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260217045443742e58…
+					108 cell
+						109 text C
+					110 cell
+						111 text Hortonville High School
+				112 row
+					113 cell
+						114 text 9/8/26
+					115 cell
+						116 text vs
+						117 image opponent-logo
+						118 link Description: Oshkosh North, Value: gobound.com/direct/teams/h202511240930059383c88e49ec09944/s…
+					119 cell
+						120 link Description: W 3-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260217045438631e8d…
+					121 cell
+						122 text C
+					123 cell
+						124 text Neenah High School Soccer Stadium
+				125 row
+					126 cell
+						127 text 9/10/26
+					128 cell
+						129 text vs
+						130 image opponent-logo
+						131 link Description: Sheboygan North, Value: gobound.com/direct/teams/h20251124093016802413977a376994f/s…
+					132 cell
+						133 link Description: T 1-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260522032904862223…
+					134 cell
+						135 text Neenah High School Soccer Stadium
+				136 row
+					137 cell
+						138 text 9/12/26
+					139 cell
+						140 text @
+						141 image opponent-logo
+						142 link Description: Hamilton, Value: gobound.com/direct/teams/h2025062608404122160ec3737755a4f/s…
+					143 cell
+						144 link Description: W 2-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260522033040895119…
+					145 cell
+						146 text Hamilton (Sussex) High School
+				147 row
+					148 cell
+						149 text 9/15/26
+					150 cell
+						151 text @
+						152 image opponent-logo
+						153 link Description: Oshkosh West, Value: gobound.com/direct/teams/h20251124093006843b2973e1071cf46/s…
+					154 cell
+						155 link Description: L 1-2, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260217045438610c1f…
+					156 cell
+						157 text C
+					158 cell
+						159 text Oshkosh West
+				160 row
+					161 cell
+						162 text 9/17/26
+					163 cell
+						164 text @
+						165 image opponent-logo
+						166 link Description: Kaukauna, Value: gobound.com/direct/teams/h2025112409292600905e2d5d34dba4c/s…
+					167 cell
+						168 link Description: W 2-0, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20251223050535245617…
+					169 cell
+						170 text C
+					171 cell
+						172 text Kaukauna High School KHS Soccer Field
+				173 row
+					174 cell
+						175 text 9/19/26
+					176 cell
+						177 text @
+						178 image opponent-logo
+						179 link Description: Wisconsin Rapids, Value: gobound.com/direct/teams/h202605050432003163a40e23dd27f47/s…
+					180 cell
+						181 link Description: W 2-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h202605220335227254c9…
+					182 cell
+						183 text Washington Elementary School - Soccer Field 5
+				184 row
+					185 cell
+						186 text 9/22/26
+					187 cell
+						188 text vs
+						189 image opponent-logo
+						190 link Description: Appleton East, Value: gobound.com/direct/teams/h2025112409284689943d3e34f47bc40/s…
+					191 cell
+						192 link Description: W 3-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260217045438643435…
+					193 cell
+						194 text C
+					195 cell
+						196 text Neenah High School Soccer Stadium
+				197 row
+					198 cell
+						199 text 9/26/26
+					200 cell
+						201 text vs
+						202 image opponent-logo
+						203 link Description: Hartford, Value: gobound.com/direct/teams/h20251124092918678698c5044e1ac4e/s…
+					204 cell
+						205 link Description: W 5-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260413072122631318…
+					206 cell
+						207 text Neenah Middle School Kelderman Field
+				208 row
+					209 cell
+						210 text 9/29/26
+					211 cell
+						212 text vs
+						213 image opponent-logo
+						214 link Description: Fond du Lac, Value: gobound.com/direct/teams/h20250626084031159d04c94975e204e/s…
+					215 cell
+						216 link Description: W 4-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260217045438516ac3…
+					217 cell
+						218 text C
+					219 cell
+						220 text Neenah High School Soccer Stadium
+				221 row
+					222 cell
+						223 text 10/1/26
+					224 cell
+						225 text vs
+						226 image opponent-logo
+						227 link Description: Appleton North, Value: gobound.com/direct/teams/h20251124092847812a2fbaa29dfac4c/s…
+					228 cell
+						229 link Description: L 3-4, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260217045438578ce7…
+					230 cell
+						231 text C
+					232 cell
+						233 text Neenah High School Soccer Stadium
+				234 row
+					235 cell
+						236 text 10/6/26
+					237 cell
+						238 text @
+						239 image opponent-logo
+						240 link Description: Kimberly, Value: gobound.com/direct/teams/h202511240929314482a6d0bb03aee4d/s…
+					241 cell
+						242 link Description: W 3-1, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260217045438635855…
+					243 cell
+						244 text C
+					245 cell
+						246 text JR Gerritts Middle School
+				247 row
+					248 cell
+						249 text 10/8/26
+					250 cell
+						251 text vs
+						252 image opponent-logo
+						253 link Description: Appleton West, Value: gobound.com/direct/teams/h202511240928487187cb050f9d8c243/s…
+					254 cell
+						255 link Description: 6:30 PM , Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h2026021704543864274a…
+						256 container Description: CT, game time shown in the host school's timezone, Help: Game time shown in the host school's timezone
+							257 text CT
+					258 cell
+						259 text C
+					260 cell
+						261 text Neenah High School Soccer Stadium
+					262 cell
+						263 link gobound.com/events/h202602170454344283d8801b33d7d4e/tickets
+				264 row
+					265 cell
+						266 text 10/13/26
+					267 cell
+						268 text vs
+						269 image opponent-logo
+						270 link Description: Pulaski, Value: gobound.com/direct/teams/h2025091206362560997e319af376b49/s…
+					271 cell
+						272 link Description: 7:00 PM , Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260522034134146fb1…
+						273 container Description: CT, game time shown in the host school's timezone, Help: Game time shown in the host school's timezone
+							274 text CT
+					275 cell
+						276 text Neenah High School Soccer Stadium
+					277 cell
+						278 link gobound.com/events/h20260522034107882744f5d2a4a6149/tickets
+				279 row
+					280 cell
+						281 text 10/20/26
+					282 cell
+						283 text vs
+						284 link Description: TBD, Value: gobound.com/State/Direct/TeamRedirect
+					285 cell
+						286 link Description: 7:00 PM , Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260522035021462e16…
+						287 container Description: CT, game time shown in the host school's timezone, Help: Game time shown in the host school's timezone
+							288 text CT
+					289 cell
+						290 text WIAA Regional Semis
+				291 row
+					292 cell
+						293 text 10/24/26
+					294 cell
+						295 text vs
+						296 link Description: TBD, Value: gobound.com/State/Direct/TeamRedirect
+					297 cell
+						298 link Description: 7:00 PM , Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260522035122250b91…
+						299 container Description: CT, game time shown in the host school's timezone, Help: Game time shown in the host school's timezone
+							300 text CT
+					301 cell
+						302 text WIAA Regional Final
+				303 row
+					304 cell
+						305 text 10/29/26
+					306 cell
+						307 text vs
+						308 link Description: TBD, Value: gobound.com/State/Direct/TeamRedirect
+					309 cell
+						310 link Description: 7:00 PM , Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h20260522035218775b1d…
+						311 container Description: CT, game time shown in the host school's timezone, Help: Game time shown in the host school's timezone
+							312 text CT
+					313 cell
+						314 text WIAA Sectional Semifinal
+				315 row
+					316 cell
+						317 text 10/31/26
+					318 cell
+						319 text vs
+						320 link Description: TBD, Value: gobound.com/State/Direct/TeamRedirect
+					321 cell
+						322 link Description: TBD, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h202605220353027655ca…
+					323 cell
+						324 text WIAA Sectional Final
+					325 cell
+						326 text Neenah High School Rocket Stadium
+				327 row
+					328 cell
+						329 text 11/5/26
+					330 cell
+						331 text vs
+						332 link Description: TBD, Value: gobound.com/State/Direct/TeamRedirect
+					333 cell
+						334 link Description: TBD, Value: gobound.com/wi/wiaa/bsc/2026-27/comps/h202605220355488680e4…
+					335 cell
+						336 text WIAA State Tournament
+					337 cell
+						338 text Uihlein Soccer Park
+				339 row
+					340 cell
+						341 text 11/7/26
+					342 cell
+						343 text vs
+						344 link Description: TBD, Value: gobound.com/State/Direct/TeamRedirect
+					345 cell
+						346 link Description: TBD, Value: …
+					347 cell
+						348 text WIAA State Tournament
+					349 cell
+						350 text Uihlein Soccer Park
+		351 link Description: Privacy, Value: lets.gobound.com/privacy-policy
+		352 text  | 
+		353 link Description: Terms, Value: …
+		354 text  | © 2026 BOUND
+
+The focused UI element is 1 AXWebArea Bound | Neenah Rockets | Boys Soccer | 2026-27, URL: gobound.com/wi/wiaa/bsc/2026-27/neenah/v/schedule

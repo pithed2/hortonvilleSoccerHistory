@@ -553,10 +553,16 @@
       "goalkeepers": [
         {
           "name": "Ayden Lenth",
-          "minutes": 80,
+          "minutes": 40,
           "saves": null,
           "goalsAgainst": 2
-        }
+        }, 
+        {
+          "name": "Levi Goin",
+          "minutes": 40,
+          "saves": 4,
+          "goalsAgainst": 0
+        }        
       ],
       "played": [
         "Ayden Lenth",
@@ -727,6 +733,26 @@
         "Andrew Montalbano confirmed the 2-3 loss and Ayden Lenth’s 80 minutes and 3 goals against. Full player stats, saves, and participation are pending."
       ],
       "unattributedGoals": 2
+    }, 
+    {
+      "date": "2026-10-6",
+      "opponent": "New London",
+      "players": [],
+      "goalkeepers": [
+        {
+          "name": "Ayden Lenth",
+          "minutes": 40,
+          "saves": null,
+          "goalsAgainst": 1
+        }, 
+        {
+          "name": "Levi Goin",
+          "minutes": 40,
+          "saves": 2,
+          "goalsAgainst": 1
+        }
+      ],
+      "played": []
     }
   ],
   "statsAudit": {

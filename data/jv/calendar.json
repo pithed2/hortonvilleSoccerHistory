@@ -659,6 +659,17 @@
       "home": false,
       "location": "Notre Dame de la Baie Academy",
       "bus": "2:25 PM"
+    },
+    {
+      "id": "coach-schedule-varsity-2026-10-20",
+      "team": "Varsity",
+      "opponent": "Bay Port",
+      "date": "2026-10-20",
+      "time": "7:00 PM",
+      "start": "2026-10-21T00:00:00Z",
+      "home": true,
+      "location": "Akin Field",
+      "bus": null
     }
   ]
 }
