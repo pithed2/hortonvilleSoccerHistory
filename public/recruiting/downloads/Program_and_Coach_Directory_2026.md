@@ -1,6 +1,6 @@
 # College soccer programs and coach contacts
 
-Published snapshot: October 5, 2026. This directory is incomplete.
+Published snapshot: October 7, 2026. This directory is incomplete.
 
 Before every email, verify the coach's name, current role and email on the school's official men's soccer staff page or athletics directory. Coaches change jobs. An old contact or incorrect name can make you look unprepared and keep your message from reaching the current staff. If no address is published, use the recruiting questionnaire or ask the athletics office. Don't guess an address.
 
@@ -817,6 +817,9 @@ Blank fields mean information is unavailable in this snapshot.
 | Adelphi University | Garden City | New York | Private | Northeast-10 Conference | NCAA D2 | Alex Rosa | Assistant Coach | alrosa@adelphi.edu | 516-877-4234 | https://aupanthers.com/sports/mens-soccer |
 | Adelphi University | Garden City | New York | Private | Northeast-10 Conference | NCAA D2 | Nick Bigilin | Assistant Coach |  |  | https://aupanthers.com/sports/mens-soccer |
 | Adelphi University | Garden City | New York | Private | Northeast-10 Conference | NCAA D2 | Andrew Watson | Assistant Coach | awatson@adelphi.edu |  | https://aupanthers.com/sports/mens-soccer |
+| Adelphi University | Garden City | New York | Private | Northeast-10 Conference | NCAA D2 | Gianluca Intranuovo | Assistant Coach |  |  | https://aupanthers.com/sports/mens-soccer |
+| Adelphi University | Garden City | New York | Private | Northeast-10 Conference | NCAA D2 | Lucas Nicolaou | Assistant Coach |  |  | https://aupanthers.com/sports/mens-soccer |
+| Adelphi University | Garden City | New York | Private | Northeast-10 Conference | NCAA D2 | Michael Megaloudis | Volunteer Assistant Coach |  |  | https://aupanthers.com/sports/mens-soccer |
 | American International College | Springfield | Massachusetts | Private | Northeast-10 Conference | NCAA D2 | Jake Durham | Head Men's Soccer Coach | Jake.Durham@aic.edu | 413-205-3595 | https://aicyellowjackets.com/sports/mens-soccer |
 | American International College | Springfield | Massachusetts | Private | Northeast-10 Conference | NCAA D2 | Derek Pereira | Associate Head Men's Soccer Coach | Derek.Pereira@aic.edu | 413-205-3595 | https://aicyellowjackets.com/sports/mens-soccer |
 | American International College | Springfield | Massachusetts | Private | Northeast-10 Conference | NCAA D2 | Cornelius Christensen | Graduate Assistant Men's Soccer Coach | cornelius.christensen@aic.edu |  | https://aicyellowjackets.com/sports/mens-soccer |
@@ -896,7 +899,12 @@ Blank fields mean information is unavailable in this snapshot.
 | California State University – San Bernardino | San Bernardino | California | Public | California Collegiate Athletic Association | NCAA D2 | Mike Ditta | Assistant Coach | michael.ditta@csusb.edu |  | https://csusbathletics.com/sports/mens-soccer |
 | California State University – San Marcos | San Marcos | California | Public | California Collegiate Athletic Association | NCAA D2 | Ron Pulvers | Head Men's Soccer Coach | rpulvers@csusm.edu | 760-750-7112 | https://csusmcougars.com/sports/mens-soccer |
 | California State University – San Marcos | San Marcos | California | Public | California Collegiate Athletic Association | NCAA D2 | Matt Aldama | Assistant Men's Soccer Coach | maldama@csusm.edu |  | https://csusmcougars.com/sports/mens-soccer |
-| California State University – Stanislaus | Turlock | California | Public | California Collegiate Athletic Association | NCAA D2 | John Powell | Head Men's Soccer Coach | jpowell1@csustan.edu | (209) 664-7059 | https://warriorathletics.com/sports/mens-soccer |
+| California State University – Stanislaus | Turlock | California | Public | California Collegiate Athletic Association | NCAA D2 | John Powell | Head Men's Soccer Coach | jpowell1@csustan.edu |  | https://warriorathletics.com/sports/mens-soccer |
+| California State University – Stanislaus | Turlock | California | Public | California Collegiate Athletic Association | NCAA D2 | Eduardo López | Assistant, Men's Soccer | elopez18@csustan.edu | (209) 667-3953 | https://warriorathletics.com/sports/mens-soccer |
+| California State University – Stanislaus | Turlock | California | Public | California Collegiate Athletic Association | NCAA D2 | Desmond Madrigal | Assistant, Men's Soccer | dmadrigal1@csustan.edu |  | https://warriorathletics.com/sports/mens-soccer |
+| California State University – Stanislaus | Turlock | California | Public | California Collegiate Athletic Association | NCAA D2 | Casey Clark | Assistant Coach, Men's Soccer & Women's Soccer | cclark19@csustan.edu |  | https://warriorathletics.com/sports/mens-soccer |
+| California State University – Stanislaus | Turlock | California | Public | California Collegiate Athletic Association | NCAA D2 | Jenna Zuniga | Assistant, Men's Soccer |  |  | https://warriorathletics.com/sports/mens-soccer |
+| California State University – Stanislaus | Turlock | California | Public | California Collegiate Athletic Association | NCAA D2 | Ian Reis | Student Assistant, Men's Soccer |  |  | https://warriorathletics.com/sports/mens-soccer |
 | California University of Pennsylvania | California | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Emedin Sabic | Head Men's Soccer Coach | sabic@pennwest.edu | 724.938.4980 | https://calvulcans.com/sports/mens-soccer |
 | California University of Pennsylvania | California | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Josh Henderson | Assistant Men's Soccer Coach | henderson_jo@pennwest.edu |  | https://calvulcans.com/sports/mens-soccer |
 | Carson-Newman University | Jefferson City | Tennessee | Private | South Atlantic Conference | NCAA D2 | Stephen Lyons | Head Coach | slyons@cn.edu | 865-471-4262 | https://www.cneagles.com/sports/m-soccer/index |
@@ -978,6 +986,8 @@ Blank fields mean information is unavailable in this snapshot.
 | Davis & Elkins College | Elkins | West Virginia | Private | Mountain East Conference | NCAA D2 | Gadi Vogel | Assistant Men's Soccer Coach | vogelg@dewv.edu |  | https://senatornation.com/sports/mens-soccer |
 | Davis & Elkins College | Elkins | West Virginia | Private | Mountain East Conference | NCAA D2 | Shawn Reinoehl | Assistant Men's Soccer Coach |  |  | https://senatornation.com/sports/mens-soccer |
 | Delta State University | Cleveland | Mississippi | Public | Gulf South Conference | NCAA D2 | Austin Jackman | Head Coach | atjackman@deltastate.edu |  | https://gostatesmen.com/sports/mens-soccer |
+| Delta State University | Cleveland | Mississippi | Public | Gulf South Conference | NCAA D2 | Caleb Tammi | Graduate Assistant | catammi@deltastate.edu |  | https://gostatesmen.com/sports/mens-soccer |
+| Delta State University | Cleveland | Mississippi | Public | Gulf South Conference | NCAA D2 | Marcus DaCosta | Graduate Assistant |  |  | https://gostatesmen.com/sports/mens-soccer |
 | Dominican University of California | San Rafael | California | Private | Pacific West Conference | NCAA D2 | David Frank | Head Coach | david.frank@dominican.edu |  | https://dominicanathletics.com/sports/mens-soccer |
 | Dominican University of California | San Rafael | California | Private | Pacific West Conference | NCAA D2 | Ricardo Martin | Assistant Coach | ricardo.martin@dominican.edu |  | https://dominicanathletics.com/sports/mens-soccer |
 | Dominican University of California | San Rafael | California | Private | Pacific West Conference | NCAA D2 | Will Finnie | Assistant Coach/Goalkeeper's Coach |  |  | https://dominicanathletics.com/sports/mens-soccer |
@@ -1024,8 +1034,8 @@ Blank fields mean information is unavailable in this snapshot.
 | Florida Tech | Melbourne | Florida | Private | Sunshine State Conference | NCAA D2 | Martin Peat | Goalkeeper Coach |  |  | https://floridatechsports.com/sports/mens-soccer |
 | Fort Hays State University | Hays | Kansas | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Alex Nichols | Head Men's Soccer Coach | ajnichols@fhsu.edu | (785) 628-5471 | https://fhsuathletics.com/sports/mens-soccer |
 | Fort Hays State University | Hays | Kansas | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Felix Tellez Ramirez | Assistant Men's Soccer Coach | f_tellez@mail.fhsu.edu |  | https://fhsuathletics.com/sports/mens-soccer |
-| Fort Hays State University | Hays | Kansas | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Alessandro Abate | Assistant Men's Soccer Coach |  |  | https://fhsuathletics.com/sports/mens-soccer |
-| Fort Hays State University | Hays | Kansas | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Tadhg Walsh | Assistant Men's Soccer Coach |  |  | https://fhsuathletics.com/sports/mens-soccer |
+| Fort Hays State University | Hays | Kansas | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Alessandro Abate | Assistant Men's Soccer Coach | a_abate@mail.fhsu.edu |  | https://fhsuathletics.com/sports/mens-soccer |
+| Fort Hays State University | Hays | Kansas | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Tadhg Walsh | Assistant Men's Soccer Coach | tpwalsh@mail.fhsu.edu |  | https://fhsuathletics.com/sports/mens-soccer |
 | Fort Lewis College | Durango | Colorado | Public | Rocky Mountain Athletic Conference | NCAA D2 | David Oberholtzer | Head Men's Soccer Coach | dwoberholtzer@fortlewis.edu | 247-7461 | https://goskyhawks.com/sports/mens-soccer |
 | Fort Lewis College | Durango | Colorado | Public | Rocky Mountain Athletic Conference | NCAA D2 | Matt Baldridge | Assistant Men's Soccer Coach | msbaldridge@fortlewis.edu |  | https://goskyhawks.com/sports/mens-soccer |
 | Francis Marion University | Florence | South Carolina | Public | Conference Carolinas | NCAA D2 | Luis Rincon | Head Coach | Luis.Rincon@fmarion.edu | 843-661-1241 | https://fmupatriots.com/sports/mens-soccer |
@@ -1045,7 +1055,8 @@ Blank fields mean information is unavailable in this snapshot.
 | Gannon University | Erie | Pennsylvania | Private | Pennsylvania State Athletic Conference | NCAA D2 | Micky Blythe | Assistant Men's Soccer Coach | blythe003@gannon.edu | (814) 871-7811 | https://gannonsports.com/sports/mens-soccer |
 | Gannon University | Erie | Pennsylvania | Private | Pennsylvania State Athletic Conference | NCAA D2 | Becks Young | Assistant Women's and Men's Soccer Coach | young105@gannon.edu | (814) 871-5350 | https://gannonsports.com/sports/mens-soccer |
 | Gannon University | Erie | Pennsylvania | Private | Pennsylvania State Athletic Conference | NCAA D2 | Lane King | Volunteer Assistant Coach |  |  | https://gannonsports.com/sports/mens-soccer |
-| Georgia Southwestern State University | Americus | Georgia | Public | Peach Belt Conference | NCAA D2 | Eric Crawford | Head Coach | eric.crawford@gsw.edu | (229) 931-7006 | https://www.gswcanes.com/sports/msoc/index |
+| Georgia Southwestern State University | Americus | Georgia | Public | Peach Belt Conference | NCAA D2 | Bailey Guffin | Head Coach | bailey.guffin@gsw.edu |  | https://www.gswcanes.com/sports/msoc/index |
+| Georgia Southwestern State University | Americus | Georgia | Public | Peach Belt Conference | NCAA D2 | Ryan Seidon | Assistant Coach | ryan.seidon@gsw.edu |  | https://www.gswcanes.com/sports/msoc/index |
 | Georgian Court University | Lakewood | New Jersey | Private | Central Atlantic Collegiate Conference | NCAA D2 | Dino Raso | Head Men's Soccer Coach | draso@georgian.edu | 732-987-2488 | https://gculions.com/sports/mens-soccer |
 | Georgian Court University | Lakewood | New Jersey | Private | Central Atlantic Collegiate Conference | NCAA D2 | Robbie Fitzpatrick | Associate Head Coach | rfitzpatrick@georgian.edu | 732-987-2477 | https://gculions.com/sports/mens-soccer |
 | Georgian Court University | Lakewood | New Jersey | Private | Central Atlantic Collegiate Conference | NCAA D2 | George Kavarakas | Assistant Coach | gkavarakas@georgian.edu |  | https://gculions.com/sports/mens-soccer |
@@ -1061,6 +1072,7 @@ Blank fields mean information is unavailable in this snapshot.
 | Goldey-Beacom College | Wilmington | Delaware | Private | Central Atlantic Collegiate Conference | NCAA D2 | Diego Guzman | Assistant Men's Soccer Coach |  |  | https://www.gbcathletics.com/sports/mens-soccer |
 | Goldey-Beacom College | Wilmington | Delaware | Private | Central Atlantic Collegiate Conference | NCAA D2 | Pedro Maia | Assistant Men's Soccer Coach |  |  | https://www.gbcathletics.com/sports/mens-soccer |
 | Harding University | Searcy | Arkansas | Private | Great American Conference | NCAA D2 | Thom Jacquet | Head Men's Soccer Coach | tjacquet@harding.edu | 678-848-2776 | https://hardingsports.com/sports/mens-soccer |
+| Harding University | Searcy | Arkansas | Private | Great American Conference | NCAA D2 | Jack Jacquet | Men's Soccer Volunteer Assistant | jacktjacquet@icloud.com |  | https://hardingsports.com/sports/mens-soccer |
 | Hawaii Pacific University | Honolulu | Hawaii | Private | Pacific West Conference | NCAA D2 | Chris Fisher | Head Men's Soccer Coach | cfisher@hpu.edu | 808.544.9371 | https://hpusharks.com/sports/mens-soccer |
 | Hawaii Pacific University | Honolulu | Hawaii | Private | Pacific West Conference | NCAA D2 | Fabian Rummel | Assistant Soccer Coach |  |  | https://hpusharks.com/sports/mens-soccer |
 | Hawaii Pacific University | Honolulu | Hawaii | Private | Pacific West Conference | NCAA D2 | Samuel Irsfeld | Assistant Soccer Coach |  |  | https://hpusharks.com/sports/mens-soccer |
@@ -1076,7 +1088,11 @@ Blank fields mean information is unavailable in this snapshot.
 | King University – Tennessee | Bristol | Tennessee | Private | Conference Carolinas | NCAA D2 | Mark Bell | Head Coach | mbell@king.edu | 423-652-4815 | https://www.kingtornado.com/sports/mens-soccer |
 | King University – Tennessee | Bristol | Tennessee | Private | Conference Carolinas | NCAA D2 | Louis Sharp | Assistant Coach | lsharp@king.edu |  | https://www.kingtornado.com/sports/mens-soccer |
 | King University – Tennessee | Bristol | Tennessee | Private | Conference Carolinas | NCAA D2 | Mate Lengyel | Assistant Coach | mblengyel1@king.edu |  | https://www.kingtornado.com/sports/mens-soccer |
-| Lake Erie College | Painesville | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Louie Rolko | Head Coach | lrolko@lec.edu | 440-375-7386 | https://www.lakeeriestorm.com/sports/msoc/index |
+| Lake Erie College | Painesville | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Louie Rolko | Head Coach | lrolko@lec.edu |  | https://www.lakeeriestorm.com/sports/msoc/index |
+| Lake Erie College | Painesville | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Ryan Dean | Assistant Coach | rdean@lec.edu |  | https://www.lakeeriestorm.com/sports/msoc/index |
+| Lake Erie College | Painesville | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Bobby Turner | Assistant Coach | roturner@lec.edu |  | https://www.lakeeriestorm.com/sports/msoc/index |
+| Lake Erie College | Painesville | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Eric Stevenson | Volunteer Assistant Coach |  |  | https://www.lakeeriestorm.com/sports/msoc/index |
+| Lake Erie College | Painesville | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Jason LaVacca | Assistant Coach |  |  | https://www.lakeeriestorm.com/sports/msoc/index |
 | Lander University | Greenwood | South Carolina | Public | Peach Belt Conference | NCAA D2 | Paul Leese | Head Men's Soccer Coach | pleese@lander.edu |  | https://landerbearcats.com/sports/mens-soccer |
 | Lander University | Greenwood | South Carolina | Public | Peach Belt Conference | NCAA D2 | Chris Ketron | Assistant Coach | cketron@lander.edu |  | https://landerbearcats.com/sports/mens-soccer |
 | Lander University | Greenwood | South Carolina | Public | Peach Belt Conference | NCAA D2 | Diogo Cardoso | Graduate Assistant Coach | d.tristaodasilvacar@lander.edu |  | https://landerbearcats.com/sports/mens-soccer |
@@ -1099,6 +1115,7 @@ Blank fields mean information is unavailable in this snapshot.
 | Lincoln University – Missouri | Jefferson City | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | Dane Isaacs | Assistant Coach |  |  | https://lubluetigers.com/sports/mens-soccer |
 | Lincoln University – Missouri | Jefferson City | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | John Amoah | Goalkeepers Coach |  |  | https://lubluetigers.com/sports/mens-soccer |
 | Lock Haven University | Lock Haven | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Patrick Long | Head Coach | pdl347@lockhaven.edu | 570-484-2192 | https://www.golhu.com/sports/mens-soccer |
+| Lock Haven University | Lock Haven | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Rocco Birns | Graduate Assistant |  |  | https://www.golhu.com/sports/mens-soccer |
 | Lubbock Christian University | Lubbock | Texas | Private | Lone Star Conference | NCAA D2 | Collin Cone | Head Coach | Collin.Cone@lcu.edu |  | https://lcuchaps.com/sports/mens-soccer |
 | Lubbock Christian University | Lubbock | Texas | Private | Lone Star Conference | NCAA D2 | Duvan Canchila | Assistant Coach | Duvan.Canchila@Lcu.edu |  | https://lcuchaps.com/sports/mens-soccer |
 | Lubbock Christian University | Lubbock | Texas | Private | Lone Star Conference | NCAA D2 | Diego Berlingeri | Goalkeeper Coach |  |  | https://lcuchaps.com/sports/mens-soccer |
@@ -1108,7 +1125,10 @@ Blank fields mean information is unavailable in this snapshot.
 | Malone University | Canton | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Accele Rando | Assistant Coach - Reserve Team Head Coach & Recruiting Coordinator | arando@malone.edu |  | https://malonepioneers.com/sports/mens-soccer |
 | Malone University | Canton | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Denny Ciornei | Assistant Coach - Goalkeepers |  |  | https://malonepioneers.com/sports/mens-soccer |
 | Malone University | Canton | Ohio | Private | Great Midwest Athletic Conference | NCAA D2 | Jhoan Chavez | Graduate Assistant Coach | jchavez@malone.edu |  | https://malonepioneers.com/sports/mens-soccer |
-| Mars Hill University | Mars Hill | North Carolina | Private | South Atlantic Conference | NCAA D2 | Gregg Munn | Head Coach | gmunn@mhu.edu | 828-689-1227 | https://www.marshilllions.com/sports/msoc/index |
+| Mars Hill University | Mars Hill | North Carolina | Private | South Atlantic Conference | NCAA D2 | Gregg Munn | Director of Soccer Operations/Head Coach | gmunn@mhu.edu |  | https://www.marshilllions.com/sports/msoc/index |
+| Mars Hill University | Mars Hill | North Carolina | Private | South Atlantic Conference | NCAA D2 | Jaron Hulme | Associate Head Coach |  |  | https://www.marshilllions.com/sports/msoc/index |
+| Mars Hill University | Mars Hill | North Carolina | Private | South Atlantic Conference | NCAA D2 | Rhys Thomas | Volunteer Assistant Coach |  |  | https://www.marshilllions.com/sports/msoc/index |
+| Mars Hill University | Mars Hill | North Carolina | Private | South Atlantic Conference | NCAA D2 | Carrick Bromage | Graduate Assistant Coach |  |  | https://www.marshilllions.com/sports/msoc/index |
 | Maryville University | Saint Louis | Missouri | Private | Great Lakes Valley Conference | NCAA D2 | Adam Hall | Head Men's Soccer Coach | ahall26@maryville.edu | 314-529-9475 | https://maryvillesaints.com/sports/mens-soccer |
 | Maryville University | Saint Louis | Missouri | Private | Great Lakes Valley Conference | NCAA D2 | Daniel Brennan | Assistant Coach \| Goalkeepers | dbrennan3@maryville.edu |  | https://maryvillesaints.com/sports/mens-soccer |
 | McKendree University | Lebanon | Illinois | Private | Great Lakes Valley Conference | NCAA D2 | Scott Gyllenborg | Head Men's Soccer Coach | stgyllenborg@mckendree.edu | 618-537-6531 | https://mckbearcats.com/sports/mens-soccer |
@@ -1132,9 +1152,9 @@ Blank fields mean information is unavailable in this snapshot.
 | Midwestern State University | Wichita Falls | Texas | Public | Lone Star Conference | NCAA D2 | Carlos Gonzalez | Assistant Men's Soccer Coach |  |  | https://msumustangs.com/sports/mens-soccer |
 | Millersville University of Pennsylvania | Millersville | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Steve Widdowson | Head Coach | steven.widdowson@millersville.edu |  | https://millersvilleathletics.com/sports/mens-soccer |
 | Millersville University of Pennsylvania | Millersville | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Quinn McCarty | Assistant Coach |  |  | https://millersvilleathletics.com/sports/mens-soccer |
-| Mississippi College | Clinton | Mississippi | Private | Gulf South Conference | NCAA D2 | Rafael Costa | Head Coach / Men's Soccer | rcosta@mc.edu | 601.925.3934 | https://www.gochoctaws.com/sports/mens-soccer |
-| Mississippi College | Clinton | Mississippi | Private | Gulf South Conference | NCAA D2 | Owen Connelly | Assistant Coach / Men's Soccer | ofconnelly@mc.edu | 601.925.7639 | https://www.gochoctaws.com/sports/mens-soccer |
-| Mississippi College | Clinton | Mississippi | Private | Gulf South Conference | NCAA D2 | Keelan Pajak | Volunteer Assistant Coach |  |  | https://www.gochoctaws.com/sports/mens-soccer |
+| Mississippi Christian University | Clinton | Mississippi | Private | Gulf South Conference | NCAA D2 | Rafael Costa | Head Coach / Men's Soccer | rcosta@mc.edu | 601.925.3934 | https://www.gochoctaws.com/sports/mens-soccer |
+| Mississippi Christian University | Clinton | Mississippi | Private | Gulf South Conference | NCAA D2 | Owen Connelly | Assistant Coach / Men's Soccer | ofconnelly@mc.edu | 601.925.7639 | https://www.gochoctaws.com/sports/mens-soccer |
+| Mississippi Christian University | Clinton | Mississippi | Private | Gulf South Conference | NCAA D2 | Keelan Pajak | Volunteer Assistant Coach |  |  | https://www.gochoctaws.com/sports/mens-soccer |
 | Missouri University of Science & Technology | Rolla | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | Robert Cummings | Head Men's Soccer Coach | cummingsrc@mst.edu | 573-341-4102 | https://minerathletics.com/sports/mens-soccer |
 | Missouri University of Science & Technology | Rolla | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | Dylan Fillwock | Volunteer Assistant Coach |  |  | https://minerathletics.com/sports/mens-soccer |
 | Missouri University of Science & Technology | Rolla | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | Chase Bynum | Student Assistant Goalkeepers Coach |  |  | https://minerathletics.com/sports/mens-soccer |
@@ -1151,7 +1171,9 @@ Blank fields mean information is unavailable in this snapshot.
 | Newman University | Wichita | Kansas | Private | Mid-America Intercollegiate Athletics Association | NCAA D2 | Parker Beumer | Assistant Men's Soccer Coach | beumerp@newmanu.edu |  | https://newmanjets.com/sports/mens-soccer |
 | North Greenville University | Tigerville | South Carolina | Private | Conference Carolinas | NCAA D2 | Andrew Aulick | Head Coach | andrew.aulick@ngu.edu | (864) 569-2848 | https://www.nguathletics.com/sports/msoc |
 | North Greenville University | Tigerville | South Carolina | Private | Conference Carolinas | NCAA D2 | Jorge Henao | Volunteer Assistant Coach |  |  | https://www.nguathletics.com/sports/msoc |
-| Northeastern State University | Tahlequah | Oklahoma | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Rob Czlonka | Head Coach | czlonka@nsuok.edu | 918.444.3997 | https://goriverhawksgo.com/sports/mens-soccer |
+| Northeastern State University | Tahlequah | Oklahoma | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Rob Czlonka | Head Coach | czlonka@nsuok.edu |  | https://goriverhawksgo.com/sports/mens-soccer |
+| Northeastern State University | Tahlequah | Oklahoma | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Carl Murch | Graduate Assistant |  |  | https://goriverhawksgo.com/sports/mens-soccer |
+| Northeastern State University | Tahlequah | Oklahoma | Public | Mid-America Intercollegiate Athletics Association | NCAA D2 | Gonzalo Castells | Graduate Assistant |  |  | https://goriverhawksgo.com/sports/mens-soccer |
 | Northern Michigan University | Marquette | Michigan | Public | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Alex Fatovic | Head Coach | afatovic@nmu.edu | 906-227-2469 | https://nmuwildcats.com/sports/mens-soccer |
 | Northern Michigan University | Marquette | Michigan | Public | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Chance Vang | Assistant Coach | cvang@nmu.edu |  | https://nmuwildcats.com/sports/mens-soccer |
 | Northern Michigan University | Marquette | Michigan | Public | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Keegan Schmidt | Assistant Coach |  |  | https://nmuwildcats.com/sports/mens-soccer |
@@ -1230,7 +1252,8 @@ Blank fields mean information is unavailable in this snapshot.
 | Roosevelt University | Chicago | Illinois | Private | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Eoin Broughan | Assistant Coach | ebroughan@roosevelt.edu |  | https://rooseveltlakers.com/sports/mens-soccer |
 | Roosevelt University | Chicago | Illinois | Private | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Oscar Guzman | Goalkeeping Coach | oguzmanfranco@roosevelt.edu |  | https://rooseveltlakers.com/sports/mens-soccer |
 | Roosevelt University | Chicago | Illinois | Private | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | James Wilcox | Volunteer Assistant Coach |  |  | https://rooseveltlakers.com/sports/mens-soccer |
-| Saginaw Valley State University | University Center | Michigan | Public | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Louis Barrow | Head Coach | lpbarrow@svsu.edu | 989-964-7308 | https://www.svsucardinals.com/sports/msoc/index |
+| Saginaw Valley State University | University Center | Michigan | Public | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Louis Barrow | Head Coach | lpbarrow@svsu.edu | 989.964.7308 | https://www.svsucardinals.com/sports/msoc/index |
+| Saginaw Valley State University | University Center | Michigan | Public | Great Lakes Intercollegiate Athletic Conference | NCAA D2 | Adam McAleenan | Assistant Coach |  |  | https://www.svsucardinals.com/sports/msoc/index |
 | Saint Anselm College | Manchester | New Hampshire | Private | Northeast-10 Conference | NCAA D2 | Bruno Victal | Head Coach | bvictal@anselm.edu | 603-222-4283 | https://saintanselmhawks.com/sports/mens-soccer |
 | Saint Anselm College | Manchester | New Hampshire | Private | Northeast-10 Conference | NCAA D2 | Tim Field | Assistant Coach | timfield@anselm.edu | 603-222-4283 | https://saintanselmhawks.com/sports/mens-soccer |
 | Saint Anselm College | Manchester | New Hampshire | Private | Northeast-10 Conference | NCAA D2 | Thomas Prentice | Volunteer Assistant Coach |  |  | https://saintanselmhawks.com/sports/mens-soccer |
@@ -1249,10 +1272,6 @@ Blank fields mean information is unavailable in this snapshot.
 | Salem University | Salem | West Virginia | Private | Eastern Collegiate Athletic Conferenc | NCAA D2 | Greg Gilmore | Head Men's Soccer Coach | greg.gilmore@salemu.edu |  | https://salemtigers.com/sports/mens-soccer |
 | Salem University | Salem | West Virginia | Private | Eastern Collegiate Athletic Conferenc | NCAA D2 | Bryce Meche | Goalkeeper Coach | bryce.meche@salemu.edu |  | https://salemtigers.com/sports/mens-soccer |
 | Salem University | Salem | West Virginia | Private | Eastern Collegiate Athletic Conferenc | NCAA D2 | Adam Zelmanowicz | Assistant Men's Soccer Coach | Adam.Zelmanowicz@salemu.edu |  | https://salemtigers.com/sports/mens-soccer |
-| San Francisco State University | San Francisco | California | Public | California Collegiate Athletic Association | NCAA D2 | Sebastian Carrasco | Men's Soccer Coach (first season, sixth with program) | seba@sfsu.edu |  | https://sfstategators.com/sports/mens-soccer |
-| San Francisco State University | San Francisco | California | Public | California Collegiate Athletic Association | NCAA D2 | Manuel Hurtado | Assistant Men's Soccer Coach (first season) |  |  | https://sfstategators.com/sports/mens-soccer |
-| San Francisco State University | San Francisco | California | Public | California Collegiate Athletic Association | NCAA D2 | Justin Wolfe | Volunteer Assistant Coach (first season) |  |  | https://sfstategators.com/sports/mens-soccer |
-| San Francisco State University | San Francisco | California | Public | California Collegiate Athletic Association | NCAA D2 | Jay Roundtree | Goalkeepers Coach (second season) |  |  | https://sfstategators.com/sports/mens-soccer |
 | Seattle Pacific University | Seattle | Washington | Private | Great Northwest Athletic Conference | NCAA D2 | Kevin Sakuda | Men's Soccer Head Coach | sakudak1@spu.edu | 206-281-2859 | https://spufalcons.com/sports/mens-soccer |
 | Seattle Pacific University | Seattle | Washington | Private | Great Northwest Athletic Conference | NCAA D2 | Josh Swett | Men's Soccer Assistant Coach | swettj@spu.edu | (206) 281-2969 | https://spufalcons.com/sports/mens-soccer |
 | Seattle Pacific University | Seattle | Washington | Private | Great Northwest Athletic Conference | NCAA D2 | James Ward | Men's Soccer Assistant Coach | menssoccer@spu.edu | (206) 281-2968 | https://spufalcons.com/sports/mens-soccer |
@@ -1267,6 +1286,7 @@ Blank fields mean information is unavailable in this snapshot.
 | Shippensburg University of Pennsylvania | Shippensburg | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Jeremy Spering | Head Coach | jjspering@ship.edu | 717-477-1740 | https://shipraiders.com/sports/mens-soccer |
 | Shippensburg University of Pennsylvania | Shippensburg | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Gaz Davies | Assistant Coach | gwdavies@ship.edu | 717-477-1740 | https://shipraiders.com/sports/mens-soccer |
 | Shorter University | Rome | Georgia | Private | Conference Carolinas | NCAA D2 | Roberto Hernandez | Head Men's Soccer Coach | mens.soccer@shorter.edu |  | https://goshorterhawks.com/sports/mens-soccer |
+| Shorter University | Rome | Georgia | Private | Conference Carolinas | NCAA D2 | Sebastian Troya | Graduate Assistant |  |  | https://goshorterhawks.com/sports/mens-soccer |
 | Simon Fraser |  |  |  |  | NCAA D2 | Clint Schneider | Head Coach | cdschnei@sfu.ca | 778-782-3685 |  |
 | Simon Fraser |  |  |  |  | NCAA D2 | Kevin Harmse | Assistant Coach | kharmse@sfu.ca | 778-782-3685 |  |
 | Slippery Rock University | Slippery Rock | Pennsylvania | Public | Pennsylvania State Athletic Conference | NCAA D2 | Kevin Wilhelm | Head Coach | kevin.wilhelm@sru.edu | 724.738.2822 | https://rockathletics.com/sports/mens-soccer |
@@ -1296,14 +1316,19 @@ Blank fields mean information is unavailable in this snapshot.
 | Southern Wesleyan University | Central | South Carolina | Private | Conference Carolinas | NCAA D2 | Oker Hernandez | Assistant Coach | ohernandez@swu.edu |  | https://swuathletics.com/sports/mens-soccer |
 | Southern Wesleyan University | Central | South Carolina | Private | Conference Carolinas | NCAA D2 | Adrian Guzman | Assistant Coach / Goalkeeper Coach | aguzman@swu.edu | 678-910-5149 | https://swuathletics.com/sports/mens-soccer |
 | Southwest Baptist University | Bolivar | Missouri | Private | Great Lakes Valley Conference | NCAA D2 | Aron Bassoff | Head Men's Soccer Coach | aron.bassoff@sbuniv.edu |  | https://www.sbubearcats.com/sports/mens-soccer |
+| Southwest Baptist University | Bolivar | Missouri | Private | Great Lakes Valley Conference | NCAA D2 | Iker Lorenzo | Men's Soccer Graduate Assistant | Iker.lorenzo@sbuniv.edu |  | https://www.sbubearcats.com/sports/mens-soccer |
 | Spring Hill College | Mobile | Alabama | Private | Gulf South Conference | NCAA D2 | Tony Marriel | Head Coach Men's Soccer | amarriel@shc.edu | 251-380-4007 | https://shcbadgers.com/sports/mens-soccer |
 | Spring Hill College | Mobile | Alabama | Private | Gulf South Conference | NCAA D2 | Luke Picicci | Assistant Coach Men's Soccer | lpicicci@shc.edu |  | https://shcbadgers.com/sports/mens-soccer |
 | St. Cloud State University | Saint Cloud | Minnesota | Public | Northern Sun Intercollegiate Conference | NCAA D2 | Sean Holmes | Head Coach | sean.holmes@stcloudstate.edu | 320-308-7627 | https://scsuhuskies.com/sports/mens-soccer |
 | St. Cloud State University | Saint Cloud | Minnesota | Public | Northern Sun Intercollegiate Conference | NCAA D2 | Vukota Mastilović | Volunteer Assistant Coach | vukota.mastilovic@go.stcloudstate.edu |  | https://scsuhuskies.com/sports/mens-soccer |
 | St. Cloud State University | Saint Cloud | Minnesota | Public | Northern Sun Intercollegiate Conference | NCAA D2 | Damien Klug | Volunteer Assistant Coach |  |  | https://scsuhuskies.com/sports/mens-soccer |
 | St. Cloud State University | Saint Cloud | Minnesota | Public | Northern Sun Intercollegiate Conference | NCAA D2 | William Månström | Volunteer Assistant Coach |  |  | https://scsuhuskies.com/sports/mens-soccer |
-| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Chase Rathke | Head Cross Country and Track & Field Coach | crathke1@stedwards.edu |  | https://gohilltoppers.com/sports/mens-cross-country |
-| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Dan O'Dwyer | Volunteer Assistant Cross Country and Track & Field Coach |  |  | https://gohilltoppers.com/sports/mens-cross-country |
+| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Brian Young | Head Men's Soccer Coach | briany@stedwards.edu | 512-448-8507 | https://gohilltoppers.com/sports/mens-cross-country |
+| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Corey Miller | Associate Head Men's Soccer Coach | cmille13@stedwards.edu | 512-428-1355 | https://gohilltoppers.com/sports/mens-cross-country |
+| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Matteo Curioni | Assistant Coach |  |  | https://gohilltoppers.com/sports/mens-cross-country |
+| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Brandon Silvera | Assistant Coach |  |  | https://gohilltoppers.com/sports/mens-cross-country |
+| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Eric Embry | Assistant Coach |  |  | https://gohilltoppers.com/sports/mens-cross-country |
+| St. Edward's University | Austin | Texas | Private | Lone Star Conference | NCAA D2 | Jake Beerman | Assistant Coach |  |  | https://gohilltoppers.com/sports/mens-cross-country |
 | St. Mary's University – Texas | San Antonio | Texas | Private | Lone Star Conference | NCAA D2 | Johnny Clifford | Head Men's Soccer Coach | jclifford@stmarytx.edu | 210-431-5044 | https://rattlerathletics.com/sports/mens-soccer |
 | St. Mary's University – Texas | San Antonio | Texas | Private | Lone Star Conference | NCAA D2 | Gary Tucker | Assistant Men's Soccer Coach | gtucker4@stmarytx.edu |  | https://rattlerathletics.com/sports/mens-soccer |
 | St. Mary's University – Texas | San Antonio | Texas | Private | Lone Star Conference | NCAA D2 | Deni Cresto | Assistant Men's Soccer Coach | dcresto@stmarytx.edu |  | https://rattlerathletics.com/sports/mens-soccer |
@@ -1362,7 +1387,8 @@ Blank fields mean information is unavailable in this snapshot.
 | University of Indianapolis | Indianapolis | Indiana | Private | Great Lakes Valley Conference | NCAA D2 | Gabe Hall | Head Coach | hallgm@uindy.edu | 788-6111 | https://athletics.uindy.edu/sports/mens-soccer |
 | University of Indianapolis | Indianapolis | Indiana | Private | Great Lakes Valley Conference | NCAA D2 | Hayden Howard | Assistant Coach | howardh@uindy.edu |  | https://athletics.uindy.edu/sports/mens-soccer |
 | University of Indianapolis | Indianapolis | Indiana | Private | Great Lakes Valley Conference | NCAA D2 | Adam Sell | Assistant Coach | sella@uindy.edu |  | https://athletics.uindy.edu/sports/mens-soccer |
-| University of Jamestown | Jamestown | North Dakota | Private | North Star Athletic Association | NCAA D2 |  |  |  |  | https://www.jimmiepride.com/sports/msoc/index |
+| University of Jamestown | Jamestown | North Dakota | Private | North Star Athletic Association | NCAA D2 | Justin Gilfert | Head Coach | Justin.Gilfert@uj.edu |  | https://www.jimmiepride.com/sports/msoc/index |
+| University of Jamestown | Jamestown | North Dakota | Private | North Star Athletic Association | NCAA D2 | Marko Madaras | Graduate Assistant |  |  | https://www.jimmiepride.com/sports/msoc/index |
 | University of Missouri – St. Louis | Saint Louis | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | Josh Alderson | Head Men's Soccer Coach | jjakc6@umsl.edu | 314-516-5641 | https://umsltritons.com/sports/mens-soccer |
 | University of Missouri – St. Louis | Saint Louis | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | Adam Knight | Assistant Coach |  |  | https://umsltritons.com/sports/mens-soccer |
 | University of Missouri – St. Louis | Saint Louis | Missouri | Public | Great Lakes Valley Conference | NCAA D2 | Callum Walker | Assistant Coach |  |  | https://umsltritons.com/sports/mens-soccer |
@@ -1388,7 +1414,9 @@ Blank fields mean information is unavailable in this snapshot.
 | University of Texas – Tyler | Tyler | Texas | Public | Lone Star Conference | NCAA D2 | Robert Serra | Associate Head Coach | rserra@uttyler.edu |  | https://uttylerpatriots.com/sports/mens-soccer |
 | University of the District of Columbia | Washington | District Of Columbia | Public | East Coast Conference | NCAA D2 | Matthew L. Thompson | Head Coach | mlthompson@udc.edu | 202-274-5074 | https://www.udcfirebirds.com |
 | University of the District of Columbia | Washington | District Of Columbia | Public | East Coast Conference | NCAA D2 | Danny Wadeson | Assistant Coach | daniel.wadeson@udc.edu | 202-274-5328 | https://www.udcfirebirds.com |
-| University of West Alabama | Livingston | Alabama | Public | Gulf South Conference | NCAA D2 | Ross Nelson | Head Men's Soccer Coach | rnelson@uwa.edu | 205-652-3417 | https://uwaathletics.com/sports/mens-soccer |
+| University of West Alabama | Livingston | Alabama | Public | Gulf South Conference | NCAA D2 | Ross Nelson | Head Coach | rnelson@uwa.edu |  | https://uwaathletics.com/sports/mens-soccer |
+| University of West Alabama | Livingston | Alabama | Public | Gulf South Conference | NCAA D2 | Alfie Tucker | Graduate Assistant |  |  | https://uwaathletics.com/sports/mens-soccer |
+| University of West Alabama | Livingston | Alabama | Public | Gulf South Conference | NCAA D2 | Charlie Walker | Graduate Assistant |  |  | https://uwaathletics.com/sports/mens-soccer |
 | University of Wisconsin – Parkside | Kenosha | Wisconsin | Public | Great Lakes Valley Conference | NCAA D2 | Jason Zitzke | Head Men's Soccer Coach | zitzke@uwp.edu |  | https://parksiderangers.com/sports/mens-soccer |
 | University of Wisconsin – Parkside | Kenosha | Wisconsin | Public | Great Lakes Valley Conference | NCAA D2 | Armin Dedic | Assistant Coach - Men's Soccer | dedic@uwp.edu |  | https://parksiderangers.com/sports/mens-soccer |
 | Upper Iowa University | Fayette | Iowa | Private | Great Lakes Valley Conference | NCAA D2 | Jeancy Matumona-Bau | Head Men's Soccer Coach | matumona-bauj@uiu.edu |  | https://uiupeacocks.com/sports/mens-soccer |
@@ -2577,22 +2605,22 @@ Blank fields mean information is unavailable in this snapshot.
 | University of the Ozarks | Clarksville | Arkansas | Private | Southern Collegiate Athletic Conference | NCAA D3 | Bradley Rice | Volunteer Assistant Men's Soccer Coach |  |  | https://uofoathletics.com/sports/mens-soccer |
 | University of the Ozarks | Clarksville | Arkansas | Private | Southern Collegiate Athletic Conference | NCAA D3 | David Beck | Strength and Conditioning Coach | dbeck@ozarks.edu | 479-979-1438 479-979-1438 | https://uofoathletics.com/sports/mens-soccer |
 | University of Valley Forge | Phoenixville | Pennsylvania | Private | United East Conference | NCAA D3 | John Badidis | Head Coach | jrbadidis@valleyforge.edu |  | https://uvfpatriots.com/sports/mens-soccer |
-| University of Wisconsin – Eau Claire | Eau Claire | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 |  |  |  |  | https://www.blugolds.com/sports/msoc/index |
+| University of Wisconsin – Eau Claire | Eau Claire | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Casey Holm | Head Coach | holmc@uwec.edu | (715) 836-3296 | https://www.blugolds.com/sports/msoc/index |
 | University of Wisconsin – Platteville | Platteville | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Jesse Tinney | Men's Head Coach | tinneyje@uwplatt.edu | (608) 342-6164 (608) 342-6164 | https://letsgopioneers.com/sports/mens-soccer |
 | University of Wisconsin – Platteville | Platteville | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Tom Corcoran | Associate Head Soccer Coach | corcoranth@uwplatt.edu | (608)342-7366 (608)342-7366 | https://letsgopioneers.com/sports/mens-soccer |
 | University of Wisconsin – Platteville | Platteville | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Brandon Pink | Assistant Men's Soccer Coach |  |  | https://letsgopioneers.com/sports/mens-soccer |
-| University of Wisconsin – River Falls | River Falls | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 |  |  |  |  | https://uwrfsports.com/sports/mens-ice-hockey |
+| University of Wisconsin – River Falls | River Falls | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Evan Sassano | Head Coach | evan.sassano@uwrf.edu | 715-425-4948 | https://uwrfsports.com/sports/mens-soccer |
 | University of Wisconsin – Stevens Point | Stevens Point | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Jordan Kayser | Head Men's Soccer Coach | jkayser@uwsp.edu | 715-346-2298 715-346-2298 | https://athletics.uwsp.edu/sports/mens-soccer |
 | University of Wisconsin – Stevens Point | Stevens Point | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Jake Grawey | Assistant Coach |  |  | https://athletics.uwsp.edu/sports/mens-soccer |
 | University of Wisconsin – Stevens Point | Stevens Point | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Aidan Lynch | Assistant Coach (GK) |  |  | https://athletics.uwsp.edu/sports/mens-soccer |
 | University of Wisconsin – Stout | Menomonie | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Cole Schwartz | Head Coach | schwartzco@uwstout.edu | o:715-232-1367 c:218-839-7806 o:715-232-1367 c:218-839-7806 | https://stoutbluedevils.com/sports/mens-soccer |
 | University of Wisconsin – Stout | Menomonie | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Alex Schnobrich | Assistant Coach | schnobrichal@uwstout.edu | c:651-703-7432 c:651-703-7432 | https://stoutbluedevils.com/sports/mens-soccer |
-| University of Wisconsin – Superior | Superior | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Joe Mooney | Head Men's Soccer Coach | jmooney@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
-| University of Wisconsin – Superior | Superior | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Danny Kearns | Assistant Men's and Women's Soccer Coach | dkearns@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
-| University of Wisconsin – Superior | Superior | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Jake Myran | Assistant Men's Soccer Coach | jmyran@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
-| University of Wisconsin – Superior | Superior | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Zach Tiemeyer | Assistant Men's Soccer Coach | ztiemeye@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
-| University of Wisconsin – Superior | Superior | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Alfie Hudd | Assistant Men's Soccer Coach | ahudd@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
-| University of Wisconsin – Superior | Superior | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | PJ Piotrowski | Strength and Conditioning Coach | ppiotrow@uwsuper.edu | 715-395-4621 715-395-4621 | https://uwsyellowjackets.com/sports/mens-soccer |
+| University of Wisconsin – Superior | Superior | Wisconsin | Public | Upper Midwest Athletic Conference | NCAA D3 | Joe Mooney | Head Men's Soccer Coach | jmooney@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
+| University of Wisconsin – Superior | Superior | Wisconsin | Public | Upper Midwest Athletic Conference | NCAA D3 | Danny Kearns | Assistant Men's and Women's Soccer Coach | dkearns@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
+| University of Wisconsin – Superior | Superior | Wisconsin | Public | Upper Midwest Athletic Conference | NCAA D3 | Jake Myran | Assistant Men's Soccer Coach | jmyran@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
+| University of Wisconsin – Superior | Superior | Wisconsin | Public | Upper Midwest Athletic Conference | NCAA D3 | Zach Tiemeyer | Assistant Men's Soccer Coach | ztiemeye@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
+| University of Wisconsin – Superior | Superior | Wisconsin | Public | Upper Midwest Athletic Conference | NCAA D3 | Alfie Hudd | Assistant Men's Soccer Coach | ahudd@uwsuper.edu | 715-395-4615 715-395-4615 | https://uwsyellowjackets.com/sports/mens-soccer |
+| University of Wisconsin – Superior | Superior | Wisconsin | Public | Upper Midwest Athletic Conference | NCAA D3 | PJ Piotrowski | Strength and Conditioning Coach | ppiotrow@uwsuper.edu | 715-395-4621 715-395-4621 | https://uwsyellowjackets.com/sports/mens-soccer |
 | University of Wisconsin – Whitewater | Whitewater | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Tony Guinn | Head Coach | guinna@uww.edu | 309-313-3951 309-313-3951 | https://uwwsports.com/sports/mens-soccer |
 | University of Wisconsin – Whitewater | Whitewater | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Steve Domin | Assistant Coach |  |  | https://uwwsports.com/sports/mens-soccer |
 | University of Wisconsin – Whitewater | Whitewater | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Scott Suprise | Assistant Coach |  |  | https://uwwsports.com/sports/mens-soccer |
@@ -2730,6 +2758,10 @@ Blank fields mean information is unavailable in this snapshot.
 | York College – New York |  |  |  |  | NCAA D3 | Hunter Meitz | Assistant Coach | lmeitz901@york.cuny.edu | 718.262.5114 718.262.5114 | https://yorkathletics.com/sports/mens-soccer |
 | York College – New York |  |  |  |  | NCAA D3 | Keith Kucharnik | Assistant Coach | kkucharnik1@york.cuny.edu | 718.262.5114 718.262.5114 | https://yorkathletics.com/sports/mens-soccer |
 | York College – New York |  |  |  |  | NCAA D3 | Chrispin Merryman | Assistant Coach | cmerryman901@york.cuny.edu | 718.262.5114 718.262.5114 | https://yorkathletics.com/sports/mens-soccer |
+| University of Wisconsin – Eau Claire | Eau Claire | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Adolfo Gonzalez | Assistant Coach | barreraa@uwec.edu |  | https://www.blugolds.com/sports/msoc/index |
+| University of Wisconsin – River Falls | River Falls | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Bret Day | Assistant Coach | bret.day@uwrf.edu |  | https://uwrfsports.com/sports/mens-soccer |
+| University of Wisconsin - Oshkosh | Oshkosh | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | Darren Gallagher | Head Coach | gallagherd@uwosh.edu | (920) 424-1046 | https://uwoshkoshtitans.com/sports/mens-soccer |
+| University of Wisconsin - Oshkosh | Oshkosh | Wisconsin | Public | Wisconsin Intercollegiate Athletic Conference | NCAA D3 | CJ Dwyer | Assistant Coach | dwyerc53@uwosh.edu | (920) 424-1052 | https://uwoshkoshtitans.com/sports/mens-soccer |
 
 ## NAIA
 
@@ -2750,11 +2782,13 @@ Blank fields mean information is unavailable in this snapshot.
 | Benedictine University – Mesa | Mesa | Arizona | Private | California Pacific Conference | NAIA | Tim Marchisotto | Assistant Coach | tmarchisotto@ben.edu | 602-472-0183 |  |
 | Bethany College – Kansas | Lindsborg | Kansas | Private | Kansas Collegiate Athletic Conference | NAIA | Shane Taylor | Head Coach | taylorsb@bethanylb.edu |  | https://bethanyswedes.com/sports/msoc/index |
 | Bethany College – Kansas | Lindsborg | Kansas | Private | Kansas Collegiate Athletic Conference | NAIA | Aristides Sandoval | Assistant Coach | sandovalar@bethanylb.edu |  | https://bethanyswedes.com/sports/msoc/index |
-| Bethel College – Kansas | North Newton | Kansas | Private | Kansas Collegiate Athletic Conference | NAIA |  |  |  |  | https://bethelthreshers.com/sports/mens-soccer |
+| Bethel College – Kansas | North Newton | Kansas | Private | Kansas Collegiate Athletic Conference | NAIA | Juan Zamora | Head Coach | jzamora@bethelks.edu |  | https://bethelthreshers.com/sports/mens-soccer |
 | Bethel University – Indiana | Mishawaka | Indiana | Private | Crossroads League | NAIA | Thiago Pinto | Head Coach | thiago.pinto@betheluniversity.edu | 574-807-7205 | https://bupilots.com/sports/mens-soccer |
 | Bethel University – Indiana | Mishawaka | Indiana | Private | Crossroads League | NAIA | Mamba Chisoni | Assistant Coach | mamba.chisoni@Betheluniversity.edu | 574-807-7205 | https://bupilots.com/sports/mens-soccer |
 | Bethel University – Tennessee | Mckenzie | Tennessee | Private | Mid-South Conference | NAIA | Malang Jarju | Head Coach | jarjum@bethelu.edu | 731-415-0651 | https://bethelathletics.com/sports/msoc/index |
-| Blue Mountain College | Blue Mountain | Mississippi | Private | Southern States Athletic Conference | NAIA |  |  |  |  | https://bmcusports.com/sports/mens-soccer |
+| Blue Mountain College | Blue Mountain | Mississippi | Private | Southern States Athletic Conference | NAIA | Breno Da Costa | Head Coach | bdacosta@bmc.edu |  | https://bmcusports.com/sports/mens-soccer |
+| Blue Mountain College | Blue Mountain | Mississippi | Private | Southern States Athletic Conference | NAIA | Kida Yamaguchi | Graduate Assistant |  |  | https://bmcusports.com/sports/mens-soccer |
+| Blue Mountain College | Blue Mountain | Mississippi | Private | Southern States Athletic Conference | NAIA | Danny Gomez | Graduate Assistant |  |  | https://bmcusports.com/sports/mens-soccer |
 | Bluefield University | Bluefield | Virginia | Private | Appalachian Athletic Conference | NAIA | Justin Morton | Head Coach | jmorton@bluefield.edu |  | https://bcrams.com/sports/mens-soccer |
 | Brescia University | Owensboro | Kentucky | Private | River States Conference | NAIA |  |  |  |  | https://bresciabearcats.com/sports/msoc/index |
 | Brewton-Parker College | Mount Vernon | Georgia | Private | Southern States Athletic Conference | NAIA | Frankie Ruiz | Head Coach | fruiz@bpc.edu | 478-410-2085 | https://bpcathletics.com/sports/mens-soccer |
@@ -2818,7 +2852,10 @@ Blank fields mean information is unavailable in this snapshot.
 | Georgetown College | Georgetown | Kentucky | Private | Mid-South Conference | NAIA | Brent Chase | Head Coach | brent_chase@georgetowncollege.edu |  | https://georgetowncollegeathletics.com/sports/msoc/index |
 | Georgia Gwinnett College | Lawrenceville | Georgia | Public | Continental Athletic Conference | NAIA | Steve DeCou | Head Coach | sdecou@ggc.edu | 678-407-5254 | https://ggcathletics.com/sports/mens-soccer |
 | Georgia Gwinnett College | Lawrenceville | Georgia | Public | Continental Athletic Conference | NAIA | Stephen Magennis | Assistant Coach | smagennis@ggc.edu | 678-407-5518 | https://ggcathletics.com/sports/mens-soccer |
-| Goshen College | Goshen | Indiana | Private | Crossroads League | NAIA |  |  |  |  | https://goleafs.net/sports/mens-soccer |
+| Goshen College | Goshen | Indiana | Private | Crossroads League | NAIA | Dan Sullivan | Head Coach | desullivan@goshen.edu | 574-535-7235 | https://goleafs.net/sports/mens-soccer |
+| Goshen College | Goshen | Indiana | Private | Crossroads League | NAIA | Henrique Eichenberger | Assistant Coach |  | 574-535-7029 | https://goleafs.net/sports/mens-soccer |
+| Goshen College | Goshen | Indiana | Private | Crossroads League | NAIA | Herbert Lopez | Goalkeepers Coach |  |  | https://goleafs.net/sports/mens-soccer |
+| Goshen College | Goshen | Indiana | Private | Crossroads League | NAIA | Thiago Serejo | Assistant Coach |  |  | https://goleafs.net/sports/mens-soccer |
 | Governors State University | University Park | Illinois | Public | Chicagoland Collegiate Athletic Conference | NAIA |  |  |  |  | https://www.gsujaguars.com/sports/msoc/index |
 | Grace College | Winona Lake | Indiana | Private | Crossroads League | NAIA | Arron Patrick | Head Coach | patricaf@grace.edu |  | https://gclancers.com/sports/mens-soccer |
 | Grace College | Winona Lake | Indiana | Private | Crossroads League | NAIA | Nikola Blazic | Assistant Coach | blazicn@grace.edu |  | https://gclancers.com/sports/mens-soccer |
@@ -2834,12 +2871,17 @@ Blank fields mean information is unavailable in this snapshot.
 | Hope International University | Fullerton | California | Private | Great Southwest Athletic Conference | NAIA | Joe Lurker | Head Coach | jdlurker@hiu.edu |  | https://hiuroyals.com/sports/mens-soccer |
 | Hope International University | Fullerton | California | Private | Great Southwest Athletic Conference | NAIA | Scott Dement | Assistant Coach | spdement@hiu.edu |  | https://hiuroyals.com/sports/mens-soccer |
 | Huntington University | Huntington | Indiana | Private | Crossroads League | NAIA | Russ Lawson | Head Coach | rlawson@huntington.edu | 260-359-4289 | https://www.huathletics.com/sports/msoc/index |
-| Huston-Tillotson University | Austin | Texas | Private | Red River Athletic Conference | NAIA |  |  |  |  | https://htramsathletics.com/sports/mens-soccer |
+| Huston-Tillotson University | Austin | Texas | Private | Red River Athletic Conference | NAIA | Aaron Yancy | Head Coach | ayancy@htu.edu |  | https://htramsathletics.com/sports/mens-soccer |
+| Huston-Tillotson University | Austin | Texas | Private | Red River Athletic Conference | NAIA | Joe Roberts | Associate Head Coach | jalroberts@htu.edu |  | https://htramsathletics.com/sports/mens-soccer |
+| Huston-Tillotson University | Austin | Texas | Private | Red River Athletic Conference | NAIA | Scott Leese | Assistant Coach | sleese@htu.edu |  | https://htramsathletics.com/sports/mens-soccer |
 | Indiana Tech | Fort Wayne | Indiana | Private | Wolverine-Hoosier Athletic Conference | NAIA | John Dunn | Head Coach | jpdunn@indianatech.edu |  | https://indianatechwarriors.com/sports/mens-soccer |
-| Indiana University – Columbus | Columbus | Indiana | Public | River States Conference | NAIA |  |  |  |  | https://iuccrimsonpride.com/sports/mens-soccer |
+| Indiana University – Columbus | Columbus | Indiana | Public | River States Conference | NAIA | Kevin Nolan | Director of Soccer | kevnola@iu.edu |  | https://iuccrimsonpride.com/sports/mens-soccer |
+| Indiana University – Columbus | Columbus | Indiana | Public | River States Conference | NAIA | Jon Michael Bright | Assistant Men's Soccer Coach | jobrig@iu.edu |  | https://iuccrimsonpride.com/sports/mens-soccer |
+| Indiana University – Columbus | Columbus | Indiana | Public | River States Conference | NAIA | Zach Roberts | Goalkeeper Coach | zamrober@iu.edu |  | https://iuccrimsonpride.com/sports/mens-soccer |
 | Indiana University – East | Richmond | Indiana | Public | River States Conference | NAIA | Steve Moore | Head Coach | moore287@iue.edu | 765-973-8367 | https://www.iueredwolves.com/sports/msoc/index |
 | Indiana University – East | Richmond | Indiana | Public | River States Conference | NAIA | Matthew Wolf | Assistant Coach | matwolf@iu.edu |  | https://www.iueredwolves.com/sports/msoc/index |
-| Indiana University – Northwest | Gary | Indiana | Public | Chicagoland Collegiate Athletic Conference | NAIA |  |  |  |  | https://iunredhawks.com/sports/mens-soccer |
+| Indiana University – Northwest | Gary | Indiana | Public | Chicagoland Collegiate Athletic Conference | NAIA | Ben Kososkie | Head Men's Soccer Coach | bkososk@iu.edu | 219-980-6775 | https://iunredhawks.com/sports/mens-soccer |
+| Indiana University – Northwest | Gary | Indiana | Public | Chicagoland Collegiate Athletic Conference | NAIA | Omar Mehisen | Assistant Men's Soccer Coach |  |  | https://iunredhawks.com/sports/mens-soccer |
 | Indiana Wesleyan University | Marion | Indiana | Private | Crossroads League | NAIA | Luke Sanford | Head Coach | luke.sanford@indwes.edu | 765-677-2337 | https://iwuwildcats.com/sports/mens-soccer |
 | Jarvis Christian University | Hawkins | Texas | Private | Red River Athletic Conference | NAIA | Jeremy Winzer | Head Coach | jwinzer@jarvis.edu | 903-730-4890 | https://jcubulldogs.com/sports/msoc/index |
 | John Brown University | Siloam Springs | Arkansas | Private | Sooner Athletic Conference | NAIA | Brenton Benware | Head Coach | bbenware@jbu.edu | 479-524-7310 | https://jbuathletics.com/sports/mens-soccer |
@@ -2898,8 +2940,16 @@ Blank fields mean information is unavailable in this snapshot.
 | Multnomah Campus of Jessup University | Portland | Oregon | Private | Cascade Collegiate Conference | NAIA | Dalon Parker | Head Coach | dparker@multnomah.edu | 503-251-6547 | https://gomulions.com/sports/mens-soccer |
 | Nelson University | Waxahachie | Texas | Private | Sooner Athletic Conference | NAIA | Clementin Oancea | Head Coach | coancea@sagu.edu |  | https://nelsonlions.com/sports/mens-soccer |
 | Nelson University | Waxahachie | Texas | Private | Sooner Athletic Conference | NAIA | Cesar Espana | Assistant Coach | cespana@sagu.edu |  | https://nelsonlions.com/sports/mens-soccer |
-| New College of Florida | Sarasota | Florida | Public | Sun Conference | NAIA |  |  |  |  | https://gomightybanyans.com/sports/mens-soccer |
-| North American University | Stafford | Texas | Private | Red River Athletic Conference | NAIA |  |  |  |  | https://stallions.na.edu/sports/mens-soccer |
+| New College of Florida | Sarasota | Florida | Public | Sun Conference | NAIA | Cesar Markovic | Head Men's Soccer Coach | cmarkovic@ncf.edu |  | https://gomightybanyans.com/sports/mens-soccer |
+| New College of Florida | Sarasota | Florida | Public | Sun Conference | NAIA | Mark MacPhee | Assistant Coach Men's Soccer |  |  | https://gomightybanyans.com/sports/mens-soccer |
+| New College of Florida | Sarasota | Florida | Public | Sun Conference | NAIA | Pablo Herrera | Assistant Men's Soccer Coach | p.herrera26@ncf.edu |  | https://gomightybanyans.com/sports/mens-soccer |
+| New College of Florida | Sarasota | Florida | Public | Sun Conference | NAIA | Leo Schneider | Graduate Assistant, Men's Soccer |  |  | https://gomightybanyans.com/sports/mens-soccer |
+| New College of Florida | Sarasota | Florida | Public | Sun Conference | NAIA | Sebastian Pedraza | Graduate Assistant, Men's Soccer |  |  | https://gomightybanyans.com/sports/mens-soccer |
+| New College of Florida | Sarasota | Florida | Public | Sun Conference | NAIA | Henrico Correa | Graduate Assistant, Men's Soccer |  |  | https://gomightybanyans.com/sports/mens-soccer |
+| North American University | Stafford | Texas | Private | Red River Athletic Conference | NAIA | Dane Smith | Head Soccer Coach | dsmith@na.edu |  | https://stallions.na.edu/sports/mens-soccer |
+| North American University | Stafford | Texas | Private | Red River Athletic Conference | NAIA | Justy Campaz | Assistant Coach | jaycampaz11@yahoo.com | 281-717-3091 | https://stallions.na.edu/sports/mens-soccer |
+| North American University | Stafford | Texas | Private | Red River Athletic Conference | NAIA | Hope Smith | Assistant Coach | hope131smith@gmail.com |  | https://stallions.na.edu/sports/mens-soccer |
+| North American University | Stafford | Texas | Private | Red River Athletic Conference | NAIA | Darrion Gibson | Assistant Coach | dgibson@na.edu |  | https://stallions.na.edu/sports/mens-soccer |
 | Northwest University | Kirkland | Washington | Private | Cascade Collegiate Conference | NAIA | Ben McArthur | Head Coach |  | 307-754-6046 | https://nueagles.com/sports/mens-soccer |
 | Northwestern College – Iowa | Orange City | Iowa | Private | Great Plains Athletic Conference | NAIA | Dan Swier | Head Coach | dswier@nwciowa.edu | 712-707-7279 | https://nwcraiders.com/sports/mens-soccer |
 | Oakland City University | Oakland City | Indiana | Private | River States Conference | NAIA | Elliott Spruell | Head Coach | espruell@oak.edu |  | https://gomightyoaks.com/sports/mens-soccer |
@@ -2954,7 +3004,10 @@ Blank fields mean information is unavailable in this snapshot.
 | St. Ambrose University | Davenport | Iowa | Private | Chicagoland Collegiate Athletic Conference | NAIA | Emlyn Jacoby | Assistant Coach | jacobyemlynr@sau.edu | 563-333-5859 | https://www.saubees.com/sports/msoc/index |
 | St. Andrews University | Laurinburg | North Carolina | Private | Mid-South Conference | NAIA | Stevan Hernandez | Head Coach | hernandez@sa.edu | 910-277-5277 |  |
 | St. Andrews University | Laurinburg | North Carolina | Private | Mid-South Conference | NAIA | Robbie Hill | Assistant Coach | hillra@sa.edu | 910-277-5785 |  |
-| St. Thomas University – Florida | Miami Gardens | Florida | Private | Sun Conference | NAIA |  |  |  |  | https://stubobcats.com/sports/mens-soccer |
+| St. Thomas University – Florida | Miami Gardens | Florida | Private | Sun Conference | NAIA | Feliks Mats | Head Men's Soccer Coach | fmats@stu.edu | 305-628-6679 | https://stubobcats.com/sports/mens-soccer |
+| St. Thomas University – Florida | Miami Gardens | Florida | Private | Sun Conference | NAIA | Ezequel Dolber | Assistant Coach |  |  | https://stubobcats.com/sports/mens-soccer |
+| St. Thomas University – Florida | Miami Gardens | Florida | Private | Sun Conference | NAIA | Gonçalo Reis | Assistant Coach |  |  | https://stubobcats.com/sports/mens-soccer |
+| St. Thomas University – Florida | Miami Gardens | Florida | Private | Sun Conference | NAIA | Rodrigo DelaTerga | Goalkeeper Coach |  |  | https://stubobcats.com/sports/mens-soccer |
 | Sterling College – Kansas | Sterling | Kansas | Private | Kansas Collegiate Athletic Conference | NAIA | Nic Martinez | Head Coach | nicholas.martinez@sterling.edu | 620-278-4404 | https://www.scwarriors.com/sports/msoc/index |
 | Sterling College – Kansas | Sterling | Kansas | Private | Kansas Collegiate Athletic Conference | NAIA | Arturo Rodriguez | Assistant Coach | arturo.rodriguez@sterling.edu |  | https://www.scwarriors.com/sports/msoc/index |
 | Tabor College | Hillsboro | Kansas | Private | Kansas Collegiate Athletic Conference | NAIA | Grant Brubacher | Head Coach | grantb@tabor.edu |  | https://taborbluejays.com/sports/mens-soccer |
@@ -3002,7 +3055,12 @@ Blank fields mean information is unavailable in this snapshot.
 | University of Tennessee Southern | Pulaski | Tennessee | Private | Southern States Athletic Conference | NAIA | Bret Boylan | Assistant Coach | bboylan@martinmethodist.edu |  | https://utsfirehawks.com/sports/mens-soccer |
 | University of the Cumberlands | Williamsburg | Kentucky | Private | Mid-South Conference | NAIA | Chris LeFevre | Head Coach | christopher.lefevre@ucumberlands.edu | 606-539-4386 | https://cumberlandspatriots.com/sports/mens-soccer |
 | University of the Cumberlands | Williamsburg | Kentucky | Private | Mid-South Conference | NAIA | Will Lukowski | Assistant Coach | wlukowski5843@ucumberlands.edu | 606-539-4386 | https://cumberlandspatriots.com/sports/mens-soccer |
-| University of the Southwest | Hobbs | New Mexico | Private | Red River Athletic Conference | NAIA |  |  |  |  | https://uswathletics.com/sports/mens-soccer |
+| University of the Southwest | Hobbs | New Mexico | Private | Red River Athletic Conference | NAIA | Edrian Negrete | Head Coach | eenegrete@usw.edu | 951-531-7445 | https://uswathletics.com/sports/mens-soccer |
+| University of the Southwest | Hobbs | New Mexico | Private | Red River Athletic Conference | NAIA | Angel Marban | Assistant Coach |  |  | https://uswathletics.com/sports/mens-soccer |
+| University of the Southwest | Hobbs | New Mexico | Private | Red River Athletic Conference | NAIA | Gera Gerardo | Volunteer Assistant Coach |  |  | https://uswathletics.com/sports/mens-soccer |
+| University of the Southwest | Hobbs | New Mexico | Private | Red River Athletic Conference | NAIA | Reynold Navarro | Volunteer Assistant Coach |  |  | https://uswathletics.com/sports/mens-soccer |
+| University of the Southwest | Hobbs | New Mexico | Private | Red River Athletic Conference | NAIA | Omar Reyes | Graduate Assistant Coach |  |  | https://uswathletics.com/sports/mens-soccer |
+| University of the Southwest | Hobbs | New Mexico | Private | Red River Athletic Conference | NAIA | Bryan Muniz | Student Assistant Coach |  |  | https://uswathletics.com/sports/mens-soccer |
 | Vanguard University | Costa Mesa | California | Private | Great Southwest Athletic Conference | NAIA | Randy Dodge | Head Coach | rdodge@vanguard.edu |  | https://vanguardlions.com/sports/mens-soccer |
 | Vanguard University | Costa Mesa | California | Private | Great Southwest Athletic Conference | NAIA | Jesus (Chuy) Miramontes | Assistant Coach | jmiramontes@vanguard.edu |  | https://vanguardlions.com/sports/mens-soccer |
 | Viterbo University | La Crosse | Wisconsin | Private | Chicagoland Collegiate Athletic Conference | NAIA | Luke Dunn | Assistant Coach | ladunn@viterbo.edu | 608-796-3822 | https://viterbo.prestosports.com/sports/msoc/index |
@@ -3026,7 +3084,10 @@ Blank fields mean information is unavailable in this snapshot.
 | William Woods University | Fulton | Missouri | Private | American Midwest Conference | NAIA | Nathan Mason | Head Coach | nathan.mason@williamwoods.edu | 573-592-1693 | https://wwuowls.com/sports/mens-soccer |
 | William Woods University | Fulton | Missouri | Private | American Midwest Conference | NAIA | John Hutchison | Assistant Coach | john.hutchison@williamwoods.edu | 573-592-4557 | https://wwuowls.com/sports/mens-soccer |
 | Williams Baptist University | Walnut Ridge | Arkansas | Private | American Midwest Conference | NAIA | Gabriel Sitibaldi | Head Coach | gsitibaldi@williamsbu.edu | 870-759-4192 | https://wbueagles.com/sports/msoc/index |
-| Xavier University of Louisiana | New Orleans | Louisiana | Private | Red River Athletic Conference | NAIA |  |  |  |  | https://xulagold.com/sports/mens-soccer |
+| Xavier University of Louisiana | New Orleans | Louisiana | Private | Red River Athletic Conference | NAIA | Lucas Cordeiro | Men's Soccer Head Coach | lcordeir@xula.edu | 504-520-7362 | https://xulagold.com/sports/mens-soccer |
+| Xavier University of Louisiana | New Orleans | Louisiana | Private | Red River Athletic Conference | NAIA | Will Rodrigues | Men's Soccer Assistant Coach | wrodrigu@xula.edu | 606-622-7682 | https://xulagold.com/sports/mens-soccer |
+| Xavier University of Louisiana | New Orleans | Louisiana | Private | Red River Athletic Conference | NAIA | Michael White | Men's Soccer Graduate Assistant | mwhite38@xula.edu |  | https://xulagold.com/sports/mens-soccer |
+| Xavier University of Louisiana | New Orleans | Louisiana | Private | Red River Athletic Conference | NAIA | Julio Gruba | Men's Soccer Student Assistant | jgruba@xula.edu |  | https://xulagold.com/sports/mens-soccer |
 | York University | York | Nebraska | Private | Kansas Collegiate Athletic Conference | NAIA | Carmine Isacco | Head Coach | cisacco@yorku.ca |  | https://yorkpanthers.com/sports/mens-soccer |
 | York University | York | Nebraska | Private | Kansas Collegiate Athletic Conference | NAIA | Hieu Quach | Assistant Coach | msocac@yorku.ca |  | https://yorkpanthers.com/sports/mens-soccer |
 
