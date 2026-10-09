@@ -1,0 +1,895 @@
+{
+  "source": "https://assets-rst7.rschooltoday.com/rst7files/uploads/sites/751/2026/10/09031241/FRCC-Boys-Soccer-Standings-and-Results-2026-1.pdf",
+  "checkedAt": "2026-10-09",
+  "documentUpdatedAt": "2026-10-08",
+  "resultsThrough": "2026-10-06",
+  "pointsPerWin": 2,
+  "pointsPerTie": 1,
+  "champion": "De Pere",
+  "notes": "Standings preserved as published. Results stop October 6; October 8 games are absent. Overall summary does not fully reconcile with listed results. Scouting reports retain newer reconciled overall records.",
+  "standings": [
+    {
+      "team": "De Pere",
+      "conference": {
+        "w": 8,
+        "l": 0,
+        "t": 0,
+        "points": 16,
+        "gf": 38,
+        "ga": 0
+      },
+      "overall": {
+        "w": 12,
+        "l": 1,
+        "t": 0
+      }
+    },
+    {
+      "team": "Sheboygan North",
+      "conference": {
+        "w": 5,
+        "l": 2,
+        "t": 0,
+        "points": 10,
+        "gf": 15,
+        "ga": 10
+      },
+      "overall": {
+        "w": 9,
+        "l": 3,
+        "t": 2
+      }
+    },
+    {
+      "team": "Green Bay Preble",
+      "conference": {
+        "w": 5,
+        "l": 2,
+        "t": 1,
+        "points": 11,
+        "gf": 22,
+        "ga": 5
+      },
+      "overall": {
+        "w": 9,
+        "l": 3,
+        "t": 3
+      }
+    },
+    {
+      "team": "Notre Dame Academy",
+      "conference": {
+        "w": 4,
+        "l": 2,
+        "t": 1,
+        "points": 9,
+        "gf": 14,
+        "ga": 6
+      },
+      "overall": {
+        "w": 7,
+        "l": 4,
+        "t": 3
+      }
+    },
+    {
+      "team": "West De Pere",
+      "conference": {
+        "w": 4,
+        "l": 2,
+        "t": 1,
+        "points": 9,
+        "gf": 19,
+        "ga": 8
+      },
+      "overall": {
+        "w": 8,
+        "l": 6,
+        "t": 1
+      }
+    },
+    {
+      "team": "Bay Port",
+      "conference": {
+        "w": 3,
+        "l": 3,
+        "t": 1,
+        "points": 7,
+        "gf": 16,
+        "ga": 15
+      },
+      "overall": {
+        "w": 5,
+        "l": 7,
+        "t": 3
+      }
+    },
+    {
+      "team": "Pulaski",
+      "conference": {
+        "w": 2,
+        "l": 5,
+        "t": 0,
+        "points": 4,
+        "gf": 11,
+        "ga": 12
+      },
+      "overall": {
+        "w": 8,
+        "l": 5,
+        "t": 1
+      }
+    },
+    {
+      "team": "Ashwaubenon",
+      "conference": {
+        "w": 2,
+        "l": 5,
+        "t": 0,
+        "points": 4,
+        "gf": 8,
+        "ga": 29
+      },
+      "overall": {
+        "w": 7,
+        "l": 8,
+        "t": 0
+      }
+    },
+    {
+      "team": "Green Bay Southwest",
+      "conference": {
+        "w": 1,
+        "l": 6,
+        "t": 0,
+        "points": 2,
+        "gf": 2,
+        "ga": 23
+      },
+      "overall": {
+        "w": 1,
+        "l": 7,
+        "t": 0
+      }
+    },
+    {
+      "team": "Manitowoc Lincoln",
+      "conference": {
+        "w": 0,
+        "l": 7,
+        "t": 0,
+        "points": 0,
+        "gf": 1,
+        "ga": 38
+      },
+      "overall": {
+        "w": 3,
+        "l": 12,
+        "t": 0
+      }
+    }
+  ],
+  "results": [
+    {
+      "date": "2026-10-06",
+      "a": "De Pere",
+      "b": "Green Bay Southwest",
+      "ga": 9,
+      "gb": 0
+    },
+    {
+      "date": "2026-10-06",
+      "a": "Notre Dame Academy",
+      "b": "Pulaski",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-10-06",
+      "a": "West De Pere",
+      "b": "Ashwaubenon",
+      "ga": 5,
+      "gb": 0
+    },
+    {
+      "date": "2026-10-06",
+      "a": "Sheboygan North",
+      "b": "Bay Port",
+      "ga": 3,
+      "gb": 1
+    },
+    {
+      "date": "2026-10-06",
+      "a": "Green Bay Preble",
+      "b": "Manitowoc Lincoln",
+      "ga": 8,
+      "gb": 0
+    },
+    {
+      "date": "2026-10-03",
+      "a": "Manitowoc Lincoln",
+      "b": "Green Bay West",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-10-03",
+      "a": "West De Pere",
+      "b": "Appleton West",
+      "ga": 7,
+      "gb": 0
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Ashwaubenon",
+      "b": "Manitowoc Lincoln",
+      "ga": 2,
+      "gb": 1
+    },
+    {
+      "date": "2026-10-01",
+      "a": "De Pere",
+      "b": "Pulaski",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Bay Port",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 1
+    },
+    {
+      "date": "2026-10-01",
+      "a": "West De Pere",
+      "b": "Green Bay Southwest",
+      "ga": 3,
+      "gb": 1
+    },
+    {
+      "date": "2026-10-01",
+      "a": "Sheboygan North",
+      "b": "Notre Dame Academy",
+      "ga": 2,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-29",
+      "a": "West De Pere",
+      "b": "Pulaski",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-29",
+      "a": "De Pere",
+      "b": "Notre Dame Academy",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Green Bay Southwest",
+      "b": "Manitowoc Lincoln",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Bay Port",
+      "b": "Ashwaubenon",
+      "ga": 8,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-29",
+      "a": "Green Bay Preble",
+      "b": "Sheboygan North",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-26",
+      "a": "Sheboygan North",
+      "b": "Oostburg",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-26",
+      "a": "Notre Dame Academy",
+      "b": "New Berlin Eisenhower",
+      "ga": 1,
+      "gb": 2
+    },
+    {
+      "date": "2026-09-26",
+      "a": "Bay Port",
+      "b": "Wauwatosa East",
+      "ga": 2,
+      "gb": 5
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Pulaski",
+      "b": "Manitowoc Lincoln",
+      "ga": 6,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-24",
+      "a": "De Pere",
+      "b": "West De Pere",
+      "ga": 4,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Bay Port",
+      "b": "Green Bay Southwest",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Notre Dame Academy",
+      "b": "Green Bay Preble",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-24",
+      "a": "Sheboygan North",
+      "b": "Ashwaubenon",
+      "ga": 5,
+      "gb": 2
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Green Bay Preble",
+      "b": "Ashwaubenon",
+      "ga": 6,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Sheboygan North",
+      "b": "Green Bay Southwest",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-22",
+      "a": "De Pere",
+      "b": "Manitowoc Lincoln",
+      "ga": 9,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-22",
+      "a": "West De Pere",
+      "b": "Notre Dame Academy",
+      "ga": 1,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-22",
+      "a": "Pulaski",
+      "b": "Bay Port",
+      "ga": 4,
+      "gb": 2
+    },
+    {
+      "date": "2026-09-21",
+      "a": "Ashwaubenon",
+      "b": "Green Bay West",
+      "ga": 4,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-19",
+      "a": "Green Bay Preble",
+      "b": "DC Everest",
+      "ga": 2,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-19",
+      "a": "De Pere",
+      "b": "Hortonville",
+      "ga": 3,
+      "gb": 2
+    },
+    {
+      "date": "2026-09-19",
+      "a": "Bay Port",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-19",
+      "a": "Ashwaubenon",
+      "b": "Beaver Dam",
+      "ga": 5,
+      "gb": 4
+    },
+    {
+      "date": "2026-09-19",
+      "a": "Manitowoc Lincoln",
+      "b": "Sheboygan South",
+      "ga": 0,
+      "gb": 4
+    },
+    {
+      "date": "2026-09-18",
+      "a": "West De Pere",
+      "b": "Manitowoc Lincoln",
+      "ga": 7,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-18",
+      "a": "Notre Dame Academy",
+      "b": "Ashwaubenon",
+      "ga": 4,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-17",
+      "a": "De Pere",
+      "b": "DC Everest",
+      "ga": 4,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Green Bay Preble",
+      "b": "Hortonville",
+      "ga": 1,
+      "gb": 3
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Sheboygan North",
+      "b": "Pulaski",
+      "ga": 2,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-17",
+      "a": "Bay Port",
+      "b": "Wausau West",
+      "ga": 2,
+      "gb": 2
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Ashwaubenon",
+      "b": "Green Bay Southwest",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Notre Dame Academy",
+      "b": "Manitowoc Lincoln",
+      "ga": 5,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-15",
+      "a": "De Pere",
+      "b": "Sheboygan North",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Green Bay Preble",
+      "b": "Pulaski",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-15",
+      "a": "Bay Port",
+      "b": "West De Pere",
+      "ga": 2,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Ashwaubenon",
+      "b": "Seymour",
+      "ga": 7,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Notre Dame Academy",
+      "b": "Catholic Memorial",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Green Bay Preble",
+      "b": "Appleton North",
+      "ga": 1,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Hortonville",
+      "b": "Bay Port",
+      "ga": 6,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Sheboygan Lutheran",
+      "b": "Sheboygan North",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-12",
+      "a": "Pulaski",
+      "b": "Appleton West",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-12",
+      "a": "West De Pere",
+      "b": "Sturgeon Bay",
+      "ga": 0,
+      "gb": 2
+    },
+    {
+      "date": "2026-09-11",
+      "a": "Fond du Lac",
+      "b": "Manitowoc Lincoln",
+      "ga": 3,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-11",
+      "a": "Sheboygan North",
+      "b": "Hartford",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-10",
+      "a": "De Pere",
+      "b": "Bay Port",
+      "ga": 5,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Green Bay Preble",
+      "b": "Appleton West",
+      "ga": 8,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Sheboygan North",
+      "b": "Neenah",
+      "ga": 1,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Appleton North",
+      "b": "West De Pere",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-10",
+      "a": "Pulaski",
+      "b": "Oshkosh North",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-08",
+      "a": "De Pere",
+      "b": "Green Bay Preble",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-08",
+      "a": "West De Pere",
+      "b": "Green Bay East",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-08",
+      "a": "Pulaski",
+      "b": "Providence Academy",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Green Bay Preble",
+      "b": "Green Bay Southwest",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Green Bay East",
+      "b": "Ashwaubenon",
+      "ga": 4,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-03",
+      "a": "DC Everest",
+      "b": "Bay Port",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-03",
+      "a": "De Pere",
+      "b": "Wausau West",
+      "ga": 10,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Notre Dame Academy",
+      "b": "Xavier",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-03",
+      "a": "FVL",
+      "b": "West De Pere",
+      "ga": 2,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Pulaski",
+      "b": "Marshfield",
+      "ga": 7,
+      "gb": 0
+    },
+    {
+      "date": "2026-09-03",
+      "a": "Manitowoc Lincoln",
+      "b": "Menasha",
+      "ga": 3,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-01",
+      "a": "Notre Dame Academy",
+      "b": "FVL",
+      "ga": 1,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-01",
+      "a": "Freedom",
+      "b": "Ashwaubenon",
+      "ga": 11,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-01",
+      "a": "Pulaski",
+      "b": "Green Bay East",
+      "ga": 4,
+      "gb": 1
+    },
+    {
+      "date": "2026-09-01",
+      "a": "West De Pere",
+      "b": "Menasha",
+      "ga": 6,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-31",
+      "a": "Marinette",
+      "b": "Ashwaubenon",
+      "ga": 4,
+      "gb": 3
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Ludington, MI",
+      "b": "Manitowoc Lincoln",
+      "ga": 4,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Manitowoc Lincoln",
+      "b": "Manistee",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Madison LaFollette",
+      "b": "De Pere",
+      "ga": 4,
+      "gb": 3
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Whitefish Bay",
+      "b": "Notre Dame Academy",
+      "ga": 4,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Pulaski",
+      "b": "Homestead",
+      "ga": 0,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Sheboygan North",
+      "b": "Eau Claire Memorial",
+      "ga": 3,
+      "gb": 3
+    },
+    {
+      "date": "2026-08-29",
+      "a": "Green Bay Preble",
+      "b": "Wausau West",
+      "ga": 5,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-28",
+      "a": "De Pere",
+      "b": "Madison Memorial",
+      "ga": 4,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-28",
+      "a": "Bay Port",
+      "b": "Appleton West",
+      "ga": 6,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-28",
+      "a": "Sheboygan North",
+      "b": "Wausau East",
+      "ga": 2,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-28",
+      "a": "Green Bay Preble",
+      "b": "Eau Claire Memorial",
+      "ga": 4,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Hartford",
+      "b": "Manitowoc Lincoln",
+      "ga": 3,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Notre Dame Academy",
+      "b": "Sun Prairie East",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Ashwaubenon",
+      "b": "Menasha",
+      "ga": 5,
+      "gb": 3
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Neenah",
+      "b": "Bay Port",
+      "ga": 3,
+      "gb": 2
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Pulaski",
+      "b": "Xavier",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-27",
+      "a": "West De Pere",
+      "b": "Oshkosh North",
+      "ga": 3,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-27",
+      "a": "Green Bay Preble",
+      "b": "Appleton East",
+      "ga": 1,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Green Bay East",
+      "b": "Green Bay Southwest",
+      "ga": 4,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Notre Dame Academy",
+      "b": "Appleton North",
+      "ga": 1,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Ashwaubenon",
+      "b": "Shawano",
+      "ga": 2,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Bay Port",
+      "b": "Wisconsin Rapids",
+      "ga": 6,
+      "gb": 3
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Pulaski",
+      "b": "FVL",
+      "ga": 1,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Sheboygan North",
+      "b": "Sheboygan South",
+      "ga": 3,
+      "gb": 0
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Hortonville",
+      "b": "West De Pere",
+      "ga": 3,
+      "gb": 1
+    },
+    {
+      "date": "2026-08-25",
+      "a": "Green Bay Preble",
+      "b": "Kimberly",
+      "ga": 0,
+      "gb": 0
+    }
+  ]
+}

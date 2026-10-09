@@ -59,15 +59,18 @@
     "video": [
       {
         "match": "Hill-Murray · Hudson 0–1",
-        "question": "What prevented Hudson from scoring? Review full buildup and failed attacks."
+        "question": "What prevented Hudson from scoring? Review full buildup and failed attacks.",
+        "url": null
       },
       {
         "match": "Verona · Hudson 4–3",
-        "question": "How did Hudson’s four threats combine, and how did Verona score three?"
+        "question": "How did Hudson’s four threats combine, and how did Verona score three?",
+        "url": null
       },
       {
         "match": "Cedarburg · Hudson 4–3",
-        "question": "Tag all conceded goals. Were they set pieces, transitions, errors or repeated structural openings?"
+        "question": "Tag all conceded goals. Were they set pieces, transitions, errors or repeated structural openings?",
+        "url": null
       }
     ],
     "gaps": [
@@ -223,7 +226,8 @@
         "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/hudson/v"
       }
     ],
-    "playerSource": "Hudson Raiders.docx and its referenced corrected coach scorer ledger"
+    "playerSource": "Hudson Raiders.docx and its referenced corrected coach scorer ledger",
+    "conferenceContext": null
   },
   {
     "slug": "de-pere",
@@ -461,15 +465,18 @@
     "video": [
       {
         "match": "Hortonville · September 19 · De Pere 3–2",
-        "question": "Tag all five goals: phase, entry channel, first breakdown, final pass, finish."
+        "question": "Tag all five goals: phase, entry channel, first breakdown, final pass, finish.",
+        "url": null
       },
       {
         "match": "Skurka, Shanda and Patrickus · any full match",
-        "question": "Where does Skurka receive? Who supplies Shanda? What does Patrickus create after releasing the ball?"
+        "question": "Where does Skurka receive? Who supplies Shanda? What does Patrickus create after releasing the ball?",
+        "url": null
       },
       {
         "match": "Preble, Sheboygan North or Pulaski",
-        "question": "Compare first- and second-half chance creation. Which adjustments are visible?"
+        "question": "Compare first- and second-half chance creation. Which adjustments are visible?",
+        "url": null
       }
     ],
     "gaps": [
@@ -572,7 +579,8 @@
         "url": "https://www.maxpreps.com/wi/de-pere/de-pere-redbirds/soccer/stats/"
       }
     ],
-    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed"
+    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed",
+    "conferenceContext": null
   },
   {
     "slug": "appleton-north",
@@ -770,15 +778,18 @@
     "video": [
       {
         "match": "Hortonville · September 22 · Hortonville 5–1",
-        "question": "How did each goal develop? What dangerous chances did North create despite the margin?"
+        "question": "How did each goal develop? What dangerous chances did North create despite the margin?",
+        "url": null
       },
       {
         "match": "Neenah · October 1 · North 4–3",
-        "question": "How were their four goals created, and how did Neenah create its three?"
+        "question": "How were their four goals created, and how did Neenah create its three?",
+        "url": null
       },
       {
         "match": "Schneider and Apostolou · any full match",
-        "question": "Who receives their final passes? Identify buildup shape, pressure triggers and set-piece roles."
+        "question": "Who receives their final passes? Identify buildup shape, pressure triggers and set-piece roles.",
+        "url": null
       }
     ],
     "gaps": [
@@ -888,26 +899,27 @@
         "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonno/v/stats"
       }
     ],
-    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed"
+    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed",
+    "conferenceContext": null
   },
   {
     "slug": "preble",
     "name": "Green Bay Preble",
     "logo": "/scouting/preble.png",
-    "reportDate": "2026-10-03",
-    "resultsThrough": "2026-10-01",
-    "ratingsAsOf": "2026-10-02",
+    "reportDate": "2026-10-09",
+    "resultsThrough": "2026-10-08",
+    "ratingsAsOf": "2026-10-09",
     "record": {
-      "w": 9,
+      "w": 11,
       "l": 3,
       "d": 3,
-      "gf": 36,
-      "ga": 11
+      "gf": 46,
+      "ga": 12
     },
-    "rating": 1816.44,
-    "sos": 1701.49,
+    "rating": 1825.3,
+    "sos": 1680.44,
     "rank": 31,
-    "assessment": "A strong defensive record: eight shutouts and no more than one conceded in thirteen of fifteen games. Hortonville and De Pere each scored three. Their last five matches are 3–1–1, goals 11–3; Group B results are 1–2–3, goals 11–8.",
+    "assessment": "Potential October 24 regional-final opponent if both teams advance: #3 Preble first hosts #6 Kimberly on October 20. Through October 8: 11–3–3, goals 46–12, nine shutouts. They conceded at most one in 15 of 17 games; Hortonville and De Pere each scored three. Last five: 3–1–1, goals 13–3, including an 8–0 win over Manitowoc Lincoln and 2–1 over West De Pere. Our 3–1 win is the best direct preparation reference. Individual scoring leaders remain unknown.",
     "players": [
       {
         "number": "0",
@@ -943,11 +955,11 @@
       },
       {
         "number": "3/99",
-        "name": "Malaki Munson",
+        "name": "Munson Malaki",
         "year": "SR",
         "goals": null,
         "assists": null,
-        "role": "Goalkeeper; name as supplied"
+        "role": "Goalkeeper; PDF lists Last: Malaki, First: Munson; prior supplied name order was reversed. Confirm preferred name order with match sheet"
       },
       {
         "number": "4",
@@ -971,7 +983,7 @@
         "year": "SR",
         "goals": null,
         "assists": null,
-        "role": "Midfielder; name order unconfirmed"
+        "role": "Midfielder"
       },
       {
         "number": "7",
@@ -1011,7 +1023,7 @@
         "year": "JR",
         "goals": null,
         "assists": null,
-        "role": "Forward; name order unconfirmed"
+        "role": "Forward"
       },
       {
         "number": "12",
@@ -1091,31 +1103,41 @@
         "year": "JR",
         "goals": null,
         "assists": null,
-        "role": "Defender; spelling as supplied"
+        "role": "Defender; Geaspm spelling follows official PDF"
       }
     ],
     "approach": [
-      "Proposed: use our 3–1 win as the primary preparation reference. Identify how we broke through a team that otherwise conceded very little.",
-      "Review the narrow Notre Dame loss and draws with North and Bay Port to distinguish chance creation from scoreline alone.",
-      "Use roster numbers for identification; do not presume starting roles or scoring leaders."
+      "Proposed: use our September 17 3–1 win as the primary reference for our 3-5-2. Tag the entries and combinations that created our goals and the actions behind their goal; preserve patterns only after checking current personnel.",
+      "A defensive record of nine shutouts favors patient preparation: rehearse changes of side, controlled entries and second-ball support, then use film to decide which actually exposes their shape. Scorelines alone cannot identify their block or pressing triggers.",
+      "Review the October 8 West De Pere win and October 1 Bay Port draw to identify current outlets, primary chance creators and restart takers. Avoid assigning marking based on supplied roster positions alone.",
+      "Prepare to attack while keeping cover against transitions. In recent five matches Preble conceded only three, but the 8–0 Lincoln result should not be treated as evidence of how they will play against us."
     ],
     "video": [
       {
-        "match": "Hortonville · September 17 · Hortonville 3–1",
-        "question": "Tag our three goals and Preble’s goal. Which entries and combinations can we reproduce?"
+        "match": "Hortonville · September 17 · Preble 1–3 · recap highlights",
+        "question": "Hudl provides a 47-second recap, not the full match. Use our team film to tag all four goals, their best chances, midfield outlets and the runs our back three had to pass on. Confirm venue from the match sheet.",
+        "url": "https://fan.hudl.com/usa/wi/green-bay/organization/7890/preble-high-school/team/138531/boys-varsity-soccer/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWI3ZjUwNDRjMzdiZDk4OTFjNGY2MTc%3D&ot=TEAM&oi=138531"
       },
       {
-        "match": "De Pere · September 8 · Preble 0–3",
-        "question": "How did De Pere get through? Compare those openings with our win."
+        "match": "West De Pere · October 8 · Preble 2–1",
+        "question": "Hudl lists the October 8, 2026 full-game broadcast. Identify scorers, buildup shape, transition outlets and defending on restarts. The broadcast listing is verified; tactical observations still need film review.",
+        "url": "https://fan.hudl.com/usa/wi/green-bay/organization/7890/preble-high-school/team/138531/boys-varsity-soccer/watch?b=QnJvYWRjYXN0NDIxODM5OQ%3D%3D"
       },
       {
-        "match": "Notre Dame 0–1; North 1–1; Bay Port 1–1",
-        "question": "Did Preble create clear chances? Identify transition threats, pressure and set-piece assignments."
+        "match": "Bay Port · October 1 · Preble 1–1",
+        "question": "Review Hudl’s October 1, 2026 broadcast. Identify who produced Preble’s goal and what restricted its other chances. Compare personnel and attacking patterns with the West De Pere match.",
+        "url": "https://fan.hudl.com/usa/wi/green-bay/organization/7890/preble-high-school/team/138531/boys-varsity-soccer/watch?b=QnJvYWRjYXN0NDIxODM3OQ%3D%3D"
       }
     ],
     "gaps": [
-      "Player production is unavailable; the report prioritizes reconciled match scores.",
-      "September 17 is designated away at Hortonville but the supplied venue says De Pere High School. Venue is unconfirmed."
+      "Official roster confirms 23 players, listed positions and grades. Current individual goals, assists and named goalkeeper totals remain unavailable; blank stat tables do not establish zero production. #3/99 name order follows the PDF column headers but should be confirmed on the match sheet.",
+      "FRCC overall table lists Preble at 9–3–3 while its own listed results through October 6 total 10–3–3. The October 8 West De Pere win brings the current ledger to 11–3–3. Bay Port’s published 5–7–3 omits its October 8 draw with Notre Dame; current ledger is 5–7–4.",
+      "WIAA schedule summary shows 10–3–4 while StatsPlus match results produce 11–3–3; use the reconciled 17-game ledger (46–12) here and resolve the individual game discrepancy before citing the WIAA aggregate.",
+      "September 17 supplied venue says De Pere High School despite the opponent/home-away designation. Venue remains unconfirmed; preserve the verified 3–1 result.",
+      "Hudl lists current 2026 broadcasts, including October 8 West De Pere and October 1 Bay Port, plus a 47-second September 17 Hortonville recap. Playback and tactical content have not been reviewed; access requirements may vary by broadcast. No dedicated boys-team Instagram/Facebook account was verified. School social posts were not reviewed for lineup evidence.",
+      "The school links preblesoccer.com as its boys-team website, but the domain could not be resolved during this research. It is a historical lead, not a verified active source.",
+      "Formation, starter availability and set-piece assignments require recent film or a match sheet. October 24 versus Hortonville is conditional on both teams winning their regional openers.",
+      "Hudl displays a 7–3–3 team record, which is incomplete compared with the verified 11–3–3 match ledger through October 8. Keep the match ledger as the report’s record source."
     ],
     "matches": [
       {
@@ -1180,7 +1202,7 @@
       },
       {
         "date": "2026-09-19",
-        "opponent": "D.C. Everest",
+        "opponent": "DC Everest",
         "gf": 2,
         "ga": 1
       },
@@ -1207,36 +1229,533 @@
         "opponent": "Bay Port",
         "gf": 1,
         "ga": 1
-      }
-    ],
-    "upcoming": [
+      },
       {
         "date": "2026-10-06",
         "opponent": "Manitowoc Lincoln",
-        "detail": "Away · 6:30 PM CT"
+        "gf": 8,
+        "ga": 0
       },
       {
         "date": "2026-10-08",
         "opponent": "West De Pere",
-        "detail": "Home · 6:30 PM CT"
-      },
+        "gf": 2,
+        "ga": 1
+      }
+    ],
+    "upcoming": [
       {
         "date": "2026-10-10",
         "opponent": "Sturgeon Bay",
-        "detail": "Home · noon CT"
+        "detail": "Home · kickoff to confirm with school schedule"
       },
       {
         "date": "2026-10-15",
         "opponent": "Green Bay East",
-        "detail": "Home · 6:30 PM CT"
+        "detail": "Home · kickoff to confirm with school schedule"
+      },
+      {
+        "date": "2026-10-20",
+        "opponent": "Kimberly",
+        "detail": "Home · WIAA regional opener · #3 vs #6 · kickoff to confirm"
+      },
+      {
+        "date": "2026-10-24",
+        "opponent": "Hortonville or Bay Port",
+        "detail": "Regional final · only if Preble wins October 20; opponent must also advance"
       }
     ],
     "sources": [
       {
-        "label": "Bound schedule pasted by coach; results through October 1",
+        "label": "Official 2026 Preble varsity roster PDF · 23 players; names, grades and positions",
+        "url": "https://assets-rst7.rschooltoday.com/rst7files/uploads/sites/751/2026/08/29180641/Preble-Soccer-Roster-2026.pdf"
+      },
+      {
+        "label": "FRCC official standings and results PDF · labeled October 8, results through October 6",
+        "url": "https://assets-rst7.rschooltoday.com/rst7files/uploads/sites/751/2026/10/09031241/FRCC-Boys-Soccer-Standings-and-Results-2026-1.pdf"
+      },
+      {
+        "label": "Preble Hudl · current 2026 broadcasts, highlights and player profiles",
+        "url": "https://fan.hudl.com/usa/wi/green-bay/organization/7890/preble-high-school/team/138531/boys-varsity-soccer"
+      },
+      {
+        "label": "StatsPlus · team results and rating; refreshed October 9, results through October 8",
+        "url": "https://soccer.statsplus.net/rankings/team/50332/"
+      },
+      {
+        "label": "Bound · 2026–27 schedule; prior coach-supplied match results",
         "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/greenbaypr/v/schedule"
+      },
+      {
+        "label": "Bound · individual stats empty when checked October 9",
+        "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/greenbaypr/v/stats"
+      },
+      {
+        "label": "Bound · current roster has no named rows when checked October 9",
+        "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/greenbaypr/v/roster"
+      },
+      {
+        "label": "MaxPreps · current schedule; check season and reporting date",
+        "url": "https://www.maxpreps.com/wi/green-bay/green-bay-preble-hornets/soccer/schedule/"
+      },
+      {
+        "label": "MaxPreps · current individual leaders empty when checked October 9",
+        "url": "https://www.maxpreps.com/wi/green-bay/green-bay-preble-hornets/soccer/stats/"
+      },
+      {
+        "label": "WIAA school schedule · aggregate differs from reconciled StatsPlus record",
+        "url": "https://schools.wiaawi.org/Directory/Schedule/Index?TeamID=142696"
+      },
+      {
+        "label": "Preble official athletics teams · soccer coach Chris Becker and team-site lead",
+        "url": "https://preble.gbaps.org/athletics/athleticteams"
+      },
+      {
+        "label": "Preble official athletics calendar · venue and kickoff confirmation",
+        "url": "https://preble.gbaps.org/prebleevents"
+      },
+      {
+        "label": "Preble boys-team website · school-linked domain unavailable October 9",
+        "url": "https://www.preblesoccer.com"
+      },
+      {
+        "label": "Facebook · school-linked Preble account; general announcements",
+        "url": "https://www.facebook.com/greenbaypreble"
+      },
+      {
+        "label": "Instagram · school-linked Preble account; general announcements",
+        "url": "https://www.instagram.com/gbpreble/"
+      },
+      {
+        "label": "Bay Port Soccer video archive · Preble listings observed are older seasons",
+        "url": "https://www.youtube.com/@bayportsoccer/streams"
+      },
+      {
+        "label": "WIAA official Division 1 bracket · #3 Preble vs #6 Kimberly; potential regional final",
+        "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
       }
     ],
-    "playerSource": "Coach-supplied roster; individual statistics unavailable"
+    "playerSource": "Official 2026 Preble varsity roster supplied October 9; names follow the First and Last columns. Published individual production remains unavailable on Bound and MaxPreps",
+    "conferenceContext": "Published FRCC snapshot (document labeled October 8; results through October 6): 5–2–1, 11 points, goals 22–5. FRCC uses 2 points per win and 1 per tie. October 8 games are absent from this document; overall totals above use the newer reconciled ledger."
+  },
+  {
+    "slug": "bay-port",
+    "name": "Bay Port",
+    "logo": "/scouting/bay-port.gif",
+    "reportDate": "2026-10-09",
+    "resultsThrough": "2026-10-08",
+    "ratingsAsOf": "2026-10-09",
+    "matches": [
+      {
+        "date": "2026-08-25",
+        "opponent": "Wisconsin Rapids",
+        "gf": 6,
+        "ga": 3
+      },
+      {
+        "date": "2026-08-27",
+        "opponent": "Neenah",
+        "gf": 2,
+        "ga": 3
+      },
+      {
+        "date": "2026-08-28",
+        "opponent": "Appleton West",
+        "gf": 6,
+        "ga": 0
+      },
+      {
+        "date": "2026-09-03",
+        "opponent": "DC Everest",
+        "gf": 0,
+        "ga": 3
+      },
+      {
+        "date": "2026-09-10",
+        "opponent": "De Pere",
+        "gf": 0,
+        "ga": 5
+      },
+      {
+        "date": "2026-09-12",
+        "opponent": "Hortonville",
+        "gf": 0,
+        "ga": 6
+      },
+      {
+        "date": "2026-09-15",
+        "opponent": "West De Pere",
+        "gf": 2,
+        "ga": 1
+      },
+      {
+        "date": "2026-09-17",
+        "opponent": "Wausau West",
+        "gf": 2,
+        "ga": 2
+      },
+      {
+        "date": "2026-09-19",
+        "opponent": "Kimberly",
+        "gf": 0,
+        "ga": 0
+      },
+      {
+        "date": "2026-09-22",
+        "opponent": "Pulaski",
+        "gf": 2,
+        "ga": 4
+      },
+      {
+        "date": "2026-09-24",
+        "opponent": "Green Bay Southwest",
+        "gf": 2,
+        "ga": 0
+      },
+      {
+        "date": "2026-09-26",
+        "opponent": "Wauwatosa East",
+        "gf": 2,
+        "ga": 5
+      },
+      {
+        "date": "2026-09-29",
+        "opponent": "Ashwaubenon",
+        "gf": 8,
+        "ga": 1
+      },
+      {
+        "date": "2026-10-01",
+        "opponent": "Green Bay Preble",
+        "gf": 1,
+        "ga": 1
+      },
+      {
+        "date": "2026-10-06",
+        "opponent": "Sheboygan North",
+        "gf": 1,
+        "ga": 3
+      },
+      {
+        "date": "2026-10-08",
+        "opponent": "Notre Dame",
+        "gf": 0,
+        "ga": 0
+      }
+    ],
+    "record": {
+      "w": 5,
+      "l": 7,
+      "d": 4,
+      "gf": 34,
+      "ga": 37
+    },
+    "rating": 1676.85,
+    "sos": 1718.82,
+    "rank": 74,
+    "upcoming": [
+      {
+        "date": "2026-10-09",
+        "opponent": "Sheboygan Christian/Lutheran",
+        "detail": "Away · kickoff to confirm with school schedule"
+      },
+      {
+        "date": "2026-10-13",
+        "opponent": "Sun Prairie East",
+        "detail": "Home · kickoff to confirm with school schedule"
+      },
+      {
+        "date": "2026-10-15",
+        "opponent": "Manitowoc Lincoln",
+        "detail": "Away · kickoff to confirm with school schedule"
+      },
+      {
+        "date": "2026-10-20",
+        "opponent": "Hortonville",
+        "detail": "Away · WIAA regional opener · #7 at #2 · kickoff to confirm"
+      }
+    ],
+    "assessment": "Our October 20 regional opponent: #7 Bay Port visits #2 Hortonville. Through October 8 they are 5–7–4, goals 34–37, with four shutouts. Wettstein (15), Volmert (10) and Belanger (5) account for 30 of 34 goals (88%). Hortonville won 6–0 on September 12, but subsequent draws with Kimberly, Preble and Notre Dame show they can keep strong opponents close. Last five: 1–2–2, goals 12–10. Scorelines do not establish their formation or pressure scheme.",
+    "players": [
+      {
+        "number": "1",
+        "name": "Jackson Schuh",
+        "year": "SR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed GK"
+      },
+      {
+        "number": "2",
+        "name": "Owen Wettstein",
+        "year": "FR",
+        "goals": 0,
+        "assists": 1,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "3",
+        "name": "Maverick Novacheck",
+        "year": "SO",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "4",
+        "name": "Denver Amtmann",
+        "year": "JR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed D"
+      },
+      {
+        "number": "5",
+        "name": "Noah Kroll",
+        "year": "JR",
+        "goals": 1,
+        "assists": 4,
+        "role": "Bound listed F"
+      },
+      {
+        "number": "6",
+        "name": "Joseph Wroblewski",
+        "year": "SR",
+        "goals": 0,
+        "assists": 1,
+        "role": "Bound listed D"
+      },
+      {
+        "number": "7",
+        "name": "Ryan Hess",
+        "year": "JR",
+        "goals": 0,
+        "assists": 1,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "8",
+        "name": "Jaxon Swette",
+        "year": "JR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "9",
+        "name": "Fernando Maceda-Vera",
+        "year": "SR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "10",
+        "name": "Nicholas Button",
+        "year": "SR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed D"
+      },
+      {
+        "number": "11",
+        "name": "Cole Belanger",
+        "year": "SR",
+        "goals": 5,
+        "assists": 0,
+        "role": "Bound listed W"
+      },
+      {
+        "number": "12",
+        "name": "Raffaele Guillaume",
+        "year": "SR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed D"
+      },
+      {
+        "number": "13",
+        "name": "Landon Wilcott",
+        "year": "SR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "14",
+        "name": "Aiden Rusboldt",
+        "year": "SO",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed D"
+      },
+      {
+        "number": "15",
+        "name": "Luke Cornette",
+        "year": "FR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed D"
+      },
+      {
+        "number": "16",
+        "name": "Grayson Lambert",
+        "year": "JR",
+        "goals": 0,
+        "assists": 1,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "17",
+        "name": "Elijah Wettstein",
+        "year": "JR",
+        "goals": 15,
+        "assists": 5,
+        "role": "Bound listed MF; captain. NCSA self-description: attacking midfield; verify match role"
+      },
+      {
+        "number": "19",
+        "name": "Grady Volmert",
+        "year": "SR",
+        "goals": 10,
+        "assists": 4,
+        "role": "Bound listed F / GK; captain. Confirm deployment; no keeper totals published"
+      },
+      {
+        "number": "20",
+        "name": "Conor Duff",
+        "year": "SR",
+        "goals": 1,
+        "assists": 4,
+        "role": "Bound listed D; captain"
+      },
+      {
+        "number": "21",
+        "name": "Tyler Roberts",
+        "year": "SR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed D"
+      },
+      {
+        "number": "22",
+        "name": "Wyatt Seuser",
+        "year": "JR",
+        "goals": 0,
+        "assists": 1,
+        "role": "Bound listed F"
+      },
+      {
+        "number": "23",
+        "name": "Lucas Asibinac",
+        "year": "SR",
+        "goals": 2,
+        "assists": 0,
+        "role": "Bound listed MF"
+      },
+      {
+        "number": "24",
+        "name": "Teigan Wasilewski",
+        "year": "SR",
+        "goals": 0,
+        "assists": 0,
+        "role": "Bound listed D"
+      }
+    ],
+    "playerSource": "Bound 2026–27 varsity roster and season totals checked October 9: 34 goals and 22 assists. All player goals reconcile with the 34 team goals through October 8; individual reporting spans up to 14 appearances, so current minutes and lineup still need confirmation",
+    "approach": [
+      "Proposed for our 3-5-2: locate #17 Elijah Wettstein between lines and track #19 Grady Volmert’s runs without pulling a center back out and leaving the next runner uncovered. Use the outside center back, wingback and midfield screen together; choose assignments only after checking film.",
+      "Treat #11 Cole Belanger as a third scoring threat. #5 Noah Kroll and #20 Conor Duff each have four recorded assists; identify whether their supply is open-play service, set pieces or another pattern before planning pressure.",
+      "Start with our September 12 full match. Tag which entries produced the six goals and which Bay Port attacks required intervention. Then compare October 8 against Notre Dame to see what personnel, spacing or defensive behavior changed.",
+      "Prepare both attacking and defending restarts. Wettstein’s self-posted recruiting profile includes a free-kick clip, but it does not prove that he takes every current restart. Confirm takers and targets from recent varsity film.",
+      "Keep cover behind attacks and rehearse a level-score scenario. Four draws and the recent 0–0 against Notre Dame justify preparing for a close game; the earlier 6–0 does not determine the rematch."
+    ],
+    "video": [
+      {
+        "match": "Hortonville · September 12 · Bay Port 0–6",
+        "question": "Tag all six goals, Bay Port’s best chances and our pressure triggers. Compare their starting personnel and rest defense with the most recent film.",
+        "url": "https://www.youtube.com/watch?v=a4KXkH5HIog"
+      },
+      {
+        "match": "Notre Dame · October 8 · Bay Port 0–0",
+        "question": "Identify their current shape, keeper, #17/#19/#11 roles, counterattacking outlets and restart assignments. How did they limit Notre Dame?",
+        "url": "https://www.youtube.com/watch?v=LV-A-67ir7w"
+      },
+      {
+        "match": "Sheboygan North · October 6 · Bay Port 1–3",
+        "question": "Tag each conceded goal and Bay Port’s goal. Look for repeated openings, pressure escape routes and whether the leading scorers rotate positions.",
+        "url": "https://www.youtube.com/watch?v=b-nzVj2NIdA"
+      }
+    ],
+    "gaps": [
+      "No formation, starting lineup, availability or tactical film observations have been verified. The linked videos are confirmed varsity recording listings; recommendations remain questions for review.",
+      "Bound shows zero shots and shots on goal despite 34 goals; omit conversion and shooting-efficiency claims. Goalkeeping is an empty team placeholder: zero minutes/saves is missing coverage, not a real performance total.",
+      "MaxPreps current roster is empty and current stats have no individual leaders. Search-engine copies sometimes show 2025–26; 2025 PDFs, Woodlens Frederic and other graduated players are excluded from the current roster.",
+      "No dedicated current boys-team Instagram or Facebook account was verified. School-linked district accounts are included for announcements, not tactical evidence. Social post details have not been independently checked.",
+      "The October 9 Sheboygan Christian/Lutheran result is not in this snapshot. Confirm kickoff and field for October 20 with WIAA/Hortonville; no time is assumed."
+    ],
+    "sources": [
+      {
+        "label": "FRCC official standings and results PDF · labeled October 8, results through October 6",
+        "url": "https://assets-rst7.rschooltoday.com/rst7files/uploads/sites/751/2026/10/09031241/FRCC-Boys-Soccer-Standings-and-Results-2026-1.pdf"
+      },
+      {
+        "label": "StatsPlus · team results and rating; refreshed October 9, results through October 8",
+        "url": "https://soccer.statsplus.net/rankings/team/50319/"
+      },
+      {
+        "label": "Bound · 2026–27 season individual stats; checked October 9",
+        "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/bayport/v/stats"
+      },
+      {
+        "label": "Bound · current varsity roster and listed positions",
+        "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/bayport/v/roster"
+      },
+      {
+        "label": "Bound · schedule and match box scores",
+        "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/bayport/v/schedule"
+      },
+      {
+        "label": "MaxPreps · schedule; confirm selected season and reconcile missing results",
+        "url": "https://www.maxpreps.com/wi/green-bay/bay-port-pirates/soccer/schedule/"
+      },
+      {
+        "label": "MaxPreps · current individual stats empty when checked October 9",
+        "url": "https://www.maxpreps.com/wi/green-bay/bay-port-pirates/soccer/stats/"
+      },
+      {
+        "label": "Bay Port official school · soccer coach Ryan Deprey",
+        "url": "https://bayport.hssdschools.org/athletics/teams-and-coaches"
+      },
+      {
+        "label": "Bay Port official school · soccer streaming channel link",
+        "url": "https://bayport.hssdschools.org/athletics/live-streaming"
+      },
+      {
+        "label": "Bay Port Soccer YouTube · varsity and JV archive; check title and season",
+        "url": "https://www.youtube.com/@bayportsoccer/streams"
+      },
+      {
+        "label": "Pirate Sports Central · school-linked athletics records and rosters",
+        "url": "https://site.rocketalumnisolutions.com/home/68254f8f27e9a8487445ed82"
+      },
+      {
+        "label": "Elijah Wettstein NCSA · self-reported role and free-kick highlight; not a team stat source",
+        "url": "https://www.ncsasports.org/mens-soccer-recruiting/wisconsin/green-bay/bay-port-high-school/elijah-wettstein"
+      },
+      {
+        "label": "Facebook · school-linked Howard-Suamico district account; general announcements",
+        "url": "https://www.facebook.com/HowardSuamicoSchools"
+      },
+      {
+        "label": "Instagram · school-linked Howard-Suamico district account; general announcements",
+        "url": "https://www.instagram.com/howardsuamicoschools/"
+      },
+      {
+        "label": "WIAA official Division 1 Sectionals 1 & 2 bracket",
+        "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
+      }
+    ],
+    "conferenceContext": "Published FRCC snapshot (document labeled October 8; results through October 6): 3–3–1, 7 points, goals 16–15. FRCC uses 2 points per win and 1 per tie. October 8 games are absent from this document; overall totals above use the newer reconciled ledger."
   }
 ]
