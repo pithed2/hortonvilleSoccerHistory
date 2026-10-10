@@ -1,3 +1,5 @@
+import "server-only"
+
 import { createHash, createHmac, randomBytes, timingSafeEqual } from "node:crypto"
 
 export const COACH_COOKIE = "hortonville-coach-access"

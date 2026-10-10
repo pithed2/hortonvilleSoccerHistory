@@ -60,3 +60,13 @@ __pycache__/
 /scripts/inventory-recruiting.py
 # Playwright CLI output (may contain credentials)
 .playwright-cli/
+
+# Private key material and local certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.keystore
+*.jks
