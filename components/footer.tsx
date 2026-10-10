@@ -10,7 +10,7 @@ export function Footer() {
           <img src="/logos/modern-bear-logo-white-fill.png" alt="Hortonville Boys Soccer logo" className="h-12 w-12 object-contain" />
           <div>
             <h3 className="font-black text-lg">Hortonville Boys Soccer</h3>
-            <p className="text-sm text-background/80">Current teams, schedules, results, statistics, and the archive of the program that came before.</p>
+            <p className="text-sm text-background/80">Independent community website with team information and program history. Not an official school or district website.</p>
           </div>
         </div>
 
@@ -82,18 +82,18 @@ export function Footer() {
             <p className="mt-4 text-sm leading-relaxed text-background/70">Current news, match-day updates, photos, and program announcements.</p>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-sm">Contact</h4>
+            <h4 className="font-semibold mb-4 text-sm">Contact</h4><p className="mb-3 text-sm text-background/80">Site operator: Andrew Montalbano<br />Hortonville, WI 54944</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:AndrewMMontalbano@gmail.com"
+                  href="mailto:andrewmmontalbano@gmail.com"
                   className="text-background/80 hover:text-background transition"
                 >
-                  AndrewMMontalbano@gmail.com
+                  andrewmmontalbano@gmail.com
                 </a>
               </li>
               <li>
-                <a href="mailto:AndrewMMontalbano@gmail.com?subject=Contributing%20to%20the%20archive" className="text-background hover:text-background/80 transition font-semibold">
+                <a href="mailto:andrewmmontalbano@gmail.com?subject=Contributing%20to%20the%20archive" className="text-background hover:text-background/80 transition font-semibold">
                   Contribute
                 </a>
               </li>
@@ -110,8 +110,11 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-background/20 pt-8">
+          <nav aria-label="Policies and contact" className="mb-5 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm underline underline-offset-4">
+            <a href="/privacy">Privacy Policy</a><a href="/terms">Terms and Conditions</a><a href="/cookies">Cookie Policy</a><a href="/accessibility">Accessibility</a><a href="/contact">Contact and corrections</a>
+          </nav>
           <p className="text-center text-sm text-background/70">
-            Copyright {currentYear} Hortonville Boys Soccer. Built for the program and its community.
+            © {currentYear} Site content; third-party materials belong to their respective owners.
           </p>
         </div>
       </div>

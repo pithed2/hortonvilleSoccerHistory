@@ -50,8 +50,7 @@ function SquadCard({ name, roster, href }: { name: string; roster: RosterPlayer[
 }
 
 export default function JvBlackGrayPage() {
-  return <main id="main-content" className="min-h-screen bg-background">
-    <Navigation />
+  return <><Navigation /><main id="main-content" className="min-h-screen bg-background">
     <header className="page-header"><div className="site-container"><Link href="/jv" className="text-sm font-semibold">Back to all JV teams</Link><p className="page-eyebrow mt-5">Hortonville Boys Soccer · 2026</p><h1 className="page-title">JV Black &amp; Gray</h1><p className="page-description">Follow Coach Seth’s JV Black and JV Gray teams throughout the season.</p></div></header>
     <div className="site-container space-y-6 py-10">
       <p className="text-sm leading-6 text-muted-foreground">{JV_CONFERENCE_NOTE}</p>
@@ -61,6 +60,5 @@ export default function JvBlackGrayPage() {
       </div>
       <JvCalendar teams={["JV Black", "JV Gray"]} />
     </div>
-    <Footer />
-  </main>
+    </main><Footer /></>
 }

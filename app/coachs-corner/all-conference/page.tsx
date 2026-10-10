@@ -24,7 +24,7 @@ export default async function AllConferencePage() {
   const conferenceOpponents = new Set(["Oshkosh North", "Appleton East", "Fond du Lac"])
   const withoutRoman = boxscoreGamesBySeason(2026).filter(game => missedOpponents.includes(game.opponent)).map(game => ({ ...game, noah: game.players.find(player => player.player_name === "Noah Rindt") }))
   const totals = withoutRoman.reduce((sum, game) => ({ goals: sum.goals + (game.noah?.goals ?? 0), assists: sum.assists + (game.noah?.assists ?? 0), points: sum.points + (game.noah?.points ?? 0) }), { goals: 0, assists: 0, points: 0 })
-  return <><Navigation /><main className="min-h-screen bg-[#f7f7f5] pb-16">
+  return <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f7f7f5] pb-16">
     <header className="bg-neutral-950 text-white"><div className="site-container py-10">
       <Link href="/coachs-corner" className="text-sm text-white/75">← Coach’s Corner</Link>
       <p className="mt-8 text-xs font-bold uppercase tracking-widest text-red-400">2026 · Selection preparation</p>

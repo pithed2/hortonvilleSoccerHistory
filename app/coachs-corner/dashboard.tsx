@@ -33,7 +33,7 @@ export function CoachDashboard({ data, today }: { data: Data; today: string }) {
   function switchGroup(value: string) { setGroup(value); const first = data.overall.find(row => row.Group === value); if (first) setTeam(first.Team) }
 
   return (
-    <main className="min-h-screen bg-[#f7f7f5]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f7f7f5]">
       <header className="border-b bg-neutral-950 text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6">
           <div><p className="text-xs font-bold uppercase tracking-[0.22em] text-red-400">Hortonville Boys Soccer · 2026</p><h1 className="mt-1 text-2xl font-bold">Coach’s Corner</h1></div>

@@ -13,8 +13,7 @@ export default async function StatsPage() {
   const [overview, rows] = await Promise.all([programOverview(), seasonRows()])
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
+    <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
 
       <PageHeader eyebrow="Program records" title="Season Statistics" description="The complete documented record of Hortonville boys varsity soccer." />
 
@@ -61,7 +60,6 @@ export default async function StatsPage() {
         </div>
       </ContentContainer>
 
-      <Footer />
-    </main>
+      </main><Footer /></>
   )
 }

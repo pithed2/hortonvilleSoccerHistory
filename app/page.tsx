@@ -11,8 +11,7 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
+    <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
       <Hero />
       <TeamSelector />
       <ConferenceChampionshipHighlight />
@@ -21,7 +20,6 @@ export default function Home() {
       <HistoryPreview />
       <StatsSection />
       <ImportantLinks />
-      <Footer />
-    </main>
+      </main><Footer /></>
   )
 }

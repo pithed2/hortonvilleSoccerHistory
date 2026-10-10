@@ -14,8 +14,7 @@ export default async function SeasonsPage() {
   const firstYear = seasons.at(-1)?.season_year;
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
+    <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
 
       <PageHeader eyebrow="Program archive" title="Seasons" description="Explore every documented varsity season, from schedules and results to rosters, player statistics, and box scores.">
         <span>{seasons.length} seasons</span>
@@ -87,7 +86,6 @@ export default async function SeasonsPage() {
           ))}
         </div>
       </ContentContainer>
-      <Footer />
-    </main>
+      </main><Footer /></>
   );
 }

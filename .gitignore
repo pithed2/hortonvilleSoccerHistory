@@ -58,3 +58,5 @@ __pycache__/
 /outputs/recruiting-blueprint/
 /output/repo-cleanup-plan.json
 /scripts/inventory-recruiting.py
+# Playwright CLI output (may contain credentials)
+.playwright-cli/

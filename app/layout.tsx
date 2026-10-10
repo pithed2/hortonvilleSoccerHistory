@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 /* Updated to use Poppins per HASD brand guide */
@@ -36,7 +35,6 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
-        <Analytics />
       </body>
     </html>
   )

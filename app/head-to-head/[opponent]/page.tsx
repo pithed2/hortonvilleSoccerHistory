@@ -22,7 +22,7 @@ export default async function OpponentPage({ params }: Props) {
   const losses = games.filter((game) => game.result === "L").length;
   const ties = games.filter((game) => game.result === "T" || game.result === "D").length;
   const cell = "border-b px-3 py-2 text-left";
-  return <main className="min-h-screen bg-background"><Navigation />
+  return <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
     <section className="mx-auto max-w-6xl space-y-6 px-4 py-12 sm:px-6 lg:px-8"><div>
       <Link href="/head-to-head" className="text-sm text-muted-foreground underline">← All opponents</Link>
       <h1 className="mt-4 text-3xl font-black md:text-4xl">Hortonville vs. {opponent}</h1>
@@ -36,6 +36,5 @@ export default async function OpponentPage({ params }: Props) {
         <td className={cell}>{game.result || ""}</td><td className={cell}>{game.score || ""}</td>
         <td className={cell}>{game.notes || ""}{boxscores.has(`${game.season_year}-${game.gameNumber}`) && <Link className="ml-2 whitespace-nowrap font-semibold text-primary underline decoration-dotted" href={`/seasons/${game.season_year}#game-${game.gameNumber}`}>Box score</Link>}</td>
       </tr>)}</tbody>
-    </table></div></section><Footer />
-  </main>;
+    </table></div></section></main><Footer /></>;
 }

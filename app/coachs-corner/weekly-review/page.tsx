@@ -21,7 +21,7 @@ export default async function WeeklyReviewPage({ searchParams }: { searchParams:
   const review = version ? getWeeklyReview(version) : weeklyReviews[0]
   if (!review) notFound()
 
-  return <><Navigation /><main className="min-h-screen bg-[#f7f7f5] pb-16">
+  return <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f7f7f5] pb-16">
     <header className="bg-neutral-950 text-white">
       <div className="site-container py-10 sm:py-14">
         <Link href="/coachs-corner" className="inline-flex items-center gap-2 text-sm font-semibold text-white/75 hover:text-white"><ArrowLeft className="size-4" />Coach’s Corner</Link>

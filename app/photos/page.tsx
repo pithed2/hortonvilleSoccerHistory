@@ -4,10 +4,8 @@ import { Footer } from "@/components/footer"
 
 export default function PhotosPage() {
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
+    <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
       <PhotoGallery />
-      <Footer />
-    </main>
+      </main><Footer /></>
   )
 }

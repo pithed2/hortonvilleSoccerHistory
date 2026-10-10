@@ -125,7 +125,7 @@
   body {
     @apply bg-background text-foreground;
   }
-  :where(a[href], button, summary, [tabindex]):focus-visible {
+  :where(a[href], button, input, select, textarea, summary, [tabindex]):focus-visible {
     outline: 3px solid var(--ring);
     outline-offset: 3px;
     box-shadow: 0 0 0 2px var(--background);
@@ -170,4 +170,10 @@
   .empty-state { @apply flex min-h-48 flex-col items-center justify-center rounded-2xl border border-dashed bg-muted/20 px-6 py-10 text-center; }
   .empty-state-icon { @apply mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary; }
   .empty-state-icon svg { @apply size-6; }
+}
+
+[id] { scroll-margin-top: 5rem; }
+.page-header .page-eyebrow { color: #ff8299; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }

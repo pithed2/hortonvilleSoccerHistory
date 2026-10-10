@@ -6,8 +6,7 @@ import { ArrowRight, GraduationCap } from "lucide-react"
 
 export default function CoachesPage() {
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
+    <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
       <CoachesSection />
       <section aria-labelledby="recruiting-title" className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8">
@@ -17,7 +16,6 @@ export default function CoachesPage() {
           <Link href="/recruiting" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-lg bg-primary px-5 py-3 font-bold text-primary-foreground">Explore college recruiting <ArrowRight className="size-4" aria-hidden="true" /></Link>
         </div>
       </section>
-      <Footer />
-    </main>
+      </main><Footer /></>
   )
 }

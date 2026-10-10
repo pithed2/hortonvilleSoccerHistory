@@ -32,7 +32,7 @@ function LeaderTable({
         <div className="flex items-center gap-3"><Medal className="h-5 w-5 text-primary" /><h2 className="text-2xl font-black">{title}</h2></div>
         {note ? <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{note}</p> : null}
       </div>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label={`${title} statistics table`} className="overflow-x-auto">
         <table className="archive-table min-w-[560px]">
           <caption className="sr-only">Top ten Hortonville players ranked by career {title.toLowerCase()}</caption>
           <thead className="bg-muted/60">
@@ -63,8 +63,7 @@ export default function LeadersPage() {
   const leaders = allTimePlayerLeaders()
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
+    <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
 
       <PageHeader eyebrow="Player records" title="All-Time Leaders" description="Compiled from available Hortonville boys soccer player stats, 2007-present."><Link href="/stats" className="underline decoration-white/50 underline-offset-4 hover:decoration-white">Back to program statistics</Link></PageHeader>
 
@@ -75,8 +74,7 @@ export default function LeadersPage() {
         <LeaderTable title="Saves" rows={topBy(leaders, "saves")} statKey="saves" />
       </ContentContainer>
 
-      <Footer />
-    </main>
+      </main><Footer /></>
   )
 }
 

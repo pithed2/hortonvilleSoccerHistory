@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default async function SeedingArchivePage() {
   if (!validCoachCookie((await cookies()).get(COACH_COOKIE)?.value)) return <><Navigation /><CoachLogin /></>
-  return <><Navigation /><main className="min-h-screen bg-[#f7f7f5] pb-16">
+  return <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f7f7f5] pb-16">
     <header className="bg-neutral-950 text-white"><div className="site-container py-10">
       <Link href="/coachs-corner" className="text-sm text-white/75">← Coach’s Corner</Link>
       <h1 className="mt-8 text-4xl font-black">2026 Seeding Archive</h1>

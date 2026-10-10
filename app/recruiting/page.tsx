@@ -29,7 +29,7 @@ export default function RecruitingPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+      <main id="main-content" tabIndex={-1} className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
         <p className="text-sm font-bold uppercase tracking-widest text-primary">HHS players and families</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">College soccer. Start with the school.</h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">You don&apos;t have to figure out recruiting on your own. This guide is for boys and their parents who want to explore playing college soccer. Use it to find a school you&apos;d want to attend, understand the soccer options and work through the recruiting process.</p>

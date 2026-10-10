@@ -46,8 +46,7 @@ function getCollectiveStats() {
 
 export default function JvLandingPage() {
   const collective = getCollectiveStats()
-  return <main id="main-content" className="min-h-screen bg-background">
-    <Navigation />
+  return <><Navigation /><main id="main-content" className="min-h-screen bg-background">
     <header className="page-header"><div className="page-header-decoration" aria-hidden="true" /><div className="site-container relative"><p className="page-eyebrow">Hortonville Boys Soccer · 2026</p><h1 className="page-title">Junior Varsity Teams</h1><p className="page-description">Choose a team to follow its schedule, results, statistics, and season story. More team pages will come online as their information is prepared.</p><div className="page-header-meta"><span className="flex items-center gap-2"><Users className="size-4 text-primary" /> Three JV team groups</span><span className="flex items-center gap-2"><Trophy className="size-4 text-primary" /> One program</span></div>
       <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-5">
         <HeaderStat label="Overall" value={collective.overall} />
@@ -73,6 +72,5 @@ export default function JvLandingPage() {
       ))}</div>
     </section>
     <JvMatchCenter />
-    <Footer />
-  </main>
+    </main><Footer /></>
 }

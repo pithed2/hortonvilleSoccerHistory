@@ -33,7 +33,7 @@ export function HistoryPreview() {
       <div className="site-container relative">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="section-eyebrow">Our history</p>
+            <p className="section-eyebrow !text-[#ff8299]">Our history</p>
             <h2 id="history-preview-title" className="section-title">Built one generation at a time</h2>
             <p className="mt-4 text-base leading-7 text-white/65 sm:text-lg">From the program’s earliest pickup games to conference championships and today’s teams, every season adds to the story.</p>
             <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-bold text-white/70">
@@ -52,7 +52,7 @@ export function HistoryPreview() {
             <li key={milestone.year} className="surface-card-dark relative p-6">
               {index < milestones.length - 1 ? <span className="absolute left-[calc(100%+1px)] top-9 hidden h-px w-4 bg-primary/50 lg:block" aria-hidden="true" /> : null}
               <div className="flex items-center justify-between gap-4">
-                <span className="text-sm font-black uppercase tracking-[0.16em] text-primary">{milestone.year}</span>
+                <span className="text-sm font-black uppercase tracking-[0.16em] text-[#ff8299]">{milestone.year}</span>
                 <Image src={milestone.logo} alt={milestone.logoAlt} width={44} height={44} className="size-11 object-contain" />
               </div>
               <h3 className="mt-6 text-xl font-black">{milestone.title}</h3>

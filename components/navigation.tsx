@@ -44,6 +44,7 @@ const navGroups = [
 export function Navigation() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const [openGroup, setOpenGroup] = useState<string | null>(null)
 
   function isActive(href: string) {
     return pathname === href || pathname.startsWith(`${href}/`)
@@ -67,11 +68,11 @@ export function Navigation() {
               {navGroups.map((group) => {
                 const active = groupIsActive(group.links)
                 return (
-                  <div key={group.label} className="group relative">
-                    <button type="button" className={`flex min-h-11 items-center gap-1 rounded-lg px-3 text-sm font-bold transition-colors ${active ? "bg-white/15 text-white" : "text-white/85 hover:bg-white/10 hover:text-white"}`} aria-haspopup="true">
+                  <div key={group.label} className="group relative" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpenGroup(null) }} onKeyDown={(event) => { if (event.key === "Escape") { setOpenGroup(null); event.currentTarget.querySelector("button")?.focus() } }}>
+                    <button type="button" onClick={() => setOpenGroup(openGroup === group.label ? null : group.label)} aria-expanded={openGroup === group.label} aria-controls={`nav-${group.label.toLowerCase()}`} className={`flex min-h-11 items-center gap-1 rounded-lg px-3 text-sm font-bold transition-colors ${active ? "bg-white/15 text-white" : "text-white/85 hover:bg-white/10 hover:text-white"}`}>
                       {group.label}<ChevronDown className="size-4 transition-transform group-focus-within:rotate-180 group-hover:rotate-180" aria-hidden="true" />
                     </button>
-                    <div className="invisible absolute left-0 top-full w-56 translate-y-1 pt-2 opacity-0 transition group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                    <div id={`nav-${group.label.toLowerCase()}`} hidden={openGroup !== group.label} className="absolute left-0 top-full w-56 pt-2">
                       <div className="rounded-xl border border-black/10 bg-white p-2 text-foreground shadow-xl">
                         {group.links.map((link) => (
                           <Link key={link.href} href={link.href} className={`block rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${isActive(link.href) ? "bg-primary/10 text-primary" : "hover:bg-muted"}`} aria-current={isActive(link.href) ? "page" : undefined}>
@@ -106,7 +107,7 @@ export function Navigation() {
             <div className="grid gap-4 sm:grid-cols-2">
               {navGroups.map((group) => (
                 <div key={group.label}>
-                  <p className="px-3 pb-1 text-xs font-black uppercase tracking-[0.16em] text-white/55">{group.label}</p>
+                  <p className="px-3 pb-1 text-xs font-black uppercase tracking-[0.16em] text-white/75">{group.label}</p>
                   {group.links.map((link) => (
                     <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)} className={`block rounded-lg border-l-4 px-3 py-2.5 text-sm font-semibold transition-colors ${isActive(link.href) ? "border-white bg-white/15 text-white" : "border-transparent text-white/85 hover:bg-white/10 hover:text-white"}`} aria-current={isActive(link.href) ? "page" : undefined}>
                       {link.label}

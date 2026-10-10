@@ -1,0 +1,245 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/terms",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/cookies",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/accessibility",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/photos",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/coachs-corner",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/recruiting/best-fit.html",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/red/red-room",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/history",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/fields",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/coaches",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/coaching-records",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/seasons",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/seasons/2026",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/stats",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/stats/leaders",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/stats/records",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/head-to-head",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/red",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/white",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/black",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/gray",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/black-gray",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/recruiting",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/player-cards",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/ (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/privacy (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/seasons/2026 (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/stats (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/stats/leaders (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/head-to-head (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/red (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/white (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/black (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/jv/gray (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    },
+    {
+      "route": "/recruiting/best-fit.html (mobile)",
+      "status": 200,
+      "externalRequests": [],
+      "violations": []
+    }
+  ],
+  "keyboard": {
+    "skip": "Skip to main content",
+    "target": "main-content",
+    "opened": "true",
+    "closed": "false",
+    "mobileExpanded": "true"
+  }
+}

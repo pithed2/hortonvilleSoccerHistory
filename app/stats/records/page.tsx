@@ -43,11 +43,11 @@ function RecordCard({ record }: { record: VarsityRecord }) {
 
 export default async function RecordsPage() {
   const records = await varsityRecords()
-  return <main className="min-h-screen bg-background"><Navigation />
+  return <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
     <PageHeader eyebrow="Varsity record book" title="Single-Game & Season Records" description="Standout individual performances and team seasons from the documented Hortonville boys varsity archive."><div className="flex flex-wrap gap-4"><a href="#single-game" className="underline">Single-game records</a><a href="#season-records" className="underline">Season records</a><Link href="/stats/leaders" className="underline">Career leaders</Link></div></PageHeader>
     <ContentContainer className="space-y-12 py-12">
       <p className="rounded-xl border bg-muted/30 p-5 text-sm text-muted-foreground">Records reflect available varsity data and include all ties. Historical coverage varies; these are documented bests, not a guarantee of complete program history. Team assists and saves sum recorded player totals. Active seasons can set high records; the fewest-goals-conceded record requires a completed season with all listed games scored.</p>
       <section id="single-game" className="scroll-mt-24"><SectionHeading eyebrow="One match" title="Single-Game Records" description="Individual player records, with links to the match." /><div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{records.singleGame.map(record => <RecordCard key={record.title} record={record} />)}</div></section>
       <section id="season-records" className="scroll-mt-24"><SectionHeading eyebrow="One season" title="Season Records" description="Team and individual achievements across the varsity archive." /><div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{records.season.map(record => <RecordCard key={record.title} record={record} />)}</div></section>
-    </ContentContainer><Footer /></main>
+    </ContentContainer></main><Footer /></>
 }

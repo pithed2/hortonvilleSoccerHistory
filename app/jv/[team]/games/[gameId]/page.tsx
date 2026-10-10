@@ -26,8 +26,7 @@ export default async function JvGamePage({ params }: Props) {
   const team = getJvTeam(values.team)
   if (!game || !team) notFound()
 
-  return <main id="main-content" className="min-h-screen bg-background">
-    <Navigation />
+  return <><Navigation /><main id="main-content" className="min-h-screen bg-background">
     <header className="border-b bg-[#0b0d10] py-5 text-white"><div className="site-container flex flex-wrap items-center justify-between gap-3"><Link href={`/jv/${values.team}#schedule`} className="flex items-center gap-2 text-sm font-semibold text-white/65 hover:text-white"><ArrowLeft className="size-4" /> {team.stats.team} season</Link><div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[.12em] text-white/55"><ShieldCheck className="size-4 text-emerald-400" /> {game.scoringRecorded === false ? "Team score sheet" : "Verified box score"}</div></div></header>
 
     <div className="mx-auto max-w-6xl space-y-7 px-4 py-10 sm:px-6 lg:px-8">
@@ -46,8 +45,7 @@ export default async function JvGamePage({ params }: Props) {
       {game.notes?.length ? <aside className="rounded-2xl border bg-muted/30 p-5 text-sm text-muted-foreground">{game.notes.map(note => <p key={note} className="py-1">{note}</p>)}</aside> : null}
       <section className="surface-card p-5 sm:p-8"><p className="section-eyebrow">Hortonville</p><h2 className="text-2xl font-black">Player box score</h2><div className="mt-5 overflow-x-auto"><Table><TableHeader><TableRow><TableHead>Player</TableHead>{["G","A","SV","GK MIN"].map(label => <TableHead key={label} className="text-center">{label}</TableHead>)}</TableRow></TableHeader><TableBody>{game.players.map(player => <TableRow key={player.player}><TableCell className="font-semibold">{stripKey(player.player)}</TableCell>{[player.goals,player.assists,player.saves,player.gkMinutes].map((value,index) => <TableCell key={index} className={`text-center ${value ? "font-bold" : "text-muted-foreground/50"}`}>{value ?? "—"}</TableCell>)}</TableRow>)}</TableBody></Table></div></section>
     </div>
-    <Footer />
-  </main>
+    </main><Footer /></>
 }
 
 function Comparison({ label, home, away }: { label: string; home: number | string | null; away: number | string | null }) { return <div className="grid grid-cols-[1fr_1.5fr_1fr] items-center border-b px-4 py-3 last:border-0"><span className="text-center text-lg font-black">{home ?? "—"}</span><span className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">{label}</span><span className="text-center text-lg font-black text-muted-foreground">{away ?? "—"}</span></div> }

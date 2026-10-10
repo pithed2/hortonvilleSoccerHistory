@@ -34,8 +34,7 @@ export default async function CoachingRecordsPage() {
   const records = (await coachRecords()).sort((a, b) => coachOrder.indexOf(a.name) - coachOrder.indexOf(b.name))
   const totalSeasons = records.reduce((sum, coach) => sum + coach.seasons, 0)
 
-  return <main className="min-h-screen bg-background">
-    <Navigation />
+  return <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
     <PageHeader eyebrow="Program leadership" title="Coaching Records" description="The head coaches who built, guided, and sustained Hortonville boys soccer."><span>{records.length} head coaches</span><span>{totalSeasons} documented seasons</span></PageHeader>
 
     <ContentContainer className="py-12 md:py-14">
@@ -80,6 +79,5 @@ export default async function CoachingRecordsPage() {
         })}
       </div>
     </ContentContainer>
-    <Footer />
-  </main>
+    </main><Footer /></>
 }
