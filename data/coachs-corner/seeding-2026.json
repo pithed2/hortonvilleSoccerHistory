@@ -1,7 +1,7 @@
 {
   "source": "StatsPlus rankings and team schedules refreshed.",
   "season": 2026,
-  "generatedAt": "2026-10-09T18:08:38.525581+00:00",
+  "generatedAt": "2026-10-11T16:00:01.699868+00:00",
   "teams": [
     {
       "Team": "Chippewa Falls",
@@ -72,150 +72,150 @@
     {
       "Team": "Hudson",
       "Rating": 2049.86,
-      "SOS": 1682.64,
+      "SOS": 1688.3,
       "GP": 17,
       "W": 14,
       "L": 1,
       "T": 2,
       "GF": 80,
       "GA": 12,
-      "OverallRank": 3,
-      "D1Rank": 3
-    },
-    {
-      "Team": "De Pere",
-      "Rating": 2012.56,
-      "SOS": 1667.61,
-      "GP": 14,
-      "W": 13,
-      "L": 1,
-      "T": 0,
-      "GF": 71,
-      "GA": 7,
-      "OverallRank": 7,
-      "D1Rank": 6
+      "OverallRank": 2,
+      "D1Rank": 2
     },
     {
       "Team": "Hortonville",
-      "Rating": 1979.42,
-      "SOS": 1680.29,
-      "GP": 14,
-      "W": 12,
+      "Rating": 1983.26,
+      "SOS": 1684.13,
+      "GP": 15,
+      "W": 13,
       "L": 1,
       "T": 1,
-      "GF": 60,
-      "GA": 14,
+      "GF": 62,
+      "GA": 15,
       "OverallRank": 9,
       "D1Rank": 8
     },
     {
+      "Team": "De Pere",
+      "Rating": 1983.14,
+      "SOS": 1683.17,
+      "GP": 16,
+      "W": 14,
+      "L": 2,
+      "T": 0,
+      "GF": 76,
+      "GA": 9,
+      "OverallRank": 10,
+      "D1Rank": 9
+    },
+    {
       "Team": "Green Bay Preble",
       "Rating": 1825.3,
-      "SOS": 1680.44,
+      "SOS": 1680.06,
       "GP": 17,
       "W": 11,
       "L": 3,
       "T": 3,
       "GF": 46,
       "GA": 12,
-      "OverallRank": 31,
-      "D1Rank": 20
+      "OverallRank": 30,
+      "D1Rank": 21
     },
     {
       "Team": "Eau Claire Memorial",
       "Rating": 1815.37,
-      "SOS": 1745.61,
+      "SOS": 1750.86,
       "GP": 15,
       "W": 6,
       "L": 7,
       "T": 2,
       "GF": 43,
       "GA": 28,
-      "OverallRank": 35,
+      "OverallRank": 34,
       "D1Rank": 22
     },
     {
       "Team": "Appleton North",
-      "Rating": 1814.08,
-      "SOS": 1661.58,
-      "GP": 14,
+      "Rating": 1795.93,
+      "SOS": 1683.93,
+      "GP": 15,
       "W": 9,
-      "L": 3,
+      "L": 4,
       "T": 2,
       "GF": 43,
-      "GA": 19,
-      "OverallRank": 36,
-      "D1Rank": 23
+      "GA": 23,
+      "OverallRank": 39,
+      "D1Rank": 26
     },
     {
       "Team": "DC Everest",
-      "Rating": 1761.44,
-      "SOS": 1709.6,
-      "GP": 16,
+      "Rating": 1757.6,
+      "SOS": 1725.61,
+      "GP": 17,
       "W": 8,
-      "L": 7,
+      "L": 8,
       "T": 1,
-      "GF": 37,
-      "GA": 33,
-      "OverallRank": 48,
+      "GF": 38,
+      "GA": 35,
+      "OverallRank": 51,
       "D1Rank": 29
     },
     {
       "Team": "Wisconsin Rapids",
       "Rating": 1723.01,
-      "SOS": 1618.27,
+      "SOS": 1620.26,
       "GP": 12,
       "W": 7,
       "L": 3,
       "T": 2,
       "GF": 22,
       "GA": 14,
-      "OverallRank": 59,
-      "D1Rank": 30
+      "OverallRank": 61,
+      "D1Rank": 32
+    },
+    {
+      "Team": "Bay Port",
+      "Rating": 1704.64,
+      "SOS": 1724.22,
+      "GP": 17,
+      "W": 5,
+      "L": 7,
+      "T": 5,
+      "GF": 35,
+      "GA": 38,
+      "OverallRank": 66,
+      "D1Rank": 33
     },
     {
       "Team": "SPASH",
       "Rating": 1696.58,
-      "SOS": 1655.27,
+      "SOS": 1654.72,
       "GP": 14,
       "W": 8,
       "L": 5,
       "T": 1,
       "GF": 30,
       "GA": 19,
-      "OverallRank": 67,
-      "D1Rank": 34
+      "OverallRank": 68,
+      "D1Rank": 35
     },
     {
       "Team": "Superior",
       "Rating": 1686.34,
-      "SOS": 1523.64,
+      "SOS": 1523.1,
       "GP": 12,
       "W": 9,
       "L": 2,
       "T": 1,
       "GF": 41,
       "GA": 12,
-      "OverallRank": 72,
-      "D1Rank": 35
-    },
-    {
-      "Team": "Bay Port",
-      "Rating": 1676.85,
-      "SOS": 1718.82,
-      "GP": 16,
-      "W": 5,
-      "L": 7,
-      "T": 4,
-      "GF": 34,
-      "GA": 37,
-      "OverallRank": 74,
-      "D1Rank": 37
+      "OverallRank": 73,
+      "D1Rank": 36
     },
     {
       "Team": "Kimberly",
       "Rating": 1662.96,
-      "SOS": 1754.76,
+      "SOS": 1750.77,
       "GP": 16,
       "W": 5,
       "L": 8,
@@ -228,7 +228,7 @@
     {
       "Team": "Wausau West",
       "Rating": 1635.63,
-      "SOS": 1682.75,
+      "SOS": 1682.08,
       "GP": 14,
       "W": 4,
       "L": 7,
@@ -236,7 +236,7 @@
       "GF": 33,
       "GA": 36,
       "OverallRank": 94,
-      "D1Rank": 46
+      "D1Rank": 45
     },
     {
       "Team": "Chippewa Falls",
@@ -254,27 +254,27 @@
     {
       "Team": "Eau Claire North",
       "Rating": 1403.4,
-      "SOS": 1608.55,
+      "SOS": 1607.47,
       "GP": 14,
       "W": 4,
       "L": 10,
       "T": 0,
       "GF": 13,
       "GA": 46,
-      "OverallRank": 181,
+      "OverallRank": 182,
       "D1Rank": 58
     },
     {
       "Team": "Appleton West",
       "Rating": 1359.18,
-      "SOS": 1690.13,
+      "SOS": 1692,
       "GP": 16,
       "W": 0,
       "L": 15,
       "T": 1,
       "GF": 5,
       "GA": 79,
-      "OverallRank": 195,
+      "OverallRank": 194,
       "D1Rank": 59
     }
   ],
@@ -2744,8 +2744,8 @@
       "Team": "Appleton North",
       "Opponent": "De Pere",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "0-4",
       "Source": "https://soccer.statsplus.net/rankings/team/50315/",
       "SourceTeam": "Appleton North"
     },
@@ -2754,8 +2754,8 @@
       "Team": "Bay Port",
       "Opponent": "Sheboygan Christian/Lutheran",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "D",
+      "Score": "1-1",
       "Source": "https://soccer.statsplus.net/rankings/team/50319/",
       "SourceTeam": "Bay Port"
     },
@@ -2764,8 +2764,8 @@
       "Team": "De Pere",
       "Opponent": "Appleton North",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "4-0",
       "Source": "https://soccer.statsplus.net/rankings/team/50325/",
       "SourceTeam": "De Pere"
     },
@@ -2804,8 +2804,8 @@
       "Team": "DC Everest",
       "Opponent": "Hortonville",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "1-2",
       "Source": "https://soccer.statsplus.net/rankings/team/50324/",
       "SourceTeam": "DC Everest"
     },
@@ -2814,8 +2814,8 @@
       "Team": "De Pere",
       "Opponent": "Kenosha Tremper",
       "Location": "A",
-      "Result": null,
-      "Score": null,
+      "Result": "L",
+      "Score": "1-2",
       "Source": "https://soccer.statsplus.net/rankings/team/50325/",
       "SourceTeam": "De Pere"
     },
@@ -2834,8 +2834,8 @@
       "Team": "Hortonville",
       "Opponent": "DC Everest",
       "Location": "H",
-      "Result": null,
-      "Score": null,
+      "Result": "W",
+      "Score": "2-1",
       "Source": "Main 2026 schedule",
       "SourceTeam": "Hortonville"
     },
@@ -3098,12 +3098,52 @@
       "Score": null,
       "Source": "https://soccer.statsplus.net/rankings/team/50377/",
       "SourceTeam": "Wisconsin Rapids"
+    },
+    {
+      "Date": "2026-10-20",
+      "Team": "Chippewa Falls",
+      "Opponent": "Eau Claire Memorial",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50323/",
+      "SourceTeam": "Chippewa Falls"
+    },
+    {
+      "Date": "2026-10-20",
+      "Team": "Eau Claire Memorial",
+      "Opponent": "Chippewa Falls",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50327/",
+      "SourceTeam": "Eau Claire Memorial"
+    },
+    {
+      "Date": "2026-10-20",
+      "Team": "Eau Claire North",
+      "Opponent": "Hudson",
+      "Location": "A",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50328/",
+      "SourceTeam": "Eau Claire North"
+    },
+    {
+      "Date": "2026-10-20",
+      "Team": "Hudson",
+      "Opponent": "Eau Claire North",
+      "Location": "H",
+      "Result": null,
+      "Score": null,
+      "Source": "https://soccer.statsplus.net/rankings/team/50336/",
+      "SourceTeam": "Hudson"
     }
   ],
   "overall": [
     {
       "Team": "Chippewa Falls",
-      "GS": 16,
+      "GS": 17,
       "GP": 14,
       "W": 7,
       "L": 6,
@@ -3121,23 +3161,23 @@
     {
       "Team": "DC Everest",
       "GS": 19,
-      "GP": 16,
+      "GP": 17,
       "W": 8,
-      "L": 7,
+      "L": 8,
       "T": 1,
-      "GF": 37,
-      "GA": 33,
-      "GD": 4,
+      "GF": 38,
+      "GA": 35,
+      "GD": 3,
       "Points": 25,
       "Group": "Group A",
-      "OverallRank": 48,
+      "OverallRank": 51,
       "D1Rank": 29,
-      "Rating": 1761.44,
-      "SOS": 1709.6
+      "Rating": 1757.6,
+      "SOS": 1725.61
     },
     {
       "Team": "Eau Claire Memorial",
-      "GS": 17,
+      "GS": 18,
       "GP": 15,
       "W": 6,
       "L": 7,
@@ -3147,14 +3187,14 @@
       "GD": 15,
       "Points": 20,
       "Group": "Group A",
-      "OverallRank": 35,
+      "OverallRank": 34,
       "D1Rank": 22,
       "Rating": 1815.37,
-      "SOS": 1745.61
+      "SOS": 1750.86
     },
     {
       "Team": "Eau Claire North",
-      "GS": 20,
+      "GS": 21,
       "GP": 14,
       "W": 4,
       "L": 10,
@@ -3164,14 +3204,14 @@
       "GD": -33,
       "Points": 12,
       "Group": "Group A",
-      "OverallRank": 181,
+      "OverallRank": 182,
       "D1Rank": 58,
       "Rating": 1403.4,
-      "SOS": 1608.55
+      "SOS": 1607.47
     },
     {
       "Team": "Hudson",
-      "GS": 18,
+      "GS": 19,
       "GP": 17,
       "W": 14,
       "L": 1,
@@ -3181,10 +3221,10 @@
       "GD": 68,
       "Points": 44,
       "Group": "Group A",
-      "OverallRank": 3,
-      "D1Rank": 3,
+      "OverallRank": 2,
+      "D1Rank": 2,
       "Rating": 2049.86,
-      "SOS": 1682.64
+      "SOS": 1688.3
     },
     {
       "Team": "Superior",
@@ -3198,10 +3238,10 @@
       "GD": 29,
       "Points": 28,
       "Group": "Group A",
-      "OverallRank": 72,
-      "D1Rank": 35,
+      "OverallRank": 73,
+      "D1Rank": 36,
       "Rating": 1686.34,
-      "SOS": 1523.64
+      "SOS": 1523.1
     },
     {
       "Team": "Wausau West",
@@ -3216,9 +3256,9 @@
       "Points": 15,
       "Group": "Group A",
       "OverallRank": 94,
-      "D1Rank": 46,
+      "D1Rank": 45,
       "Rating": 1635.63,
-      "SOS": 1682.75
+      "SOS": 1682.08
     },
     {
       "Team": "Wisconsin Rapids",
@@ -3232,27 +3272,27 @@
       "GD": 8,
       "Points": 23,
       "Group": "Group A",
-      "OverallRank": 59,
-      "D1Rank": 30,
+      "OverallRank": 61,
+      "D1Rank": 32,
       "Rating": 1723.01,
-      "SOS": 1618.27
+      "SOS": 1620.26
     },
     {
       "Team": "Appleton North",
       "GS": 17,
-      "GP": 14,
+      "GP": 15,
       "W": 9,
-      "L": 3,
+      "L": 4,
       "T": 2,
       "GF": 43,
-      "GA": 19,
-      "GD": 24,
+      "GA": 23,
+      "GD": 20,
       "Points": 29,
       "Group": "Group B",
-      "OverallRank": 36,
-      "D1Rank": 23,
-      "Rating": 1814.08,
-      "SOS": 1661.58
+      "OverallRank": 39,
+      "D1Rank": 26,
+      "Rating": 1795.93,
+      "SOS": 1683.93
     },
     {
       "Team": "Appleton West",
@@ -3266,44 +3306,44 @@
       "GD": -74,
       "Points": 1,
       "Group": "Group B",
-      "OverallRank": 195,
+      "OverallRank": 194,
       "D1Rank": 59,
       "Rating": 1359.18,
-      "SOS": 1690.13
+      "SOS": 1692
     },
     {
       "Team": "Bay Port",
       "GS": 19,
-      "GP": 16,
+      "GP": 17,
       "W": 5,
       "L": 7,
-      "T": 4,
-      "GF": 34,
-      "GA": 37,
+      "T": 5,
+      "GF": 35,
+      "GA": 38,
       "GD": -3,
-      "Points": 19,
+      "Points": 20,
       "Group": "Group B",
-      "OverallRank": 74,
-      "D1Rank": 37,
-      "Rating": 1676.85,
-      "SOS": 1718.82
+      "OverallRank": 66,
+      "D1Rank": 33,
+      "Rating": 1704.64,
+      "SOS": 1724.22
     },
     {
       "Team": "De Pere",
       "GS": 18,
-      "GP": 14,
-      "W": 13,
-      "L": 1,
+      "GP": 16,
+      "W": 14,
+      "L": 2,
       "T": 0,
-      "GF": 71,
-      "GA": 7,
-      "GD": 64,
-      "Points": 39,
+      "GF": 76,
+      "GA": 9,
+      "GD": 67,
+      "Points": 42,
       "Group": "Group B",
-      "OverallRank": 7,
-      "D1Rank": 6,
-      "Rating": 2012.56,
-      "SOS": 1667.61
+      "OverallRank": 10,
+      "D1Rank": 9,
+      "Rating": 1983.14,
+      "SOS": 1683.17
     },
     {
       "Team": "Green Bay Preble",
@@ -3317,27 +3357,27 @@
       "GD": 34,
       "Points": 36,
       "Group": "Group B",
-      "OverallRank": 31,
-      "D1Rank": 20,
+      "OverallRank": 30,
+      "D1Rank": 21,
       "Rating": 1825.3,
-      "SOS": 1680.44
+      "SOS": 1680.06
     },
     {
       "Team": "Hortonville",
       "GS": 16,
-      "GP": 14,
-      "W": 12,
+      "GP": 15,
+      "W": 13,
       "L": 1,
       "T": 1,
-      "GF": 60,
-      "GA": 14,
-      "GD": 46,
-      "Points": 37,
+      "GF": 62,
+      "GA": 15,
+      "GD": 47,
+      "Points": 40,
       "Group": "Group B",
       "OverallRank": 9,
       "D1Rank": 8,
-      "Rating": 1979.42,
-      "SOS": 1680.29
+      "Rating": 1983.26,
+      "SOS": 1684.13
     },
     {
       "Team": "Kimberly",
@@ -3354,7 +3394,7 @@
       "OverallRank": 79,
       "D1Rank": 41,
       "Rating": 1662.96,
-      "SOS": 1754.76
+      "SOS": 1750.77
     },
     {
       "Team": "SPASH",
@@ -3368,10 +3408,10 @@
       "GD": 11,
       "Points": 25,
       "Group": "Group B",
-      "OverallRank": 67,
-      "D1Rank": 34,
+      "OverallRank": 68,
+      "D1Rank": 35,
       "Rating": 1696.58,
-      "SOS": 1655.27
+      "SOS": 1654.72
     }
   ],
   "seedings": {
@@ -3384,8 +3424,8 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 44,
         "GD": 68,
-        "OverallRank": 3,
-        "D1Rank": 3,
+        "OverallRank": 2,
+        "D1Rank": 2,
         "Rating": 2049.86,
         "Seed": 1
       },
@@ -3397,8 +3437,8 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 28,
         "GD": 29,
-        "OverallRank": 72,
-        "D1Rank": 35,
+        "OverallRank": 73,
+        "D1Rank": 36,
         "Rating": 1686.34,
         "Seed": 2
       },
@@ -3409,10 +3449,10 @@
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
         "OverallPoints": 25,
-        "GD": 4,
-        "OverallRank": 48,
+        "GD": 3,
+        "OverallRank": 51,
         "D1Rank": 29,
-        "Rating": 1761.44,
+        "Rating": 1757.6,
         "Seed": 3
       },
       {
@@ -3423,8 +3463,8 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 23,
         "GD": 8,
-        "OverallRank": 59,
-        "D1Rank": 30,
+        "OverallRank": 61,
+        "D1Rank": 32,
         "Rating": 1723.01,
         "Seed": 4
       },
@@ -3449,7 +3489,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 20,
         "GD": 15,
-        "OverallRank": 35,
+        "OverallRank": 34,
         "D1Rank": 22,
         "Rating": 1815.37,
         "Seed": 6
@@ -3463,7 +3503,7 @@
         "OverallPoints": 15,
         "GD": -3,
         "OverallRank": 94,
-        "D1Rank": 46,
+        "D1Rank": 45,
         "Rating": 1635.63,
         "Seed": 7
       },
@@ -3475,7 +3515,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 12,
         "GD": -33,
-        "OverallRank": 181,
+        "OverallRank": 182,
         "D1Rank": 58,
         "Rating": 1403.4,
         "Seed": 8
@@ -3485,14 +3525,14 @@
       {
         "Team": "De Pere",
         "Group": "Group B",
-        "GroupPoints": 9,
+        "GroupPoints": 12,
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
-        "OverallPoints": 39,
-        "GD": 64,
-        "OverallRank": 7,
-        "D1Rank": 6,
-        "Rating": 2012.56,
+        "OverallPoints": 42,
+        "GD": 67,
+        "OverallRank": 10,
+        "D1Rank": 9,
+        "Rating": 1983.14,
         "Seed": 1
       },
       {
@@ -3501,11 +3541,11 @@
         "GroupPoints": 15,
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
-        "OverallPoints": 37,
-        "GD": 46,
+        "OverallPoints": 40,
+        "GD": 47,
         "OverallRank": 9,
         "D1Rank": 8,
-        "Rating": 1979.42,
+        "Rating": 1983.26,
         "Seed": 2
       },
       {
@@ -3516,8 +3556,8 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 36,
         "GD": 34,
-        "OverallRank": 31,
-        "D1Rank": 20,
+        "OverallRank": 30,
+        "D1Rank": 21,
         "Rating": 1825.3,
         "Seed": 3
       },
@@ -3528,10 +3568,10 @@
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
         "OverallPoints": 29,
-        "GD": 24,
-        "OverallRank": 36,
-        "D1Rank": 23,
-        "Rating": 1814.08,
+        "GD": 20,
+        "OverallRank": 39,
+        "D1Rank": 26,
+        "Rating": 1795.93,
         "Seed": 4
       },
       {
@@ -3542,8 +3582,8 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 25,
         "GD": 11,
-        "OverallRank": 67,
-        "D1Rank": 34,
+        "OverallRank": 68,
+        "D1Rank": 35,
         "Rating": 1696.58,
         "Seed": 5
       },
@@ -3553,11 +3593,11 @@
         "GroupPoints": 5,
         "HeadToHeadPoints": 0,
         "HeadToHeadDetail": "",
-        "OverallPoints": 19,
+        "OverallPoints": 20,
         "GD": -3,
-        "OverallRank": 74,
-        "D1Rank": 37,
-        "Rating": 1676.85,
+        "OverallRank": 66,
+        "D1Rank": 33,
+        "Rating": 1704.64,
         "Seed": 6
       },
       {
@@ -3581,7 +3621,7 @@
         "HeadToHeadDetail": "",
         "OverallPoints": 1,
         "GD": -74,
-        "OverallRank": 195,
+        "OverallRank": 194,
         "D1Rank": 59,
         "Rating": 1359.18,
         "Seed": 8
@@ -3628,7 +3668,7 @@
         "Bay Port": 3,
         "De Pere": 0,
         "Green Bay Preble": 0,
-        "Hortonville": "Scheduled",
+        "Hortonville": 0,
         "Kimberly": "No Match",
         "SPASH": 3
       }
@@ -3780,7 +3820,7 @@
         "Appleton North": null,
         "Appleton West": 3,
         "Bay Port": "No Match",
-        "De Pere": "Scheduled",
+        "De Pere": 0,
         "Green Bay Preble": 1,
         "Hortonville": 0,
         "Kimberly": 3,
@@ -3843,7 +3883,7 @@
         "Superior": "No Match",
         "Wausau West": 3,
         "Wisconsin Rapids": "No Match",
-        "Appleton North": "Scheduled",
+        "Appleton North": 3,
         "Appleton West": "No Match",
         "Bay Port": 3,
         "De Pere": null,
@@ -3880,7 +3920,7 @@
       "group": "Group B",
       "opponents": {
         "Chippewa Falls": "No Match",
-        "DC Everest": "Scheduled",
+        "DC Everest": 3,
         "Eau Claire Memorial": "No Match",
         "Eau Claire North": "No Match",
         "Hudson": "No Match",
@@ -3949,26 +3989,20 @@
     "importedRows": 260,
     "manualTeam": "Hortonville",
     "manualRows": 15,
-    "statsPlusAsOf": "2026-10-09",
+    "statsPlusAsOf": "2026-10-11",
     "refreshedTeams": 15,
-    "refreshedRows": 266,
+    "refreshedRows": 270,
     "hortonvilleSource": "public/data/games_2026.csv",
     "hortonvilleRows": 16,
     "manualResults": [],
-    "weeklyPreparedFor": "2026-10-04"
+    "weeklyPreparedFor": "2026-10-11"
   },
   "opponentRecords": [
     {
       "Team": "Arrowhead",
       "W": 14,
-      "L": 0,
+      "L": 1,
       "T": 0
-    },
-    {
-      "Team": "Marquette University",
-      "W": 7,
-      "L": 3,
-      "T": 3
     },
     {
       "Team": "Hudson",
@@ -3983,6 +4017,12 @@
       "T": 1
     },
     {
+      "Team": "Marquette University",
+      "W": 7,
+      "L": 4,
+      "T": 3
+    },
+    {
       "Team": "Madison West",
       "W": 8,
       "L": 2,
@@ -3990,27 +4030,33 @@
     },
     {
       "Team": "Wauwatosa East",
+      "W": 14,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "Team": "Verona",
+      "W": 14,
+      "L": 1,
+      "T": 4
+    },
+    {
+      "Team": "Middleton",
+      "W": 8,
+      "L": 3,
+      "T": 5
+    },
+    {
+      "Team": "Hortonville",
       "W": 13,
       "L": 1,
       "T": 1
     },
     {
       "Team": "De Pere",
-      "W": 13,
-      "L": 1,
+      "W": 14,
+      "L": 2,
       "T": 0
-    },
-    {
-      "Team": "Verona",
-      "W": 13,
-      "L": 1,
-      "T": 4
-    },
-    {
-      "Team": "Hortonville",
-      "W": 12,
-      "L": 1,
-      "T": 1
     },
     {
       "Team": "Franklin",
@@ -4025,12 +4071,6 @@
       "T": 1
     },
     {
-      "Team": "Middleton",
-      "W": 7,
-      "L": 3,
-      "T": 5
-    },
-    {
       "Team": "Brookfield Central",
       "W": 11,
       "L": 2,
@@ -4040,6 +4080,12 @@
       "Team": "Germantown",
       "W": 9,
       "L": 3,
+      "T": 2
+    },
+    {
+      "Team": "Oregon",
+      "W": 7,
+      "L": 5,
       "T": 2
     },
     {
@@ -4067,12 +4113,6 @@
       "T": 1
     },
     {
-      "Team": "New Berlin Eisenhower",
-      "W": 11,
-      "L": 3,
-      "T": 0
-    },
-    {
       "Team": "Beloit Memorial",
       "W": 12,
       "L": 4,
@@ -4091,14 +4131,8 @@
       "T": 2
     },
     {
-      "Team": "Sheboygan Christian/Lutheran",
-      "W": 16,
-      "L": 0,
-      "T": 1
-    },
-    {
       "Team": "Waunakee",
-      "W": 13,
+      "W": 14,
       "L": 3,
       "T": 0
     },
@@ -4121,16 +4155,16 @@
       "T": 3
     },
     {
+      "Team": "New Berlin Eisenhower",
+      "W": 11,
+      "L": 3,
+      "T": 1
+    },
+    {
       "Team": "Sheboygan North",
       "W": 10,
       "L": 3,
       "T": 2
-    },
-    {
-      "Team": "Lake Country Lutheran",
-      "W": 10,
-      "L": 1,
-      "T": 0
     },
     {
       "Team": "Sauk Prairie",
@@ -4145,6 +4179,12 @@
       "T": 3
     },
     {
+      "Team": "Sheboygan Christian/Lutheran",
+      "W": 16,
+      "L": 0,
+      "T": 2
+    },
+    {
       "Team": "Monona Grove",
       "W": 9,
       "L": 5,
@@ -4157,21 +4197,9 @@
       "T": 3
     },
     {
-      "Team": "Oregon",
-      "W": 6,
-      "L": 5,
-      "T": 2
-    },
-    {
       "Team": "Eau Claire Memorial",
       "W": 6,
       "L": 7,
-      "T": 2
-    },
-    {
-      "Team": "Appleton North",
-      "W": 9,
-      "L": 3,
       "T": 2
     },
     {
@@ -4181,20 +4209,26 @@
       "T": 4
     },
     {
+      "Team": "Kenosha Bradford",
+      "W": 10,
+      "L": 3,
+      "T": 5
+    },
+    {
       "Team": "Sun Prairie East",
       "W": 8,
       "L": 4,
       "T": 2
     },
     {
-      "Team": "Kenosha Bradford",
-      "W": 9,
-      "L": 3,
-      "T": 5
-    },
-    {
       "Team": "Madison La Follette",
       "W": 7,
+      "L": 4,
+      "T": 2
+    },
+    {
+      "Team": "Appleton North",
+      "W": 9,
       "L": 4,
       "T": 2
     },
@@ -4205,14 +4239,14 @@
       "T": 0
     },
     {
-      "Team": "Kettle Moraine Lutheran",
-      "W": 12,
+      "Team": "Lake Country Lutheran",
+      "W": 10,
       "L": 1,
       "T": 1
     },
     {
       "Team": "Badger",
-      "W": 9,
+      "W": 10,
       "L": 4,
       "T": 1
     },
@@ -4241,22 +4275,10 @@
       "T": 4
     },
     {
-      "Team": "DC Everest",
-      "W": 8,
-      "L": 7,
-      "T": 1
-    },
-    {
       "Team": "Sturgeon Bay",
       "W": 13,
       "L": 2,
       "T": 0
-    },
-    {
-      "Team": "Notre Dame",
-      "W": 7,
-      "L": 4,
-      "T": 4
     },
     {
       "Team": "Catholic Memorial",
@@ -4268,6 +4290,18 @@
       "Team": "Oostburg",
       "W": 9,
       "L": 4,
+      "T": 1
+    },
+    {
+      "Team": "Notre Dame",
+      "W": 7,
+      "L": 5,
+      "T": 4
+    },
+    {
+      "Team": "DC Everest",
+      "W": 8,
+      "L": 8,
       "T": 1
     },
     {
@@ -4289,6 +4323,18 @@
       "T": 0
     },
     {
+      "Team": "Kettle Moraine Lutheran",
+      "W": 12,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "Team": "Kenosha Tremper",
+      "W": 9,
+      "L": 4,
+      "T": 0
+    },
+    {
       "Team": "Union Grove",
       "W": 7,
       "L": 9,
@@ -4307,15 +4353,27 @@
       "T": 3
     },
     {
+      "Team": "Mukwonago",
+      "W": 7,
+      "L": 8,
+      "T": 2
+    },
+    {
       "Team": "Wisconsin Rapids",
       "W": 7,
       "L": 3,
       "T": 2
     },
     {
+      "Team": "Fox Valley Lutheran",
+      "W": 12,
+      "L": 1,
+      "T": 4
+    },
+    {
       "Team": "Waukesha North",
       "W": 9,
-      "L": 4,
+      "L": 5,
       "T": 0
     },
     {
@@ -4331,22 +4389,10 @@
       "T": 2
     },
     {
-      "Team": "Fox Valley Lutheran",
-      "W": 11,
-      "L": 1,
-      "T": 4
-    },
-    {
-      "Team": "Mukwonago",
-      "W": 7,
-      "L": 8,
-      "T": 1
-    },
-    {
-      "Team": "Kenosha Tremper",
-      "W": 8,
-      "L": 4,
-      "T": 0
+      "Team": "Bay Port",
+      "W": 5,
+      "L": 7,
+      "T": 5
     },
     {
       "Team": "Milwaukee Reagan",
@@ -4397,22 +4443,16 @@
       "T": 2
     },
     {
-      "Team": "Bay Port",
-      "W": 5,
-      "L": 7,
-      "T": 4
+      "Team": "Burlington",
+      "W": 9,
+      "L": 5,
+      "T": 0
     },
     {
       "Team": "Sun Prairie West",
       "W": 3,
       "L": 8,
       "T": 3
-    },
-    {
-      "Team": "The Prairie School",
-      "W": 7,
-      "L": 7,
-      "T": 0
     },
     {
       "Team": "Madison Memorial",
@@ -4423,7 +4463,7 @@
     {
       "Team": "Madison East",
       "W": 4,
-      "L": 9,
+      "L": 10,
       "T": 2
     },
     {
@@ -4439,6 +4479,18 @@
       "T": 4
     },
     {
+      "Team": "The Prairie School",
+      "W": 7,
+      "L": 8,
+      "T": 0
+    },
+    {
+      "Team": "Pulaski",
+      "W": 10,
+      "L": 5,
+      "T": 2
+    },
+    {
       "Team": "Menomonee Falls",
       "W": 5,
       "L": 8,
@@ -4451,16 +4503,16 @@
       "T": 4
     },
     {
+      "Team": "Slinger",
+      "W": 4,
+      "L": 7,
+      "T": 3
+    },
+    {
       "Team": "Augustine Prep South",
       "W": 6,
       "L": 4,
       "T": 3
-    },
-    {
-      "Team": "Burlington",
-      "W": 8,
-      "L": 5,
-      "T": 0
     },
     {
       "Team": "Kiel",
@@ -4475,22 +4527,10 @@
       "T": 1
     },
     {
-      "Team": "Pulaski",
-      "W": 9,
-      "L": 5,
-      "T": 2
-    },
-    {
       "Team": "Sugar River",
       "W": 8,
       "L": 4,
       "T": 3
-    },
-    {
-      "Team": "Oconomowoc",
-      "W": 4,
-      "L": 8,
-      "T": 1
     },
     {
       "Team": "Veritas/Tenor",
@@ -4527,6 +4567,12 @@
       "W": 9,
       "L": 1,
       "T": 4
+    },
+    {
+      "Team": "Hartford",
+      "W": 6,
+      "L": 7,
+      "T": 1
     },
     {
       "Team": "Rice Lake",
@@ -4583,14 +4629,14 @@
       "T": 2
     },
     {
-      "Team": "Slinger",
-      "W": 3,
-      "L": 7,
-      "T": 3
+      "Team": "Oconomowoc",
+      "W": 4,
+      "L": 9,
+      "T": 1
     },
     {
       "Team": "Platteville/Lancaster",
-      "W": 8,
+      "W": 9,
       "L": 3,
       "T": 3
     },
@@ -4603,12 +4649,6 @@
     {
       "Team": "Fond du Lac",
       "W": 6,
-      "L": 7,
-      "T": 1
-    },
-    {
-      "Team": "Hartford",
-      "W": 5,
       "L": 7,
       "T": 1
     },
@@ -4643,15 +4683,15 @@
       "T": 1
     },
     {
-      "Team": "Carmen Southgate",
-      "W": 2,
-      "L": 2,
+      "Team": "Saint Croix Central",
+      "W": 9,
+      "L": 3,
       "T": 3
     },
     {
-      "Team": "Saint Croix Central",
-      "W": 8,
-      "L": 3,
+      "Team": "Carmen Southgate",
+      "W": 2,
+      "L": 2,
       "T": 3
     },
     {
@@ -4677,6 +4717,12 @@
       "W": 5,
       "L": 10,
       "T": 1
+    },
+    {
+      "Team": "Altoona",
+      "W": 11,
+      "L": 4,
+      "T": 3
     },
     {
       "Team": "Columbus Catholic",
@@ -4709,12 +4755,6 @@
       "T": 1
     },
     {
-      "Team": "Altoona",
-      "W": 10,
-      "L": 4,
-      "T": 3
-    },
-    {
       "Team": "Lourdes/Valley Christian",
       "W": 9,
       "L": 5,
@@ -4722,7 +4762,7 @@
     },
     {
       "Team": "Ripon",
-      "W": 13,
+      "W": 14,
       "L": 5,
       "T": 0
     },
@@ -4757,18 +4797,6 @@
       "T": 2
     },
     {
-      "Team": "Milton",
-      "W": 6,
-      "L": 6,
-      "T": 0
-    },
-    {
-      "Team": "North Fond du Lac/Oakfield/Springs",
-      "W": 8,
-      "L": 7,
-      "T": 1
-    },
-    {
       "Team": "Kenosha St. Joseph",
       "W": 9,
       "L": 4,
@@ -4781,6 +4809,18 @@
       "T": 1
     },
     {
+      "Team": "North Fond du Lac/Oakfield/Springs",
+      "W": 8,
+      "L": 8,
+      "T": 1
+    },
+    {
+      "Team": "Three Lakes/Phelps",
+      "W": 7,
+      "L": 5,
+      "T": 3
+    },
+    {
       "Team": "West Salem",
       "W": 9,
       "L": 6,
@@ -4790,6 +4830,12 @@
       "Team": "Living Word Lutheran",
       "W": 6,
       "L": 6,
+      "T": 0
+    },
+    {
+      "Team": "Milton",
+      "W": 6,
+      "L": 7,
       "T": 0
     },
     {
@@ -4823,16 +4869,16 @@
       "T": 1
     },
     {
+      "Team": "Winnebago Lutheran",
+      "W": 11,
+      "L": 6,
+      "T": 1
+    },
+    {
       "Team": "Green Bay East",
       "W": 6,
       "L": 4,
       "T": 2
-    },
-    {
-      "Team": "Three Lakes/Phelps",
-      "W": 6,
-      "L": 5,
-      "T": 3
     },
     {
       "Team": "Augustine Prep North",
@@ -4847,22 +4893,10 @@
       "T": 0
     },
     {
-      "Team": "Winnebago Lutheran",
-      "W": 10,
-      "L": 6,
-      "T": 1
-    },
-    {
       "Team": "Pius XI Catholic",
       "W": 2,
       "L": 10,
       "T": 1
-    },
-    {
-      "Team": "Plymouth",
-      "W": 2,
-      "L": 8,
-      "T": 3
     },
     {
       "Team": "Shawano",
@@ -4905,6 +4939,12 @@
       "W": 11,
       "L": 5,
       "T": 0
+    },
+    {
+      "Team": "Plymouth",
+      "W": 2,
+      "L": 9,
+      "T": 3
     },
     {
       "Team": "Kaukauna",
@@ -4961,14 +5001,26 @@
       "T": 4
     },
     {
+      "Team": "St. John's Northwestern/Chesterton",
+      "W": 4,
+      "L": 6,
+      "T": 1
+    },
+    {
       "Team": "Marinette",
       "W": 7,
       "L": 3,
       "T": 2
     },
     {
+      "Team": "New Berlin West",
+      "W": 4,
+      "L": 9,
+      "T": 4
+    },
+    {
       "Team": "Washburn",
-      "W": 5,
+      "W": 6,
       "L": 5,
       "T": 1
     },
@@ -4985,12 +5037,6 @@
       "T": 2
     },
     {
-      "Team": "Racine Park",
-      "W": 2,
-      "L": 6,
-      "T": 0
-    },
-    {
       "Team": "Whitewater",
       "W": 5,
       "L": 7,
@@ -5001,6 +5047,12 @@
       "W": 5,
       "L": 7,
       "T": 2
+    },
+    {
+      "Team": "Racine Park",
+      "W": 2,
+      "L": 7,
+      "T": 0
     },
     {
       "Team": "Marshfield",
@@ -5019,12 +5071,6 @@
       "W": 6,
       "L": 7,
       "T": 2
-    },
-    {
-      "Team": "St. John's Northwestern/Chesterton",
-      "W": 4,
-      "L": 6,
-      "T": 0
     },
     {
       "Team": "Racine Case",
@@ -5061,12 +5107,6 @@
       "W": 5,
       "L": 10,
       "T": 0
-    },
-    {
-      "Team": "New Berlin West",
-      "W": 3,
-      "L": 9,
-      "T": 4
     },
     {
       "Team": "Algoma",
@@ -5117,16 +5157,16 @@
       "T": 1
     },
     {
-      "Team": "Waupun",
-      "W": 3,
-      "L": 6,
-      "T": 2
-    },
-    {
       "Team": "Appleton West",
       "W": 0,
       "L": 15,
       "T": 1
+    },
+    {
+      "Team": "Waupun",
+      "W": 3,
+      "L": 7,
+      "T": 2
     },
     {
       "Team": "Beaver Dam",
@@ -5150,12 +5190,6 @@
       "Team": "Racine Horlick",
       "W": 3,
       "L": 8,
-      "T": 0
-    },
-    {
-      "Team": "Big Foot/Williams Bay",
-      "W": 2,
-      "L": 10,
       "T": 0
     },
     {
@@ -5219,12 +5253,6 @@
       "T": 0
     },
     {
-      "Team": "Menomonie",
-      "W": 3,
-      "L": 11,
-      "T": 0
-    },
-    {
       "Team": "Columbus",
       "W": 11,
       "L": 6,
@@ -5238,7 +5266,7 @@
     },
     {
       "Team": "University Lake School/Lake Country Classical/Trinity",
-      "W": 3,
+      "W": 4,
       "L": 5,
       "T": 0
     },
@@ -5253,6 +5281,18 @@
       "W": 6,
       "L": 5,
       "T": 2
+    },
+    {
+      "Team": "Big Foot/Williams Bay",
+      "W": 2,
+      "L": 11,
+      "T": 0
+    },
+    {
+      "Team": "Menomonie",
+      "W": 3,
+      "L": 12,
+      "T": 0
     },
     {
       "Team": "Waupaca",
@@ -5271,12 +5311,6 @@
       "W": 2,
       "L": 9,
       "T": 2
-    },
-    {
-      "Team": "Regis/McDonell Central",
-      "W": 3,
-      "L": 6,
-      "T": 0
     },
     {
       "Team": "Tomah",
@@ -5321,27 +5355,33 @@
       "T": 2
     },
     {
-      "Team": "Spooner/Shell Lake",
-      "W": 3,
-      "L": 9,
-      "T": 2
-    },
-    {
       "Team": "Menasha",
       "W": 2,
       "L": 11,
       "T": 2
     },
     {
+      "Team": "Spooner/Shell Lake",
+      "W": 3,
+      "L": 10,
+      "T": 2
+    },
+    {
       "Team": "Prairie du Chien/Seneca/Wauzeka-Steuben/Youth Initiative",
       "W": 3,
-      "L": 6,
+      "L": 7,
       "T": 1
     },
     {
       "Team": "Milwaukee Bradley Tech",
       "W": 1,
       "L": 3,
+      "T": 0
+    },
+    {
+      "Team": "Regis/McDonell Central",
+      "W": 3,
+      "L": 7,
       "T": 0
     },
     {
@@ -5373,12 +5413,6 @@
       "W": 2,
       "L": 10,
       "T": 1
-    },
-    {
-      "Team": "Peshtigo",
-      "W": 3,
-      "L": 8,
-      "T": 0
     },
     {
       "Team": "Antigo",
@@ -5429,10 +5463,22 @@
       "T": 1
     },
     {
+      "Team": "Wrightstown",
+      "W": 2,
+      "L": 12,
+      "T": 0
+    },
+    {
       "Team": "Cumberland",
       "W": 2,
       "L": 11,
       "T": 1
+    },
+    {
+      "Team": "Peshtigo",
+      "W": 4,
+      "L": 9,
+      "T": 0
     },
     {
       "Team": "Medford",
@@ -5447,16 +5493,16 @@
       "T": 0
     },
     {
-      "Team": "Clintonville",
-      "W": 4,
-      "L": 10,
-      "T": 3
-    },
-    {
       "Team": "Milwaukee Hamilton",
       "W": 0,
       "L": 7,
       "T": 0
+    },
+    {
+      "Team": "Clintonville",
+      "W": 4,
+      "L": 11,
+      "T": 3
     },
     {
       "Team": "Berlin",
@@ -5471,12 +5517,6 @@
       "T": 2
     },
     {
-      "Team": "Green Bay NEW Lutheran",
-      "W": 4,
-      "L": 11,
-      "T": 1
-    },
-    {
       "Team": "Wayland Academy",
       "W": 1,
       "L": 8,
@@ -5489,21 +5529,27 @@
       "T": 1
     },
     {
+      "Team": "Eastbrook Academy",
+      "W": 2,
+      "L": 8,
+      "T": 1
+    },
+    {
       "Team": "Milwaukee Pulaski",
       "W": 0,
       "L": 4,
       "T": 0
     },
     {
-      "Team": "Eastbrook Academy",
-      "W": 1,
+      "Team": "Wautoma/Wild Rose",
+      "W": 3,
       "L": 8,
       "T": 1
     },
     {
-      "Team": "Wautoma/Wild Rose",
-      "W": 3,
-      "L": 8,
+      "Team": "Green Bay NEW Lutheran",
+      "W": 4,
+      "L": 12,
       "T": 1
     },
     {
@@ -5561,12 +5607,6 @@
       "T": 0
     },
     {
-      "Team": "Wrightstown",
-      "W": 1,
-      "L": 12,
-      "T": 0
-    },
-    {
       "Team": "Gresham/Bowler",
       "W": 1,
       "L": 9,
@@ -5575,7 +5615,7 @@
     {
       "Team": "Lomira",
       "W": 3,
-      "L": 16,
+      "L": 18,
       "T": 0
     },
     {
@@ -5593,7 +5633,7 @@
     {
       "Team": "Ashland/Drummond",
       "W": 0,
-      "L": 11,
+      "L": 12,
       "T": 0
     },
     {
@@ -5703,6 +5743,23 @@
     "2026-10-10|De Pere|Kenosha Tremper",
     "2026-10-10|Green Bay Preble|Sturgeon Bay",
     "2026-10-10|Hortonville|DC Everest",
-    "2026-10-10|Wausau West|Appleton North"
+    "2026-10-10|Wausau West|Appleton North",
+    "2026-10-13|Appleton West|Gibraltar/Sevastopol",
+    "2026-10-13|Bay Port|Sun Prairie East",
+    "2026-10-13|Chippewa Falls|New Richmond",
+    "2026-10-13|DC Everest|Wausau East",
+    "2026-10-13|De Pere|Appleton East",
+    "2026-10-13|Hortonville|Notre Dame",
+    "2026-10-13|Hudson|Rice Lake",
+    "2026-10-13|SPASH|Wisconsin Rapids",
+    "2026-10-13|Wisconsin Rapids|SPASH",
+    "2026-10-15|Appleton West|Fox Valley Lutheran",
+    "2026-10-15|Chippewa Falls|La Crosse Central",
+    "2026-10-15|De Pere|Kohler",
+    "2026-10-15|Green Bay Preble|Green Bay East",
+    "2026-10-15|Wausau West|SPASH",
+    "2026-10-16|Superior|New Richmond",
+    "2026-10-17|SPASH|Wisconsin Rapids",
+    "2026-10-17|Wisconsin Rapids|SPASH"
   ]
 }
