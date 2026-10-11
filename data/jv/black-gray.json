@@ -1,6 +1,6 @@
 {
   "team": "JV Black/Gray",
-  "updated": "2026-10-07",
+  "updated": "2026-10-10",
   "squads": {
     "black": {
       "name": "JV Black",
@@ -265,6 +265,13 @@
       "location": "Away",
       "result": "L",
       "score": "0-2"
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "Appleton West",
+      "location": "Home",
+      "result": "W",
+      "score": "4-0"
     }
   ],
   "gameStats": [
@@ -556,13 +563,13 @@
           "minutes": 40,
           "saves": null,
           "goalsAgainst": 2
-        }, 
+        },
         {
           "name": "Levi Goin",
           "minutes": 40,
           "saves": 4,
           "goalsAgainst": 0
-        }        
+        }
       ],
       "played": [
         "Ayden Lenth",
@@ -733,7 +740,7 @@
         "Andrew Montalbano confirmed the 2-3 loss and Ayden Lenth’s 80 minutes and 3 goals against. Full player stats, saves, and participation are pending."
       ],
       "unattributedGoals": 2
-    }, 
+    },
     {
       "date": "2026-10-06",
       "opponent": "New London",
@@ -744,7 +751,7 @@
           "minutes": 40,
           "saves": null,
           "goalsAgainst": 1
-        }, 
+        },
         {
           "name": "Levi Goin",
           "minutes": 40,
@@ -753,16 +760,46 @@
         }
       ],
       "played": []
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "Appleton West",
+      "players": [
+        {
+          "name": "Jaxon Laabs",
+          "goals": 1,
+          "assists": 0
+        }
+      ],
+      "goalkeepers": [
+        {
+          "name": "Ayden Lenth",
+          "minutes": 60,
+          "saves": null,
+          "goalsAgainst": 0
+        },
+        {
+          "name": "Levi Goin",
+          "minutes": 20,
+          "saves": 10,
+          "goalsAgainst": 0
+        }
+      ],
+      "unattributedGoals": 3,
+      "notes": [
+        "Andrew Montalbano supplied the 4-0 result and confirmed Jaxon Laabs scored one goal. Three scorers, assists, Ayden Lenth’s saves, and the full lineup remain unreported.",
+        "Levi Goin reported 10 saves in 20 minutes; recorded as reported. Ayden Lenth played the remaining 60 minutes. Both goalkeepers allowed zero goals."
+      ]
     }
   ],
   "statsAudit": {
     "source": "Andrew Montalbano",
-    "importedAt": "2026-09-24",
-    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable. Added scoring for August 31 at Appleton North (JV Gray, 2 goals matching the 2-1 final) and August 28 vs FVL (JV Black, 2 goals matching the 2-4 final; Ethan Nysse guested from Gray). September 8 vs Appleton East (1-1 tie): the single Hortonville goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano. Green Bay Preble (0-3) confirmed to have no individual goals or assists. Added September 14 JV Black 4-1 win vs Little Chute from supplied score sheet and coach clarification. September 24: Ayden Lenth, 80 minutes and 3 GA; other stats pending."
+    "importedAt": "2026-10-10",
+    "notes": "Coach supplied scoring and goalkeeper statistics for August 25 at Appleton East (no assists) and September 10 at Little Chute. Coach confirmed Ayden Lenth allowed 3 goals at Appleton East and 2 at Little Chute, totaling 5 in the two reported games. Little Chute saves were not stated. Arrav Patel and Ezekial Hartjes matched to roster names Aarav Patel and Ezekiel Hartjes. Other game statistics and full participation remain unavailable. Added scoring for August 31 at Appleton North (JV Gray, 2 goals matching the 2-1 final) and August 28 vs FVL (JV Black, 2 goals matching the 2-4 final; Ethan Nysse guested from Gray). September 8 vs Appleton East (1-1 tie): the single Hortonville goal confirmed as Ethan Nysse (guesting from JV Gray) by Andrew Montalbano. Green Bay Preble (0-3) confirmed to have no individual goals or assists. Added September 14 JV Black 4-1 win vs Little Chute from supplied score sheet and coach clarification. September 24: Ayden Lenth, 80 minutes and 3 GA; other stats pending. Added the JV Gray 4-0 win over Appleton West using the October 9 calendar date; result and partial player statistics supplied by Andrew Montalbano on October 10."
   },
   "resultsAudit": {
     "source": "Andrew Montalbano",
-    "importedAt": "2026-09-14T04:28:18.125Z",
-    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats. September 22 JV Black at New London confirmed as a 1-2 loss by Andrew Montalbano; Ayden Lenth played 80 minutes and allowed 2 goals. Saves and field player stats remain unavailable. September 24 JV Gray lost 2-3 at Luxemburg-Casco; played 9v9 at the opponent’s request due to player availability."
+    "importedAt": "2026-10-10",
+    "notes": "Combined JV Black/Gray results supplied by the coach. August 28 FVL final confirmed as a 2-4 loss on September 14. Individual statistics for August 25 and September 10 are recorded separately in gameStats. September 22 JV Black at New London confirmed as a 1-2 loss by Andrew Montalbano; Ayden Lenth played 80 minutes and allowed 2 goals. Saves and field player stats remain unavailable. September 24 JV Gray lost 2-3 at Luxemburg-Casco; played 9v9 at the opponent’s request due to player availability. Added the JV Gray 4-0 win over Appleton West using the October 9 calendar date; result and partial player statistics supplied by Andrew Montalbano on October 10."
   }
 }

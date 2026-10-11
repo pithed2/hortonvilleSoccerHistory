@@ -2,12 +2,12 @@
   "stats": {
     "slug": "red",
     "team": "JV Red",
-    "updated": "October 1, 2026",
+    "updated": "October 10, 2026",
     "audit": {
       "sourceFile": "2026_Season_Stats.xlsx",
-      "sourceModifiedAt": "2026-10-02T02:52:38.000Z",
-      "sourceSha256": "be59adc5503aa58a84e2a0ad6611cdc0fb1828afbcfe6e3ba6fda377bb5c5080",
-      "importedAt": "2026-10-02T02:55:10.029Z",
+      "sourceModifiedAt": "2026-10-11T01:51:56.000Z",
+      "sourceSha256": "366ac832f218ccda3352418109c82c4bd234b8224b314f25c2eedc2a6769bb13",
+      "importedAt": "2026-10-11T01:58:05.058Z",
       "validation": "warning",
       "validationSummary": "Game 2: 23 - Jaxon Wolff has 1 assists in Game Log but 0 in Goal Log. Game 12: 22 - Amos Arndt has 0 assists in Game Log but 1 in Goal Log.",
       "approvedBy": "Andrew Montalbano"
@@ -16,25 +16,25 @@
       "The Sep 15 game at Neenah was postponed; a makeup date has not yet been announced."
     ],
     "record": {
-      "wins": 8,
+      "wins": 9,
       "losses": 3,
       "ties": 0,
       "conference": "4–1–0"
     },
     "totals": {
-      "goalsFor": 36,
+      "goalsFor": 37,
       "goalsAgainst": 8,
-      "shots": 193,
-      "sog": 106,
-      "saves": 51
+      "shots": 205,
+      "sog": 109,
+      "saves": 53
     },
     "goalkeepers": [
       {
         "number": 31,
         "name": "Henri Waite",
-        "games": 11,
-        "saves": 50,
-        "minutes": 830,
+        "games": 12,
+        "saves": 52,
+        "minutes": 910,
         "goalsAgainst": 8
       },
       {
@@ -47,6 +47,14 @@
       }
     ],
     "recent": [
+      {
+        "id": 13,
+        "date": "Oct 10",
+        "opponent": "DC Everest",
+        "location": "Home",
+        "score": "1–0",
+        "result": "W"
+      },
       {
         "id": 12,
         "date": "Oct 1",
@@ -143,11 +151,6 @@
         "location": "Away"
       },
       {
-        "date": "Oct 10",
-        "opponent": "DC Everest",
-        "location": "Home"
-      },
-      {
         "date": "Oct 12",
         "opponent": "Lourdes Academy",
         "location": "Home"
@@ -157,7 +160,7 @@
       {
         "number": 6,
         "name": "Parker Anderson",
-        "gp": 11,
+        "gp": 12,
         "goals": 7,
         "assists": 2,
         "points": 16
@@ -165,7 +168,7 @@
       {
         "number": 15,
         "name": "Sam Radle",
-        "gp": 11,
+        "gp": 12,
         "goals": 7,
         "assists": 1,
         "points": 15
@@ -173,7 +176,7 @@
       {
         "number": 22,
         "name": "Amos Arndt",
-        "gp": 11,
+        "gp": 12,
         "goals": 6,
         "assists": 1,
         "points": 13
@@ -181,15 +184,15 @@
       {
         "number": 18,
         "name": "Grayson Ackermann",
-        "gp": 11,
-        "goals": 4,
+        "gp": 12,
+        "goals": 5,
         "assists": 2,
-        "points": 10
+        "points": 12
       },
       {
         "number": 14,
         "name": "Owen Pavich",
-        "gp": 11,
+        "gp": 12,
         "goals": 1,
         "assists": 6,
         "points": 8
@@ -197,7 +200,7 @@
       {
         "number": 20,
         "name": "Beckett Feldbruegge",
-        "gp": 11,
+        "gp": 12,
         "goals": 3,
         "assists": 0,
         "points": 6
@@ -205,7 +208,7 @@
       {
         "number": 12,
         "name": "Brody Schroeder",
-        "gp": 11,
+        "gp": 12,
         "goals": 3,
         "assists": 0,
         "points": 6
@@ -213,7 +216,7 @@
       {
         "number": 19,
         "name": "Timmy VanSchyndel",
-        "gp": 11,
+        "gp": 12,
         "goals": 2,
         "assists": 1,
         "points": 5
@@ -221,7 +224,7 @@
       {
         "number": 9,
         "name": "Ben Parker",
-        "gp": 11,
+        "gp": 12,
         "goals": 1,
         "assists": 3,
         "points": 5
@@ -229,7 +232,7 @@
       {
         "number": 21,
         "name": "Easton Slomski",
-        "gp": 11,
+        "gp": 12,
         "goals": 1,
         "assists": 1,
         "points": 3
@@ -237,7 +240,7 @@
       {
         "number": 10,
         "name": "Hunter Hasseler",
-        "gp": 11,
+        "gp": 12,
         "goals": 1,
         "assists": 1,
         "points": 3
@@ -245,7 +248,7 @@
       {
         "number": 16,
         "name": "Carson Sanford",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -253,7 +256,7 @@
       {
         "number": 24,
         "name": "Ethen LaPlant",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -261,7 +264,7 @@
       {
         "number": 23,
         "name": "Jaxon Wolff",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -269,7 +272,7 @@
       {
         "number": 26,
         "name": "Leon Ryzhov",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -277,7 +280,7 @@
       {
         "number": 5,
         "name": "Nolan Raaths",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -285,7 +288,7 @@
       {
         "number": 8,
         "name": "Oliver Plamann",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -293,7 +296,7 @@
       {
         "number": 2,
         "name": "Parker Rugotska",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -301,7 +304,7 @@
       {
         "number": 4,
         "name": "Weston Ehr",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -309,7 +312,7 @@
       {
         "number": 13,
         "name": "Aaron Young",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -317,7 +320,7 @@
       {
         "number": 0,
         "name": "Andy",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -325,7 +328,7 @@
       {
         "number": 3,
         "name": "Dylan McFarlane",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -333,7 +336,7 @@
       {
         "number": 31,
         "name": "Henri Waite",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -349,7 +352,7 @@
       {
         "number": 11,
         "name": "Jaxton Seefeldt",
-        "gp": 11,
+        "gp": 12,
         "goals": 0,
         "assists": 0,
         "points": 0
@@ -2271,6 +2274,135 @@
           "half": "1st",
           "scorer": "15 - Sam Radle",
           "assist": "14 - Owen Pavich"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "date": "2026-10-10",
+      "opponent": "DC Everest",
+      "location": "Home",
+      "conference": false,
+      "result": "W",
+      "team": {
+        "shots": 12,
+        "sog": 3,
+        "saves": 2,
+        "yc": 1,
+        "rc": 0,
+        "goals": 1
+      },
+      "opponentTotals": {
+        "shots": 6,
+        "saves": 2,
+        "goals": 0
+      },
+      "players": [
+        {
+          "player": "4 - Weston Ehr",
+          "shots": 2,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "6 - Parker Anderson",
+          "shots": 2,
+          "sog": 2,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "7 - Isaac Reiland",
+          "shots": 2,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "12 - Brody Schroeder",
+          "shots": 2,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "14 - Owen Pavich",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "18 - Grayson Ackermann",
+          "shots": 2,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "21 - Easton Slomski",
+          "shots": 1,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "20 - Beckett Feldbruegge",
+          "shots": 0,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 1,
+          "rc": 0,
+          "saves": 0,
+          "gkMinutes": 0
+        },
+        {
+          "player": "31 - Henri Waite",
+          "shots": 0,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": 0,
+          "rc": 0,
+          "saves": 2,
+          "gkMinutes": 80
+        }
+      ],
+      "scoring": [
+        {
+          "half": "1st",
+          "scorer": "18 - Grayson Ackermann",
+          "assist": null
         }
       ]
     }

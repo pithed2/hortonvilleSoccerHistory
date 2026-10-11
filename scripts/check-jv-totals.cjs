@@ -73,7 +73,9 @@ for (const squad of ['black', 'gray']) {
     assert.equal(new Set(game.played ?? []).size, (game.played ?? []).length)
   }
   for (const keeper of stats.goalkeepers) {
-    const lines = games.flatMap(g => g.goalkeepers.filter(k => k.name === keeper.name))
+    const homeRoster = bg.squads[squad].roster.some(player => player.name === keeper.name)
+    const keeperGames = homeRoster ? bg.gameStats : games
+    const lines = keeperGames.flatMap(g => g.goalkeepers.filter(k => k.name === keeper.name))
     assert.equal(keeper.games, lines.length)
     assert.equal(keeper.minutes, sum(lines, 'minutes'))
     assert.equal(keeper.goalsAgainst, sum(lines, 'goalsAgainst'))
