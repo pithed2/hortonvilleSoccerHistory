@@ -58,6 +58,7 @@ export default async function WeeklyReviewPage({ searchParams }: { searchParams:
           <p className="mt-4 leading-relaxed">{row[1]}</p>
           <div className="mt-5 border-t pt-4"><p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Coming up</p><p className="mt-2 text-sm leading-relaxed">{row[3]}</p></div>
         </article>)}</div>
+        {section.notes?.map((paragraph, j) => <p key={j} className="mt-4 max-w-4xl text-base leading-relaxed">{paragraph}</p>)}
       </section>)}
       {review.sourceNote && <p className="text-sm leading-relaxed text-muted-foreground">{review.sourceNote}</p>}
       <section id="versions" className="surface-card scroll-mt-24 p-6">
