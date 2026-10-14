@@ -2,46 +2,56 @@
   "stats": {
     "slug": "white",
     "team": "JV White",
-    "updated": "October 7, 2026",
+    "updated": "October 13, 2026",
     "sourceLabel": "Team score sheets",
     "gamesNote": "GP reflects recorded participation. Goals: 2 points · Assists: 1 point",
     "notes": [
+      "October 13 at Notre Dame: 1-0 win. Liam Adkins scored, assisted by Bryce Draeger. Ben Decker recorded an 80-minute shutout with 3 saves.",
       "October 6 at Kaukauna: 3-0 win. Liam Evenson scored twice; James Forsythe scored once. Ben Decker recorded an 80-minute shutout with 3 saves."
     ],
     "audit": {
-      "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload); Score sheet photo, JV White vs Appleton West (chat upload); Score sheet photo, JV White vs Kimberly (chat upload); JV_White_OshWest.jpg; Coach supplied Kaukauna player statistics 2026-10-07",
+      "sourceFile": "JV White roster and six team score sheets; Full Schedule.xlsx; team corrections; IMG_20260912_222217.jpg; Score sheet photo, JV White vs Appleton North (chat upload); Score sheet photo, JV White vs Fond du Lac (chat upload); Score sheet photo, JV White vs Appleton West (chat upload); Score sheet photo, JV White vs Kimberly (chat upload); JV_White_OshWest.jpg; Coach supplied Kaukauna player statistics 2026-10-07; Notre Dame score sheet and coach corrections 2026-10-13",
       "sourceModifiedAt": "",
       "sourceSha256": "",
-      "importedAt": "2026-10-07",
+      "importedAt": "2026-10-13",
       "validation": "passed",
-      "validationSummary": "Fourteen results; goals, assists, points and goalkeeper totals reconciled against box scores. October 6 at Kaukauna: Liam Evenson 2 goals, James Forsythe 1 goal; Carter Possley, Wyatt Mauthepasch and Connor Schmitt 1 assist each; 10 shots on goal; Ben Decker 80 minutes, 3 saves, 0 goals against. Historical unknown saves remain unknown. Full Kaukauna lineup and goal-by-goal assist pairings were not supplied.",
+      "validationSummary": "Fifteen results; goals, assists, points, shots on goal and goalkeeper totals reconciled against box scores. October 13 at Notre Dame: Liam Adkins 1 goal and 1 shot on goal; Bryce Draeger 1 assist; 8 team shots on goal; Ben Decker 80 minutes, 3 saves, 0 goals against. Historical unknown saves remain unknown. Full participation and goal timing were not supplied.",
       "approvedBy": "Andrew Montalbano"
     },
     "record": {
-      "wins": 12,
+      "wins": 13,
       "losses": 1,
       "ties": 1,
       "conference": "8–0–0"
     },
     "totals": {
-      "goalsFor": 66,
+      "goalsFor": 67,
       "goalsAgainst": 10,
       "shots": null,
-      "sog": 223,
+      "sog": 231,
       "saves": null
     },
     "goalkeepers": [
       {
         "number": 0,
         "name": "Ben Decker",
-        "games": 14,
+        "games": 15,
         "saves": null,
-        "minutes": 1060,
+        "minutes": 1140,
         "goalsAgainst": 10,
-        "recordedSaves": 49
+        "recordedSaves": 52
       }
     ],
     "recent": [
+      {
+        "id": 15,
+        "date": "Oct 13",
+        "opponent": "Notre Dame",
+        "location": "Away",
+        "kickoff": "4:30 PM",
+        "score": "1-0",
+        "result": "W"
+      },
       {
         "id": 14,
         "date": "Oct 6",
@@ -171,7 +181,7 @@
       {
         "number": 0,
         "name": "Ben Decker",
-        "gp": 14,
+        "gp": 15,
         "goals": 0,
         "assists": 1,
         "points": 1,
@@ -207,11 +217,11 @@
       {
         "number": 5,
         "name": "Carter Possley",
-        "gp": 14,
+        "gp": 15,
         "goals": 2,
         "assists": 5,
         "points": 9,
-        "sog": 16
+        "sog": 19
       },
       {
         "number": 6,
@@ -252,19 +262,19 @@
       {
         "number": 10,
         "name": "Liam Evenson",
-        "gp": 14,
+        "gp": 15,
         "goals": 13,
         "assists": 5,
         "points": 31,
-        "sog": 35
+        "sog": 36
       },
       {
         "number": 11,
         "name": "Bryce Draeger",
-        "gp": 13,
+        "gp": 14,
         "goals": 1,
-        "assists": 1,
-        "points": 3,
+        "assists": 2,
+        "points": 4,
         "sog": 9
       },
       {
@@ -306,11 +316,11 @@
       {
         "number": 16,
         "name": "Liam Adkins",
-        "gp": 13,
-        "goals": 3,
+        "gp": 14,
+        "goals": 4,
         "assists": 2,
-        "points": 8,
-        "sog": 7
+        "points": 10,
+        "sog": 8
       },
       {
         "number": 17,
@@ -342,11 +352,11 @@
       {
         "number": 21,
         "name": "Reno Brei",
-        "gp": 14,
+        "gp": 15,
         "goals": 14,
         "assists": 5,
         "points": 33,
-        "sog": 41
+        "sog": 44
       },
       {
         "number": 22,
@@ -4856,6 +4866,117 @@
         }
       ],
       "scoring": []
+    },
+    {
+      "id": 15,
+      "date": "2026-10-13",
+      "opponent": "Notre Dame",
+      "location": "Away",
+      "kickoff": "4:30 PM",
+      "conference": false,
+      "result": "W",
+      "sourceFile": "codex-clipboard-6e6b7194-a735-4c99-ab6e-ac2e1775ee5a.png (coach supplied)",
+      "notes": [
+        "Liam Adkins' goal supplies one shot on goal in addition to the seven shot tallies on the sheet, as confirmed by Andrew Montalbano.",
+        "Ben Decker: 80 minutes, 3 saves, 0 goals against, confirmed by Andrew Montalbano. Full participation was not supplied; only players with recorded statistics receive a game appearance."
+      ],
+      "scoringRecorded": true,
+      "unattributedGoals": 0,
+      "team": {
+        "shots": null,
+        "sog": 8,
+        "saves": 3,
+        "yc": null,
+        "rc": null,
+        "goals": 1
+      },
+      "opponentTotals": {
+        "shots": null,
+        "saves": null,
+        "goals": 0
+      },
+      "players": [
+        {
+          "player": "Ben Decker",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": 3,
+          "gkMinutes": 80,
+          "recordedSog": 0,
+          "goalsAgainst": 0
+        },
+        {
+          "player": "Carter Possley",
+          "shots": null,
+          "sog": 3,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 3
+        },
+        {
+          "player": "Liam Evenson",
+          "shots": null,
+          "sog": 1,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 1
+        },
+        {
+          "player": "Bryce Draeger",
+          "shots": null,
+          "sog": 0,
+          "goals": 0,
+          "assists": 1,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Liam Adkins",
+          "shots": null,
+          "sog": 1,
+          "goals": 1,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 0
+        },
+        {
+          "player": "Reno Brei",
+          "shots": null,
+          "sog": 3,
+          "goals": 0,
+          "assists": 0,
+          "yc": null,
+          "rc": null,
+          "saves": null,
+          "gkMinutes": null,
+          "recordedSog": 3
+        }
+      ],
+      "scoring": [
+        {
+          "half": "",
+          "scorer": "Liam Adkins",
+          "assist": "Bryce Draeger"
+        }
+      ]
     }
   ]
 }

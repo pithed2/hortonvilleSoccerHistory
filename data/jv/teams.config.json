@@ -4,6 +4,13 @@
     "sourcePath": "C:/Users/amontalbano/OneDrive - NorthWinds Technology Solutions/Documents (1)/Hortonville Soccer/2026 Boys/2026_Season_Stats.xlsx",
     "approvedBy": "Andrew Montalbano",
     "inactivePlayers": ["Isaac Reiland"],
+    "missedGames": {
+      "Aaron Young": [12, 13, 14],
+      "Easton Slomski": [14],
+      "Ben Parker": [13],
+      "Amos Arndt": [13],
+      "Hunter Hasseler": [11]
+    },
     "excludeRosterNumbers": [17],
     "gameLogCorrections": [
       {

@@ -9,11 +9,12 @@
       "sourceSha256": "5fa913e572439401cc02957e800ec12872ddc347b63167c7c3b340103d12cc07",
       "importedAt": "2026-10-13T03:15:28.944Z",
       "validation": "warning",
-      "validationSummary": "Game 2: 23 - Jaxon Wolff has 1 assists in Game Log but 0 in Goal Log. Game 12: 22 - Amos Arndt has 0 assists in Game Log but 1 in Goal Log.",
+      "validationSummary": "Game 2: 23 - Jaxon Wolff has 1 assists in Game Log but 0 in Goal Log. Game 12: 22 - Amos Arndt has 0 assists in Game Log but 1 in Goal Log. Coach-confirmed missed games are excluded from player GP.",
       "approvedBy": "Andrew Montalbano"
     },
     "notes": [
-      "The Sep 15 game at Neenah was postponed; a makeup date has not yet been announced."
+      "The Sep 15 game at Neenah was postponed; a makeup date has not yet been announced.",
+      "Coach-confirmed participation: Aaron Young missed Kimberly, DC Everest and Lourdes Academy after the second Fox Valley Lutheran game (September 28); Easton Slomski missed Lourdes Academy; Ben Parker and Amos Arndt missed DC Everest; Hunter Hasseler missed the second Fox Valley Lutheran game."
     ],
     "record": {
       "wins": 10,
@@ -195,7 +196,7 @@
       {
         "number": 22,
         "name": "Amos Arndt",
-        "gp": 13,
+        "gp": 12,
         "goals": 5,
         "assists": 1,
         "points": 11
@@ -211,7 +212,7 @@
       {
         "number": 9,
         "name": "Ben Parker",
-        "gp": 13,
+        "gp": 12,
         "goals": 2,
         "assists": 3,
         "points": 7
@@ -235,7 +236,7 @@
       {
         "number": 10,
         "name": "Hunter Hasseler",
-        "gp": 13,
+        "gp": 12,
         "goals": 2,
         "assists": 1,
         "points": 5
@@ -275,7 +276,7 @@
       {
         "number": 21,
         "name": "Easton Slomski",
-        "gp": 13,
+        "gp": 12,
         "goals": 1,
         "assists": 1,
         "points": 3
@@ -347,7 +348,7 @@
       {
         "number": 13,
         "name": "Aaron Young",
-        "gp": 13,
+        "gp": 10,
         "goals": 0,
         "assists": 0,
         "points": 0
