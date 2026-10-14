@@ -6,6 +6,9 @@
     "participationStartDates": {
       "Isaac Reiland": "2026-10-01"
     },
+    "missedGameCounts": {
+      "Jaxton Seefeldt": 2
+    },
     "missedGames": {
       "Aaron Young": [12, 13, 14],
       "Easton Slomski": [14],
@@ -13,7 +16,7 @@
       "Amos Arndt": [13],
       "Hunter Hasseler": [11]
     },
-    "excludeRosterNumbers": [17],
+    "excludeRosterNumbers": [0, 17],
     "gameLogCorrections": [
       {
         "game": 6,

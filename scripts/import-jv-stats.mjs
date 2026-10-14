@@ -126,8 +126,8 @@ const players = rosterRows.map((row) => {
   return {
     number: number(row["No."]),
     name,
-    gp: inactivePlayers.has(name) ? 0 : completed.filter((game) => !missedGames.has(number(game["Game #"]))
-      && (!participationStart || isoDate(game.Date) >= participationStart)).length,
+    gp: inactivePlayers.has(name) ? 0 : Math.max(0, completed.filter((game) => !missedGames.has(number(game["Game #"]))
+      && (!participationStart || isoDate(game.Date) >= participationStart)).length - (teamConfig.missedGameCounts?.[name] || 0)),
     goals: totals.goals || 0,
     assists: totals.assists || 0,
     points: (totals.goals || 0) * 2 + (totals.assists || 0),
