@@ -122,10 +122,12 @@ const players = rosterRows.map((row) => {
   const key = text(row["Player Key (auto)"]) || `${number(row["No."])} - ${name}`
   const totals = playerTotals.get(key) || { goals: 0, assists: 0 }
   const missedGames = new Set(teamConfig.missedGames?.[name] || [])
+  const participationStart = teamConfig.participationStartDates?.[name]
   return {
     number: number(row["No."]),
     name,
-    gp: inactivePlayers.has(name) ? 0 : completed.filter((game) => !missedGames.has(number(game["Game #"]))).length,
+    gp: inactivePlayers.has(name) ? 0 : completed.filter((game) => !missedGames.has(number(game["Game #"]))
+      && (!participationStart || isoDate(game.Date) >= participationStart)).length,
     goals: totals.goals || 0,
     assists: totals.assists || 0,
     points: (totals.goals || 0) * 2 + (totals.assists || 0),
