@@ -3,20 +3,20 @@
     "slug": "hudson",
     "name": "Hudson",
     "logo": "/scouting/hudson.png",
-    "reportDate": "2026-10-03",
-    "resultsThrough": "2026-10-02",
-    "ratingsAsOf": "2026-10-02",
+    "reportDate": "2026-10-15",
+    "resultsThrough": "2026-10-13",
+    "ratingsAsOf": "2026-10-15",
     "record": {
-      "w": 12,
+      "w": 15,
       "l": 1,
-      "d": 1,
-      "gf": 64,
-      "ga": 11
+      "d": 2,
+      "gf": 81,
+      "ga": 12
     },
-    "rating": 2048.3,
-    "sos": 1672.4,
-    "rank": 4,
-    "assessment": "A state contender with a rating edge over Hortonville, not a calibrated win probability. Wisconsin top-40 results are 4–0–1, goals 17–4. Four main scorers account for 48 of 64 goals and 16 of 17 against that stronger Wisconsin group.",
+    "rating": 2049.86,
+    "sos": 1695.51,
+    "rank": 3,
+    "assessment": "A possible sectional-final opponent, now 15–1–2 with 81 goals for and 12 against. Their last four recorded results are a 1–1 draw with DeForest, 8–0 over River Falls, 7–0 over New Richmond and the 1–0 Rice Lake forfeit. The forfeit adds a result but supplies no tactical evidence. Review the River Falls and New Richmond matches for current attacking patterns; player figures below remain the earlier supplied snapshot.",
     "players": [
       {
         "number": "18",
@@ -54,7 +54,8 @@
     "approach": [
       "Proposed: identify the supply to Lessard and Wiseman before assigning marking responsibilities.",
       "Confirm whether Cook and Van Haute create wide, combine centrally or arrive late. Roster labels do not establish actual deployment.",
-      "Reduce the quality of Hudson’s chances; use film to decide where to press and how much space to leave behind."
+      "Reduce the quality of Hudson’s chances; use film to decide where to press and how much space to leave behind.",
+      "Use the October 6 River Falls and October 8 New Richmond wins to check current personnel and patterns. Exclude the Rice Lake forfeit from tactical conclusions."
     ],
     "video": [
       {
@@ -75,8 +76,7 @@
     ],
     "gaps": [
       "Player totals come from the corrected coach ledger referenced in Hudson Raiders.docx; the underlying ledger has not been supplied.",
-      "October 3 DeForest match is excluded. Minnesota and Wisconsin rank numbers are not directly comparable. Formations and availability need film or coach confirmation.",
-      "August 22 East Ridge and August 24 Stillwater are scrimmages and excluded from the competitive record. Tournament opponents are TBD; times and venues need confirmation."
+      "October 13 Rice Lake is recorded as a 1-0 forfeit on Bound. Count it in the record; do not treat it as evidence of chance creation or defensive performance. Regional opener: Eau Claire North on October 20; later rounds remain conditional."
     ],
     "matches": [
       {
@@ -99,7 +99,7 @@
       },
       {
         "date": "2026-09-03",
-        "opponent": "Minneapolis Southwest",
+        "opponent": "Minneapolis Southwest (MN)",
         "gf": 5,
         "ga": 2
       },
@@ -129,7 +129,7 @@
       },
       {
         "date": "2026-09-19",
-        "opponent": "Hill-Murray",
+        "opponent": "Hill-Murray (MN)",
         "gf": 0,
         "ga": 1
       },
@@ -141,13 +141,13 @@
       },
       {
         "date": "2026-09-25",
-        "opponent": "Stevens Point",
+        "opponent": "SPASH",
         "gf": 4,
         "ga": 0
       },
       {
         "date": "2026-09-26",
-        "opponent": "D.C. Everest",
+        "opponent": "DC Everest",
         "gf": 8,
         "ga": 0
       },
@@ -162,33 +162,37 @@
         "opponent": "Oregon",
         "gf": 5,
         "ga": 0
-      }
-    ],
-    "upcoming": [
+      },
       {
         "date": "2026-10-03",
         "opponent": "DeForest Area",
-        "detail": "10 AM CT · no result supplied"
+        "gf": 1,
+        "ga": 1
       },
       {
         "date": "2026-10-06",
         "opponent": "River Falls",
-        "detail": "Away · 7 PM CT"
+        "gf": 8,
+        "ga": 0
       },
       {
         "date": "2026-10-08",
         "opponent": "New Richmond",
-        "detail": "Home · 7 PM CT"
+        "gf": 7,
+        "ga": 0
       },
       {
         "date": "2026-10-13",
         "opponent": "Rice Lake",
-        "detail": "Home · 7 PM CT"
-      },
+        "gf": 1,
+        "ga": 0
+      }
+    ],
+    "upcoming": [
       {
         "date": "2026-10-20",
-        "opponent": "TBD",
-        "detail": "WIAA Regional · listed 7 PM CT"
+        "opponent": "Eau Claire North",
+        "detail": "Home · October 20 regional opener · confirm kickoff with school schedule"
       },
       {
         "date": "2026-10-24",
@@ -224,9 +228,17 @@
       {
         "label": "Bound schedule pasted by coach; results through October 2",
         "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/hudson/v"
+      },
+      {
+        "label": "StatsPlus team results checked October 15, 2026; ratings checked the same day",
+        "url": "https://soccer.statsplus.net/rankings/team/50336/"
+      },
+      {
+        "label": "Bound schedule checked October 15; Rice Lake listed as a 1-0 forfeit",
+        "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/hudson/v/schedule"
       }
     ],
-    "playerSource": "Hudson Raiders.docx and its referenced corrected coach scorer ledger",
+    "playerSource": "Hudson Raiders.docx and its referenced corrected coach scorer ledger; player figures retained from the prior report (team results previously through 2026-10-02); October 15 refresh updates team scores and ratings only",
     "conferenceContext": null,
     "playerStatsMinimums": false
   },
@@ -234,20 +246,20 @@
     "slug": "de-pere",
     "name": "De Pere",
     "logo": "/scouting/de-pere.png",
-    "reportDate": "2026-10-03",
-    "resultsThrough": "2026-10-01",
-    "ratingsAsOf": "2026-10-02",
+    "reportDate": "2026-10-15",
+    "resultsThrough": "2026-10-15",
+    "ratingsAsOf": "2026-10-15",
     "record": {
-      "w": 11,
-      "l": 1,
+      "w": 16,
+      "l": 2,
       "d": 0,
-      "gf": 53,
-      "ga": 6
+      "gf": 83,
+      "ga": 12
     },
-    "rating": 2011.84,
-    "sos": 1718.1,
-    "rank": 6,
-    "assessment": "The strongest current Group B case: a 3–2 win over Hortonville, ten shutouts in twelve matches, and a higher rating. Skurka and Shanda supply 37 of 53 goals, about 70%; prepare for both the provider and the runner.",
+    "rating": 2016.72,
+    "sos": 1700.13,
+    "rank": 5,
+    "assessment": "De Pere finishes the reported regular-season ledger 16–2–0, goals 83–12, with 13 shutouts. Since October 1: wins over Green Bay Southwest (9–0), Ashwaubenon (9–1), Appleton North (4–0), Appleton East (5–3) and Kohler (2–0), plus a 1–2 loss to Kenosha Tremper. Our 2–3 loss remains the direct preparation reference. The Tremper loss and three goals conceded against Appleton East warrant film review; scorelines alone do not identify the cause. The earlier Skurka/Shanda totals below have not been refreshed.",
     "players": [
       {
         "number": "1",
@@ -460,8 +472,9 @@
     ],
     "approach": [
       "Proposed: deny Skurka easy forward-facing receptions while preserving cover against Shanda. Confirm the screening and stepping assignments within our 3-5-2 on film.",
-      "Use the September 19 match to identify repeatable ways we created chances. Ten shutouts give no basis for assuming direct balls will work.",
-      "Track spacing and concentration late in each half; reported second-half scoring does not establish fatigue as the cause."
+      "Use the September 19 match to identify repeatable ways we created chances. The defensive record gives no basis for assuming direct balls will work.",
+      "Track spacing and concentration late in each half; reported second-half scoring does not establish fatigue as the cause.",
+      "Prioritize the October 10 Kenosha Tremper loss (1–2) and October 13 Appleton East win (5–3). Identify the actual chance sequences before drawing conclusions about defensive weaknesses."
     ],
     "video": [
       {
@@ -482,7 +495,7 @@
     ],
     "gaps": [
       "Shot entries are incomplete; omit shooting efficiency conclusions. Bound lists two penalty makes and zero attempts.",
-      "Bound team saves (25) differ from MaxPreps Baumgardt saves (26). His listed individual shutout is not the team total of ten.",
+      "Bound team saves (25) differ from MaxPreps Baumgardt saves (26). His listed individual shutout is not the earlier team total of ten.",
       "Formations, injuries and set-piece assignments remain unverified."
     ],
     "matches": [
@@ -524,7 +537,7 @@
       },
       {
         "date": "2026-09-17",
-        "opponent": "D.C. Everest",
+        "opponent": "DC Everest",
         "gf": 4,
         "ga": 0
       },
@@ -557,13 +570,49 @@
         "opponent": "Pulaski",
         "gf": 2,
         "ga": 0
+      },
+      {
+        "date": "2026-10-06",
+        "opponent": "Green Bay Southwest",
+        "gf": 9,
+        "ga": 0
+      },
+      {
+        "date": "2026-10-08",
+        "opponent": "Ashwaubenon",
+        "gf": 9,
+        "ga": 1
+      },
+      {
+        "date": "2026-10-09",
+        "opponent": "Appleton North",
+        "gf": 4,
+        "ga": 0
+      },
+      {
+        "date": "2026-10-10",
+        "opponent": "Kenosha Tremper",
+        "gf": 1,
+        "ga": 2
+      },
+      {
+        "date": "2026-10-13",
+        "opponent": "Appleton East",
+        "gf": 5,
+        "ga": 3
+      },
+      {
+        "date": "2026-10-15",
+        "opponent": "Kohler",
+        "gf": 2,
+        "ga": 0
       }
     ],
     "upcoming": [
       {
-        "date": "2026-10-09",
-        "opponent": "Appleton North",
-        "detail": "Venue and time need confirmation"
+        "date": "2026-10-20",
+        "opponent": "Appleton West",
+        "detail": "Home · October 20 regional opener · confirm kickoff with school schedule"
       }
     ],
     "sources": [
@@ -578,9 +627,13 @@
       {
         "label": "MaxPreps statistics, last updated October 1",
         "url": "https://www.maxpreps.com/wi/de-pere/de-pere-redbirds/soccer/stats/"
+      },
+      {
+        "label": "StatsPlus team results checked October 15, 2026; ratings checked the same day",
+        "url": "https://soccer.statsplus.net/rankings/team/50325/"
       }
     ],
-    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed",
+    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed; player figures retained from the prior report (team results previously through 2026-10-01); October 15 refresh updates team scores and ratings only",
     "conferenceContext": null,
     "playerStatsMinimums": false
   },
@@ -588,20 +641,20 @@
     "slug": "appleton-north",
     "name": "Appleton North",
     "logo": "/scouting/appleton-north.png",
-    "reportDate": "2026-10-03",
-    "resultsThrough": "2026-10-01",
-    "ratingsAsOf": "2026-10-02",
+    "reportDate": "2026-10-15",
+    "resultsThrough": "2026-10-10",
+    "ratingsAsOf": "2026-10-15",
     "record": {
-      "w": 8,
-      "l": 3,
+      "w": 10,
+      "l": 4,
       "d": 2,
-      "gf": 39,
-      "ga": 18
+      "gf": 48,
+      "ga": 25
     },
-    "rating": 1811.51,
-    "sos": 1674.31,
-    "rank": 35,
-    "assessment": "A credible but inconsistent opponent. Our 5–1 win matters, as does their 4–3 win over Neenah. Goals are distributed across several players rather than concentrated in one dominant scorer.",
+    "rating": 1808.83,
+    "sos": 1683.47,
+    "rank": 40,
+    "assessment": "The verified ledger is 10–4–2, goals 48–25. North followed the 4–1 Fond du Lac win with a 0–4 loss to De Pere and 5–2 win over Wausau West. Our 5–1 win and their 4–3 Neenah win remain useful contrasting preparation references. No verified October 15 Hartford result is available; it is excluded. North hosts SPASH in the October 20 regional opener.",
     "players": [
       {
         "number": "0",
@@ -795,9 +848,10 @@
       }
     ],
     "gaps": [
-      "All 39 reported goals reconcile with results. Shots equal goals; shooting percentages are not reliable.",
+      "The earlier 39-goal player snapshot reconciled with its original results cutoff; the updated match ledger has 48 goals. Shots equal goals; shooting percentages are not reliable.",
       "Three penalty makes against two attempts conflict. Goalkeeper goals allowed total 15 against 18 in results.",
-      "Wilke: 605 minutes, 8 GA, 13 saves. Van Groll: 435 minutes, 7 GA, 13 saves. Coverage and current starter need confirmation."
+      "Wilke: 605 minutes, 8 GA, 13 saves. Van Groll: 435 minutes, 7 GA, 13 saves. Coverage and current starter need confirmation.",
+      "October 15 at Hartford has no verified final score and is excluded from the record. Check the school schedule before treating the regular-season ledger as complete."
     ],
     "matches": [
       {
@@ -877,18 +931,31 @@
         "opponent": "Neenah",
         "gf": 4,
         "ga": 3
-      }
-    ],
-    "upcoming": [
+      },
+      {
+        "date": "2026-10-06",
+        "opponent": "Fond du Lac",
+        "gf": 4,
+        "ga": 1
+      },
       {
         "date": "2026-10-09",
         "opponent": "De Pere",
-        "detail": "Venue and time need confirmation"
+        "gf": 0,
+        "ga": 4
       },
       {
         "date": "2026-10-10",
         "opponent": "Wausau West",
-        "detail": "Venue and time need confirmation"
+        "gf": 5,
+        "ga": 2
+      }
+    ],
+    "upcoming": [
+      {
+        "date": "2026-10-20",
+        "opponent": "SPASH",
+        "detail": "Home · October 20 regional opener · confirm kickoff with school schedule"
       }
     ],
     "sources": [
@@ -899,9 +966,13 @@
       {
         "label": "Bound roster and statistics supplied by coach",
         "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonno/v/stats"
+      },
+      {
+        "label": "StatsPlus team results checked October 15, 2026; ratings checked the same day",
+        "url": "https://soccer.statsplus.net/rankings/team/50315/"
       }
     ],
-    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed",
+    "playerSource": "Coach-supplied roster and Bound statistics; snapshot cutoff not independently confirmed; player figures retained from the prior report (team results previously through 2026-10-01); October 15 refresh updates team scores and ratings only",
     "conferenceContext": null,
     "playerStatsMinimums": false
   },
@@ -909,20 +980,20 @@
     "slug": "preble",
     "name": "Green Bay Preble",
     "logo": "/scouting/preble.png",
-    "reportDate": "2026-10-09",
-    "resultsThrough": "2026-10-08",
-    "ratingsAsOf": "2026-10-09",
+    "reportDate": "2026-10-15",
+    "resultsThrough": "2026-10-15",
+    "ratingsAsOf": "2026-10-15",
     "record": {
-      "w": 11,
+      "w": 12,
       "l": 3,
       "d": 3,
-      "gf": 46,
+      "gf": 51,
       "ga": 12
     },
     "rating": 1825.3,
-    "sos": 1680.44,
-    "rank": 31,
-    "assessment": "Potential October 24 regional-final opponent if both teams advance: #3 Preble first hosts #6 Kimberly on October 20. Through October 8: 11–3–3, goals 46–12, nine shutouts. They conceded at most one in 15 of 17 games; Hortonville and De Pere each scored three. Last five: 3–1–1, goals 13–3, including an 8–0 win over Manitowoc Lincoln and 2–1 over West De Pere. Our 3–1 win is the best direct preparation reference. Individual scoring leaders remain unknown.",
+    "sos": 1677.48,
+    "rank": 32,
+    "assessment": "Potential October 24 regional-final opponent if both teams advance: #3 Preble hosts #6 Kimberly on October 20. The recorded ledger is now 12–3–3, goals 51–12, with ten shutouts after the coach-confirmed 5–0 win over Green Bay East on October 15. Their last five recorded results are 4–0–1, goals 18–2. The October 10 Sturgeon Bay result remains unreported and is excluded. Our 3–1 win remains the primary direct preparation reference; individual scoring leaders are still unavailable.",
     "players": [
       {
         "number": "0",
@@ -1111,9 +1182,9 @@
     ],
     "approach": [
       "Proposed: use our September 17 3–1 win as the primary reference for our 3-5-2. Tag the entries and combinations that created our goals and the actions behind their goal; preserve patterns only after checking current personnel.",
-      "A defensive record of nine shutouts favors patient preparation: rehearse changes of side, controlled entries and second-ball support, then use film to decide which actually exposes their shape. Scorelines alone cannot identify their block or pressing triggers.",
+      "A defensive record of ten recorded shutouts favors patient preparation: rehearse changes of side, controlled entries and second-ball support, then use film to decide which actually exposes their shape. Scorelines alone cannot identify their block or pressing triggers.",
       "Review the October 8 West De Pere win and October 1 Bay Port draw to identify current outlets, primary chance creators and restart takers. Avoid assigning marking based on supplied roster positions alone.",
-      "Prepare to attack while keeping cover against transitions. In recent five matches Preble conceded only three, but the 8–0 Lincoln result should not be treated as evidence of how they will play against us."
+      "Prepare to attack while keeping cover against transitions. In the last five recorded matches Preble conceded only two, but the 8–0 Lincoln result should not be treated as evidence of how they will play against us."
     ],
     "video": [
       {
@@ -1135,12 +1206,11 @@
     "gaps": [
       "Official roster confirms 23 players, listed positions and grades. Current individual goals, assists and named goalkeeper totals remain unavailable; blank stat tables do not establish zero production. #3/99 name order follows the PDF column headers but should be confirmed on the match sheet.",
       "FRCC overall table lists Preble at 9–3–3 while its own listed results through October 6 total 10–3–3. The October 8 West De Pere win brings the current ledger to 11–3–3. Bay Port’s published 5–7–3 omits its October 8 draw with Notre Dame; current ledger is 5–7–4.",
-      "WIAA schedule summary shows 10–3–4 while StatsPlus match results produce 11–3–3; use the reconciled 17-game ledger (46–12) here and resolve the individual game discrepancy before citing the WIAA aggregate.",
       "September 17 supplied venue says De Pere High School despite the opponent/home-away designation. Venue remains unconfirmed; preserve the verified 3–1 result.",
       "Hudl lists current 2026 broadcasts, including October 8 West De Pere and October 1 Bay Port, plus a 47-second September 17 Hortonville recap. Playback and tactical content have not been reviewed; access requirements may vary by broadcast. No dedicated boys-team Instagram/Facebook account was verified. School social posts were not reviewed for lineup evidence.",
       "The school links preblesoccer.com as its boys-team website, but the domain could not be resolved during this research. It is a historical lead, not a verified active source.",
       "Formation, starter availability and set-piece assignments require recent film or a match sheet. October 24 versus Hortonville is conditional on both teams winning their regional openers.",
-      "Hudl displays a 7–3–3 team record, which is incomplete compared with the verified 11–3–3 match ledger through October 8. Keep the match ledger as the report’s record source."
+      "October 15 Green Bay East 5-0 supplied by Andrew Montalbano; Bound and StatsPlus still lack the score. October 10 Sturgeon Bay remains unreported and is excluded. The 12-3-3 record is the sum of recorded results, not proof that every scheduled game has been reported."
     ],
     "matches": [
       {
@@ -1244,23 +1314,19 @@
         "opponent": "West De Pere",
         "gf": 2,
         "ga": 1
-      }
-    ],
-    "upcoming": [
-      {
-        "date": "2026-10-10",
-        "opponent": "Sturgeon Bay",
-        "detail": "Home · kickoff to confirm with school schedule"
       },
       {
         "date": "2026-10-15",
         "opponent": "Green Bay East",
-        "detail": "Home · kickoff to confirm with school schedule"
-      },
+        "gf": 5,
+        "ga": 0
+      }
+    ],
+    "upcoming": [
       {
         "date": "2026-10-20",
         "opponent": "Kimberly",
-        "detail": "Home · WIAA regional opener · #3 vs #6 · kickoff to confirm"
+        "detail": "Home · October 20 regional opener · confirm kickoff with school schedule"
       },
       {
         "date": "2026-10-24",
@@ -1336,9 +1402,17 @@
       {
         "label": "WIAA official Division 1 bracket · #3 Preble vs #6 Kimberly; potential regional final",
         "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
+      },
+      {
+        "label": "StatsPlus team results checked October 15, 2026; ratings checked the same day",
+        "url": "https://soccer.statsplus.net/rankings/team/50332/"
+      },
+      {
+        "label": "October 15 Green Bay East result confirmed by Andrew Montalbano",
+        "url": ""
       }
     ],
-    "playerSource": "Official 2026 Preble varsity roster supplied October 9; names follow the First and Last columns. Published individual production remains unavailable on Bound and MaxPreps",
+    "playerSource": "Official 2026 Preble varsity roster supplied October 9; names follow the First and Last columns. Published individual production remains unavailable on Bound and MaxPreps; player figures retained from the prior report (team results previously through 2026-10-08); October 15 refresh updates team scores and ratings only",
     "conferenceContext": "Published FRCC snapshot (document labeled October 8; results through October 6): 5–2–1, 11 points, goals 22–5. FRCC uses 2 points per win and 1 per tie. October 8 games are absent from this document; overall totals above use the newer reconciled ledger.",
     "playerStatsMinimums": false
   },
@@ -1346,9 +1420,9 @@
     "slug": "bay-port",
     "name": "Bay Port",
     "logo": "/scouting/bay-port.gif",
-    "reportDate": "2026-10-09",
-    "resultsThrough": "2026-10-08",
-    "ratingsAsOf": "2026-10-09",
+    "reportDate": "2026-10-15",
+    "resultsThrough": "2026-10-15",
+    "ratingsAsOf": "2026-10-15",
     "matches": [
       {
         "date": "2026-08-25",
@@ -1445,41 +1519,44 @@
         "opponent": "Notre Dame",
         "gf": 0,
         "ga": 0
-      }
-    ],
-    "record": {
-      "w": 5,
-      "l": 7,
-      "d": 4,
-      "gf": 34,
-      "ga": 37
-    },
-    "rating": 1676.85,
-    "sos": 1718.82,
-    "rank": 74,
-    "upcoming": [
+      },
       {
         "date": "2026-10-09",
         "opponent": "Sheboygan Christian/Lutheran",
-        "detail": "Away · kickoff to confirm with school schedule"
+        "gf": 1,
+        "ga": 1
       },
       {
         "date": "2026-10-13",
         "opponent": "Sun Prairie East",
-        "detail": "Home · kickoff to confirm with school schedule"
+        "gf": 0,
+        "ga": 2
       },
       {
         "date": "2026-10-15",
         "opponent": "Manitowoc Lincoln",
-        "detail": "Away · kickoff to confirm with school schedule"
-      },
+        "gf": 4,
+        "ga": 1
+      }
+    ],
+    "record": {
+      "w": 6,
+      "l": 8,
+      "d": 5,
+      "gf": 39,
+      "ga": 41
+    },
+    "rating": 1681.86,
+    "sos": 1704.33,
+    "rank": 71,
+    "upcoming": [
       {
         "date": "2026-10-20",
         "opponent": "Hortonville",
-        "detail": "Away · WIAA regional opener · #7 at #2 · kickoff to confirm"
+        "detail": "Away · October 20 regional opener · confirm kickoff with school schedule"
       }
     ],
-    "assessment": "Our October 20 regional opponent: #7 Bay Port visits #2 Hortonville. Through October 8 they are 5–7–4, goals 34–37, with four shutouts. Wettstein (15), Volmert (10) and Belanger (5) account for 30 of 34 goals (88%). Hortonville won 6–0 on September 12, but subsequent draws with Kimberly, Preble and Notre Dame show they can keep strong opponents close. Last five: 1–2–2, goals 12–10. Scorelines do not establish their formation or pressure scheme.",
+    "assessment": "Our October 20 regional opponent: #7 Bay Port visits #2 Hortonville. The updated ledger is 6–8–5, goals 39–41, with four shutouts. Since the Notre Dame draw, Bay Port drew 1–1 with Sheboygan Christian/Lutheran, lost 0–2 to Sun Prairie East and beat Manitowoc Lincoln 4–1. Last five: 1–2–2, goals 6–7. Hortonville won 6–0 on September 12, but five draws justify preparing for a level-score game. The earlier Wettstein, Volmert and Belanger totals below are historical figures, not refreshed season totals.",
     "players": [
       {
         "number": "1",
@@ -1666,13 +1743,14 @@
         "role": "Bound listed D"
       }
     ],
-    "playerSource": "Bound 2026–27 varsity roster and season totals checked October 9: 34 goals and 22 assists. All player goals reconcile with the 34 team goals through October 8; individual reporting spans up to 14 appearances, so current minutes and lineup still need confirmation",
+    "playerSource": "Bound 2026–27 varsity roster and season totals checked October 9: 34 goals and 22 assists. All player goals reconcile with the 34 team goals through October 8; individual reporting spans up to 14 appearances, so current minutes and lineup still need confirmation; player figures retained from the prior report (team results previously through 2026-10-08); October 15 refresh updates team scores and ratings only",
     "approach": [
       "Proposed for our 3-5-2: locate #17 Elijah Wettstein between lines and track #19 Grady Volmert’s runs without pulling a center back out and leaving the next runner uncovered. Use the outside center back, wingback and midfield screen together; choose assignments only after checking film.",
       "Treat #11 Cole Belanger as a third scoring threat. #5 Noah Kroll and #20 Conor Duff each have four recorded assists; identify whether their supply is open-play service, set pieces or another pattern before planning pressure.",
       "Start with our September 12 full match. Tag which entries produced the six goals and which Bay Port attacks required intervention. Then compare October 8 against Notre Dame to see what personnel, spacing or defensive behavior changed.",
       "Prepare both attacking and defending restarts. Wettstein’s self-posted recruiting profile includes a free-kick clip, but it does not prove that he takes every current restart. Confirm takers and targets from recent varsity film.",
-      "Keep cover behind attacks and rehearse a level-score scenario. Four draws and the recent 0–0 against Notre Dame justify preparing for a close game; the earlier 6–0 does not determine the rematch."
+      "Keep cover behind attacks and rehearse a level-score scenario. Five draws and the recent 0–0 against Notre Dame justify preparing for a close game; the earlier 6–0 does not determine the rematch.",
+      "Compare the October 13 Sun Prairie East 0–2 loss and October 15 Manitowoc Lincoln 4–1 win for current starters, how #17 and #19 connect, and the cover behind attacks. The scorelines alone do not establish tactical changes."
     ],
     "video": [
       {
@@ -1696,7 +1774,7 @@
       "Bound shows zero shots and shots on goal despite 34 goals; omit conversion and shooting-efficiency claims. Goalkeeping is an empty team placeholder: zero minutes/saves is missing coverage, not a real performance total.",
       "MaxPreps current roster is empty and current stats have no individual leaders. Search-engine copies sometimes show 2025–26; 2025 PDFs, Woodlens Frederic and other graduated players are excluded from the current roster.",
       "No dedicated current boys-team Instagram or Facebook account was verified. School-linked district accounts are included for announcements, not tactical evidence. Social post details have not been independently checked.",
-      "The October 9 Sheboygan Christian/Lutheran result is not in this snapshot. Confirm kickoff and field for October 20 with WIAA/Hortonville; no time is assumed."
+      "October 9, 13 and 15 team results are now included. Individual totals remain the October 9 Bound snapshot; no scorer attribution was inferred for the five additional team goals."
     ],
     "sources": [
       {
@@ -1758,6 +1836,10 @@
       {
         "label": "WIAA official Division 1 Sectionals 1 & 2 bracket",
         "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
+      },
+      {
+        "label": "StatsPlus team results checked October 15, 2026; ratings checked the same day",
+        "url": "https://soccer.statsplus.net/rankings/team/50319/"
       }
     ],
     "conferenceContext": "Published FRCC snapshot (document labeled October 8; results through October 6): 3–3–1, 7 points, goals 16–15. FRCC uses 2 points per win and 1 per tie. October 8 games are absent from this document; overall totals above use the newer reconciled ledger.",
@@ -1767,9 +1849,9 @@
     "slug": "kimberly",
     "name": "Kimberly",
     "logo": "/scouting/kimberly.png",
-    "reportDate": "2026-10-09",
+    "reportDate": "2026-10-15",
     "resultsThrough": "2026-10-06",
-    "ratingsAsOf": "2026-10-09",
+    "ratingsAsOf": "2026-10-15",
     "record": {
       "w": 5,
       "l": 8,
@@ -1777,13 +1859,13 @@
       "gf": 26,
       "ga": 28
     },
-    "rating": 1663,
-    "sos": 1754.8,
+    "rating": 1662.96,
+    "sos": 1753.05,
     "rank": 79,
-    "assessment": "Six shutouts and a 0–0 against Bay Port show that Kimberly can keep a game tight. Scoring is uneven: 16 of 26 goals came against Appleton West and Kingsford; the other 14 results produced 10 goals. Hortonville won 3–0 on October 1. Treat that result as preparation evidence, not a guarantee of a repeat.",
-    "conferenceContext": "FVA: 4–4–1, 16 goals for and 13 against through October 6. StatsPlus lists Kimberly #41 in Division 1 and #12 in this sectional. Seed #6 visits #3 Preble October 20; a Hortonville meeting October 24 requires both teams to advance.",
+    "assessment": "The verified ledger remains 5–8–3, goals 26–28, with six shutouts. The October 9 Beloit Memorial fixture is confirmed cancelled, so it adds no game or result. Kimberly visits #3 Preble as the #6 seed on October 20. Sixteen of its 26 goals came against Appleton West and Kingsford; the other 14 recorded results produced ten goals. Our October 1 3–0 win and Kimberly’s 0–0 Bay Port draw remain useful preparation references.",
+    "conferenceContext": "FVA: 4–4–1, 16 goals for and 13 against through October 6. StatsPlus lists Kimberly #40 in Division 1 and #12 in this sectional. Seed #6 visits #3 Preble October 20; a Hortonville meeting October 24 requires both teams to advance.",
     "playerStatsMinimums": true,
-    "playerSource": "Verified scoring minimums from six team Instagram result graphics, covering 23 of 26 team goals; full names for Leskowicz, Brey, Kreidler and Collett also confirmed by September 2 local reporting. These are not season totals. Initials remain where full names are unconfirmed",
+    "playerSource": "Verified scoring minimums from six team Instagram result graphics, covering 23 of 26 team goals; full names for Leskowicz, Brey, Kreidler and Collett also confirmed by September 2 local reporting. These are not season totals. Initials remain where full names are unconfirmed; player figures retained from the prior report (team results previously through 2026-10-06); October 15 refresh updates team scores and ratings only",
     "players": [
       {
         "name": "Andrew Leskowicz",
@@ -1945,7 +2027,7 @@
     "matches": [
       {
         "date": "2026-08-25",
-        "opponent": "Preble",
+        "opponent": "Green Bay Preble",
         "gf": 0,
         "ga": 0
       },
@@ -2043,8 +2125,8 @@
     "upcoming": [
       {
         "date": "2026-10-20",
-        "opponent": "at Preble",
-        "detail": "WIAA regional semifinal · #6 at #3 · 7 p.m. CT"
+        "opponent": "Green Bay Preble",
+        "detail": "Away · October 20 regional opener · confirm kickoff with school schedule"
       }
     ],
     "sources": [
@@ -2107,6 +2189,10 @@
       {
         "label": "WIAA 2026 Division 1 Sectionals 1 & 2 bracket",
         "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
+      },
+      {
+        "label": "StatsPlus team results checked October 15, 2026; ratings checked the same day",
+        "url": "https://soccer.statsplus.net/rankings/team/50343/"
       }
     ]
   },
@@ -2114,23 +2200,23 @@
     "slug": "eau-claire-memorial",
     "name": "Eau Claire Memorial",
     "logo": "/scouting/eau-claire-memorial.png",
-    "reportDate": "2026-10-09",
-    "resultsThrough": "2026-10-06",
-    "ratingsAsOf": "2026-10-09",
+    "reportDate": "2026-10-15",
+    "resultsThrough": "2026-10-13",
+    "ratingsAsOf": "2026-10-15",
     "record": {
-      "w": 6,
+      "w": 7,
       "l": 7,
       "d": 2,
-      "gf": 43,
+      "gf": 54,
       "ga": 28
     },
-    "rating": 1815.4,
-    "sos": 1745.6,
+    "rating": 1815.37,
+    "sos": 1757.65,
     "rank": 35,
-    "assessment": "Recent results warrant attention: 4–1–1 with 22 goals for and five against over the last six matches, including shutouts of D.C. Everest and Stevens Point. Earlier losses to Hudson (0–5), Waunakee (3–4) and Monona Grove (3–4) provide contrasting review material. Drew Hudson scored six goals across the last two reported matches; do not mistake those minimums for complete season totals.",
-    "conferenceContext": "Big Rivers: 4–2–0, 24 goals for and seven against through October 6. StatsPlus lists Memorial #22 in Division 1 and #5 in this sectional. Seed #2 hosts #7 Chippewa Falls October 20. A Hortonville meeting would require both teams to reach the October 31 sectional final at D.C. Everest Middle School.",
+    "assessment": "Memorial’s updated match ledger is 7–7–2, goals 54–28, using the 11–0 Menomonie result reported by MaxPreps and the Leader-Telegram. Bound lists 10–0 for that game; the score discrepancy remains flagged. Last six recorded results: 4–1–1, goals 28–5, including shutouts of SPASH, Eau Claire North, Rice Lake and Menomonie. Large wins establish scoring output, not the shape or pressure scheme. #2 Memorial hosts #7 Chippewa Falls on October 20.",
+    "conferenceContext": "Big Rivers: 5–2–0 through October 13; 35 goals for and seven against using the reported 11–0 Menomonie score (Bound instead lists 10–0). StatsPlus checked October 15 lists Memorial #23 in Division 1. Seed #2 hosts #7 Chippewa Falls October 20. A Hortonville meeting requires both teams to reach the October 31 sectional final at D.C. Everest Middle School.",
     "playerStatsMinimums": true,
-    "playerSource": "Verified scoring minimums from September 29 Eau Claire North and October 6 Rice Lake local reports, covering 13 of 43 team goals; class years from those current reports. The user identified the supplied Hudl roster as outdated, so its names and numbers are excluded",
+    "playerSource": "Verified scoring minimums from September 29 Eau Claire North and October 6 Rice Lake local reports, covering 13 of 43 team goals; class years from those current reports. The user identified the supplied Hudl roster as outdated, so its names and numbers are excluded; player figures retained from the prior report (team results previously through 2026-10-06); October 15 refresh updates team scores and ratings only",
     "players": [
       {
         "name": "Drew Hudson",
@@ -2207,7 +2293,8 @@
       "Complete current roster and jersey numbers remain unconfirmed. Bound has no populated current roster or player stats; the supplied Hudl roster is outdated.",
       "Player counts cover two matches only. Unreported assists are unavailable rather than zero; season goalkeeper statistics are unavailable.",
       "August 22 Superior was a scrimmage; the postponed Immanuel Lutheran fixture has no result. Neither is counted.",
-      "MaxPreps results are incomplete compared with reconciled Bound and StatsPlus results. No tactical film observations have been verified."
+      "MaxPreps results are incomplete compared with reconciled Bound and StatsPlus results. No tactical film observations have been verified.",
+      "October 13 Menomonie score conflict: Bound lists 10-0; the October 14 Leader-Telegram report and MaxPreps recap both list 11-0. This report uses 11-0 pending reconciliation. MaxPreps’ aggregate 7-6-2 omits a loss present in the 16-game ledger; retain the reconciled 7-7-2 record."
     ],
     "matches": [
       {
@@ -2218,7 +2305,7 @@
       },
       {
         "date": "2026-08-28",
-        "opponent": "Preble",
+        "opponent": "Green Bay Preble",
         "gf": 1,
         "ga": 4
       },
@@ -2266,13 +2353,13 @@
       },
       {
         "date": "2026-09-25",
-        "opponent": "D.C. Everest",
+        "opponent": "DC Everest",
         "gf": 5,
         "ga": 0
       },
       {
         "date": "2026-09-26",
-        "opponent": "Stevens Point",
+        "opponent": "SPASH",
         "gf": 2,
         "ga": 0
       },
@@ -2299,18 +2386,19 @@
         "opponent": "Rice Lake",
         "gf": 8,
         "ga": 0
+      },
+      {
+        "date": "2026-10-13",
+        "opponent": "Menomonie",
+        "gf": 11,
+        "ga": 0
       }
     ],
     "upcoming": [
       {
-        "date": "2026-10-13",
-        "opponent": "Menomonie",
-        "detail": "Home · Memorial turf · 7 p.m. CT"
-      },
-      {
         "date": "2026-10-20",
         "opponent": "Chippewa Falls",
-        "detail": "Home · WIAA regional semifinal · #2 hosts #7 · 7 p.m. CT"
+        "detail": "Home · October 20 regional opener · confirm kickoff with school schedule"
       }
     ],
     "sources": [
@@ -2349,6 +2437,18 @@
       {
         "label": "WIAA 2026 Division 1 Sectionals 1 & 2 bracket",
         "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
+      },
+      {
+        "label": "StatsPlus team results checked October 15, 2026; ratings checked the same day",
+        "url": "https://soccer.statsplus.net/rankings/team/50327/"
+      },
+      {
+        "label": "October 13 Menomonie 11-0 result: MaxPreps recap; Bound score differs",
+        "url": "https://www.maxpreps.com/m/news/5lOfkYYiMEy0Kccx-ea6IQ/soccer-recap-eau-claire-memorial-drops-season-high-score-on-menomonie.htm"
+      },
+      {
+        "label": "Leader-Telegram October 14 match report: Memorial 11-0 Menomonie; syndicated by Yahoo",
+        "url": "https://staging-aws.sports.yahoo.com/articles/memorial-boys-soccer-team-rolls-035900328.html"
       }
     ]
   }
