@@ -1,7 +1,7 @@
 {
   "source": "https://soccer.statsplus.net/rankings/conference/5637/",
-  "updated": "2026-10-07",
-  "notes": "FVA conference-only records from StatsPlus, refreshed October 7. Hortonville’s October 6 win at Kaukauna (2-0) is added to both teams from MaxPreps because StatsPlus has not posted it yet.",
+  "updated": "2026-10-18",
+  "notes": "Final nine-game conference records checked against StatsPlus October 18. FVA standings use 2 points per win and 1 per draw. Neenah finishes third after its October 8 win over Appleton West; Oshkosh North finishes eighth and Oshkosh West sixth.",
   "standings": [
     {
       "Team": "Hortonville",
@@ -16,22 +16,16 @@
       "T": 0
     },
     {
-      "Team": "Appleton East",
-      "W": 6,
-      "L": 3,
-      "T": 0
-    },
-    {
       "Team": "Neenah",
-      "W": 5,
+      "W": 6,
       "L": 2,
       "T": 1
     },
     {
-      "Team": "Oshkosh West",
-      "W": 4,
+      "Team": "Appleton East",
+      "W": 6,
       "L": 3,
-      "T": 2
+      "T": 0
     },
     {
       "Team": "Kimberly",
@@ -40,10 +34,22 @@
       "T": 1
     },
     {
+      "Team": "Oshkosh West",
+      "W": 3,
+      "L": 4,
+      "T": 2
+    },
+    {
       "Team": "Fond du Lac",
       "W": 3,
       "L": 5,
       "T": 1
+    },
+    {
+      "Team": "Oshkosh North",
+      "W": 3,
+      "L": 6,
+      "T": 0
     },
     {
       "Team": "Kaukauna",
@@ -52,15 +58,9 @@
       "T": 0
     },
     {
-      "Team": "Oshkosh North",
-      "W": 2,
-      "L": 7,
-      "T": 0
-    },
-    {
       "Team": "Appleton West",
       "W": 0,
-      "L": 8,
+      "L": 9,
       "T": 0
     }
   ],

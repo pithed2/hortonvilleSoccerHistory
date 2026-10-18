@@ -1,22 +1,22 @@
 {
   "season": 2026,
-  "checkedAt": "2026-10-07",
-  "resultsThrough": "2026-10-06",
+  "checkedAt": "2026-10-18",
+  "resultsThrough": "2026-10-13",
   "coverage": [
     {
       "team": "Hortonville",
       "available": true,
       "source": "https://v0-hortonville-soccer-history.vercel.app/seasons/2026#schedule",
       "conferenceSource": "https://v0-hortonville-soccer-history.vercel.app/seasons/2026#schedule",
-      "checkedAt": "2026-10-07",
-      "resultsThrough": "2026-10-06"
+      "checkedAt": "2026-10-18",
+      "resultsThrough": "2026-10-13"
     },
     {
       "team": "Appleton North",
       "available": true,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonno/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonno/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "Published Bound totals; individual game reporting may be incomplete."
     },
     {
@@ -24,7 +24,7 @@
       "available": true,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/neenah/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/neenah/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "Published Bound totals; individual game reporting may be incomplete."
     },
     {
@@ -32,7 +32,7 @@
       "available": true,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonea/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonea/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "Published Bound totals; individual game reporting may be incomplete."
     },
     {
@@ -40,7 +40,7 @@
       "available": false,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kimberly/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kimberly/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "No individual athlete rows published; totals remain unavailable, not zero."
     },
     {
@@ -48,7 +48,7 @@
       "available": false,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshwes/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshwes/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "No individual athlete rows published; totals remain unavailable, not zero."
     },
     {
@@ -56,7 +56,7 @@
       "available": false,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/fonddulac/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/fonddulac/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "No individual athlete rows published; totals remain unavailable, not zero."
     },
     {
@@ -64,7 +64,7 @@
       "available": true,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kaukauna/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/kaukauna/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "Published Bound totals; individual game reporting may be incomplete."
     },
     {
@@ -72,7 +72,7 @@
       "available": false,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshnor/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/oshkoshnor/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "No individual athlete rows published; totals remain unavailable, not zero."
     },
     {
@@ -80,7 +80,7 @@
       "available": false,
       "source": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonwe/v/stats",
       "conferenceSource": "https://www.gobound.com/wi/wiaa/bsc/2026-27/appletonwe/v/stats?competitor=athlete&range=conference&block=total",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "note": "No individual athlete rows published; totals remain unavailable, not zero."
     }
   ],
@@ -225,9 +225,9 @@
       "name": "Ivan Vera",
       "team": "Appleton East",
       "overall": {
-        "goals": 4,
+        "goals": 5,
         "assists": 3,
-        "points": 11
+        "points": 13
       },
       "conference": {
         "goals": 3,
@@ -285,9 +285,9 @@
       "name": "Levi Boegh",
       "team": "Appleton East",
       "overall": {
-        "goals": 4,
+        "goals": 5,
         "assists": 3,
-        "points": 11
+        "points": 13
       },
       "conference": {
         "goals": 4,
@@ -300,9 +300,9 @@
       "name": "Lungwe Ramadhani",
       "team": "Appleton East",
       "overall": {
-        "goals": 9,
-        "assists": 3,
-        "points": 21
+        "goals": 10,
+        "assists": 4,
+        "points": 24
       },
       "conference": {
         "goals": 8,
@@ -450,9 +450,9 @@
       "name": "Bennett Vande Hey",
       "team": "Appleton North",
       "overall": {
-        "goals": 3,
+        "goals": 4,
         "assists": 1,
-        "points": 7
+        "points": 9
       },
       "conference": {
         "goals": 2,
@@ -465,9 +465,9 @@
       "name": "Cal Greer",
       "team": "Appleton North",
       "overall": {
-        "goals": 1,
+        "goals": 2,
         "assists": 1,
-        "points": 3
+        "points": 5
       },
       "conference": {
         "goals": 1,
@@ -556,8 +556,8 @@
       "team": "Appleton North",
       "overall": {
         "goals": 2,
-        "assists": 2,
-        "points": 6
+        "assists": 3,
+        "points": 7
       },
       "conference": {
         "goals": 2,
@@ -570,9 +570,9 @@
       "name": "Evan Apostolou",
       "team": "Appleton North",
       "overall": {
-        "goals": 5,
+        "goals": 6,
         "assists": 6,
-        "points": 16
+        "points": 18
       },
       "conference": {
         "goals": 4,
@@ -600,9 +600,9 @@
       "name": "Henry Martin",
       "team": "Appleton North",
       "overall": {
-        "goals": 2,
+        "goals": 3,
         "assists": 2,
-        "points": 6
+        "points": 8
       },
       "conference": {
         "goals": 1,
@@ -631,8 +631,8 @@
       "team": "Appleton North",
       "overall": {
         "goals": 2,
-        "assists": 6,
-        "points": 10
+        "assists": 8,
+        "points": 12
       },
       "conference": {
         "goals": 1,
@@ -661,8 +661,8 @@
       "team": "Appleton North",
       "overall": {
         "goals": 1,
-        "assists": 3,
-        "points": 5
+        "assists": 4,
+        "points": 6
       },
       "conference": {
         "goals": 0,
@@ -705,9 +705,9 @@
       "name": "Parker Brooks",
       "team": "Appleton North",
       "overall": {
-        "goals": 5,
+        "goals": 6,
         "assists": 2,
-        "points": 12
+        "points": 14
       },
       "conference": {
         "goals": 3,
@@ -765,9 +765,9 @@
       "name": "Anthony Zanon",
       "team": "Hortonville",
       "overall": {
-        "goals": 5,
+        "goals": 6,
         "assists": 5,
-        "points": 15
+        "points": 17
       },
       "conference": {
         "goals": 2,
@@ -795,9 +795,9 @@
       "name": "Ben Diedrich",
       "team": "Hortonville",
       "overall": {
-        "goals": 6,
+        "goals": 7,
         "assists": 6,
-        "points": 18
+        "points": 20
       },
       "conference": {
         "goals": 3,
@@ -885,9 +885,9 @@
       "name": "Fenton Hirschi",
       "team": "Hortonville",
       "overall": {
-        "goals": 9,
-        "assists": 12,
-        "points": 30
+        "goals": 10,
+        "assists": 13,
+        "points": 33
       },
       "conference": {
         "goals": 9,
@@ -945,9 +945,9 @@
       "name": "Noah Rindt",
       "team": "Hortonville",
       "overall": {
-        "goals": 11,
-        "assists": 5,
-        "points": 27
+        "goals": 12,
+        "assists": 6,
+        "points": 30
       },
       "conference": {
         "goals": 5,
@@ -976,8 +976,8 @@
       "team": "Hortonville",
       "overall": {
         "goals": 10,
-        "assists": 4,
-        "points": 24
+        "assists": 5,
+        "points": 25
       },
       "conference": {
         "goals": 5,
@@ -1061,6 +1061,51 @@
       }
     },
     {
+      "id": "Kaukauna|Brody Anderson",
+      "name": "Brody Anderson",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Cesar Mendez",
+      "name": "Cesar Mendez",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
+      "id": "Kaukauna|Dylan Wangui",
+      "name": "Dylan Wangui",
+      "team": "Kaukauna",
+      "overall": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 0,
+        "points": 0
+      }
+    },
+    {
       "id": "Kaukauna|Dylan Wojcik",
       "name": "Dylan Wojcik",
       "team": "Kaukauna",
@@ -1126,8 +1171,8 @@
       "team": "Kaukauna",
       "overall": {
         "goals": 3,
-        "assists": 2,
-        "points": 8
+        "assists": 3,
+        "points": 9
       },
       "conference": {
         "goals": 2,
@@ -1155,9 +1200,9 @@
       "name": "Logan Laabs",
       "team": "Kaukauna",
       "overall": {
-        "goals": 0,
+        "goals": 1,
         "assists": 0,
-        "points": 0
+        "points": 2
       },
       "conference": {
         "goals": 0,
@@ -1245,14 +1290,29 @@
       "name": "Zadyn Casey",
       "team": "Kaukauna",
       "overall": {
-        "goals": 2,
+        "goals": 3,
         "assists": 1,
-        "points": 5
+        "points": 7
       },
       "conference": {
         "goals": 2,
         "assists": 1,
         "points": 5
+      }
+    },
+    {
+      "id": "Neenah|Awki Medina",
+      "name": "Awki Medina",
+      "team": "Neenah",
+      "overall": {
+        "goals": 2,
+        "assists": 1,
+        "points": 5
+      },
+      "conference": {
+        "goals": 0,
+        "assists": 1,
+        "points": 1
       }
     },
     {
@@ -1290,14 +1350,14 @@
       "name": "Cooper Christie",
       "team": "Neenah",
       "overall": {
-        "goals": 1,
+        "goals": 3,
         "assists": 2,
-        "points": 4
+        "points": 8
       },
       "conference": {
-        "goals": 1,
+        "goals": 2,
         "assists": 1,
-        "points": 3
+        "points": 5
       }
     },
     {
@@ -1306,19 +1366,8 @@
       "team": "Neenah",
       "overall": {
         "goals": 0,
-        "assists": 1,
-        "points": 1
-      },
-      "conference": null
-    },
-    {
-      "id": "Neenah|Evan Glennon",
-      "name": "Evan Glennon",
-      "team": "Neenah",
-      "overall": {
-        "goals": 0,
-        "assists": 3,
-        "points": 3
+        "assists": 2,
+        "points": 2
       },
       "conference": {
         "goals": 0,
@@ -1327,13 +1376,28 @@
       }
     },
     {
+      "id": "Neenah|Evan Glennon",
+      "name": "Evan Glennon",
+      "team": "Neenah",
+      "overall": {
+        "goals": 1,
+        "assists": 3,
+        "points": 5
+      },
+      "conference": {
+        "goals": 1,
+        "assists": 1,
+        "points": 3
+      }
+    },
+    {
       "id": "Neenah|Hunter Brown",
       "name": "Hunter Brown",
       "team": "Neenah",
       "overall": {
         "goals": 5,
-        "assists": 4,
-        "points": 14
+        "assists": 5,
+        "points": 15
       },
       "conference": {
         "goals": 3,
@@ -1346,14 +1410,14 @@
       "name": "Ian Baetke",
       "team": "Neenah",
       "overall": {
-        "goals": 13,
-        "assists": 6,
-        "points": 32
+        "goals": 18,
+        "assists": 8,
+        "points": 44
       },
       "conference": {
-        "goals": 11,
+        "goals": 14,
         "assists": 4,
-        "points": 26
+        "points": 32
       }
     },
     {
@@ -1361,14 +1425,14 @@
       "name": "Jordy Banda",
       "team": "Neenah",
       "overall": {
-        "goals": 1,
+        "goals": 2,
         "assists": 4,
-        "points": 6
+        "points": 8
       },
       "conference": {
-        "goals": 1,
+        "goals": 2,
         "assists": 2,
-        "points": 4
+        "points": 6
       }
     },
     {
@@ -1387,14 +1451,29 @@
       "name": "Juan Alvarado",
       "team": "Neenah",
       "overall": {
+        "goals": 3,
+        "assists": 0,
+        "points": 6
+      },
+      "conference": {
         "goals": 2,
         "assists": 0,
         "points": 4
+      }
+    },
+    {
+      "id": "Neenah|Klayton Fleege",
+      "name": "Klayton Fleege",
+      "team": "Neenah",
+      "overall": {
+        "goals": 0,
+        "assists": 2,
+        "points": 2
       },
       "conference": {
-        "goals": 1,
-        "assists": 0,
-        "points": 2
+        "goals": 0,
+        "assists": 1,
+        "points": 1
       }
     },
     {
@@ -1403,13 +1482,13 @@
       "team": "Neenah",
       "overall": {
         "goals": 10,
-        "assists": 2,
-        "points": 22
+        "assists": 4,
+        "points": 24
       },
       "conference": {
         "goals": 4,
-        "assists": 2,
-        "points": 10
+        "assists": 4,
+        "points": 12
       }
     },
     {
@@ -1462,16 +1541,16 @@
       "name": "Tyler Geschrei",
       "team": "Neenah",
       "overall": {
+        "goals": 4,
+        "assists": 3,
+        "points": 11
+      },
+      "conference": {
         "goals": 2,
         "assists": 1,
         "points": 5
-      },
-      "conference": {
-        "goals": 1,
-        "assists": 0,
-        "points": 2
       }
     }
   ],
-  "freshnessNote": "All nine Bound schools checked October 7. Bound totals reflect posted individual stats, which may lag schedules. Hortonville box scores include October 6. Five schools still publish no individual rows."
+  "freshnessNote": "All nine Bound schools checked 2026-10-18. Bound totals reflect posted individual stats, which may lag schedules. Hortonville box scores include 2026-10-13. 5 schools publish no individual rows."
 }

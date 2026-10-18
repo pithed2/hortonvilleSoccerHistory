@@ -62,7 +62,8 @@ for coverage in data["coverage"]:
         coverage["note"] = "Published Bound totals; individual game reporting may be incomplete." if coverage["available"] else "No individual athlete rows published; totals remain unavailable, not zero."
 data["checkedAt"] = checked
 data["resultsThrough"] = max(g["date"] for g in games.values() if g["score"])
-data["freshnessNote"] = "All nine Bound schools checked October 7. Bound totals reflect posted individual stats, which may lag schedules. Hortonville box scores include October 6. Five schools still publish no individual rows."
+missing = sum(not c["available"] for c in data["coverage"])
+data["freshnessNote"] = f"All nine Bound schools checked {checked}. Bound totals reflect posted individual stats, which may lag schedules. Hortonville box scores include {data['resultsThrough']}. {missing} schools publish no individual rows."
 data["players"] = sorted(players.values(), key=lambda p: (p["team"], p["name"]))
 for p in data["players"]:
     for scope in ("overall", "conference"):
@@ -72,7 +73,7 @@ for p in data["players"]:
     if p["overall"] and p["conference"]:
         assert all(p["overall"][m] >= p["conference"][m] for m in ("goals", "assists", "points")), p
 target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-with (root / "output/fva-leaders-2026-10-07.csv").open("w", encoding="utf-8-sig", newline="") as file:
+with (root / f"output/fva-leaders-{checked}.csv").open("w", encoding="utf-8-sig", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["Player", "School", "Conference goals", "Conference assists", "Conference points", "Overall goals", "Overall assists", "Overall points"])
     for p in sorted(data["players"], key=lambda p: -(p["conference"] or {}).get("points", 0)):
