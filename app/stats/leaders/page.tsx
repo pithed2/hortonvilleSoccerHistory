@@ -61,10 +61,19 @@ function LeaderTable({
 
 export default function LeadersPage() {
   const leaders = allTimePlayerLeaders()
-  const latest2026Game = boxscoreGamesBySeason(2026).sort((a, b) => a.date.localeCompare(b.date)).at(-1)
-  const latest2026Date = latest2026Game ? new Intl.DateTimeFormat("en-US", {
+  const latest2026Timestamp = boxscoreGamesBySeason(2026)
+    .map((game) => {
+      const shortDate = /^(\d{1,2})\/(\d{1,2})$/.exec(game.date)
+      return shortDate
+        ? Date.UTC(game.season, Number(shortDate[1]) - 1, Number(shortDate[2]))
+        : Date.parse(`${game.date}T00:00:00Z`)
+    })
+    .filter(Number.isFinite)
+    .sort((a, b) => a - b)
+    .at(-1)
+  const latest2026Date = latest2026Timestamp !== undefined ? new Intl.DateTimeFormat("en-US", {
     month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
-  }).format(new Date(`${latest2026Game.date}T00:00:00Z`)) : null
+  }).format(latest2026Timestamp) : null
 
   return (
     <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
