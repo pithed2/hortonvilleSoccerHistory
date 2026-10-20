@@ -1,6 +1,6 @@
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
-import { allTimePlayerLeaders } from "@/lib/player-stats"
+import { allTimePlayerLeaders, boxscoreGamesBySeason } from "@/lib/player-stats"
 import Link from "next/link"
 import { Medal } from "lucide-react"
 import { ContentContainer, PageHeader } from "@/components/archive-ui"
@@ -44,9 +44,9 @@ function LeaderTable({
             </tr>
           </thead>
           <tbody>
-            {rows.map((player, index) => (
+            {rows.map((player) => (
               <tr key={`${title}-${player.player_name}`} className="even:bg-muted/20">
-                <td className="px-3 py-3 border-b font-black text-primary">{index + 1}</td>
+                <td className="px-3 py-3 border-b font-black text-primary">{rows.findIndex((row) => row[statKey] === player[statKey]) + 1}</td>
                 <td className="px-3 py-2 border-b font-semibold">{player.player_name}</td>
                 <td className="px-3 py-2 border-b">{player.seasons.join(", ")}</td>
                 <td className="px-3 py-2 border-b font-bold">{String(player[statKey])}</td>
@@ -61,11 +61,15 @@ function LeaderTable({
 
 export default function LeadersPage() {
   const leaders = allTimePlayerLeaders()
+  const latest2026Game = boxscoreGamesBySeason(2026).sort((a, b) => a.date.localeCompare(b.date)).at(-1)
+  const latest2026Date = latest2026Game ? new Intl.DateTimeFormat("en-US", {
+    month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
+  }).format(new Date(`${latest2026Game.date}T00:00:00Z`)) : null
 
   return (
     <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
 
-      <PageHeader eyebrow="Player records" title="All-Time Leaders" description="Compiled from available Hortonville boys soccer player stats, 2007-present."><Link href="/stats" className="underline decoration-white/50 underline-offset-4 hover:decoration-white">Back to program statistics</Link></PageHeader>
+      <PageHeader eyebrow="Player records" title="All-Time Leaders" description={`Compiled from available Hortonville boys soccer player stats, 2007-present.${latest2026Date ? ` Includes 2026 results through ${latest2026Date}.` : ""}`}><Link href="/stats" className="underline decoration-white/50 underline-offset-4 hover:decoration-white">Back to program statistics</Link></PageHeader>
 
       <ContentContainer className="grid gap-8 py-12 md:py-16 lg:grid-cols-2">
         <LeaderTable title="Goals" rows={topBy(leaders, "goals")} statKey="goals" />
