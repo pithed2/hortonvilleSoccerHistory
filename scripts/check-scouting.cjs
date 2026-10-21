@@ -10,8 +10,18 @@ const result=reviewSeeding(group.teams,group.matches,group.cutoff)
 assert(result.records.every(t=>t.reconciled))
 assert.equal(result.pairs.length,28)
 assert.deepEqual(result.records.slice(0,2).map(t=>t.id),['De Pere','Hortonville'])
-for(const r of reports){const totals=r.matches.reduce((s,m)=>({w:s.w+(m.gf>m.ga),l:s.l+(m.gf<m.ga),d:s.d+(m.gf===m.ga),gf:s.gf+m.gf,ga:s.ga+m.ga}),{w:0,l:0,d:0,gf:0,ga:0});assert.deepEqual(totals,r.record,r.name);assert(fs.existsSync('public'+r.logo));assert.equal(r.video.length,3)}
+for(const r of reports){const totals=r.matches.reduce((s,m)=>({w:s.w+(m.gf>m.ga),l:s.l+(m.gf<m.ga),d:s.d+(m.gf===m.ga),gf:s.gf+m.gf,ga:s.ga+m.ga}),{w:0,l:0,d:0,gf:0,ga:0});assert.deepEqual(totals,r.record,r.name);assert(fs.existsSync('public'+r.logo));assert(r.video.length>=3, `${r.name}: at least three film priorities`)}
 const m={date:'2026-10-01',a:'A',b:'B',ga:2,gb:1,status:'final'}
+const preble=reports.find(r=>r.slug==='preble')
+assert.equal(preble.matchReports.length,17)
+assert.equal(preble.players.reduce((sum,p)=>sum+(p.goals??0),0),48)
+assert.equal(preble.players.find(p=>p.name==='Joe Rivas').goals,14)
+for(const recap of preble.matchReports){
+  const match=preble.matches.find(m=>m.date===recap.date)
+  assert(match,`Missing match for recap ${recap.date}`)
+  assert.deepEqual([recap.opponent,recap.gf,recap.ga],[match.opponent,match.gf,match.ga])
+}
+assert(!/[\u00e2][\u20ac]|[\u00c2][\u00b7]/u.test(JSON.stringify(reports)),'Scouting text contains corrupted punctuation')
 assert.equal(normalizeFixtures([m,{...m,a:'B',b:'A',ga:1,gb:2}],group.cutoff).length,1)
 assert.throws(()=>normalizeFixtures([m,{...m,ga:3}],group.cutoff),/Conflicting/)
 assert.throws(()=>normalizeFixtures([{...m,date:'2026-02-30'}],group.cutoff),/Invalid/)
