@@ -2,6 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { TeamSelector } from "@/components/team-selector"
 import { ConferenceChampionshipHighlight } from "@/components/conference-championship-highlight"
+import { CoachOfTheYearHighlight } from "@/components/coach-of-the-year-highlight"
 import { StateRankingHighlight } from "@/components/state-ranking-highlight"
 import { RomanRecordHighlight } from "@/components/roman-record-highlight"
 import { ImportantLinks } from "@/components/important-links"
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <TeamSelector />
       <ConferenceChampionshipHighlight />
+      <CoachOfTheYearHighlight />
       <RomanRecordHighlight />
       <StateRankingHighlight />
       <CurrentSeasonSection />

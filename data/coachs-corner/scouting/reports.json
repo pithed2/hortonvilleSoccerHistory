@@ -1032,15 +1032,15 @@
     "ratingsAsOf": "2026-10-20",
     "record": {
       "w": 13,
-      "l": 3,
+      "l": 4,
       "d": 3,
       "gf": 53,
-      "ga": 12
+      "ga": 13
     },
     "rating": 1837.93,
     "sos": 1664.69,
     "rank": 32,
-    "assessment": "Our confirmed October 24 regional-final opponent at Hortonville: #3 Preble advanced 2–0 over #6 Kimberly, while Hortonville beat Bay Port 5–1. Preble’s recorded ledger is 13–3–3, goals 53–12, with 11 shutouts. The last five recorded results are 4–0–1, goals 15–2. October 10 Sturgeon Bay remains unreported and excluded. Use our September 17 3–1 win as the primary reference, then check the Kimberly opener for changes in personnel, chance creation and restart responsibilities. In the coach-supplied newspaper recap of the Kimberly win, both goals came in the second half: Joe Rivas opened the scoring from a Cam Howard assist, and Carter Allen Walker scored with eight minutes remaining. Elijah Alexander made five saves in goal.  Across the supplied reports, Joe Rivas has at least 14 goals, Cameron Howard and Carter Allen Walker at least four each. Named scorers account for 48 of 53 team goals; other goals and most assists remain unattributed. Elijah Alexander has at least 23 reported saves and Brace Massio at least 10; neither is a complete season total.",
+    "assessment": "I have Preble at 13-4-3 with 53 goals scored, 13 allowed and 11 shutouts across 20 games. Their last seven are 5-1-1, goals 20-3. We beat them 3-1 on September 17. Against winning teams, Preble scores 1.30 and allows 1.10 goals per game; against losing teams, they score 4.00 and allow 0.20. Eight of their shutouts came against losing teams. In the scoring reports I found, Joe Rivas has 14 goals, Cameron Howard has four goals and four assists, and Carter Allen Walker has four goals and one assist. Named scorers account for 48 of 53 goals. Against Kimberly, Howard assisted Rivas's second-half opener, Allen Walker scored with eight minutes remaining, and Elijah Alexander made five saves in the 2-0 win. The October 10 Sturgeon Bay 0-1 loss is included.",
     "players": [
       {
         "number": "0",
@@ -1247,8 +1247,8 @@
         "url": "https://fan.hudl.com/usa/wi/green-bay/organization/7890/preble-high-school/team/138531/boys-varsity-soccer/watch?b=QnJvYWRjYXN0NDIxODQzMg%3D%3D"
       },
       {
-        "match": "Sturgeon Bay · October 10 · score unreported · full-game listing",
-        "question": "Hudl lists an October 10, 2026 full game. Confirm the final score from film or a match sheet before adding a result to the ledger. Compare personnel, buildup and restart takers with October 15. Listing verified; playback and timestamps not reviewed.",
+        "match": "Sturgeon Bay · October 10 · Preble 0–1 · full-game listing",
+        "question": "Most recent loss, confirmed by the coach. Review why Preble did not score, how Sturgeon Bay created the decisive goal, and whether Preble changed personnel or shape. Hudl full-game listing verified; playback and timestamps not reviewed.",
         "url": "https://fan.hudl.com/usa/wi/green-bay/organization/7890/preble-high-school/team/138531/boys-varsity-soccer/watch?b=QnJvYWRjYXN0NDIxODQwNg%3D%3D"
       },
       {
@@ -1277,8 +1277,7 @@
       "September 17 supplied venue says De Pere High School despite the opponent/home-away designation. Venue remains unconfirmed; preserve the verified 3–1 result.",
       "Hudl’s October 21 listings include full games for October 15 Green Bay East, October 10 Sturgeon Bay, October 8 West De Pere and September 24 Notre Dame (paid access). The candidate Hortonville full game has a De Pere title and September 19 date but Preble/Hortonville team metadata; confirm against the September 17 match before using it as evidence. Playback and timestamps remain unreviewed. No October 20 Kimberly or September 8 De Pere full-game link was verified. School social posts were not reviewed for lineup evidence.",
       "The school links preblesoccer.com as its boys-team website, but the domain could not be resolved during this research. It is a historical lead, not a verified active source.",
-      "Formation, starter availability and set-piece assignments require recent film or a match sheet. October 24 at Hortonville is now confirmed.",
-      "October 15 Green Bay East 5–0 is also covered by the coach-supplied newspaper extract. October 10 Sturgeon Bay remains unreported and excluded; the 13–3–3 ledger is not proof that every scheduled match has been reported."
+      "Formation, starter availability and set-piece assignments require recent film or a match sheet. October 24 at Hortonville is now confirmed."
     ],
     "matches": [
       {
@@ -1381,6 +1380,12 @@
         "date": "2026-10-08",
         "opponent": "West De Pere",
         "gf": 2,
+        "ga": 1
+      },
+      {
+        "date": "2026-10-10",
+        "opponent": "Sturgeon Bay",
+        "gf": 0,
         "ga": 1
       },
       {
@@ -1503,6 +1508,10 @@
       {
         "label": "September 17 Hortonville · 47-second recap, separate from candidate full game",
         "url": "https://fan.hudl.com/usa/wi/green-bay/organization/7890/preble-high-school/team/138531/boys-varsity-soccer/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWI3ZjUwNDRjMzdiZDk4OTFjNGY2MTc%3D&ot=TEAM&oi=138531"
+      },
+      {
+        "label": "October 10 Sturgeon Bay 0-1 loss confirmed by coach October 21; included in the match ledger",
+        "url": "https://www.maxpreps.com/wi/green-bay/green-bay-preble-hornets/soccer/schedule/"
       }
     ],
     "playerSource": "Coach-supplied newspaper extracts for 17 matches through October 20, with archive links; named scorers account for 48 of 53 recorded team goals. Goals and assists are reported minimums, not complete season totals or a definitive scoring ranking. Unreported contributions remain unavailable, not zero. Similar names with no competing roster candidate are presumed matches; aliases are noted below",
