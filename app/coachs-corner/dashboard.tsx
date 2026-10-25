@@ -44,7 +44,7 @@ export function CoachDashboard({ data, today }: { data: Data; today: string }) {
         <section className="mb-6 rounded-2xl border bg-white p-5 shadow-sm" aria-labelledby="postseason-title">
           <p className="text-xs font-bold uppercase tracking-wide text-primary">2026 postseason</p>
           <h2 id="postseason-title" className="mt-1 text-xl font-bold">WIAA Division 1 brackets</h2>
-          <p className="mt-2 text-sm">Regional opener · Hortonville 5–1 Bay Port. Regional final · October 24 · #2 Hortonville hosts #3 Green Bay Preble.</p>
+          <p className="mt-2 text-sm">Regional champions · Hortonville defeated Bay Port 5–1 and Green Bay Preble 1–0. The Polar Bears are 16–1–1 following the October 24 Regional final.</p>
           <div className="mt-4 flex flex-wrap gap-4">
             <a className="font-semibold text-primary underline" href="https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2" target="_blank" rel="noreferrer">Sectionals 1 &amp; 2 · Hortonville</a>
             <a className="font-semibold text-primary underline" href="https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec3_4" target="_blank" rel="noreferrer">Sectionals 3 &amp; 4</a>

@@ -20,7 +20,7 @@ const milestones = [
   {
     year: "2025–2026",
     title: "The tradition continues",
-    detail: "An FVA championship, another regional title, and a new season moving the program forward.",
+    detail: "Back-to-back FVA and Regional championships in 2025 and 2026 keep the program moving forward.",
     logo: "/logos/modern-bear-logo-white-fill.png",
     logoAlt: "Modern Hortonville Bear logo",
   },
