@@ -35,7 +35,23 @@ export default async function ReportPage({params}:{params:Promise<{slug:string}>
       </div>
     </section>}
     <section id="players"><h2 className="text-2xl font-bold">Players to identify</h2><p className="mt-2 text-sm text-muted-foreground">{r.playerSource}. Listed positions do not establish match deployment. — means unavailable.</p><div className="mt-4 overflow-x-auto"><table className="w-full bg-white text-left text-sm"><thead><tr className="border-b">{['No.','Player','Year',r.playerStatsMinimums?'Goals (min.)':'Goals',r.playerStatsMinimums?'Assists (min.)':'Assists','Identification notes'].map(h=><th key={h} className="p-3">{h}</th>)}</tr></thead><tbody>{r.players.map(p=><tr key={p.name} className="border-b"><td className="p-3 font-bold">{p.number}</td><td className="p-3">{p.name}</td><td className="p-3">{p.year}</td><td className="p-3">{p.goals??'—'}</td><td className="p-3">{p.assists??'—'}</td><td className="p-3">{p.role}</td></tr>)}</tbody></table></div></section>
-    {r.coachObservations && <section id="coach-observations"><h2 className="text-2xl font-bold">Coach’s film observations</h2>{r.coachObservations.map(note => <p key={note} className="mt-4 max-w-4xl leading-relaxed">{note}</p>)}</section>}
+    {r.coachObservations && <section id="coach-observations">
+      <h2 className="text-2xl font-bold">Coach’s film observations</h2>
+      {r.coachObservations.map(note => <p key={note} className="mt-4 max-w-4xl leading-relaxed">{note}</p>)}
+      {r.coachNoteSections?.map(section => <div key={section.title} className="mt-6">
+        {section.level === 2 ? <h3 className="text-xl font-bold">{section.title}</h3> : <h4 className="text-lg font-bold">{section.title}</h4>}
+        {section.paragraphs.map(text => <p key={text} className="mt-3 max-w-4xl leading-relaxed">{text}</p>)}
+        {section.columns.length > 0 && <div tabIndex={0} role="region" aria-label={section.title} className="mt-4 overflow-x-auto">
+          <table className="w-full bg-white text-left text-sm">
+            <caption className="sr-only">{section.title} · coach-supplied De Pere match notes</caption>
+            <thead><tr className="border-b">{section.columns.map(column => <th key={column} scope="col" className="p-3">{column}</th>)}</tr></thead>
+            <tbody>{section.rows.map((row, index) => <tr key={index} className="border-b align-top">{row.map((cell, column) => <td key={column} className="p-3">{cell}</td>)}</tr>)}</tbody>
+          </table>
+        </div>}
+        {section.bullets.length > 0 && <ul className="mt-3 max-w-4xl list-disc space-y-2 pl-5">{section.bullets.map(text => <li key={text}>{text}</li>)}</ul>}
+        {section.numbered.length > 0 && <ol className="mt-3 max-w-4xl list-decimal space-y-2 pl-5">{section.numbered.map(text => <li key={text}>{text}</li>)}</ol>}
+      </div>)}
+    </section>}
     <section id="preparation"><h2 className="text-2xl font-bold">Preparation</h2><p className="mt-2 text-sm font-semibold text-primary">Proposed approach · confirm with film</p>{r.approach.map(p=><p key={p} className="mt-4 max-w-4xl leading-relaxed">{p}</p>)}</section>
     <section id="video"><h2 className="text-2xl font-bold">Video to review</h2><p className="mt-2 text-muted-foreground">{r.videoSelectionPolicy ?? "Linked videos include match broadcasts and labeled highlights; other priorities need team film."} {r.coachObservations ? "Coach-supplied observations are attributed above; playback has not been independently reviewed." : "No tactical film observations have been independently verified yet."}</p><div className="mt-5 space-y-5">{r.video.map((v,i)=><article key={v.match} className="surface-card p-5"><p className="text-xs font-bold uppercase text-primary">Video priority {i+1} · {v.url ? "video linked" : "film needed"}</p><h3 className="mt-2 text-lg font-bold">{v.match}</h3><p className="mt-3">{v.question}</p>{v.url && <a href={v.url} target="_blank" rel="noreferrer" className="mt-3 inline-block font-semibold text-primary underline">Open video →</a>}<p className="mt-4 text-sm text-muted-foreground">Capture: link · timestamp · player number · observed action · coaching implication.</p></article>)}</div></section>
     <section id="sources"><h2 className="text-2xl font-bold">Sources and gaps</h2>{r.sources.map(s=><p key={s.label} className="mt-3 text-sm">{s.url?<a href={s.url} target="_blank" rel="noreferrer" className="text-primary underline">{s.label}</a>:s.label}</p>)}<ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-muted-foreground">{r.gaps.map(g=><li key={g}>{g}</li>)}</ul></section>

@@ -2,141 +2,174 @@
 
 Prepared October 26, 2026 · Results through October 24
 
-## De Pere
+## De Pere — vs Appleton North
 
-**Record:** 18–2–0 · **Goals:** 98–15 · **Played-match shutouts:** 14
+Oct 26, 2026 · @Andy
 
-**StatsPlus:** #5 all divisions · rating 2029.08 · schedule strength 1683.77 · retrieved 2026-10-26
+## Bottom line
 
-Immediate opponent: Hortonville visits De Pere October 29 for the sectional semifinal. De Pere is 18–2–0 with 98 goals for, 15 against and 14 shutouts after a 4–0 regional-final win over Appleton North. Both North meetings finished 4–0. The coach’s supplied film notes identify three corner goals and a quick-free-kick goal, aggressive fullback positioning, and Skurka dropping toward the ball before driving forward. Those observations make defending restarts and switching quickly into the space behind the fullbacks the central preparation priorities. The notes do not specify which North meeting was reviewed; confirm the film date before treating the lineup as the October 24 starting XI.
+De Pere won 4-0, and none of the goals came from open play. Three came from right-footed inswinging corners into the 6 and one from a quick free kick. Shanda (1) took every right-footed inswinging corner while he was on and assisted the first two goals. After he came off at 49:00, Franda (7) took over: he scored the free-kick goal and assisted the late corner. App North never scored, so the weak spots below are things you saw, not things anyone exploited.
 
-### Schedule
+- Stop the set pieces first. Corners are their plan. The setup evolved from a late rush off the far side to a body on the keeper, and both corners with a blocker scored.
+- Test their shape. Wide mids don't track back, and both fullbacks push high, with 7 nearly playing as a winger. Quick switches behind the fullbacks are the bet, but it's untested because App North didn't make it work.
+- Deal with 10. Skurka (30 G, 20 A) drops to the ball and drives forward. He needs a body on him every time he checks in.
+- Second-half discipline. De Pere took 3 yellows between 49:00 and 60:00.
 
-- 2026-10-29: Hortonville · Home · sectional semifinal · WIAA lists 7 PM CT
-- 2026-10-31: Hudson or Eau Claire Memorial · Conditional on winning October 29 · sectional final at D.C. Everest Middle School Soccer Complex · WIAA lists 1 PM CT
+## Starting lineup and formation
 
-### Coach’s film observations
+They lined up in a 4-4-1-1: 17 as the lone striker, 10 underneath as a free-roaming second forward, a flat four in midfield and a flat back four. In possession it shifts. 7 pushes up almost to the wing so 5 can tuck inside, and 12 gets very high on the right. The mids interchange constantly, so treat the midfield slots as starting points.
 
-Source: Andrew Montalbano’s DPvAN.txt, supplied October 26. These are the coach’s film observations, not independently reviewed playback. De Pere played North October 9 and October 24; the notes do not state the match date. Clock references are copied from the notes and need alignment with the video.
+| Line | Left | Left-center | Right-center | Right |
+| --- | --- | --- | --- | --- |
+| FW |  | 17 Patrickus |  |  |
+| Withdrawn FW |  | 10 Skurka |  |  |
+| MF | 5 Myers (LM) | 1 Shanda (CM) | 18 Jauquet (CM) | 6 Coyle (RM) |
+| DF | 7 Franda (LB) | 8 Thiem (CB) | 9 Fawcett (CB) | 12 Lofdahl (RB) |
+| GK |  | 23 Baumgardt |  |  |
 
-Observed starting shape resembles 4-4-1-1: #23 Oscar Baumgardt in goal; #7 Brayden Franda, #8 Evan Thiem, #9 Anson Fawcett and #12 Kellen Lofdahl across the back; #5 Nick Myers, #1 Brady Shanda, #18 Jameson Jauquet and #6 Joah Coyle across midfield; #10 Maxim Skurka underneath #17 Nolan Patrickus. The midfielders interchange frequently. This is a match-specific interpretation of the supplied diagram, not a fixed season formation.
+On the kickoff they pushed 5 forward and kept 4 back.
 
-Skurka (#10) repeatedly comes back toward the ball and then attacks forward hard. Shanda (#1), despite his listed striker/defender designation and scoring record, is identified centrally in midfield in this match. Lofdahl (#12) gets particularly high. The coach notes both fullbacks pushing forward and the wide midfielders failing to recover, at times leaving the two center backs exposed.
+## Key players
 
-Corner pattern: an initial group gathers on the far side of the penalty spot, with service directed toward the near post and six-yard box. Later right-footed inswingers bring the group closer to goal and place a player on the goalkeeper. The notes describe goals from corners 5 and 6 and the final corner: one inswinger served into the six, one almost directly into goal with the keeper blocked, and one loose ball finished after the delivery reaches the ground. Do not infer the taker’s identity from these notes.
+Skurka and Shanda account for 54 of the team's listed goals and 31 assists. Neither scored here, but between them they had 3 of the 4 assists. Against App North the danger came from their service, not their finishing.
 
-Quick free kick: four De Pere players gather around the ball, then play quickly left to #7 Franda. He faces a reacting wide defender, takes one touch inside and scores. Thiem (#8) takes longer free kicks, freeing the midfielders to move forward.
+| No. | Player | Yr | G / A | What to know |
+| --- | --- | --- | --- | --- |
+| 10 | Maxim Skurka | SR | 30 / 20 | Withdrawn forward. constantly checks back to the ball, then attacks forward hard. Primary threat. Set up the quick free-kick goal. |
+| 1 | Brady Shanda | JR | 24 / 11 | Started at CM. Assisted goals 1 and 2, both corners, and took every right-footed inswinging corner while he was on. Listed striker/defender. |
+| 8 | Evan Thiem | SR | 3 / 1 | CB. Takes every goal kick and the longer free kicks, all long. |
+| 12 | Kellen Lofdahl | SO | 1 / 2 | RB who gets very high up the pitch. Space behind him. |
+| 17 | Nolan Patrickus | SR | 5 / 7 | Lone striker; subbed off and back on twice. |
+| 7 | Brayden Franda | JR | 0 / 4 | LB. Scored the free-kick goal with one touch inside and a finish, then assisted the late corner goal. Pushes up almost to the wing so 5 can tuck inside. Most dangerous player on the day. |
+| 23 | Oscar Baumgardt | JR | 0 / 0 | GK. Does not take goal kicks. |
 
-Goal kicks: Thiem (#8), rather than the goalkeeper, takes them and sends them long; the first reaches halfway. At kickoff, five players start high with four in the back line; the ball goes through a lone central midfielder and then aerially toward the center for a second ball.
+## Set pieces
 
-Attacking opportunity observed for North: quick switches that catch the advanced fullbacks produced its only offense in the reviewed passages. Central dribbling repeatedly failed. This identifies a pattern to test, not a guarantee that every switch creates a chance.
+Three of the 4 goals came off corners, all right-footed inswingers into the 6. Shanda (1) took every one of those while he was on. The setup changed as the game went on. Early corners started with everyone deep on the far side, rushing in late. By the second and third sets they put a player on the keeper and spread out more. Both corners with a body on the keeper scored.
 
-De Pere leaves two players up on defensive corners. Plan cover for those outlets before committing extra players to attack the delivery.
+### Attacking corners
 
-Rotation notes: #19 for #6 at 14:30; #11 for #17 at 16:30; #17 for #5 at 31:30; #6 for #18 at 33:00; #21 for #17 at 39:00. Later entries include #19 for #9 at 54:30, #24 for #21 at 58:30, #9 for #8 at 60:00 and #15 for #5 at 63:00. The notes associate several changes with yellows; these are not evidence of a current suspension. The 49:00 replacement for #1 is unnamed.
+| Corner | Foot | Delivery | Setup | Result |
+| --- | --- | --- | --- | --- |
+| 1 | Left | Near post, inside the 6 (swing not seen) | 4 in a group 3-5 yds far side of PK mark, 1 on far edge of D, 2 outside the D | No goal |
+| 2 | Left (same side) | Similar | Same, tighter grouping | No goal |
+| 3 | Left (same side) | Similar | Same | No goal |
+| 4 | Right | Similar | Same | No goal |
+| 5 | Right | Inswing into the 6 | Started further in, still far side of PK mark | GOAL: 5 Myers from 1 Shanda |
+| 6 | Right | Inswing, almost straight at goal | 1 on the GK, everyone inside the 18 toward near side | GOAL: 17 Patrickus from 1 Shanda (keeper blocked off) |
+| Late | Right | Inswing, deeper into the 6 | Like corner 1, plus a defender on the GK | GOAL: 24 Griffin from 7 Franda (bounced and smashed in; GK should have punched) |
 
-### Preparation
+- Early corners: everyone starts on the far side, away from the ball, and rushes forward on the delivery.
+- Takers: 1 took every right-footed inswinger while he was on, and 7 is the likely taker after 49:00. The left-footed taker is still unidentified.
+- Goal 4 dropped into a scrum on the far side of the 6. It was not a clean finish.
 
-1. Corner defense is priority one. Rehearse an agreed near-post/six-yard coverage plan, track runners from the far-side cluster and assign responsibility for the player occupying the goalkeeper. Protect the goalkeeper’s path to the ball through positioning and communication. Stay ready for repeated corners and second balls; the notes describe three in succession early.
+### Defensive corners
 
-2. On every defensive free kick, keep a player attending to the ball while the team sets. Track Franda (#7) peeling wide left and close the inside shooting lane. Do not wait for De Pere’s group around the ball to disperse before organizing. Confirm legal distance and restart responsibilities in the pre-match briefing.
+- They leave 2 players sitting at half to attempt to counter immediately.
 
-3. Within our 3-5-2, assign who screens Skurka’s check toward the ball and who takes his forward run after release. Keep cover behind the player stepping out. Identify Shanda as a central threat in the reviewed shape rather than assuming he stays on the last line.
+### Goal kicks and free kicks
 
-4. Win the first contest and position support for second balls around halfway when #8 takes goal kicks. Treat long free kicks similarly. Avoid drawing both midfield cover and the back line toward the same aerial contest.
+- GK does not take goal kicks. 8 (Thiem) takes them, all long. The first one went to midfield.
+- 8 also takes the longer free kicks, which frees the mids to push forward.
+- Free-kick goal (7 Franda from 10 Skurka): 4 players crowded the ball like they were deciding who would take it, then played it quick to 7 on the left, isolated against a reacting wide player. One touch inside, finish.
 
-5. On regains, look early into the channel behind an advanced fullback or use a quick switch before the weak side recovers. Support the first receiver with a second runner; test the pattern without forcing low-percentage balls. The notes give little support for repeatedly dribbling through their crowded center.
+### Kickoff
 
-6. On our attacking corners, assign cover and recovery roles for their two high outlets. Decide numbers forward only after accounting for those outlets.
+- 5 forward, 4 back. Played to the single CM, then in the air centrally looking for the second ball.
 
-7. Use our September 19 2–3 loss to verify which chance-creation patterns transfer. Compare the three conceded against Appleton West and Appleton East with current film before assuming the spaces seen against North are always available.
+## Run of play
 
-### Players
+De Pere plays with their fullbacks high and their wide mids staying forward, which often leaves only the 2 CBs at home.
 
-Bound player statistics retrieved October 20: 81 reported goals versus 98 in the updated team ledger. Roles updated from coach-supplied North film notes; the reviewed match date is unconfirmed. Statistics are an incomplete earlier snapshot
+### In possession
 
-| No. | Player | Year | Goals | Assists | Identification |
-|---|---|---|---|---|---|
-| 1 | Brady Shanda | JR | 24 | 11 | Coach film: starting central midfielder; interchanges with other mids (reviewed North match date unconfirmed) |
-| 2/99 | Henry Lutsey | FR | 0 | 0 | Role to confirm on film |
-| 3/98 | Ivan Torres-Leon | SO | 0 | 0 | Role to confirm on film |
-| 4 | Dominic Joosten | SO | 0 | 0 | Role to confirm on film |
-| 5 | Nick Myers | JR | 3 | 4 | Coach film: starting left midfielder (reviewed North match date unconfirmed) |
-| 6 | Joah Coyle | SO | 1 | 4 | Coach film: starting right midfielder (reviewed North match date unconfirmed) |
-| 7 | Brayden Franda | JR | 0 | 4 | Coach film: starting left back; quick-free-kick receiver and scorer (reviewed North match date unconfirmed) |
-| 8 | Evan Thiem | SR | 3 | 1 | Coach film: starting center back; long goal kicks and longer free kicks (reviewed North match date unconfirmed) |
-| 9 | Anson Fawcett | JR | 0 | 2 | Coach film: starting center back; surname spelling retained from roster (reviewed North match date unconfirmed) |
-| 10 | Maxim Skurka | SR | 30 | 20 | Coach film: withdrawn forward; checks back then drives forward (reviewed North match date unconfirmed) |
-| 11 | Dylan Walczak | JR | 3 | 2 | Listed defender |
-| 12 | Kellen Lofdahl | SO | 1 | 2 | Coach film: starting right back; advances very high (reviewed North match date unconfirmed) |
-| 13 | Brady Pennenberg | JR | 0 | 0 | Role to confirm on film |
-| 14 | Austin Beauchamp | JR | 0 | 2 | Role to confirm on film |
-| 15 | Liam Metzler | SR | 0 | 0 | Role to confirm on film |
-| 16 | Abe Wiegand | JR | 0 | 0 | Role to confirm on film |
-| 17 | Nolan Patrickus | SR | 5 | 7 | Coach film: starting high forward (reviewed North match date unconfirmed) |
-| 18 | Jameson Jauquet | SR | 3 | 4 | Coach film: starting central midfielder (reviewed North match date unconfirmed) |
-| 19 | Grayson Herber | JR | 4 | 0 | Role to confirm on film |
-| 20 | Ethan Fischer | SO | 0 | 0 | Role to confirm on film |
-| 21 | Tommy Friend | FR | 2 | 2 | Role to confirm on film |
-| 22 | Calan McCabe | SO | 0 | 0 | Role to confirm on film |
-| 23 | Oscar Baumgardt | JR | 0 | 0 | Coach film: starting goalkeeper; #8 takes goal kicks (reviewed North match date unconfirmed) |
-| 24 | Ty Griffin | FR | 2 | 1 | Role to confirm on film |
-| 25 | Aaron Zaruba | FR | 0 | 0 | Role to confirm on film |
-| 27 | Vincent Pernot | FR | 0 | 0 | Role to confirm on film |
+- Long distribution from the back: 8 takes goal kicks and long free kicks.
+- 7 pushes up almost to the wing so 5 can come inside. 12 gets very high on the right.
+- Mids interchange constantly. 10 checks back, then drives forward.
+- All 4 goals came from dead balls. Open play produced nothing on the scoresheet.
 
-### Film priorities
+### Out of possession
 
-- **Appleton North · coach-supplied DPvAN.txt · match date to confirm:** Locate corners 5, 6 and the final goal; tag taker, delivery, goalkeeper contact, runner and second-ball position. Locate the quick restart to #7 and identify who failed to track him.
+- Wide mids (5, 6) don't come back on defense.
+- Fullbacks push high, often leaving just the 2 CBs.
+- Dribbling through the middle against them failed almost every time.
 
-- **Appleton North · fullback and midfield behavior:** Tag #12 and #7 advancing, #10 checking and accelerating, #1’s central position, and each successful quick switch. Check whether the same spaces exist after substitutions.
+## Goals and substitution log
 
-- **Hortonville · September 19 · De Pere 3–2:** Tag all five goals and our best other chances. Choose two repeatable attacking patterns and confirm our coverage when a midfielder steps to Skurka.
+De Pere used 10 recorded subs and rotated freely, with 6, 17, 5 and 9 all coming off and going back on. Goal times are bracketed by the surrounding subs since exact minutes weren't noted. Kept in game order.
 
-- **Appleton West · October 20 · De Pere 11–3:** Review the three concessions and distinguish transition, set-piece and individual-error sequences before using them in the game plan.
+| Time | Event | In | Out | Note |
+| --- | --- | --- | --- | --- |
+| 14:30 | Sub 1 | 19 Herber | 6 Coyle |  |
+| 16:30 | Sub 2 | 11 Walczak | 17 Patrickus |  |
+| 16:30-31:30 | GOAL |  |  | 5 Myers from 1 Shanda. Corner 5, right foot inswing into the 6 |
+| 31:30 | Sub 3 | 17 Patrickus | 5 Myers |  |
+| 33:00 | Sub 4 | 6 Coyle | 18 Jauquet |  |
+| 33:00-39:00 | GOAL |  |  | 17 Patrickus from 1 Shanda. Corner 6, right foot inswing, player on GK |
+| 39:00 | Sub 5 | 21 Friend | 17 Patrickus |  |
+| 49:00 | Sub 6 (De Pere yellow) | not recorded | 1 Shanda |  |
+| 54:30 | Sub 7 (De Pere yellow) | 19 Herber | 9 Fawcett |  |
+| 54:30-58:30 | GOAL |  |  | 7 Franda from 10 Skurka. Quick free kick to 7, one touch inside, shot |
+| 58:30 | Sub 8 | 24 Griffin | 21 Friend |  |
+| 60:00 | Sub 9 (De Pere yellow) | 9 Fawcett | 8 Thiem |  |
+| 63:00 | Sub 10 | 15 Metzler | 5 Myers | 5's re-entry not recorded |
+| After 63:00 | GOAL |  |  | 24 Griffin from 7 Franda. Late corner, right foot inswing, defender on GK |
 
-### Results
+## Defending
 
-| Date | Opponent | Result |
-|---|---|---|
-| 2026-08-28 | Madison Memorial | W 4–0 |
-| 2026-08-29 | Madison La Follette | L 3–4 |
-| 2026-09-03 | Wausau West | W 10–0 |
-| 2026-09-08 | Green Bay Preble | W 3–0 |
-| 2026-09-10 | Bay Port | W 5–0 |
-| 2026-09-15 | Sheboygan North | W 3–0 |
-| 2026-09-17 | DC Everest | W 4–0 |
-| 2026-09-19 | Hortonville | W 3–2 |
-| 2026-09-22 | Manitowoc Lincoln | W 9–0 |
-| 2026-09-24 | West De Pere | W 4–0 |
-| 2026-09-29 | Notre Dame | W 3–0 |
-| 2026-10-01 | Pulaski | W 2–0 |
-| 2026-10-06 | Green Bay Southwest | W 9–0 |
-| 2026-10-08 | Ashwaubenon | W 9–1 |
-| 2026-10-09 | Appleton North | W 4–0 |
-| 2026-10-10 | Kenosha Tremper | L 1–2 |
-| 2026-10-13 | Appleton East | W 5–3 |
-| 2026-10-15 | Kohler | W 2–0 |
-| 2026-10-20 | Appleton West | W 11–3 |
-| 2026-10-24 | Appleton North | W 4–0 |
+1. Own the 6 on right-footed inswingers, especially when 1 is on the ball. He put every corner inside the 6.
+2. Plan for a blocker on the keeper.  2 of their goals were started by an obstructed keeper.
+3. On early corners they start far side and rush in. Pick up runners on the move so nobody arrives unmarked.
+4. Clear second balls out of the 6 fast. Goal 4 came out of a scrum.
+5. On free kicks, don't switch off while they huddle around the ball.
+6. Congest the mid and force them wide and force their passing backward not central
 
-### Sources and gaps
+## Attacking them
 
-- Shot entries are incomplete; omit shooting efficiency conclusions. Bound lists two penalty makes and zero attempts.
-- Bound retrieved October 20 lists 42 team saves but no named goalkeeper breakdown. The older MaxPreps Baumgardt snapshot is not a current season total.
-- Current Bound player-stat pages returned HTTP 403 on October 26. Player figures below retain their stated earlier source dates; they are not updated postseason totals.
-- The North film notes give a starting shape and restart patterns for that match only. Match date, video timestamps, corner takers, injuries and current availability remain unconfirmed. Yellow-card substitutions do not establish suspension status.
+1. Quick switches to catch their fullbacks high, especially behind 7 and 12, who push almost to the wing. Their wide mids won't be back.
+2. Pull the 2 CBs wide or turn them. They're often defending alone.
+3. Don't try to dribble through the middle; play around it or over
+4. Win second balls centrally off their kickoff and goal kicks. Goal kicks will come long.
+5. Press the GK on back passes.  He's a weakness.
 
-- [StatsPlus team results and October 2 rating snapshot](https://soccer.statsplus.net/rankings/team/50325/)
-- [Bound roster and statistics supplied by coach](https://www.gobound.com/wi/wiaa/bsc/2026-27/depere/v/stats)
-- [MaxPreps statistics, last updated October 1](https://www.maxpreps.com/wi/de-pere/de-pere-redbirds/soccer/stats/)
-- [StatsPlus team results checked October 15, 2026; ratings checked the same day](https://soccer.statsplus.net/rankings/team/50325/)
-- [StatsPlus team results and ratings checked October 18, 2026](https://soccer.statsplus.net/rankings/team/50325/)
-- [StatsPlus results and ratings checked October 20, 2026](https://soccer.statsplus.net/rankings/team/50325/)
-- [October 20 regional results and October 24 bracket path · WIAA](https://halftime.wiaawi.org/CustomApps/Tournaments/ScoreLists/HTML/2026%20Boys%20Soccer%20D1.html)
-- [Bound player statistics retrieved October 20; coverage incomplete](https://www.gobound.com/wi/wiaa/bsc/2026-27/depere/v/stats)
-- [StatsPlus team match ledger and rankings retrieved October 26, 2026](https://soccer.statsplus.net/rankings/team/50325/)
-- [WIAA bracket updated October 26: regional finals and October 29 sectional matchups](https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2)
-- Andrew Montalbano · DPvAN.txt · coach film notes supplied October 26; reviewed North match date unspecified
+## Containing Skurka
+
+1. Assign a holding mid to stay tight when he checks back. Don't let him turn facing goal.
+2. He's solid and a pest.  Don't release if he beats you.
+
+## Full roster
+
+Roles updated where this game showed something; everyone else still needs film.
+
+| No. | Player | Yr | G | A | Listed | Seen vs App North |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Brady Shanda | JR | 24 | 11 | Striker / defender | Started CM; assisted goals 1 and 2; off at 49:00 |
+| 2/99 | Henry Lutsey | FR | 0 | 0 |  |  |
+| 3/98 | Ivan Torres-Leon | SO | 0 | 0 |  |  |
+| 4 | Dominic Joosten | SO | 0 | 0 |  |  |
+| 5 | Nick Myers | JR | 3 | 4 | Midfielder | Started LM; scored goal 1 (corner); off 31:30, back on, off 63:00 |
+| 6 | Joah Coyle | SO | 1 | 4 |  | Started RM; off 14:30, back 33:00 |
+| 7 | Brayden Franda | JR | 0 | 4 | Defender | Started LB; scored goal 3 (FK), assisted goal 4; pushes up nearly to the wing |
+| 8 | Evan Thiem | SR | 3 | 1 | Defender | Started CB; takes goal kicks and long FKs; off 60:00 |
+| 9 | Anson Fawcett | JR | 0 | 2 | Defender | Started CB; off 54:30, back 60:00. MaxPreps spells Faucett |
+| 10 | Maxim Skurka | SR | 30 | 20 | Mid / forward | Withdrawn FW; checks back, attacks forward; assisted goal 3 |
+| 11 | Dylan Walczak | JR | 3 | 2 | Defender | On at 16:30 for 17 |
+| 12 | Kellen Lofdahl | SO | 1 | 2 | Defender | Started RB; gets very high |
+| 13 | Brady Pennenberg | JR | 0 | 0 |  |  |
+| 14 | Austin Beauchamp | JR | 0 | 2 |  |  |
+| 15 | Liam Metzler | SR | 0 | 0 |  | On at 63:00 for 5 (likely mid) |
+| 16 | Abe Wiegand | JR | 0 | 0 |  |  |
+| 17 | Nolan Patrickus | SR | 5 | 7 | Forward | Started FW; off 16:30, on 31:30, scored goal 2 (corner), off 39:00 |
+| 18 | Jameson Jauquet | SR | 3 | 4 | Midfielder | Started CM; off 33:00 |
+| 19 | Grayson Herber | JR | 4 | 0 |  | On at 14:30 for 6, on at 54:30 for 9 |
+| 20 | Ethan Fischer | SO | 0 | 0 |  |  |
+| 21 | Tommy Friend | FR | 2 | 2 |  | On at 39:00 for 17 (likely FW); off 58:30 |
+| 22 | Calan McCabe | SO | 0 | 0 |  |  |
+| 23 | Oscar Baumgardt | JR | 0 | 0 | Goalkeeper | Started GK; doesn't take goal kicks |
+| 24 | Ty Griffin | FR | 2 | 1 |  | On at 58:30 for 21; scored goal 4 (corner) |
+| 25 | Aaron Zaruba | FR | 0 | 0 |  |  |
+| 27 | Vincent Pernot | FR | 0 | 0 |  |  |
+
 
 ## Hudson
 
