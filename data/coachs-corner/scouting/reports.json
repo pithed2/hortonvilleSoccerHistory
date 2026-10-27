@@ -3,20 +3,20 @@
     "slug": "hudson",
     "name": "Hudson",
     "logo": "/scouting/hudson.png",
-    "reportDate": "2026-10-20",
-    "resultsThrough": "2026-10-20",
-    "ratingsAsOf": "2026-10-20",
+    "reportDate": "2026-10-26",
+    "resultsThrough": "2026-10-24",
+    "ratingsAsOf": "2026-10-26",
     "record": {
-      "w": 16,
+      "w": 17,
       "l": 1,
       "d": 2,
-      "gf": 88,
+      "gf": 93,
       "ga": 12
     },
-    "rating": 2050.14,
-    "sos": 1681.65,
+    "rating": 2054.39,
+    "sos": 1682.33,
     "rank": 3,
-    "assessment": "Hudson advanced with a 7–0 regional-opening win over Eau Claire North, bringing the recorded ledger to 16–1–2, goals 88–12. The October 24 regional final is against Superior or Wisconsin Rapids; that opener remains unreported. Hudson remains a possible October 31 sectional-final opponent if both teams advance. The earlier 4–3 games against Verona and Cedarburg remain better film questions about defending stronger attacks than the latest shutout alone. Player figures remain the corrected coach snapshot, not refreshed season totals.",
+    "assessment": "Possible October 31 sectional-final opponent. Hudson beat Superior 5–0 in the regional final and hosts Memorial October 29. The reconciled ledger is 17–1–2, goals 93–12, including the coach-retained 1–0 Rice Lake forfeit; the StatsPlus ranking summary is 16–1–2, goals 92–12, excluding that forfeit. Hudson has won five straight entries (four played matches plus the forfeit), and its two playoff wins total 12–0. The earlier 5–0 win over Memorial gives Hudson a direct result advantage, not a guaranteed repeat. The 4–3 wins over Verona and Cedarburg remain useful film for how stronger attacks created chances.",
     "players": [
       {
         "number": "18",
@@ -52,31 +52,38 @@
       }
     ],
     "approach": [
-      "Proposed: identify the supply to Lessard and Wiseman before assigning marking responsibilities.",
-      "Confirm whether Cook and Van Haute create wide, combine centrally or arrive late. Roster labels do not establish actual deployment.",
-      "Reduce the quality of Hudson’s chances; use film to decide where to press and how much space to leave behind.",
-      "Use the October 6 River Falls and October 8 New Richmond wins to check current personnel and patterns. Exclude the Rice Lake forfeit from tactical conclusions."
+      "Identify #18 Lessard, #19 Wiseman, #10 Cook and #14 Van Haute in current film. Their earlier scoring ledger identifies priorities, but does not establish current totals or starting positions. Trace who supplies the forwards and who arrives from midfield before assigning marks.",
+      "Prioritize the October 29 Memorial rematch once available. Compare it with September 22 (5–0): where does Hudson regain possession, how does it enter the box and what changes when Memorial presses or sits deeper?",
+      "Use the Hill-Murray 0–1 loss and DeForest 1–1 draw to examine how Hudson was kept below its normal output. Tag actual pressure, spacing and entry decisions; a result alone does not establish an effective defensive scheme.",
+      "Use the Verona and Cedarburg 4–3 wins to locate repeatable ways to create chances: transition channels, second balls, set pieces or combinations. Keep enough recovery cover while testing those patterns.",
+      "Review Superior 5–0 and Eau Claire North 7–0 for current lineup and set-piece roles. Keep the Rice Lake forfeit out of all film and performance conclusions."
     ],
     "video": [
       {
-        "match": "Hill-Murray · Hudson 0–1",
-        "question": "What prevented Hudson from scoring? Review full buildup and failed attacks.",
+        "match": "Superior · October 24 · Hudson 5–0",
+        "question": "Identify current XI, scoring connections, corner and free-kick takers, goalkeeper distribution and recovery structure. Do not infer these from the score.",
         "url": null
       },
       {
-        "match": "Verona · Hudson 4–3",
-        "question": "How did Hudson’s four threats combine, and how did Verona score three?",
+        "match": "Eau Claire Memorial · September 22 (5–0) and October 29 rematch (pending)",
+        "question": "Compare midfield access, forward service and Memorial’s first pressure line. Use the new match to assess current personnel before a possible final.",
         "url": null
       },
       {
-        "match": "Cedarburg · Hudson 4–3",
-        "question": "Tag all conceded goals. Were they set pieces, transitions, errors or repeated structural openings?",
+        "match": "Hill-Murray · September 19 · Hudson 0–1",
+        "question": "What restricted Hudson’s chances? Separate successful defending from missed finishes.",
+        "url": null
+      },
+      {
+        "match": "Verona 4–3 and Cedarburg 4–3",
+        "question": "Tag all six concessions and identify repeated openings rather than isolated mistakes.",
         "url": null
       }
     ],
     "gaps": [
       "Player totals come from the corrected coach ledger referenced in Hudson Raiders.docx; the underlying ledger has not been supplied.",
-      "October 13 Rice Lake is a 1–0 forfeit. Count it in the record, not as tactical evidence. October 20 Eau Claire North is a verified 7–0 win; Superior–Wisconsin Rapids remains unreported, so the October 24 opponent is pending."
+      "Current Bound player-stat pages returned HTTP 403 on October 26. Player figures below retain their stated earlier source dates; they are not updated postseason totals.",
+      "Rice Lake October 13 remains a 1–0 forfeit retained from the earlier coach/Bound confirmation. The current StatsPlus team page marks Forfeit without a score. Count it in the record, exclude it from tactical conclusions and separate it from played-match shutouts. Current formation, complete roster, starting goalkeeper and availability remain unconfirmed."
     ],
     "matches": [
       {
@@ -192,23 +199,24 @@
         "opponent": "Eau Claire North",
         "gf": 7,
         "ga": 0
+      },
+      {
+        "date": "2026-10-24",
+        "opponent": "Superior",
+        "gf": 5,
+        "ga": 0
       }
     ],
     "upcoming": [
       {
-        "date": "2026-10-24",
-        "opponent": "Superior or Wisconsin Rapids",
-        "detail": "Home · regional final · opponent pending unreported October 20 result; confirm kickoff"
-      },
-      {
         "date": "2026-10-29",
-        "opponent": "Eau Claire Memorial or Wausau West",
-        "detail": "Sectional semifinal · only if Hudson wins October 24"
+        "opponent": "Eau Claire Memorial",
+        "detail": "Home · sectional semifinal · WIAA lists 7 PM CT"
       },
       {
         "date": "2026-10-31",
-        "opponent": "TBD",
-        "detail": "Sectional final at D.C. Everest Middle School · only if Hudson advances; WIAA lists 1 PM"
+        "opponent": "De Pere or Hortonville",
+        "detail": "Conditional on winning October 29 · sectional final at D.C. Everest Middle School Soccer Complex · WIAA lists 1 PM CT"
       }
     ],
     "sources": [
@@ -239,30 +247,41 @@
       {
         "label": "October 20 regional results and October 24 bracket path · WIAA",
         "url": "https://halftime.wiaawi.org/CustomApps/Tournaments/ScoreLists/HTML/2026%20Boys%20Soccer%20D1.html"
+      },
+      {
+        "label": "StatsPlus team match ledger and rankings retrieved October 26, 2026",
+        "url": "https://soccer.statsplus.net/rankings/team/50336/"
+      },
+      {
+        "label": "WIAA bracket updated October 26: regional finals and October 29 sectional matchups",
+        "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
       }
     ],
-    "playerSource": "Hudson Raiders.docx and its referenced corrected coach scorer ledger; player figures retained from the prior report (team results previously through 2026-10-02); October 15 refresh updates team scores and ratings only",
+    "playerSource": "Hudson Raiders.docx and its referenced corrected coach scorer ledger; retained October 2 player snapshot. October 26 updates team results and ratings only; no current player season totals verified",
     "conferenceContext": null,
-    "playerStatsMinimums": false
+    "playerStatsMinimums": false,
+    "forfeitDates": [
+      "2026-10-13"
+    ]
   },
   {
     "slug": "de-pere",
     "name": "De Pere",
     "logo": "/scouting/de-pere.png",
-    "reportDate": "2026-10-20",
-    "resultsThrough": "2026-10-20",
-    "ratingsAsOf": "2026-10-20",
+    "reportDate": "2026-10-26",
+    "resultsThrough": "2026-10-24",
+    "ratingsAsOf": "2026-10-26",
     "record": {
-      "w": 17,
+      "w": 18,
       "l": 2,
       "d": 0,
-      "gf": 94,
+      "gf": 98,
       "ga": 15
     },
-    "rating": 2016.93,
-    "sos": 1684.27,
-    "rank": 6,
-    "assessment": "De Pere advanced 11–3 over Appleton West and is now 17–2–0, goals 94–15. Appleton North, a 3–1 winner over SPASH, is the October 24 regional-final opponent. De Pere won their October 9 meeting 4–0. Our 2–3 loss remains the direct preparation reference for a possible October 29 rematch. Eleven goals establish attacking output, but three conceded to West make that new match a film priority; the score alone does not explain the goals. The refreshed Bound player snapshot totals 81 goals against 94 in the match ledger and is incomplete.",
+    "rating": 2029.08,
+    "sos": 1683.77,
+    "rank": 5,
+    "assessment": "Immediate opponent: Hortonville visits De Pere October 29 for the sectional semifinal. De Pere is 18–2–0 with 98 goals for, 15 against and 14 shutouts after a 4–0 regional-final win over Appleton North. Both North meetings finished 4–0. The coach’s supplied film notes identify three corner goals and a quick-free-kick goal, aggressive fullback positioning, and Skurka dropping toward the ball before driving forward. Those observations make defending restarts and switching quickly into the space behind the fullbacks the central preparation priorities. The notes do not specify which North meeting was reviewed; confirm the film date before treating the lineup as the October 24 starting XI.",
     "players": [
       {
         "number": "1",
@@ -270,7 +289,7 @@
         "year": "JR",
         "goals": 24,
         "assists": 11,
-        "role": "Listed striker / defender"
+        "role": "Coach film: starting central midfielder; interchanges with other mids (reviewed North match date unconfirmed)"
       },
       {
         "number": "2/99",
@@ -302,7 +321,7 @@
         "year": "JR",
         "goals": 3,
         "assists": 4,
-        "role": "Listed midfielder"
+        "role": "Coach film: starting left midfielder (reviewed North match date unconfirmed)"
       },
       {
         "number": "6",
@@ -310,7 +329,7 @@
         "year": "SO",
         "goals": 1,
         "assists": 4,
-        "role": "Role to confirm on film"
+        "role": "Coach film: starting right midfielder (reviewed North match date unconfirmed)"
       },
       {
         "number": "7",
@@ -318,7 +337,7 @@
         "year": "JR",
         "goals": 0,
         "assists": 4,
-        "role": "Listed defender"
+        "role": "Coach film: starting left back; quick-free-kick receiver and scorer (reviewed North match date unconfirmed)"
       },
       {
         "number": "8",
@@ -326,7 +345,7 @@
         "year": "SR",
         "goals": 3,
         "assists": 1,
-        "role": "Listed defender"
+        "role": "Coach film: starting center back; long goal kicks and longer free kicks (reviewed North match date unconfirmed)"
       },
       {
         "number": "9",
@@ -334,7 +353,7 @@
         "year": "JR",
         "goals": 0,
         "assists": 2,
-        "role": "Listed defender; MaxPreps spells Faucett"
+        "role": "Coach film: starting center back; surname spelling retained from roster (reviewed North match date unconfirmed)"
       },
       {
         "number": "10",
@@ -342,7 +361,7 @@
         "year": "SR",
         "goals": 30,
         "assists": 20,
-        "role": "Listed midfielder / forward"
+        "role": "Coach film: withdrawn forward; checks back then drives forward (reviewed North match date unconfirmed)"
       },
       {
         "number": "11",
@@ -358,7 +377,7 @@
         "year": "SO",
         "goals": 1,
         "assists": 2,
-        "role": "Listed defender"
+        "role": "Coach film: starting right back; advances very high (reviewed North match date unconfirmed)"
       },
       {
         "number": "13",
@@ -398,7 +417,7 @@
         "year": "SR",
         "goals": 5,
         "assists": 7,
-        "role": "Listed forward"
+        "role": "Coach film: starting high forward (reviewed North match date unconfirmed)"
       },
       {
         "number": "18",
@@ -406,7 +425,7 @@
         "year": "SR",
         "goals": 3,
         "assists": 4,
-        "role": "Listed midfielder"
+        "role": "Coach film: starting central midfielder (reviewed North match date unconfirmed)"
       },
       {
         "number": "19",
@@ -446,7 +465,7 @@
         "year": "JR",
         "goals": 0,
         "assists": 0,
-        "role": "Listed goalkeeper"
+        "role": "Coach film: starting goalkeeper; #8 takes goal kicks (reviewed North match date unconfirmed)"
       },
       {
         "number": "24",
@@ -474,32 +493,41 @@
       }
     ],
     "approach": [
-      "Proposed: deny Skurka easy forward-facing receptions while preserving cover against Shanda. Confirm the screening and stepping assignments within our 3-5-2 on film.",
-      "Use the September 19 match to identify repeatable ways we created chances. The defensive record gives no basis for assuming direct balls will work.",
-      "Track spacing and concentration late in each half; reported second-half scoring does not establish fatigue as the cause.",
-      "Prioritize the October 10 Kenosha Tremper loss (1–2) and October 13 Appleton East win (5–3). Identify the actual chance sequences before drawing conclusions about defensive weaknesses."
+      "Corner defense is priority one. Rehearse an agreed near-post/six-yard coverage plan, track runners from the far-side cluster and assign responsibility for the player occupying the goalkeeper. Protect the goalkeeper’s path to the ball through positioning and communication. Stay ready for repeated corners and second balls; the notes describe three in succession early.",
+      "On every defensive free kick, keep a player attending to the ball while the team sets. Track Franda (#7) peeling wide left and close the inside shooting lane. Do not wait for De Pere’s group around the ball to disperse before organizing. Confirm legal distance and restart responsibilities in the pre-match briefing.",
+      "Within our 3-5-2, assign who screens Skurka’s check toward the ball and who takes his forward run after release. Keep cover behind the player stepping out. Identify Shanda as a central threat in the reviewed shape rather than assuming he stays on the last line.",
+      "Win the first contest and position support for second balls around halfway when #8 takes goal kicks. Treat long free kicks similarly. Avoid drawing both midfield cover and the back line toward the same aerial contest.",
+      "On regains, look early into the channel behind an advanced fullback or use a quick switch before the weak side recovers. Support the first receiver with a second runner; test the pattern without forcing low-percentage balls. The notes give little support for repeatedly dribbling through their crowded center.",
+      "On our attacking corners, assign cover and recovery roles for their two high outlets. Decide numbers forward only after accounting for those outlets.",
+      "Use our September 19 2–3 loss to verify which chance-creation patterns transfer. Compare the three conceded against Appleton West and Appleton East with current film before assuming the spaces seen against North are always available."
     ],
     "video": [
       {
+        "match": "Appleton North · coach-supplied DPvAN.txt · match date to confirm",
+        "question": "Locate corners 5, 6 and the final goal; tag taker, delivery, goalkeeper contact, runner and second-ball position. Locate the quick restart to #7 and identify who failed to track him.",
+        "url": null
+      },
+      {
+        "match": "Appleton North · fullback and midfield behavior",
+        "question": "Tag #12 and #7 advancing, #10 checking and accelerating, #1’s central position, and each successful quick switch. Check whether the same spaces exist after substitutions.",
+        "url": null
+      },
+      {
         "match": "Hortonville · September 19 · De Pere 3–2",
-        "question": "Tag all five goals: phase, entry channel, first breakdown, final pass, finish.",
+        "question": "Tag all five goals and our best other chances. Choose two repeatable attacking patterns and confirm our coverage when a midfielder steps to Skurka.",
         "url": null
       },
       {
-        "match": "Skurka, Shanda and Patrickus · any full match",
-        "question": "Where does Skurka receive? Who supplies Shanda? What does Patrickus create after releasing the ball?",
-        "url": null
-      },
-      {
-        "match": "Preble, Sheboygan North or Pulaski",
-        "question": "Compare first- and second-half chance creation. Which adjustments are visible?",
+        "match": "Appleton West · October 20 · De Pere 11–3",
+        "question": "Review the three concessions and distinguish transition, set-piece and individual-error sequences before using them in the game plan.",
         "url": null
       }
     ],
     "gaps": [
       "Shot entries are incomplete; omit shooting efficiency conclusions. Bound lists two penalty makes and zero attempts.",
       "Bound retrieved October 20 lists 42 team saves but no named goalkeeper breakdown. The older MaxPreps Baumgardt snapshot is not a current season total.",
-      "Formations, injuries and set-piece assignments remain unverified."
+      "Current Bound player-stat pages returned HTTP 403 on October 26. Player figures below retain their stated earlier source dates; they are not updated postseason totals.",
+      "The North film notes give a starting shape and restart patterns for that match only. Match date, video timestamps, corner takers, injuries and current availability remain unconfirmed. Yellow-card substitutions do not establish suspension status."
     ],
     "matches": [
       {
@@ -615,13 +643,24 @@
         "opponent": "Appleton West",
         "gf": 11,
         "ga": 3
+      },
+      {
+        "date": "2026-10-24",
+        "opponent": "Appleton North",
+        "gf": 4,
+        "ga": 0
       }
     ],
     "upcoming": [
       {
-        "date": "2026-10-24",
-        "opponent": "Appleton North",
-        "detail": "Home · regional final · confirm kickoff"
+        "date": "2026-10-29",
+        "opponent": "Hortonville",
+        "detail": "Home · sectional semifinal · WIAA lists 7 PM CT"
+      },
+      {
+        "date": "2026-10-31",
+        "opponent": "Hudson or Eau Claire Memorial",
+        "detail": "Conditional on winning October 29 · sectional final at D.C. Everest Middle School Soccer Complex · WIAA lists 1 PM CT"
       }
     ],
     "sources": [
@@ -656,11 +695,36 @@
       {
         "label": "Bound player statistics retrieved October 20; coverage incomplete",
         "url": "https://www.gobound.com/wi/wiaa/bsc/2026-27/depere/v/stats"
+      },
+      {
+        "label": "StatsPlus team match ledger and rankings retrieved October 26, 2026",
+        "url": "https://soccer.statsplus.net/rankings/team/50325/"
+      },
+      {
+        "label": "WIAA bracket updated October 26: regional finals and October 29 sectional matchups",
+        "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
+      },
+      {
+        "label": "Andrew Montalbano · DPvAN.txt · coach film notes supplied October 26; reviewed North match date unspecified",
+        "url": ""
       }
     ],
-    "playerSource": "Bound season statistics retrieved October 20, 2026; published player totals cover 81 goals versus 94 in recorded team results. This is an incomplete player snapshot, not full postseason totals",
+    "playerSource": "Bound player statistics retrieved October 20: 81 reported goals versus 98 in the updated team ledger. Roles updated from coach-supplied North film notes; the reviewed match date is unconfirmed. Statistics are an incomplete earlier snapshot",
     "conferenceContext": null,
-    "playerStatsMinimums": false
+    "playerStatsMinimums": false,
+    "coachObservations": [
+      "Source: Andrew Montalbano’s DPvAN.txt, supplied October 26. These are the coach’s film observations, not independently reviewed playback. De Pere played North October 9 and October 24; the notes do not state the match date. Clock references are copied from the notes and need alignment with the video.",
+      "Observed starting shape resembles 4-4-1-1: #23 Oscar Baumgardt in goal; #7 Brayden Franda, #8 Evan Thiem, #9 Anson Fawcett and #12 Kellen Lofdahl across the back; #5 Nick Myers, #1 Brady Shanda, #18 Jameson Jauquet and #6 Joah Coyle across midfield; #10 Maxim Skurka underneath #17 Nolan Patrickus. The midfielders interchange frequently. This is a match-specific interpretation of the supplied diagram, not a fixed season formation.",
+      "Skurka (#10) repeatedly comes back toward the ball and then attacks forward hard. Shanda (#1), despite his listed striker/defender designation and scoring record, is identified centrally in midfield in this match. Lofdahl (#12) gets particularly high. The coach notes both fullbacks pushing forward and the wide midfielders failing to recover, at times leaving the two center backs exposed.",
+      "Corner pattern: an initial group gathers on the far side of the penalty spot, with service directed toward the near post and six-yard box. Later right-footed inswingers bring the group closer to goal and place a player on the goalkeeper. The notes describe goals from corners 5 and 6 and the final corner: one inswinger served into the six, one almost directly into goal with the keeper blocked, and one loose ball finished after the delivery reaches the ground. Do not infer the taker’s identity from these notes.",
+      "Quick free kick: four De Pere players gather around the ball, then play quickly left to #7 Franda. He faces a reacting wide defender, takes one touch inside and scores. Thiem (#8) takes longer free kicks, freeing the midfielders to move forward.",
+      "Goal kicks: Thiem (#8), rather than the goalkeeper, takes them and sends them long; the first reaches halfway. At kickoff, five players start high with four in the back line; the ball goes through a lone central midfielder and then aerially toward the center for a second ball.",
+      "Attacking opportunity observed for North: quick switches that catch the advanced fullbacks produced its only offense in the reviewed passages. Central dribbling repeatedly failed. This identifies a pattern to test, not a guarantee that every switch creates a chance.",
+      "De Pere leaves two players up on defensive corners. Plan cover for those outlets before committing extra players to attack the delivery.",
+      "Rotation notes: #19 for #6 at 14:30; #11 for #17 at 16:30; #17 for #5 at 31:30; #6 for #18 at 33:00; #21 for #17 at 39:00. Later entries include #19 for #9 at 54:30, #24 for #21 at 58:30, #9 for #8 at 60:00 and #15 for #5 at 63:00. The notes associate several changes with yellows; these are not evidence of a current suspension. The 49:00 replacement for #1 is unnamed."
+    ],
+    "videoSelectionPolicy": "Coach observations from DPvAN.txt are incorporated above; playback and the reviewed match date have not been independently confirmed. Other priorities still need team film.",
+    "forfeitDates": []
   },
   {
     "slug": "appleton-north",
@@ -2499,23 +2563,23 @@
     "slug": "eau-claire-memorial",
     "name": "Eau Claire Memorial",
     "logo": "/scouting/eau-claire-memorial.png",
-    "reportDate": "2026-10-20",
-    "resultsThrough": "2026-10-20",
-    "ratingsAsOf": "2026-10-20",
+    "reportDate": "2026-10-26",
+    "resultsThrough": "2026-10-24",
+    "ratingsAsOf": "2026-10-26",
     "record": {
-      "w": 8,
+      "w": 9,
       "l": 7,
       "d": 2,
-      "gf": 57,
-      "ga": 30
+      "gf": 60,
+      "ga": 32
     },
-    "rating": 1816.41,
-    "sos": 1729.39,
-    "rank": 37,
-    "assessment": "Memorial advanced 4–2 over Chippewa Falls, using the result supplied by the coach with the linked Instagram post. The recorded ledger is now 8–7–2, goals 57–30. #6 Wausau West upset #3 D.C. Everest 2–1 and visits Memorial in the October 24 regional final. Memorial remains a possible October 31 sectional-final opponent if both teams advance. The last six recorded results are 4–1–1, goals 26–6. Keep the 10–0 Menomonie result used by Bound and StatsPlus; earlier MaxPreps and newspaper reports listed 11–0. Scorelines establish output but do not establish shape or pressure scheme.",
-    "conferenceContext": "Big Rivers: 5–2–0 through October 13, goals 34–7 using the Bound/StatsPlus 10–0 Menomonie result. #2 Memorial beat #7 Chippewa Falls 4–2 October 20 and hosts #6 Wausau West October 24. A Hortonville meeting requires both teams to reach the October 31 sectional final at D.C. Everest Middle School.",
+    "rating": 1830.53,
+    "sos": 1722.86,
+    "rank": 29,
+    "assessment": "Possible October 31 sectional-final opponent. Memorial beat Wausau West 3–2 and now visits Hudson October 29. Its reconciled record is 9–7–2, goals 60–32. Four consecutive wins total 25–4, although 18 goals came against Rice Lake and Menomonie; the two regional wins were 4–2 and 3–2. September’s 0–5 loss at Hudson is the direct reference for Thursday. Drew Hudson, Lou Biasi and Ethan Vallez remain identification priorities from the earlier local scoring reports. Current formation and player season totals are unconfirmed.",
+    "conferenceContext": "Big Rivers league-only ledger: 5–2–0, goals 34–7. Memorial visits Hudson in the October 29 sectional semifinal (WIAA lists 7 PM CT). A Hortonville meeting requires both teams to win Thursday and reach the October 31 sectional final at D.C. Everest Middle School Soccer Complex (1 PM CT).",
     "playerStatsMinimums": true,
-    "playerSource": "Verified scoring minimums from September 29 Eau Claire North and October 6 Rice Lake local reports, covering 13 of 43 team goals; class years from those current reports. The user identified the supplied Hudl roster as outdated, so its names and numbers are excluded; player figures retained from the prior report (team results previously through 2026-10-06); October 15 refresh updates team scores and ratings only",
+    "playerSource": "Scoring minimums from September 29 Eau Claire North and October 6 Rice Lake local reports: 13 goals across those two matches, not full season totals. Class years come from those reports. Jersey numbers remain unconfirmed; the previously identified outdated Hudl roster is excluded",
     "players": [
       {
         "name": "Drew Hudson",
@@ -2567,11 +2631,23 @@
       }
     ],
     "approach": [
-      "Identify Hudson, Biasi and Vallez and trace how they receive the ball. Recent scoring reports establish involvement, but formation, jersey numbers and deployment require current film.",
-      "Review the close losses to New Richmond and Waunakee alongside the Rice Lake win. Look for repeated chance creation and vulnerabilities across opponents, not only dominant-match highlights.",
-      "Verify Symes as a long-range shooting threat from film and plan pressure accordingly. Confirm the goalkeeper, penalty takers and defensive set-piece assignments before match preparation is finalized."
+      "Identify Drew Hudson, Biasi and Vallez in current film and trace their receiving positions and combinations. The two older scoring reports show involvement, not a complete current scoring hierarchy.",
+      "Review both regional wins (Chippewa Falls 4–2 and Wausau West 3–2). Tag the four concessions for repeated entry channels, transition issues or set pieces. Do not attribute the goals to a tactical weakness without seeing the sequences.",
+      "Use the October 29 Hudson rematch as the most current preparation reference if Memorial advances. Compare against the September 22 0–5 loss and note visible changes in personnel, buildup and defensive spacing.",
+      "Confirm Symes’ long-range shooting and Gibson’s penalty role from current film; both come from the Rice Lake report. Identify the starting goalkeeper and distribution before selecting pressure triggers.",
+      "Use the 3–4 Waunakee and 1–2 New Richmond losses alongside competitive playoff film. The dominant Rice Lake and Menomonie results should not define the entire game plan."
     ],
     "video": [
+      {
+        "match": "Wausau West · October 24 · Memorial 3–2",
+        "question": "Identify current starters, goal sources, set-piece roles and both concessions. Check how Memorial protects a narrow lead.",
+        "url": null
+      },
+      {
+        "match": "Hudson · September 22 · Memorial 0–5; October 29 rematch pending",
+        "question": "Where did Hudson disrupt Memorial’s buildup? If Memorial advances, identify the adjustments that changed the rematch.",
+        "url": null
+      },
       {
         "match": "Rice Lake · October 6 · Memorial 8–0",
         "question": "Identify the six named players and record Hudson’s four goals, his assist and the buildup. Distinguish starting-unit patterns from late reserve play.",
@@ -2592,8 +2668,8 @@
       "Complete current roster and jersey numbers remain unconfirmed. Bound has no populated current roster or player stats; the supplied Hudl roster is outdated.",
       "Player counts cover two matches only. Unreported assists are unavailable rather than zero; season goalkeeper statistics are unavailable.",
       "August 22 Superior was a scrimmage; the postponed Immanuel Lutheran fixture has no result. Neither is counted.",
-      "MaxPreps results are incomplete compared with reconciled Bound and StatsPlus results. No tactical film observations have been verified.",
-      "StatsPlus and Bound list Memorial 10–0 Menomonie; earlier MaxPreps and Leader-Telegram reports listed 11–0. The October 20 Chippewa Falls 4–2 result is coach-confirmed with the supplied Instagram reference; player attribution for that match is unavailable."
+      "Current Bound player-stat pages returned HTTP 403 on October 26. Player figures below retain their stated earlier source dates; they are not updated postseason totals.",
+      "Menomonie October 13 remains 10–0 in the reconciled StatsPlus/Bound ledger; earlier MaxPreps and newspaper reports said 11–0. The updated record excludes the postponed Immanuel Lutheran match. No new player attribution for either regional win was verified; no tactical playback has been independently reviewed."
     ],
     "matches": [
       {
@@ -2697,13 +2773,24 @@
         "opponent": "Chippewa Falls",
         "gf": 4,
         "ga": 2
+      },
+      {
+        "date": "2026-10-24",
+        "opponent": "Wausau West",
+        "gf": 3,
+        "ga": 2
       }
     ],
     "upcoming": [
       {
-        "date": "2026-10-24",
-        "opponent": "Wausau West",
-        "detail": "Home · regional final · confirm kickoff"
+        "date": "2026-10-29",
+        "opponent": "Hudson",
+        "detail": "Away at Hudson · sectional semifinal · WIAA lists 7 PM CT"
+      },
+      {
+        "date": "2026-10-31",
+        "opponent": "De Pere or Hortonville",
+        "detail": "Conditional on winning October 29 · sectional final at D.C. Everest Middle School Soccer Complex · WIAA lists 1 PM CT"
       }
     ],
     "sources": [
@@ -2770,7 +2857,16 @@
       {
         "label": "October 20 Memorial 4–2 Chippewa Falls · score supplied by coach with Instagram reference",
         "url": "https://www.instagram.com/p/DevQI4sgD1o/"
+      },
+      {
+        "label": "StatsPlus team match ledger and rankings retrieved October 26, 2026",
+        "url": "https://soccer.statsplus.net/rankings/team/50327/"
+      },
+      {
+        "label": "WIAA bracket updated October 26: regional finals and October 29 sectional matchups",
+        "url": "https://tournaments.wiaawi.org/brackets/Soccer/Boys/2026/2026_Soccer_Boys_Div1_Sec1_2"
       }
-    ]
+    ],
+    "forfeitDates": []
   }
 ]
