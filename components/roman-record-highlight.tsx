@@ -22,13 +22,13 @@ export function RomanRecordHighlight() {
             A new standard for Polar Bear boys soccer. Roman is the program’s all-time leader in career goals and points, and ranks fifth in career assists.
           </p>
           <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
-            Across his 2023–2026 career: <strong className="font-bold text-foreground">59 goals, 145 points, and 27 assists.</strong>
+            Across his 2023–2026 career: <strong className="font-bold text-foreground">60 goals, 147 points, and 27 assists.</strong>
           </p>
           <Link href="/stats/leaders" className="action-primary mt-7 w-fit">
             Explore the all-time leaders <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
           <a href="/images/roman-glad-career-records-2026.webp" className="mt-5 block w-fit text-sm font-semibold text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-            View the full graphic
+            View the commemorative graphic (before the Regional final)
           </a>
         </div>
       </div>

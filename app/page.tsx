@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
+import { SeniorClassHighlight } from "@/components/senior-class-highlight"
 import { TeamSelector } from "@/components/team-selector"
 import { ConferenceChampionshipHighlight } from "@/components/conference-championship-highlight"
 import { CoachOfTheYearHighlight } from "@/components/coach-of-the-year-highlight"
@@ -17,6 +18,7 @@ export default function Home() {
     <><Navigation /><main id="main-content" tabIndex={-1} className="min-h-screen bg-background">
       <Hero />
       <TeamSelector />
+      <SeniorClassHighlight />
       <ConferenceChampionshipHighlight />
       <CoachOfTheYearHighlight />
       <RomanRecordHighlight />

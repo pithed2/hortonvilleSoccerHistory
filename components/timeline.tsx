@@ -40,7 +40,7 @@ export function Timeline() {
       period: "2021-2026",
       title: "FVA Success and the Current Team",
       description:
-        "The boys program added regional championships in 2023, 2025, and 2026, won back-to-back Fox Valley Association championships in 2025 and 2026, and reached as high as seventh in the WSCA Division 1 rankings. A 1–0 win over Green Bay Preble secured the 2026 Regional title.",
+        "The boys program added regional championships in 2023, 2025, and 2026, won back-to-back Fox Valley Association championships in 2025 and 2026, and reached as high as seventh in the WSCA Division 1 rankings. A 1–0 win over Green Bay Preble secured the 2026 Regional title. The 2026 team finished 16–2–1 and reached the Division 1 sectional semifinal.",
       milestone: "2026 FVA and Regional champions",
       logo: "/logos/modern-bear-logo-white-fill.png",
       logoAlt: "Modern Bear Logo",

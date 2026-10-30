@@ -21,7 +21,7 @@ export function ConferenceChampionshipHighlight() {
             Congratulations to our varsity players and coaches: outright 2026 Fox Valley Association champions and WIAA Division 1 Regional champions!
           </p>
           <p className="mt-4 text-xl font-bold text-white">Back-to-back FVA and Regional titles.</p>
-          <p className="mt-4 max-w-xl leading-7 text-zinc-200">Hortonville defeated Green Bay Preble 1–0 on October 24 to claim the Regional title. Roman Glad scored, Fenton Hirschi assisted, and Eli Ryan made five saves in the shutout. The Polar Bears are 16–1–1.</p>
+          <p className="mt-4 max-w-xl leading-7 text-zinc-200">Hortonville defeated Green Bay Preble 1–0 on October 24 to claim the Regional title. Roman Glad scored, Fenton Hirschi assisted, and Eli Ryan made five saves in the shutout. The Polar Bears finished 16–2–1 after reaching the sectional semifinal.</p>
           <Link href="/seasons/2026" className="mt-8 inline-flex items-center gap-3 rounded-lg bg-red-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
             Celebrate the 2026 season <ArrowRight className="size-4" aria-hidden="true" />
           </Link>

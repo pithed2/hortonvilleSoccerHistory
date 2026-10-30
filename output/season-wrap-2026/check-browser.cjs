@@ -1,0 +1,22 @@
+const {chromium}=require('C:/Users/amontalbano/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright')
+const fs=require('fs'),assert=require('assert/strict')
+;(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true})
+ for(const [label,width] of [['desktop',1440],['mobile',390]]){
+  const page=await browser.newPage({viewport:{width,height:1000},deviceScaleFactor:1})
+  const errors=[];page.on('pageerror',e=>errors.push(e.message))
+  await page.goto('http://localhost:3005',{waitUntil:'networkidle'})
+  await page.getByRole('heading',{name:'A championship season.',exact:true}).waitFor()
+  const text=await page.locator('body').innerText();assert(text.includes('16–2–1'));assert(text.includes('A class that changed the program.'))
+  await page.locator('#class-of-2027').scrollIntoViewIfNeeded()
+  await page.screenshot({path:`output/season-wrap-2026/home-${label}.png`,fullPage:true})
+  await page.locator('#class-of-2027').screenshot({path:`output/season-wrap-2026/senior-highlight-${label}.png`})
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),`${label} overflow`)
+  const response=await page.request.get('http://localhost:3005/documents/class-of-2027-final-season-breakout.pdf');assert.equal(response.status(),200);assert(response.headers()['content-type'].includes('pdf'))
+  await page.goto('http://localhost:3005/seasons/2026',{waitUntil:'networkidle'})
+  const season=await page.locator('body').innerText();assert(season.includes('16-2-1'));assert(season.includes('0-3'));assert(season.includes('75'));assert(season.includes('A championship season. A lasting senior legacy.'))
+  assert.deepEqual(errors,[]);console.log(label,'home, senior highlight, PDF download and final-season data passed')
+  await page.close()
+ }
+ await browser.close()
+})().catch(e=>{console.error(e);process.exitCode=1})

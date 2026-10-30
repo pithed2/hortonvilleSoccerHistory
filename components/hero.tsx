@@ -17,6 +17,7 @@ export async function Hero() {
   const seasons = await seasonRows()
   const current = seasons[0]
   const games = current ? await gamesBySeason(current.season_year) : []
+  const seasonComplete = current?.notes?.includes("Season complete") ?? false
   const nextMatch = games.find((game) => !["W", "L", "T", "D"].includes((game.result || "").toUpperCase()))
 
   return (
@@ -47,12 +48,20 @@ export async function Hero() {
           </div>
         </div>
 
-        <aside className="min-w-0 rounded-3xl border border-white/12 bg-white/[0.06] p-5 shadow-2xl shadow-black/25 backdrop-blur-sm sm:p-7" aria-label="Next varsity match">
+        <aside className="min-w-0 rounded-3xl border border-white/12 bg-white/[0.06] p-5 shadow-2xl shadow-black/25 backdrop-blur-sm sm:p-7" aria-label={seasonComplete ? "2026 season wrap" : "Next varsity match"}>
           <div className="flex items-center justify-between gap-4">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-primary">Next match</p>
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-primary">{seasonComplete ? "Season complete" : "Next match"}</p>
             <Image src="/logos/modern-bear-logo-white-fill.png" alt="" width={44} height={44} className="h-11 w-auto opacity-90" />
           </div>
-          {nextMatch ? (
+          {seasonComplete ? (
+            <>
+              <h2 className="mt-7 text-3xl font-black tracking-tight sm:text-4xl">A championship season.</h2>
+              <p className="mt-4 text-lg font-bold">{current.wins}–{current.losses}–{current.ties} · FVA &amp; Regional champions</p>
+              <p className="mt-4 leading-7 text-white/75">The Polar Bears finished an unbeaten 8–0–1 conference campaign, repeated as Regional champions, and reached the Division 1 sectional semifinal.</p>
+              <p className="mt-4 text-sm text-white/65">Final match: October 29 · De Pere 3, Hortonville 0.</p>
+              <Link href="#class-of-2027" className="mt-6 inline-flex items-center gap-2 font-bold text-white underline underline-offset-4">Celebrate the seniors <ArrowRight className="size-4" aria-hidden="true" /></Link>
+            </>
+          ) : nextMatch ? (
             <>
               <p className="mt-7 text-sm font-bold uppercase tracking-wide text-white/55">Hortonville vs.</p>
               <h2 className="mt-1 text-3xl font-black tracking-tight sm:text-4xl">{nextMatch.opponent}</h2>

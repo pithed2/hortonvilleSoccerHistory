@@ -14,6 +14,7 @@ export async function CurrentSeasonSection() {
   const current = seasons[0]
   if (!current) return null
 
+  const seasonComplete = current.notes?.includes("Season complete") ?? false
   const games = await gamesBySeason(current.season_year)
   const numbered = games.map((game, index) => ({ game, number: index + 1 }))
   const completed = numbered.filter(({ game }) => ["W", "L", "T", "D"].includes((game.result || "").toUpperCase()))
@@ -26,7 +27,7 @@ export async function CurrentSeasonSection() {
         <div className="section-heading">
           <div>
             <p className="section-eyebrow">Varsity match center</p>
-            <h2 id="match-center-title" className="section-title">Follow the season</h2>
+            <h2 id="match-center-title" className="section-title">{seasonComplete ? "The 2026 season, complete." : "Follow the season"}</h2>
           </div>
           <Link href={`/seasons/${current.season_year}`} className="action-primary w-fit">
             Full season <ArrowRight className="size-4" aria-hidden="true" />
@@ -63,13 +64,13 @@ export async function CurrentSeasonSection() {
                 <ArrowRight className="size-5" aria-hidden="true" />
               </span>
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">On the schedule</p>
-                <h3 className="text-xl font-black">Upcoming matches</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">{seasonComplete ? "2026 final record" : "On the schedule"}</p>
+                <h3 className="text-xl font-black">{seasonComplete ? `${current.wins}–${current.losses}–${current.ties}` : "Upcoming matches"}</h3>
               </div>
             </div>
 
             <div className="mt-6 divide-y">
-              {upcoming.length ? upcoming.map((game) => (
+              {seasonComplete ? <div className="space-y-4 leading-7"><p>Back-to-back FVA and Regional champions. Hortonville finished 8–0–1 in conference, scored 70 goals, and kept seven shutouts.</p><p className="text-muted-foreground">The season ended October 29 in a 3–0 sectional-semifinal loss at De Pere. Thank you to the players, coaches, families and supporters who made this run possible.</p><Link href="#class-of-2027" className="font-bold text-primary underline underline-offset-4">Celebrate the Class of 2027</Link></div> : upcoming.length ? upcoming.map((game) => (
                 <div key={`${game.date}-${game.opponent}`} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
                   <time dateTime={game.date} className="w-14 shrink-0 text-sm font-bold text-primary">{formatDate(game.date)}</time>
                   <div className="min-w-0 flex-1">
