@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { PLAYER_CARD_LIMIT, blankCardDesign, type CardDesign, type CardPhoto, type CardPlayer } from "@/lib/player-card-types"
 import type { StoredCard } from "@/lib/card-studio-store"
 import { PlayerCardPreview } from "@/components/player-card-preview"
-import { createMyStudioCard, listMyStudioCards, submitMyStudioCard, updateMyStudioCard } from "./actions"
+import { createMyStudioCard, deleteMyUnusedCard, listMyStudioCards, submitMyStudioCard, updateMyStudioCard } from "./actions"
 
 async function preparePhoto(file: File) {
   if (!["image/jpeg","image/png","image/webp"].includes(file.type) || file.size > 20 * 1024 * 1024) throw new Error("Use a JPG, PNG or WebP image under 20 MB.")
@@ -110,6 +110,17 @@ export function MyCardStudio({ player, demoMode }: {player: CardPlayer; demoMode
             <label className="block text-sm font-bold">Card finish<select value={design.theme} onChange={e=>edit({theme:e.target.value as CardDesign["theme"]})} className="mt-2 w-full rounded-lg border border-white/20 bg-[#191919] p-3"><option value="red">Polar Red</option><option value="black">Black &amp; White</option><option value="ice">Cracked Ice</option><option value="gold">Championship Gold</option><option value="retro">Retro Print</option></select></label>
             <label className="flex items-start gap-2 text-sm"><input type="checkbox" checked={design.rightsConfirmed} onChange={e=>edit({rightsConfirmed:e.target.checked})}/> I have permission to use these photos, including any required player or parent permission.</label>
             <div className="flex flex-wrap gap-3"><button disabled={busy} onClick={()=>{if(demoMode){setCards(current=>current.map(card=>card.id===active.id?{...card,title,draft:design}:card));setDirty(false);setMessage("Saved in this preview page only. Refreshing will erase demo cards.");return}void run(()=>updateMyStudioCard(active.id,title,design),"Draft saved.")}} className="rounded-lg border border-white/30 px-4 py-3 font-bold disabled:opacity-50">Save draft</button><button disabled={demoMode||busy||active.status==="pending"||dirty} onClick={()=>run(()=>submitMyStudioCard(active.id),"Submitted for coach approval.")} className="rounded-lg bg-red-600 px-4 py-3 font-bold disabled:opacity-50">{demoMode?"Submission disabled in demo":"Submit for approval"}</button></div>
+            {active.status === "draft" ? <button type="button" disabled={busy} className="text-xs text-red-300 underline disabled:opacity-50" onClick={async()=>{
+              if (!window.confirm("Delete this unsubmitted card? This cannot be undone.")) return
+              setBusy(true);setMessage("")
+              try {
+                if (!demoMode) await deleteMyUnusedCard(active.id)
+                setCards(current=>current.filter(card=>card.id!==active.id))
+                setSelected("");setTitle("My player card");setDesign(blankCardDesign());setDirty(false)
+                setMessage("Draft deleted. Its card slot is available again.")
+              } catch (e) {setMessage(e instanceof Error?e.message:"Could not delete the draft.")}
+              finally {setBusy(false)}
+            }}>Delete unsubmitted draft</button> : null}
             {dirty ? <p className="text-xs text-amber-200">Save your changes before submitting.</p>:null}
             {active.status==="pending"?<p className="text-sm text-amber-200">A submitted version is awaiting coach review. You can continue editing your personal draft.</p>:null}
             {active.approved?<p className="text-sm">Approved card: <a className="underline text-red-300" href={"/player-cards/c/"+active.token}>Open public card</a></p>:null}
