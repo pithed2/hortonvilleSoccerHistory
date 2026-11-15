@@ -46,26 +46,50 @@ function crackedIceTexture() {
   return texture
 }
 export async function cardImage(src: string): Promise<HTMLImageElement> {
-  const image = new Image()
-  image.src = src
-  await image.decode()
-  return image
+  // onload works reliably with data: photos and with assets on Android WebView.
+  // Some browsers reject decode() with NetworkError even after an image loads.
+  return new Promise((resolve, reject) => {
+    const image = new Image()
+    image.onload = () => resolve(image)
+    image.onerror = () => reject(new Error("Image could not be loaded"))
+    image.src = src
+    if (image.complete && image.naturalWidth > 0) resolve(image)
+  })
 }
 
 export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPlayer, design: CardDesign, side: "front" | "back") {
-  // Reuse next/font's self-hosted Poppins family, including its generated name.
+  const warnings: string[] = []
+  // A font's network request must not prevent a card from rendering.
   const family = getComputedStyle(document.body).getPropertyValue("--font-poppins").trim() || "Arial, sans-serif"
-  await Promise.all([400, 700, 800].map((weight) => document.fonts.load(`${weight} 28px ${family}`)))
+  if (document.fonts?.load) {
+    const weights = await Promise.allSettled([400, 700, 800].map((weight) => document.fonts.load(`${weight} 28px ${family}`)))
+    if (weights.some(result => result.status === "rejected")) warnings.push("Card fonts unavailable. Using the browser fallback.")
+  }
   canvas.width = CARD_WIDTH
   canvas.height = CARD_HEIGHT
-  const ctx = canvas.getContext("2d")!
-  const [portrait, action, logo, highlight] = await Promise.all([design.portrait.src ? cardImage(design.portrait.src) : null, design.action.src ? cardImage(design.action.src) : null, cardImage("/logos/modern-bear-logo-white-fill.png"), design.highlight?.src ? cardImage(design.highlight.src) : null])
+  const ctx = canvas.getContext("2d")
+  if (!ctx) throw new Error("Canvas support is unavailable in this browser.")
+  // A failed decorative asset never hides the rest of the card.
+  const optionalImage = async (src: string | undefined, label: string) => {
+    if (!src) return null
+    try { return await cardImage(src) }
+    catch {
+      warnings.push(label + " failed to load.")
+      return null
+    }
+  }
+  const [portrait, action, logo, highlight] = await Promise.all([
+    optionalImage(design.portrait.src, "Portrait photo"),
+    optionalImage(design.action.src, "Action photo"),
+    optionalImage("/logos/modern-bear-logo-white-fill.png", "Hortonville crest"),
+    optionalImage(design.highlight?.src, "Highlight photo"),
+  ])
   const cooperBack = player.id === "cooper-re-coach" && side === "back"
   const marcoBack = player.id === "marco-coach" && side === "back"
-  const snc = marcoBack ? await cardImage("/logos/marco-snc-transparent.png") : null
-  const [kimberly, whitewater] = await Promise.all([
-    cooperBack ? cardImage("/logos/cooper-kimberly.png") : null,
-    cooperBack ? cardImage("/logos/cooper-uww-transparent.png") : null,
+  const [snc, kimberly, whitewater] = await Promise.all([
+    optionalImage(marcoBack ? "/logos/marco-snc-transparent.png" : undefined, "Coach logo"),
+    optionalImage(cooperBack ? "/logos/cooper-kimberly.png" : undefined, "Kimberly logo"),
+    optionalImage(cooperBack ? "/logos/cooper-uww-transparent.png" : undefined, "UW-Whitewater logo"),
   ])
   const isIce = design.theme === "ice"
   const isGold = design.theme === "gold"
@@ -77,6 +101,22 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     ctx.font = `${Math.min(weight, 800)} ${size}px ${family}`
     if (maxWidth) while (ctx.measureText(value).width > maxWidth && size > 10) { size--; ctx.font = `${Math.min(weight, 800)} ${size}px ${family}` }
     ctx.fillText(value, x, y)
+  }
+  function drawCrest(x: number, y: number, size: number) {
+    if (logo) {
+      ctx.drawImage(logo, x, y, size, size)
+      return
+    }
+    // Readable stand-in if a preview asset is blocked by network or auth.
+    ctx.save()
+    ctx.strokeStyle = "#ffffff"
+    ctx.lineWidth = Math.max(2, size / 24)
+    ctx.strokeRect(x + 4, y + 4, size - 8, size - 8)
+    ctx.fillStyle = "#ffffff"
+    ctx.font = `800 ${Math.floor(size * 0.6)}px Arial, sans-serif`
+    ctx.textAlign = "center"
+    ctx.fillText("H", x + size / 2, y + size * 0.72)
+    ctx.restore()
   }
   function photo(image: HTMLImageElement | null, crop: CardPhoto, x: number, y: number, w: number, h: number) {
     ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip()
@@ -190,7 +230,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     }
     limitedEditionStamp(822, 1098, -.08)
     ctx.fillStyle = isRetro ? "#261518e8" : "#000000d9"; ctx.fillRect(0, 0, 1000, 145)
-    ctx.drawImage(logo, 42, 25, 90, 90)
+    drawCrest(42, 25, 90)
     text("HORTONVILLE", 160, 65, 38); text("POLAR BEARS / BOYS SOCCER", 160, 102, 20, "#FFFFFF")
     if (player.number) text(`#${player.number}`, 765, 100, 70, accent, 900, 190)
     if (isRetro) {
@@ -268,7 +308,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     // set apart from the overview text above instead of floating on the bare background.
     ctx.fillStyle = "rgba(255,255,255,.05)"; ctx.fillRect(50, 1248, 900, 140)
     ctx.strokeStyle = "rgba(255,255,255,.18)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(50, 1248); ctx.lineTo(950, 1248); ctx.stroke()
-    ctx.drawImage(logo, cooperBack ? 619 : marcoBack ? 534 : 464, 1264, 72, 72)
+    drawCrest(cooperBack ? 619 : marcoBack ? 534 : 464, 1264, 72)
     if (snc) {
       const scale = Math.min(120 / snc.naturalWidth, 72 / snc.naturalHeight)
       const width = snc.naturalWidth * scale, height = snc.naturalHeight * scale
@@ -297,6 +337,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     ctx.lineWidth = 3
     ctx.strokeRect(19, 19, 962, 1362)
   }
+  return warnings
 }
 
 export function downloadCanvas(canvas: HTMLCanvasElement, name: string) {
