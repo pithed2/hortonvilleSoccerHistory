@@ -4,7 +4,7 @@ import fs from "node:fs"
 import path from "node:path"
 import { eq } from "drizzle-orm"
 import { getRedRoomDb } from "@/lib/red-room/db"
-import { rosterMemberships, type players } from "@/lib/red-room/schema"
+import { rosterMemberships, players } from "@/lib/red-room/schema"
 import { cardPlayers } from "@/lib/player-cards"
 import type { CardPlayer, CardMetric } from "@/lib/player-card-types"
 
