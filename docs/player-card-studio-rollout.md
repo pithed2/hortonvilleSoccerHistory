@@ -1,6 +1,6 @@
 # Player Card Studio: cloud rollout
 
-This feature is developed only on `feature/player-card-studio-access`. Do not merge it into `main` until the checklist below is verified.
+The feature was developed on `feature/player-card-studio-access`. Production can launch in read-only browser demo mode while persistent publishing remains blocked. Do not enable production writes until the review checklist below is verified.
 
 ## Paths
 
@@ -18,7 +18,11 @@ Five interchangeable finishes share the same locked player identity and stats: P
 
 ## Safety before enabling
 
-`CARD_STUDIO_WRITES_ENABLED` must be set explicitly to `true`. All Studio database access fails closed otherwise. Do not set the switch until the preview environment's database is confirmed isolated from production. This is especially important because the existing Red Room documentation uses shared Turso connection settings. Make a database backup before enabling in production.
+The default release is **browser-only demo mode** (no card database writes). It works in production without any additional flags. Drafts disappear after the browser page is closed or refreshed. Submission, publishing, and approvals are disabled.
+
+`CARD_STUDIO_WRITES_ENABLED` must be explicitly `true` for database operations. **Production additionally requires** `CARD_STUDIO_PRODUCTION_WRITES_ENABLED=true`. The two independent flags intentionally prevent a production database connection from being used by Card Studio during its initial launch. They are not required for the demo, and **must not be set** until the database is isolated, backed up, and end-to-end approval tests are complete. Preview may use the single write flag only after confirming its database is isolated from production.
+
+Both card data and photo upload forms remain in the browser during demo mode. The site never transmits demo card images to the card storage backend.
 
 The feature creates new `card_studio_*` tables using the existing libSQL connection. It does not change Red Room identity or match tables, nor does it migrate or delete the existing coach-only `player_cards` table.
 
