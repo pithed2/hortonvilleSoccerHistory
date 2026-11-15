@@ -2,7 +2,6 @@ import "server-only"
 
 import fs from "node:fs"
 import path from "node:path"
-import { createHash } from "node:crypto"
 import { eq } from "drizzle-orm"
 import { getRedRoomDb } from "@/lib/red-room/db"
 import { rosterMemberships, players } from "@/lib/red-room/schema"
@@ -11,25 +10,6 @@ import type { CardPlayer, CardMetric } from "@/lib/player-card-types"
 
 type Account = typeof players.$inferSelect
 
-/**
- * Temporary test account. Miles already owns NR-Miles in the Red Room.
- * Match his stable account ID as well as the name and tag, and never allow
- * this exception on production or when real preview writes are enabled.
- */
-export function isMilesPreviewCardTester(account: Account) {
-  const name = "miles montalbano"
-  const id = "player_" + createHash("sha256").update(name).digest("hex").slice(0, 20)
-  return process.env.VERCEL_ENV === "preview"
-    && process.env.CARD_STUDIO_WRITES_ENABLED !== "true"
-    && !account.isBot
-    && account.accountType === "private"
-    && account.id === id
-    && account.normalizedName === name
-    && account.displayName.trim().toLocaleLowerCase("en-US") === name
-    && account.publicTag === "NR-Miles"
-}
-type RawPlayer = { name: string; number: number | string; gp?: number; goals?: number; assists?: number; points?: number; position?: string; saves?: number | null; recordedSaves?: number | null; goalsAgainst?: number | null }
-type Squad = { players: RawPlayer[]; goalkeepers?: RawPlayer[]; roster?: RawPlayer[] }
 const normalized = (name: string) => name.trim().replace(/\s+/g, " ").toLocaleLowerCase("en-US")
 const value = (n: number | null | undefined) => typeof n === "number" && Number.isFinite(n) ? String(n) : "—"
 const metric = (label: string, season: string): CardMetric => ({ label, season, career: "—" })
@@ -50,12 +30,7 @@ function squadData(squad: string): Squad | null {
 
 /** Never accept a player name, squad, jersey or stats from a browser request. */
 export async function cardProfileForAccount(account: Account): Promise<CardPlayer | null> {
-  if (account.isBot || (!["player", "coach"].includes(account.accountType) && !isMilesPreviewCardTester(account))) return null
-
-  if (isMilesPreviewCardTester(account)) {
-    const miles2021 = cardPlayers().find(entry => normalized(entry.name) === "miles montalbano" && entry.season === 2021 && !entry.example)
-    return miles2021 ? { ...miles2021, id: account.id } : null
-  }
+  if (account.isBot || !["player", "coach"].includes(account.accountType)) return null
 
   const memberships = await getRedRoomDb().select().from(rosterMemberships)
     .where(eq(rosterMemberships.playerId, account.id))
@@ -115,9 +90,6 @@ export function coachCardPreviewRoster(): CardPlayer[] {
   }
   for (const player of cardPlayers()) {
     if (player.season === 2026 && !player.example && !player.coach) add(player)
-    // Coach's preview may also inspect the real 2021 alumni test card.
-    if (process.env.VERCEL_ENV === "preview"
-        && player.name === "Miles Montalbano" && player.season === 2021) add(player)
   }
   for (const squad of ["JV Red", "JV White", "JV Black", "JV Gray"]) {
     const data = squadData(squad)
