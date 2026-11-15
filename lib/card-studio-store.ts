@@ -2,12 +2,13 @@ import "server-only"
 import { createClient, type Client } from "@libsql/client"
 import { randomUUID, randomBytes } from "node:crypto"
 import { PLAYER_CARD_LIMIT, type CardDesign, type CardPlayer } from "./player-card-types"
+import { cardStudioWritesEnabled } from "./card-studio-rollout"
 
 export type StoredCard = { id: string; ownerId: string; title: string; draft: CardDesign; submitted: { title: string; design: CardDesign; player: CardPlayer; revision: number } | null; approved: { title: string; design: CardDesign; player: CardPlayer; revision: number } | null; status: string; revision: number; token: string }
 let conn: Client | undefined
 let initialized: Promise<unknown> | undefined
 async function db() {
-  if (process.env.CARD_STUDIO_WRITES_ENABLED !== "true") throw new Error("Card Studio is not enabled on this deployment.")
+  if (!cardStudioWritesEnabled()) throw new Error("Card Studio is not enabled on this deployment.")
   if (!conn) {
     const url = process.env.TURSO_DATABASE_URL || process.env.RED_ROOM_DATABASE_URL || (process.env.NODE_ENV !== "production" ? process.env.hhs_TURSO_DATABASE_URL : undefined)
     if (!url && process.env.NODE_ENV === "production") throw new Error("Red Room database is not configured.")
