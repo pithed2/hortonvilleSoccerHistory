@@ -9,6 +9,8 @@ import { cardPlayerId, cardPlayers } from "@/lib/player-cards"
 import type { CardPlayer, CardMetric } from "@/lib/player-card-types"
 
 type Account = typeof players.$inferSelect
+type RawPlayer = { name: string; number: number | string; gp?: number; goals?: number; assists?: number; points?: number; position?: string; saves?: number | null; recordedSaves?: number | null; goalsAgainst?: number | null }
+type Squad = { players: RawPlayer[]; goalkeepers?: RawPlayer[]; roster?: RawPlayer[] }
 
 const normalized = (name: string) => name.trim().replace(/\s+/g, " ").toLocaleLowerCase("en-US")
 const value = (n: number | null | undefined) => typeof n === "number" && Number.isFinite(n) ? String(n) : "—"
