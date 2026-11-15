@@ -116,8 +116,11 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
         <select id="coach-player-choice" value={coachPreviewId} onChange={event=>chooseCoachPreview(event.target.value)} className="mt-2 block w-full rounded-lg border border-white/20 bg-[#191919] p-3">
           <option value={player.id}>My coach card · {player.name}</option>
           <optgroup label="2026 Varsity and JV players">
-            {coachRoster.map(entry=><option key={entry.id} value={entry.id}>{entry.name} · {entry.careerSpan} {entry.number?"· #"+entry.number:""}</option>)}
+            {coachRoster.filter(entry=>entry.season===2026).map(entry=><option key={entry.id} value={entry.id}>{entry.name} · {entry.careerSpan} {entry.number?"· #"+entry.number:""}</option>)}
           </optgroup>
+          {coachRoster.some(entry=>entry.season!==2026)?<optgroup label="Alumni test cards">
+            {coachRoster.filter(entry=>entry.season!==2026).map(entry=><option key={entry.id} value={entry.id}>{entry.name} · {entry.season} {entry.number?"· #"+entry.number:""}</option>)}
+          </optgroup>:null}
         </select>
       </label>
       <p className="mt-2 text-xs text-white/65">
@@ -186,7 +189,7 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
       </div> : <section className="space-y-4">
         <div className="rounded-xl border border-white/20 p-4 text-sm text-white/70">
           <p className="font-semibold text-white">Your player card is ready for a look.</p>
-          <p className="mt-2">Here are the available 2026 stats for {previewPlayer.name}. Photos show placeholders until you create a card and upload your own. No saved card is needed to see the preview.</p>
+          <p className="mt-2">Here are the available {previewPlayer.season} stats for {previewPlayer.name}. Photos show placeholders until you create a card and upload your own. No saved card is needed to see the preview.</p>
         </div>
         <div className="grid grid-cols-2 gap-3"><PlayerCardPreview player={previewPlayer} design={emptyPreviewDesign} side="front"/><PlayerCardPreview player={previewPlayer} design={emptyPreviewDesign} side="back"/></div>
       </section>}
