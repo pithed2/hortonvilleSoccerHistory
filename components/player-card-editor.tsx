@@ -25,7 +25,7 @@ async function preparePhoto(file: File) {
 }
 
 export function PlayerCardEditor({ players }: { players: CardPlayer[] }) {
-  const [id, setId] = useState(players.find((player) => player.id === "og-andy")?.id ?? players.find((player) => player.name === "Miles Montalbano")?.id ?? players[0]?.id ?? "")
+  const [id, setId] = useState(players.find((player) => player.id === "og-andy")?.id ?? players[0]?.id ?? "")
   const [design, setDesign] = useState<CardDesign>(blankCardDesign)
   const [busy, setBusy] = useState(true)
   const [dirty, setDirty] = useState(false)
