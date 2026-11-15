@@ -1,7 +1,7 @@
 "use server"
 
 import { revalidatePath } from "next/cache"
-import { studioIdentity, validateCardDesign, checkReadyForSubmission, sendCardNotification } from "@/lib/card-studio-access"
+import { studioIdentity, validateCardDesign, validatePlayerText, checkReadyForSubmission, sendCardNotification } from "@/lib/card-studio-access"
 import { createCard, getCard, playerCards, saveDraft, submitCard } from "@/lib/card-studio-store"
 import type { CardDesign } from "@/lib/player-card-types"
 
@@ -13,7 +13,7 @@ async function identity() {
 function safeTitle(value: string) {
   const title = value.trim().slice(0,60)
   if (!title) throw new Error("Enter a card title.")
-  return title
+  return validatePlayerText(title)
 }
 export async function listMyStudioCards() {
   const account = await identity()
