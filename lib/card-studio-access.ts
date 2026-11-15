@@ -21,7 +21,7 @@ const objectionable = [
   /\b(?:kill yourself|kys|rape|porn|nudes?)\b/i,
 ]
 export function validatePlayerText(value: string) {
-  const simplified = value.toLowerCase().replace(/[@]/g,"a").replace(/\$/g,"s").replace(/[0]/g,"o").replace(/[\\u200b-\\u200d\\ufeff]/g,"")
+  const simplified = value.toLowerCase().replace(/[@]/g,"a").replace(/\$/g,"s").replace(/[0]/g,"o").replace(/\p{Cf}/gu,"")
   if (objectionable.some((pattern) => pattern.test(simplified))) throw new Error("Keep it PG-13. Remove inappropriate language.")
   return value
 }
@@ -40,6 +40,7 @@ export function validateCardDesign(value: unknown): CardDesign {
         : match[1] === "png" ? bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
         : bytes.toString("ascii",0,4) === "RIFF" && bytes.toString("ascii",8,12) === "WEBP"
       if (!valid) throw new Error("File content does not match its image type.")
+      if (bytes.includes(Buffer.from("Exif")) || bytes.includes(Buffer.from("eXIf"))) throw new Error("Remove location and other photo metadata before uploading.")
     }
     for (const field of ["x","y","zoom"]) if (typeof p[field] !== "number" || !Number.isFinite(p[field] as number)) throw new Error("Invalid image crop.")
     const x = p.x as number, y = p.y as number, zoom = p.zoom as number
@@ -48,8 +49,7 @@ export function validateCardDesign(value: unknown): CardDesign {
   }
   const overview = String(input.overview || "").trim()
   if (overview.length > 500 || overview.length < 0) throw new Error("Description must be 500 characters or less.")
-  const simplified = overview.toLowerCase().replace(/[@]/g,"a").replace(/\$/g,"s").replace(/[0]/g,"o")
-  if (objectionable.some((pattern) => pattern.test(simplified))) throw new Error("Keep the description PG-13. Remove inappropriate language.")
+  validatePlayerText(overview)
   if (!["red","black","ice"].includes(String(input.theme))) throw new Error("Invalid card finish.")
   const portrait = image(input.portrait), action = image(input.action)
   const highlight = input.highlight ? image(input.highlight) : undefined
