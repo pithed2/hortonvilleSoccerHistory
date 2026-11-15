@@ -38,7 +38,7 @@ export async function getCard(id: string): Promise<StoredCard | null> {
 export async function publicCard(token: string) {
   if (!/^[a-f0-9]{32}$/.test(token)) return null
   const rows = await (await db()).execute({ sql: "SELECT title, approved FROM card_studio_cards WHERE token = ? AND approved IS NOT NULL AND status <> 'withdrawn'", args: [token] })
-  return rows.rows[0] ? { title: String(rows.rows[0].title), ...JSON.parse(String(rows.rows[0].approved)) as { title: string; player: CardPlayer; design: CardDesign; revision: number } } : null
+  return rows.rows[0] ? { ...JSON.parse(String(rows.rows[0].approved)) as { title: string; player: CardPlayer; design: CardDesign; revision: number } } : null
 }
 export async function createCard(ownerId: string, title: string, design: CardDesign) {
   const client = await db()
