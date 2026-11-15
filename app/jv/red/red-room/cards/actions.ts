@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache"
 import { studioIdentity, validateCardDesign, validatePlayerText, checkReadyForSubmission, sendCardNotification } from "@/lib/card-studio-access"
-import { createCard, getCard, playerCards, saveDraft, submitCard } from "@/lib/card-studio-store"
+import { createCard, deleteUnusedCard, getCard, playerCards, saveDraft, submitCard } from "@/lib/card-studio-store"
 import type { CardDesign } from "@/lib/player-card-types"
 
 async function identity() {
@@ -39,4 +39,10 @@ export async function submitMyStudioCard(id: string) {
   await sendCardNotification(id, revision, account.player.name, card.title)
   revalidatePath("/jv/red/red-room/cards")
   return revision
+}
+
+export async function deleteMyUnusedCard(id: string) {
+  const account = await identity()
+  await deleteUnusedCard(id, account.accountId)
+  revalidatePath("/jv/red/red-room/cards")
 }
