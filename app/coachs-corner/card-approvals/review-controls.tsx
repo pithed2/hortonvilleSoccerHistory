@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { useRouter } from "next/navigation" from "react"
+import { useRouter } from "next/navigation"
 import { decideSubmission, withdrawApproval } from "./actions"
 export function ReviewControls({id,revision}:{id:string;revision:number}) {
   const router=useRouter()
