@@ -20,6 +20,11 @@ const objectionable = [
   /\b(?:n[i1!][g9]{2}[ae]r|f[a@]g(?:got)?|k[i1!]ke|retard(?:ed)?)\b/i,
   /\b(?:kill yourself|kys|rape|porn|nudes?)\b/i,
 ]
+export function validatePlayerText(value: string) {
+  const simplified = value.toLowerCase().replace(/[@]/g,"a").replace(/\$/g,"s").replace(/[0]/g,"o").replace(/[\\u200b-\\u200d\\ufeff]/g,"")
+  if (objectionable.some((pattern) => pattern.test(simplified))) throw new Error("Keep it PG-13. Remove inappropriate language.")
+  return value
+}
 export function validateCardDesign(value: unknown): CardDesign {
   if (!value || typeof value !== "object") throw new Error("Invalid card.")
   const input = value as Record<string, unknown>
