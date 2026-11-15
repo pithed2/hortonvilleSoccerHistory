@@ -15,7 +15,7 @@ export function cardTotal(history: VarsitySeasonHistory[], key: string, keeper =
 
 export function cardPlayers(): CardPlayer[] {
   const histories = varsityHistoryByPlayer()
-  const roster = [...rosterBySeason(2026), ...rosterBySeason(2021).filter((player) => player.player_name === "Miles Montalbano")]
+  const roster = rosterBySeason(2026)
   const players: CardPlayer[] = roster.map((player) => {
     const year = player.season
     const history = (histories.get(player.player_name) ?? []).filter((entry) => entry.season <= year)
