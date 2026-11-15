@@ -109,7 +109,7 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
   }
   return <div className="mx-auto max-w-7xl space-y-8">
     <header><Link href="/jv/red/red-room" className="text-sm text-red-300 underline">Back to Red Room</Link><h1 className="mt-4 text-4xl font-black">Player Card Studio</h1><p className="mt-2 text-white/70">Signed in as {player.name}. Your name and recorded statistics cannot be changed here.</p></header>
-    {demoMode?<div role="status" className="rounded-lg border border-amber-400/40 bg-amber-400/10 p-4 text-sm text-amber-100"><strong>Preview demo mode:</strong> Create, edit and download a sample card without database writes. Demo cards exist only in this open page. Saving and submitting real cards will be enabled after the preview database is isolated.</div>:null}
+    {demoMode?<div role="status" className="rounded-lg border border-amber-400/40 bg-amber-400/10 p-4 text-sm text-amber-100"><strong>Demo mode:</strong> Create, edit and download a sample card without database writes. Demo cards exist only in this open page. Permanent saving and submitting will be enabled only after the database and approval workflow have been tested.</div>:null}
     {message?<p role="status" className="rounded-lg border border-red-400/40 p-3 text-sm text-red-100">{message}</p>:null}
     {coachRoster.length ? <section className="rounded-xl border border-white/20 bg-white/[.04] p-4">
       <label className="block text-sm font-semibold" htmlFor="coach-player-choice">Coach roster preview
