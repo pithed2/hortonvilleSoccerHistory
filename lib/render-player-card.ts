@@ -50,21 +50,30 @@ export async function cardImage(src: string): Promise<HTMLImageElement> {
   // Some browsers reject decode() with NetworkError even after an image loads.
   return new Promise((resolve, reject) => {
     const image = new Image()
-    image.onload = () => resolve(image)
-    image.onerror = () => reject(new Error("Image could not be loaded"))
+    let settled = false
+    const timer = window.setTimeout(() => finish(false), 8000)
+    function finish(ok: boolean) {
+      if (settled) return
+      settled = true
+      window.clearTimeout(timer)
+      image.onload = null
+      image.onerror = null
+      if (ok && image.naturalWidth > 0) resolve(image)
+      else reject(new Error("Image could not be loaded"))
+    }
+    image.onload = () => finish(true)
+    image.onerror = () => finish(false)
     image.src = src
-    if (image.complete && image.naturalWidth > 0) resolve(image)
+    if (image.complete && image.naturalWidth > 0) finish(true)
   })
 }
 
 export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPlayer, design: CardDesign, side: "front" | "back") {
   const warnings: string[] = []
-  // A font's network request must not prevent a card from rendering.
+  // CSS already requests the site font. Canvas can paint immediately with
+  // an installed font or browser fallback. Never block the card on a network
+  // font request, especially on mobile and protected Vercel previews.
   const family = getComputedStyle(document.body).getPropertyValue("--font-poppins").trim() || "Arial, sans-serif"
-  if (document.fonts?.load) {
-    const weights = await Promise.allSettled([400, 700, 800].map((weight) => document.fonts.load(`${weight} 28px ${family}`)))
-    if (weights.some(result => result.status === "rejected")) warnings.push("Card fonts unavailable. Using the browser fallback.")
-  }
   canvas.width = CARD_WIDTH
   canvas.height = CARD_HEIGHT
   const ctx = canvas.getContext("2d")
