@@ -199,7 +199,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
       text("RETRO PRINT", -125, 12, 30, "#FBEBC8", 800, 250)
       ctx.restore()
     }
-    text(player.coach ? "COACH COLLECTION / TESTER EDITION" : player.example ? "OG ANDY / EXAMPLE EDITION" : player.season === 2026 ? "2026 FOX VALLEY ASSOCIATION CHAMPIONS" : "ALUMNI EDITION", 55, 1140, 25, accent, 800, 890)
+    text(player.coach ? "COACH COLLECTION / TESTER EDITION" : player.example ? "OG ANDY / EXAMPLE EDITION" : player.careerSpan.startsWith("2026 JV ") ? player.careerSpan.toUpperCase() + " / HORTONVILLE SOCCER" : player.season === 2026 ? "2026 FOX VALLEY ASSOCIATION CHAMPIONS" : "ALUMNI EDITION", 55, 1140, 25, accent, 800, 890)
     const parts = player.name.split(" "), last = parts.pop() ?? "", first = parts.join(" ")
     text(first.toUpperCase(), 55, 1197, 44, "#fff", 700, 885)
     text(last.toUpperCase(), 50, 1284, 88, "#fff", 900, 900)
