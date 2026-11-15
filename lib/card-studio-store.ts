@@ -67,6 +67,14 @@ export async function createCard(ownerId: string, title: string, design: CardDes
     tx.close()
   }
 }
+/** Players may discard an unsubmitted draft to free one of their three slots. */
+export async function deleteUnusedCard(id: string, ownerId: string) {
+  const result = await (await db()).execute({
+    sql: "DELETE FROM card_studio_cards WHERE id = ? AND owner_id = ? AND status = 'draft' AND submitted IS NULL AND approved IS NULL",
+    args: [id, ownerId],
+  })
+  if (!result.rowsAffected) throw new Error("Only an unsubmitted draft belonging to you can be deleted.")
+}
 export async function saveDraft(id: string, ownerId: string, title: string, design: CardDesign) {
   const result = await (await db()).execute({ sql: "UPDATE card_studio_cards SET title=?, draft=?, updated_at=? WHERE id=? AND owner_id=?", args: [title, JSON.stringify(design), new Date().toISOString(), id, ownerId] })
   if (!result.rowsAffected) throw new Error("Card not found or access denied.")
