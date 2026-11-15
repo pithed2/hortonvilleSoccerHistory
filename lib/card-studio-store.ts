@@ -17,7 +17,7 @@ async function db() {
   initialized ??= client.executeMultiple([
     "CREATE TABLE IF NOT EXISTS card_studio_cards (id TEXT PRIMARY KEY, owner_id TEXT NOT NULL REFERENCES red_room_players(id), title TEXT NOT NULL, draft TEXT NOT NULL, submitted TEXT, approved TEXT, status TEXT NOT NULL DEFAULT 'draft', revision INTEGER NOT NULL DEFAULT 0, token TEXT NOT NULL UNIQUE, updated_at TEXT NOT NULL)",
     "CREATE INDEX IF NOT EXISTS card_studio_owner_idx ON card_studio_cards(owner_id)",
-    "CREATE TABLE IF NOT EXISTS card_studio_reviews (id TEXT PRIMARY KEY, card_id TEXT NOT NULL, revision INTEGER NOT NULL, coach_id TEXT NOT NULL, decision TEXT NOT NULL, reason TEXT, reviewed_at TEXT NOT NULL, UNIQUE(card_id,revision))",
+    "CREATE TABLE IF NOT EXISTS card_studio_reviews (id TEXT PRIMARY KEY, card_id TEXT NOT NULL, revision INTEGER NOT NULL, coach_id TEXT NOT NULL, decision TEXT NOT NULL, reason TEXT, reviewed_at TEXT NOT NULL, UNIQUE(card_id,revision,decision))",
     "CREATE TABLE IF NOT EXISTS card_studio_notifications (card_id TEXT NOT NULL, revision INTEGER NOT NULL, state TEXT NOT NULL DEFAULT 'queued', attempts INTEGER NOT NULL DEFAULT 0, last_error TEXT, updated_at TEXT NOT NULL, PRIMARY KEY(card_id, revision))",
   ].join(";") + ";").catch((error) => { initialized = undefined; throw error })
   await initialized
@@ -91,4 +91,21 @@ export async function decideCard(id: string, revision: number, coachId: string, 
 }
 export async function updateNotification(id: string, revision: number, state: "sent" | "failed", error = "") {
   await (await db()).execute({ sql: "UPDATE card_studio_notifications SET state=?, attempts=attempts+1, last_error=?, updated_at=? WHERE card_id=? AND revision=?", args: [state, error.slice(0,500), new Date().toISOString(), id, revision] })
+}
+
+export async function approvedCards() {
+  const rows = await (await db()).execute("SELECT c.*,p.display_name AS owner_name,p.public_tag AS owner_tag FROM card_studio_cards c JOIN red_room_players p ON p.id=c.owner_id WHERE c.approved IS NOT NULL AND c.status <> 'withdrawn' ORDER BY c.updated_at DESC")
+  return rows.rows.map(row => ({ ...decode(row), ownerName: String(row.owner_name), ownerTag: String(row.owner_tag) }))
+}
+export async function withdrawCard(id: string, coachId: string) {
+  const client = await db()
+  const tx = await client.transaction("write")
+  try {
+    const found = await tx.execute({ sql: "SELECT revision FROM card_studio_cards WHERE id=? AND approved IS NOT NULL", args: [id] })
+    if (!found.rows[0]) throw new Error("No approved card found.")
+    const revision = Number(found.rows[0].revision)
+    await tx.execute({ sql: "UPDATE card_studio_cards SET approved=NULL, submitted=NULL, status='withdrawn', updated_at=? WHERE id=?", args: [new Date().toISOString(),id] })
+    await tx.execute({ sql: "INSERT INTO card_studio_reviews (id,card_id,revision,coach_id,decision,reason,reviewed_at) VALUES (?,?,?,?,?,?,?)", args: [randomUUID(),id,revision,coachId,"withdrawn","Withdrawn by coach",new Date().toISOString()] })
+    await tx.commit()
+  } catch(error) { await tx.rollback(); throw error } finally { tx.close() }
 }
