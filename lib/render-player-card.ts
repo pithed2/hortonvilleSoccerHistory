@@ -76,7 +76,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
   const family = getComputedStyle(document.body).getPropertyValue("--font-poppins").trim() || "Arial, sans-serif"
   canvas.width = CARD_WIDTH
   canvas.height = CARD_HEIGHT
-  const ctx = canvas.getContext("2d")
+  const ctx = canvas.getContext("2d")!
   if (!ctx) throw new Error("Canvas support is unavailable in this browser.")
   // A failed decorative asset never hides the rest of the card.
   const optionalImage = async (src: string | undefined, label: string) => {
