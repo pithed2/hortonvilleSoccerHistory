@@ -9,6 +9,7 @@ type PreviewStatus = {
   design: CardDesign
   side: "front" | "back"
   error?: string
+  warnings?: string[]
 }
 
 export function PlayerCardPreview({ player, design, side }: { player: CardPlayer; design: CardDesign; side: "front" | "back" }) {
@@ -17,12 +18,14 @@ export function PlayerCardPreview({ player, design, side }: { player: CardPlayer
   const current = rendered?.player === player && rendered?.design === design && rendered?.side === side
   const error = current ? rendered?.error : undefined
   const ready = Boolean(current && !error)
+  const warnings = current ? rendered?.warnings ?? [] : []
+  const missingPhoto = warnings.some(warning => /^(Portrait|Action|Highlight) photo/.test(warning))
   const photo = side === "front" ? design.portrait.src : design.highlight?.src || design.action.src
 
   useEffect(() => {
     let canceled = false
     const buffer = document.createElement("canvas")
-    renderPlayerCard(buffer, player, design, side).then(() => {
+    renderPlayerCard(buffer, player, design, side).then((warnings) => {
       if (canceled || !canvas.current) return
       const element = canvas.current
       element.width = buffer.width
@@ -32,7 +35,7 @@ export function PlayerCardPreview({ player, design, side }: { player: CardPlayer
       context.drawImage(buffer, 0, 0)
       // Do not generate an enormous PNG data URL after every crop-slider move.
       // Export a Blob only when the user taps Download.
-      setRendered({ player, design, side })
+      setRendered({ player, design, side, warnings })
     }).catch((reason: unknown) => {
       if (canceled) return
       const detail = reason instanceof Error ? reason.message : "Unknown image error"
@@ -61,9 +64,12 @@ export function PlayerCardPreview({ player, design, side }: { player: CardPlayer
         <p className="break-words text-xs text-white/60">{error}</p>
       </div> : null}
     </div>
+    {warnings.length ? <div role="status" className="mt-2 rounded-lg border border-amber-400/30 bg-amber-400/10 p-2 text-xs text-amber-100">
+      {warnings.join(" ")} {missingPhoto ? "Re-upload the photo before downloading." : "The rest of the card is ready."}
+    </div> : null}
     <button
-      type="button" disabled={!ready}
-      onClick={() => { if (ready && canvas.current) downloadCanvas(canvas.current, player.id + "-" + player.season + "-" + side + ".png") }}
+      type="button" disabled={!ready || missingPhoto}
+      onClick={() => { if (ready && !missingPhoto && canvas.current) downloadCanvas(canvas.current, player.id + "-" + player.season + "-" + side + ".png") }}
       className="mt-3 block w-full rounded-lg bg-white px-3 py-3 text-center text-sm font-black text-black hover:bg-red-100 disabled:cursor-not-allowed disabled:opacity-40"
     >Download {side}</button>
   </div>
