@@ -1,7 +1,7 @@
 import "server-only"
 import { createClient, type Client } from "@libsql/client"
 import { randomUUID, randomBytes } from "node:crypto"
-import type { CardDesign, CardPlayer } from "./player-card-types"
+import { PLAYER_CARD_LIMIT, type CardDesign, type CardPlayer } from "./player-card-types"
 
 export type StoredCard = { id: string; ownerId: string; title: string; draft: CardDesign; submitted: { title: string; design: CardDesign; player: CardPlayer; revision: number } | null; approved: { title: string; design: CardDesign; player: CardPlayer; revision: number } | null; status: string; revision: number; token: string }
 let conn: Client | undefined
@@ -42,11 +42,30 @@ export async function publicCard(token: string) {
 }
 export async function createCard(ownerId: string, title: string, design: CardDesign) {
   const client = await db()
-  const counts = await client.execute({ sql: "SELECT COUNT(*) AS n FROM card_studio_cards WHERE owner_id = ?", args: [ownerId] })
-  if (Number(counts.rows[0]?.n) >= 10) throw new Error("Maximum of 10 cards per player.")
-  const id = randomUUID()
-  await client.execute({ sql: "INSERT INTO card_studio_cards (id, owner_id, title, draft, token, updated_at) VALUES (?, ?, ?, ?, ?, ?)", args: [id, ownerId, title, JSON.stringify(design), randomBytes(16).toString("hex"), new Date().toISOString()] })
-  return id
+  // Keep the count check and insert in a write transaction so concurrent clicks
+  // cannot bypass the per-player limit.
+  const tx = await client.transaction("write")
+  try {
+    const counts = await tx.execute({
+      sql: "SELECT COUNT(*) AS n FROM card_studio_cards WHERE owner_id = ?",
+      args: [ownerId],
+    })
+    if (Number(counts.rows[0]?.n) >= PLAYER_CARD_LIMIT) {
+      throw new Error("You can have up to " + PLAYER_CARD_LIMIT + " cards. Edit an existing card instead.")
+    }
+    const id = randomUUID()
+    await tx.execute({
+      sql: "INSERT INTO card_studio_cards (id, owner_id, title, draft, token, updated_at) VALUES (?, ?, ?, ?, ?, ?)",
+      args: [id, ownerId, title, JSON.stringify(design), randomBytes(16).toString("hex"), new Date().toISOString()],
+    })
+    await tx.commit()
+    return id
+  } catch (error) {
+    await tx.rollback()
+    throw error
+  } finally {
+    tx.close()
+  }
 }
 export async function saveDraft(id: string, ownerId: string, title: string, design: CardDesign) {
   const result = await (await db()).execute({ sql: "UPDATE card_studio_cards SET title=?, draft=?, updated_at=? WHERE id=? AND owner_id=?", args: [title, JSON.stringify(design), new Date().toISOString(), id, ownerId] })
