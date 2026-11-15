@@ -1,11 +1,11 @@
 import "server-only"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
-import { cardProfileForAccount, isMilesPreviewCardTester } from "@/lib/player-card-identity"
+import { cardProfileForAccount } from "@/lib/player-card-identity"
 import { CARD_THEMES, type CardDesign, type CardPlayer } from "@/lib/player-card-types"
 
 export async function studioIdentity(): Promise<{ accountId: string; player: CardPlayer; coach: boolean } | null> {
   const user = await authenticatedPlayer()
-  if (!user || user.isBot || (!["player", "coach"].includes(user.accountType) && !isMilesPreviewCardTester(user))) return null
+  if (!user || user.isBot || !["player", "coach"].includes(user.accountType)) return null
   const player = await cardProfileForAccount(user)
   if (!player) return null
   return { accountId: user.id, player, coach: user.accountType === "coach" }
