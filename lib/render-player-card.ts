@@ -68,7 +68,10 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     cooperBack ? cardImage("/logos/cooper-uww-transparent.png") : null,
   ])
   const isIce = design.theme === "ice"
-  const accent = design.theme === "black" || isIce ? "#FFFFFF" : "#E4002B"
+  const isGold = design.theme === "gold"
+  const isRetro = design.theme === "retro"
+  const accent = design.theme === "black" || isIce ? "#FFFFFF"
+    : isGold ? "#F1CB63" : isRetro ? "#F2DCB1" : "#E4002B"
   function text(value: string, x: number, y: number, size: number, color = "#fff", weight = 800, maxWidth?: number) {
     ctx.fillStyle = color
     ctx.font = `${Math.min(weight, 800)} ${size}px ${family}`
@@ -80,6 +83,7 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     if (image) {
       const scale = (crop.fit === "contain" ? Math.min : Math.max)(w / image.naturalWidth, h / image.naturalHeight) * crop.zoom
       const dw = image.naturalWidth * scale, dh = image.naturalHeight * scale
+      if (isRetro) ctx.filter = "sepia(0.34) saturate(0.78) contrast(1.06)"
       ctx.drawImage(image, x - (dw - w) * crop.x / 100, y - (dh - h) * crop.y / 100, dw, dh)
     } else {
       const gradient = ctx.createLinearGradient(x, y, x + w, y + h); gradient.addColorStop(0, "#9D9D9D"); gradient.addColorStop(1, "#000000")
@@ -101,6 +105,19 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
       gradient.addColorStop(.6, "#FFFFFF"); gradient.addColorStop(1, "#73808D")
       return gradient
     }
+    if (isGold) {
+      // Warm metal foil: shadowed brass, bright gold and a small white-gold glint.
+      gradient.addColorStop(0, "#614315"); gradient.addColorStop(.2, "#D5A039")
+      gradient.addColorStop(.38, "#FFF0B8"); gradient.addColorStop(.54, "#B98224")
+      gradient.addColorStop(.7, "#F9D877"); gradient.addColorStop(1, "#654515")
+      return gradient
+    }
+    if (isRetro) {
+      // Opaque vintage ink rather than reflective foil.
+      gradient.addColorStop(0, "#971F35"); gradient.addColorStop(.3, "#F2DCB1")
+      gradient.addColorStop(.6, "#C83546"); gradient.addColorStop(1, "#F2DCB1")
+      return gradient
+    }
     gradient.addColorStop(0, accent); gradient.addColorStop(.22, sheen); gradient.addColorStop(.36, accent)
     gradient.addColorStop(.58, sheen); gradient.addColorStop(.74, accent); gradient.addColorStop(1, accent)
     return gradient
@@ -108,6 +125,12 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
   function stripe(y: number) {
     ctx.fillStyle = foilGradient(0, y - 140, 1000, y + 180)
     ctx.beginPath(); ctx.moveTo(0, y + 110); ctx.lineTo(1000, y - 140); ctx.lineTo(1000, y - 70); ctx.lineTo(0, y + 180); ctx.fill()
+    if (isRetro) {
+      ctx.save()
+      ctx.strokeStyle = "#F2DCB1"; ctx.lineWidth = 10
+      ctx.beginPath(); ctx.moveTo(0, y + 194); ctx.lineTo(1000, y - 56); ctx.stroke()
+      ctx.restore()
+    }
   }
   // A giant translucent jersey number behind the lower, already-shaded part of the
   // photo — a staple of trading-card design that gives the layout more presence.
@@ -136,24 +159,46 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     emboss("1 OF 1", 20, 25)
     ctx.textAlign = "left"; ctx.restore()
   }
-  ctx.fillStyle = "#000000"; ctx.fillRect(0, 0, CARD_WIDTH, CARD_HEIGHT)
+  ctx.fillStyle = isRetro ? "#201819" : "#000000"
+  ctx.fillRect(0, 0, CARD_WIDTH, CARD_HEIGHT)
   if (side === "front") {
     photo(portrait, design.portrait, 0, 0, 1000, 1140)
+    if (isRetro) {
+      // Aged-paper tint and subtle halftone printing along the photo edge.
+      ctx.fillStyle = "rgba(236,197,144,.12)"; ctx.fillRect(0, 0, 1000, 1140)
+      ctx.save(); ctx.fillStyle = "rgba(244,225,184,.42)"
+      for (let y = 180; y < 780; y += 36) for (let x = 30; x < 165; x += 36) {
+        ctx.beginPath(); ctx.arc(x + (Math.floor(y / 36) % 2) * 12, y, 3, 0, Math.PI * 2); ctx.fill()
+      }
+      ctx.restore()
+    }
+    if (isGold) {
+      ctx.save(); ctx.strokeStyle = "rgba(255,229,145,.82)"; ctx.lineWidth = 5
+      ctx.strokeRect(28, 165, 944, 966); ctx.restore()
+    }
     if (isIce) ctx.drawImage(crackedIceTexture(), 0, 0, 1000, 1140, 0, 0, 1000, 1140)
     const shade = ctx.createLinearGradient(0, 600, 0, 1250); shade.addColorStop(0, "#00000000"); shade.addColorStop(1, "#000000")
     ctx.fillStyle = shade; ctx.fillRect(0, 600, 1000, 650)
     numberWatermark(970, 1120, 560, "right")
     stripe(900)
+    if (isGold) text("CHAMPIONSHIP GOLD", 55, 1080, 25, "#FBE7AA", 800, 500)
+    if (isRetro) text("VINTAGE PRINT SERIES", 55, 1080, 25, "#F2DCB1", 800, 500)
     if (action) {
       const insetW = player.coach ? 270 : 340, insetH = player.coach ? 340 : 240
       ctx.save(); ctx.translate(player.coach ? 680 : 610, player.coach ? 720 : 800); ctx.rotate(.055); ctx.fillStyle = accent; ctx.fillRect(-7, -7, insetW + 14, insetH + 14)
       photo(action, design.action, 0, 0, insetW, insetH); ctx.restore()
     }
     limitedEditionStamp(822, 1098, -.08)
-    ctx.fillStyle = "#000000d9"; ctx.fillRect(0, 0, 1000, 145)
+    ctx.fillStyle = isRetro ? "#261518e8" : "#000000d9"; ctx.fillRect(0, 0, 1000, 145)
     ctx.drawImage(logo, 42, 25, 90, 90)
     text("HORTONVILLE", 160, 65, 38); text("POLAR BEARS / BOYS SOCCER", 160, 102, 20, "#FFFFFF")
     if (player.number) text(`#${player.number}`, 765, 100, 70, accent, 900, 190)
+    if (isRetro) {
+      ctx.save(); ctx.translate(817, 226); ctx.rotate(.1)
+      ctx.fillStyle = "#A9233A"; ctx.fillRect(-150, -32, 300, 64)
+      text("RETRO PRINT", -125, 12, 30, "#FBEBC8", 800, 250)
+      ctx.restore()
+    }
     text(player.coach ? "COACH COLLECTION / TESTER EDITION" : player.example ? "OG ANDY / EXAMPLE EDITION" : player.season === 2026 ? "2026 FOX VALLEY ASSOCIATION CHAMPIONS" : "ALUMNI EDITION", 55, 1140, 25, accent, 800, 890)
     const parts = player.name.split(" "), last = parts.pop() ?? "", first = parts.join(" ")
     text(first.toUpperCase(), 55, 1197, 44, "#fff", 700, 885)
@@ -183,7 +228,10 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     ctx.fillStyle = "#000000"; ctx.fillRect(tableX, tableTop, tableW, headerH)
     text(player.statsRowLabels ? "SCHOOL" : "SEASON", tableX + 22, tableTop + 40, 22)
     player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.label, positions[i], tableTop + 40, 22) }); ctx.textAlign = "left"
-    ctx.fillStyle = design.theme === "black" || isIce ? "rgba(255,255,255,.1)" : "rgba(228,0,43,.16)"; ctx.fillRect(tableX, seasonY, tableW, rowH)
+    ctx.fillStyle = isGold ? "rgba(226,176,67,.24)"
+      : isRetro ? "rgba(232,194,139,.19)"
+      : design.theme === "black" || isIce ? "rgba(255,255,255,.1)" : "rgba(228,0,43,.16)"
+    ctx.fillRect(tableX, seasonY, tableW, rowH)
     text(player.statsRowLabels?.[0] ?? (player.coach ? String(player.statsSeason ?? player.season) : player.example ? "EXAMPLE" : String(player.season)), tableX + 22, seasonY + 47, 28, accent, 800)
     player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.season, positions[i], seasonY + 47, 32) }); ctx.textAlign = "left"
     ctx.fillStyle = "rgba(255,255,255,.04)"; ctx.fillRect(tableX, careerY, tableW, rowH)
@@ -241,7 +289,14 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     ctx.fillStyle = foilGradient(50, 1341, 950, 1353); ctx.fillRect(50, 1344, 900, 6)
     ctx.textAlign = "center"; text(cooperBack ? "COOPER RE | KIMBERLY | UWW | HORTONVILLE" : marcoBack ? "MARCO DELBECCHI | SNC | HORTONVILLE" : `${player.name.toUpperCase()}  /  HORTONVILLE`, 500, 1380, 27, "#fff", 800, 890); ctx.textAlign = "left"
   }
-  ctx.strokeStyle = isIce ? foilGradient(0, 0, CARD_WIDTH, CARD_HEIGHT) : accent; ctx.lineWidth = 12; ctx.strokeRect(6, 6, 988, 1388)
+  ctx.strokeStyle = isIce || isGold || isRetro ? foilGradient(0, 0, CARD_WIDTH, CARD_HEIGHT) : accent
+  ctx.lineWidth = 12
+  ctx.strokeRect(6, 6, 988, 1388)
+  if (isGold || isRetro) {
+    ctx.strokeStyle = isGold ? "#FFE7A2" : "#A9233A"
+    ctx.lineWidth = 3
+    ctx.strokeRect(19, 19, 962, 1362)
+  }
 }
 
 export function downloadCanvas(canvas: HTMLCanvasElement, name: string) {
