@@ -16,6 +16,20 @@ A player may have up to 3 cards. The limit is enforced by the server in an atomi
 
 Five interchangeable finishes share the same locked player identity and stats: Polar Red, Black & White, Cracked Ice, Championship Gold (metallic brass/gold foil), and Retro Print (burgundy/cream ink with halftone and sepia photo treatment). Switching the finish edits an existing card and does not use another card slot. All finishes render both sides using the same 1000 × 1400 PNG output and photo crop controls.
 
+## Miles's temporary test login
+
+Miles Montalbano already has an existing Red Room private account (`NR-Miles`). On the feature branch, the Player Card Studio permits that exact identity to preview his 2021 stats when running as a Vercel preview with card writes disabled. This exception is not enabled on production, and it does not change or recover his private login key.
+
+A key reset **requires writing to the database** that holds the Red Room account. Do not assume the Vercel preview uses an isolated database. Do not add a hard-coded shared test password to the login endpoint or commit any proposed key or hash to the repository.
+
+For a separate, seeded **local-only** test database, the guarded utility `scripts/reset-miles-test-key.mjs` rotates Miles's key. It uses only `file:.red-room/card-studio-test.db`, requires `--isolated-local-db`, asks for the new key in a terminal without echoing it, checks his account identity and type, and invalidates previous sessions. Run it from the repository root:
+
+```sh
+node scripts/reset-miles-test-key.mjs --isolated-local-db
+```
+
+It deliberately **does not reset a Vercel or Turso account**. A live preview reset is blocked until preview/database isolation and authorized DB access are verified. The selected test key is low entropy and must never be used for production authentication.
+
 ## Safety before enabling
 
 `CARD_STUDIO_WRITES_ENABLED` must be set explicitly to `true`. All Studio database access fails closed otherwise. Do not set the switch until the preview environment's database is confirmed isolated from production. This is especially important because the existing Red Room documentation uses shared Turso connection settings. Make a database backup before enabling in production.
