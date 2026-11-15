@@ -60,6 +60,7 @@ function Upload({ label, value, change }: { label: string; value: CardPhoto; cha
 }
 export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPlayer; demoMode: boolean; coachRoster: CardPlayer[]}) {
   const [cards,setCards]=useState<StoredCard[]>([])
+  const [emptyPreviewDesign] = useState(blankCardDesign)
   const [coachPreviewId,setCoachPreviewId]=useState(player.id)
   const [selected,setSelected]=useState("")
   const [title,setTitle]=useState("My player card")
@@ -187,7 +188,7 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
           <p className="font-semibold text-white">Your player card is ready for a look.</p>
           <p className="mt-2">Here are the available 2026 stats for {previewPlayer.name}. Photos show placeholders until you create a card and upload your own. No saved card is needed to see the preview.</p>
         </div>
-        <div className="grid grid-cols-2 gap-3"><PlayerCardPreview player={previewPlayer} design={blankCardDesign()} side="front"/><PlayerCardPreview player={previewPlayer} design={blankCardDesign()} side="back"/></div>
+        <div className="grid grid-cols-2 gap-3"><PlayerCardPreview player={previewPlayer} design={emptyPreviewDesign} side="front"/><PlayerCardPreview player={previewPlayer} design={emptyPreviewDesign} side="back"/></div>
       </section>}
     </div>
   </div>
