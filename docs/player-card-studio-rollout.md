@@ -10,7 +10,11 @@ This feature is developed only on `feature/player-card-studio-access`. Do not me
 - Existing Red Room game: `/jv/red/red-room` (unchanged)
 - Original coach-only card editor: `/coachs-corner/player-cards` (unchanged)
 
-A player may have up to 10 cards. Every card is owned by the Red Room account ID. Names, teams, jersey numbers, and recorded statistics come from trusted server-side roster data and cannot be provided by the browser. Varsity and JV identities are supported; undocumented JV statistics display as unknown.
+A player may have up to 3 cards. The limit is enforced by the server in an atomic database write transaction, not only by a disabled browser button. Every card is owned by the Red Room account ID. Names, teams, jersey numbers, and recorded statistics come from trusted server-side roster data and cannot be provided by the browser. Varsity and JV identities are supported; undocumented JV statistics display as unknown.
+
+## Card design options
+
+Five interchangeable finishes share the same locked player identity and stats: Polar Red, Black & White, Cracked Ice, Championship Gold (metallic brass/gold foil), and Retro Print (burgundy/cream ink with halftone and sepia photo treatment). Switching the finish edits an existing card and does not use another card slot. All finishes render both sides using the same 1000 × 1400 PNG output and photo crop controls.
 
 ## Safety before enabling
 
