@@ -1,7 +1,7 @@
 import "server-only"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { cardProfileForAccount } from "@/lib/player-card-identity"
-import type { CardDesign, CardPlayer } from "@/lib/player-card-types"
+import { CARD_THEMES, type CardDesign, type CardPlayer } from "@/lib/player-card-types"
 
 export async function studioIdentity(): Promise<{ accountId: string; player: CardPlayer; coach: boolean } | null> {
   const user = await authenticatedPlayer()
@@ -50,7 +50,7 @@ export function validateCardDesign(value: unknown): CardDesign {
   const overview = String(input.overview || "").trim()
   if (overview.length > 500 || overview.length < 0) throw new Error("Description must be 500 characters or less.")
   validatePlayerText(overview)
-  if (!["red","black","ice"].includes(String(input.theme))) throw new Error("Invalid card finish.")
+  if (!CARD_THEMES.includes(input.theme as CardDesign["theme"])) throw new Error("Invalid card finish.")
   const portrait = image(input.portrait), action = image(input.action)
   const highlight = input.highlight ? image(input.highlight) : undefined
   if (portrait.src.length + action.src.length + (highlight?.src.length || 0) > 1800000) throw new Error("Card photos exceed the storage limit.")
