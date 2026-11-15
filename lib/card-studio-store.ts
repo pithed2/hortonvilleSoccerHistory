@@ -3,7 +3,7 @@ import { createClient, type Client } from "@libsql/client"
 import { randomUUID, randomBytes } from "node:crypto"
 import type { CardDesign, CardPlayer } from "./player-card-types"
 
-export type StoredCard = { id: string; ownerId: string; title: string; draft: CardDesign; submitted: { design: CardDesign; player: CardPlayer; revision: number } | null; approved: { design: CardDesign; player: CardPlayer; revision: number } | null; status: string; revision: number; token: string }
+export type StoredCard = { id: string; ownerId: string; title: string; draft: CardDesign; submitted: { title: string; design: CardDesign; player: CardPlayer; revision: number } | null; approved: { title: string; design: CardDesign; player: CardPlayer; revision: number } | null; status: string; revision: number; token: string }
 let conn: Client | undefined
 let initialized: Promise<unknown> | undefined
 async function db() {
@@ -38,7 +38,7 @@ export async function getCard(id: string): Promise<StoredCard | null> {
 export async function publicCard(token: string) {
   if (!/^[a-f0-9]{32}$/.test(token)) return null
   const rows = await (await db()).execute({ sql: "SELECT title, approved FROM card_studio_cards WHERE token = ? AND approved IS NOT NULL AND status <> 'withdrawn'", args: [token] })
-  return rows.rows[0] ? { title: String(rows.rows[0].title), ...JSON.parse(String(rows.rows[0].approved)) as { player: CardPlayer; design: CardDesign; revision: number } } : null
+  return rows.rows[0] ? { title: String(rows.rows[0].title), ...JSON.parse(String(rows.rows[0].approved)) as { title: string; player: CardPlayer; design: CardDesign; revision: number } } : null
 }
 export async function createCard(ownerId: string, title: string, design: CardDesign) {
   const client = await db()
@@ -62,7 +62,7 @@ export async function submitCard(id: string, ownerId: string, player: CardPlayer
     if (card.status === "pending") throw new Error("This card is already pending approval.")
     const revision = card.revision + 1
     const now = new Date().toISOString()
-    await tx.execute({ sql: "UPDATE card_studio_cards SET submitted=?, revision=?, status='pending', updated_at=? WHERE id=? AND owner_id=?", args: [JSON.stringify({ player, design: card.draft, revision }), revision, now, id, ownerId] })
+    await tx.execute({ sql: "UPDATE card_studio_cards SET submitted=?, revision=?, status='pending', updated_at=? WHERE id=? AND owner_id=?", args: [JSON.stringify({ title: card.title, player, design: card.draft, revision }), revision, now, id, ownerId] })
     await tx.execute({ sql: "INSERT INTO card_studio_notifications (card_id,revision,updated_at) VALUES (?,?,?)", args: [id, revision, now] })
     await tx.commit()
     return revision
