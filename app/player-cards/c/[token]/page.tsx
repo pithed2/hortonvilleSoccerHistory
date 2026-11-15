@@ -2,10 +2,12 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { publicCard } from "@/lib/card-studio-store"
+import { cardStudioWritesEnabled } from "@/lib/card-studio-rollout"
 import { PlayerCardPreview } from "@/components/player-card-preview"
 export const dynamic = "force-dynamic"
 export const metadata: Metadata = { title: "HHS Player Card", robots: { index: false, follow: false, noimageindex: true }, referrer: "no-referrer" }
 export default async function CardPage({params}:{params:Promise<{token:string}>}) {
+  if (!cardStudioWritesEnabled()) notFound()
   const {token}=await params
   const card=await publicCard(token)
   if(!card)notFound()
