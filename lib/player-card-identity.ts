@@ -5,7 +5,7 @@ import path from "node:path"
 import { eq } from "drizzle-orm"
 import { getRedRoomDb } from "@/lib/red-room/db"
 import { rosterMemberships, players } from "@/lib/red-room/schema"
-import { cardPlayers } from "@/lib/player-cards"
+import { cardPlayerId, cardPlayers } from "@/lib/player-cards"
 import type { CardPlayer, CardMetric } from "@/lib/player-card-types"
 
 type Account = typeof players.$inferSelect
@@ -76,4 +76,46 @@ export async function cardProfileForAccount(account: Account): Promise<CardPlaye
     }
   }
   return null
+}
+
+
+/**
+ * Coach-only preview roster. Use public, verified season data. No player keys,
+ * credentials, sessions, or database writes are involved.
+ */
+export function coachCardPreviewRoster(): CardPlayer[] {
+  const roster = new Map<string, CardPlayer>()
+  const add = (player: CardPlayer) => {
+    const key = normalized(player.name)
+    if (!roster.has(key)) roster.set(key, player)
+  }
+  for (const player of cardPlayers()) {
+    if (player.season === 2026 && !player.example && !player.coach) add(player)
+  }
+  for (const squad of ["JV Red", "JV White", "JV Black", "JV Gray"]) {
+    const data = squadData(squad)
+    if (!data) continue
+    const athletes = data.players ?? data.roster ?? []
+    for (const athlete of athletes) {
+      const keeper = (data.goalkeepers ?? []).find(entry => normalized(entry.name) === normalized(athlete.name))
+      const isKeeper = Boolean(keeper || athlete.position?.toUpperCase().includes("GK"))
+      const metrics = isKeeper
+        ? [metric("SAVES", value(keeper?.saves ?? keeper?.recordedSaves)), metric("GA", value(keeper?.goalsAgainst))]
+        : [metric("GOALS", value(athlete.goals)), metric("ASSISTS", value(athlete.assists)), metric("POINTS", value(athlete.points))]
+      add({
+        id: "preview-" + cardPlayerId(athlete.name),
+        name: athlete.name,
+        number: String(athlete.number),
+        position: athlete.position || (isKeeper ? "GK" : ""),
+        classYear: "",
+        season: 2026,
+        careerSpan: "2026 " + squad,
+        metrics,
+        incomplete: true,
+        statsTitle: "2026 " + squad.toUpperCase() + " / RECORDED STATS",
+        studioNote: "Available JV statistics only. Undocumented numbers remain unknown.",
+      })
+    }
+  }
+  return [...roster.values()].sort((a, b) => a.name.localeCompare(b.name))
 }
