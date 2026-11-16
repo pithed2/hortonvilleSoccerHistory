@@ -36,7 +36,13 @@ export async function submitMyStudioCard(id: string) {
   if (!card || card.ownerId !== account.accountId) throw new Error("Card not found or access denied.")
   checkReadyForSubmission(validateCardDesign(card.draft))
   const revision = await submitCard(id, account.accountId, account.player)
-  await sendCardNotification(id, revision, account.player.name, card.title)
+  // The submission was committed above. Email is best-effort, so a provider
+  // failure must not report the already-saved submission as failed.
+  try {
+    await sendCardNotification(id, revision, account.player.name, card.title)
+  } catch (error) {
+    console.error("Card Studio submission saved; notification update failed.", error)
+  }
   revalidatePath("/jv/red/red-room/cards")
   return revision
 }
