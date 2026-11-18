@@ -58,10 +58,11 @@ function Upload({ label, value, change }: { label: string; value: CardPhoto; cha
     </div> : null}
   </div>
 }
-export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPlayer; demoMode: boolean; coachRoster: CardPlayer[]}) {
+export function MyCardStudio({ player, subjects, demoMode, coachRoster }: {player: CardPlayer; subjects: CardPlayer[]; demoMode: boolean; coachRoster: CardPlayer[]}) {
   const [cards,setCards]=useState<StoredCard[]>([])
   const [emptyPreviewDesign] = useState(blankCardDesign)
   const [coachPreviewId,setCoachPreviewId]=useState(player.id)
+  const [selectedSubjectId,setSelectedSubjectId]=useState(player.id)
   const [selected,setSelected]=useState("")
   const [title,setTitle]=useState("My player card")
   const [design,setDesign]=useState<CardDesign>(blankCardDesign)
@@ -69,11 +70,20 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
   const [message,setMessage]=useState("")
   const [dirty,setDirty]=useState(false)
   const active=cards.find(c=>c.id===selected)
-  const previewPlayer = coachRoster.find(entry=>entry.id===coachPreviewId) ?? player
-  const canCreateForSelected = demoMode || previewPlayer.id === player.id
+  const previewPlayer = coachRoster.find(entry=>entry.id===coachPreviewId) ?? subjects.find(entry=>entry.id===selectedSubjectId) ?? player
+  const canCreateForSelected = demoMode || subjects.some(entry=>entry.id===previewPlayer.id)
   function chooseCoachPreview(id: string) {
     if (dirty && !window.confirm("Discard unsaved changes to the current card?")) return
     setCoachPreviewId(id)
+    setSelected("")
+    setTitle("My player card")
+    setDesign(blankCardDesign())
+    setDirty(false)
+    setMessage("")
+  }
+  function chooseSubject(id: string) {
+    if (dirty && !window.confirm("Discard unsaved changes to the current card?")) return
+    setSelectedSubjectId(id)
     setSelected("")
     setTitle("My player card")
     setDesign(blankCardDesign())
@@ -86,6 +96,7 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
     const card=data.cards.find(c=>c.id===(nextId??selected))
     if(card){
       setSelected(card.id);setTitle(card.title);setDesign(card.draft)
+      setSelectedSubjectId(card.draft.subjectId ?? player.id)
       if (demoMode && coachRoster.length) setCoachPreviewId(card.ownerId)
     }
     setDirty(false)
@@ -99,6 +110,7 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
     const card=cards.find(c=>c.id===id)
     if(!card)return
     setSelected(card.id);setTitle(card.title);setDesign(card.draft);setDirty(false);setMessage("")
+    setSelectedSubjectId(card.draft.subjectId ?? player.id)
     if (demoMode && coachRoster.length) setCoachPreviewId(card.ownerId)
   }
   function edit(patch:Partial<CardDesign>){setDesign(v=>({...v,...patch}));setDirty(true)}
@@ -108,9 +120,17 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
     finally{setBusy(false)}
   }
   return <div className="mx-auto max-w-7xl space-y-8">
-    <header><Link href="/jv/red/red-room" className="text-sm text-red-300 underline">Back to Red Room</Link><h1 className="mt-4 text-4xl font-black">Player Card Studio</h1><p className="mt-2 text-white/70">Signed in as {player.name}. Your name and recorded statistics cannot be changed here.</p></header>
+    <header><Link href="/jv/red/red-room" className="text-sm text-red-300 underline">Back to Red Room</Link><h1 className="mt-4 text-4xl font-black">Player Card Studio</h1><p className="mt-2 text-white/70">Signed in as {player.name}. Names and recorded statistics are locked to the selected player profile.</p></header>
     {demoMode?<div role="status" className="rounded-lg border border-amber-400/40 bg-amber-400/10 p-4 text-sm text-amber-100"><strong>Demo mode:</strong> Create, edit and download a sample card without database writes. Demo cards exist only in this open page. Permanent saving and submitting will be enabled only after the database and approval workflow have been tested.</div>:null}
     {message?<p role="status" className="rounded-lg border border-red-400/40 p-3 text-sm text-red-100">{message}</p>:null}
+    {subjects.length > 1 ? <section className="rounded-xl border border-white/20 bg-white/[.04] p-4">
+      <label className="block text-sm font-semibold" htmlFor="card-subject-choice">Create a card for
+        <select id="card-subject-choice" value={selectedSubjectId} onChange={event=>chooseSubject(event.target.value)} className="mt-2 block w-full rounded-lg border border-white/20 bg-[#191919] p-3">
+          {subjects.map(subject=><option key={subject.id} value={subject.id}>{subject.name} · {subject.careerSpan} {subject.number?"· #"+subject.number:""}</option>)}
+        </select>
+      </label>
+      <p className="mt-2 text-xs text-white/65">Ben can create Grant's card using his current JV White login. Every submission still requires coach approval. All cards share this login's three-card limit.</p>
+    </section> : null}
     {coachRoster.length ? <section className="rounded-xl border border-white/20 bg-white/[.04] p-4">
       <label className="block text-sm font-semibold" htmlFor="coach-player-choice">Coach roster preview
         <select id="coach-player-choice" value={coachPreviewId} onChange={event=>chooseCoachPreview(event.target.value)} className="mt-2 block w-full rounded-lg border border-white/20 bg-[#191919] p-3">
@@ -134,7 +154,7 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
               const id = crypto.randomUUID()
               const newCard: StoredCard = {
                 id, ownerId: previewPlayer.id, title: "My player card " + (cards.length + 1),
-                draft: blankCardDesign(), submitted: null, approved: null,
+                draft: { ...blankCardDesign(), subjectId: previewPlayer.id }, submitted: null, approved: null,
                 status: "draft", revision: 0, token: "",
               }
               setCards(current => [newCard, ...current])
@@ -142,7 +162,7 @@ export function MyCardStudio({ player, demoMode, coachRoster }: {player: CardPla
               setMessage("Demo card created. Changes exist only until you leave or refresh this page.")
               return
             }
-            const id=await createMyStudioCard("My player card "+(cards.length+1),blankCardDesign())
+            const id=await createMyStudioCard("My player card "+(cards.length+1),{...blankCardDesign(),subjectId:previewPlayer.id})
             await refresh(id)
             setMessage("New private card created.")
           } catch(e) {setMessage(e instanceof Error?e.message:"Cannot create card.")}

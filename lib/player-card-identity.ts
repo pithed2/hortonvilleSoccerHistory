@@ -6,6 +6,7 @@ import { eq } from "drizzle-orm"
 import { getRedRoomDb } from "@/lib/red-room/db"
 import { rosterMemberships, players } from "@/lib/red-room/schema"
 import { cardPlayerId, cardPlayers } from "@/lib/player-cards"
+import { varsityHistoryByPlayer } from "@/lib/player-stats"
 import type { CardPlayer, CardMetric } from "@/lib/player-card-types"
 
 type Account = typeof players.$inferSelect
@@ -79,6 +80,45 @@ export async function cardProfileForAccount(account: Account): Promise<CardPlaye
   return null
 }
 
+/**
+ * The 2024/2025 goalkeeper archive, not browser input, defines Grant's card.
+ * Skip the inconsistent archived 2025 save-percentage and GAA calculations.
+ */
+function grantDeckerCardProfile(): CardPlayer | null {
+  const history = varsityHistoryByPlayer().get("Grant Decker") ?? []
+  const source = [2024, 2025].map((year) => history.find((row) => row.season === year)?.goalkeeper)
+  if (source.some((row) => !row)) return null
+  const fields = [["GAMES", "gp"], ["MIN", "minutes"], ["SAVES", "saves"], ["GA", "ga"]] as const
+  const numbers = source.map((row) => fields.map(([, key]) => {
+    const raw = row?.[key]
+    return !raw || !Number.isFinite(Number(raw)) || Number(raw) < 0 ? null : Number(raw)
+  }))
+  if (numbers.some((row) => row.some((value) => value === null))) return null
+  const totals = fields.map((_, i) => numbers.reduce((total, row) => total + (row[i] ?? 0), 0))
+  return {
+    id: "alumni-grant-decker", name: "Grant Decker", number: "40", position: "GK",
+    classYear: "2025", season: 2025, careerSpan: "2024–2025",
+    metrics: fields.map(([label], i) => ({ label, season: String(numbers[1][i]), career: String(totals[i]) })),
+    statsTitle: "VARSITY GOALKEEPER / 2024–2025",
+    statsRows: [
+      { label: "2024 JR", values: numbers[0].map(String) },
+      { label: "2025 SR", values: numbers[1].map(String) },
+      { label: "TOTAL", values: totals.map(String) },
+    ],
+    incomplete: false,
+    studioNote: "Recorded goalkeeper counts. Save percentages omitted because the 2025 archive is inconsistent.",
+  }
+}
+
+/** One named, roster-verified delegation. Does not grant other Red Room permissions. */
+export async function cardSubjectsForAccount(account: Account, primary: CardPlayer): Promise<CardPlayer[]> {
+  if (account.accountType !== "player" || account.isBot || normalized(account.displayName) !== "ben decker") return [primary]
+  const memberships = await getRedRoomDb().select().from(rosterMemberships)
+    .where(eq(rosterMemberships.playerId, account.id))
+  if (!memberships.some((membership) => membership.squad === "JV White")) return [primary]
+  const grant = grantDeckerCardProfile()
+  return grant ? [primary, grant] : [primary]
+}
 
 /**
  * Coach-only preview roster. Use public, verified season data. No player keys,

@@ -268,29 +268,37 @@ export async function renderPlayerCard(canvas: HTMLCanvasElement, player: CardPl
     text(player.name.toUpperCase(), 50, 620, 58, "#fff", 900, 900)
     ctx.fillStyle = foilGradient(50, 650, 950, 660); ctx.fillRect(50, 655, 900, 5)
     text(player.statsTitle ?? (player.coach ? `UW–WHITEWATER CAREER / ${player.careerSpan}` : player.example ? "PLAYER SNAPSHOT / EXAMPLE EDITION" : `VARSITY CAREER / ${player.careerSpan}`), 55, 700, 22, accent)
-    // Stat table: a bordered scoreboard grid — header bar, two distinct rows, and
-    // ruled column/row dividers — rather than text floating on the bare background.
-    const tableX = 50, tableW = 900, labelW = 230, headerH = 62, rowH = 74, tableTop = 730
+    // Preserve the normal two-row display; archived profiles may use three rows.
+    const tableX = 50, tableW = 900, labelW = 230, headerH = 62, tableTop = 730
+    const rows = player.statsRows ?? [
+      { label: player.statsRowLabels?.[0] ?? (player.coach ? String(player.statsSeason ?? player.season) : player.example ? "EXAMPLE" : String(player.season)), values: player.metrics.map(metric => metric.season) },
+      { label: player.statsRowLabels?.[1] ?? "CAREER", values: player.metrics.map(metric => metric.career) },
+    ]
+    const rowH = rows.length > 2 ? 55 : 74
+    const tableBottom = tableTop + headerH + rows.length * rowH
     const statColsX = tableX + labelW, statColsW = tableW - labelW
-    const seasonY = tableTop + headerH, careerY = seasonY + rowH, tableBottom = careerY + rowH
     const positions = player.metrics.map((_, i) => statColsX + statColsW * (i + .5) / player.metrics.length)
     ctx.fillStyle = "#000000"; ctx.fillRect(tableX, tableTop, tableW, headerH)
     text(player.statsRowLabels ? "SCHOOL" : "SEASON", tableX + 22, tableTop + 40, 22)
     player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.label, positions[i], tableTop + 40, 22) }); ctx.textAlign = "left"
-    ctx.fillStyle = isGold ? "rgba(226,176,67,.24)"
-      : isRetro ? "rgba(232,194,139,.19)"
-      : design.theme === "black" || isIce ? "rgba(255,255,255,.1)" : "rgba(228,0,43,.16)"
-    ctx.fillRect(tableX, seasonY, tableW, rowH)
-    text(player.statsRowLabels?.[0] ?? (player.coach ? String(player.statsSeason ?? player.season) : player.example ? "EXAMPLE" : String(player.season)), tableX + 22, seasonY + 47, 28, accent, 800)
-    player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.season, positions[i], seasonY + 47, 32) }); ctx.textAlign = "left"
-    ctx.fillStyle = "rgba(255,255,255,.04)"; ctx.fillRect(tableX, careerY, tableW, rowH)
-    text(player.statsRowLabels?.[1] ?? "CAREER", tableX + 22, careerY + 47, 28, "#fff", 800)
-    player.metrics.forEach((metric, i) => { ctx.textAlign = "center"; text(metric.career, positions[i], careerY + 47, 32) }); ctx.textAlign = "left"
+    rows.forEach((row, index) => {
+      const y = tableTop + headerH + index * rowH
+      ctx.fillStyle = index % 2 === 0
+        ? isGold ? "rgba(226,176,67,.24)"
+          : isRetro ? "rgba(232,194,139,.19)"
+          : design.theme === "black" || isIce ? "rgba(255,255,255,.1)" : "rgba(228,0,43,.16)"
+        : "rgba(255,255,255,.04)"
+      ctx.fillRect(tableX, y, tableW, rowH)
+      text(row.label, tableX + 22, y + (rowH === 55 ? 39 : 47), rowH === 55 ? 25 : 28, index === 0 ? accent : "#fff", 800)
+      row.values.forEach((value, i) => { ctx.textAlign = "center"; text(value, positions[i], y + (rowH === 55 ? 39 : 47), rowH === 55 ? 29 : 32) }); ctx.textAlign = "left"
+    })
     ctx.strokeStyle = "rgba(255,255,255,.25)"; ctx.lineWidth = 2
     ctx.strokeRect(tableX, tableTop, tableW, tableBottom - tableTop)
     ctx.beginPath()
-    ctx.moveTo(tableX, seasonY); ctx.lineTo(tableX + tableW, seasonY)
-    ctx.moveTo(tableX, careerY); ctx.lineTo(tableX + tableW, careerY)
+    for (let i = 0; i < rows.length; i++) {
+      const dividerY = tableTop + headerH + i * rowH
+      ctx.moveTo(tableX, dividerY); ctx.lineTo(tableX + tableW, dividerY)
+    }
     ctx.moveTo(statColsX, tableTop); ctx.lineTo(statColsX, tableBottom)
     for (let i = 1; i < player.metrics.length; i++) { const dividerX = statColsX + statColsW * i / player.metrics.length; ctx.moveTo(dividerX, tableTop); ctx.lineTo(dividerX, tableBottom) }
     ctx.stroke()
