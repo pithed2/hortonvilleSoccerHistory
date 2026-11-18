@@ -98,7 +98,7 @@ export function MyCardStudio({ player, subjects, demoMode, coachRoster }: {playe
   function edit(patch:Partial<CardDesign>){setDesign(v=>({...v,...patch}));setDirty(true)}
   async function run(operation:()=>Promise<unknown>,success:string) {
     setBusy(true);setMessage("")
-    try{await operation();await refresh();setMessage(success)}catch(e){setMessage(e instanceof Error?e.message:"Action failed.")}
+    try{const result=await operation();if(result && typeof result==="object" && "error" in result && typeof result.error==="string") throw new Error(result.error);await refresh();setMessage(success)}catch(e){setMessage(e instanceof Error?e.message:"Action failed.")}
     finally{setBusy(false)}
   }
   return <div className="mx-auto max-w-7xl space-y-8">
