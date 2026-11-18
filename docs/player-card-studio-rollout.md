@@ -10,7 +10,7 @@ The feature was developed on `feature/player-card-studio-access`. Production can
 - Existing Red Room game: `/jv/red/red-room` (unchanged)
 - Original coach-only card editor: `/coachs-corner/player-cards` (unchanged)
 
-A player may have up to 3 cards. The limit is enforced by the server in an atomic database write transaction, not only by a disabled browser button. Every card is owned by the Red Room account ID. Names, teams, jersey numbers, and recorded statistics come from trusted server-side roster data and cannot be provided by the browser. Varsity and JV identities are supported; undocumented JV statistics display as unknown.
+A player may have up to 3 cards. Ben Decker's 2026 JV White account can also create cards for alumnus Grant Decker without a separate login. The three-card limit is shared. Cards store the selected subject in their existing validated draft JSON, without a schema change. The subject is authorized again on submission and statistics are resolved from the server-side varsity goalkeeper archive, not supplied by the browser. Grant's card shows 2024 junior, 2025 senior, and total games, minutes, saves, and goals against. The archived 2025 save percentage is inconsistent and is omitted. The limit is enforced by the server in an atomic database write transaction, not only by a disabled browser button. Every card is owned by the Red Room account ID. Names, teams, jersey numbers, and recorded statistics come from trusted server-side roster data and cannot be provided by the browser. Varsity and JV identities are supported; undocumented JV statistics display as unknown.
 
 ## Card design options
 

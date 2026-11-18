@@ -11,5 +11,5 @@ export default async function CardStudioPage() {
   if (!identity) redirect("/jv/red/red-room")
   const demoMode = !cardStudioWritesEnabled()
   const coachRoster = identity.coach ? coachCardPreviewRoster() : []
-  return <main className="min-h-screen bg-[#090a0e] px-4 py-8 text-white sm:px-8"><MyCardStudio player={identity.player} demoMode={demoMode} coachRoster={coachRoster} /></main>
+  return <main className="min-h-screen bg-[#090a0e] px-4 py-8 text-white sm:px-8"><MyCardStudio player={identity.player} subjects={identity.subjects} demoMode={demoMode} coachRoster={coachRoster} /></main>
 }

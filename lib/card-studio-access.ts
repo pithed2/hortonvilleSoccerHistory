@@ -1,14 +1,15 @@
 import "server-only"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
-import { cardProfileForAccount } from "@/lib/player-card-identity"
+import { cardProfileForAccount, cardSubjectsForAccount } from "@/lib/player-card-identity"
 import { CARD_THEMES, type CardDesign, type CardPlayer } from "@/lib/player-card-types"
 
-export async function studioIdentity(): Promise<{ accountId: string; player: CardPlayer; coach: boolean } | null> {
+export async function studioIdentity(): Promise<{ accountId: string; player: CardPlayer; subjects: CardPlayer[]; coach: boolean } | null> {
   const user = await authenticatedPlayer()
   if (!user || user.isBot || !["player", "coach"].includes(user.accountType)) return null
   const player = await cardProfileForAccount(user)
   if (!player) return null
-  return { accountId: user.id, player, coach: user.accountType === "coach" }
+  const subjects = await cardSubjectsForAccount(user, player)
+  return { accountId: user.id, player, subjects, coach: user.accountType === "coach" }
 }
 export async function requireCoach() {
   const user = await authenticatedPlayer()
@@ -47,6 +48,8 @@ export function validateCardDesign(value: unknown): CardDesign {
     if (x < 0 || x > 100 || y < 0 || y > 100 || zoom < 1 || zoom > 2) throw new Error("Invalid image crop.")
     return { src: p.src, x, y, zoom, fit: p.fit === "contain" ? "contain" as const : "cover" as const }
   }
+  if (input.subjectId !== undefined && (typeof input.subjectId !== "string" || !/^[a-z0-9-]{1,80}$/.test(input.subjectId))) throw new Error("Invalid card subject.")
+  const subjectId = input.subjectId as string | undefined
   const overview = String(input.overview || "").trim()
   if (overview.length > 500 || overview.length < 0) throw new Error("Description must be 500 characters or less.")
   validatePlayerText(overview)
@@ -54,7 +57,7 @@ export function validateCardDesign(value: unknown): CardDesign {
   const portrait = image(input.portrait), action = image(input.action)
   const highlight = input.highlight ? image(input.highlight) : undefined
   if (portrait.src.length + action.src.length + (highlight?.src.length || 0) > 1800000) throw new Error("Card photos exceed the storage limit.")
-  return { portrait, action, ...(highlight ? { highlight } : {}), overview, theme: input.theme as CardDesign["theme"], rightsConfirmed: input.rightsConfirmed === true }
+  return { portrait, action, ...(highlight ? { highlight } : {}), overview, theme: input.theme as CardDesign["theme"], rightsConfirmed: input.rightsConfirmed === true, ...(subjectId ? { subjectId } : {}) }
 }
 export function checkReadyForSubmission(design: CardDesign) {
   if (!design.portrait.src || !design.action.src || !design.overview || !design.rightsConfirmed) {
