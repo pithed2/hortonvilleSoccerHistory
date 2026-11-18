@@ -2,6 +2,7 @@ import "server-only"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { cardProfileForAccount, cardSubjectsForAccount } from "@/lib/player-card-identity"
 import { CARD_THEMES, type CardDesign, type CardPlayer } from "@/lib/player-card-types"
+import { hasExifMetadata } from "@/lib/card-image-metadata"
 
 export async function studioIdentity(): Promise<{ accountId: string; player: CardPlayer; subjects: CardPlayer[]; coach: boolean } | null> {
   const user = await authenticatedPlayer()
@@ -41,7 +42,7 @@ export function validateCardDesign(value: unknown): CardDesign {
         : match[1] === "png" ? bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
         : bytes.toString("ascii",0,4) === "RIFF" && bytes.toString("ascii",8,12) === "WEBP"
       if (!valid) throw new Error("File content does not match its image type.")
-      if (bytes.includes(Buffer.from("Exif")) || bytes.includes(Buffer.from("eXIf"))) throw new Error("Remove location and other photo metadata before uploading.")
+      if (hasExifMetadata(bytes, match[1] as "jpeg" | "png" | "webp")) throw new Error("Remove location and other photo metadata before uploading.")
     }
     for (const field of ["x","y","zoom"]) if (typeof p[field] !== "number" || !Number.isFinite(p[field] as number)) throw new Error("Invalid image crop.")
     const x = p.x as number, y = p.y as number, zoom = p.zoom as number
