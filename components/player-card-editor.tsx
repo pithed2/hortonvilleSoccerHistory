@@ -2,27 +2,10 @@
 
 import { useEffect, useRef, useState } from "react"
 import { blankCardDesign, type CardDesign, type CardPhoto, type CardPlayer } from "@/lib/player-card-types"
-import { cardImage } from "@/lib/render-player-card"
+import { prepareCardPhoto } from "@/lib/card-photo-client"
 import { loadCardDraft, savePlayerCard, unpublishPlayerCard } from "@/app/coachs-corner/player-cards/actions"
 import { PlayerCardPreview } from "./player-card-preview"
 import { PlayerCardShare } from "./player-card-share"
-
-async function preparePhoto(file: File) {
-  if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) throw new Error("Choose a JPG, PNG, or WebP photo.")
-  if (file.size > 20 * 1024 * 1024) throw new Error("Choose a photo smaller than 20 MB.")
-  const url = URL.createObjectURL(file)
-  try {
-    const image = await cardImage(url), canvas = document.createElement("canvas")
-    const scale = Math.min(1, 1600 / Math.max(image.naturalWidth, image.naturalHeight))
-    canvas.width = Math.round(image.naturalWidth * scale); canvas.height = Math.round(image.naturalHeight * scale)
-    canvas.getContext("2d")!.drawImage(image, 0, 0, canvas.width, canvas.height)
-    for (const quality of [.88, .75, .6, .45]) {
-      const src = canvas.toDataURL("image/jpeg", quality)
-      if (src.length <= 600_000) return src
-    }
-    throw new Error("That image is still too large. Please use a smaller photo.")
-  } finally { URL.revokeObjectURL(url) }
-}
 
 export function PlayerCardEditor({ players }: { players: CardPlayer[] }) {
   const [id, setId] = useState(players.find((player) => player.id === "og-andy")?.id ?? players[0]?.id ?? "")
@@ -55,7 +38,7 @@ export function PlayerCardEditor({ players }: { players: CardPlayer[] }) {
     if (!file) return
     const currentRevision = ++revision.current
     setBusy(true); setMessage("")
-    try { const src = await preparePhoto(file); if (revision.current === currentRevision) edit({ [kind]: { src, x: 50, y: 50, zoom: 1 }, rightsConfirmed: false }) }
+    try { const src = await prepareCardPhoto(file); if (revision.current === currentRevision) edit({ [kind]: { src, x: 50, y: 50, zoom: 1 }, rightsConfirmed: false }) }
     catch (error) { setMessage(error instanceof Error ? error.message : "Could not read the photo.") }
     finally { setBusy(false) }
   }
@@ -92,5 +75,5 @@ export function PlayerCardEditor({ players }: { players: CardPlayer[] }) {
 }
 
 function PhotoControls({ title, photo, onFile, onCrop }: { title: string; photo: CardPhoto; onFile: (file?: File) => void; onCrop: (photo: CardPhoto) => void }) {
-  return <div className="rounded-xl border border-white/15 p-4"><label className="block text-sm font-bold">{title}<input type="file" accept="image/jpeg,image/png,image/webp" className="mt-3 block w-full text-xs file:mr-3 file:rounded-md file:border-0 file:bg-white/10 file:p-2 file:text-white" onChange={(event) => { onFile(event.target.files?.[0]); event.target.value = "" }} /></label>{photo.src ? <div className="mt-4 space-y-2">{([['x', 'Horizontal', 0, 100, 1], ['y', 'Vertical', 0, 100, 1], ['zoom', 'Zoom', 1, 2, .01]] as const).map(([key, label, min, max, step]) => <label key={key} className="flex items-center gap-3 text-xs text-white/75"><span className="w-16">{label}</span><input aria-label={`${title} ${label}`} type="range" min={min} max={max} step={step} value={photo[key]} onChange={(event) => onCrop({ ...photo, [key]: Number(event.target.value) })} className="min-w-0 flex-1 accent-[#E4002B]" /></label>)}</div> : null}</div>
+  return <div className="rounded-xl border border-white/15 p-4"><label className="block text-sm font-bold">{title}<input type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" className="mt-3 block w-full text-xs file:mr-3 file:rounded-md file:border-0 file:bg-white/10 file:p-2 file:text-white" onChange={(event) => { onFile(event.target.files?.[0]); event.target.value = "" }} /></label>{photo.src ? <div className="mt-4 space-y-2">{([['x', 'Horizontal', 0, 100, 1], ['y', 'Vertical', 0, 100, 1], ['zoom', 'Zoom', 1, 2, .01]] as const).map(([key, label, min, max, step]) => <label key={key} className="flex items-center gap-3 text-xs text-white/75"><span className="w-16">{label}</span><input aria-label={`${title} ${label}`} type="range" min={min} max={max} step={step} value={photo[key]} onChange={(event) => onCrop({ ...photo, [key]: Number(event.target.value) })} className="min-w-0 flex-1 accent-[#E4002B]" /></label>)}</div> : null}</div>
 }

@@ -5,38 +5,20 @@ import { useEffect, useState } from "react"
 import { PLAYER_CARD_LIMIT, blankCardDesign, type CardDesign, type CardPhoto, type CardPlayer } from "@/lib/player-card-types"
 import type { StoredCard } from "@/lib/card-studio-store"
 import { PlayerCardPreview } from "@/components/player-card-preview"
+import { prepareCardPhoto } from "@/lib/card-photo-client"
 import { createMyStudioCard, deleteMyUnusedCard, listMyStudioCards, submitMyStudioCard, updateMyStudioCard } from "./actions"
 
-async function preparePhoto(file: File) {
-  if (!["image/jpeg","image/png","image/webp"].includes(file.type) || file.size > 20 * 1024 * 1024) throw new Error("Use a JPG, PNG or WebP image under 20 MB.")
-  const url = URL.createObjectURL(file)
-  try {
-    const image = new Image()
-    image.src = url
-    await image.decode()
-    const canvas = document.createElement("canvas")
-    const scale = Math.min(1, 1600 / Math.max(image.naturalWidth,image.naturalHeight))
-    canvas.width = Math.max(1,Math.round(image.naturalWidth*scale))
-    canvas.height = Math.max(1,Math.round(image.naturalHeight*scale))
-    canvas.getContext("2d")!.drawImage(image,0,0,canvas.width,canvas.height)
-    for (const quality of [.85,.7,.55,.4]) {
-      const src = canvas.toDataURL("image/jpeg",quality)
-      if (src.length < 600000) return src
-    }
-    throw new Error("Image is still too large after compression.")
-  } finally { URL.revokeObjectURL(url) }
-}
 function Upload({ label, value, change }: { label: string; value: CardPhoto; change: (photo: CardPhoto)=>void }) {
   const [notice, setNotice] = useState("")
   return <div className="rounded-xl border border-white/15 p-3">
     <label className="block text-sm font-semibold">{label}
-      <input className="mt-2 block w-full text-xs" type="file" accept="image/jpeg,image/png,image/webp" onChange={async (event)=>{
+      <input className="mt-2 block w-full text-xs" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" onChange={async (event)=>{
         const file = event.target.files?.[0]
         event.target.value = ""
         if (!file) return
         setNotice("Loading photo...")
         try {
-          const src = await preparePhoto(file)
+          const src = await prepareCardPhoto(file)
           change({src,x:50,y:50,zoom:1})
           setNotice("Photo loaded. Adjust the sliders to position it.")
         } catch (error) {
@@ -116,7 +98,7 @@ export function MyCardStudio({ player, subjects, demoMode, coachRoster }: {playe
   function edit(patch:Partial<CardDesign>){setDesign(v=>({...v,...patch}));setDirty(true)}
   async function run(operation:()=>Promise<unknown>,success:string) {
     setBusy(true);setMessage("")
-    try{await operation();await refresh();setMessage(success)}catch(e){setMessage(e instanceof Error?e.message:"Action failed.")}
+    try{const result=await operation();if(result && typeof result==="object" && "error" in result && typeof result.error==="string") throw new Error(result.error);await refresh();setMessage(success)}catch(e){setMessage(e instanceof Error?e.message:"Action failed.")}
     finally{setBusy(false)}
   }
   return <div className="mx-auto max-w-7xl space-y-8">

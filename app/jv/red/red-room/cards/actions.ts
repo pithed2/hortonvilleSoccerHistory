@@ -32,9 +32,30 @@ export async function createMyStudioCard(title: string, input: CardDesign) {
   return id
 }
 export async function updateMyStudioCard(id: string, title: string, input: CardDesign) {
-  const account = await identity()
-  await saveDraft(id, account.accountId, safeTitle(title), safeDesign(input, account.subjects))
-  revalidatePath("/jv/red/red-room/cards")
+  try {
+    const account = await identity()
+    await saveDraft(id, account.accountId, safeTitle(title), safeDesign(input, account.subjects))
+    revalidatePath("/jv/red/red-room/cards")
+    return { ok: true as const }
+  } catch (error) {
+    // Server action exceptions are masked as React digests in production.
+    // Send only known, safe validation failures back to the player's screen.
+    console.error("Card Studio draft save failed:", error)
+    const message = error instanceof Error ? error.message : ""
+    const safePrefixes = [
+      "Invalid card.", "Invalid photo.", "Invalid or oversized photo.",
+      "Invalid JPEG image.", "Invalid image crop.", "Invalid card finish.",
+      "Invalid card subject.", "Only JPG, PNG and WebP images are accepted.",
+      "File content does not match its image type.",
+      "This photo contains unsupported metadata.",
+      "Card photos exceed the storage limit.", "Enter a card title.",
+      "Keep it PG-13.", "Description must be 500 characters or less.",
+      "This player profile is not available to your account.",
+      "Card not found or access denied.",
+    ]
+    return { ok: false as const, error: safePrefixes.some(prefix => message.startsWith(prefix))
+      ? message : "Could not save the card. Please try again." }
+  }
 }
 export async function submitMyStudioCard(id: string) {
   const account = await identity()
