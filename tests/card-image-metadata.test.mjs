@@ -48,9 +48,10 @@ test("WebP EXIF chunk is detected", () => {
 test("WebP image payload mentioning EXIF is allowed", () => {
   assert.equal(hasExifMetadata(webp(webpChunk("VP8 ", Buffer.from("EXIF"))), "webp"), false)
 })
-\ntest("remove EXIF metadata while preserving compressed JPEG image data", () => {
+
+test("remove EXIF metadata while preserving compressed JPEG image data", () => {
   const scan = Buffer.from("scan data including Exif pixels")
-  const input = jpeg(0xff, 0xe1, 0, 8, ...Buffer.from("Exif\\0\\0"), 0xff, 0xda, 0, 2, ...scan)
+  const input = jpeg(0xff, 0xe1, 0, 8, ...Buffer.from("Exif\0\0"), 0xff, 0xda, 0, 2, ...scan)
   const result = stripJpegMetadata(input)
   assert.equal(hasExifMetadata(result, "jpeg"), false)
   assert.equal(result.includes(scan), true)
