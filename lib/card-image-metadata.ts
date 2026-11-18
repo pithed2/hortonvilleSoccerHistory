@@ -41,3 +41,45 @@ export function hasExifMetadata(bytes: Buffer, type: "jpeg" | "png" | "webp"): b
   }
   return false
 }
+
+/**
+ * Remove JPEG metadata without modifying compressed pixels.
+ * Canvas JPEGs from some browsers can contain EXIF even after a redraw.
+ * Preserve the JFIF/Adobe markers needed for decoding/color interpretation.
+ */
+export function stripJpegMetadata(bytes: Buffer): Buffer {
+  if (bytes.length < 4 || bytes[0] !== 0xff || bytes[1] !== 0xd8) {
+    throw new Error("Invalid JPEG image.")
+  }
+  const chunks: Buffer[] = [bytes.subarray(0, 2)]
+  let offset = 2
+  let changed = false
+  while (offset + 1 < bytes.length) {
+    if (bytes[offset] !== 0xff) throw new Error("Invalid JPEG image.")
+    const start = offset
+    while (offset < bytes.length && bytes[offset] === 0xff) offset++
+    if (offset >= bytes.length) throw new Error("Invalid JPEG image.")
+    const marker = bytes[offset++]
+    if (marker === 0xda || marker === 0xd9) {
+      chunks.push(bytes.subarray(start))
+      return changed ? Buffer.concat(chunks) : bytes
+    }
+    if (marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) {
+      chunks.push(bytes.subarray(start, offset))
+      continue
+    }
+    if (offset + 2 > bytes.length) throw new Error("Invalid JPEG image.")
+    const length = bytes.readUInt16BE(offset)
+    if (length < 2 || length > bytes.length - offset) {
+      throw new Error("Invalid JPEG image.")
+    }
+    const end = offset + length
+    // APP1-APP13, APP15, and COM can contain GPS, XMP, IPTC, or comments.
+    const metadata = (marker >= 0xe1 && marker <= 0xed) ||
+      marker === 0xef || marker === 0xfe
+    if (metadata) changed = true
+    else chunks.push(bytes.subarray(start, end))
+    offset = end
+  }
+  throw new Error("Invalid JPEG image.")
+}

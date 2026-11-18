@@ -6,6 +6,7 @@ import { COACH_COOKIE, validCoachCookie } from "@/lib/coach-auth"
 import { cardPlayers } from "@/lib/player-cards"
 import { cardDraft, saveCard, withdrawCard } from "@/lib/player-card-store"
 import { CARD_THEMES, type CardDesign } from "@/lib/player-card-types"
+import { validateCardDesign } from "@/lib/card-studio-access"
 import { exampleCardDesign } from "@/lib/player-card-examples"
 
 const photo = z.object({ src: z.string().max(600_000).refine((value) => !value || /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(value), "Use a JPEG, PNG, or WebP photo."), x: z.number().min(0).max(100), y: z.number().min(0).max(100), zoom: z.number().min(1).max(2), fit: z.enum(["cover", "contain"]).optional() })
@@ -27,7 +28,7 @@ export async function loadCardDraft(id: string) {
 export async function savePlayerCard(id: string, input: CardDesign, publish: boolean) {
   try {
     const player = await authorize(id)
-    const design = designSchema.parse(input)
+    const design = validateCardDesign(designSchema.parse(input))
     if (publish && (!design.portrait.src || !design.action.src || !design.overview || !design.rightsConfirmed)) return { error: "Add both photos and a player overview, then confirm permission to use the photos before saving a review copy." }
     const token = await saveCard(id, design, publish ? { player, design, publishedAt: new Date().toISOString() } : undefined)
     return { token, success: publish ? "Review copy saved. Coach sign-in is required to view this card." : "Draft saved. The review copy has not changed." }

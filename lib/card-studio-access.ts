@@ -2,7 +2,7 @@ import "server-only"
 import { authenticatedPlayer } from "@/lib/red-room/auth"
 import { cardProfileForAccount, cardSubjectsForAccount } from "@/lib/player-card-identity"
 import { CARD_THEMES, type CardDesign, type CardPlayer } from "@/lib/player-card-types"
-import { hasExifMetadata } from "@/lib/card-image-metadata"
+import { hasExifMetadata, stripJpegMetadata } from "@/lib/card-image-metadata"
 
 export async function studioIdentity(): Promise<{ accountId: string; player: CardPlayer; subjects: CardPlayer[]; coach: boolean } | null> {
   const user = await authenticatedPlayer()
@@ -42,7 +42,13 @@ export function validateCardDesign(value: unknown): CardDesign {
         : match[1] === "png" ? bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
         : bytes.toString("ascii",0,4) === "RIFF" && bytes.toString("ascii",8,12) === "WEBP"
       if (!valid) throw new Error("File content does not match its image type.")
-      if (hasExifMetadata(bytes, match[1] as "jpeg" | "png" | "webp")) throw new Error("Remove location and other photo metadata before uploading.")
+      // Browser JPEGs may contain EXIF even after canvas conversion (notably on iOS).
+      // Strip it before storage instead of rejecting an otherwise valid card.
+      const cleaned = match[1] === "jpeg" ? stripJpegMetadata(bytes) : bytes
+      if (hasExifMetadata(cleaned, match[1] as "jpeg" | "png" | "webp")) {
+        throw new Error("This photo contains unsupported metadata. Re-upload it as a JPG.")
+      }
+      if (cleaned !== bytes) p.src = "data:image/" + match[1] + ";base64," + cleaned.toString("base64")
     }
     for (const field of ["x","y","zoom"]) if (typeof p[field] !== "number" || !Number.isFinite(p[field] as number)) throw new Error("Invalid image crop.")
     const x = p.x as number, y = p.y as number, zoom = p.zoom as number
