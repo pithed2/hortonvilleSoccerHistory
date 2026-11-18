@@ -34,8 +34,9 @@ export function validateCardDesign(value: unknown): CardDesign {
     if (!photo || typeof photo !== "object") throw new Error("Invalid photo.")
     const p = photo as Record<string, unknown>
     if (typeof p.src !== "string" || p.src.length > 600000) throw new Error("Invalid or oversized photo.")
-    if (p.src) {
-      const match = /^data:image\/(jpeg|png|webp);base64,([a-zA-Z0-9+/=]+)$/.exec(p.src)
+    let src: string = p.src
+    if (src) {
+      const match = /^data:image\/(jpeg|png|webp);base64,([a-zA-Z0-9+/=]+)$/.exec(src)
       if (!match) throw new Error("Only JPG, PNG and WebP images are accepted.")
       const bytes = Buffer.from(match[2], "base64")
       const valid = match[1] === "jpeg" ? bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff
@@ -48,12 +49,12 @@ export function validateCardDesign(value: unknown): CardDesign {
       if (hasExifMetadata(cleaned, match[1] as "jpeg" | "png" | "webp")) {
         throw new Error("This photo contains unsupported metadata. Re-upload it as a JPG.")
       }
-      if (cleaned !== bytes) p.src = "data:image/" + match[1] + ";base64," + cleaned.toString("base64")
+      if (cleaned !== bytes) src = "data:image/" + match[1] + ";base64," + cleaned.toString("base64")
     }
     for (const field of ["x","y","zoom"]) if (typeof p[field] !== "number" || !Number.isFinite(p[field] as number)) throw new Error("Invalid image crop.")
     const x = p.x as number, y = p.y as number, zoom = p.zoom as number
     if (x < 0 || x > 100 || y < 0 || y > 100 || zoom < 1 || zoom > 2) throw new Error("Invalid image crop.")
-    return { src: p.src, x, y, zoom, fit: p.fit === "contain" ? "contain" as const : "cover" as const }
+    return { src, x, y, zoom, fit: p.fit === "contain" ? "contain" as const : "cover" as const }
   }
   if (input.subjectId !== undefined && (typeof input.subjectId !== "string" || !/^[a-z0-9-]{1,80}$/.test(input.subjectId))) throw new Error("Invalid card subject.")
   const subjectId = input.subjectId as string | undefined
